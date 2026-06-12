@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Verifyco</title>
+  <meta name="description" content="Verifyco Terms of Service." />
+  <link rel="icon" type="image/png" href="assets/verifyco-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Verifyco">
+        <span>Verify<em>co</em></span>
+      </a>
+      <nav class="nav__links">
+        <a href="index.html#signals" data-i18n="nav.signals">How it works</a>
+        <a href="index.html#showcase" data-i18n="nav.features">Features</a>
+        <a href="deepdetect-plus.html" data-i18n="nav.dd">DeepDetect+</a>
+        <a href="index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="nav__right">
+        <div class="lang">
+          <button type="button" class="lang__btn" aria-haspopup="listbox" aria-label="Choose language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            <span data-lang-current>EN</span>
+            <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l5 5 5-5"/></svg>
+          </button>
+          <div class="lang__menu" data-lang-menu role="listbox"></div>
+        </div>
+        <a class="btn btn--primary btn--sm" href="index.html#download" data-i18n="nav.download">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc" id="legalDoc"></main>
+
+  <footer>
+    <div class="container">
+      <div class="footer__bottom" style="border:0;padding:0;">
+        <span data-i18n="footer.copy">© 2026 Verifyco · All rights reserved</span>
+        <span>
+          <a href="privacy.html" style="color:var(--text-3);" data-i18n="footer.privacy">Privacy Policy</a> ·
+          <a href="support.html" style="color:var(--text-3);" data-i18n="footer.support">Support</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/i18n.js"></script>
+  <script src="assets/legal.js"></script>
+  <script src="assets/landing.js"></script>
+  <script>
+    (function () {
+      function render() {
+        var saved = localStorage.getItem("verifyco_lang") || "en";
+        var lang = (saved === "tr") ? "tr" : "en";
+        var md = window.VERIFYCO_LEGAL.terms[lang] || window.VERIFYCO_LEGAL.terms.en;
+        document.getElementById("legalDoc").innerHTML = window.VERIFYCO_RENDER_LEGAL(md);
+      }
+      document.addEventListener("verifyco:lang", render);
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", render);
+      else render();
+    })();
+  </script>
+</body>
+</html>

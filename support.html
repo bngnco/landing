@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Verifyco</title>
+  <link rel="icon" type="image/png" href="assets/verifyco-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+    <!-- GSAP for cinematic motion -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .faq {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--hairline);
+      border: 1px solid var(--hairline);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .faq__item {
+      background: var(--surface);
+      transition: background 200ms ease;
+    }
+    .faq__item[open] { background: var(--surface-card); }
+    .faq__q {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    .faq__q::-webkit-details-marker { display: none; }
+    .faq__q::after {
+      content: "+";
+      font-family: var(--f-mono);
+      color: var(--scan-bright);
+      font-size: 20px;
+      font-weight: 300;
+      transition: transform 200ms ease;
+    }
+    .faq__item[open] .faq__q::after { content: "−"; }
+    .faq__a {
+      padding: 0 24px 22px;
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    @media (max-width: 720px) { .support-grid { grid-template-columns: 1fr; } }
+    .support-card {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 16px;
+      padding: 24px 22px;
+      transition: border-color 200ms ease, transform 200ms ease;
+    }
+    .support-card:hover { border-color: rgba(188,142,100,0.32); transform: translateY(-2px); }
+    .support-card h3 { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin: 12px 0 8px; }
+    .support-card p { font-size: 14px; color: var(--text-2); line-height: 1.5; margin: 0 0 12px; }
+    .support-card a { color: var(--scan-bright); font-size: 13px; font-family: var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; }
+    .support-card__icon { width: 36px; height: 36px; border-radius: 10px; background: var(--scan-soft); display: flex; align-items: center; justify-content: center; color: var(--scan-bright); }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo"><span>Verify<em>co</em></span>
+      </a>
+      <nav class="nav__links">
+        <a href="index.html#signals" data-i18n="nav.signals">How it works</a>
+        <a href="index.html#showcase" data-i18n="nav.features">Features</a>
+        <a href="deepdetect-plus.html" data-i18n="nav.dd">DeepDetect+</a>
+        <a href="index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="support.html" data-i18n="nav.support" style="color:var(--scan-bright);">Support</a>
+      </nav>
+      <div class="nav__right">
+        <div class="lang">
+          <button type="button" class="lang__btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            <span data-lang-current>EN</span>
+            <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l5 5 5-5"/></svg>
+          </button>
+          <div class="lang__menu" data-lang-menu></div>
+        </div>
+        <a class="btn btn--primary btn--sm" href="index.html#download">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc">
+    <span class="eyebrow">HELP · 2026</span>
+    <h1>Support &amp; <em>contact.</em></h1>
+    <p class="doc__meta">REPLIES WITHIN 24 HOURS · MON–FRI · ISTANBUL</p>
+
+    <p>Verifyco is a small, focused team. Pick the fastest way to reach us — we read every message.</p>
+
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </div>
+        <h3>Email support</h3>
+        <p>The fastest channel for bugs, billing and account questions.</p>
+        <a href="mailto:support@verifyco.info">support@verifyco.info →</a>
+      </div>
+      <div class="support-card">
+        <div class="support-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 9c0-1.5 1-3 3-3s3 1.5 3 3-1 2-2 3-1 2-1 2M12 17h.01"/></svg>
+        </div>
+        <h3>Privacy</h3>
+        <p>Data access, deletion and GDPR/KVKK requests.</p>
+        <a href="mailto:privacy@verifyco.info">privacy@verifyco.info →</a>
+      </div>
+      <div class="support-card">
+        <div class="support-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19l16-7-16-7v6l10 1-10 1z"/></svg>
+        </div>
+        <h3>Press &amp; partnerships</h3>
+        <p>Newsroom kits, integration partners and joint research.</p>
+        <a href="mailto:support@verifyco.info">support@verifyco.info →</a>
+      </div>
+    </div>
+
+    <h2 style="margin-top:64px;">Frequently asked</h2>
+
+    <div class="faq">
+      <details class="faq__item" open>
+        <summary class="faq__q">Does Verifyco upload my photos or videos?</summary>
+        <div class="faq__a">No. All analysis runs locally on your iPhone using Apple's Neural Engine. There is no server-side inference; your media is never transmitted to Verifyco or anywhere else. You can verify this with iOS Settings → Privacy &amp; Security → App Privacy Report, which will show zero network activity from Verifyco during analysis.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q">What does the 0–100 trust score actually mean?</summary>
+        <div class="faq__a">It is a fused probability that the file is authentic. 75–100 reads as Authentic, 45–74 as Suspicious (artifacts present, review recommended), 0–44 as Manipulated. The weights of each signal are dynamic — when C2PA content credentials are present, the calculation is weighted 35% C2PA, 15% metadata, 35% AI detection, 15% audio; when absent, it is 25/55/20 across metadata / AI detection / audio.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q">Is Verifyco a definitive truth oracle?</summary>
+        <div class="faq__a">No. Verifyco is a decision-support tool. A high score is not legal proof of authenticity; a low score is not legal proof of forgery. Use it as one signal among several when making a verification decision, alongside provenance, witnesses, and reverse-image search.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q">How do I cancel my subscription?</summary>
+        <div class="faq__a">Open iOS <strong>Settings</strong> → tap your Apple ID at the top → <strong>Subscriptions</strong> → tap Verifyco → <strong>Cancel Subscription</strong>. You will retain Pro access until the end of the current billing period.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q">I bought a credit pack but the analyses are not showing up.</summary>
+        <div class="faq__a">Open Verifyco → Settings → tap <strong>Restore Purchases</strong>. If the credits still don't appear, email <a href="mailto:support@verifyco.info">support@verifyco.info</a> with the receipt from your purchase email (Apple sends it from no_reply@email.apple.com) and we'll fix it within one business day.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q">When does DeepDetect+ launch?</summary>
+        <div class="faq__a">DeepDetect+ is currently in supervised training. Our internal target is Q3 2026. Pro Annual subscribers get it first; join the waitlist on the <a href="deepdetect-plus.html">DeepDetect+ page</a>.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q">Can I use Verifyco as legal evidence in court?</summary>
+        <div class="faq__a">The PDF report Pro generates includes the trust score, the per-signal breakdown, the SHA-256 hash and a tamper-evident timestamp — which is often a strong supporting document. Whether a court admits it depends on jurisdiction and the role you're asking it to play. We strongly recommend consulting a forensic examiner alongside.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q">Which languages does Verifyco support?</summary>
+        <div class="faq__a">Twenty: English, Turkish, Spanish, Portuguese, German, French, Italian, Dutch, Swedish, Polish, Russian, Ukrainian, Arabic, Hindi, Japanese, Korean, Chinese, Thai, Vietnamese and Indonesian. The app follows your iOS system language by default; you can override it in Verifyco → Settings → Language.</div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q">Will Verifyco come to iPad / Mac / Android?</summary>
+        <div class="faq__a">iPad support arrives with DeepDetect+. Mac (Apple Silicon, Catalyst) is on the roadmap for late 2026. Android is not currently planned — the model architecture leans heavily on Apple's Neural Engine and CoreML quantisation, which makes a high-quality port non-trivial.</div>
+      </details>
+    </div>
+
+    <hr style="margin: 48px 0;"/>
+    <p>Still have a question? Write to <a href="mailto:support@verifyco.info">support@verifyco.info</a>.</p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer__bottom" style="border:0;padding:0;">
+        <span>© 2026 Verifyco · All rights reserved</span>
+        <span>
+          <a href="privacy.html" style="color:var(--text-3);">Privacy</a> ·
+          <a href="terms.html" style="color:var(--text-3);">Terms</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/i18n.js"></script>
+  <script src="assets/landing.js"></script>
+</body>
+</html>

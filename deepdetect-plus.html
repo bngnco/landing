@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepDetect+ — Verifyco</title>
+  <meta name="description" content="DeepDetect+ — Verifyco's advanced detection engine. Multi-layer forensic inspection and an on-device neural architecture trained on adversarial deepfakes." />
+  <link rel="icon" type="image/png" href="assets/verifyco-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- GSAP for cinematic motion -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    /* ===================== DeepDetect+ hero ===================== */
+    .ddx-hero {
+      position: relative;
+      padding: 72px 0 56px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .ddx-hero .container { position: relative; z-index: 2; }
+
+    .ddx-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--text-3); margin-bottom: 28px;
+    }
+    .ddx-back:hover { color: var(--scan-bright); }
+
+    /* Orbital constellation */
+    .ddx-orbit {
+      position: relative;
+      width: min(440px, 80vw);
+      height: min(440px, 80vw);
+      margin: 0 auto 8px;
+    }
+    .ddx-orbit svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .ddx-orbit__core {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 27%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 42%, rgba(244,221,193,0.95) 0%, rgba(214,172,134,0.85) 38%, rgba(120,84,52,0.6) 72%, rgba(60,40,24,0) 100%);
+      box-shadow:
+        0 0 60px 8px rgba(214,172,134,0.45),
+        0 0 120px 24px rgba(188,142,100,0.22);
+      animation: ddxCorePulse 4s ease-in-out infinite;
+    }
+    @keyframes ddxCorePulse {
+      0%, 100% { box-shadow: 0 0 60px 8px rgba(214,172,134,0.45), 0 0 120px 24px rgba(188,142,100,0.20); }
+      50%      { box-shadow: 0 0 78px 14px rgba(214,172,134,0.62), 0 0 150px 34px rgba(188,142,100,0.30); }
+    }
+    .ddx-orbit__core svg { position: static; width: 42%; height: 42%; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ddx-orbit__core { animation: none; }
+    }
+
+    .ddx-title {
+      font-family: var(--f-display);
+      font-size: clamp(48px, 8vw, 104px);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 0.98;
+      margin: 20px 0 0;
+      background: linear-gradient(180deg, var(--cream-bright) 0%, var(--scan-warm, #C99A6A) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .ddx-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin: 22px 0 18px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(188,142,100,0.40);
+      background: rgba(188,142,100,0.10);
+      font-family: var(--f-mono); font-size: 12px; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--scan-bright);
+    }
+    .ddx-badge svg { width: 13px; height: 13px; }
+    .ddx-tagline { font-size: clamp(18px, 2.4vw, 22px); color: var(--text-2); margin: 0 0 36px; }
+
+    .ddx-desc {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 20px;
+      padding: 30px 34px;
+      font-size: 17px;
+      line-height: 1.62;
+      color: var(--text-2);
+      text-wrap: pretty;
+    }
+    .ddx-desc strong { color: var(--text); font-weight: 600; }
+
+    .ddx-powered {
+      display: inline-flex; align-items: center; gap: 16px;
+      max-width: 720px; width: 100%;
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(188,142,100,0.08) 0%, var(--surface) 100%);
+      border: 1px solid rgba(188,142,100,0.28);
+      border-radius: 16px;
+      padding: 16px 22px;
+      text-align: left;
+    }
+    .ddx-powered__icon {
+      flex: none;
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--scan-soft); color: var(--scan-bright);
+      display: grid; place-items: center;
+    }
+    .ddx-powered__icon svg { width: 22px; height: 22px; }
+    .ddx-powered__t { font-size: 16px; font-weight: 600; color: var(--text); }
+    .ddx-powered__m { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3); margin-top: 3px; }
+
+    /* ===================== Detection layers ===================== */
+    .ddx-layers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+    @media (max-width: 900px) { .ddx-layers { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .ddx-layers { grid-template-columns: 1fr; } }
+
+    .ddx-card {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 18px;
+      padding: 28px 26px;
+      transition: border-color 240ms ease, transform 240ms ease, background 240ms ease;
+    }
+    .ddx-card:hover { border-color: rgba(188,142,100,0.36); transform: translateY(-4px); background: var(--surface-card); }
+    .ddx-card__icon {
+      width: 46px; height: 46px; border-radius: 13px;
+      background: var(--scan-soft); color: var(--scan-bright);
+      display: grid; place-items: center; margin-bottom: 20px;
+    }
+    .ddx-card__icon svg { width: 23px; height: 23px; }
+    .ddx-card__title { font-size: 19px; font-weight: 600; letter-spacing: -0.012em; margin: 0 0 10px; color: var(--text); }
+    .ddx-card__desc { font-size: 14.5px; line-height: 1.55; color: var(--text-2); margin: 0; text-wrap: pretty; }
+
+    /* ===================== Who it's for ===================== */
+    .ddx-uses {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 44px;
+    }
+    @media (max-width: 720px) { .ddx-uses { grid-template-columns: 1fr; } }
+
+    .ddx-use {
+      display: flex; gap: 20px; align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 18px;
+      padding: 26px 28px;
+      transition: border-color 240ms ease, transform 240ms ease;
+    }
+    .ddx-use:hover { border-color: rgba(188,142,100,0.32); transform: translateY(-3px); }
+    .ddx-use__icon {
+      flex: none; width: 48px; height: 48px; border-radius: 50%;
+      background: var(--scan-soft); color: var(--scan-bright);
+      display: grid; place-items: center;
+    }
+    .ddx-use__icon svg { width: 22px; height: 22px; }
+    .ddx-use__title { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 2px 0 8px; color: var(--text); }
+    .ddx-use__desc { font-size: 14.5px; line-height: 1.55; color: var(--text-2); margin: 0; text-wrap: pretty; }
+
+    /* ===================== Technology timeline ===================== */
+    .ddx-tech {
+      margin-top: 44px;
+      position: relative;
+      padding-left: 0;
+    }
+    .ddx-tech-row {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      position: relative;
+      padding-bottom: 36px;
+    }
+    .ddx-tech-row:last-child { padding-bottom: 0; }
+    .ddx-tech-rail { position: relative; display: flex; flex-direction: column; align-items: center; }
+    .ddx-tech-node {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 2px solid rgba(188,142,100,0.55);
+      background: var(--bg);
+      display: grid; place-items: center;
+      position: relative; z-index: 2; flex: none;
+    }
+    .ddx-tech-node::before {
+      content: ""; width: 12px; height: 12px; border-radius: 50%;
+      background: var(--scan-bright);
+      box-shadow: 0 0 12px var(--scan-bright);
+    }
+    .ddx-tech-row:not(:last-child) .ddx-tech-rail::after {
+      content: "";
+      position: absolute;
+      top: 40px; bottom: -36px;
+      width: 1.5px;
+      background: linear-gradient(180deg, rgba(188,142,100,0.45), rgba(188,142,100,0.12));
+    }
+    .ddx-tech-body { padding-top: 2px; }
+    .ddx-tech-head { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+    .ddx-tech-num { font-family: var(--f-mono); font-size: 13px; letter-spacing: 0.1em; color: var(--text-3); }
+    .ddx-tech-pill {
+      font-family: var(--f-mono); font-size: 10px; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--authentic);
+      border: 1px solid rgba(74,158,106,0.4);
+      border-radius: 999px; padding: 3px 10px;
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .ddx-tech-pill::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--authentic); box-shadow: 0 0 8px var(--authentic);
+    }
+    .ddx-tech-title { font-size: 21px; font-weight: 600; letter-spacing: -0.015em; margin: 0 0 8px; color: var(--text); }
+    .ddx-tech-desc { font-size: 15px; line-height: 1.58; color: var(--text-2); margin: 0; max-width: 620px; text-wrap: pretty; }
+
+    /* ===================== Closing note ===================== */
+    .ddx-note {
+      margin-top: 56px;
+      text-align: center;
+      max-width: 640px;
+      margin-inline: auto;
+    }
+    .ddx-note__shield {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--scan-soft); color: var(--scan-bright);
+      display: grid; place-items: center; margin: 0 auto 20px;
+    }
+    .ddx-note p { font-size: 16px; line-height: 1.6; color: var(--text-2); margin: 0 0 28px; text-wrap: pretty; }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Verifyco"><span>Verify<em>co</em></span></a>
+      <nav class="nav__links">
+        <a href="index.html#signals" data-i18n="nav.signals">How it works</a>
+        <a href="index.html#showcase" data-i18n="nav.features">Features</a>
+        <a href="deepdetect-plus.html" data-i18n="nav.dd" style="color:var(--scan-bright);">DeepDetect+</a>
+        <a href="index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="nav__right">
+        <div class="lang">
+          <button type="button" class="lang__btn" aria-haspopup="listbox" aria-label="Choose language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            <span data-lang-current>EN</span>
+            <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l5 5 5-5"/></svg>
+          </button>
+          <div class="lang__menu" data-lang-menu role="listbox"></div>
+        </div>
+        <a class="btn btn--primary btn--sm" href="index.html#download" data-i18n="nav.download">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="ddx-hero">
+    <div class="hero__bg-grid"></div>
+    <div class="container">
+      <a href="index.html" class="ddx-back">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1L2 5l4 4"/></svg>
+        <span data-i18n="dd.back">Back to Verifyco</span>
+      </a>
+
+      <!-- Orbital constellation -->
+      <div class="ddx-orbit" aria-hidden="true">
+        <svg viewBox="0 0 440 440">
+          <defs>
+            <radialGradient id="ddxGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#D6AC86" stop-opacity="0.20"/>
+              <stop offset="70%" stop-color="#BC8E64" stop-opacity="0.05"/>
+              <stop offset="100%" stop-color="#BC8E64" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="220" cy="220" r="210" fill="url(#ddxGlow)"/>
+
+          <!-- network lines -->
+          <g stroke="#BC8E64" stroke-opacity="0.22" stroke-width="1" fill="none">
+            <path d="M70 150 L160 96 L290 70 L372 150 L398 250 L330 350 L210 392 L96 332 L52 230 Z"/>
+            <path d="M160 96 L220 220 L372 150"/>
+            <path d="M96 332 L220 220 L330 350"/>
+            <path d="M70 150 L220 220 L290 70"/>
+            <path d="M398 250 L220 220 L210 392"/>
+            <path d="M52 230 L220 220"/>
+          </g>
+
+          <!-- rotating dashed ring -->
+          <circle cx="220" cy="220" r="170" fill="none" stroke="#BC8E64" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="3 9">
+            <animateTransform attributeName="transform" type="rotate" from="0 220 220" to="360 220 220" dur="50s" repeatCount="indefinite"/>
+          </circle>
+          <!-- sweeping arc -->
+          <path d="M220 60 A160 160 0 0 1 380 220" fill="none" stroke="#E7C9A4" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round">
+            <animateTransform attributeName="transform" type="rotate" from="0 220 220" to="360 220 220" dur="9s" repeatCount="indefinite"/>
+          </path>
+
+          <!-- nodes -->
+          <g fill="#E7C9A4">
+            <circle cx="70" cy="150" r="4"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite"/></circle>
+            <circle cx="160" cy="96" r="5"><animate attributeName="opacity" values="1;0.4;1" dur="4s" repeatCount="indefinite"/></circle>
+            <circle cx="290" cy="70" r="4"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/></circle>
+            <circle cx="372" cy="150" r="5"><animate attributeName="opacity" values="1;0.5;1" dur="4.4s" repeatCount="indefinite"/></circle>
+            <circle cx="398" cy="250" r="4"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/></circle>
+            <circle cx="330" cy="350" r="5"><animate attributeName="opacity" values="0.6;1;0.6" dur="4.2s" repeatCount="indefinite"/></circle>
+            <circle cx="210" cy="392" r="4"><animate attributeName="opacity" values="1;0.4;1" dur="3.4s" repeatCount="indefinite"/></circle>
+            <circle cx="96" cy="332" r="5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite"/></circle>
+            <circle cx="52" cy="230" r="4"><animate attributeName="opacity" values="0.6;1;0.6" dur="4.6s" repeatCount="indefinite"/></circle>
+          </g>
+        </svg>
+
+        <!-- glowing core with shield -->
+        <div class="ddx-orbit__core">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2 L20 5 V11 C20 16 16.5 19.5 12 22 C7.5 19.5 4 16 4 11 V5 Z" fill="#1A120A" stroke="#3A2A18" stroke-width="0.5"/>
+            <path d="M12 4 L12 20 C8.6 18 6 15 6 11 V6.2 Z" fill="#0E0A06"/>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="ddx-title">DeepDetect+</h1>
+      <div class="ddx-badge">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z"/></svg>
+        <span data-i18n="dd.badge">Advanced</span>
+      </div>
+      <p class="ddx-tagline" data-i18n="dd.tagline">Advanced deepfake detection</p>
+
+      <p class="ddx-desc" data-i18n="dd.desc">
+        DeepDetect+ is Verifyco's advanced detection engine, combining multi-layer forensic inspection with a neural architecture trained on adversarial deepfakes, generative-AI artifacts, and historic manipulation patterns — designed to surface the evidence that matters.
+      </p>
+
+      <div class="ddx-powered">
+        <div class="ddx-powered__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 5.5 1.7"/><path d="M12 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 3"/><path d="M12 3v18"/></svg>
+        </div>
+        <div>
+          <div class="ddx-powered__t" data-i18n="dd.powered.t">Powered by on-device AI</div>
+          <div class="ddx-powered__m" data-i18n="dd.powered.m">CoreML · On-device · Private</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DETECTION LAYERS ===================== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow" data-i18n="dd.layers.eyebrow">HOW IT WORKS</span>
+        <h2 class="section__title" data-i18n="dd.layers.title">Detection <em>layers.</em></h2>
+        <p class="section__sub" data-i18n="dd.layers.sub">Six independent forensic methods run on every file, then fuse into a single, explainable verdict.</p>
+      </div>
+
+      <div class="ddx-layers reveal">
+        <div class="ddx-card">
+          <div class="ddx-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 L22 7 L12 12 L2 7 Z"/><path d="M2 12 L12 17 L22 12"/><path d="M2 17 L12 22 L22 17"/></svg>
+          </div>
+          <h3 class="ddx-card__title" data-i18n="dd.l1.t">Multi-layer analysis</h3>
+          <p class="ddx-card__desc" data-i18n="dd.l1.d">Runs five independent detection layers — C2PA, metadata, AI detection, temporal, and frequency analysis.</p>
+        </div>
+
+        <div class="ddx-card">
+          <div class="ddx-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          </div>
+          <h3 class="ddx-card__title" data-i18n="dd.l2.t">AI detection</h3>
+          <p class="ddx-card__desc" data-i18n="dd.l2.d">On-device neural network analyzes facial regions, skin texture, and boundary artifacts to identify AI-generated imagery.</p>
+        </div>
+
+        <div class="ddx-card">
+          <div class="ddx-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12 h3 l2-7 3 14 3-11 2 6 h7"/></svg>
+          </div>
+          <h3 class="ddx-card__title" data-i18n="dd.l3.t">Frequency analysis</h3>
+          <p class="ddx-card__desc" data-i18n="dd.l3.d">Spectral analysis detects patterns invisible to the human eye that distinguish synthetic content from authentic media.</p>
+        </div>
+
+        <div class="ddx-card">
+          <div class="ddx-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6"/><path d="M11 8v3l2 1.5"/><path d="M16 16l5 5"/></svg>
+          </div>
+          <h3 class="ddx-card__title" data-i18n="dd.l4.t">Metadata forensics</h3>
+          <p class="ddx-card__desc" data-i18n="dd.l4.d">Examines EXIF, TIFF, IPTC, and PNG metadata for inconsistencies, AI generator signatures, and tampering.</p>
+        </div>
+
+        <div class="ddx-card">
+          <div class="ddx-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 15l6-6"/><path d="M10.5 7.5l1.8-1.8a4 4 0 0 1 5.7 5.7l-1.8 1.8"/><path d="M13.5 16.5l-1.8 1.8a4 4 0 0 1-5.7-5.7l1.8-1.8"/></svg>
+          </div>
+          <h3 class="ddx-card__title" data-i18n="dd.l5.t">Content provenance</h3>
+          <p class="ddx-card__desc" data-i18n="dd.l5.d">Verifies C2PA content credential signatures embedded by cameras and platforms that support them.</p>
+        </div>
+
+        <div class="ddx-card">
+          <div class="ddx-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M8 13h8M8 17h5"/></svg>
+          </div>
+          <h3 class="ddx-card__title" data-i18n="dd.l6.t">Detailed reports</h3>
+          <p class="ddx-card__desc" data-i18n="dd.l6.d">Export analysis results as PDF or JSON with per-layer breakdowns, confidence levels, and verdict classification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHO IT'S FOR ===================== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow" data-i18n="dd.uses.eyebrow">BUILT FOR</span>
+        <h2 class="section__title" data-i18n="dd.uses.title">Who it's <em>for.</em></h2>
+      </div>
+
+      <div class="ddx-uses reveal">
+        <div class="ddx-use">
+          <div class="ddx-use__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h13v14a1 1 0 0 0 1 1H6a2 2 0 0 1-2-2z"/><path d="M17 8h2a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2"/><path d="M7 8h7M7 12h7M7 16h4"/></svg>
+          </div>
+          <div>
+            <h3 class="ddx-use__title" data-i18n="dd.u1.t">Journalism &amp; fact-checking</h3>
+            <p class="ddx-use__desc" data-i18n="dd.u1.d">Verify viral clips and images before publishing — cite layer-level evidence in your reporting.</p>
+          </div>
+        </div>
+
+        <div class="ddx-use">
+          <div class="ddx-use__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 L19 6 V11 C19 15.5 16 18.7 12 21 C8 18.7 5 15.5 5 11 V6 Z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h3 class="ddx-use__title" data-i18n="dd.u2.t">Media verification</h3>
+            <p class="ddx-use__desc" data-i18n="dd.u2.d">Analyze shared photos and videos for signs of AI manipulation before making decisions based on them.</p>
+          </div>
+        </div>
+
+        <div class="ddx-use">
+          <div class="ddx-use__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><circle cx="12" cy="14" r="2.4"/><path d="M12 16.4V19"/></svg>
+          </div>
+          <div>
+            <h3 class="ddx-use__title" data-i18n="dd.u3.t">Content authentication</h3>
+            <p class="ddx-use__desc" data-i18n="dd.u3.d">Document the analysis of questionable media with exportable PDF and JSON reports.</p>
+          </div>
+        </div>
+
+        <div class="ddx-use">
+          <div class="ddx-use__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v15"/><path d="M15 10h4a1 1 0 0 1 1 1v10"/><path d="M8 9h3M8 13h3M8 17h3"/></svg>
+          </div>
+          <div>
+            <h3 class="ddx-use__title" data-i18n="dd.u4.t">Brand protection</h3>
+            <p class="ddx-use__desc" data-i18n="dd.u4.d">Check media involving your brand or team for signs of synthetic manipulation before it spreads.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TECHNOLOGY ===================== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow" data-i18n="dd.tech.eyebrow">UNDER THE HOOD</span>
+        <h2 class="section__title" data-i18n="dd.tech.title">Our <em>technology.</em></h2>
+      </div>
+
+      <div class="ddx-tech reveal">
+        <div class="ddx-tech-row">
+          <div class="ddx-tech-rail"><div class="ddx-tech-node"></div></div>
+          <div class="ddx-tech-body">
+            <div class="ddx-tech-head">
+              <span class="ddx-tech-num">01</span>
+              <span class="ddx-tech-pill" data-i18n="dd.active">Active</span>
+            </div>
+            <h3 class="ddx-tech-title" data-i18n="dd.t1.t">Adversarial dataset</h3>
+            <p class="ddx-tech-desc" data-i18n="dd.t1.d">Trained on authentic media, classical edits, and AI-generated content spanning multiple state-of-the-art generative models.</p>
+          </div>
+        </div>
+
+        <div class="ddx-tech-row">
+          <div class="ddx-tech-rail"><div class="ddx-tech-node"></div></div>
+          <div class="ddx-tech-body">
+            <div class="ddx-tech-head">
+              <span class="ddx-tech-num">02</span>
+              <span class="ddx-tech-pill" data-i18n="dd.active">Active</span>
+            </div>
+            <h3 class="ddx-tech-title" data-i18n="dd.t2.t">Neural architecture</h3>
+            <p class="ddx-tech-desc" data-i18n="dd.t2.d">EfficientNet-based classifier running entirely on-device via CoreML — no cloud dependency, full privacy.</p>
+          </div>
+        </div>
+
+        <div class="ddx-tech-row">
+          <div class="ddx-tech-rail"><div class="ddx-tech-node"></div></div>
+          <div class="ddx-tech-body">
+            <div class="ddx-tech-head">
+              <span class="ddx-tech-num">03</span>
+              <span class="ddx-tech-pill" data-i18n="dd.active">Active</span>
+            </div>
+            <h3 class="ddx-tech-title" data-i18n="dd.t3.t">Continuous validation</h3>
+            <p class="ddx-tech-desc" data-i18n="dd.t3.d">Regularly tested against new generative models and adversarial techniques to maintain detection accuracy.</p>
+          </div>
+        </div>
+
+        <div class="ddx-tech-row">
+          <div class="ddx-tech-rail"><div class="ddx-tech-node"></div></div>
+          <div class="ddx-tech-body">
+            <div class="ddx-tech-head">
+              <span class="ddx-tech-num">04</span>
+              <span class="ddx-tech-pill" data-i18n="dd.active">Active</span>
+            </div>
+            <h3 class="ddx-tech-title" data-i18n="dd.t4.t">Over-the-air updates</h3>
+            <p class="ddx-tech-desc" data-i18n="dd.t4.d">Engine improvements delivered through app updates, automatically enhancing detection capabilities over time.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- closing note -->
+      <div class="ddx-note reveal">
+        <div class="ddx-note__shield">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 L19 6 V11 C19 15.5 16 18.7 12 21 C8 18.7 5 15.5 5 11 V6 Z"/><path d="M8.5 12l2.2 2.2L15.5 9.5"/></svg>
+        </div>
+        <p data-i18n="dd.note">DeepDetect+ is continuously improved with each app update. All analysis runs privately on your device — your media never leaves your phone.</p>
+        <a class="btn btn--primary btn--lg" href="index.html#download" data-i18n="dd.cta">Get Verifyco</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand"><span>Verify<em>co</em></span></div>
+          <p class="footer__tag" data-i18n="footer.tag">On-device forensic verification for photos and videos. Designed and built with care.</p>
+          <p class="footer__tag" style="margin-top:12px;font-family:var(--f-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--scan);">VERIFYCO.INFO</p>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.product">Product</h4>
+          <ul>
+            <li><a href="index.html#signals" data-i18n="nav.signals">How it works</a></li>
+            <li><a href="index.html#showcase" data-i18n="footer.features">Features</a></li>
+            <li><a href="deepdetect-plus.html" data-i18n="footer.dd">DeepDetect+</a></li>
+            <li><a href="index.html#pricing" data-i18n="footer.pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.legal">Legal</h4>
+          <ul>
+            <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-i18n="footer.terms">Terms of Use</a></li>
+            <li><a href="terms.html" data-i18n="footer.eula">EULA</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.company">Company</h4>
+          <ul>
+            <li><a href="support.html" data-i18n="footer.support">Support</a></li>
+            <li><a href="mailto:support@verifyco.info">support@verifyco.info</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copy">© 2026 Verifyco · All rights reserved</span>
+        <span>VERIFYCO.INFO · ISTANBUL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/i18n.js"></script>
+  <script src="assets/landing.js"></script>
+</body>
+</html>
