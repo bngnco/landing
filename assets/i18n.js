@@ -110,7 +110,7 @@ window.VERIFYCO_I18N = {
     "pricing.annual.f3": "Early access to DeepDetect+",
     "pricing.annual.badge": "Best value",
     "langs.eyebrow": "WORLDWIDE",
-    "langs.title": "Available in ★13 languages.★",
+    "langs.title": "Available in ★20 languages.★",
     "langs.sub": "Verifyco ships fully localised so verification is never lost in translation.",
     "dd.back": "Back to Verifyco",
     "dd.badge": "Advanced",
@@ -258,7 +258,7 @@ window.VERIFYCO_I18N = {
     "pricing.annual.f3": "DeepDetect+ erken erişim",
     "pricing.annual.badge": "En iyi değer",
     "langs.eyebrow": "DÜNYA ÇAPINDA",
-    "langs.title": "★13 dilde★ mevcut.",
+    "langs.title": "★20 dilde★ mevcut.",
     "langs.sub": "Verifyco tamamen yerelleştirilmiş şekilde dağıtılır — doğrulama, çeviride asla kaybolmaz.",
     "dd.back": "Verifyco'ya dön",
     "dd.badge": "Gelişmiş",
@@ -345,7 +345,7 @@ const partial = {
     "dd.title": "DeepDetect+. Detección de IA ★nivel forense.★",
     "privacy.title": "Nada sale de ★tu teléfono.★",
     "pricing.title": "Empieza ★gratis.★ Mejora cuando lo necesites.",
-    "langs.title": "Disponible en ★13 idiomas.★",
+    "langs.title": "Disponible en ★20 idiomas.★",
   },
   pt: {
     "nav.features": "Recursos", "nav.signals": "Como funciona", "nav.dd": "DeepDetect+", "nav.pricing": "Preços", "nav.support": "Suporte", "nav.download": "Baixar",
@@ -359,7 +359,7 @@ const partial = {
     "dd.title": "DeepDetect+. Detecção de IA de ★nível forense.★",
     "privacy.title": "Nada sai do ★seu telefone.★",
     "pricing.title": "Comece ★grátis.★ Faça upgrade quando precisar.",
-    "langs.title": "Disponível em ★13 idiomas.★",
+    "langs.title": "Disponível em ★20 idiomas.★",
   },
   de: {
     "nav.features": "Funktionen", "nav.signals": "Wie es funktioniert", "nav.dd": "DeepDetect+", "nav.pricing": "Preise", "nav.support": "Hilfe", "nav.download": "Laden",
@@ -373,7 +373,7 @@ const partial = {
     "dd.title": "DeepDetect+. KI-Erkennung in ★forensischer Klasse.★",
     "privacy.title": "Nichts verlässt ★Ihr Telefon.★",
     "pricing.title": "Starten Sie ★kostenlos.★ Upgrade bei Bedarf.",
-    "langs.title": "Verfügbar in ★13 Sprachen.★",
+    "langs.title": "Verfügbar in ★20 Sprachen.★",
   },
   fr: {
     "nav.features": "Fonctions", "nav.signals": "Comment ça marche", "nav.dd": "DeepDetect+", "nav.pricing": "Tarifs", "nav.support": "Support", "nav.download": "Télécharger",
@@ -387,7 +387,7 @@ const partial = {
     "dd.title": "DeepDetect+. Détection d'IA ★de classe forensique.★",
     "privacy.title": "Rien ne quitte ★votre téléphone.★",
     "pricing.title": "Commencez ★gratuitement.★ Évoluez si besoin.",
-    "langs.title": "Disponible en ★13 langues.★",
+    "langs.title": "Disponible en ★20 langues.★",
   },
   it: {
     "nav.features": "Funzioni", "nav.signals": "Come funziona", "nav.dd": "DeepDetect+", "nav.pricing": "Prezzi", "nav.support": "Supporto", "nav.download": "Scarica",
@@ -401,7 +401,7 @@ const partial = {
     "dd.title": "DeepDetect+. Rilevamento IA di ★classe forense.★",
     "privacy.title": "Niente esce dal ★tuo telefono.★",
     "pricing.title": "Inizia ★gratis.★ Aggiorna quando serve.",
-    "langs.title": "Disponibile in ★13 lingue.★",
+    "langs.title": "Disponibile in ★20 lingue.★",
   },
   nl: {
     "nav.features": "Functies", "nav.signals": "Hoe het werkt", "nav.dd": "DeepDetect+", "nav.pricing": "Prijzen", "nav.support": "Hulp", "nav.download": "Download",
@@ -415,7 +415,7 @@ const partial = {
     "dd.title": "DeepDetect+. AI-detectie van ★forensisch niveau.★",
     "privacy.title": "Niets verlaat ★je telefoon.★",
     "pricing.title": "Begin ★gratis.★ Upgrade wanneer nodig.",
-    "langs.title": "Beschikbaar in ★13 talen.★",
+    "langs.title": "Beschikbaar in ★20 talen.★",
   },
   sv: {
     "nav.features": "Funktioner", "nav.signals": "Så fungerar det", "nav.dd": "DeepDetect+", "nav.pricing": "Pris", "nav.support": "Support", "nav.download": "Ladda ner",
@@ -429,7 +429,7 @@ const partial = {
     "dd.title": "DeepDetect+. AI-detektion av ★forensisk klass.★",
     "privacy.title": "Inget lämnar ★din telefon.★",
     "pricing.title": "Starta ★gratis.★ Uppgradera vid behov.",
-    "langs.title": "Tillgänglig på ★13 språk.★",
+    "langs.title": "Tillgänglig på ★20 språk.★",
   },
   pl: {
     "nav.features": "Funkcje", "nav.signals": "Jak to działa", "nav.dd": "DeepDetect+", "nav.pricing": "Cennik", "nav.support": "Pomoc", "nav.download": "Pobierz",
@@ -443,7 +443,7 @@ const partial = {
     "dd.title": "DeepDetect+. Detekcja AI klasy ★kryminalistycznej.★",
     "privacy.title": "Nic nie opuszcza ★twojego telefonu.★",
     "pricing.title": "Zacznij ★bezpłatnie.★ Ulepsz, gdy chcesz.",
-    "langs.title": "Dostępne w ★13 językach.★",
+    "langs.title": "Dostępne w ★20 językach.★",
   },
   ru: {
     "nav.features": "Функции", "nav.signals": "Как работает", "nav.dd": "DeepDetect+", "nav.pricing": "Цены", "nav.support": "Поддержка", "nav.download": "Скачать",
@@ -457,7 +457,7 @@ const partial = {
     "dd.title": "DeepDetect+. ИИ-детекция ★криминалистического класса.★",
     "privacy.title": "Ничего не покидает ★ваш телефон.★",
     "pricing.title": "Начните ★бесплатно.★ Улучшайте при необходимости.",
-    "langs.title": "Доступно на ★13 языках.★",
+    "langs.title": "Доступно на ★20 языках.★",
   },
   uk: {
     "nav.features": "Функції", "nav.signals": "Як це працює", "nav.dd": "DeepDetect+", "nav.pricing": "Ціни", "nav.support": "Підтримка", "nav.download": "Завантажити",
@@ -471,7 +471,7 @@ const partial = {
     "dd.title": "DeepDetect+. ШІ-детекція ★криміналістичного класу.★",
     "privacy.title": "Ніщо не залишає ★ваш телефон.★",
     "pricing.title": "Почніть ★безкоштовно.★ Покращуйте за потреби.",
-    "langs.title": "Доступно ★13 мовами.★",
+    "langs.title": "Доступно ★20 мовами.★",
   },
   ar: {
     "nav.features": "المزايا", "nav.signals": "كيف يعمل", "nav.dd": "DeepDetect+", "nav.pricing": "الأسعار", "nav.support": "الدعم", "nav.download": "تنزيل",
@@ -485,7 +485,7 @@ const partial = {
     "dd.title": "DeepDetect+. كشف ذكاء اصطناعي ★من فئة جنائية.★",
     "privacy.title": "لا شيء يغادر ★هاتفك.★",
     "pricing.title": "ابدأ ★مجانًا.★ اترقَّ عند الحاجة.",
-    "langs.title": "متوفّر بـ ★13 لغة.★",
+    "langs.title": "متوفّر بـ ★20 لغة.★",
   },
   hi: {
     "nav.features": "विशेषताएँ", "nav.signals": "कैसे काम करता है", "nav.dd": "DeepDetect+", "nav.pricing": "मूल्य", "nav.support": "सहायता", "nav.download": "डाउनलोड",
@@ -499,7 +499,7 @@ const partial = {
     "dd.title": "DeepDetect+. ★फ़ोरेंसिक श्रेणी★ की AI जाँच।",
     "privacy.title": "कुछ भी आपके ★फ़ोन से बाहर★ नहीं जाता।",
     "pricing.title": "★मुफ़्त★ शुरू करें। ज़रूरत हो तो अपग्रेड करें।",
-    "langs.title": "★13 भाषाओं में★ उपलब्ध।",
+    "langs.title": "★20 भाषाओं में★ उपलब्ध।",
   },
   ja: {
     "nav.features": "機能", "nav.signals": "仕組み", "nav.dd": "DeepDetect+", "nav.pricing": "料金", "nav.support": "サポート", "nav.download": "ダウンロード",
@@ -513,7 +513,7 @@ const partial = {
     "dd.title": "DeepDetect+。★フォレンジック級★のAI検出。",
     "privacy.title": "★あなたの端末★から何も出ません。",
     "pricing.title": "★無料★で開始。必要な時にアップグレード。",
-    "langs.title": "★13言語★に対応。",
+    "langs.title": "★20言語★に対応。",
   },
   ko: {
     "nav.features": "기능", "nav.signals": "작동 방식", "nav.dd": "DeepDetect+", "nav.pricing": "요금", "nav.support": "지원", "nav.download": "다운로드",
@@ -527,7 +527,7 @@ const partial = {
     "dd.title": "DeepDetect+. ★포렌식 등급★의 AI 탐지.",
     "privacy.title": "★당신의 폰★을 벗어나는 것은 없습니다.",
     "pricing.title": "★무료★로 시작. 필요할 때 업그레이드.",
-    "langs.title": "★13개 언어★ 제공.",
+    "langs.title": "★20개 언어★ 제공.",
   },
   zh: {
     "nav.features": "功能", "nav.signals": "工作原理", "nav.dd": "DeepDetect+", "nav.pricing": "价格", "nav.support": "支持", "nav.download": "下载",
@@ -541,7 +541,7 @@ const partial = {
     "dd.title": "DeepDetect+。★取证级★ AI 检测。",
     "privacy.title": "任何内容都不会离开★你的手机。★",
     "pricing.title": "★免费★开始，需要时再升级。",
-    "langs.title": "支持 ★13 种语言.★",
+    "langs.title": "支持 ★20 种语言.★",
   },
   th: {
     "nav.features": "ฟีเจอร์", "nav.signals": "วิธีทำงาน", "nav.dd": "DeepDetect+", "nav.pricing": "ราคา", "nav.support": "ฝ่ายช่วยเหลือ", "nav.download": "ดาวน์โหลด",
@@ -555,7 +555,7 @@ const partial = {
     "dd.title": "DeepDetect+. การตรวจจับ AI ★ระดับนิติเวช★",
     "privacy.title": "ไม่มีสิ่งใดออกจาก★โทรศัพท์ของคุณ★",
     "pricing.title": "เริ่มต้น★ฟรี★ อัปเกรดเมื่อต้องการ",
-    "langs.title": "รองรับ ★13 ภาษา★",
+    "langs.title": "รองรับ ★20 ภาษา★",
   },
   vi: {
     "nav.features": "Tính năng", "nav.signals": "Cách hoạt động", "nav.dd": "DeepDetect+", "nav.pricing": "Giá", "nav.support": "Hỗ trợ", "nav.download": "Tải xuống",
@@ -569,7 +569,7 @@ const partial = {
     "dd.title": "DeepDetect+. Phát hiện AI ★cấp pháp y.★",
     "privacy.title": "Không gì rời khỏi ★điện thoại của bạn.★",
     "pricing.title": "Bắt đầu ★miễn phí.★ Nâng cấp khi cần.",
-    "langs.title": "Có sẵn bằng ★13 ngôn ngữ.★",
+    "langs.title": "Có sẵn bằng ★20 ngôn ngữ.★",
   },
   id: {
     "nav.features": "Fitur", "nav.signals": "Cara kerja", "nav.dd": "DeepDetect+", "nav.pricing": "Harga", "nav.support": "Dukungan", "nav.download": "Unduh",
@@ -583,7 +583,7 @@ const partial = {
     "dd.title": "DeepDetect+. Deteksi AI ★kelas forensik.★",
     "privacy.title": "Tidak ada yang meninggalkan ★ponsel Anda.★",
     "pricing.title": "Mulai ★gratis.★ Tingkatkan jika perlu.",
-    "langs.title": "Tersedia dalam ★13 bahasa.★",
+    "langs.title": "Tersedia dalam ★20 bahasa.★",
   },
 };
 

@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════
    VERIFYCO — site.js (Fable redesign)
-   GSAP 3.13 + ScrollTrigger + Lenis · i18n · splash · menus
+   GSAP 3.13 + ScrollTrigger + Lenis · i18n · hero · menus
    ════════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
@@ -14,12 +14,21 @@
 
   /* ── i18n ─────────────────────────────────────────────── */
   function detectLang() {
+    // 1) Honour an explicit choice the visitor made before.
     try {
       var saved = localStorage.getItem(LANG_KEY);
       if (saved && window.VERIFYCO_I18N[saved]) return saved;
     } catch (e) {}
-    var nav2 = (navigator.language || "en").slice(0, 2).toLowerCase();
-    return window.VERIFYCO_I18N[nav2] ? nav2 : "en";
+    // 2) Otherwise auto-select from the visitor's locale preferences,
+    //    walking the full ordered list the browser/region exposes.
+    var prefs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || "en"];
+    for (var i = 0; i < prefs.length; i++) {
+      var code = (prefs[i] || "").slice(0, 2).toLowerCase();
+      if (code && window.VERIFYCO_I18N[code]) return code;
+    }
+    return "en";
   }
 
   function applyLang(code) {
@@ -80,12 +89,23 @@
 
     var wrap = document.querySelector("[data-lang]");
     if (wrap) {
-      wrap.querySelector(".lang-btn").addEventListener("click", function (e) {
+      var btn = wrap.querySelector(".lang-btn");
+      var sync = function () {
+        btn.setAttribute("aria-expanded", wrap.classList.contains("open") ? "true" : "false");
+      };
+      sync();
+      btn.addEventListener("click", function (e) {
         e.stopPropagation();
         wrap.classList.toggle("open");
+        sync();
       });
       document.addEventListener("click", function (e) {
-        if (!wrap.contains(e.target)) wrap.classList.remove("open");
+        if (!wrap.contains(e.target)) { wrap.classList.remove("open"); sync(); }
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && wrap.classList.contains("open")) {
+          wrap.classList.remove("open"); sync(); btn.focus();
+        }
       });
     }
   }
@@ -121,67 +141,15 @@
     return inners;
   }
 
-  /* ── Splash ───────────────────────────────────────────── */
-  function killSplash(splash) {
-    if (!splash || !splash.parentNode) return;
-    document.body.style.overflow = "";
-    splash.remove();
-  }
-
-  function runSplash(onDone) {
-    var splash = document.getElementById("splash");
-    if (!splash) { onDone(); return; }
-
-    if (reduceMotion || !hasGSAP) {
-      // graceful, fast fallback
-      splash.style.transition = "opacity 500ms ease";
-      document.body.style.overflow = "hidden";
-      setTimeout(function () {
-        splash.style.opacity = "0";
-        setTimeout(function () { killSplash(splash); onDone(); }, 520);
-      }, hasGSAP ? 400 : 1200);
-      return;
-    }
-
-    document.body.style.overflow = "hidden";
-    var skipped = false;
-    var chars = splash.querySelectorAll(".sp-word .ch");
-    var lineW = Math.min(340, window.innerWidth * 0.62);
-
-    var tl = gsap.timeline({
-      defaults: { ease: "power3.out" },
-      onComplete: function () { onDone(); }
-    });
-
-    splash.addEventListener("click", function () {
-      if (skipped) return;
-      skipped = true;
-      tl.progress(1);
-    }, { once: true });
-
-    tl.to("[data-sp-line]", { width: lineW, duration: 0.7, ease: "power3.inOut", stagger: 0.08 }, 0)
-      .to(".sp-corner", { opacity: 1, duration: 0.5, stagger: 0.07 }, 0.25)
-      .to(".sp-icon", { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.9, ease: "back.out(1.5)" }, 0.45)
-      // sonar rings ripple outward from the icon
-      .fromTo(".sp-ring",
-        { opacity: 0, scale: 0.7 },
-        { opacity: 0.9, scale: 1.45, duration: 1.1, ease: "power2.out", stagger: 0.3,
-          onComplete: function () { gsap.to(".sp-ring", { opacity: 0, duration: 0.4 }); } }, 0.7)
-      .to(chars, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, stagger: 0.05 }, 0.95)
-      .to(".sp-tag", { opacity: 1, duration: 0.5 }, 1.7)
-      .to({}, { duration: 1.0 }) // hold — total visible ~3.2s
-      .to(".sp-center", { y: -26, opacity: 0, duration: 0.5, ease: "power2.in" }, ">-0.1")
-      .to(splash, {
-        yPercent: -100,
-        duration: 0.85,
-        ease: "power4.inOut",
-        onComplete: function () { killSplash(splash); }
-      }, "<0.15");
-  }
-
   /* ── Hero entrance ────────────────────────────────────── */
   function heroIn() {
     if (!hasGSAP) { doc.classList.add("no-anim"); return; }
+
+    // Respect reduced-motion: present the hero instantly, no entrance tween.
+    // (CSS reveals these elements for the reduced-motion case.)
+    if (reduceMotion) { doc.classList.add("hero-ready"); return; }
+
+    doc.classList.add("hero-ready");
 
     var title = document.querySelector("[data-hero-title]");
     var words = title ? splitWords(title) : [];
@@ -365,6 +333,31 @@
     });
   }
 
+  /* ── Active section → nav link ────────────────────────── */
+  function activeNav() {
+    if (!("IntersectionObserver" in window)) return;
+    var links = Array.prototype.slice.call(
+      document.querySelectorAll('.nav-links a[href^="#"]')
+    );
+    var map = [];
+    links.forEach(function (a) {
+      var sec = document.querySelector(a.getAttribute("href"));
+      if (sec) map.push({ a: a, sec: sec });
+    });
+    if (!map.length) return;
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        for (var i = 0; i < map.length; i++) {
+          map[i].a.classList.toggle("is-here", map[i].sec === en.target);
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+    map.forEach(function (m) { io.observe(m.sec); });
+  }
+
   /* ── Magnetic buttons ─────────────────────────────────── */
   function magnets() {
     if (!finePointer || reduceMotion || !hasGSAP) return;
@@ -391,14 +384,11 @@
     smoothScroll();
     scrollFX();
     magnets();
+    activeNav();
 
-    runSplash(function () { heroIn(); });
-
-    // absolute failsafe: never trap the user behind the splash
-    setTimeout(function () {
-      var s = document.getElementById("splash");
-      if (s) { killSplash(s); }
-    }, 6500);
+    // No splash — the page is interactive immediately; the hero simply
+    // animates in on load.
+    heroIn();
   }
 
   if (document.readyState === "loading") {
