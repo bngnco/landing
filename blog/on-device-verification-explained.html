@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Deepfakes — The Verifyco Blog</title>
-  <meta name="description" content="Verifyco articles about Deepfakes: detecting deepfakes, AI-generated and manipulated media." />
-  <link rel="canonical" href="https://verifyco.info/blog/tag/deepfakes" />
+  <title>On-Device Verification, Explained (Nothing Leaves Your iPhone) | Verifyco Blog</title>
+  <meta name="description" content="Why Verifyco runs entirely on your iPhone — how on-device forensic analysis works, what the Neural Engine does, and why nothing is ever uploaded." />
+  <link rel="canonical" href="https://verifyco.info/blog/on-device-verification-explained" />
   <meta name="theme-color" content="#0B0908" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
 
   <meta property="og:site_name" content="Verifyco" />
-  <meta property="og:title" content="Deepfakes — The Verifyco Blog" />
-  <meta property="og:description" content="Verifyco articles about Deepfakes: detecting deepfakes, AI-generated and manipulated media." />
-  <meta property="og:url" content="https://verifyco.info/blog/tag/deepfakes" />
-  <meta property="og:image" content="https://verifyco.info/assets/app/face.png" />
+  <meta property="og:title" content="On-Device Verification, Explained (Nothing Leaves Your iPhone) | Verifyco Blog" />
+  <meta property="og:description" content="Why Verifyco runs entirely on your iPhone — how on-device forensic analysis works, what the Neural Engine does, and why nothing is ever uploaded." />
+  <meta property="og:url" content="https://verifyco.info/blog/on-device-verification-explained" />
+  <meta property="og:image" content="https://verifyco.info/assets/app/spotlight.png" />
   <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@verifyco" />
-  <meta name="twitter:title" content="Deepfakes — The Verifyco Blog" />
-  <meta name="twitter:description" content="Verifyco articles about Deepfakes: detecting deepfakes, AI-generated and manipulated media." />
-  <meta name="twitter:image" content="https://verifyco.info/assets/app/face.png" />
+  <meta name="twitter:title" content="On-Device Verification, Explained (Nothing Leaves Your iPhone) | Verifyco Blog" />
+  <meta name="twitter:description" content="Why Verifyco runs entirely on your iPhone — how on-device forensic analysis works, what the Neural Engine does, and why nothing is ever uploaded." />
+  <meta name="twitter:image" content="https://verifyco.info/assets/app/spotlight.png" />
 
   <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
   <link rel="apple-touch-icon" href="/assets/verifyco-icon.png" />
@@ -30,10 +30,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/blog.css" />
-  <meta property="og:type" content="website" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"The Verifyco Blog","url":"https://verifyco.info/blog/tag/deepfakes","description":"Verifyco articles about Deepfakes: detecting deepfakes, AI-generated and manipulated media.","blogPost":[{"@type":"BlogPosting","headline":"How to Tell If an Image Is AI-Generated","url":"https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated","datePublished":"2026-06-28T00:00:00+00:00","image":"https://verifyco.info/assets/app/face.png"},{"@type":"BlogPosting","headline":"What Is a Deepfake? A Plain-English Guide","url":"https://verifyco.info/blog/what-is-a-deepfake","datePublished":"2026-06-22T00:00:00+00:00","image":"https://verifyco.info/assets/app/deepfake.png"},{"@type":"BlogPosting","headline":"5 Signs a Video Has Been Deepfaked","url":"https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked","datePublished":"2026-06-15T00:00:00+00:00","image":"https://verifyco.info/assets/app/signals.png"}]}</script>
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-06-08T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-06-08T00:00:00+00:00" />
+  <meta property="article:author" content="Verifyco Team" />
+  <meta property="article:tag" content="iOS" />
+  <meta property="article:tag" content="Research" />
+  <meta property="article:tag" content="Guides" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"On-Device Verification, Explained (Nothing Leaves Your iPhone)","description":"Why Verifyco runs entirely on your iPhone — how on-device forensic analysis works, what the Neural Engine does, and why nothing is ever uploaded.","image":["https://verifyco.info/assets/app/spotlight.png"],"datePublished":"2026-06-08T00:00:00+00:00","dateModified":"2026-06-08T00:00:00+00:00","author":{"@type":"Organization","name":"Verifyco Team","url":"https://verifyco.info"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.info/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.info/blog/on-device-verification-explained"},"keywords":"iOS, Research, Guides"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://verifyco.info/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://verifyco.info/blog"},{"@type":"ListItem","position":3,"name":"On-Device Verification, Explained (Nothing Leaves Your iPhone)","item":"https://verifyco.info/blog/on-device-verification-explained"}]}</script>
 </head>
-<body class="is-listing">
+<body class="is-post">
 
   <header class="bnav" id="bnav">
     <div class="bwrap bnav-in">
@@ -65,18 +72,86 @@
   </div>
 
   <main class="bmain">
-    <header class="blog-hero bwrap">
-      <span class="eyebrow">TOPIC</span>
-      <h1>Deepfakes</h1>
-      <p class="lead">Verifyco articles tagged “Deepfakes”.</p>
-      
-    <div class="tag-filter">
-      <a class="chip" href="/blog">All</a>
-      <a class="chip" href="/blog/tag/ai-detection">AI Detection</a><a class="chip is-on" href="/blog/tag/deepfakes">Deepfakes</a><a class="chip" href="/blog/tag/guides">Guides</a><a class="chip" href="/blog/tag/ios">iOS</a><a class="chip" href="/blog/tag/research">Research</a>
+    <article class="post">
+      <div class="post-head measure">
+        
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span>
+      <a href="/blog">Blog</a><span class="sep">/</span>
+      <span aria-current="page">iOS</span>
+    </nav>
+        <div class="post-tags"><a class="chip" href="/blog/tag/ios">iOS</a><a class="chip" href="/blog/tag/research">Research</a><a class="chip" href="/blog/tag/guides">Guides</a></div>
+        <h1 class="post-title">On-Device Verification, Explained (Nothing Leaves Your iPhone)</h1>
+        <p class="post-dek">Why Verifyco runs entirely on your iPhone — how on-device forensic analysis works, what the Neural Engine does, and why nothing is ever uploaded.</p>
+        <div class="post-meta">
+          <span class="byline">Verifyco Team</span>
+          <span class="dot">·</span>
+          <time datetime="2026-06-08T00:00:00+00:00">June 8, 2026</time>
+          <span class="dot">·</span>
+          <span>1 min read</span>
+          
+        </div>
+      </div>
+
+      <figure class="post-hero">
+        <img src="/assets/app/spotlight.png" alt="Verifyco running a private, on-device analysis on iPhone" decoding="async" />
+      </figure>
+
+      <div class="prose measure">
+        <p>Most media-checking tools upload your file to a server. Verifyco doesn’t. Every
+signal runs locally on your iPhone, and your photos and videos never leave the
+device. Here’s why that matters — and how it works.</p>
+<h2 id="why-on-device-matters">Why on-device matters</h2>
+<ul>
+<li><strong>Privacy.</strong> Sensitive media — a private photo, a leaked clip you’re vetting —
+never touches someone else’s server.</li>
+<li><strong>Speed.</strong> No upload, no queue. Analysis starts immediately.</li>
+<li><strong>Offline.</strong> It works on a plane or with no signal, because there’s no network
+call to make.</li>
+</ul>
+<blockquote>
+<p>There is no server. There is no upload. There is no account.</p>
+</blockquote>
+<h2 id="whats-actually-running">What’s actually running</h2>
+<p>Verifyco fuses five independent forensic signals:</p>
+<ol>
+<li><strong>Content credentials</strong> — C2PA provenance, the camera’s signed receipt.</li>
+<li><strong>Metadata forensics</strong> — EXIF, encoding and frame-rate consistency.</li>
+<li><strong>Neural face analysis</strong> — Apple Vision, frame by frame.</li>
+<li><strong>Motion analysis</strong> — optical-flow and temporal consistency.</li>
+<li><strong>Frequency analysis</strong> — the DCT spectral fingerprint of generative models.</li>
+</ol>
+<p>Each produces evidence; together they form a single 0–100 trust score you can
+actually reason about.</p>
+
+  <aside class="cta cta--inline" aria-label="Get Verifyco">
+    <p><strong>Want to check a file right now?</strong> Verifyco analyses any photo or video on your iPhone — on-device and private.</p>
+    <a class="cta-link" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Get Verifyco →</a>
+  </aside>
+<h2 id="the-neural-engine-does-the-heavy-lifting">The Neural Engine does the heavy lifting</h2>
+<p>Modern iPhones include a dedicated Neural Engine — silicon built for on-device
+machine learning. It’s what lets Verifyco run neural analysis in seconds without
+a cloud GPU, and without your media ever being transmitted.</p>
+<p>The result: a forensic-grade second opinion that’s private by design, and fast
+enough to use before you share anything.</p>
+
+        
+  <aside class="cta" aria-label="Get Verifyco">
+    <img class="cta-icon" src="/assets/verifyco-icon.png" alt="" width="72" height="72" loading="lazy" />
+    <div class="cta-body">
+      <h3 class="cta-title">Verify it yourself — on your iPhone</h3>
+      <p class="cta-text">Verifyco runs five forensic signals on-device to flag deepfakes, AI-generated and manipulated media — in seconds, fully offline, never uploaded.</p>
+      <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">
+        <span class="btn-ico"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg></span> Download on the App Store
+      </a>
     </div>
-    </header>
-    <section class="post-grid bwrap">
-      
+  </aside>
+      </div>
+    </article>
+    
+    <section class="related bwrap">
+      <h2 class="related-h">More from the blog</h2>
+      <div class="post-grid">
     <article class="card">
       <a class="card-media" href="/blog/how-to-tell-if-an-image-is-ai-generated" aria-label="How to Tell If an Image Is AI-Generated">
         <img src="/assets/app/face.png" alt="Forensic face analysis overlay highlighting AI-generation artifacts" loading="lazy" decoding="async" />
@@ -121,7 +196,7 @@
           <span>1 min read</span>
         </div>
       </div>
-    </article>
+    </article></div>
     </section>
   </main>
 
