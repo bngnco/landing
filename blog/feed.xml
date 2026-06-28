@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Verifyco Blog</title>
+    <link>https://verifyco.info/blog</link>
+    <description>Guides and research on detecting deepfakes, AI-generated and manipulated media.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Jun 2026 16:59:11 GMT</lastBuildDate>
+    <atom:link href="https://verifyco.info/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Tell If an Image Is AI-Generated</title>
+      <link>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>A practical, forensic checklist for spotting AI-generated images — from telltale visual artifacts to the metadata and signals that actually hold up.</description>
+      <category>AI Detection</category>
+      <category>Deepfakes</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>What Is a Deepfake? A Plain-English Guide</title>
+      <link>https://verifyco.info/blog/what-is-a-deepfake</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/what-is-a-deepfake</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Deepfakes explained simply: how they're made, why they've gotten so convincing, and the practical ways to tell a synthetic face or voice from the real thing.</description>
+      <category>Deepfakes</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>5 Signs a Video Has Been Deepfaked</title>
+      <link>https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>A quick, practical checklist for spotting deepfaked video — the edge artifacts, lip-sync drift and lighting tells that still give synthetic clips away.</description>
+      <category>Deepfakes</category>
+      <category>AI Detection</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>On-Device Verification, Explained (Nothing Leaves Your iPhone)</title>
+      <link>https://verifyco.info/blog/on-device-verification-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/on-device-verification-explained</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Why Verifyco runs entirely on your iPhone — how on-device forensic analysis works, what the Neural Engine does, and why nothing is ever uploaded.</description>
+      <category>iOS</category>
+      <category>Research</category>
+      <category>Guides</category>
+    </item>
+  </channel>
+</rss>

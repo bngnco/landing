@@ -7,10 +7,18 @@
   <meta name="description" content="Verifyco runs five forensic signals on your iPhone to spot deepfakes, AI-generated and manipulated media — in seconds, fully offline, never uploaded." />
   <meta name="theme-color" content="#060504" />
   <link rel="canonical" href="https://verifyco.info/" />
+  <meta property="og:site_name" content="Verifyco" />
   <meta property="og:title" content="Verifyco — Reality, verified in every pixel" />
   <meta property="og:description" content="On-device forensic verification for photos and videos. Five signals, one verdict — fully offline." />
   <meta property="og:url" content="https://verifyco.info/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://verifyco.info/assets/verifyco-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Verifyco — Reality, verified in every pixel" />
+  <meta name="twitter:description" content="On-device forensic verification for photos and videos. Five signals, one verdict — fully offline." />
+  <meta name="twitter:image" content="https://verifyco.info/assets/verifyco-icon.png" />
+
+  <link rel="alternate" type="application/rss+xml" title="The Verifyco Blog" href="https://verifyco.info/blog/feed.xml" />
 
   <link rel="icon" type="image/png" href="assets/verifyco-icon.png" />
   <link rel="apple-touch-icon" href="assets/verifyco-icon.png" />
@@ -26,6 +34,45 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
   <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js" defer></script>
+
+  <!-- Structured data — helps Google understand the brand + app. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://verifyco.info/#org",
+        "name": "Verifyco",
+        "url": "https://verifyco.info/",
+        "logo": "https://verifyco.info/assets/verifyco-icon.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://verifyco.info/#website",
+        "name": "Verifyco",
+        "url": "https://verifyco.info/",
+        "publisher": { "@id": "https://verifyco.info/#org" }
+      },
+      {
+        "@type": "MobileApplication",
+        "name": "Verifyco — Deepfake & AI Detector",
+        "operatingSystem": "iOS 17",
+        "applicationCategory": "UtilitiesApplication",
+        "url": "https://verifyco.info/",
+        "downloadUrl": "https://apps.apple.com/app/id6772592963",
+        "installUrl": "https://apps.apple.com/app/id6772592963",
+        "image": "https://verifyco.info/assets/verifyco-icon.png",
+        "description": "On-device forensic verification for photos and videos. Verifyco runs five forensic signals on your iPhone to spot deepfakes, AI-generated and manipulated media — in seconds, fully offline, never uploaded.",
+        "publisher": { "@id": "https://verifyco.info/#org" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    ]
+  }
+  </script>
+  <!-- When you have real App Store ratings, add this inside MobileApplication
+       (never use fake numbers — Google penalises it):
+       "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "120" } -->
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>

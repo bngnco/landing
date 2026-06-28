@@ -244,6 +244,7 @@ function page({ title, description, canonical, image, head = "", bodyClass = "",
 
   <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
   <link rel="apple-touch-icon" href="/assets/verifyco-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="${esc(SITE.blogName)}" href="${SITE.url}/blog/feed.xml" />
   ${THEME_BOOT}
   ${FONTS}
   <link rel="stylesheet" href="/assets/blog.css" />
@@ -293,10 +294,10 @@ function articlePage(p, related) {
 
   const article = jsonLd({
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: p.title,
     description: p.description,
-    image: [abs(p.image)],
+    image: [p.imageAbs],
     datePublished: p.iso,
     dateModified: p.isoUpdated,
     author: { "@type": "Organization", name: p.author, url: SITE.url },
@@ -306,7 +307,12 @@ function articlePage(p, related) {
       logo: { "@type": "ImageObject", url: abs("/assets/verifyco-icon.png") },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": p.canonical },
+    articleSection: p.tags[0] || "Article",
     keywords: p.tags.join(", "),
+    wordCount: p.words,
+    timeRequired: `PT${p.reading}M`,
+    inLanguage: "en",
+    isAccessibleForFree: true,
   });
 
   const breadcrumb = jsonLd({
@@ -351,7 +357,7 @@ function articlePage(p, related) {
       </div>
 
       <figure class="post-hero">
-        <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" decoding="async" />
+        <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" decoding="async" fetchpriority="high" />
       </figure>
 
       <div class="prose measure">
@@ -369,7 +375,11 @@ function articlePage(p, related) {
     image: p.image,
     active: "blog",
     bodyClass: "is-post",
-    head: `  <meta property="og:type" content="article" />
+    head: `  <link rel="preload" as="image" href="${esc(p.image)}" fetchpriority="high" />
+  <meta name="author" content="${esc(p.author)}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image:alt" content="${esc(p.imageAlt)}" />
+  <meta name="twitter:image:alt" content="${esc(p.imageAlt)}" />
   <meta property="article:published_time" content="${p.iso}" />
   <meta property="article:modified_time" content="${p.isoUpdated}" />
   <meta property="article:author" content="${esc(p.author)}" />
@@ -452,6 +462,7 @@ function loadPosts() {
         .replace(/<!--\s*cta\s*-->/gi, ctaInline());
 
       const urlPath = `${SITE.blogPath}/${slug}`;
+      const words = content.replace(/```[\s\S]*?```/g, " ").split(/\s+/).filter(Boolean).length;
       return {
         slug,
         urlPath,
@@ -462,6 +473,7 @@ function loadPosts() {
         author: data.author || SITE.defaultAuthor,
         tags,
         image: data.image || SITE.defaultImage,
+        imageAbs: abs(data.image || SITE.defaultImage),
         imageAlt: data.imageAlt || data.title || "Verifyco",
         date,
         updated,
@@ -470,6 +482,7 @@ function loadPosts() {
         dateHuman: fmtDate(date),
         updatedHuman: fmtDate(updated),
         reading: readingTime(content),
+        words,
         html,
       };
     })
@@ -536,25 +549,55 @@ function build() {
     );
   }
 
-  // sitemap.xml
+  // sitemap.xml (with Google image-sitemap extension for posts)
   const today = isoDate(new Date()).slice(0, 10);
   const urls = [
     ...SITE.staticPages.map((u) => ({ loc: SITE.url + (u === "/" ? "/" : u), lastmod: today, priority: u === "/" ? "1.0" : "0.7" })),
     { loc: SITE.url + "/blog", lastmod: posts[0] ? posts[0].iso.slice(0, 10) : today, priority: "0.8" },
-    ...posts.map((p) => ({ loc: p.canonical, lastmod: p.isoUpdated.slice(0, 10), priority: "0.7" })),
+    ...posts.map((p) => ({ loc: p.canonical, lastmod: p.isoUpdated.slice(0, 10), priority: "0.7", image: p.imageAbs, imageAlt: p.imageAlt })),
     ...allTags.map((t) => ({ loc: `${SITE.url}/blog/tag/${slugify(t)}`, lastmod: today, priority: "0.4" })),
   ];
   const sitemap =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
     urls
-      .map(
-        (u) =>
-          `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.priority}</priority></url>`
-      )
+      .map((u) => {
+        const img = u.image
+          ? `\n    <image:image><image:loc>${u.image}</image:loc><image:title>${esc(u.imageAlt)}</image:title></image:image>`
+          : "";
+        return `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.priority}</priority>${img}</url>`;
+      })
       .join("\n") +
     `\n</urlset>\n`;
   writeFileSafe(path.join(ROOT, "sitemap.xml"), sitemap);
+
+  // RSS 2.0 feed → /blog/feed.xml (discovery + syndication)
+  const feedItems = posts
+    .map(
+      (p) =>
+        `    <item>\n` +
+        `      <title>${esc(p.title)}</title>\n` +
+        `      <link>${p.canonical}</link>\n` +
+        `      <guid isPermaLink="true">${p.canonical}</guid>\n` +
+        `      <pubDate>${p.date.toUTCString()}</pubDate>\n` +
+        `      <description>${esc(p.description)}</description>\n` +
+        p.tags.map((t) => `      <category>${esc(t)}</category>`).join("\n") +
+        `\n    </item>`
+    )
+    .join("\n");
+  const feed =
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n` +
+    `  <channel>\n` +
+    `    <title>${esc(SITE.blogName)}</title>\n` +
+    `    <link>${SITE.url}/blog</link>\n` +
+    `    <description>Guides and research on detecting deepfakes, AI-generated and manipulated media.</description>\n` +
+    `    <language>en</language>\n` +
+    `    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n` +
+    `    <atom:link href="${SITE.url}/blog/feed.xml" rel="self" type="application/rss+xml" />\n` +
+    feedItems +
+    `\n  </channel>\n</rss>\n`;
+  writeFileSafe(path.join(OUT_BLOG, "feed.xml"), feed);
 
   // robots.txt
   writeFileSafe(
@@ -565,7 +608,7 @@ function build() {
   console.log(
     `✓ Blog built: ${posts.length} post(s), ${allTags.length} tag(s) → /blog`
   );
-  console.log(`✓ sitemap.xml + robots.txt written`);
+  console.log(`✓ sitemap.xml (with images) + robots.txt + blog/feed.xml written`);
 }
 
 build();

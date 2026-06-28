@@ -82,12 +82,37 @@ npx serve .          # open http://localhost:3000/blog
 
 ---
 
-## What you get per post (SEO)
+## What you get per post (SEO — all automatic)
 
-Custom `<title>` + meta description · canonical URL · Open Graph + Twitter cards ·
-JSON-LD `Article` + `BreadcrumbList` · semantic `<article>` with a single `<h1>` ·
-publish date, author, reading time · featured image with alt · auto "related
-posts" for internal linking · entry in `sitemap.xml`.
+Custom `<title>` + meta description · canonical URL · Open Graph + Twitter cards
+(with image alt) · JSON-LD `BlogPosting` (word count, reading time, section) +
+`BreadcrumbList` · semantic `<article>` with a single `<h1>` and auto heading
+anchors · publish date, author, reading time · featured image with alt +
+`preload`/`fetchpriority` for fast LCP · auto "related posts" for internal
+linking · entry in `sitemap.xml` **with image data** · **RSS feed** at
+`/blog/feed.xml`.
+
+Site-wide: `robots.txt`, `MobileApplication` + `Organization` + `WebSite`
+structured data on the homepage (so Google understands the app), clean URLs,
+static + fast (great Core Web Vitals).
+
+## To actually rank #1 (the part only you can do)
+
+The tech is handled; rankings come from **content + reputation**:
+
+1. **Publish often, answer real questions.** Target what people actually search
+   ("is this video a deepfake", "how to detect AI images") with genuinely useful
+   posts. Depth and originality win.
+2. **Internal links.** Link new posts to older related ones (and to the app
+   page). Helps Google and readers.
+3. **Backlinks (off-page).** Get other sites to link to you — this is the single
+   biggest external ranking factor. Share posts, answer on Reddit/Quora/forums,
+   reach out to journalists covering deepfakes. I can't create these; they come
+   from your content being worth citing.
+4. **Submit your sitemap** once live: Google Search Console → add
+   `https://verifyco.info`, submit `sitemap.xml`. Do the same in Bing Webmaster.
+5. **Keep posts fresh.** Update older posts; the sitemap `lastmod` updates
+   automatically when you rebuild.
 
 ## Deploy notes
 

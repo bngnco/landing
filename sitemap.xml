@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://verifyco.info/</loc><lastmod>2026-06-28</lastmod><priority>1.0</priority></url>
   <url><loc>https://verifyco.info/deepdetect-plus</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
   <url><loc>https://verifyco.info/support</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
   <url><loc>https://verifyco.info/privacy</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
   <url><loc>https://verifyco.info/terms</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
   <url><loc>https://verifyco.info/blog</loc><lastmod>2026-06-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://verifyco.info/blog/what-is-a-deepfake</loc><lastmod>2026-06-22</lastmod><priority>0.7</priority></url>
-  <url><loc>https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</loc><lastmod>2026-06-15</lastmod><priority>0.7</priority></url>
-  <url><loc>https://verifyco.info/blog/on-device-verification-explained</loc><lastmod>2026-06-08</lastmod><priority>0.7</priority></url>
+  <url><loc>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://verifyco.info/assets/app/face.png</image:loc><image:title>Forensic face analysis overlay highlighting AI-generation artifacts</image:title></image:image></url>
+  <url><loc>https://verifyco.info/blog/what-is-a-deepfake</loc><lastmod>2026-06-22</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Side-by-side authentic and deepfaked portrait under forensic comparison</image:title></image:image></url>
+  <url><loc>https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</loc><lastmod>2026-06-15</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Verifyco signal pipeline analysing a video frame by frame</image:title></image:image></url>
+  <url><loc>https://verifyco.info/blog/on-device-verification-explained</loc><lastmod>2026-06-08</lastmod><priority>0.7</priority>
+    <image:image><image:loc>https://verifyco.info/assets/app/spotlight.png</image:loc><image:title>Verifyco running a private, on-device analysis on iPhone</image:title></image:image></url>
   <url><loc>https://verifyco.info/blog/tag/ai-detection</loc><lastmod>2026-06-28</lastmod><priority>0.4</priority></url>
   <url><loc>https://verifyco.info/blog/tag/deepfakes</loc><lastmod>2026-06-28</lastmod><priority>0.4</priority></url>
   <url><loc>https://verifyco.info/blog/tag/guides</loc><lastmod>2026-06-28</lastmod><priority>0.4</priority></url>
