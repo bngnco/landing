@@ -76,6 +76,7 @@
     <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Download on the App Store</a>
   </div>
 
+  <div class="read-progress" aria-hidden="true"></div>
   <main class="bmain">
     <article class="post">
       <div class="post-head measure">
@@ -101,6 +102,11 @@
       <figure class="post-hero">
         <img src="/assets/app/signals.png" alt="Verifyco signal pipeline analysing a video frame by frame" decoding="async" fetchpriority="high" />
       </figure>
+      
+      <nav class="toc measure" aria-label="Table of contents">
+        <p class="toc-h">On this page</p>
+        <ol><li><a href="#1-edges-that-shimmer">1. Edges that shimmer</a></li><li><a href="#2-lip-sync-that-drifts">2. Lip-sync that drifts</a></li><li><a href="#3-lighting-that-doesnt-agree">3. Lighting that doesn’t agree</a></li><li><a href="#4-too-still-or-too-smooth-motion">4. Too-still or too-smooth motion</a></li><li><a href="#5-no-provenance-suspicious-metadata">5. No provenance, suspicious metadata</a></li></ol>
+      </nav>
 
       <div class="prose measure">
         <p>Video is harder to fake convincingly than a still image — there are simply more
@@ -148,6 +154,8 @@ verdict instead of relying on any single tell.</p>
     </div>
   </aside>
       </div>
+
+      <div class="post-back measure"><a href="/blog">← All articles</a></div>
     </article>
     
     <section class="related bwrap">
@@ -233,6 +241,6 @@ verdict instead of relying on any single tell.</p>
       <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
     </div>
   </footer>
-<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}})();</script>
+<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>
 </body>
 </html>

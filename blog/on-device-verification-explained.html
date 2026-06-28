@@ -76,6 +76,7 @@
     <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Download on the App Store</a>
   </div>
 
+  <div class="read-progress" aria-hidden="true"></div>
   <main class="bmain">
     <article class="post">
       <div class="post-head measure">
@@ -101,6 +102,11 @@
       <figure class="post-hero">
         <img src="/assets/app/spotlight.png" alt="Verifyco running a private, on-device analysis on iPhone" decoding="async" fetchpriority="high" />
       </figure>
+      
+      <nav class="toc measure" aria-label="Table of contents">
+        <p class="toc-h">On this page</p>
+        <ol><li><a href="#why-on-device-matters">Why on-device matters</a></li><li><a href="#whats-actually-running">What’s actually running</a></li><li><a href="#the-neural-engine-does-the-heavy-lifting">The Neural Engine does the heavy lifting</a></li></ol>
+      </nav>
 
       <div class="prose measure">
         <p>Most media-checking tools upload your file to a server. Verifyco doesn’t. Every
@@ -152,6 +158,8 @@ enough to use before you share anything.</p>
     </div>
   </aside>
       </div>
+
+      <div class="post-back measure"><a href="/blog">← All articles</a></div>
     </article>
     
     <section class="related bwrap">
@@ -237,6 +245,6 @@ enough to use before you share anything.</p>
       <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
     </div>
   </footer>
-<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}})();</script>
+<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>
 </body>
 </html>

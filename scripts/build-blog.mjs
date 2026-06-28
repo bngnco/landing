@@ -190,7 +190,7 @@ function footer() {
   </footer>`;
 }
 
-const FOOT_JS = `<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}})();</script>`;
+const FOOT_JS = `<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>`;
 
 /* ── CTA components ───────────────────────────────────────────────── */
 function ctaBlock() {
@@ -338,7 +338,17 @@ function articlePage(p, related) {
     </section>`
     : "";
 
+  const tocHtml =
+    p.toc.length >= 2
+      ? `
+      <nav class="toc measure" aria-label="Table of contents">
+        <p class="toc-h">On this page</p>
+        <ol>${p.toc.map((h) => `<li><a href="#${h.id}">${esc(h.text)}</a></li>`).join("")}</ol>
+      </nav>`
+      : "";
+
   const main = `
+  <div class="read-progress" aria-hidden="true"></div>
   <main class="bmain">
     <article class="post">
       <div class="post-head measure">
@@ -359,11 +369,14 @@ function articlePage(p, related) {
       <figure class="post-hero">
         <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" decoding="async" fetchpriority="high" />
       </figure>
+      ${tocHtml}
 
       <div class="prose measure">
         ${p.html}
         ${ctaBlock()}
       </div>
+
+      <div class="post-back measure"><a href="/blog">← All articles</a></div>
     </article>
     ${relatedHtml}
   </main>`;
@@ -460,6 +473,17 @@ function loadPosts() {
       html = html
         .replace(/<p>\s*\[\[cta\]\]\s*<\/p>/gi, ctaInline())
         .replace(/<!--\s*cta\s*-->/gi, ctaInline());
+      // Captioned images: ![alt](src "Caption") -> <figure> with <figcaption>
+      html = html.replace(
+        /<p>(<img\b[^>]*\btitle="([^"]*)"[^>]*>)<\/p>/gi,
+        (m, img, title) => `<figure class="fig">${img}<figcaption>${title}</figcaption></figure>`
+      );
+
+      // Table of contents from H2s (for longer posts)
+      const toc = [...html.matchAll(/<h2[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map((m) => ({
+        id: m[1],
+        text: m[2].replace(/<[^>]+>/g, "").trim(),
+      }));
 
       const urlPath = `${SITE.blogPath}/${slug}`;
       const words = content.replace(/```[\s\S]*?```/g, " ").split(/\s+/).filter(Boolean).length;
@@ -483,6 +507,7 @@ function loadPosts() {
         updatedHuman: fmtDate(updated),
         reading: readingTime(content),
         words,
+        toc,
         html,
       };
     })
