@@ -1,19 +1,21 @@
 ---
-title: "What Is a Deepfake? A Plain-English Guide (2026)"
+title: What Is a Deepfake? A Plain-English Guide (2026)
 description: "Deepfakes explained simply: what they are, how they're made, why they've become so convincing, the real-world risks, and how to tell a synthetic face or voice from the real thing."
 slug: what-is-a-deepfake
 date: 2026-06-22
+author: Verifyco Team
+tags:
+  - Deepfakes
+  - Guides
+image: ''
+imageAlt: Side-by-side authentic and deepfaked portrait under forensic comparison
 updated: 2026-07-01
-author: "Verifyco Team"
-tags: ["Deepfakes", "Guides"]
-image: /assets/app/deepfake.png
-imageAlt: "Side-by-side authentic and deepfaked portrait under forensic comparison"
 ---
 
 A **deepfake** is media — usually a video, image or voice clip — in which a
 machine-learning model has swapped, generated or altered a person so it looks or
 sounds like they did or said something that never happened. The name is a blend
-of *deep learning* and *fake*.
+of _deep learning_ and _fake_.
 
 A few years ago deepfakes were a novelty that needed a powerful GPU and real
 technical skill. Today they're a few taps away in a consumer app, and the best
@@ -38,7 +40,7 @@ performer's expressions, so a real photo of a person can be made to talk.
 ## How deepfakes are made (in one paragraph)
 
 The models learn from **large datasets** of real faces, voices and scenes, then
-generate new frames that are *statistically plausible* — pixels and sound that
+generate new frames that are _statistically plausible_ — pixels and sound that
 match the patterns of reality closely enough to fool us. A GAN pits a
 "generator" against a "detector" until the fakes pass; a diffusion model starts
 from noise and denoises toward a convincing image guided by a text prompt. You
@@ -83,7 +85,7 @@ gut feeling:
 1. **Consider the source.** Where did this actually come from, and does a credible
    outlet carry it?
 2. **Look for provenance.** **C2PA Content Credentials** are a signed receipt of
-   origin — their presence is a strong signal *for* authenticity.
+   origin — their presence is a strong signal _for_ authenticity.
 3. **Inspect the details** (for images: hands, text, reflections; for video:
    edges, blinking, lip-sync). See the step-by-step in
    [how to tell if an image is AI-generated](/blog/how-to-tell-if-an-image-is-ai-generated)
