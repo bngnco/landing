@@ -7,7 +7,7 @@ author: فريق Verifyco
 tags:
   - التزييف العميق
   - أدلّة
-image: /assets/app/deepfake.png
+image: /uploads/blog/deepfake.png
 imageAlt: صورة حقيقية وأخرى مزيّفة عميقًا جنبًا إلى جنب تحت المقارنة الجنائية
 ---
 

@@ -5,7 +5,7 @@ slug: on-device-verification-explained
 date: 2026-06-08
 author: "Verifyco Ekibi"
 tags: ["iOS", "Araştırma", "Rehberler"]
-image: /assets/app/spotlight.png
+image: /uploads/blog/spotlight.png
 imageAlt: "Verifyco iPhone'da gizli, cihazda çalışan bir analiz yürütüyor"
 ---
 

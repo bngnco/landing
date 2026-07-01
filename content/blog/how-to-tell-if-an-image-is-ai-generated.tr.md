@@ -5,7 +5,7 @@ slug: how-to-tell-if-an-image-is-ai-generated
 date: 2026-06-28
 author: "Verifyco Ekibi"
 tags: ["AI Tespiti", "Deepfake", "Rehberler"]
-image: /assets/app/face.png
+image: /uploads/blog/face.png
 imageAlt: "Yapay zekâ üretim izlerini vurgulayan adli yüz analizi katmanı"
 ---
 

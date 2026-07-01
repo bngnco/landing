@@ -6,7 +6,7 @@ date: 2026-06-28
 updated: 2026-07-01
 author: "Verifyco Team"
 tags: ["AI Detection", "Guides"]
-image: /assets/app/face.png
+image: /uploads/blog/face.png
 imageAlt: "Forensic image analysis on iPhone highlighting AI-generation artifacts"
 ---
 

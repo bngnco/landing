@@ -6,7 +6,7 @@ date: 2026-06-15
 updated: 2026-07-01
 author: "Verifyco Team"
 tags: ["Deepfakes", "AI Detection", "Guides"]
-image: /assets/app/signals.png
+image: /uploads/blog/signals.png
 imageAlt: "Verifyco signal pipeline analysing a video frame by frame"
 ---
 

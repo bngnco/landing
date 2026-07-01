@@ -6,7 +6,7 @@ date: 2026-06-28
 updated: 2026-07-01
 author: "Verifyco Team"
 tags: ["AI Detection", "iOS", "Guides"]
-image: /assets/app/home.png
+image: /uploads/blog/home.png
 imageAlt: "Checking whether a photo is real or AI, privately on an iPhone"
 ---
 

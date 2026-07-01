@@ -6,7 +6,7 @@ date: 2026-06-22
 updated: 2026-07-01
 author: "Verifyco Ekibi"
 tags: ["Deepfake", "Rehberler"]
-image: /assets/app/deepfake.png
+image: /uploads/blog/deepfake.png
 imageAlt: "Adli karşılaştırma altında yan yana gerçek ve deepfake portre"
 ---
 

@@ -6,7 +6,7 @@ date: 2026-06-28
 updated: 2026-07-01
 author: "Verifyco Team"
 tags: ["Deepfakes", "AI Detection", "Guides"]
-image: /assets/app/url.png
+image: /uploads/blog/url.png
 imageAlt: "Analysing a video clip for deepfake warning signs on an iPhone"
 ---
 

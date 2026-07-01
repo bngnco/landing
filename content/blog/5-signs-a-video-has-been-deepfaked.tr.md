@@ -5,7 +5,7 @@ slug: 5-signs-a-video-has-been-deepfaked
 date: 2026-06-15
 author: "Verifyco Ekibi"
 tags: ["Deepfake", "AI Tespiti", "Rehberler"]
-image: /assets/app/signals.png
+image: /uploads/blog/signals.png
 imageAlt: "Verifyco sinyal hattı bir video karesini kare kare analiz ediyor"
 ---
 

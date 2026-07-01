@@ -6,7 +6,7 @@ date: 2026-06-08
 updated: 2026-07-01
 author: "Verifyco Team"
 tags: ["iOS", "Research", "Guides"]
-image: /assets/app/spotlight.png
+image: /uploads/blog/spotlight.png
 imageAlt: "Verifyco running a private, on-device analysis on iPhone"
 ---
 
