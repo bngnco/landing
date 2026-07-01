@@ -1,12 +1,14 @@
 ---
-title: "¿Qué es un deepfake? Una guía sencilla"
-description: "Los deepfakes explicados de forma sencilla: cómo se crean, por qué son tan convincentes y las formas prácticas de distinguir una cara o una voz sintética de la real."
+title: ¿Qué es un deepfake? Una guía sencilla
+description: 'Los deepfakes explicados de forma sencilla: cómo se crean, por qué son tan convincentes y las formas prácticas de distinguir una cara o una voz sintética de la real.'
 slug: what-is-a-deepfake
 date: 2026-06-22
-author: "Equipo Verifyco"
-tags: ["Deepfakes", "Guías"]
+author: Equipo Verifyco
+tags:
+  - Deepfakes
+  - Guías
 image: /assets/app/deepfake.png
-imageAlt: "Retrato auténtico y deepfake comparados lado a lado bajo análisis forense"
+imageAlt: Retrato auténtico y deepfake comparados lado a lado bajo análisis forense
 ---
 
 Un **deepfake** es un contenido — normalmente un vídeo, una imagen o un clip de
