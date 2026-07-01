@@ -29,12 +29,18 @@
     <loc>https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <image:image><image:loc>https://verifyco.info/uploads/blog/home.png</image:loc><image:title>Checking whether a photo is real or AI, privately on an iPhone</image:title></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <image:image><image:loc>https://verifyco.info/uploads/blog/url.png</image:loc><image:title>Analysing a video clip for deepfake warning signs on an iPhone</image:title></image:image>
   </url>
   <url>
@@ -117,6 +123,24 @@
     <loc>https://verifyco.info/blog/tag/research</loc>
     <lastmod>2026-07-01</lastmod>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/home.png</image:loc><image:title>Bir fotoğrafın gerçek mi yapay zekâ mı olduğunu iPhone'da gizlice kontrol etme</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/url.png</image:loc><image:title>Bir video klibini deepfake işaretleri için iPhone'da analiz etme</image:title></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated</loc>
