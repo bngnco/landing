@@ -5,16 +5,35 @@
     <link>https://verifyco.info/blog</link>
     <description>Guides, breakdowns and research on detecting deepfakes, AI-generated and manipulated media — from the team behind Verifyco, on-device forensic verification for iPhone.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Jul 2026 08:05:36 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 16:28:45 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Tell If an Image Is AI-Generated (2026 Forensic Guide)</title>
+      <title>How to Check If a Photo Is Real or AI on Your iPhone (2026)</title>
+      <link>https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Want to verify a photo right on your iPhone without uploading it anywhere? Here's how to check if an image is real or AI-generated, privately and on-device.</description>
+      <category>AI Detection</category>
+      <category>iOS</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>How to Spot a Deepfake Video: 9 Warning Signs for 2026</title>
+      <link>https://verifyco.info/blog/how-to-spot-a-deepfake-video</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/how-to-spot-a-deepfake-video</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Deepfake videos are fooling almost everyone in 2026. Learn the 9 signs that still give them away — plus why your eyes alone aren't enough anymore.</description>
+      <category>Deepfakes</category>
+      <category>AI Detection</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>How to Tell If an Image Is AI-Generated: The Complete 2026 Guide</title>
       <link>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</link>
       <guid isPermaLink="true">https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
-      <description>A practical, forensic checklist for spotting AI-generated images — the visual artifacts, metadata clues and frequency signals that still give synthetic pictures away.</description>
+      <description>Can't tell if a photo is real or AI? Learn the 2026 method that actually works: provenance checks, detector tools, and the physics cues AI still gets wrong.</description>
       <category>AI Detection</category>
-      <category>Deepfakes</category>
       <category>Guides</category>
     </item>
     <item>

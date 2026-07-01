@@ -26,13 +26,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://verifyco.info/assets/app/home.png</image:loc><image:title>Checking whether a photo is real or AI, privately on an iPhone</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/how-to-spot-a-deepfake-video</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://verifyco.info/assets/app/url.png</image:loc><image:title>Analysing a video clip for deepfake warning signs on an iPhone</image:title></image:image>
+  </url>
+  <url>
     <loc>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/assets/app/face.png</image:loc><image:title>Forensic face analysis overlay highlighting AI-generation artifacts</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/assets/app/face.png</image:loc><image:title>Forensic image analysis on iPhone highlighting AI-generation artifacts</image:title></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/what-is-a-deepfake</loc>
@@ -117,7 +129,7 @@
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/what-is-a-deepfake</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
