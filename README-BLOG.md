@@ -42,6 +42,56 @@ deploying it, uncomment `base_url` in `admin/config.yml`.
 
 ---
 
+## Languages (multilingual + hreflang)
+
+The blog is **multilingual and SEO-correct per language**. It ships in **8
+languages**: English (default, at `/blog`) plus Turkish, Spanish, German, French,
+Italian, Portuguese and Arabic, each under its code (e.g. `/es/blog`, `/ar/blog`).
+Arabic renders **right-to-left** automatically. Each translated post cross-links
+its siblings with reciprocal `hreflang` tags (+ `x-default`), and the sitemap
+lists every alternate — so Google serves each searcher the right language and
+never treats them as duplicates. The chrome (nav, CTAs, dates) is localised too;
+dates format per locale (e.g. Arabic-Indic numerals for AR).
+
+**File convention** (the build reads this):
+
+```
+content/blog/<slug>.md          → English    → /blog/<slug>
+content/blog/<slug>.tr.md       → Turkish    → /tr/blog/<slug>
+content/blog/<slug>.es.md       → Spanish    → /es/blog/<slug>
+content/blog/<slug>.de.md       → German     → /de/blog/<slug>
+content/blog/<slug>.fr.md       → French     → /fr/blog/<slug>
+content/blog/<slug>.it.md       → Italian    → /it/blog/<slug>
+content/blog/<slug>.pt.md       → Portuguese → /pt/blog/<slug>
+content/blog/<slug>.ar.md       → Arabic     → /ar/blog/<slug>
+```
+
+A post shows up in a language only when that file exists — so you can translate
+posts gradually. The per-post language switcher only offers languages that
+actually have that post. Translations are linked by a **shared `slug`** — keep it
+identical across a post's language files (translate the *tags* per language).
+
+**In the admin panel:** each entry has a language tab (EN · TR · ES · DE · FR ·
+IT · PT · AR). Fill the ones you want and Publish; the CMS writes the files above.
+
+**By hand:** copy `content/blog/foo.md` to `content/blog/foo.<code>.md`, translate
+the frontmatter + body, keep the same `slug`, run `npm run blog`.
+
+> ⚠️ **Don't paste raw machine translation.** Google detects unedited MT and can
+> suppress *every* language of the post. Translate properly (or have a native
+> speaker review). Two solid languages beat ten sloppy ones. The sample post
+> "what-is-a-deepfake" is translated into all 8 languages as a template — have
+> them reviewed before you promote them heavily.
+
+**Adding another language** (e.g. Japanese `ja`): add
+`{ code: "ja", locale: "ja_JP", label: "Japanese", native: "日本語", dir: "ltr" }`
+to `LANGS` in `scripts/build-blog.mjs`, add a `ja` block to the `UI` strings
+(falls back to English if omitted), add `ja` to `i18n.locales` in
+`admin/config.yml`, then translate posts to `<slug>.ja.md`. Non-Latin scripts
+(Japanese, Chinese, Russian, Hindi, …) get proper UTF-8 slugs automatically.
+
+---
+
 ## Option B — Add a Markdown file by hand
 
 1. Create `content/blog/my-post-slug.md`.

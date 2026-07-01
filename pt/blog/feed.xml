@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Verifyco Blog</title>
+    <link>https://verifyco.info/pt/blog</link>
+    <description>Guias e pesquisa sobre como detectar deepfakes e mídia gerada ou manipulada por IA — da equipe Verifyco, verificação forense no iPhone.</description>
+    <language>pt</language>
+    <lastBuildDate>Wed, 01 Jul 2026 07:44:52 GMT</lastBuildDate>
+    <atom:link href="https://verifyco.info/pt/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>O que é um deepfake? Um guia simples</title>
+      <link>https://verifyco.info/pt/blog/what-is-a-deepfake</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/what-is-a-deepfake</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Deepfakes explicados de forma simples: como são feitos, por que ficaram tão convincentes e as maneiras práticas de distinguir um rosto ou voz sintéticos dos reais.</description>
+      <category>Deepfakes</category>
+      <category>Guias</category>
+    </item>
+  </channel>
+</rss>

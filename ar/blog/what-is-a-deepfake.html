@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>ما هو التزييف العميق (Deepfake)؟ دليل مبسّط | Verifyco Blog</title>
+  <meta name="description" content="شرح مبسّط للتزييف العميق: كيف يُصنع، ولماذا صار مقنعًا إلى هذا الحد، والطرق العملية للتمييز بين وجه أو صوت مُصطنع والحقيقي." />
+  <link rel="canonical" href="https://verifyco.info/ar/blog/what-is-a-deepfake" />
+  <meta name="theme-color" content="#0B0908" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake" />
+
+  <meta property="og:site_name" content="Verifyco" />
+  <meta property="og:title" content="ما هو التزييف العميق (Deepfake)؟ دليل مبسّط | Verifyco Blog" />
+  <meta property="og:description" content="شرح مبسّط للتزييف العميق: كيف يُصنع، ولماذا صار مقنعًا إلى هذا الحد، والطرق العملية للتمييز بين وجه أو صوت مُصطنع والحقيقي." />
+  <meta property="og:url" content="https://verifyco.info/ar/blog/what-is-a-deepfake" />
+  <meta property="og:image" content="https://verifyco.info/assets/app/deepfake.png" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@verifyco" />
+  <meta name="twitter:title" content="ما هو التزييف العميق (Deepfake)؟ دليل مبسّط | Verifyco Blog" />
+  <meta name="twitter:description" content="شرح مبسّط للتزييف العميق: كيف يُصنع، ولماذا صار مقنعًا إلى هذا الحد، والطرق العملية للتمييز بين وجه أو صوت مُصطنع والحقيقي." />
+  <meta name="twitter:image" content="https://verifyco.info/assets/app/deepfake.png" />
+
+  <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/verifyco-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="The Verifyco Blog" href="https://verifyco.info/ar/blog/feed.xml" />
+  <script>(function(){try{var t=localStorage.getItem("vfy-theme")||"dark";document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/blog.css" />
+  <link rel="preload" as="image" href="/assets/app/deepfake.png" fetchpriority="high" />
+  <meta name="author" content="فريق Verifyco" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image:alt" content="صورة حقيقية وأخرى مزيّفة عميقًا جنبًا إلى جنب تحت المقارنة الجنائية" />
+  <meta name="twitter:image:alt" content="صورة حقيقية وأخرى مزيّفة عميقًا جنبًا إلى جنب تحت المقارنة الجنائية" />
+  <meta property="article:published_time" content="2026-06-22T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-06-22T00:00:00+00:00" />
+  <meta property="article:author" content="فريق Verifyco" />
+  <meta property="article:tag" content="التزييف العميق" />
+  <meta property="article:tag" content="أدلّة" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"ما هو التزييف العميق (Deepfake)؟ دليل مبسّط","description":"شرح مبسّط للتزييف العميق: كيف يُصنع، ولماذا صار مقنعًا إلى هذا الحد، والطرق العملية للتمييز بين وجه أو صوت مُصطنع والحقيقي.","image":["https://verifyco.info/assets/app/deepfake.png"],"datePublished":"2026-06-22T00:00:00+00:00","dateModified":"2026-06-22T00:00:00+00:00","author":{"@type":"Organization","name":"فريق Verifyco","url":"https://verifyco.info"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.info/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.info/ar/blog/what-is-a-deepfake"},"articleSection":"التزييف العميق","keywords":"التزييف العميق, أدلّة","wordCount":276,"timeRequired":"PT1M","inLanguage":"ar","isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://verifyco.info/"},{"@type":"ListItem","position":2,"name":"المدوّنة","item":"https://verifyco.info/ar/blog"},{"@type":"ListItem","position":3,"name":"ما هو التزييف العميق (Deepfake)؟ دليل مبسّط","item":"https://verifyco.info/ar/blog/what-is-a-deepfake"}]}</script>
+</head>
+<body class="is-post">
+
+  <header class="bnav" id="bnav">
+    <div class="bwrap bnav-in">
+      <a class="brand" href="/" aria-label="Verifyco">Verify<em>co</em></a>
+      <nav class="bnav-links" aria-label="Primary">
+        <a href="/#app">الميزات</a>
+        <a href="/#how">كيف يعمل</a>
+        <a href="/ar/blog" class="is-here" aria-current="page">المدوّنة</a>
+        <a href="/#pricing">الأسعار</a>
+      </nav>
+      <div class="bnav-right">
+        <div class="blang" aria-label="اللغة"><a href="https://verifyco.info/blog/what-is-a-deepfake" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/what-is-a-deepfake" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/what-is-a-deepfake" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/what-is-a-deepfake" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/what-is-a-deepfake" hreflang="fr" lang="fr">Français</a><a href="https://verifyco.info/it/blog/what-is-a-deepfake" hreflang="it" lang="it">Italiano</a><a href="https://verifyco.info/pt/blog/what-is-a-deepfake" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/what-is-a-deepfake" hreflang="ar" lang="ar" aria-current="true" class="is-here">العربية</a></div>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <span class="t-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z"></path></svg></span><span class="t-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"></path></svg></span>
+        </button>
+        <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">احصل على التطبيق</a>
+        <button type="button" class="bburger" data-bburger aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="bmenu" data-bmenu>
+    <nav aria-label="Mobile">
+      <a href="/#app">الميزات</a>
+      <a href="/#how">كيف يعمل</a>
+      <a href="/ar/blog">المدوّنة</a>
+      <a href="/#pricing">الأسعار</a>
+      <a href="/support">الدعم</a>
+    </nav>
+    <div class="bmenu-lang" aria-label="اللغة"><span class="bmenu-lang-h">اللغة</span><a href="https://verifyco.info/blog/what-is-a-deepfake" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/what-is-a-deepfake" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/what-is-a-deepfake" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/what-is-a-deepfake" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/what-is-a-deepfake" hreflang="fr" lang="fr">Français</a><a href="https://verifyco.info/it/blog/what-is-a-deepfake" hreflang="it" lang="it">Italiano</a><a href="https://verifyco.info/pt/blog/what-is-a-deepfake" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/what-is-a-deepfake" hreflang="ar" lang="ar" aria-current="true" class="is-here">العربية</a></div>
+    <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">التنزيل من App Store</a>
+  </div>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <main class="bmain">
+    <article class="post">
+      <div class="post-head measure">
+        
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">الرئيسية</a><span class="sep">/</span>
+      <a href="/ar/blog">المدوّنة</a><span class="sep">/</span>
+      <span aria-current="page">التزييف العميق</span>
+    </nav>
+        <div class="post-tags"><a class="chip" href="/ar/blog/tag/التزييف-العميق">التزييف العميق</a><a class="chip" href="/ar/blog/tag/أدلّة">أدلّة</a></div>
+        <h1 class="post-title">ما هو التزييف العميق (Deepfake)؟ دليل مبسّط</h1>
+        <p class="post-dek">شرح مبسّط للتزييف العميق: كيف يُصنع، ولماذا صار مقنعًا إلى هذا الحد، والطرق العملية للتمييز بين وجه أو صوت مُصطنع والحقيقي.</p>
+        <div class="post-meta">
+          <span class="byline">فريق Verifyco</span>
+          <span class="dot">·</span>
+          <time datetime="2026-06-22T00:00:00+00:00">٢٢ يونيو ٢٠٢٦</time>
+          <span class="dot">·</span>
+          <span>1 دقيقة قراءة</span>
+          
+        </div>
+      </div>
+
+      <figure class="post-hero">
+        <img src="/assets/app/deepfake.png" alt="صورة حقيقية وأخرى مزيّفة عميقًا جنبًا إلى جنب تحت المقارنة الجنائية" decoding="async" fetchpriority="high" />
+      </figure>
+      
+      <nav class="toc measure" aria-label="Table of contents">
+        <p class="toc-h">في هذه الصفحة</p>
+        <ol><li><a href="#كيف-يُصنع-التزييف-العميق">كيف يُصنع التزييف العميق</a></li><li><a href="#لماذا-صارت-بهذه-الجودة">لماذا صارت بهذه الجودة</a></li><li><a href="#كيف-تحمي-نفسك">كيف تحمي نفسك</a></li></ol>
+      </nav>
+
+      <div class="prose measure">
+        <p><strong>التزييف العميق</strong> محتوى — غالبًا فيديو أو صورة أو مقطع صوتي — قام فيه نموذج
+تعلّم آلي باستبدال شخص أو توليده أو تعديله بحيث يبدو أنه فعل أو قال شيئًا لم
+يحدث قط. الاسم مزيج من <em>deep learning</em> (التعلّم العميق) و<em>fake</em> (المزيّف).</p>
+<p>قبل بضع سنوات كان التزييف العميق طرافة. أما اليوم فهو على بُعد نقرات قليلة،
+وأفضله يصعب حقًّا اكتشافه بالعين المجرّدة. إليك ما يجري فعلًا.</p>
+<h2 id="كيف-يُصنع-التزييف-العميق">كيف يُصنع التزييف العميق</h2>
+<p>تندرج معظمها في ثلاث فئات:</p>
+<ul>
+<li><strong>تبديل الوجوه</strong> — وضع وجه شخص على جسد آخر في فيديو.</li>
+<li><strong>التوليد الكامل</strong> — إنشاء شخص (أو مشهد كامل) من الصفر بواسطة نموذج انتشار
+(diffusion). لم يصوّر أحد شيئًا.</li>
+<li><strong>استنساخ الصوت</strong> — تكفي ثوانٍ قليلة من الصوت لجعل شخص يقول أي شيء.</li>
+</ul>
+<p>تتعلّم النماذج من مجموعات ضخمة من الوجوه والأصوات الحقيقية، ثم تولّد إطارات جديدة
+<em>محتملة إحصائيًّا</em> — ولهذا السبب بالذات تخدعنا.</p>
+
+  <aside class="cta cta--inline" aria-label="Get Verifyco">
+    <p><strong>تريد فحص ملف الآن؟</strong> يحلّل Verifyco أي صورة أو فيديو على جهاز iPhone — على الجهاز وبخصوصية تامة.</p>
+    <a class="cta-link" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">← احصل على Verifyco</a>
+  </aside>
+<h2 id="لماذا-صارت-بهذه-الجودة">لماذا صارت بهذه الجودة</h2>
+<p>تغيّر أمران: تحسّنت النماذج تحسّنًا هائلًا في التفاصيل الدقيقة، وصارت الأدوات
+سهلة. ما كان يتطلّب معالج رسومات (GPU) وعطلة نهاية أسبوع صار يعمل داخل تطبيق.
+أما العلامات الكلاسيكية — الحواف المرتجفة، العيون الجامدة، الأيدي المشوّهة —
+فقد اختفت تقريبًا في مخرجات الجيل الحالي.</p>
+<h2 id="كيف-تحمي-نفسك">كيف تحمي نفسك</h2>
+<p>لا يمكنك الاعتماد على عينك أمام التزييف العميق الحديث، فاعتمد على منهجية بدلًا
+من ذلك:</p>
+<ol>
+<li><strong>راجِع المصدر.</strong> من أين جاء هذا فعلًا؟</li>
+<li><strong>ابحث عن الأصل.</strong> بيانات اعتماد المحتوى (C2PA) إيصال موقّع بالأصل — ووجودها
+إشارة قوية <em>لصالح</em> الأصالة.</li>
+<li><strong>أجرِ فحصًا جنائيًّا.</strong> الأدوات التي تدمج عدّة إشارات — البيانات الوصفية،
+تحليل الوجه، أنماط التردّد — تكتشف ما لا تراه عينك.</li>
+</ol>
+<p>هذه النقطة الأخيرة هي جوهر فكرة Verifyco: رأي ثانٍ سريع على الجهاز نفسه قبل أن
+تثق بمحتوى — أو تشاركه.</p>
+
+        
+  <aside class="cta" aria-label="Get Verifyco">
+    <img class="cta-icon" src="/assets/verifyco-icon.png" alt="" width="72" height="72" loading="lazy" />
+    <div class="cta-body">
+      <h3 class="cta-title">تحقّق بنفسك — على جهاز iPhone</h3>
+      <p class="cta-text">يُشغّل Verifyco خمس إشارات جنائية على الجهاز لكشف التزييف العميق والوسائط المُولّدة أو المُعدّلة بالذكاء الاصطناعي — خلال ثوانٍ، دون اتصال تمامًا ودون رفع أي شيء.</p>
+      <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">
+        <span class="btn-ico"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg></span> التنزيل من App Store
+      </a>
+    </div>
+  </aside>
+      </div>
+
+      <div class="post-back measure"><a href="/ar/blog">← كل المقالات</a></div>
+    </article>
+    
+  </main>
+
+  <footer class="bfoot">
+    <div class="bwrap bfoot-in">
+      <div class="bfoot-brand">
+        <a class="brand" href="/">Verify<em>co</em></a>
+        <p>تحقّق جنائي للصور والفيديوهات على الجهاز نفسه. الحقيقة، مُتحقَّق منها في كل بكسل.</p>
+        <p class="mono-note">VERIFYCO.INFO</p>
+      </div>
+      <div class="bfoot-col">
+        <h4>المنتج</h4>
+        <ul>
+          <li><a href="/#how">كيف يعمل</a></li>
+          <li><a href="/#app">الميزات</a></li>
+          <li><a href="/deepdetect-plus">DeepDetect+</a></li>
+          <li><a href="/#pricing">الأسعار</a></li>
+          <li><a href="/ar/blog">المدوّنة</a></li>
+        </ul>
+      </div>
+      <div class="bfoot-col">
+        <h4>الشركة</h4>
+        <ul>
+          <li><a href="/support">الدعم</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">App Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bwrap bfoot-bot">
+      <span>© 2026 Verifyco · جميع الحقوق محفوظة</span>
+      <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
+    </div>
+  </footer>
+<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>
+</body>
+</html>

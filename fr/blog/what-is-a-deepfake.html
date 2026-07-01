@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Qu’est-ce qu’un deepfake ? Un guide clair | Verifyco Blog</title>
+  <meta name="description" content="Les deepfakes expliqués simplement : comment on les fabrique, pourquoi ils sont devenus si convaincants et comment distinguer en pratique un visage ou une voix de synthèse du vrai." />
+  <link rel="canonical" href="https://verifyco.info/fr/blog/what-is-a-deepfake" />
+  <meta name="theme-color" content="#0B0908" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake" />
+  <link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake" />
+
+  <meta property="og:site_name" content="Verifyco" />
+  <meta property="og:title" content="Qu’est-ce qu’un deepfake ? Un guide clair | Verifyco Blog" />
+  <meta property="og:description" content="Les deepfakes expliqués simplement : comment on les fabrique, pourquoi ils sont devenus si convaincants et comment distinguer en pratique un visage ou une voix de synthèse du vrai." />
+  <meta property="og:url" content="https://verifyco.info/fr/blog/what-is-a-deepfake" />
+  <meta property="og:image" content="https://verifyco.info/assets/app/deepfake.png" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="ar_SA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@verifyco" />
+  <meta name="twitter:title" content="Qu’est-ce qu’un deepfake ? Un guide clair | Verifyco Blog" />
+  <meta name="twitter:description" content="Les deepfakes expliqués simplement : comment on les fabrique, pourquoi ils sont devenus si convaincants et comment distinguer en pratique un visage ou une voix de synthèse du vrai." />
+  <meta name="twitter:image" content="https://verifyco.info/assets/app/deepfake.png" />
+
+  <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/verifyco-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="The Verifyco Blog" href="https://verifyco.info/fr/blog/feed.xml" />
+  <script>(function(){try{var t=localStorage.getItem("vfy-theme")||"dark";document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/blog.css" />
+  <link rel="preload" as="image" href="/assets/app/deepfake.png" fetchpriority="high" />
+  <meta name="author" content="L’équipe Verifyco" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image:alt" content="Portrait authentique et deepfake comparés côte à côte en analyse forensique" />
+  <meta name="twitter:image:alt" content="Portrait authentique et deepfake comparés côte à côte en analyse forensique" />
+  <meta property="article:published_time" content="2026-06-22T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-06-22T00:00:00+00:00" />
+  <meta property="article:author" content="L’équipe Verifyco" />
+  <meta property="article:tag" content="Deepfakes" />
+  <meta property="article:tag" content="Guides" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Qu’est-ce qu’un deepfake ? Un guide clair","description":"Les deepfakes expliqués simplement : comment on les fabrique, pourquoi ils sont devenus si convaincants et comment distinguer en pratique un visage ou une voix de synthèse du vrai.","image":["https://verifyco.info/assets/app/deepfake.png"],"datePublished":"2026-06-22T00:00:00+00:00","dateModified":"2026-06-22T00:00:00+00:00","author":{"@type":"Organization","name":"L’équipe Verifyco","url":"https://verifyco.info"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.info/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.info/fr/blog/what-is-a-deepfake"},"articleSection":"Deepfakes","keywords":"Deepfakes, Guides","wordCount":355,"timeRequired":"PT2M","inLanguage":"fr","isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://verifyco.info/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://verifyco.info/fr/blog"},{"@type":"ListItem","position":3,"name":"Qu’est-ce qu’un deepfake ? Un guide clair","item":"https://verifyco.info/fr/blog/what-is-a-deepfake"}]}</script>
+</head>
+<body class="is-post">
+
+  <header class="bnav" id="bnav">
+    <div class="bwrap bnav-in">
+      <a class="brand" href="/" aria-label="Verifyco">Verify<em>co</em></a>
+      <nav class="bnav-links" aria-label="Primary">
+        <a href="/#app">Fonctions</a>
+        <a href="/#how">Comment ça marche</a>
+        <a href="/fr/blog" class="is-here" aria-current="page">Blog</a>
+        <a href="/#pricing">Tarifs</a>
+      </nav>
+      <div class="bnav-right">
+        <div class="blang" aria-label="Langue"><a href="https://verifyco.info/blog/what-is-a-deepfake" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/what-is-a-deepfake" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/what-is-a-deepfake" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/what-is-a-deepfake" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/what-is-a-deepfake" hreflang="fr" lang="fr" aria-current="true" class="is-here">Français</a><a href="https://verifyco.info/it/blog/what-is-a-deepfake" hreflang="it" lang="it">Italiano</a><a href="https://verifyco.info/pt/blog/what-is-a-deepfake" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/what-is-a-deepfake" hreflang="ar" lang="ar">العربية</a></div>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <span class="t-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z"></path></svg></span><span class="t-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"></path></svg></span>
+        </button>
+        <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Obtenir l’app</a>
+        <button type="button" class="bburger" data-bburger aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="bmenu" data-bmenu>
+    <nav aria-label="Mobile">
+      <a href="/#app">Fonctions</a>
+      <a href="/#how">Comment ça marche</a>
+      <a href="/fr/blog">Blog</a>
+      <a href="/#pricing">Tarifs</a>
+      <a href="/support">Assistance</a>
+    </nav>
+    <div class="bmenu-lang" aria-label="Langue"><span class="bmenu-lang-h">Langue</span><a href="https://verifyco.info/blog/what-is-a-deepfake" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/what-is-a-deepfake" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/what-is-a-deepfake" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/what-is-a-deepfake" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/what-is-a-deepfake" hreflang="fr" lang="fr" aria-current="true" class="is-here">Français</a><a href="https://verifyco.info/it/blog/what-is-a-deepfake" hreflang="it" lang="it">Italiano</a><a href="https://verifyco.info/pt/blog/what-is-a-deepfake" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/what-is-a-deepfake" hreflang="ar" lang="ar">العربية</a></div>
+    <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Télécharger sur l’App Store</a>
+  </div>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <main class="bmain">
+    <article class="post">
+      <div class="post-head measure">
+        
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Accueil</a><span class="sep">/</span>
+      <a href="/fr/blog">Blog</a><span class="sep">/</span>
+      <span aria-current="page">Deepfakes</span>
+    </nav>
+        <div class="post-tags"><a class="chip" href="/fr/blog/tag/deepfakes">Deepfakes</a><a class="chip" href="/fr/blog/tag/guides">Guides</a></div>
+        <h1 class="post-title">Qu’est-ce qu’un deepfake ? Un guide clair</h1>
+        <p class="post-dek">Les deepfakes expliqués simplement : comment on les fabrique, pourquoi ils sont devenus si convaincants et comment distinguer en pratique un visage ou une voix de synthèse du vrai.</p>
+        <div class="post-meta">
+          <span class="byline">L’équipe Verifyco</span>
+          <span class="dot">·</span>
+          <time datetime="2026-06-22T00:00:00+00:00">22 juin 2026</time>
+          <span class="dot">·</span>
+          <span>2 min de lecture</span>
+          
+        </div>
+      </div>
+
+      <figure class="post-hero">
+        <img src="/assets/app/deepfake.png" alt="Portrait authentique et deepfake comparés côte à côte en analyse forensique" decoding="async" fetchpriority="high" />
+      </figure>
+      
+      <nav class="toc measure" aria-label="Table of contents">
+        <p class="toc-h">Sur cette page</p>
+        <ol><li><a href="#comment-on-fabrique-un-deepfake">Comment on fabrique un deepfake</a></li><li><a href="#pourquoi-ils-sont-devenus-si-bons">Pourquoi ils sont devenus si bons</a></li><li><a href="#comment-vous-proteger">Comment vous protéger</a></li></ol>
+      </nav>
+
+      <div class="prose measure">
+        <p>Un <strong>deepfake</strong> est un contenu — le plus souvent une vidéo, une image ou un clip
+vocal — dans lequel un modèle d’apprentissage automatique a remplacé, généré ou
+modifié une personne pour donner l’impression qu’elle a fait ou dit quelque
+chose qui n’a jamais eu lieu. Le mot mêle <em>deep learning</em> et <em>fake</em>.</p>
+<p>Il y a quelques années, les deepfakes étaient une curiosité. Aujourd’hui, ils
+sont à quelques clics, et les meilleurs sont vraiment difficiles à repérer à
+l’œil nu. Voici ce qui se passe réellement.</p>
+<h2 id="comment-on-fabrique-un-deepfake">Comment on fabrique un deepfake</h2>
+<p>La plupart entrent dans trois catégories :</p>
+<ul>
+<li><strong>Échange de visage</strong> — le visage d’une personne plaqué sur le corps d’une
+autre dans une vidéo.</li>
+<li><strong>Génération complète</strong> — une personne (ou une scène entière) créée de toutes
+pièces par un modèle de diffusion. Personne n’a rien filmé.</li>
+<li><strong>Clonage de voix</strong> — quelques secondes d’audio suffisent pour faire dire
+n’importe quoi à quelqu’un.</li>
+</ul>
+<p>Les modèles apprennent à partir de vastes ensembles de visages et de voix réels,
+puis produisent de nouvelles images <em>statistiquement plausibles</em> — c’est
+précisément pour cela qu’ils nous trompent.</p>
+
+  <aside class="cta cta--inline" aria-label="Get Verifyco">
+    <p><strong>Envie de vérifier un fichier tout de suite ?</strong> Verifyco analyse n’importe quelle photo ou vidéo sur votre iPhone — sur l’appareil et en privé.</p>
+    <a class="cta-link" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Obtenir Verifyco →</a>
+  </aside>
+<h2 id="pourquoi-ils-sont-devenus-si-bons">Pourquoi ils sont devenus si bons</h2>
+<p>Deux choses ont changé : les modèles se sont énormément améliorés dans les
+détails fins, et les outils sont devenus simples. Ce qui exigeait autrefois un
+GPU et un week-end tient désormais dans une app. Les indices classiques — bords
+scintillants, yeux sans vie, mains déformées — ont presque disparu dans la
+génération actuelle.</p>
+<h2 id="comment-vous-proteger">Comment vous protéger</h2>
+<p>On ne peut pas se fier à son œil face aux deepfakes modernes : appuyez-vous
+plutôt sur une méthode.</p>
+<ol>
+<li><strong>Interrogez la source.</strong> D’où cela provient-il vraiment ?</li>
+<li><strong>Cherchez la provenance.</strong> Les Content Credentials (C2PA) sont un reçu signé
+d’origine — leur présence est un signal fort <em>en faveur</em> de l’authenticité.</li>
+<li><strong>Faites une vérification forensique.</strong> Les outils qui combinent plusieurs
+signaux — métadonnées, analyse du visage, motifs de fréquence — détectent ce
+que l’œil ne voit pas.</li>
+</ol>
+<p>C’est toute l’idée de Verifyco : un deuxième avis rapide, directement sur
+l’appareil, avant de faire confiance à un contenu — ou de le partager.</p>
+
+        
+  <aside class="cta" aria-label="Get Verifyco">
+    <img class="cta-icon" src="/assets/verifyco-icon.png" alt="" width="72" height="72" loading="lazy" />
+    <div class="cta-body">
+      <h3 class="cta-title">Vérifiez par vous-même — sur votre iPhone</h3>
+      <p class="cta-text">Verifyco exécute cinq signaux forensiques sur l’appareil pour repérer les deepfakes et les médias générés ou manipulés par IA — en quelques secondes, entièrement hors ligne et sans aucun envoi.</p>
+      <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">
+        <span class="btn-ico"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg></span> Télécharger sur l’App Store
+      </a>
+    </div>
+  </aside>
+      </div>
+
+      <div class="post-back measure"><a href="/fr/blog">← Tous les articles</a></div>
+    </article>
+    
+  </main>
+
+  <footer class="bfoot">
+    <div class="bwrap bfoot-in">
+      <div class="bfoot-brand">
+        <a class="brand" href="/">Verify<em>co</em></a>
+        <p>Vérification forensique des photos et vidéos, directement sur l’appareil. La réalité, vérifiée dans chaque pixel.</p>
+        <p class="mono-note">VERIFYCO.INFO</p>
+      </div>
+      <div class="bfoot-col">
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="/#how">Comment ça marche</a></li>
+          <li><a href="/#app">Fonctions</a></li>
+          <li><a href="/deepdetect-plus">DeepDetect+</a></li>
+          <li><a href="/#pricing">Tarifs</a></li>
+          <li><a href="/fr/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="bfoot-col">
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="/support">Assistance</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">App Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bwrap bfoot-bot">
+      <span>© 2026 Verifyco · Tous droits réservés</span>
+      <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
+    </div>
+  </footer>
+<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>
+</body>
+</html>

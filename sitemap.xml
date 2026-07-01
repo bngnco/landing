@@ -1,22 +1,424 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://verifyco.info/</loc><lastmod>2026-06-28</lastmod><priority>1.0</priority></url>
-  <url><loc>https://verifyco.info/deepdetect-plus</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://verifyco.info/support</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://verifyco.info/privacy</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://verifyco.info/terms</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://verifyco.info/blog</loc><lastmod>2026-06-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority>
-    <image:image><image:loc>https://verifyco.info/assets/app/face.png</image:loc><image:title>Forensic face analysis overlay highlighting AI-generation artifacts</image:title></image:image></url>
-  <url><loc>https://verifyco.info/blog/what-is-a-deepfake</loc><lastmod>2026-06-22</lastmod><priority>0.7</priority>
-    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Side-by-side authentic and deepfaked portrait under forensic comparison</image:title></image:image></url>
-  <url><loc>https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</loc><lastmod>2026-06-15</lastmod><priority>0.7</priority>
-    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Verifyco signal pipeline analysing a video frame by frame</image:title></image:image></url>
-  <url><loc>https://verifyco.info/blog/on-device-verification-explained</loc><lastmod>2026-06-08</lastmod><priority>0.7</priority>
-    <image:image><image:loc>https://verifyco.info/assets/app/spotlight.png</image:loc><image:title>Verifyco running a private, on-device analysis on iPhone</image:title></image:image></url>
-  <url><loc>https://verifyco.info/blog/tag/ai-detection</loc><lastmod>2026-06-28</lastmod><priority>0.4</priority></url>
-  <url><loc>https://verifyco.info/blog/tag/deepfakes</loc><lastmod>2026-06-28</lastmod><priority>0.4</priority></url>
-  <url><loc>https://verifyco.info/blog/tag/guides</loc><lastmod>2026-06-28</lastmod><priority>0.4</priority></url>
-  <url><loc>https://verifyco.info/blog/tag/ios</loc><lastmod>2026-06-28</lastmod><priority>0.4</priority></url>
-  <url><loc>https://verifyco.info/blog/tag/research</loc><lastmod>2026-06-28</lastmod><priority>0.4</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://verifyco.info/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/deepdetect-plus</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/support</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/privacy</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/terms</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/face.png</image:loc><image:title>Forensic face analysis overlay highlighting AI-generation artifacts</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/what-is-a-deepfake</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Side-by-side authentic and deepfaked portrait under forensic comparison</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</loc>
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Verifyco signal pipeline analysing a video frame by frame</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/on-device-verification-explained</loc>
+    <lastmod>2026-06-08</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/spotlight.png</image:loc><image:title>Verifyco running a private, on-device analysis on iPhone</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog"/>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/tag/ai-detection</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/tag/deepfakes</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/tag/guides</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/tag/ios</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/tag/research</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/face.png</image:loc><image:title>Yapay zekâ üretim izlerini vurgulayan adli yüz analizi katmanı</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/what-is-a-deepfake</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Adli karşılaştırma altında yan yana gerçek ve deepfake portre</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked</loc>
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Verifyco sinyal hattı bir video karesini kare kare analiz ediyor</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/on-device-verification-explained</loc>
+    <lastmod>2026-06-08</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/spotlight.png</image:loc><image:title>Verifyco iPhone'da gizli, cihazda çalışan bir analiz yürütüyor</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog"/>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/tag/ai-tespiti</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/tag/arastirma</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/tag/deepfake</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/tag/ios</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/tag/rehberler</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/es/blog/what-is-a-deepfake</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Retrato auténtico y deepfake comparados lado a lado bajo análisis forense</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/es/blog</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog"/>
+  </url>
+  <url>
+    <loc>https://verifyco.info/es/blog/tag/deepfakes</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/es/blog/tag/guias</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/de/blog/what-is-a-deepfake</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Echtes und deepgefaktes Porträt im forensischen Vergleich nebeneinander</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/de/blog</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog"/>
+  </url>
+  <url>
+    <loc>https://verifyco.info/de/blog/tag/deepfakes</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/de/blog/tag/leitfaden</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/fr/blog/what-is-a-deepfake</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Portrait authentique et deepfake comparés côte à côte en analyse forensique</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/fr/blog</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog"/>
+  </url>
+  <url>
+    <loc>https://verifyco.info/fr/blog/tag/deepfakes</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/fr/blog/tag/guides</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/it/blog/what-is-a-deepfake</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Ritratto autentico e deepfake a confronto sotto analisi forense</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/it/blog</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog"/>
+  </url>
+  <url>
+    <loc>https://verifyco.info/it/blog/tag/deepfake</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/it/blog/tag/guide</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/pt/blog/what-is-a-deepfake</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>Retrato autêntico e deepfake comparados lado a lado sob análise forense</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/pt/blog</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog"/>
+  </url>
+  <url>
+    <loc>https://verifyco.info/pt/blog/tag/deepfakes</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/pt/blog/tag/guias</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/ar/blog/what-is-a-deepfake</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/deepfake.png</image:loc><image:title>صورة حقيقية وأخرى مزيّفة عميقًا جنبًا إلى جنب تحت المقارنة الجنائية</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/ar/blog</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog"/>
+  </url>
+  <url>
+    <loc>https://verifyco.info/ar/blog/tag/أدلّة</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/ar/blog/tag/التزييف-العميق</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.4</priority>
+  </url>
 </urlset>

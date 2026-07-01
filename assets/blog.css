@@ -493,3 +493,66 @@ body.bmenu-open .bmenu { opacity: 1; visibility: visible; }
   * { scroll-behavior: auto !important; }
   .card, .card-media img, .btn { transition: none; }
 }
+
+/* ── Language switcher (blog i18n) ─────────────────────────────────── */
+.blang {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 12px;
+  margin-right: 2px;
+  border-right: 1px solid var(--line);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+.blang a {
+  color: var(--text);
+  opacity: 0.55;
+  text-decoration: none;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+.blang a:hover { opacity: 0.9; }
+.blang a.is-here { opacity: 1; color: var(--bronze); font-weight: 600; }
+@media (max-width: 560px) {
+  .blang { display: none; }
+}
+.bmenu-lang {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+}
+.bmenu-lang-h {
+  opacity: 0.45;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+}
+.bmenu-lang a { color: var(--text); opacity: 0.6; text-decoration: none; }
+.bmenu-lang a.is-here { opacity: 1; color: var(--bronze); font-weight: 600; }
+
+/* ── RTL (Arabic and other right-to-left languages) ───────────────── */
+[dir="rtl"] .toc { border-left: 1px solid var(--line); border-right: 2px solid var(--bronze); }
+[dir="rtl"] .toc ol { padding-left: 0; padding-right: 1.2em; }
+[dir="rtl"] .prose ul, [dir="rtl"] .prose ol { padding-left: 0; padding-right: 1.3em; }
+[dir="rtl"] .prose blockquote {
+  border-left: 0;
+  border-right: 2px dashed var(--bronze);
+  padding: 4px 24px 4px 0;
+}
+[dir="rtl"] .is-post .prose > p:first-of-type::first-letter {
+  float: right;
+  margin: 0.04em 0 0 0.12em;
+}
+[dir="rtl"] .prose th, [dir="rtl"] .prose td { text-align: right; }
+[dir="rtl"] .cta-body,
+[dir="rtl"] .blog-hero,
+[dir="rtl"] .post-head { text-align: right; }
+[dir="rtl"] .read-progress { transform-origin: 100% 50%; }
+[dir="rtl"] .crumbs, [dir="rtl"] .post-meta, [dir="rtl"] .card-meta { direction: rtl; }
