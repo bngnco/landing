@@ -7,7 +7,7 @@ author: Verifyco-Team
 tags:
   - Deepfakes
   - Leitfäden
-image: /uploads/blog/deepfake.png
+image: /uploads/blog/1000012583.png
 imageAlt: Echtes und deepgefaktes Porträt im forensischen Vergleich nebeneinander
 ---
 

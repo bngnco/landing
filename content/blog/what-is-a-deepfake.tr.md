@@ -1,13 +1,15 @@
 ---
-title: "Deepfake Nedir? Sade Bir Rehber (2026)"
-description: "Deepfake basitçe anlatıldı: ne olduğu, nasıl üretildiği, neden bu kadar inandırıcı hâle geldiği, gerçek dünyadaki riskleri ve sentetik bir yüzü ya da sesi gerçeğinden ayırmanın pratik yolları."
+title: Deepfake Nedir? Sade Bir Rehber (2026)
+description: 'Deepfake basitçe anlatıldı: ne olduğu, nasıl üretildiği, neden bu kadar inandırıcı hâle geldiği, gerçek dünyadaki riskleri ve sentetik bir yüzü ya da sesi gerçeğinden ayırmanın pratik yolları.'
 slug: what-is-a-deepfake
 date: 2026-06-22
+author: Verifyco Ekibi
+tags:
+  - Deepfake
+  - Rehberler
+image: /uploads/blog/1000012583.png
+imageAlt: Adli karşılaştırma altında yan yana gerçek ve deepfake portre
 updated: 2026-07-01
-author: "Verifyco Ekibi"
-tags: ["Deepfake", "Rehberler"]
-image: /uploads/blog/deepfake.png
-imageAlt: "Adli karşılaştırma altında yan yana gerçek ve deepfake portre"
 ---
 
 **Deepfake**, bir makine öğrenmesi modelinin bir kişiyi değiştirdiği, sıfırdan

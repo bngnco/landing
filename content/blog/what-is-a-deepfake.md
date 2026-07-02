@@ -7,7 +7,7 @@ author: Verifyco Team
 tags:
   - Deepfakes
   - Guides
-image: /uploads/blog/deepfake.png
+image: /uploads/blog/1000012583.png
 imageAlt: Side-by-side authentic and deepfaked portrait under forensic comparison
 updated: 2026-07-01
 ---
