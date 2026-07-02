@@ -1,13 +1,16 @@
 ---
-title: "How to Spot a Deepfake Video: 9 Warning Signs for 2026"
-description: "Deepfake videos are fooling almost everyone in 2026. Learn the 9 signs that still give them away — plus why your eyes alone aren't enough anymore."
+title: 'How to Spot a Deepfake Video: 9 Warning Signs for 2026'
+description: Deepfake videos are fooling almost everyone in 2026. Learn the 9 signs that still give them away — plus why your eyes alone aren't enough anymore.
 slug: how-to-spot-a-deepfake-video
 date: 2026-06-28
+author: Verifyco Team
+tags:
+  - Deepfakes
+  - AI Detection
+  - Guides
+image: /uploads/blog/1000012578.png
+imageAlt: Analysing a video clip for deepfake warning signs on an iPhone
 updated: 2026-07-01
-author: "Verifyco Team"
-tags: ["Deepfakes", "AI Detection", "Guides"]
-image: /uploads/blog/url.png
-imageAlt: "Analysing a video clip for deepfake warning signs on an iPhone"
 ---
 
 In 2024, a finance employee at the engineering firm Arup joined a video call with what looked like the company's CFO and several colleagues. Every single person on that call was a deepfake. The employee transferred roughly **$25 million** before anyone realized. It remains one of the most documented cases of its kind — and it's no longer an outlier.
@@ -48,7 +51,7 @@ Play the video at reduced speed if you can. Deepfakes and CGI often "flicker" or
 
 ## 8. Micro-movements that are missing
 
-The most modern deepfakes fail at the tiny, unconscious things humans do without thinking: the small involuntary head adjustments, the way breathing moves the shoulders, the micro-expressions that flit across a real face. A subject that feels slightly *too still* or emotionally flat can be a clue, even when you can't point to a single obvious flaw.
+The most modern deepfakes fail at the tiny, unconscious things humans do without thinking: the small involuntary head adjustments, the way breathing moves the shoulders, the micro-expressions that flit across a real face. A subject that feels slightly _too still_ or emotionally flat can be a clue, even when you can't point to a single obvious flaw.
 
 ## 9. Physical interactions with the environment
 
@@ -58,13 +61,13 @@ Rendering a face is one thing; rendering that face realistically interacting wit
 
 Here's the uncomfortable reality. Every tell on this list is getting harder to read with each model release. The "look for weird teeth" advice that worked in 2020 is now actively misleading. Modern deepfakes are specifically improving at the exact biological and physical cues humans rely on.
 
-This is why detection has shifted from *human judgment* to *system-level verification*. The serious approach in 2026 looks like this:
+This is why detection has shifted from _human judgment_ to _system-level verification_. The serious approach in 2026 looks like this:
 
 **For high-stakes situations (money, access, sensitive requests):** never treat a convincing face or voice as proof. Verify through a second, pre-established channel. Security experts now recommend family pass-phrases and out-of-band confirmation — if you get an urgent video or voice request involving money, hang up and confirm through a separate, known contact method before acting. A real person won't mind. A scammer will.
 
 **For checking suspicious clips:** use forensic analysis tools that examine what the eye can't — frame-by-frame consistency, audio signatures, metadata, and the statistical fingerprints of generation. These tools won't give you certainty, but they surface evidence you'd otherwise miss.
 
-This is exactly what we built **[Verifyco](https://apps.apple.com/app/id6772592963)** to do. You can analyze a video — or paste a social media link — and it runs a multi-layer forensic check **right on your iPhone**: temporal consistency across frames, metadata and origin, AI-generation signatures, and frequency analysis. It returns a trust score and a breakdown of each layer, so you can see *why* it landed where it did. And it's deliberately honest: it won't claim certainty it doesn't have, and nothing you analyze ever leaves your device. (Checking a still image instead? See [how to check if a photo is real or AI on your iPhone](/blog/check-if-photo-is-ai-on-iphone).)
+This is exactly what we built [**Verifyco**](https://apps.apple.com/app/id6772592963) to do. You can analyze a video — or paste a social media link — and it runs a multi-layer forensic check **right on your iPhone**: temporal consistency across frames, metadata and origin, AI-generation signatures, and frequency analysis. It returns a trust score and a breakdown of each layer, so you can see _why_ it landed where it did. And it's deliberately honest: it won't claim certainty it doesn't have, and nothing you analyze ever leaves your device. (Checking a still image instead? See [how to check if a photo is real or AI on your iPhone](/blog/check-if-photo-is-ai-on-iphone).)
 
 ## The bottom line
 
