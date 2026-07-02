@@ -1,13 +1,15 @@
 ---
-title: "How to Tell If an Image Is AI-Generated: The Complete 2026 Guide"
+title: 'How to Tell If an Image Is AI-Generated: The Complete 2026 Guide'
 description: "Can't tell if a photo is real or AI? Learn the 2026 method that actually works: provenance checks, detector tools, and the physics cues AI still gets wrong."
 slug: how-to-tell-if-an-image-is-ai-generated
 date: 2026-06-28
+author: Verifyco Team
+tags:
+  - AI Detection
+  - Guides
+image: ''
+imageAlt: Forensic image analysis on iPhone highlighting AI-generation artifacts
 updated: 2026-07-01
-author: "Verifyco Team"
-tags: ["AI Detection", "Guides"]
-image: /uploads/blog/face.png
-imageAlt: "Forensic image analysis on iPhone highlighting AI-generation artifacts"
 ---
 
 A few years ago, spotting an AI image was easy. Six fingers, melted text, eyes pointing in different directions. That era is over. By 2026, image generators produce pictures that match what you'd expect from an ordinary phone photo, and the honest truth is this: **you usually cannot tell just by looking anymore.** Anyone who claims they always can is overestimating themselves.
@@ -28,7 +30,7 @@ So we need a smarter approach.
 
 Before you analyze a single pixel, ask a simpler question: **does the image carry a record of where it came from?**
 
-This is called *provenance*, and it's the strongest signal available in 2026 because it doesn't rely on guesswork — it relies on a cryptographic record embedded in the file.
+This is called _provenance_, and it's the strongest signal available in 2026 because it doesn't rely on guesswork — it relies on a cryptographic record embedded in the file.
 
 ### Content Credentials (C2PA)
 
@@ -54,9 +56,9 @@ Here's what you need to know to use them wisely:
 
 **Compression is their weakness.** Social media platforms aggressively compress and strip images. A heavily compressed real photo can confuse a detector, and so can a cleaned-up fake. This is the single biggest reason detectors disagree.
 
-**No single tool is reliable in isolation.** The practical 2026 workflow is to check more than one strong detector and look at where they *agree*. Agreement is your signal; disagreement means "inconclusive," which is a perfectly honest answer.
+**No single tool is reliable in isolation.** The practical 2026 workflow is to check more than one strong detector and look at where they _agree_. Agreement is your signal; disagreement means "inconclusive," which is a perfectly honest answer.
 
-This is also where an on-device tool earns its place. Most web detectors require you to upload your image to a company's server — which is a privacy problem if the picture is personal or sensitive. We built **[Verifyco](https://apps.apple.com/app/id6772592963)** specifically to solve that: it runs a multi-layer forensic analysis **entirely on your iPhone**, checking metadata, AI-generation signatures, and frequency patterns, then gives you a trust score with a full breakdown of *what* it found. Nothing gets uploaded, no account is required, and it's honest about uncertainty — if the signals are weak, it tells you "inconclusive" rather than guessing. (More on the iPhone-specific workflow in our [guide to checking photos on iPhone](/blog/check-if-photo-is-ai-on-iphone).)
+This is also where an on-device tool earns its place. Most web detectors require you to upload your image to a company's server — which is a privacy problem if the picture is personal or sensitive. We built [**Verifyco**](https://apps.apple.com/app/id6772592963) specifically to solve that: it runs a multi-layer forensic analysis **entirely on your iPhone**, checking metadata, AI-generation signatures, and frequency patterns, then gives you a trust score with a full breakdown of _what_ it found. Nothing gets uploaded, no account is required, and it's honest about uncertainty — if the signals are weak, it tells you "inconclusive" rather than guessing. (More on the iPhone-specific workflow in our [guide to checking photos on iPhone](/blog/check-if-photo-is-ai-on-iphone).)
 
 ## Step 3: Examine the physics (the last resort)
 
@@ -65,21 +67,26 @@ If provenance is empty and detectors are split, you fall back on what AI still s
 Here's where to look, roughly in order of reliability:
 
 ### Shadows and light direction
+
 Trace every shadow. In a real photo, they all fall consistently from the light source(s). AI scenes frequently mix shadow angles that no real lighting setup could produce — a person lit from the left casting a shadow to the left.
 
 ### Reflections
+
 Check eyes, glasses, water, windows, and shiny surfaces. Reflected content in AI images often disagrees with the actual scene, or shows up where it shouldn't.
 
 ### Background geometry
+
 Straight lines are hard for AI. Look at railings, floor tiles, window frames, brickwork, and door edges. In AI images these often bend, merge, or sprout extra segments where they should run straight.
 
 ### Depth and blur
-Real camera lenses blur by *distance* — things farther from the focal point get softer in a predictable way. AI sometimes blurs by "aesthetic guess," leaving a foreground and background sharpness combination no real camera would produce.
+
+Real camera lenses blur by _distance_ — things farther from the focal point get softer in a predictable way. AI sometimes blurs by "aesthetic guess," leaving a foreground and background sharpness combination no real camera would produce.
 
 ### Fine texture and patterns
+
 Look closely at repeating details — fabric weaves, crowd faces, foliage, text on signs. AI struggles with the nuanced interplay of complex patterns and often produces subtle, dreamlike inconsistencies on close inspection.
 
-**A crucial caveat:** these cues are getting harder to read every month, which is exactly why physics is the *last* layer and not the first. A modern generator can produce a scene that passes all of these checks. Passing them is not proof of authenticity — it just means you didn't find an obvious flaw.
+**A crucial caveat:** these cues are getting harder to read every month, which is exactly why physics is the _last_ layer and not the first. A modern generator can produce a scene that passes all of these checks. Passing them is not proof of authenticity — it just means you didn't find an obvious flaw.
 
 ## Putting it all together: the 2026 workflow
 
@@ -94,7 +101,7 @@ The mindset that protects you isn't "I can spot fakes." It's "I check before I t
 ## Frequently asked questions
 
 **Can ChatGPT or Gemini tell me if an image is AI-generated?**
-Partially. Gemini can check for Google's SynthID watermark, which only covers Google-made images. General chatbots can *comment* on visual inconsistencies, but they are not dedicated detectors and should not be your only check.
+Partially. Gemini can check for Google's SynthID watermark, which only covers Google-made images. General chatbots can _comment_ on visual inconsistencies, but they are not dedicated detectors and should not be your only check.
 
 **Are AI image detectors accurate?**
 The best are roughly 85–94% accurate on clean images in 2026 benchmarks, and lower on compressed or edited images. They're a strong signal, not a final verdict. Use more than one and weigh the result alongside provenance.

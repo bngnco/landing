@@ -1,13 +1,15 @@
 ---
-title: "Woran erkennt man KI-generierte Bilder? Der komplette Guide 2026"
-description: "Unsicher, ob ein Foto echt oder KI ist? Lerne die Methode, die 2026 wirklich funktioniert: Herkunftsprüfung, Detektor-Tools und die Physik-Fehler, die KI noch macht."
+title: Woran erkennt man KI-generierte Bilder? Der komplette Guide 2026
+description: 'Unsicher, ob ein Foto echt oder KI ist? Lerne die Methode, die 2026 wirklich funktioniert: Herkunftsprüfung, Detektor-Tools und die Physik-Fehler, die KI noch macht.'
 slug: how-to-tell-if-an-image-is-ai-generated
 date: 2026-06-28
+author: Verifyco-Team
+tags:
+  - KI-Erkennung
+  - Leitfäden
+image: ''
+imageAlt: Forensische Bildanalyse auf dem iPhone zeigt KI-Generierungsartefakte
 updated: 2026-07-01
-author: "Verifyco-Team"
-tags: ["KI-Erkennung", "Leitfäden"]
-image: /uploads/blog/face.png
-imageAlt: "Forensische Bildanalyse auf dem iPhone zeigt KI-Generierungsartefakte"
 ---
 
 Vor ein paar Jahren war es leicht, ein KI-Bild zu erkennen. Sechs Finger, zerlaufener Text, Augen, die in verschiedene Richtungen blicken. Diese Ära ist vorbei. 2026 produzieren Bildgeneratoren Aufnahmen, die von einem gewöhnlichen Handyfoto nicht zu unterscheiden sind — und die ehrliche Wahrheit lautet: **Nur durch Hinsehen erkennt man es meist nicht mehr.** Wer behauptet, es immer zu können, überschätzt sich.
