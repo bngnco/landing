@@ -1,0 +1,25 @@
+# Verifyco
+
+> Verifyco is an iPhone app for on-device forensic verification of photos and videos. It fuses five forensic signals (C2PA content credentials, metadata forensics, neural face analysis, motion/temporal consistency, DCT frequency analysis) into a 0-100 trust score to detect deepfakes, AI-generated and manipulated media. Analysis runs entirely on-device via Apple's Neural Engine - nothing is uploaded, no account required, works offline. Free to try.
+
+App Store: https://apps.apple.com/app/id6772592963
+
+## Key pages
+
+- [Home](https://verifyco.info/): product overview, how it works, pricing
+- [DeepDetect+](https://verifyco.info/deepdetect-plus): the advanced detection engine
+- [Support](https://verifyco.info/support)
+- [Privacy](https://verifyco.info/privacy): no uploads, no accounts, on-device only
+
+## Blog (guides on deepfake & AI-media detection)
+
+- [How to Check If a Photo Is Real or AI on Your iPhone (2026)](https://verifyco.info/blog/check-if-photo-is-ai-on-iphone): Want to verify a photo right on your iPhone without uploading it anywhere? Here's how to check if an image is real or AI-generated, privately and on-device.
+- [How to Spot a Deepfake Video: 9 Warning Signs for 2026](https://verifyco.info/blog/how-to-spot-a-deepfake-video): Deepfake videos are fooling almost everyone in 2026. Learn the 9 signs that still give them away — plus why your eyes alone aren't enough anymore.
+- [How to Tell If an Image Is AI-Generated: The Complete 2026 Guide](https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated): Can't tell if a photo is real or AI? Learn the 2026 method that actually works: provenance checks, detector tools, and the physics cues AI still gets wrong.
+- [What Is a Deepfake? A Plain-English Guide (2026)](https://verifyco.info/blog/what-is-a-deepfake): Deepfakes explained simply: what they are, how they're made, why they've become so convincing, the real-world risks, and how to tell a synthetic face or voice from the real thing.
+- [5 Signs a Video Has Been Deepfaked (+ How to Check)](https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked): A practical checklist for spotting deepfaked video — the edge artifacts, lip-sync drift, lighting tells, unnatural motion and audio clues that still give synthetic clips away.
+- [On-Device Verification, Explained (Nothing Leaves Your iPhone)](https://verifyco.info/blog/on-device-verification-explained): Why Verifyco runs entirely on your iPhone: how on-device forensic analysis works, what the Neural Engine does, cloud vs on-device trade-offs, and why nothing is ever uploaded.
+
+## Languages
+
+The blog is also available in: Turkish (https://verifyco.info/tr/blog), Spanish (https://verifyco.info/es/blog), German (https://verifyco.info/de/blog), French (https://verifyco.info/fr/blog), Italian (https://verifyco.info/it/blog), Portuguese (https://verifyco.info/pt/blog), Arabic (https://verifyco.info/ar/blog)

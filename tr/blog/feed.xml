@@ -5,7 +5,7 @@
     <link>https://verifyco.info/tr/blog</link>
     <description>Deepfake, AI üretimi ve manipüle edilmiş medyayı tespit etme üzerine rehberler ve araştırmalar — iPhone için cihazda adli doğrulama sunan Verifyco ekibinden.</description>
     <language>tr</language>
-    <lastBuildDate>Wed, 01 Jul 2026 16:49:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 10:10:07 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/tr/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>iPhone'da Bir Fotoğrafın Gerçek mi Yapay Zekâ mı Olduğunu Nasıl Anlarsın (2026)</title>
@@ -28,13 +28,12 @@
       <category>Rehberler</category>
     </item>
     <item>
-      <title>Bir Görselin Yapay Zekâ Üretimi Olduğu Nasıl Anlaşılır</title>
+      <title>Bir Görselin Yapay Zekâ Üretimi Olduğu Nasıl Anlaşılır: Eksiksiz 2026 Rehberi</title>
       <link>https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated</link>
       <guid isPermaLink="true">https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Yapay zekâ üretimi görselleri yakalamak için pratik, adli bir kontrol listesi — ele veren görsel bozulmalardan gerçekten işe yarayan meta veri ve sinyallere.</description>
+      <description>Bir fotoğrafın gerçek mi yapay zekâ mı olduğunu ayırt edemiyor musun? 2026'da gerçekten işe yarayan yöntemi öğren: köken kontrolleri, dedektör araçları ve yapay zekânın hâlâ yanlış yaptığı fizik ipuçları.</description>
       <category>AI Tespiti</category>
-      <category>Deepfake</category>
       <category>Rehberler</category>
     </item>
     <item>
@@ -47,21 +46,21 @@
       <category>Rehberler</category>
     </item>
     <item>
-      <title>Bir Videonun Deepfake Olduğunu Gösteren 5 İşaret</title>
+      <title>Bir Videonun Deepfake Olduğunu Gösteren 5 İşaret (+ Nasıl Kontrol Edilir)</title>
       <link>https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked</link>
       <guid isPermaLink="true">https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked</guid>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Deepfake videoları yakalamak için hızlı, pratik bir kontrol listesi — sentetik klipleri hâlâ ele veren kenar bozulmaları, dudak senkron kayması ve ışık ipuçları.</description>
+      <description>Deepfake videoları yakalamak için pratik bir kontrol listesi — sentetik klipleri hâlâ ele veren kenar bozulmaları, dudak senkron kayması, ışık ipuçları, doğal olmayan hareket ve ses izleri.</description>
       <category>Deepfake</category>
       <category>AI Tespiti</category>
       <category>Rehberler</category>
     </item>
     <item>
-      <title>Cihazda Doğrulama Nedir? (Hiçbir Şey iPhone'unuzdan Çıkmaz)</title>
+      <title>Cihazda Doğrulama Nedir? (Hiçbir Şey iPhone'undan Çıkmaz)</title>
       <link>https://verifyco.info/tr/blog/on-device-verification-explained</link>
       <guid isPermaLink="true">https://verifyco.info/tr/blog/on-device-verification-explained</guid>
       <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Verifyco neden tamamen iPhone'unuzda çalışır — cihazda adli analiz nasıl işler, Neural Engine ne yapar ve neden hiçbir şey asla yüklenmez.</description>
+      <description>Verifyco neden tamamen iPhone'unda çalışır: cihazda adli analiz nasıl işler, Neural Engine ne yapar, bulut ile cihaz karşılaştırması ve neden hiçbir şey asla yüklenmez.</description>
       <category>iOS</category>
       <category>Araştırma</category>
       <category>Rehberler</category>

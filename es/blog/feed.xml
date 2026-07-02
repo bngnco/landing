@@ -5,8 +5,17 @@
     <link>https://verifyco.info/es/blog</link>
     <description>Guías e investigación sobre cómo detectar deepfakes y contenido generado o manipulado por IA — del equipo de Verifyco, verificación forense en el dispositivo para iPhone.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 01 Jul 2026 16:49:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 10:10:07 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/es/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cómo saber si una imagen está generada por IA: la guía completa de 2026</title>
+      <link>https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>¿No sabes si una foto es real o IA? Aprende el método que funciona en 2026: comprobación de procedencia, herramientas de detección y los fallos de física que la IA aún comete.</description>
+      <category>Detección de IA</category>
+      <category>Guías</category>
+    </item>
     <item>
       <title>¿Qué es un deepfake? Una guía sencilla</title>
       <link>https://verifyco.info/es/blog/what-is-a-deepfake</link>

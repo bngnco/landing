@@ -5,8 +5,17 @@
     <link>https://verifyco.info/de/blog</link>
     <description>Leitfäden und Forschung zum Erkennen von Deepfakes sowie KI-generierten und manipulierten Medien — vom Verifyco-Team, forensische Verifizierung auf dem iPhone.</description>
     <language>de</language>
-    <lastBuildDate>Wed, 01 Jul 2026 16:49:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 10:10:07 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/de/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Woran erkennt man KI-generierte Bilder? Der komplette Guide 2026</title>
+      <link>https://verifyco.info/de/blog/how-to-tell-if-an-image-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/how-to-tell-if-an-image-is-ai-generated</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Unsicher, ob ein Foto echt oder KI ist? Lerne die Methode, die 2026 wirklich funktioniert: Herkunftsprüfung, Detektor-Tools und die Physik-Fehler, die KI noch macht.</description>
+      <category>KI-Erkennung</category>
+      <category>Leitfäden</category>
+    </item>
     <item>
       <title>Was ist ein Deepfake? Eine verständliche Einführung</title>
       <link>https://verifyco.info/de/blog/what-is-a-deepfake</link>

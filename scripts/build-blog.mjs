@@ -637,6 +637,21 @@ function articlePage(p, related) {
     ],
   });
 
+  // FAQPage structured data when the article has a FAQ section (≥2 Q&As) —
+  // makes the post eligible for FAQ rich results in search.
+  const faqLd =
+    p.faq && p.faq.length >= 2
+      ? `\n  <script type="application/ld+json">${jsonLd({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: p.faq.map(({ q, a }) => ({
+            "@type": "Question",
+            name: q,
+            acceptedAnswer: { "@type": "Answer", text: a },
+          })),
+        })}</script>`
+      : "";
+
   const updated =
     p.iso !== p.isoUpdated
       ? `<span class="dot">·</span><span class="updated">${esc(ui.updated)} ${p.updatedHuman}</span>`
@@ -712,7 +727,7 @@ function articlePage(p, related) {
   <meta property="article:author" content="${esc(p.author)}" />
 ${p.tags.map((t) => `  <meta property="article:tag" content="${esc(t)}" />`).join("\n")}
   <script type="application/ld+json">${article}</script>
-  <script type="application/ld+json">${breadcrumb}</script>`,
+  <script type="application/ld+json">${breadcrumb}</script>${faqLd}`,
     main,
   });
 }
@@ -818,6 +833,25 @@ function buildPostRecord(file, lang) {
     text: m[2].replace(/<[^>]+>/g, "").trim(),
   }));
 
+  // Extract Q&A pairs from a FAQ section (any supported language) so the
+  // article can ship FAQPage structured data — eligibility for rich results.
+  const faq = [];
+  const faqHead =
+    /(frequently asked|common questions|sık(?:ça)? sorulan|preguntas frecuentes|häufig(?:e|\sgestellte)? fragen|questions fréquentes|foire aux questions|domande frequenti|perguntas frequentes|الأسئلة الشائعة|أسئلة شائعة)/i;
+  const h2s = [...html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)];
+  for (let i = 0; i < h2s.length; i++) {
+    if (!faqHead.test(h2s[i][1].replace(/<[^>]+>/g, ""))) continue;
+    const start = h2s[i].index + h2s[i][0].length;
+    const end = i + 1 < h2s.length ? h2s[i + 1].index : html.length;
+    const section = html.slice(start, end);
+    for (const m of section.matchAll(/<p><strong>([\s\S]*?)<\/strong>([\s\S]*?)<\/p>/g)) {
+      const q = m[1].replace(/<[^>]+>/g, "").trim();
+      const a = m[2].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+      if (q && a) faq.push({ q, a });
+    }
+    break;
+  }
+
   const pre = langPrefix(lang);
   const urlPath = `${pre}${SITE.blogPath}/${slug}`;
   const words = content.replace(/```[\s\S]*?```/g, " ").split(/\s+/).filter(Boolean).length;
@@ -843,6 +877,7 @@ function buildPostRecord(file, lang) {
     reading: readingTime(content),
     words,
     toc,
+    faq,
     html,
   };
 }
@@ -1040,6 +1075,31 @@ function build() {
     path.join(ROOT, "robots.txt"),
     `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`
   );
+
+  // llms.txt — a concise, LLM-friendly map of the site so AI assistants
+  // (ChatGPT, Perplexity, Claude, etc.) can discover and cite us accurately.
+  const enPosts = byLang[DEFAULT_LANG] || [];
+  const llms =
+    `# Verifyco\n\n` +
+    `> Verifyco is an iPhone app for on-device forensic verification of photos and videos. ` +
+    `It fuses five forensic signals (C2PA content credentials, metadata forensics, neural face analysis, ` +
+    `motion/temporal consistency, DCT frequency analysis) into a 0-100 trust score to detect deepfakes, ` +
+    `AI-generated and manipulated media. Analysis runs entirely on-device via Apple's Neural Engine - ` +
+    `nothing is uploaded, no account required, works offline. Free to try.\n\n` +
+    `App Store: ${SITE.appStore}\n\n` +
+    `## Key pages\n\n` +
+    `- [Home](${SITE.url}/): product overview, how it works, pricing\n` +
+    `- [DeepDetect+](${SITE.url}/deepdetect-plus): the advanced detection engine\n` +
+    `- [Support](${SITE.url}/support)\n` +
+    `- [Privacy](${SITE.url}/privacy): no uploads, no accounts, on-device only\n\n` +
+    `## Blog (guides on deepfake & AI-media detection)\n\n` +
+    enPosts.map((p) => `- [${p.title}](${p.canonical}): ${p.description}`).join("\n") +
+    `\n\n## Languages\n\nThe blog is also available in: ` +
+    LANGS.filter((l) => l.code !== DEFAULT_LANG && AVAILABLE_LANGS.includes(l.code))
+      .map((l) => `${l.label} (${SITE.url}/${l.code}/blog)`)
+      .join(", ") +
+    `\n`;
+  writeFileSafe(path.join(ROOT, "llms.txt"), llms);
 
   const totals = LANG_CODES.map((c) => `${c}:${byLang[c].length}`).join(" · ");
   console.log(`✓ Blog built → ${totals}`);
