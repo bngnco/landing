@@ -1,13 +1,16 @@
 ---
-title: "iPhone'da Bir Fotoğrafın Gerçek mi Yapay Zekâ mı Olduğunu Nasıl Anlarsın (2026)"
-description: "Bir fotoğrafı hiçbir yere yüklemeden doğrudan iPhone'unda doğrulamak mı istiyorsun? İşte bir görselin gerçek mi yoksa yapay zekâ üretimi mi olduğunu gizli ve cihazda kontrol etmenin yolları."
+title: iPhone'da Bir Fotoğrafın Gerçek mi Yapay Zekâ mı Olduğunu Nasıl Anlarsın (2026)
+description: Bir fotoğrafı hiçbir yere yüklemeden doğrudan iPhone'unda doğrulamak mı istiyorsun? İşte bir görselin gerçek mi yoksa yapay zekâ üretimi mi olduğunu gizli ve cihazda kontrol etmenin yolları.
 slug: check-if-photo-is-ai-on-iphone
 date: 2026-06-28
+author: Verifyco Ekibi
+tags:
+  - AI Tespiti
+  - iOS
+  - Rehberler
+image: /uploads/blog/1000012577.png
+imageAlt: Bir fotoğrafın gerçek mi yapay zekâ mı olduğunu iPhone'da gizlice kontrol etme
 updated: 2026-07-01
-author: "Verifyco Ekibi"
-tags: ["AI Tespiti", "iOS", "Rehberler"]
-image: /uploads/blog/home.png
-imageAlt: "Bir fotoğrafın gerçek mi yapay zekâ mı olduğunu iPhone'da gizlice kontrol etme"
 ---
 
 Instagram'da ya da bir grup sohbetinde geziniyorsun ve bir fotoğraf seni durduruyor. Bir şey ters geliyor — ya da tam tersine, *fazla* kusursuz görünüyor. Bilmek istiyorsun: bu gerçek mi, yoksa yapay zekâ mı üretti? İdeal olarak da bunu hemen, telefonunda, dosyayı bir siteye e-postalamadan veya adını hiç duymadığın bir şirkete vermeden öğrenmek istersin.
