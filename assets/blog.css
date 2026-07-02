@@ -184,7 +184,10 @@ ul, ol { margin: 0; }
   backdrop-filter: blur(18px) saturate(1.3);
   border-bottom-color: var(--line);
 }
-.bnav-in { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+/* NOTE: no width here — the shared .bwrap class provides the centered,
+   margin-safe width. A width:100% would override it and pin the logo to
+   the screen edge on mobile. */
+.bnav-in { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .bnav-links { display: flex; align-items: center; gap: 30px; }
 .bnav-links a {
   font-size: 14.5px;
@@ -281,7 +284,10 @@ body.bmenu-open .bmenu { opacity: 1; visibility: visible; }
 }
 .card:hover { transform: translateY(-4px); border-color: var(--line-2); box-shadow: var(--shadow); }
 .card-media { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--elev-2); }
-.card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms var(--ease); }
+/* contain, not cover: featured images vary in ratio (often ~2:1 marketing
+   art with text at the edges) and cover was cropping the sides off. The
+   letterbox blends into the dark card background. */
+.card-media img { width: 100%; height: 100%; object-fit: contain; transition: transform 600ms var(--ease); }
 .card:hover .card-media img { transform: scale(1.04); }
 .card-body { display: flex; flex-direction: column; gap: 12px; padding: 22px 22px 24px; flex: 1; }
 .card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -306,7 +312,8 @@ body.bmenu-open .bmenu { opacity: 1; visibility: visible; }
 .post-meta .dot { opacity: 0.5; }
 
 .post-hero { width: min(880px, calc(100% - 44px)); margin: clamp(20px, 3vw, 34px) auto clamp(30px, 4vw, 48px); }
-.post-hero img { width: 100%; border-radius: 18px; border: 1px solid var(--line); aspect-ratio: 16 / 9; object-fit: cover; }
+/* Natural aspect ratio — never crop the featured image on the article page. */
+.post-hero img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); }
 
 /* ── Prose ────────────────────────────────────────────────────────── */
 .prose { color: var(--prose); font-size: 18.5px; line-height: 1.8; letter-spacing: 0.003em; }
@@ -514,7 +521,9 @@ body.bmenu-open .bmenu { opacity: 1; visibility: visible; }
 }
 .blang a:hover { opacity: 0.9; }
 .blang a.is-here { opacity: 1; color: var(--bronze); font-weight: 600; }
-@media (max-width: 560px) {
+/* The inline switcher lists 8 languages — below 880px it would overflow
+   the bar, so hide it; the mobile menu carries the language links. */
+@media (max-width: 880px) {
   .blang { display: none; }
 }
 .bmenu-lang {
