@@ -1,13 +1,16 @@
 ---
-title: "5 Signs a Video Has Been Deepfaked (+ How to Check)"
-description: "A practical checklist for spotting deepfaked video — the edge artifacts, lip-sync drift, lighting tells, unnatural motion and audio clues that still give synthetic clips away."
+title: 5 Signs a Video Has Been Deepfaked (+ How to Check)
+description: A practical checklist for spotting deepfaked video — the edge artifacts, lip-sync drift, lighting tells, unnatural motion and audio clues that still give synthetic clips away.
 slug: 5-signs-a-video-has-been-deepfaked
 date: 2026-06-15
+author: Verifyco Team
+tags:
+  - Deepfakes
+  - AI Detection
+  - Guides
+image: /uploads/blog/1000012582.png
+imageAlt: Verifyco signal pipeline analysing a video frame by frame
 updated: 2026-07-01
-author: "Verifyco Team"
-tags: ["Deepfakes", "AI Detection", "Guides"]
-image: /uploads/blog/signals.png
-imageAlt: "Verifyco signal pipeline analysing a video frame by frame"
 ---
 
 Video is harder to fake convincingly than a still image — there are simply more
@@ -37,7 +40,7 @@ sound off, then with it on. Warning signs:
 
 - Lips that don't quite close on "m"/"b" sounds.
 - Teeth and the inside of the mouth that look smeared, static or oddly uniform.
-- A voice that's *almost* synced but consistently a hair early or late.
+- A voice that's _almost_ synced but consistently a hair early or late.
 
 ## 3. Lighting and colour that don't agree
 
@@ -72,7 +75,7 @@ Step away from the pixels and check the file and its origin:
   software).
 - No credible source — it appears only on anonymous or fringe accounts, with no
   outlet carrying it.
-- Conversely, valid **C2PA Content Credentials** are evidence *for* authenticity.
+- Conversely, valid **C2PA Content Credentials** are evidence _for_ authenticity.
 
 ## Bonus: listen to the audio
 

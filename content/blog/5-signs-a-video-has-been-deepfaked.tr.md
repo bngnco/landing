@@ -1,13 +1,16 @@
 ---
-title: "Bir Videonun Deepfake Olduğunu Gösteren 5 İşaret (+ Nasıl Kontrol Edilir)"
-description: "Deepfake videoları yakalamak için pratik bir kontrol listesi — sentetik klipleri hâlâ ele veren kenar bozulmaları, dudak senkron kayması, ışık ipuçları, doğal olmayan hareket ve ses izleri."
+title: Bir Videonun Deepfake Olduğunu Gösteren 5 İşaret (+ Nasıl Kontrol Edilir)
+description: Deepfake videoları yakalamak için pratik bir kontrol listesi — sentetik klipleri hâlâ ele veren kenar bozulmaları, dudak senkron kayması, ışık ipuçları, doğal olmayan hareket ve ses izleri.
 slug: 5-signs-a-video-has-been-deepfaked
 date: 2026-06-15
+author: Verifyco Ekibi
+tags:
+  - Deepfake
+  - AI Tespiti
+  - Rehberler
+image: /uploads/blog/1000012582.png
+imageAlt: Verifyco sinyal hattı bir videoyu kare kare analiz ediyor
 updated: 2026-07-01
-author: "Verifyco Ekibi"
-tags: ["Deepfake", "AI Tespiti", "Rehberler"]
-image: /uploads/blog/signals.png
-imageAlt: "Verifyco sinyal hattı bir videoyu kare kare analiz ediyor"
 ---
 
 Bir videoyu inandırıcı biçimde sahtelemek, durağan bir görsele göre daha zordur —

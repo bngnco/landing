@@ -1,13 +1,16 @@
 ---
-title: "5 Anzeichen, dass ein Video deepfaked wurde (+ wie du es prüfst)"
-description: "Eine praktische Checkliste zum Erkennen von Deepfake-Videos — die Kantenartefakte, Lippen-Desynchronisation, Licht-Hinweise, unnatürliche Bewegung und Audio-Indizien, die synthetische Clips noch verraten."
+title: 5 Anzeichen, dass ein Video deepfaked wurde (+ wie du es prüfst)
+description: Eine praktische Checkliste zum Erkennen von Deepfake-Videos — die Kantenartefakte, Lippen-Desynchronisation, Licht-Hinweise, unnatürliche Bewegung und Audio-Indizien, die synthetische Clips noch verraten.
 slug: 5-signs-a-video-has-been-deepfaked
 date: 2026-06-15
+author: Verifyco-Team
+tags:
+  - Deepfakes
+  - KI-Erkennung
+  - Leitfäden
+image: /uploads/blog/1000012582.png
+imageAlt: Die Verifyco-Signalpipeline analysiert ein Video Frame für Frame
 updated: 2026-07-01
-author: "Verifyco-Team"
-tags: ["Deepfakes", "KI-Erkennung", "Leitfäden"]
-image: /uploads/blog/signals.png
-imageAlt: "Die Verifyco-Signalpipeline analysiert ein Video Frame für Frame"
 ---
 
 Ein Video überzeugend zu fälschen ist schwerer als ein Standbild — es gibt schlicht viel mehr Frames, die konsistent bleiben müssen, und Bewegung, Licht und Ton müssen über die Zeit zusammenpassen. Die gute Nachricht für dich: Deepfake-Video hinterlässt noch Spuren, vor allem in Bewegung und Klang. Hier sind die fünf verlässlichsten Anzeichen, wie du jedes prüfst — und warum keines für sich allein ein Urteil ist.

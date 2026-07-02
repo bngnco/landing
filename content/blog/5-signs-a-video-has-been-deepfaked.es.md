@@ -1,13 +1,16 @@
 ---
-title: "5 señales de que un vídeo ha sido deepfakeado (+ cómo comprobarlo)"
-description: "Una lista práctica para detectar vídeo deepfake — los artefactos de bordes, el desfase de labios, las pistas de iluminación, el movimiento antinatural y los indicios de audio que aún delatan los clips sintéticos."
+title: 5 señales de que un vídeo ha sido deepfakeado (+ cómo comprobarlo)
+description: Una lista práctica para detectar vídeo deepfake — los artefactos de bordes, el desfase de labios, las pistas de iluminación, el movimiento antinatural y los indicios de audio que aún delatan los clips sintéticos.
 slug: 5-signs-a-video-has-been-deepfaked
 date: 2026-06-15
+author: Equipo Verifyco
+tags:
+  - Deepfakes
+  - Detección de IA
+  - Guías
+image: /uploads/blog/1000012582.png
+imageAlt: El pipeline de señales de Verifyco analizando un vídeo fotograma a fotograma
 updated: 2026-07-01
-author: "Equipo Verifyco"
-tags: ["Deepfakes", "Detección de IA", "Guías"]
-image: /uploads/blog/signals.png
-imageAlt: "El pipeline de señales de Verifyco analizando un vídeo fotograma a fotograma"
 ---
 
 Falsificar un vídeo de forma convincente es más difícil que una imagen fija — simplemente hay muchos más fotogramas que mantener consistentes, y el movimiento, la luz y el audio tienen que encajar a lo largo del tiempo. Buenas noticias para ti: el vídeo deepfakeado aún deja pistas, sobre todo en el movimiento y el sonido. Aquí tienes las cinco señales más fiables, cómo comprobar cada una y por qué ninguna es un veredicto por sí sola.
