@@ -7,7 +7,7 @@ author: Equipo Verifyco
 tags:
   - Deepfakes
   - Guías
-image: /uploads/blog/deepfake.png
+image: /uploads/blog/1000012583.png
 imageAlt: Retrato auténtico y deepfake comparados lado a lado bajo análisis forense
 ---
 

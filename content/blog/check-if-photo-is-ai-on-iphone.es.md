@@ -1,13 +1,16 @@
 ---
-title: "Cómo comprobar si una foto es real o IA en tu iPhone (2026)"
-description: "¿Quieres verificar una foto directamente en tu iPhone sin subirla a ningún sitio? Así puedes comprobar si una imagen es real o generada por IA, de forma privada y en el dispositivo."
+title: Cómo comprobar si una foto es real o IA en tu iPhone (2026)
+description: ¿Quieres verificar una foto directamente en tu iPhone sin subirla a ningún sitio? Así puedes comprobar si una imagen es real o generada por IA, de forma privada y en el dispositivo.
 slug: check-if-photo-is-ai-on-iphone
 date: 2026-06-28
+author: Equipo Verifyco
+tags:
+  - Detección de IA
+  - iOS
+  - Guías
+image: /uploads/blog/1000012577.png
+imageAlt: Comprobando si una foto es real o IA, de forma privada en un iPhone
 updated: 2026-07-01
-author: "Equipo Verifyco"
-tags: ["Detección de IA", "iOS", "Guías"]
-image: /uploads/blog/home.png
-imageAlt: "Comprobando si una foto es real o IA, de forma privada en un iPhone"
 ---
 
 Estás pasando fotos en Instagram o en un chat de grupo y una imagen te detiene. Algo no cuadra — o quizá se ve perfecta de una forma *demasiado* perfecta. Quieres saber: ¿esto es real o lo hizo una IA? Y, a poder ser, quieres averiguarlo ahora mismo, en tu teléfono, sin enviarla a una web ni entregar tu foto personal a una empresa de la que nunca has oído hablar.

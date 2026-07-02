@@ -1,13 +1,15 @@
 ---
-title: "Bir Görselin Yapay Zekâ Üretimi Olduğu Nasıl Anlaşılır: Eksiksiz 2026 Rehberi"
+title: 'Bir Görselin Yapay Zekâ Üretimi Olduğu Nasıl Anlaşılır: Eksiksiz 2026 Rehberi'
 description: "Bir fotoğrafın gerçek mi yapay zekâ mı olduğunu ayırt edemiyor musun? 2026'da gerçekten işe yarayan yöntemi öğren: köken kontrolleri, dedektör araçları ve yapay zekânın hâlâ yanlış yaptığı fizik ipuçları."
 slug: how-to-tell-if-an-image-is-ai-generated
 date: 2026-06-28
+author: Verifyco Ekibi
+tags:
+  - AI Tespiti
+  - Rehberler
+image: ''
+imageAlt: iPhone'da yapay zekâ üretim izlerini vurgulayan adli görsel analizi
 updated: 2026-07-01
-author: "Verifyco Ekibi"
-tags: ["AI Tespiti", "Rehberler"]
-image: /uploads/blog/face.png
-imageAlt: "iPhone'da yapay zekâ üretim izlerini vurgulayan adli görsel analizi"
 ---
 
 Birkaç yıl önce bir yapay zekâ görselini yakalamak kolaydı. Altı parmak, erimiş yazılar, farklı yönlere bakan gözler. O dönem bitti. 2026 itibarıyla görsel üreticiler, sıradan bir telefon fotoğrafından beklediğin görüntülerle eşleşen resimler üretiyor ve dürüst gerçek şu: **artık genellikle sadece bakarak anlayamazsın.** Her zaman anlayabildiğini iddia eden herkes kendini abartıyordur.

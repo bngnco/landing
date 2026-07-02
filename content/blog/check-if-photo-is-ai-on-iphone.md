@@ -1,16 +1,19 @@
 ---
-title: "How to Check If a Photo Is Real or AI on Your iPhone (2026)"
-description: "Want to verify a photo right on your iPhone without uploading it anywhere? Here's how to check if an image is real or AI-generated, privately and on-device."
+title: How to Check If a Photo Is Real or AI on Your iPhone (2026)
+description: Want to verify a photo right on your iPhone without uploading it anywhere? Here's how to check if an image is real or AI-generated, privately and on-device.
 slug: check-if-photo-is-ai-on-iphone
 date: 2026-06-28
+author: Verifyco Team
+tags:
+  - AI Detection
+  - iOS
+  - Guides
+image: /uploads/blog/1000012577.png
+imageAlt: Checking whether a photo is real or AI, privately on an iPhone
 updated: 2026-07-01
-author: "Verifyco Team"
-tags: ["AI Detection", "iOS", "Guides"]
-image: /uploads/blog/home.png
-imageAlt: "Checking whether a photo is real or AI, privately on an iPhone"
 ---
 
-You're scrolling through Instagram or a group chat and a photo stops you. Something feels off — or maybe it looks perfect in a way that's *too* perfect. You want to know: is this real, or did AI make it? And ideally, you'd like to find out right now, on your phone, without emailing it to some website or handing your personal photo to a company you've never heard of.
+You're scrolling through Instagram or a group chat and a photo stops you. Something feels off — or maybe it looks perfect in a way that's _too_ perfect. You want to know: is this real, or did AI make it? And ideally, you'd like to find out right now, on your phone, without emailing it to some website or handing your personal photo to a company you've never heard of.
 
 Good news: in 2026 you can do exactly that. This guide covers the practical ways to check a photo directly on your iPhone — what each method can and can't do, and how to keep the process private. (New to the topic? Start with [what is a deepfake](/blog/what-is-a-deepfake).)
 
@@ -26,7 +29,7 @@ Before any analysis, check whether the image carries a record of its origin.
 
 **Look at the metadata.** Open the photo in the Photos app, tap the info button (the small "i"), and you can see basic file details. Some images — especially from AI tools that support the standard — carry **Content Credentials (C2PA)**, an embedded record of whether AI was involved in creating or editing them. The limitation: this data is easily stripped. If the image was screenshotted or re-saved (which is almost everything shared on social media), the credentials are usually gone.
 
-**Use the Gemini app for Google images.** If you suspect an image was made with a Google AI model, the Gemini app on iPhone can check for Google's invisible **SynthID** watermark. Upload the image and ask whether it was AI-generated. The big caveat: SynthID only detects *Google-origin* content. A "no watermark" result tells you nothing about images from Midjourney, Stable Diffusion, or other tools.
+**Use the Gemini app for Google images.** If you suspect an image was made with a Google AI model, the Gemini app on iPhone can check for Google's invisible **SynthID** watermark. Upload the image and ask whether it was AI-generated. The big caveat: SynthID only detects _Google-origin_ content. A "no watermark" result tells you nothing about images from Midjourney, Stable Diffusion, or other tools.
 
 Provenance is the fastest path to an answer when it exists — but most real-world images you'll want to check have had their provenance stripped. That's where you need actual analysis.
 
@@ -45,13 +48,13 @@ This is a useful first pass, but be honest with yourself about its limits. Moder
 
 For anything beyond a quick eyeball check, you want a tool that analyzes the statistical fingerprints AI leaves behind — the patterns invisible to the human eye. The key is choosing one that does this **on your device** rather than uploading your photo.
 
-This is precisely what we designed **[Verifyco](https://apps.apple.com/app/id6772592963)** for. Here's how it works on iPhone:
+This is precisely what we designed [**Verifyco**](https://apps.apple.com/app/id6772592963) for. Here's how it works on iPhone:
 
 **It runs entirely on-device.** Verifyco uses Apple's Neural Engine and an on-device model to analyze your photo without uploading anything. No cloud, no account, no data collection. Whatever you check stays on your iPhone. (More on why that matters: [on-device verification, explained](/blog/on-device-verification-explained).)
 
-**It checks multiple layers, not just one.** Instead of a single yes/no, it examines provenance and metadata, AI-generation signatures, frequency patterns the eye can't see, and — for videos — frame-to-frame consistency. It combines these into a **trust score from 0 to 100** with a breakdown so you can see *what* each layer found.
+**It checks multiple layers, not just one.** Instead of a single yes/no, it examines provenance and metadata, AI-generation signatures, frequency patterns the eye can't see, and — for videos — frame-to-frame consistency. It combines these into a **trust score from 0 to 100** with a breakdown so you can see _what_ each layer found.
 
-**It's honest about uncertainty.** A lot of social-media imagery is so compressed and stripped of data that no tool can be certain. Rather than guess, Verifyco will tell you when the result is *inconclusive* — which is the truthful answer in those cases, and far more useful than false confidence.
+**It's honest about uncertainty.** A lot of social-media imagery is so compressed and stripped of data that no tool can be certain. Rather than guess, Verifyco will tell you when the result is _inconclusive_ — which is the truthful answer in those cases, and far more useful than false confidence.
 
 **You can check media from anywhere.** Thanks to the iOS Share Extension, you can analyze a photo or video directly from Photos, Safari, or a social app without opening Verifyco first — just tap Share and send it to Verifyco. You can also paste a social media link (Instagram, TikTok, and others) to check a clip.
 
@@ -68,7 +71,7 @@ Whatever tool you use, interpret the output the right way:
 
 - **A score is evidence, not a verdict.** Even the best detectors run around 85–94% accuracy on clean images in 2026, and lower on compressed ones. Use the result as a strong clue, then apply judgment.
 - **Inconclusive is a real answer.** Heavily compressed, screenshotted, or re-saved images often can't be judged confidently by anyone. A tool that admits this is being honest with you.
-- **Combine signals when it matters.** For something important, check provenance *and* run a detector *and* look at the physics. Where they agree, you have a strong conclusion.
+- **Combine signals when it matters.** For something important, check provenance _and_ run a detector _and_ look at the physics. Where they agree, you have a strong conclusion.
 
 ## The bottom line
 

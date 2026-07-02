@@ -1,13 +1,16 @@
 ---
-title: "La verificación en el dispositivo, explicada (nada sale de tu iPhone)"
-description: "Por qué Verifyco corre enteramente en tu iPhone: cómo funciona el análisis forense en el dispositivo, qué hace el Neural Engine, nube vs dispositivo, y por qué nunca se sube nada."
+title: La verificación en el dispositivo, explicada (nada sale de tu iPhone)
+description: 'Por qué Verifyco corre enteramente en tu iPhone: cómo funciona el análisis forense en el dispositivo, qué hace el Neural Engine, nube vs dispositivo, y por qué nunca se sube nada.'
 slug: on-device-verification-explained
 date: 2026-06-08
+author: Equipo Verifyco
+tags:
+  - iOS
+  - Investigación
+  - Guías
+image: /uploads/blog/1000012581.png
+imageAlt: Verifyco ejecutando un análisis privado en el dispositivo en un iPhone
 updated: 2026-07-01
-author: "Equipo Verifyco"
-tags: ["iOS", "Investigación", "Guías"]
-image: /uploads/blog/spotlight.png
-imageAlt: "Verifyco ejecutando un análisis privado en el dispositivo en un iPhone"
 ---
 
 La mayoría de las herramientas de verificación de medios funcionan igual: subes tu

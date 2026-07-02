@@ -1,13 +1,16 @@
 ---
-title: "Cómo detectar un vídeo deepfake: 9 señales de alerta para 2026"
-description: "Los vídeos deepfake engañan a casi todo el mundo en 2026. Aprende las 9 señales que aún los delatan — y por qué tus ojos ya no bastan por sí solos."
+title: 'Cómo detectar un vídeo deepfake: 9 señales de alerta para 2026'
+description: Los vídeos deepfake engañan a casi todo el mundo en 2026. Aprende las 9 señales que aún los delatan — y por qué tus ojos ya no bastan por sí solos.
 slug: how-to-spot-a-deepfake-video
 date: 2026-06-28
+author: Equipo Verifyco
+tags:
+  - Deepfakes
+  - Detección de IA
+  - Guías
+image: /uploads/blog/1000012578.png
+imageAlt: Analizando un vídeo en busca de señales de deepfake en un iPhone
 updated: 2026-07-01
-author: "Equipo Verifyco"
-tags: ["Deepfakes", "Detección de IA", "Guías"]
-image: /uploads/blog/url.png
-imageAlt: "Analizando un vídeo en busca de señales de deepfake en un iPhone"
 ---
 
 En 2024, un empleado de finanzas de la ingeniería Arup se unió a una videollamada con lo que parecía ser el CFO de la empresa y varios colegas. Todas y cada una de las personas de esa llamada eran deepfakes. El empleado transfirió unos **25 millones de dólares** antes de que nadie se diera cuenta. Sigue siendo uno de los casos más documentados de su tipo — y ya no es una excepción.

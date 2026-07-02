@@ -1,13 +1,15 @@
 ---
-title: "Cómo saber si una imagen está generada por IA: la guía completa de 2026"
-description: "¿No sabes si una foto es real o IA? Aprende el método que funciona en 2026: comprobación de procedencia, herramientas de detección y los fallos de física que la IA aún comete."
+title: 'Cómo saber si una imagen está generada por IA: la guía completa de 2026'
+description: '¿No sabes si una foto es real o IA? Aprende el método que funciona en 2026: comprobación de procedencia, herramientas de detección y los fallos de física que la IA aún comete.'
 slug: how-to-tell-if-an-image-is-ai-generated
 date: 2026-06-28
+author: Equipo Verifyco
+tags:
+  - Detección de IA
+  - Guías
+image: ''
+imageAlt: Análisis forense de imagen en iPhone destacando artefactos de generación por IA
 updated: 2026-07-01
-author: "Equipo Verifyco"
-tags: ["Detección de IA", "Guías"]
-image: /uploads/blog/face.png
-imageAlt: "Análisis forense de imagen en iPhone destacando artefactos de generación por IA"
 ---
 
 Hace unos años, detectar una imagen de IA era fácil. Seis dedos, texto derretido, ojos mirando en direcciones distintas. Esa era terminó. En 2026, los generadores producen imágenes que coinciden con lo que esperarías de una foto normal de móvil, y la verdad honesta es esta: **normalmente ya no puedes saberlo solo mirando.** Quien afirme que siempre puede, se está sobreestimando.

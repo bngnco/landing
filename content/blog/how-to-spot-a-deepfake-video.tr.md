@@ -1,13 +1,16 @@
 ---
-title: "Deepfake Video Nasıl Anlaşılır: 2026 İçin 9 Uyarı İşareti"
-description: "2026'da deepfake videolar neredeyse herkesi kandırıyor. Onları hâlâ ele veren 9 işareti öğren — ve neden artık sadece gözlerinin yetmediğini."
+title: 'Deepfake Video Nasıl Anlaşılır: 2026 İçin 9 Uyarı İşareti'
+description: 2026'da deepfake videolar neredeyse herkesi kandırıyor. Onları hâlâ ele veren 9 işareti öğren — ve neden artık sadece gözlerinin yetmediğini.
 slug: how-to-spot-a-deepfake-video
 date: 2026-06-28
+author: Verifyco Ekibi
+tags:
+  - Deepfake
+  - AI Tespiti
+  - Rehberler
+image: /uploads/blog/1000012578.png
+imageAlt: Bir video klibini deepfake işaretleri için iPhone'da analiz etme
 updated: 2026-07-01
-author: "Verifyco Ekibi"
-tags: ["Deepfake", "AI Tespiti", "Rehberler"]
-image: /uploads/blog/url.png
-imageAlt: "Bir video klibini deepfake işaretleri için iPhone'da analiz etme"
 ---
 
 2024'te, mühendislik firması Arup'taki bir finans çalışanı, şirketin CFO'su ve birkaç iş arkadaşı gibi görünen kişilerle bir görüntülü görüşmeye katıldı. O görüşmedeki herkes bir deepfake'ti. Çalışan, kimse fark etmeden yaklaşık **25 milyon dolar** transfer etti. Bu, türünün en çok belgelenmiş vakalarından biri olmayı sürdürüyor — ve artık bir istisna değil.

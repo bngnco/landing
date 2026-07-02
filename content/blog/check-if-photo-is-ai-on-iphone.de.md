@@ -1,13 +1,16 @@
 ---
-title: "So prüfst du auf dem iPhone, ob ein Foto echt oder KI ist (2026)"
-description: "Du willst ein Foto direkt auf dem iPhone verifizieren, ohne es irgendwohin hochzuladen? So prüfst du privat und auf dem Gerät, ob ein Bild echt oder KI-generiert ist."
+title: So prüfst du auf dem iPhone, ob ein Foto echt oder KI ist (2026)
+description: Du willst ein Foto direkt auf dem iPhone verifizieren, ohne es irgendwohin hochzuladen? So prüfst du privat und auf dem Gerät, ob ein Bild echt oder KI-generiert ist.
 slug: check-if-photo-is-ai-on-iphone
 date: 2026-06-28
+author: Verifyco-Team
+tags:
+  - KI-Erkennung
+  - iOS
+  - Leitfäden
+image: /uploads/blog/1000012577.png
+imageAlt: Privat auf dem iPhone prüfen, ob ein Foto echt oder KI ist
 updated: 2026-07-01
-author: "Verifyco-Team"
-tags: ["KI-Erkennung", "iOS", "Leitfäden"]
-image: /uploads/blog/home.png
-imageAlt: "Privat auf dem iPhone prüfen, ob ein Foto echt oder KI ist"
 ---
 
 Du scrollst durch Instagram oder einen Gruppenchat und ein Foto lässt dich stutzen. Irgendetwas stimmt nicht — oder es sieht auf eine *zu* perfekte Art perfekt aus. Du willst wissen: Ist das echt, oder hat es eine KI erzeugt? Und am liebsten jetzt sofort, auf deinem Handy — ohne es an irgendeine Website zu schicken oder dein persönliches Foto einer Firma zu überlassen, von der du noch nie gehört hast.

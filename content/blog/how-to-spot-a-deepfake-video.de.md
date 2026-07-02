@@ -1,13 +1,16 @@
 ---
-title: "Deepfake-Videos erkennen: 9 Warnsignale für 2026"
-description: "Deepfake-Videos täuschen 2026 fast jeden. Lerne die 9 Zeichen, die sie noch verraten — und warum deine Augen allein nicht mehr reichen."
+title: 'Deepfake-Videos erkennen: 9 Warnsignale für 2026'
+description: Deepfake-Videos täuschen 2026 fast jeden. Lerne die 9 Zeichen, die sie noch verraten — und warum deine Augen allein nicht mehr reichen.
 slug: how-to-spot-a-deepfake-video
 date: 2026-06-28
+author: Verifyco-Team
+tags:
+  - Deepfakes
+  - KI-Erkennung
+  - Leitfäden
+image: /uploads/blog/1000012578.png
+imageAlt: Ein Videoclip wird auf dem iPhone auf Deepfake-Warnsignale analysiert
 updated: 2026-07-01
-author: "Verifyco-Team"
-tags: ["Deepfakes", "KI-Erkennung", "Leitfäden"]
-image: /uploads/blog/url.png
-imageAlt: "Ein Videoclip wird auf dem iPhone auf Deepfake-Warnsignale analysiert"
 ---
 
 2024 nahm ein Finanzmitarbeiter des Ingenieurbüros Arup an einer Videokonferenz teil — mit dem, was wie der CFO des Unternehmens und mehrere Kollegen aussah. Jede einzelne Person in diesem Call war ein Deepfake. Der Mitarbeiter überwies rund **25 Millionen Dollar**, bevor es jemand bemerkte. Es bleibt einer der bestdokumentierten Fälle seiner Art — und ist längst kein Ausreißer mehr.
