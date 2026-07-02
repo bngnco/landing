@@ -1,13 +1,16 @@
 ---
-title: "On-Device Verification, Explained (Nothing Leaves Your iPhone)"
-description: "Why Verifyco runs entirely on your iPhone: how on-device forensic analysis works, what the Neural Engine does, cloud vs on-device trade-offs, and why nothing is ever uploaded."
+title: On-Device Verification, Explained (Nothing Leaves Your iPhone)
+description: 'Why Verifyco runs entirely on your iPhone: how on-device forensic analysis works, what the Neural Engine does, cloud vs on-device trade-offs, and why nothing is ever uploaded.'
 slug: on-device-verification-explained
 date: 2026-06-08
+author: Verifyco Team
+tags:
+  - iOS
+  - Research
+  - Guides
+image: /uploads/blog/1000012581.png
+imageAlt: Verifyco running a private, on-device analysis on iPhone
 updated: 2026-07-01
-author: "Verifyco Team"
-tags: ["iOS", "Research", "Guides"]
-image: /uploads/blog/spotlight.png
-imageAlt: "Verifyco running a private, on-device analysis on iPhone"
 ---
 
 Most media-checking tools work the same way: you upload your file to a server,
@@ -65,7 +68,7 @@ and [5 signs a video has been deepfaked](/blog/5-signs-a-video-has-been-deepfake
 
 ## Cloud vs on-device: the trade-off
 
-| | Cloud verification | On-device (Verifyco) |
+|  | Cloud verification | On-device (Verifyco) |
 | --- | --- | --- |
 | Your media | Uploaded to a server | Never leaves your phone |
 | Speed | Upload + queue + download | Starts instantly |
@@ -81,7 +84,7 @@ enormous.
 ## Common questions
 
 **Is on-device as accurate as cloud?** For these forensic signals, yes — the
-analysis is the same math; only the *location* changes. Detection is always a
+analysis is the same math; only the _location_ changes. Detection is always a
 moving target (generators improve), which is why Verifyco fuses several signals
 and improves with app updates.
 
@@ -96,7 +99,7 @@ that would send your media to us doesn't exist.
 
 ## The bottom line
 
-On-device verification gives you a forensic-grade second opinion that's **private
-by design and fast enough to actually use** — before you trust a piece of media,
+On-device verification gives you a forensic-grade second opinion that's **private**
+**by design and fast enough to actually use** — before you trust a piece of media,
 and before you share it. New to the topic? Start with
 [what is a deepfake](/blog/what-is-a-deepfake).

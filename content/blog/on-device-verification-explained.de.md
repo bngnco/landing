@@ -1,13 +1,16 @@
 ---
-title: "Verifizierung auf dem Gerät, erklärt (nichts verlässt dein iPhone)"
-description: "Warum Verifyco vollständig auf deinem iPhone läuft: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und warum nie etwas hochgeladen wird."
+title: Verifizierung auf dem Gerät, erklärt (nichts verlässt dein iPhone)
+description: 'Warum Verifyco vollständig auf deinem iPhone läuft: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und warum nie etwas hochgeladen wird.'
 slug: on-device-verification-explained
 date: 2026-06-08
+author: Verifyco-Team
+tags:
+  - iOS
+  - Forschung
+  - Leitfäden
+image: /uploads/blog/1000012581.png
+imageAlt: Verifyco führt eine private On-Device-Analyse auf dem iPhone aus
 updated: 2026-07-01
-author: "Verifyco-Team"
-tags: ["iOS", "Forschung", "Leitfäden"]
-image: /uploads/blog/spotlight.png
-imageAlt: "Verifyco führt eine private On-Device-Analyse auf dem iPhone aus"
 ---
 
 Die meisten Medienprüf-Tools funktionieren gleich: Du lädst deine Datei auf einen

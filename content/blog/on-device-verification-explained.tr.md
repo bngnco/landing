@@ -1,13 +1,16 @@
 ---
-title: "Cihazda Doğrulama Nedir? (Hiçbir Şey iPhone'undan Çıkmaz)"
+title: Cihazda Doğrulama Nedir? (Hiçbir Şey iPhone'undan Çıkmaz)
 description: "Verifyco neden tamamen iPhone'unda çalışır: cihazda adli analiz nasıl işler, Neural Engine ne yapar, bulut ile cihaz karşılaştırması ve neden hiçbir şey asla yüklenmez."
 slug: on-device-verification-explained
 date: 2026-06-08
+author: Verifyco Ekibi
+tags:
+  - iOS
+  - Araştırma
+  - Rehberler
+image: /uploads/blog/1000012581.png
+imageAlt: Verifyco iPhone'da gizli, cihazda çalışan bir analiz yürütüyor
 updated: 2026-07-01
-author: "Verifyco Ekibi"
-tags: ["iOS", "Araştırma", "Rehberler"]
-image: /uploads/blog/spotlight.png
-imageAlt: "Verifyco iPhone'da gizli, cihazda çalışan bir analiz yürütüyor"
 ---
 
 Çoğu medya kontrol aracı aynı şekilde çalışır: dosyanı bir sunucuya yüklersin,
