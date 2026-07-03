@@ -5,8 +5,28 @@
     <link>https://verifyco.info/ar/blog</link>
     <description>أدلّة وأبحاث حول كشف التزييف العميق والوسائط المُولّدة أو المُعدّلة بالذكاء الاصطناعي — من فريق Verifyco، التحقّق الجنائي على iPhone.</description>
     <language>ar</language>
-    <lastBuildDate>Thu, 02 Jul 2026 19:54:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 20:09:16 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/ar/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>كيف تتحقق على iPhone من أن صورة حقيقية أم من صنع الذكاء الاصطناعي (2026)</title>
+      <link>https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>تريد التحقق من صورة مباشرة على جهاز iPhone دون رفعها إلى أي مكان؟ إليك كيف تتأكد من أن الصورة حقيقية أم مولّدة بالذكاء الاصطناعي، بخصوصية وعلى الجهاز.</description>
+      <category>كشف الذكاء الاصطناعي</category>
+      <category>iOS</category>
+      <category>أدلّة</category>
+    </item>
+    <item>
+      <title>كيف تكشف فيديو التزييف العميق: 9 علامات تحذير لعام 2026</title>
+      <link>https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>فيديوهات التزييف العميق تخدع الجميع تقريبًا في 2026. تعلّم العلامات التسع التي ما زالت تفضحها — ولماذا لم تعد عيناك وحدهما كافيتين.</description>
+      <category>التزييف العميق</category>
+      <category>كشف الذكاء الاصطناعي</category>
+      <category>أدلّة</category>
+    </item>
     <item>
       <title>كيف تعرف أن صورة مولّدة بالذكاء الاصطناعي: الدليل الكامل 2026</title>
       <link>https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated</link>
@@ -23,6 +43,26 @@
       <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
       <description>شرح مبسّط للتزييف العميق: كيف يُصنع، ولماذا صار مقنعًا إلى هذا الحد، والطرق العملية للتمييز بين وجه أو صوت مُصطنع والحقيقي.</description>
       <category>التزييف العميق</category>
+      <category>أدلّة</category>
+    </item>
+    <item>
+      <title>5 علامات على أن فيديو تعرّض للتزييف العميق (+ كيف تتحقق)</title>
+      <link>https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>قائمة عملية لكشف فيديو التزييف العميق — عيوب الحواف، انزياح تزامن الشفاه، قرائن الإضاءة، الحركة غير الطبيعية، وأدلة الصوت التي ما زالت تفضح المقاطع الاصطناعية.</description>
+      <category>التزييف العميق</category>
+      <category>كشف الذكاء الاصطناعي</category>
+      <category>أدلّة</category>
+    </item>
+    <item>
+      <title>التحقق على الجهاز، شرح مبسّط (لا شيء يغادر جهاز iPhone)</title>
+      <link>https://verifyco.info/ar/blog/on-device-verification-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/on-device-verification-explained</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <description>لماذا يعمل Verifyco بالكامل على جهاز iPhone: كيف يعمل التحليل الجنائي على الجهاز، ماذا يفعل المحرك العصبي، السحابة مقابل الجهاز — ولماذا لا يُرفع أي شيء أبدًا.</description>
+      <category>iOS</category>
+      <category>أبحاث</category>
       <category>أدلّة</category>
     </item>
   </channel>

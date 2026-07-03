@@ -6,7 +6,7 @@ date: 2026-06-28
 updated: 2026-07-01
 author: "L’équipe Verifyco"
 tags: ["Deepfakes", "Détection d’IA", "Guides"]
-image: /uploads/blog/url.png
+image: /uploads/blog/1000012578.png
 imageAlt: "Analyse d’un clip vidéo à la recherche de signes de deepfake sur un iPhone"
 ---
 

@@ -6,7 +6,7 @@ date: 2026-06-28
 updated: 2026-07-01
 author: "L’équipe Verifyco"
 tags: ["Détection d’IA", "iOS", "Guides"]
-image: /uploads/blog/home.png
+image: /uploads/blog/1000012577.png
 imageAlt: "Vérifier en privé sur un iPhone si une photo est réelle ou IA"
 ---
 

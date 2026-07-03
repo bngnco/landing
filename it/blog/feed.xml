@@ -5,8 +5,28 @@
     <link>https://verifyco.info/it/blog</link>
     <description>Guide e ricerca sul rilevamento di deepfake e contenuti generati o manipolati dall’IA — dal team Verifyco, verifica forense su iPhone.</description>
     <language>it</language>
-    <lastBuildDate>Thu, 02 Jul 2026 19:54:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 20:09:16 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/it/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Come verificare su iPhone se una foto è reale o IA (2026)</title>
+      <link>https://verifyco.info/it/blog/check-if-photo-is-ai-on-iphone</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/check-if-photo-is-ai-on-iphone</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Vuoi verificare una foto direttamente sul tuo iPhone senza caricarla da nessuna parte? Ecco come capire se un’immagine è reale o generata dall’IA, in privato e sul dispositivo.</description>
+      <category>Rilevamento IA</category>
+      <category>iOS</category>
+      <category>Guide</category>
+    </item>
+    <item>
+      <title>Come riconoscere un video deepfake: 9 segnali d’allarme per il 2026</title>
+      <link>https://verifyco.info/it/blog/how-to-spot-a-deepfake-video</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/how-to-spot-a-deepfake-video</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+      <description>I video deepfake ingannano quasi tutti nel 2026. Impara i 9 segni che ancora li tradiscono — e perché i tuoi occhi da soli non bastano più.</description>
+      <category>Deepfake</category>
+      <category>Rilevamento IA</category>
+      <category>Guide</category>
+    </item>
     <item>
       <title>Come capire se un’immagine è generata dall’IA: la guida completa 2026</title>
       <link>https://verifyco.info/it/blog/how-to-tell-if-an-image-is-ai-generated</link>
@@ -23,6 +43,26 @@
       <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
       <description>I deepfake spiegati in modo semplice: come si creano, perché sono diventati così convincenti e i modi pratici per distinguere un volto o una voce sintetici da quelli reali.</description>
       <category>Deepfake</category>
+      <category>Guide</category>
+    </item>
+    <item>
+      <title>5 segni che un video è stato deepfakato (+ come verificarlo)</title>
+      <link>https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Una checklist pratica per individuare i video deepfake — gli artefatti dei bordi, il labiale fuori sincrono, gli indizi di luce, il movimento innaturale e le tracce audio che ancora tradiscono le clip sintetiche.</description>
+      <category>Deepfake</category>
+      <category>Rilevamento IA</category>
+      <category>Guide</category>
+    </item>
+    <item>
+      <title>La verifica sul dispositivo, spiegata (nulla lascia il tuo iPhone)</title>
+      <link>https://verifyco.info/it/blog/on-device-verification-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/on-device-verification-explained</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Perché Verifyco gira interamente sul tuo iPhone: come funziona l’analisi forense sul dispositivo, cosa fa il Neural Engine, cloud vs dispositivo — e perché non viene mai caricato nulla.</description>
+      <category>iOS</category>
+      <category>Ricerca</category>
       <category>Guide</category>
     </item>
   </channel>

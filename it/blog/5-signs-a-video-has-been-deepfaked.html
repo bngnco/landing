@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>5 segni che un video è stato deepfakato (+ come verificarlo) | Verifyco Blog</title>
+  <meta name="description" content="Una checklist pratica per individuare i video deepfake — gli artefatti dei bordi, il labiale fuori sincrono, gli indizi di luce, il movimento innaturale e le tracce audio che ancora tradiscono le clip sintetiche." />
+  <link rel="canonical" href="https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked" />
+  <meta name="theme-color" content="#0B0908" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked" />
+  <link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked" />
+  <link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked" />
+  <link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/5-signs-a-video-has-been-deepfaked" />
+  <link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/5-signs-a-video-has-been-deepfaked" />
+  <link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked" />
+  <link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked" />
+  <link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked" />
+  <link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked" />
+
+  <meta property="og:site_name" content="Verifyco" />
+  <meta property="og:title" content="5 segni che un video è stato deepfakato (+ come verificarlo) | Verifyco Blog" />
+  <meta property="og:description" content="Una checklist pratica per individuare i video deepfake — gli artefatti dei bordi, il labiale fuori sincrono, gli indizi di luce, il movimento innaturale e le tracce audio che ancora tradiscono le clip sintetiche." />
+  <meta property="og:url" content="https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked" />
+  <meta property="og:image" content="https://verifyco.info/uploads/blog/1000012582.png" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="ar_SA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@verifyco" />
+  <meta name="twitter:title" content="5 segni che un video è stato deepfakato (+ come verificarlo) | Verifyco Blog" />
+  <meta name="twitter:description" content="Una checklist pratica per individuare i video deepfake — gli artefatti dei bordi, il labiale fuori sincrono, gli indizi di luce, il movimento innaturale e le tracce audio che ancora tradiscono le clip sintetiche." />
+  <meta name="twitter:image" content="https://verifyco.info/uploads/blog/1000012582.png" />
+
+  <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/verifyco-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="The Verifyco Blog" href="https://verifyco.info/it/blog/feed.xml" />
+  <script>(function(){try{var t=localStorage.getItem("vfy-theme")||"dark";document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/blog.css?v=2" />
+  <link rel="preload" as="image" href="/uploads/blog/1000012582.png" fetchpriority="high" />
+  <meta name="author" content="Team Verifyco" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image:alt" content="La pipeline di segnali Verifyco analizza un video fotogramma per fotogramma" />
+  <meta name="twitter:image:alt" content="La pipeline di segnali Verifyco analizza un video fotogramma per fotogramma" />
+  <meta property="article:published_time" content="2026-06-15T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-07-01T00:00:00+00:00" />
+  <meta property="article:author" content="Team Verifyco" />
+  <meta property="article:tag" content="Deepfake" />
+  <meta property="article:tag" content="Rilevamento IA" />
+  <meta property="article:tag" content="Guide" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"5 segni che un video è stato deepfakato (+ come verificarlo)","description":"Una checklist pratica per individuare i video deepfake — gli artefatti dei bordi, il labiale fuori sincrono, gli indizi di luce, il movimento innaturale e le tracce audio che ancora tradiscono le clip sintetiche.","image":["https://verifyco.info/uploads/blog/1000012582.png"],"datePublished":"2026-06-15T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","author":{"@type":"Organization","name":"Team Verifyco","url":"https://verifyco.info"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.info/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked"},"articleSection":"Deepfake","keywords":"Deepfake, Rilevamento IA, Guide","wordCount":836,"timeRequired":"PT4M","inLanguage":"it","isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://verifyco.info/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://verifyco.info/it/blog"},{"@type":"ListItem","position":3,"name":"5 segni che un video è stato deepfakato (+ come verificarlo)","item":"https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked"}]}</script>
+</head>
+<body class="is-post">
+
+  <header class="bnav" id="bnav">
+    <div class="bwrap bnav-in">
+      <a class="brand" href="/" aria-label="Verifyco">Verify<em>co</em></a>
+      <nav class="bnav-links" aria-label="Primary">
+        <a href="/#app">Funzioni</a>
+        <a href="/#how">Come funziona</a>
+        <a href="/it/blog" class="is-here" aria-current="page">Blog</a>
+        <a href="/#pricing">Prezzi</a>
+      </nav>
+      <div class="bnav-right">
+        <div class="blang" aria-label="Lingua"><a href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/5-signs-a-video-has-been-deepfaked" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/5-signs-a-video-has-been-deepfaked" hreflang="fr" lang="fr">Français</a><a href="https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked" hreflang="it" lang="it" aria-current="true" class="is-here">Italiano</a><a href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked" hreflang="ar" lang="ar">العربية</a></div>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <span class="t-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z"></path></svg></span><span class="t-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"></path></svg></span>
+        </button>
+        <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Scarica l’app</a>
+        <button type="button" class="bburger" data-bburger aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="bmenu" data-bmenu>
+    <nav aria-label="Mobile">
+      <a href="/#app">Funzioni</a>
+      <a href="/#how">Come funziona</a>
+      <a href="/it/blog">Blog</a>
+      <a href="/#pricing">Prezzi</a>
+      <a href="/support">Supporto</a>
+    </nav>
+    <div class="bmenu-lang" aria-label="Lingua"><span class="bmenu-lang-h">Lingua</span><a href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/5-signs-a-video-has-been-deepfaked" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/5-signs-a-video-has-been-deepfaked" hreflang="fr" lang="fr">Français</a><a href="https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked" hreflang="it" lang="it" aria-current="true" class="is-here">Italiano</a><a href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked" hreflang="ar" lang="ar">العربية</a></div>
+    <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Scarica sull’App Store</a>
+  </div>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <main class="bmain">
+    <article class="post">
+      <div class="post-head measure">
+        
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span>
+      <a href="/it/blog">Blog</a><span class="sep">/</span>
+      <span aria-current="page">Deepfake</span>
+    </nav>
+        <div class="post-tags"><a class="chip" href="/it/blog/tag/deepfake">Deepfake</a><a class="chip" href="/it/blog/tag/rilevamento-ia">Rilevamento IA</a><a class="chip" href="/it/blog/tag/guide">Guide</a></div>
+        <h1 class="post-title">5 segni che un video è stato deepfakato (+ come verificarlo)</h1>
+        <p class="post-dek">Una checklist pratica per individuare i video deepfake — gli artefatti dei bordi, il labiale fuori sincrono, gli indizi di luce, il movimento innaturale e le tracce audio che ancora tradiscono le clip sintetiche.</p>
+        <div class="post-meta">
+          <span class="byline">Team Verifyco</span>
+          <span class="dot">·</span>
+          <time datetime="2026-06-15T00:00:00+00:00">15 giugno 2026</time>
+          <span class="dot">·</span>
+          <span>4 min di lettura</span>
+          <span class="dot">·</span><span class="updated">Aggiornato 1 luglio 2026</span>
+        </div>
+      </div>
+
+      <figure class="post-hero">
+        <img src="/uploads/blog/1000012582.png" alt="La pipeline di segnali Verifyco analizza un video fotogramma per fotogramma" decoding="async" fetchpriority="high" />
+      </figure>
+      
+      <nav class="toc measure" aria-label="Table of contents">
+        <p class="toc-h">In questa pagina</p>
+        <ol><li><a href="#1-bordi-che-tremolano-o-respirano">1. Bordi che tremolano o “respirano”</a></li><li><a href="#2-labiale-che-deriva">2. Labiale che deriva</a></li><li><a href="#3-luce-e-colore-che-non-si-accordano">3. Luce e colore che non si accordano</a></li><li><a href="#4-movimento-ammiccamento-e-micro-espressioni-innaturali">4. Movimento, ammiccamento e micro-espressioni innaturali</a></li><li><a href="#5-provenienza-assente-e-metadati-sospetti">5. Provenienza assente e metadati sospetti</a></li><li><a href="#bonus-ascolta-laudio">Bonus: ascolta l’audio</a></li><li><a href="#cosa-fa-automaticamente-uno-strumento-forense">Cosa fa automaticamente uno strumento forense</a></li><li><a href="#in-sintesi">In sintesi</a></li></ol>
+      </nav>
+
+      <div class="prose measure">
+        <p>Falsificare un video in modo convincente è più difficile che un’immagine fissa — ci sono semplicemente molti più fotogrammi da mantenere coerenti, e movimento, luce e audio devono accordarsi nel tempo. Buone notizie per te: il video deepfakato lascia ancora indizi, soprattutto nel movimento e nel suono. Ecco i cinque segni più affidabili, come verificare ciascuno e perché nessuno è un verdetto da solo.</p>
+<blockquote>
+<p><strong>Come ispezionare qualsiasi clip:</strong> scaricala (la registrazione dello schermo ricomprime e nasconde gli artefatti), riproducila a 0,25× e avanza fotogramma per fotogramma. Schermo intero, luminosità alta. La maggior parte degli indizi vive nelle transizioni tra fotogrammi, non in un’immagine in pausa.</p>
+</blockquote>
+<h2 id="1-bordi-che-tremolano-o-respirano">1. Bordi che tremolano o “respirano”</h2>
+<p>Osserva il confine dove il volto incontra capelli, orecchie, occhiali o sfondo. I modelli di face swap fondono a ogni fotogramma un volto generato su una testa reale, e quella cucitura spesso <strong>sfarfalla, si deforma o slitta</strong> leggermente tra i fotogrammi — un sottile “respiro” attorno a mascella, attaccatura dei capelli o collo. Metti in pausa su una rotazione veloce della testa o quando una mano passa davanti al volto: è lì che la fusione si rompe.</p>
+<h2 id="2-labiale-che-deriva">2. Labiale che deriva</h2>
+<p>Audio e forme della bocca possono sfasarsi di una frazione, soprattutto sulle occlusive (<strong>p, b, m</strong>) dove le labbra dovrebbero chiudersi del tutto. Guarda la bocca prima senza audio, poi con. Segnali d’allarme:</p>
+<ul>
+<li>Labbra che non si chiudono del tutto sui suoni “m”/“b”.</li>
+<li>Denti e interno della bocca sfocati, statici o stranamente uniformi.</li>
+<li>Una voce <em>quasi</em> sincrona ma costantemente un soffio in anticipo o in ritardo.</li>
+</ul>
+<h2 id="3-luce-e-colore-che-non-si-accordano">3. Luce e colore che non si accordano</h2>
+<p>La luce reale obbedisce a una sola fisica in tutta la scena. Nel video composto o generato, il volto può non corrispondere al suo ambiente:</p>
+<ul>
+<li>Pelle illuminata calda in una stanza fredda (o viceversa).</li>
+<li>Ombre sul volto che puntano in una direzione diversa da quelle della scena.</li>
+<li>Un volto che resta uniformemente illuminato mentre la persona attraversa luce e ombra.</li>
+<li>Un lieve “alone” di colore o grana/rumore discordante dove il volto è stato inserito.</li>
+</ul>
+
+  <aside class="cta cta--inline" aria-label="Get Verifyco">
+    <p><strong>Vuoi controllare un file adesso?</strong> Verifyco analizza qualsiasi foto o video sul tuo iPhone — sul dispositivo e in privato.</p>
+    <a class="cta-link" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Ottieni Verifyco →</a>
+  </aside>
+<h2 id="4-movimento-ammiccamento-e-micro-espressioni-innaturali">4. Movimento, ammiccamento e micro-espressioni innaturali</h2>
+<p>I volti fanno continuamente piccole cose — battono le palpebre a ritmo naturale, producono micro-espressioni, muovono la testa con un lieve tremolio. I volti sintetici spesso sbagliano sottilmente:</p>
+<ul>
+<li><strong>Frequenza di ammiccamento</strong> troppo bassa (i primi deepfake quasi non battevano le palpebre) o meccanicamente regolare.</li>
+<li><strong>Occhi</strong> che non seguono dove la persona “guarda”, o uno sguardo fisso e vitreo.</li>
+<li>Movimento <strong>troppo fluido o troppo fermo</strong> — una quiete inquietante, o un volto che sembra fluttuare leggermente rispetto alla testa.</li>
+<li><strong>Fronte/orecchie congelate</strong> mentre la bocca si muove molto.</li>
+</ul>
+<h2 id="5-provenienza-assente-e-metadati-sospetti">5. Provenienza assente e metadati sospetti</h2>
+<p>Allontanati dai pixel; controlla il file e la sua fonte:</p>
+<ul>
+<li>Una clip che dichiara di essere una registrazione reale ma <strong>senza metadati della fotocamera</strong>, o con metadati che contraddicono la storia (data sbagliata, dispositivo sbagliato, software di editing).</li>
+<li>Nessuna fonte credibile — circola solo su account anonimi o marginali, senza nessuna testata a rilanciarla.</li>
+<li>Al contrario, <strong>Content Credentials C2PA</strong> valide sono una prova <em>a favore</em> dell’autenticità.</li>
+</ul>
+<h2 id="bonus-ascolta-laudio">Bonus: ascolta l’audio</h2>
+<p>La clonazione vocale ha i suoi artefatti. Con le cuffie, cerca una dizione piatta e “uniforme” con poco respiro, un ritmo o accenti strani, un sottile timbro metallico, o un rumore di fondo che si interrompe in modo innaturale tra le parole. Le truffe solo audio (la chiamata del “parente nei guai”) contano sul fatto che tu non ascolti così da vicino.</p>
+<h2 id="cosa-fa-automaticamente-uno-strumento-forense">Cosa fa automaticamente uno strumento forense</h2>
+<p>A occhio cogli molto, ma il software arriva dove tu non puoi:</p>
+<ul>
+<li><strong>Flusso ottico e coerenza temporale</strong> — verifica che gli oggetti si muovano come oggetti reali, fotogramma dopo fotogramma.</li>
+<li><strong>Analisi facciale neurale fotogramma per fotogramma</strong> — segnala i sottili artefatti lasciati dalla fusione.</li>
+<li><strong>Analisi di frequenza</strong> — l’impronta statistica dei modelli generativi, invisibile all’occhio.</li>
+<li><strong>Metadati e provenienza</strong> — EXIF, coerenza di codifica e C2PA in un solo passaggio.</li>
+</ul>
+<p>La versione di questi controlli per le immagini: <a href="/it/blog/how-to-tell-if-an-image-is-ai-generated">come capire se un’immagine è generata dall’IA</a>; il contesto su come nascono questi falsi: <a href="/it/blog/what-is-a-deepfake">che cos’è un deepfake</a>. Una lista di segnali più approfondita: <a href="/it/blog/how-to-spot-a-deepfake-video">come riconoscere un video deepfake: 9 segnali</a>.</p>
+<h3 id="checklist-rapida">Checklist rapida</h3>
+<ol>
+<li>Scarica, rallenta a 0,25×, avanza fotogramma per fotogramma.</li>
+<li>Osserva i <strong>bordi</strong> del volto nelle rotazioni e occlusioni.</li>
+<li>Controlla il <strong>labiale</strong> sui suoni p/b/m; ispeziona denti/interno della bocca.</li>
+<li>Confronta <strong>luce/ombre</strong> del volto con la scena.</li>
+<li>Osserva <strong>ammiccamento, sguardo e micro-movimento</strong>.</li>
+<li>Controlla <strong>fonte e metadati</strong>; ascolta l’<strong>audio</strong> in cuffia.</li>
+</ol>
+<h2 id="in-sintesi">In sintesi</h2>
+<p>Nessun segno è una prova da solo — anche le clip reali hanno compressione, motion blur e inquadrature strane. L’approccio affidabile è <strong>combinare</strong> i segnali — esattamente ciò che fa uno strumento forense: fonde più controlli indipendenti in un unico verdetto invece di scommettere su un singolo indizio. Verifyco esegue quella fusione sul tuo iPhone in pochi secondi, completamente offline — vedi <a href="/it/blog/on-device-verification-explained">la verifica sul dispositivo, spiegata</a>.</p>
+
+        
+  <aside class="cta" aria-label="Get Verifyco">
+    <img class="cta-icon" src="/assets/verifyco-icon.png" alt="" width="72" height="72" loading="lazy" />
+    <div class="cta-body">
+      <h3 class="cta-title">Verificalo tu stesso — sul tuo iPhone</h3>
+      <p class="cta-text">Verifyco esegue cinque segnali forensi sul dispositivo per individuare deepfake e contenuti generati o manipolati dall’IA — in pochi secondi, completamente offline e senza alcun caricamento.</p>
+      <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">
+        <span class="btn-ico"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg></span> Scarica sull’App Store
+      </a>
+    </div>
+  </aside>
+      </div>
+
+      <div class="post-back measure"><a href="/it/blog">← Tutti gli articoli</a></div>
+    </article>
+    
+    <section class="related bwrap">
+      <h2 class="related-h">Altro dal blog</h2>
+      <div class="post-grid">
+    <article class="card">
+      <a class="card-media" href="/it/blog/check-if-photo-is-ai-on-iphone" aria-label="Come verificare su iPhone se una foto è reale o IA (2026)">
+        <img src="/uploads/blog/1000012577.png" alt="Verificare in privato su un iPhone se una foto è reale o IA" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/it/blog/tag/rilevamento-ia">Rilevamento IA</a><a class="chip" href="/it/blog/tag/ios">iOS</a></div>
+        <h2 class="card-title"><a href="/it/blog/check-if-photo-is-ai-on-iphone">Come verificare su iPhone se una foto è reale o IA (2026)</a></h2>
+        <p class="card-excerpt">Vuoi verificare una foto direttamente sul tuo iPhone senza caricarla da nessuna parte? Ecco come capire se un’immagine è reale o generata dall’IA, in privato e sul dispositivo.</p>
+        <div class="card-meta">
+          <time datetime="2026-06-28T00:00:00+00:00">28 giugno 2026</time>
+          <span class="dot">·</span>
+          <span>6 min di lettura</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-media" href="/it/blog/how-to-spot-a-deepfake-video" aria-label="Come riconoscere un video deepfake: 9 segnali d’allarme per il 2026">
+        <img src="/uploads/blog/1000012578.png" alt="Analisi di una clip video alla ricerca di segnali di deepfake su un iPhone" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/it/blog/tag/deepfake">Deepfake</a><a class="chip" href="/it/blog/tag/rilevamento-ia">Rilevamento IA</a></div>
+        <h2 class="card-title"><a href="/it/blog/how-to-spot-a-deepfake-video">Come riconoscere un video deepfake: 9 segnali d’allarme per il 2026</a></h2>
+        <p class="card-excerpt">I video deepfake ingannano quasi tutti nel 2026. Impara i 9 segni che ancora li tradiscono — e perché i tuoi occhi da soli non bastano più.</p>
+        <div class="card-meta">
+          <time datetime="2026-06-28T00:00:00+00:00">28 giugno 2026</time>
+          <span class="dot">·</span>
+          <span>7 min di lettura</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-media" href="/it/blog/how-to-tell-if-an-image-is-ai-generated" aria-label="Come capire se un’immagine è generata dall’IA: la guida completa 2026">
+        <img src="/assets/app/signals.png" alt="Analisi forense di un’immagine su iPhone che evidenzia artefatti di generazione IA" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/it/blog/tag/rilevamento-ia">Rilevamento IA</a><a class="chip" href="/it/blog/tag/guide">Guide</a></div>
+        <h2 class="card-title"><a href="/it/blog/how-to-tell-if-an-image-is-ai-generated">Come capire se un’immagine è generata dall’IA: la guida completa 2026</a></h2>
+        <p class="card-excerpt">Non riesci a capire se una foto è reale o IA? Impara il metodo che funziona nel 2026: controlli di provenienza, strumenti di rilevamento e gli errori di fisica che l’IA commette ancora.</p>
+        <div class="card-meta">
+          <time datetime="2026-06-28T00:00:00+00:00">28 giugno 2026</time>
+          <span class="dot">·</span>
+          <span>7 min di lettura</span>
+        </div>
+      </div>
+    </article></div>
+    </section>
+  </main>
+
+  <footer class="bfoot">
+    <div class="bwrap bfoot-in">
+      <div class="bfoot-brand">
+        <a class="brand" href="/">Verify<em>co</em></a>
+        <p>Verifica forense di foto e video, direttamente sul dispositivo. La realtà, verificata in ogni pixel.</p>
+        <p class="mono-note">VERIFYCO.INFO</p>
+      </div>
+      <div class="bfoot-col">
+        <h4>Prodotto</h4>
+        <ul>
+          <li><a href="/#how">Come funziona</a></li>
+          <li><a href="/#app">Funzioni</a></li>
+          <li><a href="/deepdetect-plus">DeepDetect+</a></li>
+          <li><a href="/#pricing">Prezzi</a></li>
+          <li><a href="/it/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="bfoot-col">
+        <h4>Azienda</h4>
+        <ul>
+          <li><a href="/support">Supporto</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">App Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bwrap bfoot-bot">
+      <span>© 2026 Verifyco · Tutti i diritti riservati</span>
+      <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
+    </div>
+  </footer>
+<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>La vérification sur l’appareil, expliquée (rien ne quitte votre iPhone) | Verifyco Blog</title>
+  <meta name="description" content="Pourquoi Verifyco tourne entièrement sur votre iPhone : comment fonctionne l’analyse forensique sur l’appareil, ce que fait le Neural Engine, cloud vs appareil — et pourquoi rien n’est jamais téléversé." />
+  <link rel="canonical" href="https://verifyco.info/fr/blog/on-device-verification-explained" />
+  <meta name="theme-color" content="#0B0908" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained" />
+  <link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained" />
+  <link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained" />
+  <link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/on-device-verification-explained" />
+  <link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/on-device-verification-explained" />
+  <link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/on-device-verification-explained" />
+  <link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained" />
+  <link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained" />
+  <link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained" />
+
+  <meta property="og:site_name" content="Verifyco" />
+  <meta property="og:title" content="La vérification sur l’appareil, expliquée (rien ne quitte votre iPhone) | Verifyco Blog" />
+  <meta property="og:description" content="Pourquoi Verifyco tourne entièrement sur votre iPhone : comment fonctionne l’analyse forensique sur l’appareil, ce que fait le Neural Engine, cloud vs appareil — et pourquoi rien n’est jamais téléversé." />
+  <meta property="og:url" content="https://verifyco.info/fr/blog/on-device-verification-explained" />
+  <meta property="og:image" content="https://verifyco.info/uploads/blog/1000012581.png" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="ar_SA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@verifyco" />
+  <meta name="twitter:title" content="La vérification sur l’appareil, expliquée (rien ne quitte votre iPhone) | Verifyco Blog" />
+  <meta name="twitter:description" content="Pourquoi Verifyco tourne entièrement sur votre iPhone : comment fonctionne l’analyse forensique sur l’appareil, ce que fait le Neural Engine, cloud vs appareil — et pourquoi rien n’est jamais téléversé." />
+  <meta name="twitter:image" content="https://verifyco.info/uploads/blog/1000012581.png" />
+
+  <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/verifyco-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="The Verifyco Blog" href="https://verifyco.info/fr/blog/feed.xml" />
+  <script>(function(){try{var t=localStorage.getItem("vfy-theme")||"dark";document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/blog.css?v=2" />
+  <link rel="preload" as="image" href="/uploads/blog/1000012581.png" fetchpriority="high" />
+  <meta name="author" content="L’équipe Verifyco" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image:alt" content="Verifyco exécute une analyse privée sur l’appareil, sur un iPhone" />
+  <meta name="twitter:image:alt" content="Verifyco exécute une analyse privée sur l’appareil, sur un iPhone" />
+  <meta property="article:published_time" content="2026-06-08T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-07-01T00:00:00+00:00" />
+  <meta property="article:author" content="L’équipe Verifyco" />
+  <meta property="article:tag" content="iOS" />
+  <meta property="article:tag" content="Recherche" />
+  <meta property="article:tag" content="Guides" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"La vérification sur l’appareil, expliquée (rien ne quitte votre iPhone)","description":"Pourquoi Verifyco tourne entièrement sur votre iPhone : comment fonctionne l’analyse forensique sur l’appareil, ce que fait le Neural Engine, cloud vs appareil — et pourquoi rien n’est jamais téléversé.","image":["https://verifyco.info/uploads/blog/1000012581.png"],"datePublished":"2026-06-08T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","author":{"@type":"Organization","name":"L’équipe Verifyco","url":"https://verifyco.info"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.info/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.info/fr/blog/on-device-verification-explained"},"articleSection":"iOS","keywords":"iOS, Recherche, Guides","wordCount":807,"timeRequired":"PT4M","inLanguage":"fr","isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://verifyco.info/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://verifyco.info/fr/blog"},{"@type":"ListItem","position":3,"name":"La vérification sur l’appareil, expliquée (rien ne quitte votre iPhone)","item":"https://verifyco.info/fr/blog/on-device-verification-explained"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Sur l’appareil, est-ce aussi précis que le cloud ?","acceptedAnswer":{"@type":"Answer","text":"Pour ces signaux forensiques, oui — l’analyse est la même mathématique ; seul le lieu change. La détection reste une cible mouvante (les générateurs progressent) — c’est pourquoi Verifyco fusionne plusieurs signaux et s’améliore avec les mises à jour."}},{"@type":"Question","name":"Est-ce que ça vide ma batterie ?","acceptedAnswer":{"@type":"Answer","text":"Une analyse est une brève salve de travail du Neural Engine — comparable à un filtre photo lourd, puis c’est fini."}},{"@type":"Question","name":"Quels iPhone ?","acceptedAnswer":{"@type":"Answer","text":"Tout iPhone moderne avec Neural Engine (iOS 17+). Les puces plus récentes finissent simplement plus vite."}},{"@type":"Question","name":"Voyez-vous un jour mes fichiers ?","acceptedAnswer":{"@type":"Answer","text":"Non. Il n’existe aucun chemin de téléversement — la fonction qui enverrait vos médias chez nous n’existe pas."}}]}</script>
+</head>
+<body class="is-post">
+
+  <header class="bnav" id="bnav">
+    <div class="bwrap bnav-in">
+      <a class="brand" href="/" aria-label="Verifyco">Verify<em>co</em></a>
+      <nav class="bnav-links" aria-label="Primary">
+        <a href="/#app">Fonctions</a>
+        <a href="/#how">Comment ça marche</a>
+        <a href="/fr/blog" class="is-here" aria-current="page">Blog</a>
+        <a href="/#pricing">Tarifs</a>
+      </nav>
+      <div class="bnav-right">
+        <div class="blang" aria-label="Langue"><a href="https://verifyco.info/blog/on-device-verification-explained" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/on-device-verification-explained" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/on-device-verification-explained" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/on-device-verification-explained" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/on-device-verification-explained" hreflang="fr" lang="fr" aria-current="true" class="is-here">Français</a><a href="https://verifyco.info/it/blog/on-device-verification-explained" hreflang="it" lang="it">Italiano</a><a href="https://verifyco.info/pt/blog/on-device-verification-explained" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/on-device-verification-explained" hreflang="ar" lang="ar">العربية</a></div>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <span class="t-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z"></path></svg></span><span class="t-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"></path></svg></span>
+        </button>
+        <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Obtenir l’app</a>
+        <button type="button" class="bburger" data-bburger aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="bmenu" data-bmenu>
+    <nav aria-label="Mobile">
+      <a href="/#app">Fonctions</a>
+      <a href="/#how">Comment ça marche</a>
+      <a href="/fr/blog">Blog</a>
+      <a href="/#pricing">Tarifs</a>
+      <a href="/support">Assistance</a>
+    </nav>
+    <div class="bmenu-lang" aria-label="Langue"><span class="bmenu-lang-h">Langue</span><a href="https://verifyco.info/blog/on-device-verification-explained" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/on-device-verification-explained" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/on-device-verification-explained" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/on-device-verification-explained" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/on-device-verification-explained" hreflang="fr" lang="fr" aria-current="true" class="is-here">Français</a><a href="https://verifyco.info/it/blog/on-device-verification-explained" hreflang="it" lang="it">Italiano</a><a href="https://verifyco.info/pt/blog/on-device-verification-explained" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/on-device-verification-explained" hreflang="ar" lang="ar">العربية</a></div>
+    <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Télécharger sur l’App Store</a>
+  </div>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <main class="bmain">
+    <article class="post">
+      <div class="post-head measure">
+        
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Accueil</a><span class="sep">/</span>
+      <a href="/fr/blog">Blog</a><span class="sep">/</span>
+      <span aria-current="page">iOS</span>
+    </nav>
+        <div class="post-tags"><a class="chip" href="/fr/blog/tag/ios">iOS</a><a class="chip" href="/fr/blog/tag/recherche">Recherche</a><a class="chip" href="/fr/blog/tag/guides">Guides</a></div>
+        <h1 class="post-title">La vérification sur l’appareil, expliquée (rien ne quitte votre iPhone)</h1>
+        <p class="post-dek">Pourquoi Verifyco tourne entièrement sur votre iPhone : comment fonctionne l’analyse forensique sur l’appareil, ce que fait le Neural Engine, cloud vs appareil — et pourquoi rien n’est jamais téléversé.</p>
+        <div class="post-meta">
+          <span class="byline">L’équipe Verifyco</span>
+          <span class="dot">·</span>
+          <time datetime="2026-06-08T00:00:00+00:00">8 juin 2026</time>
+          <span class="dot">·</span>
+          <span>4 min de lecture</span>
+          <span class="dot">·</span><span class="updated">Mis à jour 1 juillet 2026</span>
+        </div>
+      </div>
+
+      <figure class="post-hero">
+        <img src="/uploads/blog/1000012581.png" alt="Verifyco exécute une analyse privée sur l’appareil, sur un iPhone" decoding="async" fetchpriority="high" />
+      </figure>
+      
+      <nav class="toc measure" aria-label="Table of contents">
+        <p class="toc-h">Sur cette page</p>
+        <ol><li><a href="#pourquoi-sur-lappareil-compte">Pourquoi « sur l’appareil » compte</a></li><li><a href="#ce-que-sur-lappareil-veut-vraiment-dire">Ce que « sur l’appareil » veut vraiment dire</a></li><li><a href="#les-cinq-signaux-executes-en-local">Les cinq signaux, exécutés en local</a></li><li><a href="#cloud-vs-appareil-le-compromis">Cloud vs appareil : le compromis</a></li><li><a href="#questions-frequentes">Questions fréquentes</a></li><li><a href="#en-resume">En résumé</a></li></ol>
+      </nav>
+
+      <div class="prose measure">
+        <p>La plupart des outils de vérification de médias fonctionnent pareil : vous
+téléversez votre fichier sur un serveur, leurs modèles l’analysent dans le cloud
+et vous recevez un résultat. Pas Verifyco. Chaque signal tourne <strong>localement sur
+votre iPhone</strong>, et vos photos et vidéos ne quittent jamais l’appareil. Voici ce
+que cela signifie, comment c’est possible et pourquoi c’est important — surtout
+pour les contenus sensibles que l’on a le plus besoin de vérifier.</p>
+<h2 id="pourquoi-sur-lappareil-compte">Pourquoi « sur l’appareil » compte</h2>
+<ul>
+<li><strong>Confidentialité.</strong> Ce que vous voulez le plus vérifier est souvent le plus
+sensible — une photo privée, un clip qui a fuité, une image intime qu’on vous a
+envoyée. L’analyse sur l’appareil signifie que cela ne touche jamais le serveur
+d’un tiers, ne dort jamais dans un log et ne peut pas fuiter d’une brèche qui
+n’est pas la vôtre.</li>
+<li><strong>Vitesse.</strong> Pas de téléversement, pas de file d’attente, pas d’aller-retour.
+L’analyse démarre dès que vous choisissez le fichier — ce qui compte quand vous
+vérifiez une vidéo 4K, pas une vignette.</li>
+<li><strong>Fonctionne hors ligne.</strong> En avion, avec un signal médiocre ou dans un
+environnement sécurisé sans réseau — cela marche quand même, car il n’y a
+aucun appel réseau à faire.</li>
+<li><strong>Pas de compte, pas de trace.</strong> Rien à créer, rien qui relie un fichier
+vérifié à votre identité.</li>
+</ul>
+<blockquote>
+<p>Il n’y a pas de serveur. Il n’y a pas de téléversement. Il n’y a pas de compte.
+Vos médias restent sur votre téléphone, point.</p>
+</blockquote>
+<h2 id="ce-que-sur-lappareil-veut-vraiment-dire">Ce que « sur l’appareil » veut vraiment dire</h2>
+<p>Les iPhone modernes embarquent un <strong>Neural Engine</strong> dédié — du silicium conçu
+spécifiquement pour exécuter des modèles d’apprentissage automatique vite et
+efficacement. Les frameworks <strong>Core ML</strong> et <strong>Vision</strong> d’Apple permettent à une
+app de faire tourner des réseaux de neurones directement sur ce matériel.</p>
+<p>Verifyco s’en sert pour faire localement ce que d’autres outils envoient à un GPU
+dans un datacenter : analyse neuronale des visages et des scènes, transformées de
+fréquence, lecture des métadonnées et hachage du fichier — le tout dans la
+mémoire du téléphone, en quelques secondes, sans transmettre un seul octet de
+vos médias.</p>
+<h2 id="les-cinq-signaux-executes-en-local">Les cinq signaux, exécutés en local</h2>
+<p>Verifyco fusionne <strong>cinq signaux forensiques indépendants</strong> en un seul score de
+confiance de 0 à 100 :</p>
+<ol>
+<li><strong>Content Credentials</strong> — la provenance C2PA, le « reçu » signé de l’appareil
+photo.</li>
+<li><strong>Forensique des métadonnées</strong> — EXIF, cohérence d’encodage et anomalies de
+cadence d’images.</li>
+<li><strong>Analyse faciale neuronale</strong> — Apple Vision, image par image, à la recherche
+des artefacts laissés par les générateurs.</li>
+<li><strong>Analyse du mouvement</strong> — flux optique et cohérence temporelle entre images.</li>
+<li><strong>Analyse de fréquence</strong> — l’empreinte spectrale DCT des modèles de diffusion
+et GAN, invisible à l’œil.</li>
+</ol>
+<p>Aucune couche n’est décisive seule — c’est le principe. C’est la fusion de
+plusieurs signaux indépendants qui rend le verdict robuste : en tromper une est
+facile, toutes en même temps est difficile. (Ce que chaque couche attrape en
+pratique : <a href="/fr/blog/how-to-tell-if-an-image-is-ai-generated">comment savoir si une image est générée par IA</a>
+et <a href="/fr/blog/5-signs-a-video-has-been-deepfaked">5 signes qu’une vidéo a été deepfakée</a>.)</p>
+<h2 id="cloud-vs-appareil-le-compromis">Cloud vs appareil : le compromis</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Vérification cloud</th>
+<th>Sur l’appareil (Verifyco)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vos médias</td>
+<td>Téléversés sur un serveur</td>
+<td>Ne quittent jamais votre téléphone</td>
+</tr>
+<tr>
+<td>Vitesse</td>
+<td>Upload + file + téléchargement</td>
+<td>Démarre instantanément</td>
+</tr>
+<tr>
+<td>Hors ligne</td>
+<td>Non</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>Compte requis</td>
+<td>Généralement</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>Exposition</td>
+<td>Logs serveur, brèches</td>
+<td>Aucune au-delà de votre appareil</td>
+</tr>
+</tbody>
+</table>
+<p>La seule chose que le cloud peut offrir, c’est un modèle central géant. Mais pour
+la vérification forensique, les signaux qui comptent — provenance, métadonnées,
+motifs de fréquence, cohérence temporelle — tournent parfaitement sur l’appareil,
+et le gain de confidentialité est énorme.</p>
+<h2 id="questions-frequentes">Questions fréquentes</h2>
+<p><strong>Sur l’appareil, est-ce aussi précis que le cloud ?</strong> Pour ces signaux
+forensiques, oui — l’analyse est la même mathématique ; seul le <em>lieu</em> change. La
+détection reste une cible mouvante (les générateurs progressent) — c’est pourquoi
+Verifyco fusionne plusieurs signaux et s’améliore avec les mises à jour.</p>
+<p><strong>Est-ce que ça vide ma batterie ?</strong> Une analyse est une brève salve de travail
+du Neural Engine — comparable à un filtre photo lourd, puis c’est fini.</p>
+<p><strong>Quels iPhone ?</strong> Tout iPhone moderne avec Neural Engine (iOS 17+). Les puces
+plus récentes finissent simplement plus vite.</p>
+<p><strong>Voyez-vous un jour mes fichiers ?</strong> Non. Il n’existe aucun chemin de
+téléversement — la fonction qui enverrait vos médias chez nous n’existe pas.</p>
+<h2 id="en-resume">En résumé</h2>
+<p>La vérification sur l’appareil vous donne un second avis de niveau forensique,
+<strong>privé par conception et assez rapide pour un usage réel</strong> — avant de faire
+confiance à un média, et avant de le partager. Nouveau sur le sujet ? Commencez
+par <a href="/fr/blog/what-is-a-deepfake">qu’est-ce qu’un deepfake</a>.</p>
+
+        
+  <aside class="cta" aria-label="Get Verifyco">
+    <img class="cta-icon" src="/assets/verifyco-icon.png" alt="" width="72" height="72" loading="lazy" />
+    <div class="cta-body">
+      <h3 class="cta-title">Vérifiez par vous-même — sur votre iPhone</h3>
+      <p class="cta-text">Verifyco exécute cinq signaux forensiques sur l’appareil pour repérer les deepfakes et les médias générés ou manipulés par IA — en quelques secondes, entièrement hors ligne et sans aucun envoi.</p>
+      <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">
+        <span class="btn-ico"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg></span> Télécharger sur l’App Store
+      </a>
+    </div>
+  </aside>
+      </div>
+
+      <div class="post-back measure"><a href="/fr/blog">← Tous les articles</a></div>
+    </article>
+    
+    <section class="related bwrap">
+      <h2 class="related-h">Plus d’articles</h2>
+      <div class="post-grid">
+    <article class="card">
+      <a class="card-media" href="/fr/blog/check-if-photo-is-ai-on-iphone" aria-label="Comment vérifier sur votre iPhone si une photo est réelle ou IA (2026)">
+        <img src="/uploads/blog/1000012577.png" alt="Vérifier en privé sur un iPhone si une photo est réelle ou IA" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/fr/blog/tag/detection-dia">Détection d’IA</a><a class="chip" href="/fr/blog/tag/ios">iOS</a></div>
+        <h2 class="card-title"><a href="/fr/blog/check-if-photo-is-ai-on-iphone">Comment vérifier sur votre iPhone si une photo est réelle ou IA (2026)</a></h2>
+        <p class="card-excerpt">Envie de vérifier une photo directement sur votre iPhone sans la téléverser nulle part ? Voici comment savoir si une image est réelle ou générée par IA, en privé et sur l'appareil.</p>
+        <div class="card-meta">
+          <time datetime="2026-06-28T00:00:00+00:00">28 juin 2026</time>
+          <span class="dot">·</span>
+          <span>7 min de lecture</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-media" href="/fr/blog/how-to-spot-a-deepfake-video" aria-label="Comment repérer une vidéo deepfake : 9 signaux d’alerte pour 2026">
+        <img src="/uploads/blog/1000012578.png" alt="Analyse d’un clip vidéo à la recherche de signes de deepfake sur un iPhone" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/fr/blog/tag/deepfakes">Deepfakes</a><a class="chip" href="/fr/blog/tag/detection-dia">Détection d’IA</a></div>
+        <h2 class="card-title"><a href="/fr/blog/how-to-spot-a-deepfake-video">Comment repérer une vidéo deepfake : 9 signaux d’alerte pour 2026</a></h2>
+        <p class="card-excerpt">Les vidéos deepfake trompent presque tout le monde en 2026. Apprenez les 9 signes qui les trahissent encore — et pourquoi vos yeux seuls ne suffisent plus.</p>
+        <div class="card-meta">
+          <time datetime="2026-06-28T00:00:00+00:00">28 juin 2026</time>
+          <span class="dot">·</span>
+          <span>7 min de lecture</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-media" href="/fr/blog/how-to-tell-if-an-image-is-ai-generated" aria-label="Comment savoir si une image est générée par IA : le guide complet 2026">
+        <img src="/assets/app/signals.png" alt="Analyse forensique d’image sur iPhone mettant en évidence des artefacts de génération par IA" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/fr/blog/tag/detection-dia">Détection d’IA</a><a class="chip" href="/fr/blog/tag/guides">Guides</a></div>
+        <h2 class="card-title"><a href="/fr/blog/how-to-tell-if-an-image-is-ai-generated">Comment savoir si une image est générée par IA : le guide complet 2026</a></h2>
+        <p class="card-excerpt">Impossible de dire si une photo est réelle ou IA ? Découvrez la méthode qui fonctionne en 2026 : vérification de provenance, outils de détection et les erreurs de physique que l'IA commet encore.</p>
+        <div class="card-meta">
+          <time datetime="2026-06-28T00:00:00+00:00">28 juin 2026</time>
+          <span class="dot">·</span>
+          <span>8 min de lecture</span>
+        </div>
+      </div>
+    </article></div>
+    </section>
+  </main>
+
+  <footer class="bfoot">
+    <div class="bwrap bfoot-in">
+      <div class="bfoot-brand">
+        <a class="brand" href="/">Verify<em>co</em></a>
+        <p>Vérification forensique des photos et vidéos, directement sur l’appareil. La réalité, vérifiée dans chaque pixel.</p>
+        <p class="mono-note">VERIFYCO.INFO</p>
+      </div>
+      <div class="bfoot-col">
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="/#how">Comment ça marche</a></li>
+          <li><a href="/#app">Fonctions</a></li>
+          <li><a href="/deepdetect-plus">DeepDetect+</a></li>
+          <li><a href="/#pricing">Tarifs</a></li>
+          <li><a href="/fr/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="bfoot-col">
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="/support">Assistance</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">App Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bwrap bfoot-bot">
+      <span>© 2026 Verifyco · Tous droits réservés</span>
+      <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
+    </div>
+  </footer>
+<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>
+</body>
+</html>

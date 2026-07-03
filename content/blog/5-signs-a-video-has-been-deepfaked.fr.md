@@ -6,7 +6,7 @@ date: 2026-06-15
 updated: 2026-07-01
 author: "L’équipe Verifyco"
 tags: ["Deepfakes", "Détection d’IA", "Guides"]
-image: /uploads/blog/signals.png
+image: /uploads/blog/1000012582.png
 imageAlt: "Le pipeline de signaux Verifyco analyse une vidéo image par image"
 ---
 
