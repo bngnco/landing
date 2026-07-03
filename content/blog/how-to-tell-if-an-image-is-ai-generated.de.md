@@ -7,7 +7,7 @@ author: Verifyco-Team
 tags:
   - KI-Erkennung
   - Leitfäden
-image: ''
+image: /uploads/blog/1000000140.jpg
 imageAlt: Forensische Bildanalyse auf dem iPhone zeigt KI-Generierungsartefakte
 updated: 2026-07-01
 ---

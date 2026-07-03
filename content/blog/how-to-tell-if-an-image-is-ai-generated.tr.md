@@ -7,7 +7,7 @@ author: Verifyco Ekibi
 tags:
   - AI Tespiti
   - Rehberler
-image: ''
+image: /uploads/blog/1000000140.jpg
 imageAlt: iPhone'da yapay zekâ üretim izlerini vurgulayan adli görsel analizi
 updated: 2026-07-01
 ---
