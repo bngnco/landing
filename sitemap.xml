@@ -2,28 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://verifyco.info/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://verifyco.info/deepdetect-plus</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verifyco.info/support</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verifyco.info/privacy</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verifyco.info/terms</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Protecting yourself from an AI voice cloning scam call</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Analysing a video on iPhone to tell if it is AI-generated</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/deepfake-detector-app-what-to-look-for</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Choosing a trustworthy deepfake detector app on iPhone</image:title></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</loc>
@@ -69,6 +96,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Forensic image analysis on iPhone highlighting AI-generation artifacts</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/content-credentials-c2pa-explained</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Checking a photo's C2PA Content Credentials on iPhone</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/blog/spot-fake-ai-profile-pictures</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Checking whether a dating profile picture is AI-generated on iPhone</image:title></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/what-is-a-deepfake</loc>
@@ -117,7 +162,7 @@
   </url>
   <url>
     <loc>https://verifyco.info/blog</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
@@ -131,28 +176,55 @@
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/ai-detection</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/guides</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/ios</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/research</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>AI ses klonlama dolandırıcılık aramasından korunma</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Bir videonun AI üretimi olup olmadığını iPhone'da analiz etme</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>iPhone'da güvenilir bir deepfake tespit uygulaması seçmek</image:title></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone</loc>
@@ -198,6 +270,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>iPhone'da yapay zekâ üretim izlerini vurgulayan adli görsel analizi</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/content-credentials-c2pa-explained</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>iPhone'da bir fotoğrafın C2PA İçerik Kimlik Bilgilerini kontrol etme</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
+    <image:image><image:loc>https://verifyco.info/assets/app/signals.png</image:loc><image:title>Bir flört profili fotoğrafının AI üretimi olup olmadığını iPhone'da kontrol etme</image:title></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/what-is-a-deepfake</loc>
@@ -246,7 +336,7 @@
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
@@ -260,27 +350,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/ai-tespiti</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/arastirma</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/deepfake</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/ios</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/rehberler</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
@@ -389,27 +479,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/deteccion-de-ia</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/guias</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/investigacion</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/ios</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
@@ -518,27 +608,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/forschung</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/ios</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/ki-erkennung</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/leitfaden</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
@@ -647,27 +737,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/detection-dia</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/guides</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/ios</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/recherche</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
@@ -776,27 +866,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/deepfake</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/guide</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/ios</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/ricerca</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/rilevamento-ia</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
@@ -905,27 +995,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/deteccão-de-ia</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/guias</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/ios</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/pesquisa</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
@@ -1034,27 +1124,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/ios</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/أبحاث</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/أدلّة</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/التزييف-العميق</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/كشف-الذكاء-الاصطناعي</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <priority>0.4</priority>
   </url>
 </urlset>

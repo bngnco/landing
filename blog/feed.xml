@@ -5,8 +5,35 @@
     <link>https://verifyco.info/blog</link>
     <description>Guides, breakdowns and research on detecting deepfakes, AI-generated and manipulated media — from the team behind Verifyco, on-device forensic verification for iPhone.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 20:09:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 18:32:22 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Voice Cloning Scams: How to Protect Yourself in 2026</title>
+      <link>https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Scammers can clone a voice from three seconds of audio. Learn how AI voice cloning scams work, the red flags of a fake voice call, and the habits that actually protect you.</description>
+      <category>Deepfakes</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>How to Tell if a Video Is AI-Generated (2026 Guide)</title>
+      <link>https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Sora-class models now make video from a text prompt. Learn how to tell if a video is AI-generated: physics tells, texture artifacts, provenance checks and forensic tools.</description>
+      <category>AI Detection</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>Deepfake Detector Apps: 7 Things to Check Before You Trust One</title>
+      <link>https://verifyco.info/blog/deepfake-detector-app-what-to-look-for</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/deepfake-detector-app-what-to-look-for</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Not all deepfake detector apps are equal. Here are the 7 things that separate a trustworthy AI detector from a coin flip — privacy, multi-signal analysis, honesty and more.</description>
+      <category>AI Detection</category>
+      <category>iOS</category>
+    </item>
     <item>
       <title>How to Check If a Photo Is Real or AI on Your iPhone (2026)</title>
       <link>https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</link>
@@ -33,6 +60,24 @@
       <guid isPermaLink="true">https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Can't tell if a photo is real or AI? Learn the 2026 method that actually works: provenance checks, detector tools, and the physics cues AI still gets wrong.</description>
+      <category>AI Detection</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>Content Credentials (C2PA) Explained: The Nutrition Label for Photos</title>
+      <link>https://verifyco.info/blog/content-credentials-c2pa-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/content-credentials-c2pa-explained</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+      <description>What are Content Credentials? How C2PA provenance works, how to check a photo's origin, what it can and can't prove — and why it's becoming the web's trust layer.</description>
+      <category>Research</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>How to Spot Fake AI Profile Pictures on Dating Apps &amp; Social Media</title>
+      <link>https://verifyco.info/blog/spot-fake-ai-profile-pictures</link>
+      <guid isPermaLink="true">https://verifyco.info/blog/spot-fake-ai-profile-pictures</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Romance scammers and bot networks run on AI-generated profile photos. Learn the visual tells of a fake profile picture, the reverse-search workflow, and how to verify in seconds.</description>
       <category>AI Detection</category>
       <category>Guides</category>
     </item>

@@ -5,8 +5,35 @@
     <link>https://verifyco.info/tr/blog</link>
     <description>Deepfake, AI üretimi ve manipüle edilmiş medyayı tespit etme üzerine rehberler ve araştırmalar — iPhone için cihazda adli doğrulama sunan Verifyco ekibinden.</description>
     <language>tr</language>
-    <lastBuildDate>Thu, 02 Jul 2026 20:09:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 18:32:22 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/tr/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yapay Zekâ Ses Klonlama Dolandırıcılığı: 2026'da Kendinizi Nasıl Korursunuz</title>
+      <link>https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Dolandırıcılar üç saniyelik sesle bir sesi klonlayabiliyor. AI ses klonlama dolandırıcılığı nasıl işler, sahte sesli aramanın işaretleri neler ve sizi gerçekten koruyan alışkanlıklar.</description>
+      <category>Deepfake</category>
+      <category>Rehberler</category>
+    </item>
+    <item>
+      <title>Bir Videonun Yapay Zekâ Üretimi Olduğu Nasıl Anlaşılır (2026 Rehberi)</title>
+      <link>https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Sora sınıfı modeller artık yazıdan video üretiyor. Bir videonun AI üretimi olduğunu anlamanın yolları: fizik hataları, doku bozulmaları, kaynak kontrolü ve adli araçlar.</description>
+      <category>AI Tespiti</category>
+      <category>Rehberler</category>
+    </item>
+    <item>
+      <title>Deepfake Tespit Uygulamaları: Güvenmeden Önce Kontrol Edilecek 7 Şey</title>
+      <link>https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Her deepfake tespit uygulaması eşit değildir. Güvenilir bir AI dedektörünü yazı turadan ayıran 7 kriter — gizlilik, çok sinyalli analiz, dürüstlük ve daha fazlası.</description>
+      <category>AI Tespiti</category>
+      <category>iOS</category>
+    </item>
     <item>
       <title>iPhone'da Bir Fotoğrafın Gerçek mi Yapay Zekâ mı Olduğunu Nasıl Anlarsın (2026)</title>
       <link>https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone</link>
@@ -33,6 +60,24 @@
       <guid isPermaLink="true">https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Bir fotoğrafın gerçek mi yapay zekâ mı olduğunu ayırt edemiyor musun? 2026'da gerçekten işe yarayan yöntemi öğren: köken kontrolleri, dedektör araçları ve yapay zekânın hâlâ yanlış yaptığı fizik ipuçları.</description>
+      <category>AI Tespiti</category>
+      <category>Rehberler</category>
+    </item>
+    <item>
+      <title>İçerik Kimlik Bilgileri (C2PA): Fotoğrafların 'Besin Etiketi'</title>
+      <link>https://verifyco.info/tr/blog/content-credentials-c2pa-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/content-credentials-c2pa-explained</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+      <description>İçerik Kimlik Bilgileri nedir? C2PA kaynak doğrulama nasıl çalışır, bir fotoğrafın kökeni nasıl kontrol edilir, neyi kanıtlar, neyi kanıtlayamaz — ve neden webin güven katmanı oluyor.</description>
+      <category>Araştırma</category>
+      <category>Rehberler</category>
+    </item>
+    <item>
+      <title>Sahte AI Profil Fotoğrafları Nasıl Anlaşılır (Flört Uygulamaları ve Sosyal Medya)</title>
+      <link>https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Romantik dolandırıcılar ve bot ağları AI üretimi profil fotoğraflarıyla çalışıyor. Sahte profil fotoğrafının görsel işaretleri, tersine görsel arama akışı ve saniyeler içinde doğrulama.</description>
       <category>AI Tespiti</category>
       <category>Rehberler</category>
     </item>
