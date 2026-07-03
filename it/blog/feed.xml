@@ -5,8 +5,35 @@
     <link>https://verifyco.info/it/blog</link>
     <description>Guide e ricerca sul rilevamento di deepfake e contenuti generati o manipolati dall’IA — dal team Verifyco, verifica forense su iPhone.</description>
     <language>it</language>
-    <lastBuildDate>Fri, 03 Jul 2026 18:32:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 22:27:00 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/it/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Truffe con clonazione vocale IA: come proteggersi nel 2026</title>
+      <link>https://verifyco.info/it/blog/ai-voice-cloning-scams-protect-yourself</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/ai-voice-cloning-scams-protect-yourself</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Ai truffatori bastano tre secondi di audio per clonare una voce. Scopri come funzionano le truffe di clonazione vocale con IA, i segnali di una chiamata falsa e le abitudini che proteggono davvero.</description>
+      <category>Deepfake</category>
+      <category>Guide</category>
+    </item>
+    <item>
+      <title>Come capire se un video è generato dall'IA (guida 2026)</title>
+      <link>https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <description>I modelli classe Sora creano video da un prompt di testo. Impara a capire se un video è generato dall'IA: errori di fisica, artefatti di texture, provenienza e strumenti forensi.</description>
+      <category>Rilevamento IA</category>
+      <category>Guide</category>
+    </item>
+    <item>
+      <title>App per rilevare deepfake: 7 cose da controllare prima di fidarti</title>
+      <link>https://verifyco.info/it/blog/deepfake-detector-app-what-to-look-for</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/deepfake-detector-app-what-to-look-for</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Non tutte le app per rilevare deepfake sono uguali. Ecco i 7 criteri che separano un rilevatore IA affidabile dal lancio di una moneta — privacy, analisi multi-segnale, onestà e altro.</description>
+      <category>Rilevamento IA</category>
+      <category>iOS</category>
+    </item>
     <item>
       <title>Come verificare su iPhone se una foto è reale o IA (2026)</title>
       <link>https://verifyco.info/it/blog/check-if-photo-is-ai-on-iphone</link>
@@ -33,6 +60,24 @@
       <guid isPermaLink="true">https://verifyco.info/it/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Non riesci a capire se una foto è reale o IA? Impara il metodo che funziona nel 2026: controlli di provenienza, strumenti di rilevamento e gli errori di fisica che l’IA commette ancora.</description>
+      <category>Rilevamento IA</category>
+      <category>Guide</category>
+    </item>
+    <item>
+      <title>Content Credentials (C2PA), spiegato: l'etichetta nutrizionale delle foto</title>
+      <link>https://verifyco.info/it/blog/content-credentials-c2pa-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/content-credentials-c2pa-explained</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Cosa sono le Content Credentials? Come funziona la provenienza C2PA, come verificare l'origine di una foto, cosa può provare e cosa no — e perché sta diventando lo strato di fiducia del web.</description>
+      <category>Ricerca</category>
+      <category>Guide</category>
+    </item>
+    <item>
+      <title>Come riconoscere le foto profilo false generate dall'IA (app di incontri e social)</title>
+      <link>https://verifyco.info/it/blog/spot-fake-ai-profile-pictures</link>
+      <guid isPermaLink="true">https://verifyco.info/it/blog/spot-fake-ai-profile-pictures</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Truffatori sentimentali e reti di bot girano su foto profilo generate dall'IA. Impara i segni visivi di una foto profilo falsa, il flusso di ricerca inversa e come verificare in pochi secondi.</description>
       <category>Rilevamento IA</category>
       <category>Guide</category>
     </item>

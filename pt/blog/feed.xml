@@ -5,8 +5,35 @@
     <link>https://verifyco.info/pt/blog</link>
     <description>Guias e pesquisa sobre como detectar deepfakes e mídia gerada ou manipulada por IA — da equipe Verifyco, verificação forense no iPhone.</description>
     <language>pt</language>
-    <lastBuildDate>Fri, 03 Jul 2026 18:32:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 22:27:00 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/pt/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golpes de clonagem de voz com IA: como se proteger em 2026</title>
+      <link>https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Golpistas conseguem clonar uma voz com três segundos de áudio. Saiba como funcionam os golpes de clonagem de voz com IA, os sinais de uma chamada falsa e os hábitos que realmente protegem.</description>
+      <category>Deepfakes</category>
+      <category>Guias</category>
+    </item>
+    <item>
+      <title>Como saber se um vídeo foi gerado por IA (guia 2026)</title>
+      <link>https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Modelos classe Sora já criam vídeo a partir de texto. Aprenda a saber se um vídeo foi gerado por IA: falhas de física, artefatos de textura, checagem de procedência e ferramentas forenses.</description>
+      <category>Detecção de IA</category>
+      <category>Guias</category>
+    </item>
+    <item>
+      <title>Apps detectores de deepfake: 7 coisas para checar antes de confiar em um</title>
+      <link>https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Nem todo app detector de deepfake é igual. Estes 7 critérios separam um detector de IA confiável de um cara ou coroa — privacidade, análise multissinal, honestidade e mais.</description>
+      <category>Detecção de IA</category>
+      <category>iOS</category>
+    </item>
     <item>
       <title>Como verificar no iPhone se uma foto é real ou IA (2026)</title>
       <link>https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone</link>
@@ -33,6 +60,24 @@
       <guid isPermaLink="true">https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Não consegue dizer se uma foto é real ou IA? Aprenda o método que funciona em 2026: verificação de procedência, ferramentas de detecção e os erros de física que a IA ainda comete.</description>
+      <category>Detecção de IA</category>
+      <category>Guias</category>
+    </item>
+    <item>
+      <title>Content Credentials (C2PA), explicado: o rótulo nutricional das fotos</title>
+      <link>https://verifyco.info/pt/blog/content-credentials-c2pa-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/content-credentials-c2pa-explained</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+      <description>O que são Content Credentials? Como funciona a procedência C2PA, como checar a origem de uma foto, o que ela pode ou não provar — e por que está virando a camada de confiança da web.</description>
+      <category>Pesquisa</category>
+      <category>Guias</category>
+    </item>
+    <item>
+      <title>Como identificar fotos de perfil falsas feitas por IA (apps de namoro e redes)</title>
+      <link>https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Golpistas românticos e redes de bots rodam sobre fotos de perfil geradas por IA. Aprenda os sinais visuais de uma foto de perfil falsa, o fluxo de busca reversa e como verificar em segundos.</description>
       <category>Detecção de IA</category>
       <category>Guias</category>
     </item>

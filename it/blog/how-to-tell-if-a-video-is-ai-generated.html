@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Come capire se un video è generato dall'IA (guida 2026) | Verifyco Blog</title>
+  <meta name="description" content="I modelli classe Sora creano video da un prompt di testo. Impara a capire se un video è generato dall'IA: errori di fisica, artefatti di texture, provenienza e strumenti forensi." />
+  <link rel="canonical" href="https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <meta name="theme-color" content="#0B0908" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <link rel="alternate" hreflang="de" href="https://verifyco.info/de/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <link rel="alternate" hreflang="fr" href="https://verifyco.info/fr/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <link rel="alternate" hreflang="it" href="https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated" />
+
+  <meta property="og:site_name" content="Verifyco" />
+  <meta property="og:title" content="Come capire se un video è generato dall'IA (guida 2026) | Verifyco Blog" />
+  <meta property="og:description" content="I modelli classe Sora creano video da un prompt di testo. Impara a capire se un video è generato dall'IA: errori di fisica, artefatti di texture, provenienza e strumenti forensi." />
+  <meta property="og:url" content="https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated" />
+  <meta property="og:image" content="https://verifyco.info/assets/app/signals.png" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="ar_SA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@verifyco" />
+  <meta name="twitter:title" content="Come capire se un video è generato dall'IA (guida 2026) | Verifyco Blog" />
+  <meta name="twitter:description" content="I modelli classe Sora creano video da un prompt di testo. Impara a capire se un video è generato dall'IA: errori di fisica, artefatti di texture, provenienza e strumenti forensi." />
+  <meta name="twitter:image" content="https://verifyco.info/assets/app/signals.png" />
+
+  <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/verifyco-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="The Verifyco Blog" href="https://verifyco.info/it/blog/feed.xml" />
+  <script>(function(){try{var t=localStorage.getItem("vfy-theme")||"dark";document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();</script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/blog.css?v=2" />
+  <link rel="preload" as="image" href="/assets/app/signals.png" fetchpriority="high" />
+  <meta name="author" content="Team Verifyco" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image:alt" content="Analisi di un video su iPhone per capire se è generato dall'IA" />
+  <meta name="twitter:image:alt" content="Analisi di un video su iPhone per capire se è generato dall'IA" />
+  <meta property="article:published_time" content="2026-07-02T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-07-03T00:00:00+00:00" />
+  <meta property="article:author" content="Team Verifyco" />
+  <meta property="article:tag" content="Rilevamento IA" />
+  <meta property="article:tag" content="Guide" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Come capire se un video è generato dall'IA (guida 2026)","description":"I modelli classe Sora creano video da un prompt di testo. Impara a capire se un video è generato dall'IA: errori di fisica, artefatti di texture, provenienza e strumenti forensi.","image":["https://verifyco.info/assets/app/signals.png"],"datePublished":"2026-07-02T00:00:00+00:00","dateModified":"2026-07-03T00:00:00+00:00","author":{"@type":"Organization","name":"Team Verifyco","url":"https://verifyco.info"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.info/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated"},"articleSection":"Rilevamento IA","keywords":"Rilevamento IA, Guide","wordCount":996,"timeRequired":"PT5M","inLanguage":"it","isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://verifyco.info/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://verifyco.info/it/blog"},{"@type":"ListItem","position":3,"name":"Come capire se un video è generato dall'IA (guida 2026)","item":"https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Nel 2026 il video generato dall’IA si può rilevare in modo affidabile?","acceptedAnswer":{"@type":"Answer","text":"Nessun metodo da solo è affidabile. Combinare ispezione visiva, provenienza e forense multi-segnale dà prove solide nella maggior parte dei casi — ma aspettati “non conclusivo” sulle ricondivisioni molto compresse, e tratta l’output di qualunque strumento come indizio, non come prova."}},{"@type":"Question","name":"Qual è il singolo controllo più rapido?","acceptedAnswer":{"@type":"Answer","text":"Pausa su qualsiasi testo nella scena, poi controlla i riflessi. Entrambi restano costantemente sbagliati nel video generato e richiedono meno di un minuto."}},{"@type":"Question","name":"Perché tanti video IA sono corti?","acceptedAnswer":{"@type":"Answer","text":"Le generazioni lunghe accumulano errori di coerenza — gli oggetti derivano, i volti mutano, le scene si contraddicono. Molti clip sintetici stanno sotto i ~10–15 secondi o si nascondono dietro stacchi rapidi proprio per non tradirsi."}},{"@type":"Question","name":"Una filigrana o una credential è una prova in un senso o nell’altro?","acceptedAnswer":{"@type":"Answer","text":"La presenza di una credential IA è una prova solida che è sintetico. L’assenza non prova assolutamente nulla — alla maggior parte dei clip veri e falsi online le piattaforme hanno già rimosso i metadati."}}]}</script>
+</head>
+<body class="is-post">
+
+  <header class="bnav" id="bnav">
+    <div class="bwrap bnav-in">
+      <a class="brand" href="/" aria-label="Verifyco">Verify<em>co</em></a>
+      <nav class="bnav-links" aria-label="Primary">
+        <a href="/#app">Funzioni</a>
+        <a href="/#how">Come funziona</a>
+        <a href="/it/blog" class="is-here" aria-current="page">Blog</a>
+        <a href="/#pricing">Prezzi</a>
+      </nav>
+      <div class="bnav-right">
+        <div class="blang" aria-label="Lingua"><a href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="fr" lang="fr">Français</a><a href="https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="it" lang="it" aria-current="true" class="is-here">Italiano</a><a href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="ar" lang="ar">العربية</a></div>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <span class="t-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z"></path></svg></span><span class="t-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"></path></svg></span>
+        </button>
+        <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Scarica l’app</a>
+        <button type="button" class="bburger" data-bburger aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="bmenu" data-bmenu>
+    <nav aria-label="Mobile">
+      <a href="/#app">Funzioni</a>
+      <a href="/#how">Come funziona</a>
+      <a href="/it/blog">Blog</a>
+      <a href="/#pricing">Prezzi</a>
+      <a href="/support">Supporto</a>
+    </nav>
+    <div class="bmenu-lang" aria-label="Lingua"><span class="bmenu-lang-h">Lingua</span><a href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="en" lang="en">English</a><a href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="tr" lang="tr">Türkçe</a><a href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="es" lang="es">Español</a><a href="https://verifyco.info/de/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="de" lang="de">Deutsch</a><a href="https://verifyco.info/fr/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="fr" lang="fr">Français</a><a href="https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="it" lang="it" aria-current="true" class="is-here">Italiano</a><a href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="pt" lang="pt">Português</a><a href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated" hreflang="ar" lang="ar">العربية</a></div>
+    <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Scarica sull’App Store</a>
+  </div>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <main class="bmain">
+    <article class="post">
+      <div class="post-head measure">
+        
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span>
+      <a href="/it/blog">Blog</a><span class="sep">/</span>
+      <span aria-current="page">Rilevamento IA</span>
+    </nav>
+        <div class="post-tags"><a class="chip" href="/it/blog/tag/rilevamento-ia">Rilevamento IA</a><a class="chip" href="/it/blog/tag/guide">Guide</a></div>
+        <h1 class="post-title">Come capire se un video è generato dall'IA (guida 2026)</h1>
+        <p class="post-dek">I modelli classe Sora creano video da un prompt di testo. Impara a capire se un video è generato dall'IA: errori di fisica, artefatti di texture, provenienza e strumenti forensi.</p>
+        <div class="post-meta">
+          <span class="byline">Team Verifyco</span>
+          <span class="dot">·</span>
+          <time datetime="2026-07-02T00:00:00+00:00">2 luglio 2026</time>
+          <span class="dot">·</span>
+          <span>5 min di lettura</span>
+          <span class="dot">·</span><span class="updated">Aggiornato 3 luglio 2026</span>
+        </div>
+      </div>
+
+      <figure class="post-hero">
+        <img src="/assets/app/signals.png" alt="Analisi di un video su iPhone per capire se è generato dall'IA" decoding="async" fetchpriority="high" />
+      </figure>
+      
+      <nav class="toc measure" aria-label="Table of contents">
+        <p class="toc-h">In questa pagina</p>
+        <ol><li><a href="#prima-i-segnali-facili-nel-fotogramma">Prima: i segnali facili nel fotogramma</a></li><li><a href="#poi-verifica-la-permanenza-degli-oggetti">Poi: verifica la permanenza degli oggetti</a></li><li><a href="#controlla-la-provenienza-non-solo-i-pixel">Controlla la provenienza, non solo i pixel</a></li><li><a href="#quando-gli-occhi-non-bastano-lanalisi-forense">Quando gli occhi non bastano: l’analisi forense</a></li><li><a href="#domande-frequenti">Domande frequenti</a></li><li><a href="#conclusione">Conclusione</a></li></ol>
+      </nav>
+
+      <div class="prose measure">
+        <p>Un deepfake significava una cosa sola: un video vero con il volto sostituito. Quell’epoca è finita. I modelli testo-video — Sora, Veo e i loro successori open source — ormai generano <strong>intere scene da un prompt</strong>: le persone, la stanza, la luce, il movimento di camera… niente di tutto ciò è mai esistito. Questi video totalmente sintetici falliscono in modo diverso dai face swap, quindi meritano una checklist tutta loro.</p>
+<p>Questa guida è esattamente quello. (Se stai esaminando un video di una <em>persona reale specifica</em> che dice qualcosa, guarda anche i segnali da face swap in <a href="/it/blog/how-to-spot-a-deepfake-video">come riconoscere un video deepfake</a> — i casi reali mescolano entrambi.)</p>
+<h2 id="prima-i-segnali-facili-nel-fotogramma">Prima: i segnali facili nel fotogramma</h2>
+<p>Scarica il clip se puoi (la registrazione dello schermo ricomprime e nasconde le prove), riproducilo lento, a schermo intero, luminoso. Cerca:</p>
+<ul>
+<li><strong>Testo e insegne.</strong> I mondi generati storpiano ancora la scrittura — insegne, maglie, targhe ed etichette che sembrano giuste a colpo d’occhio e si dissolvono in pseudo-lettere in pausa. Un testo leggibile e coerente per tutto il clip resta davvero difficile da falsificare.</li>
+<li><strong>Mani, dita e passaggi di oggetti.</strong> Dita che si fondono, posate che colano nel cibo, oggetti che passano <em>attraverso</em> le mani. L’interazione tra le cose resta il punto debole.</li>
+<li><strong>Le persone sullo sfondo.</strong> Le comparse costano poco al modello ma sono mal supervisionate: occhio ai passanti che scivolano, si ripetono o si fondono tra loro.</li>
+<li><strong>Simmetria e fisica dei riflessi.</strong> Specchi, vetrine, acqua e occhiali spesso riflettono una scena <em>plausibile</em> invece che <em>la</em> scena. Se un riflesso contraddice il mondo, è decisivo.</li>
+<li><strong>Movimento troppo liscio.</strong> Il video generato ha spesso una camera fluttuante, onirica, e soggetti leggermente rallentati e senza peso — niente sobbalza, niente trema in modo credibile.</li>
+</ul>
+<h2 id="poi-verifica-la-permanenza-degli-oggetti">Poi: verifica la permanenza degli oggetti</h2>
+<p>È la classe di segnali più affidabile per il video interamente generato. Gli oggetti reali persistono; quelli generati <em>tendono soltanto</em> a persistere.</p>
+<p>Scorri il clip seguendo un singolo oggetto — una tazza, un bottone, un tatuaggio, un orecchino. In un video IA può <strong>cambiare forma, saltare di posizione, sparire o trasformarsi</strong> tra le inquadrature o perfino tra un secondo e l’altro. Conta le cose: dita, ruote, gambe di sedia, ante di finestra. Riconta cinque secondi dopo. Un video vero non si contraddice mai; i modelli generativi ancora sì, soprattutto oltre i dieci secondi — motivo per cui tanti clip sintetici sono sospettosamente corti e pieni di stacchi.</p>
+
+  <aside class="cta cta--inline" aria-label="Get Verifyco">
+    <p><strong>Vuoi controllare un file adesso?</strong> Verifyco analizza qualsiasi foto o video sul tuo iPhone — sul dispositivo e in privato.</p>
+    <a class="cta-link" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Ottieni Verifyco →</a>
+  </aside>
+<h2 id="controlla-la-provenienza-non-solo-i-pixel">Controlla la provenienza, non solo i pixel</h2>
+<ul>
+<li><strong>Prima la fonte.</strong> Chi l’ha pubblicato, dove altro esiste, qualche testata credibile lo riporta? Un clip clamoroso che esiste solo su un account anonimo è una bandiera rossa prima ancora di guardare un fotogramma.</li>
+<li><strong>Content Credentials.</strong> Alcuni strumenti IA (compresi i modelli classe Sora) allegano metadati C2PA che dichiarano il contenuto sintetico — e alcune piattaforme li mostrano. L’assenza non prova nulla (i metadati spariscono con screenshot e ricondivisioni), ma la presenza è una risposta rapida e onesta. Spieghiamo l’intero sistema in <a href="/it/blog/content-credentials-c2pa-explained">Content Credentials (C2PA), spiegato</a>.</li>
+<li><strong>Filigrane.</strong> Diversi generatori incorporano filigrane visibili o invisibili (come SynthID). Quelle invisibili richiedono il verificatore del produttore — utile quando scatta, muto su tutti gli altri generatori.</li>
+</ul>
+<h2 id="quando-gli-occhi-non-bastano-lanalisi-forense">Quando gli occhi non bastano: l’analisi forense</h2>
+<p>Ogni segnale qui sopra sbiadisce a ogni release dei modelli, e la ricerca continua a mostrare che gli umani riconoscono il video sintetico di alta qualità a tassi appena sopra il caso. L’approccio robusto è quello degli strumenti forensi: <strong>combinare segnali indipendenti invece di fidarsi di uno solo.</strong></p>
+<p><strong><a href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener noreferrer">Verifyco</a></strong> esegue questa fusione direttamente sul tuo iPhone: coerenza temporale e flusso ottico (le cose si muovono e persistono come oggetti reali?), analisi nel dominio delle frequenze (l’impronta statistica che i modelli di diffusione lasciano), forense di metadati e codifica, controllo della provenienza e analisi neurale dei volti quando ci sono volti. Ottieni un punteggio di fiducia 0–100 con la scomposizione per livello — e onestà quando le prove non sono conclusive, come spesso accade con i clip social pesantemente ricompressi. Puoi anche incollare un link da una piattaforma social invece di scaricare il file. Tutto gira <strong>sul dispositivo</strong>: il clip non lascia mai il telefono (<a href="/it/blog/on-device-verification-explained">perché è importante</a>).</p>
+<h3 id="checklist-rapida">Checklist rapida</h3>
+<ol>
+<li>Scarica il file originale; riproduci a 0,25×.</li>
+<li>Metti in pausa su <strong>testo, mani, riflessi, persone sullo sfondo</strong>.</li>
+<li>Segui un oggetto per tutto il clip — <strong>persiste?</strong></li>
+<li>Verifica <strong>chi l’ha pubblicato</strong> e se esiste in fonti credibili.</li>
+<li>Cerca <strong>Content Credentials / filigrane</strong>.</li>
+<li>Passalo all’<strong>analisi forense sul dispositivo</strong> e leggi la scomposizione per livelli, non solo il verdetto.</li>
+</ol>
+<h2 id="domande-frequenti">Domande frequenti</h2>
+<p><strong>Nel 2026 il video generato dall’IA si può rilevare in modo affidabile?</strong>
+Nessun metodo da solo è affidabile. Combinare ispezione visiva, provenienza e forense multi-segnale dà prove solide nella maggior parte dei casi — ma aspettati “non conclusivo” sulle ricondivisioni molto compresse, e tratta l’output di qualunque strumento come indizio, non come prova.</p>
+<p><strong>Qual è il singolo controllo più rapido?</strong>
+Pausa su qualsiasi testo nella scena, poi controlla i riflessi. Entrambi restano costantemente sbagliati nel video generato e richiedono meno di un minuto.</p>
+<p><strong>Perché tanti video IA sono corti?</strong>
+Le generazioni lunghe accumulano errori di coerenza — gli oggetti derivano, i volti mutano, le scene si contraddicono. Molti clip sintetici stanno sotto i ~10–15 secondi o si nascondono dietro stacchi rapidi proprio per non tradirsi.</p>
+<p><strong>Una filigrana o una credential è una prova in un senso o nell’altro?</strong>
+La presenza di una credential IA è una prova solida che è sintetico. L’assenza non prova assolutamente nulla — alla maggior parte dei clip veri <em>e</em> falsi online le piattaforme hanno già rimosso i metadati.</p>
+<h2 id="conclusione">Conclusione</h2>
+<p>Il video interamente generato dall’IA ha rotto la vecchia regola del “vedere per credere”, ma non ha rotto la verifica: fisica, permanenza, provenienza e forense catturano ancora ciò che l’occhio perde. Fanne un’abitudine — <strong>verifica prima di condividere</strong> — e tieni a portata la guida gemella per le immagini fisse: <a href="/it/blog/how-to-tell-if-an-image-is-ai-generated">come capire se un’immagine è generata dall’IA</a>.</p>
+
+        
+  <aside class="cta" aria-label="Get Verifyco">
+    <img class="cta-icon" src="/assets/verifyco-icon.png" alt="" width="72" height="72" loading="lazy" />
+    <div class="cta-body">
+      <h3 class="cta-title">Verificalo tu stesso — sul tuo iPhone</h3>
+      <p class="cta-text">Verifyco esegue cinque segnali forensi sul dispositivo per individuare deepfake e contenuti generati o manipolati dall’IA — in pochi secondi, completamente offline e senza alcun caricamento.</p>
+      <a class="btn btn-fill" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">
+        <span class="btn-ico"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg></span> Scarica sull’App Store
+      </a>
+    </div>
+  </aside>
+      </div>
+
+      <div class="post-back measure"><a href="/it/blog">← Tutti gli articoli</a></div>
+    </article>
+    
+    <section class="related bwrap">
+      <h2 class="related-h">Altro dal blog</h2>
+      <div class="post-grid">
+    <article class="card">
+      <a class="card-media" href="/it/blog/ai-voice-cloning-scams-protect-yourself" aria-label="Truffe con clonazione vocale IA: come proteggersi nel 2026">
+        <img src="/assets/app/signals.png" alt="Proteggersi da una chiamata truffa con voce clonata dall'IA" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/it/blog/tag/deepfake">Deepfake</a><a class="chip" href="/it/blog/tag/guide">Guide</a></div>
+        <h2 class="card-title"><a href="/it/blog/ai-voice-cloning-scams-protect-yourself">Truffe con clonazione vocale IA: come proteggersi nel 2026</a></h2>
+        <p class="card-excerpt">Ai truffatori bastano tre secondi di audio per clonare una voce. Scopri come funzionano le truffe di clonazione vocale con IA, i segnali di una chiamata falsa e le abitudini che proteggono davvero.</p>
+        <div class="card-meta">
+          <time datetime="2026-07-03T00:00:00+00:00">3 luglio 2026</time>
+          <span class="dot">·</span>
+          <span>5 min di lettura</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-media" href="/it/blog/deepfake-detector-app-what-to-look-for" aria-label="App per rilevare deepfake: 7 cose da controllare prima di fidarti">
+        <img src="/assets/app/signals.png" alt="Scegliere un'app affidabile per rilevare deepfake su iPhone" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/it/blog/tag/rilevamento-ia">Rilevamento IA</a><a class="chip" href="/it/blog/tag/ios">iOS</a></div>
+        <h2 class="card-title"><a href="/it/blog/deepfake-detector-app-what-to-look-for">App per rilevare deepfake: 7 cose da controllare prima di fidarti</a></h2>
+        <p class="card-excerpt">Non tutte le app per rilevare deepfake sono uguali. Ecco i 7 criteri che separano un rilevatore IA affidabile dal lancio di una moneta — privacy, analisi multi-segnale, onestà e altro.</p>
+        <div class="card-meta">
+          <time datetime="2026-06-30T00:00:00+00:00">30 giugno 2026</time>
+          <span class="dot">·</span>
+          <span>5 min di lettura</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a class="card-media" href="/it/blog/check-if-photo-is-ai-on-iphone" aria-label="Come verificare su iPhone se una foto è reale o IA (2026)">
+        <img src="/uploads/blog/1000012577.png" alt="Verificare in privato su un iPhone se una foto è reale o IA" loading="lazy" decoding="async" />
+      </a>
+      <div class="card-body">
+        <div class="card-tags"><a class="chip" href="/it/blog/tag/rilevamento-ia">Rilevamento IA</a><a class="chip" href="/it/blog/tag/ios">iOS</a></div>
+        <h2 class="card-title"><a href="/it/blog/check-if-photo-is-ai-on-iphone">Come verificare su iPhone se una foto è reale o IA (2026)</a></h2>
+        <p class="card-excerpt">Vuoi verificare una foto direttamente sul tuo iPhone senza caricarla da nessuna parte? Ecco come capire se un’immagine è reale o generata dall’IA, in privato e sul dispositivo.</p>
+        <div class="card-meta">
+          <time datetime="2026-06-28T00:00:00+00:00">28 giugno 2026</time>
+          <span class="dot">·</span>
+          <span>6 min di lettura</span>
+        </div>
+      </div>
+    </article></div>
+    </section>
+  </main>
+
+  <footer class="bfoot">
+    <div class="bwrap bfoot-in">
+      <div class="bfoot-brand">
+        <a class="brand" href="/">Verify<em>co</em></a>
+        <p>Verifica forense di foto e video, direttamente sul dispositivo. La realtà, verificata in ogni pixel.</p>
+        <p class="mono-note">VERIFYCO.INFO</p>
+      </div>
+      <div class="bfoot-col">
+        <h4>Prodotto</h4>
+        <ul>
+          <li><a href="/#how">Come funziona</a></li>
+          <li><a href="/#app">Funzioni</a></li>
+          <li><a href="/deepdetect-plus">DeepDetect+</a></li>
+          <li><a href="/#pricing">Prezzi</a></li>
+          <li><a href="/it/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="bfoot-col">
+        <h4>Azienda</h4>
+        <ul>
+          <li><a href="/support">Supporto</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">App Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bwrap bfoot-bot">
+      <span>© 2026 Verifyco · Tutti i diritti riservati</span>
+      <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
+    </div>
+  </footer>
+<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>
+</body>
+</html>

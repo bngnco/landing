@@ -5,8 +5,35 @@
     <link>https://verifyco.info/ar/blog</link>
     <description>أدلّة وأبحاث حول كشف التزييف العميق والوسائط المُولّدة أو المُعدّلة بالذكاء الاصطناعي — من فريق Verifyco، التحقّق الجنائي على iPhone.</description>
     <language>ar</language>
-    <lastBuildDate>Fri, 03 Jul 2026 18:32:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 22:27:00 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/ar/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>احتيال استنساخ الصوت بالذكاء الاصطناعي: كيف تحمي نفسك في 2026</title>
+      <link>https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>يستطيع المحتالون استنساخ صوت من ثلاث ثوانٍ من التسجيل. تعرّف على آلية احتيال استنساخ الصوت بالذكاء الاصطناعي، وعلامات المكالمة المزيفة، والعادات التي تحميك فعلًا.</description>
+      <category>التزييف العميق</category>
+      <category>أدلّة</category>
+    </item>
+    <item>
+      <title>كيف تعرف أن فيديو مولّد بالذكاء الاصطناعي (دليل 2026)</title>
+      <link>https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <description>نماذج من فئة Sora تصنع الفيديو من نص. تعلّم كيف تعرف أن الفيديو مولّد بالذكاء الاصطناعي: أخطاء الفيزياء، وتشوهات النسيج، وفحص المصدر، والأدوات الجنائية.</description>
+      <category>كشف الذكاء الاصطناعي</category>
+      <category>أدلّة</category>
+    </item>
+    <item>
+      <title>تطبيقات كشف التزييف العميق: 7 أمور افحصها قبل أن تثق بأي منها</title>
+      <link>https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>ليست كل تطبيقات كشف التزييف العميق سواء. هذه 7 معايير تفصل كاشف الذكاء الاصطناعي الموثوق عن رمية العملة — الخصوصية، والتحليل متعدد الإشارات، والصدق، وغيرها.</description>
+      <category>كشف الذكاء الاصطناعي</category>
+      <category>iOS</category>
+    </item>
     <item>
       <title>كيف تتحقق على iPhone من أن صورة حقيقية أم من صنع الذكاء الاصطناعي (2026)</title>
       <link>https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone</link>
@@ -33,6 +60,24 @@
       <guid isPermaLink="true">https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>لا تستطيع التمييز بين صورة حقيقية وأخرى مولّدة بالذكاء الاصطناعي؟ تعلّم المنهج الفعّال في 2026: فحص الأصل، أدوات الكشف، وأخطاء الفيزياء التي ما زال الذكاء الاصطناعي يرتكبها.</description>
+      <category>كشف الذكاء الاصطناعي</category>
+      <category>أدلّة</category>
+    </item>
+    <item>
+      <title>بيانات اعتماد المحتوى (C2PA) ببساطة: «الملصق الغذائي» للصور</title>
+      <link>https://verifyco.info/ar/blog/content-credentials-c2pa-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/content-credentials-c2pa-explained</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+      <description>ما هي بيانات اعتماد المحتوى؟ كيف يعمل إثبات المصدر C2PA، وكيف تفحص أصل صورة، وما الذي يثبته وما لا يثبته — ولماذا يصبح طبقة الثقة في الويب.</description>
+      <category>أبحاث</category>
+      <category>أدلّة</category>
+    </item>
+    <item>
+      <title>كيف تكشف صور الملفات الشخصية المزيفة بالذكاء الاصطناعي (تطبيقات المواعدة والتواصل)</title>
+      <link>https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description>المحتالون العاطفيون وشبكات البوتات تعمل بصور ملفات شخصية مولّدة بالذكاء الاصطناعي. تعلّم العلامات البصرية للصورة المزيفة، ومسار البحث العكسي، والتحقق في ثوانٍ.</description>
       <category>كشف الذكاء الاصطناعي</category>
       <category>أدلّة</category>
     </item>

@@ -5,8 +5,35 @@
     <link>https://verifyco.info/de/blog</link>
     <description>Leitfäden und Forschung zum Erkennen von Deepfakes sowie KI-generierten und manipulierten Medien — vom Verifyco-Team, forensische Verifizierung auf dem iPhone.</description>
     <language>de</language>
-    <lastBuildDate>Fri, 03 Jul 2026 18:32:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 22:27:00 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/de/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KI-Stimmklon-Betrug: So schützen Sie sich 2026</title>
+      <link>https://verifyco.info/de/blog/ai-voice-cloning-scams-protect-yourself</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/ai-voice-cloning-scams-protect-yourself</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Betrüger können eine Stimme aus drei Sekunden Audio klonen. Erfahren Sie, wie KI-Stimmklon-Betrug funktioniert, woran Sie einen gefälschten Anruf erkennen und welche Gewohnheiten wirklich schützen.</description>
+      <category>Deepfakes</category>
+      <category>Leitfäden</category>
+    </item>
+    <item>
+      <title>Woran erkennt man, ob ein Video KI-generiert ist? (Leitfaden 2026)</title>
+      <link>https://verifyco.info/de/blog/how-to-tell-if-a-video-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/how-to-tell-if-a-video-is-ai-generated</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Sora-Klasse-Modelle erzeugen Video aus einem Text-Prompt. So erkennen Sie, ob ein Video KI-generiert ist: Physikfehler, Texturartefakte, Herkunftsprüfung und forensische Werkzeuge.</description>
+      <category>KI-Erkennung</category>
+      <category>Leitfäden</category>
+    </item>
+    <item>
+      <title>Deepfake-Detektor-Apps: 7 Dinge, die Sie vor dem Vertrauen prüfen sollten</title>
+      <link>https://verifyco.info/de/blog/deepfake-detector-app-what-to-look-for</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/deepfake-detector-app-what-to-look-for</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Nicht alle Deepfake-Detektor-Apps sind gleich. Diese 7 Kriterien trennen einen vertrauenswürdigen KI-Detektor vom Münzwurf — Privatsphäre, Multi-Signal-Analyse, Ehrlichkeit und mehr.</description>
+      <category>KI-Erkennung</category>
+      <category>iOS</category>
+    </item>
     <item>
       <title>So prüfst du auf dem iPhone, ob ein Foto echt oder KI ist (2026)</title>
       <link>https://verifyco.info/de/blog/check-if-photo-is-ai-on-iphone</link>
@@ -33,6 +60,24 @@
       <guid isPermaLink="true">https://verifyco.info/de/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Unsicher, ob ein Foto echt oder KI ist? Lerne die Methode, die 2026 wirklich funktioniert: Herkunftsprüfung, Detektor-Tools und die Physik-Fehler, die KI noch macht.</description>
+      <category>KI-Erkennung</category>
+      <category>Leitfäden</category>
+    </item>
+    <item>
+      <title>Content Credentials (C2PA), erklärt: das Nährwertetikett für Fotos</title>
+      <link>https://verifyco.info/de/blog/content-credentials-c2pa-explained</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/content-credentials-c2pa-explained</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Was sind Content Credentials? Wie C2PA-Herkunftsnachweise funktionieren, wie man die Herkunft eines Fotos prüft, was sie beweisen können und was nicht — und warum sie zur Vertrauensschicht des Webs werden.</description>
+      <category>Forschung</category>
+      <category>Leitfäden</category>
+    </item>
+    <item>
+      <title>Gefälschte KI-Profilbilder erkennen: Dating-Apps &amp; soziale Medien</title>
+      <link>https://verifyco.info/de/blog/spot-fake-ai-profile-pictures</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/spot-fake-ai-profile-pictures</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Romance-Scammer und Bot-Netzwerke laufen auf KI-generierten Profilfotos. Lernen Sie die visuellen Anzeichen eines gefälschten Profilbilds, den Rückwärtssuche-Workflow und die Verifizierung in Sekunden.</description>
       <category>KI-Erkennung</category>
       <category>Leitfäden</category>
     </item>
