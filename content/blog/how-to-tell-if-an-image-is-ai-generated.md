@@ -7,7 +7,7 @@ author: Verifyco Team
 tags:
   - AI Detection
   - Guides
-image: ''
+image: /uploads/blog/1000000140.jpg
 imageAlt: Forensic image analysis on iPhone highlighting AI-generation artifacts
 updated: 2026-07-01
 ---

@@ -7,7 +7,7 @@ author: Team Verifyco
 tags:
   - Rilevamento IA
   - Guide
-image: ''
+image: /uploads/blog/1000000140.jpg
 imageAlt: Analisi forense di un’immagine su iPhone che evidenzia artefatti di generazione IA
 updated: 2026-07-01
 ---

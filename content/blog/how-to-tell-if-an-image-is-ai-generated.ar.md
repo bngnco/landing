@@ -7,7 +7,7 @@ author: فريق Verifyco
 tags:
   - كشف الذكاء الاصطناعي
   - أدلّة
-image: ''
+image: /uploads/blog/1000000140.jpg
 imageAlt: تحليل جنائي لصورة على iPhone يُبرز آثار التوليد بالذكاء الاصطناعي
 updated: 2026-07-01
 ---

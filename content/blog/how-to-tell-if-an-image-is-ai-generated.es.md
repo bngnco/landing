@@ -7,7 +7,7 @@ author: Equipo Verifyco
 tags:
   - Detección de IA
   - Guías
-image: ''
+image: /uploads/blog/1000000140.jpg
 imageAlt: Análisis forense de imagen en iPhone destacando artefactos de generación por IA
 updated: 2026-07-01
 ---
