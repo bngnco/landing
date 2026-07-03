@@ -63,10 +63,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* HD image rendering */
 .ph img, .icon-img { image-rendering: auto; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 
-/* Film grain */
+/* Film grain — a single static, viewport-sized composited layer.
+   (Was 200%×200% = 4× the viewport, needless memory/paint.) */
 .grain {
-  position: fixed; inset: -50%;
-  width: 200%; height: 200%;
+  position: fixed; inset: 0;
   pointer-events: none;
   z-index: 2000;
   opacity: 0.032;
@@ -143,10 +143,19 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-bottom: 1px solid transparent;
 }
 .nav.is-solid {
-  background: rgba(6, 5, 4, 0.78);
-  -webkit-backdrop-filter: blur(18px) saturate(1.3);
-  backdrop-filter: blur(18px) saturate(1.3);
+  /* Solid fallback everywhere. A live backdrop-filter on a fixed bar forces
+     the browser to re-blur the page behind it on every scroll frame — the
+     single biggest scroll-jank source on phones — so the blur is added back
+     only on larger, hover-capable devices below. */
+  background: rgba(6, 5, 4, 0.94);
   border-bottom-color: var(--line);
+}
+@media (min-width: 861px) {
+  .nav.is-solid {
+    background: rgba(6, 5, 4, 0.78);
+    -webkit-backdrop-filter: blur(18px) saturate(1.3);
+    backdrop-filter: blur(18px) saturate(1.3);
+  }
 }
 
 .nav-in {
@@ -728,9 +737,12 @@ body.menu-open .mmenu { opacity: 1; visibility: visible; }
   animation: corePulse 4.4s ease-in-out infinite;
 }
 .dd-core svg { width: 40%; height: 40%; }
+/* Pulse via transform (composited) instead of animating box-shadow, which
+   repaints a large blurred region every frame. The static glow scales with
+   the element, so it still "breathes". */
 @keyframes corePulse {
-  0%, 100% { box-shadow: 0 0 50px 10px rgba(214, 172, 134, 0.38), 0 0 110px 30px rgba(188, 142, 100, 0.16); }
-  50% { box-shadow: 0 0 64px 16px rgba(214, 172, 134, 0.55), 0 0 140px 40px rgba(188, 142, 100, 0.26); }
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.05); }
 }
 
 @media (max-width: 860px) {
@@ -983,6 +995,8 @@ footer { margin-top: clamp(90px, 11vw, 150px); border-top: 1px solid var(--line)
   .chip--v { right: 0; }
   .chip--s { left: -2%; }
   .scroll-cue { display: none; }
+  /* Drop the live blur on the floating chips too — solid bg is free. */
+  .chip { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(13, 11, 9, 0.95); }
 }
 @media (max-width: 400px) {
   .hero-ph { --phw: 235px; }

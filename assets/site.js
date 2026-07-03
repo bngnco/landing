@@ -171,16 +171,19 @@
         { opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(2)", stagger: 0.14 }, 0.95)
       .fromTo(".scroll-cue", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1.4);
 
-    // looping scanline on the hero phone
+    // looping scanline on the hero phone — animate transform (composited),
+    // not `top`, which would relayout/repaint the clipped phone every frame.
     if (!reduceMotion) {
-      gsap.to("[data-scan]", {
-        top: "135%",
-        duration: 2.6,
-        ease: "none",
-        repeat: -1,
-        repeatDelay: 2.0,
-        delay: 1.6
-      });
+      gsap.fromTo("[data-scan]",
+        { yPercent: 0 },
+        {
+          yPercent: 515,
+          duration: 2.6,
+          ease: "none",
+          repeat: -1,
+          repeatDelay: 2.0,
+          delay: 1.6
+        });
       // slow float
       gsap.to("[data-hero-ph]", {
         y: -12,
