@@ -1,15 +1,15 @@
 ---
-title: "Estafas de clonación de voz con IA: cómo protegerte en 2026"
-description: "Los estafadores pueden clonar una voz con tres segundos de audio. Aprende cómo funcionan las estafas de clonación de voz con IA, las señales de una llamada falsa y los hábitos que de verdad te protegen."
+title: 'Estafas de clonación de voz con IA: cómo protegerte en 2026'
+description: Los estafadores pueden clonar una voz con tres segundos de audio. Aprende cómo funcionan las estafas de clonación de voz con IA, las señales de una llamada falsa y los hábitos que de verdad te protegen.
 slug: ai-voice-cloning-scams-protect-yourself
 date: 2026-07-03
-updated: 2026-07-03
-author: "Equipo Verifyco"
+author: Equipo Verifyco
 tags:
   - Deepfakes
   - Guías
-image: ''
-imageAlt: "Protegerse de una llamada de estafa con voz clonada por IA"
+image: /uploads/blog/1000000344.jpg
+imageAlt: Protegerse de una llamada de estafa con voz clonada por IA
+updated: 2026-07-03
 ---
 
 Suena el teléfono. Es el número de tu hija — o un número desconocido, pero es *su voz*, angustiada, pidiendo dinero urgente. Solo que no es ella. Es un clon, generado a partir de unos segundos de audio extraídos de un vídeo en redes, y la persona detrás dirige una de las estafas que más crece en el mundo.

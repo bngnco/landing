@@ -1,15 +1,15 @@
 ---
-title: "Golpes de clonagem de voz com IA: como se proteger em 2026"
-description: "Golpistas conseguem clonar uma voz com três segundos de áudio. Saiba como funcionam os golpes de clonagem de voz com IA, os sinais de uma chamada falsa e os hábitos que realmente protegem."
+title: 'Golpes de clonagem de voz com IA: como se proteger em 2026'
+description: Golpistas conseguem clonar uma voz com três segundos de áudio. Saiba como funcionam os golpes de clonagem de voz com IA, os sinais de uma chamada falsa e os hábitos que realmente protegem.
 slug: ai-voice-cloning-scams-protect-yourself
 date: 2026-07-03
-updated: 2026-07-03
-author: "Equipe Verifyco"
+author: Equipe Verifyco
 tags:
   - Deepfakes
   - Guias
-image: ''
-imageAlt: "Proteção contra uma ligação de golpe com voz clonada por IA"
+image: /uploads/blog/1000000344.jpg
+imageAlt: Proteção contra uma ligação de golpe com voz clonada por IA
+updated: 2026-07-03
 ---
 
 O telefone toca. É o número da sua filha — ou um número desconhecido, mas é *a voz dela*, em pânico, pedindo dinheiro com urgência. Só que não é ela. É um clone, gerado a partir de poucos segundos de áudio raspados de um vídeo nas redes, e a pessoa por trás dele opera um dos golpes que mais crescem no mundo.

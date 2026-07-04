@@ -1,15 +1,15 @@
 ---
-title: "KI-Stimmklon-Betrug: So schützen Sie sich 2026"
-description: "Betrüger können eine Stimme aus drei Sekunden Audio klonen. Erfahren Sie, wie KI-Stimmklon-Betrug funktioniert, woran Sie einen gefälschten Anruf erkennen und welche Gewohnheiten wirklich schützen."
+title: 'KI-Stimmklon-Betrug: So schützen Sie sich 2026'
+description: Betrüger können eine Stimme aus drei Sekunden Audio klonen. Erfahren Sie, wie KI-Stimmklon-Betrug funktioniert, woran Sie einen gefälschten Anruf erkennen und welche Gewohnheiten wirklich schützen.
 slug: ai-voice-cloning-scams-protect-yourself
 date: 2026-07-03
-updated: 2026-07-03
-author: "Verifyco-Team"
+author: Verifyco-Team
 tags:
   - Deepfakes
   - Leitfäden
-image: ''
-imageAlt: "Schutz vor einem Betrugsanruf mit KI-geklonter Stimme"
+image: /uploads/blog/1000000344.jpg
+imageAlt: Schutz vor einem Betrugsanruf mit KI-geklonter Stimme
+updated: 2026-07-03
 ---
 
 Das Telefon klingelt. Es ist die Nummer Ihrer Tochter — oder eine unbekannte Nummer, aber es ist *ihre Stimme*: panisch, sie braucht sofort Geld. Nur ist sie es nicht. Es ist ein Klon, erzeugt aus wenigen Sekunden Audio, abgegriffen aus einem Social-Media-Video — und die Person dahinter betreibt eine der am schnellsten wachsenden Betrugsmaschen der Welt.

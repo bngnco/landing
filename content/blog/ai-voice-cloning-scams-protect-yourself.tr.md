@@ -1,15 +1,15 @@
 ---
 title: "Yapay Zekâ Ses Klonlama Dolandırıcılığı: 2026'da Kendinizi Nasıl Korursunuz"
-description: "Dolandırıcılar üç saniyelik sesle bir sesi klonlayabiliyor. AI ses klonlama dolandırıcılığı nasıl işler, sahte sesli aramanın işaretleri neler ve sizi gerçekten koruyan alışkanlıklar."
+description: Dolandırıcılar üç saniyelik sesle bir sesi klonlayabiliyor. AI ses klonlama dolandırıcılığı nasıl işler, sahte sesli aramanın işaretleri neler ve sizi gerçekten koruyan alışkanlıklar.
 slug: ai-voice-cloning-scams-protect-yourself
 date: 2026-07-03
-updated: 2026-07-03
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - Deepfake
   - Rehberler
-image: ''
-imageAlt: "AI ses klonlama dolandırıcılık aramasından korunma"
+image: /uploads/blog/1000000344.jpg
+imageAlt: AI ses klonlama dolandırıcılık aramasından korunma
+updated: 2026-07-03
 ---
 
 Telefon çalıyor. Arayan kızınızın numarası — ya da bilmediğiniz bir numara, ama *onun sesi*: panik içinde, acilen para istiyor. Ama o değil. Sosyal medyadaki bir videodan kazınmış birkaç saniyelik sesten üretilmiş bir klon bu — ve arkasındaki kişi, dünyanın en hızlı büyüyen dolandırıcılıklarından birini yürütüyor.
