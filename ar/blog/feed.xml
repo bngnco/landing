@@ -5,8 +5,44 @@
     <link>https://verifyco.info/ar/blog</link>
     <description>أدلّة وأبحاث حول كشف التزييف العميق والوسائط المُولّدة أو المُعدّلة بالذكاء الاصطناعي — من فريق Verifyco، التحقّق الجنائي على iPhone.</description>
     <language>ar</language>
-    <lastBuildDate>Fri, 03 Jul 2026 22:28:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:16:58 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/ar/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>صنع أحدهم تزييفًا عميقًا لك: ماذا تفعل، خطوة بخطوة</title>
+      <link>https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description>اكتشفت تزييفًا عميقًا لنفسك — فيديو مزيف أو صوتك أو صورة حميمة؟ قائمة الطوارئ: الأدلة، الإزالة، إبلاغ المنصات، الخيارات القانونية واحتواء الضرر.</description>
+      <category>التزييف العميق</category>
+      <category>أدلّة</category>
+    </item>
+    <item>
+      <title>هل التزييف العميق غير قانوني؟ قوانين العالم في 2026</title>
+      <link>https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <description>هل صنع تزييف عميق جريمة؟ خريطة بلغة واضحة لقوانين التزييف العميق في 2026 — قانون TAKE IT DOWN الأمريكي، ووسم قانون الذكاء الاصطناعي الأوروبي، وبريطانيا وغيرها.</description>
+      <category>التزييف العميق</category>
+      <category>أبحاث</category>
+    </item>
+    <item>
+      <title>كيف تعرف أن صورة خضعت للتعديل (7 فحوص ناجعة)</title>
+      <link>https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited</guid>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>ليست ذكاءً اصطناعيًّا — بل عُدّلت فحسب. تعلّم كيف تعرف أن صورة معدّلة أو مفبركة بفوتوشوب: فحص الظلال والحواف، تحليل مستوى الخطأ، البيانات الوصفية، البحث العكسي والأدوات الجنائية.</description>
+      <category>أدلّة</category>
+      <category>كشف الذكاء الاصطناعي</category>
+    </item>
+    <item>
+      <title>ما مدى دقة كواشف الذكاء الاصطناعي فعلًا؟ (ماذا تعني الأرقام)</title>
+      <link>https://verifyco.info/ar/blog/how-accurate-are-ai-detectors</link>
+      <guid isPermaLink="true">https://verifyco.info/ar/blog/how-accurate-are-ai-detectors</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>تعِد كواشف الذكاء الاصطناعي بدقة 99% — والواقع أعقد. ماذا تقيس الدقة فعلًا، لماذا تحدث الإيجابيات الكاذبة، ما الذي يكسر الكواشف، وكيف تُقرأ درجة الثقة.</description>
+      <category>كشف الذكاء الاصطناعي</category>
+      <category>أبحاث</category>
+    </item>
     <item>
       <title>احتيال استنساخ الصوت بالذكاء الاصطناعي: كيف تحمي نفسك في 2026</title>
       <link>https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself</link>

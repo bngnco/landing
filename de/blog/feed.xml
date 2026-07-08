@@ -5,8 +5,44 @@
     <link>https://verifyco.info/de/blog</link>
     <description>Leitfäden und Forschung zum Erkennen von Deepfakes sowie KI-generierten und manipulierten Medien — vom Verifyco-Team, forensische Verifizierung auf dem iPhone.</description>
     <language>de</language>
-    <lastBuildDate>Fri, 03 Jul 2026 22:28:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:16:58 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/de/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jemand hat einen Deepfake von Ihnen gemacht: Was jetzt zu tun ist</title>
+      <link>https://verifyco.info/de/blog/what-to-do-if-someone-makes-a-deepfake-of-you</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/what-to-do-if-someone-makes-a-deepfake-of-you</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Einen Deepfake von sich entdeckt — ein gefälschtes Video, Ihre Stimme, ein intimes Bild? Die Notfall-Checkliste: Beweise, Löschungen, Plattform-Meldungen, rechtliche Schritte und Schadensbegrenzung.</description>
+      <category>Deepfakes</category>
+      <category>Leitfäden</category>
+    </item>
+    <item>
+      <title>Sind Deepfakes illegal? Deepfake-Gesetze weltweit 2026</title>
+      <link>https://verifyco.info/de/blog/are-deepfakes-illegal-laws-2026</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/are-deepfakes-illegal-laws-2026</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Ist es strafbar, einen Deepfake zu erstellen? Eine klare Landkarte der Deepfake-Gesetze 2026 — der US TAKE IT DOWN Act, die Kennzeichnungspflicht des EU AI Act, Großbritannien und mehr.</description>
+      <category>Deepfakes</category>
+      <category>Forschung</category>
+    </item>
+    <item>
+      <title>Woran erkennt man, ob ein Foto bearbeitet wurde? (7 Checks, die funktionieren)</title>
+      <link>https://verifyco.info/de/blog/how-to-tell-if-a-photo-is-edited</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/how-to-tell-if-a-photo-is-edited</guid>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Nicht KI — nur manipuliert. So erkennen Sie, ob ein Foto bearbeitet oder gephotoshopt ist: Schatten- und Kantenprüfung, Fehlerpegel-Analyse, Metadaten, Rückwärtssuche und forensische Tools.</description>
+      <category>Leitfäden</category>
+      <category>KI-Erkennung</category>
+    </item>
+    <item>
+      <title>Wie genau sind KI-Detektoren wirklich? (Was die Zahlen bedeuten)</title>
+      <link>https://verifyco.info/de/blog/how-accurate-are-ai-detectors</link>
+      <guid isPermaLink="true">https://verifyco.info/de/blog/how-accurate-are-ai-detectors</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>KI-Detektoren werben mit 99 % Genauigkeit — die Realität ist komplizierter. Was Erkennungsgenauigkeit wirklich misst, warum Fehlalarme passieren, was Detektoren bricht und wie man einen Vertrauenswert liest.</description>
+      <category>KI-Erkennung</category>
+      <category>Forschung</category>
+    </item>
     <item>
       <title>KI-Stimmklon-Betrug: So schützen Sie sich 2026</title>
       <link>https://verifyco.info/de/blog/ai-voice-cloning-scams-protect-yourself</link>

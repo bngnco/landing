@@ -5,8 +5,44 @@
     <link>https://verifyco.info/tr/blog</link>
     <description>Deepfake, AI üretimi ve manipüle edilmiş medyayı tespit etme üzerine rehberler ve araştırmalar — iPhone için cihazda adli doğrulama sunan Verifyco ekibinden.</description>
     <language>tr</language>
-    <lastBuildDate>Fri, 03 Jul 2026 22:28:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:16:58 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/tr/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sizin Deepfake'iniz Yapıldıysa Ne Yapmalı: Adım Adım Rehber</title>
+      <link>https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Kendinizin deepfake'ini mi buldunuz — sahte video, ses veya mahrem görüntü? Acil durum listesi: delil toplama, kaldırtma, platform şikâyetleri, hukuki seçenekler ve hasar kontrolü.</description>
+      <category>Deepfake</category>
+      <category>Rehberler</category>
+    </item>
+    <item>
+      <title>Deepfake Yasal mı? 2026'da Dünyada Deepfake Yasaları</title>
+      <link>https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Deepfake yapmak suç mu? 2026 deepfake yasalarının sade haritası — ABD TAKE IT DOWN Yasası, AB Yapay Zekâ Yasası'nın etiketleme kuralları, Birleşik Krallık; ne serbest, ne değil.</description>
+      <category>Deepfake</category>
+      <category>Araştırma</category>
+    </item>
+    <item>
+      <title>Bir Fotoğrafın Düzenlendiği Nasıl Anlaşılır (İşe Yarayan 7 Kontrol)</title>
+      <link>https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited</guid>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>AI değil — sadece oynanmış. Bir fotoğrafın düzenlendiğini ya da photoshoplandığını anlamanın yolları: gölge ve kenar kontrolleri, hata seviyesi analizi, üstveri, tersine arama ve adli araçlar.</description>
+      <category>Rehberler</category>
+      <category>AI Tespiti</category>
+    </item>
+    <item>
+      <title>AI Dedektörleri Gerçekte Ne Kadar Doğru? (Rakamların Anlamı)</title>
+      <link>https://verifyco.info/tr/blog/how-accurate-are-ai-detectors</link>
+      <guid isPermaLink="true">https://verifyco.info/tr/blog/how-accurate-are-ai-detectors</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>AI dedektörleri %99 doğruluk iddia ediyor — gerçek daha karmaşık. Tespit doğruluğu gerçekte ne ölçer, yanlış pozitifler neden olur, dedektörleri ne bozar ve güven puanı nasıl okunur.</description>
+      <category>AI Tespiti</category>
+      <category>Araştırma</category>
+    </item>
     <item>
       <title>Yapay Zekâ Ses Klonlama Dolandırıcılığı: 2026'da Kendinizi Nasıl Korursunuz</title>
       <link>https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself</link>

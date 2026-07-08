@@ -5,8 +5,44 @@
     <link>https://verifyco.info/pt/blog</link>
     <description>Guias e pesquisa sobre como detectar deepfakes e mídia gerada ou manipulada por IA — da equipe Verifyco, verificação forense no iPhone.</description>
     <language>pt</language>
-    <lastBuildDate>Fri, 03 Jul 2026 22:28:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:16:58 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/pt/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fizeram um deepfake de você: o que fazer, passo a passo</title>
+      <link>https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Encontrou um deepfake seu — um vídeo falso, sua voz ou uma imagem íntima? A lista de emergência: provas, remoções, denúncias nas plataformas, opções legais e controle de danos.</description>
+      <category>Deepfakes</category>
+      <category>Guias</category>
+    </item>
+    <item>
+      <title>Deepfakes são ilegais? As leis pelo mundo em 2026</title>
+      <link>https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Criar um deepfake é crime? Um mapa em linguagem clara das leis de deepfake em 2026 — a lei TAKE IT DOWN dos EUA, a rotulagem do AI Act da UE, o Reino Unido e mais.</description>
+      <category>Deepfakes</category>
+      <category>Pesquisa</category>
+    </item>
+    <item>
+      <title>Como saber se uma foto foi editada (7 checagens que funcionam)</title>
+      <link>https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited</guid>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Não é IA — só adulterada. Aprenda a saber se uma foto foi editada ou photoshopada: sombras e bordas, análise de nível de erro, metadados, busca reversa e ferramentas forenses.</description>
+      <category>Guias</category>
+      <category>Detecção de IA</category>
+    </item>
+    <item>
+      <title>Quão precisos são os detectores de IA, de verdade? (O que os números significam)</title>
+      <link>https://verifyco.info/pt/blog/how-accurate-are-ai-detectors</link>
+      <guid isPermaLink="true">https://verifyco.info/pt/blog/how-accurate-are-ai-detectors</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Detectores de IA prometem 99% de precisão — a realidade é mais complexa. O que a precisão realmente mede, por que acontecem falsos positivos, o que quebra os detectores e como ler uma pontuação de confiança.</description>
+      <category>Detecção de IA</category>
+      <category>Pesquisa</category>
+    </item>
     <item>
       <title>Golpes de clonagem de voz com IA: como se proteger em 2026</title>
       <link>https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself</link>
