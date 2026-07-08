@@ -1,15 +1,15 @@
 ---
-title: "Woran erkennt man, ob ein Video KI-generiert ist? (Leitfaden 2026)"
-description: "Sora-Klasse-Modelle erzeugen Video aus einem Text-Prompt. So erkennen Sie, ob ein Video KI-generiert ist: Physikfehler, Texturartefakte, Herkunftsprüfung und forensische Werkzeuge."
+title: Woran erkennt man, ob ein Video KI-generiert ist? (Leitfaden 2026)
+description: 'Sora-Klasse-Modelle erzeugen Video aus einem Text-Prompt. So erkennen Sie, ob ein Video KI-generiert ist: Physikfehler, Texturartefakte, Herkunftsprüfung und forensische Werkzeuge.'
 slug: how-to-tell-if-a-video-is-ai-generated
 date: 2026-07-02
-updated: 2026-07-03
-author: "Verifyco-Team"
+author: Verifyco-Team
 tags:
   - KI-Erkennung
   - Leitfäden
-image: ''
-imageAlt: "Analyse eines Videos auf dem iPhone, um KI-Erzeugung zu erkennen"
+image: /uploads/blog/1000000350.jpg
+imageAlt: Analyse eines Videos auf dem iPhone, um KI-Erzeugung zu erkennen
+updated: 2026-07-03
 ---
 
 Ein Deepfake bedeutete früher genau eines: ein echtes Video mit ausgetauschtem Gesicht. Diese Ära ist vorbei. Text-zu-Video-Modelle — Sora, Veo und ihre Open-Source-Nachfolger — generieren inzwischen **ganze Szenen aus einem Prompt**: die Menschen, den Raum, das Licht, die Kamerafahrt — nichts davon hat je existiert. Diese vollsynthetischen Videos scheitern anders als Face-Swaps und brauchen deshalb eine eigene Checkliste.

@@ -1,15 +1,15 @@
 ---
-title: "Cómo saber si un vídeo está generado por IA (guía 2026)"
-description: "Los modelos tipo Sora ya crean vídeo desde un texto. Aprende a saber si un vídeo está generado por IA: fallos de física, artefactos de textura, procedencia y herramientas forenses."
+title: Cómo saber si un vídeo está generado por IA (guía 2026)
+description: 'Los modelos tipo Sora ya crean vídeo desde un texto. Aprende a saber si un vídeo está generado por IA: fallos de física, artefactos de textura, procedencia y herramientas forenses.'
 slug: how-to-tell-if-a-video-is-ai-generated
 date: 2026-07-02
-updated: 2026-07-03
-author: "Equipo Verifyco"
+author: Equipo Verifyco
 tags:
   - Detección de IA
   - Guías
-image: ''
-imageAlt: "Analizando un vídeo en iPhone para saber si está generado por IA"
+image: /uploads/blog/1000000350.jpg
+imageAlt: Analizando un vídeo en iPhone para saber si está generado por IA
+updated: 2026-07-03
 ---
 
 Un deepfake significaba una sola cosa: un vídeo real con la cara cambiada. Esa era terminó. Los modelos de texto-a-vídeo — Sora, Veo y sus sucesores de código abierto — generan ahora **escenas enteras a partir de una instrucción**: las personas, la sala, la luz, el movimiento de cámara… nada de eso existió jamás. Estos vídeos totalmente sintéticos fallan de forma distinta a los intercambios de cara, así que merecen su propia lista de comprobación.

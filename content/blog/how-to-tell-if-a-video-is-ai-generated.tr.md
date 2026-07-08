@@ -1,15 +1,15 @@
 ---
-title: "Bir Videonun Yapay Zekâ Üretimi Olduğu Nasıl Anlaşılır (2026 Rehberi)"
-description: "Sora sınıfı modeller artık yazıdan video üretiyor. Bir videonun AI üretimi olduğunu anlamanın yolları: fizik hataları, doku bozulmaları, kaynak kontrolü ve adli araçlar."
+title: Bir Videonun Yapay Zekâ Üretimi Olduğu Nasıl Anlaşılır (2026 Rehberi)
+description: 'Sora sınıfı modeller artık yazıdan video üretiyor. Bir videonun AI üretimi olduğunu anlamanın yolları: fizik hataları, doku bozulmaları, kaynak kontrolü ve adli araçlar.'
 slug: how-to-tell-if-a-video-is-ai-generated
 date: 2026-07-02
-updated: 2026-07-03
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - AI Tespiti
   - Rehberler
-image: ''
-imageAlt: "Bir videonun AI üretimi olup olmadığını iPhone'da analiz etme"
+image: /uploads/blog/1000000350.jpg
+imageAlt: Bir videonun AI üretimi olup olmadığını iPhone'da analiz etme
+updated: 2026-07-03
 ---
 
 Deepfake eskiden tek bir şey demekti: yüzü değiştirilmiş gerçek bir video. O dönem bitti. Yazıdan-videoya modeller — Sora, Veo ve açık kaynak halefleri — artık bir komuttan **sahnenin tamamını** üretiyor: insanlar, oda, ışık, kamera hareketi... hiçbiri hiç var olmadı. Tamamen sentetik bu videolar, yüz değiştirmelerden farklı şekillerde hata yapar; o yüzden kendi kontrol listelerini hak ediyorlar.

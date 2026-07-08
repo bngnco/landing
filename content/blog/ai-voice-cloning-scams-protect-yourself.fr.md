@@ -1,15 +1,15 @@
 ---
-title: "Arnaques au clonage vocal par IA : comment vous protéger en 2026"
-description: "Trois secondes d'audio suffisent aux escrocs pour cloner une voix. Découvrez comment fonctionnent les arnaques au clonage vocal, les signaux d'un faux appel et les habitudes qui protègent vraiment."
+title: 'Arnaques au clonage vocal par IA : comment vous protéger en 2026'
+description: Trois secondes d'audio suffisent aux escrocs pour cloner une voix. Découvrez comment fonctionnent les arnaques au clonage vocal, les signaux d'un faux appel et les habitudes qui protègent vraiment.
 slug: ai-voice-cloning-scams-protect-yourself
 date: 2026-07-03
-updated: 2026-07-03
-author: "L’équipe Verifyco"
+author: L’équipe Verifyco
 tags:
   - Deepfakes
   - Guides
-image: ''
-imageAlt: "Se protéger d'un appel frauduleux à la voix clonée par IA"
+image: /uploads/blog/1000000344.jpg
+imageAlt: Se protéger d'un appel frauduleux à la voix clonée par IA
+updated: 2026-07-03
 ---
 
 Le téléphone sonne. C'est le numéro de votre fille — ou un numéro inconnu, mais c'est *sa voix*, paniquée, qui demande de l'argent en urgence. Sauf que ce n'est pas elle. C'est un clone, généré à partir de quelques secondes d'audio récupérées dans une vidéo publiée en ligne, et la personne derrière mène l'une des arnaques qui croît le plus vite au monde.
