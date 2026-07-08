@@ -104,7 +104,7 @@
       <a href="/pt/blog">Blog</a><span class="sep">/</span>
       <span aria-current="page">Detecção de IA</span>
     </nav>
-        <div class="post-tags"><a class="chip" href="/pt/blog/tag/deteccão-de-ia">Detecção de IA</a><a class="chip" href="/pt/blog/tag/guias">Guias</a></div>
+        <div class="post-tags"><a class="chip" href="/pt/blog/tag/deteccao-de-ia">Detecção de IA</a><a class="chip" href="/pt/blog/tag/guias">Guias</a></div>
         <h1 class="post-title">Como saber se um vídeo foi gerado por IA (guia 2026)</h1>
         <p class="post-dek">Modelos classe Sora já criam vídeo a partir de texto. Aprenda a saber se um vídeo foi gerado por IA: falhas de física, artefatos de textura, checagem de procedência e ferramentas forenses.</p>
         <div class="post-meta">
@@ -123,7 +123,7 @@
       
       <nav class="toc measure" aria-label="Table of contents">
         <p class="toc-h">Nesta página</p>
-        <ol><li><a href="#primeiro-os-sinais-faceis-no-quadro">Primeiro, os sinais fáceis no quadro</a></li><li><a href="#depois-cheque-a-permanencia-dos-objetos">Depois, cheque a permanência dos objetos</a></li><li><a href="#cheque-a-procedencia-não-so-os-pixels">Cheque a procedência, não só os pixels</a></li><li><a href="#quando-os-olhos-não-bastam-analise-forense">Quando os olhos não bastam: análise forense</a></li><li><a href="#perguntas-frequentes">Perguntas frequentes</a></li><li><a href="#conclusão">Conclusão</a></li></ol>
+        <ol><li><a href="#primeiro-os-sinais-faceis-no-quadro">Primeiro, os sinais fáceis no quadro</a></li><li><a href="#depois-cheque-a-permanencia-dos-objetos">Depois, cheque a permanência dos objetos</a></li><li><a href="#cheque-a-procedencia-nao-so-os-pixels">Cheque a procedência, não só os pixels</a></li><li><a href="#quando-os-olhos-nao-bastam-analise-forense">Quando os olhos não bastam: análise forense</a></li><li><a href="#perguntas-frequentes">Perguntas frequentes</a></li><li><a href="#conclusao">Conclusão</a></li></ol>
       </nav>
 
       <div class="prose measure">
@@ -146,13 +146,13 @@
     <p><strong>Quer verificar um arquivo agora?</strong> O Verifyco analisa qualquer foto ou vídeo no seu iPhone — no dispositivo e em privado.</p>
     <a class="cta-link" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Obter o Verifyco →</a>
   </aside>
-<h2 id="cheque-a-procedencia-não-so-os-pixels">Cheque a procedência, não só os pixels</h2>
+<h2 id="cheque-a-procedencia-nao-so-os-pixels">Cheque a procedência, não só os pixels</h2>
 <ul>
 <li><strong>Fonte primeiro.</strong> Quem postou, onde mais existe, algum veículo confiável publicou? Um clipe dramático que só existe numa conta anônima é bandeira vermelha antes de olhar um único quadro.</li>
 <li><strong>Content Credentials.</strong> Algumas ferramentas de IA (incluindo modelos classe Sora) anexam metadados C2PA declarando o conteúdo como sintético — e algumas plataformas os exibem. A ausência não prova nada (metadados somem com prints e re-uploads), mas a presença é uma resposta rápida e honesta. Explicamos o sistema inteiro em <a href="/pt/blog/content-credentials-c2pa-explained">Content Credentials (C2PA), explicado</a>.</li>
 <li><strong>Marcas-d’água.</strong> Vários geradores embutem marcas visíveis ou invisíveis (como o SynthID). As invisíveis exigem o verificador do próprio fornecedor — útil quando acusa, mudo sobre todos os outros geradores.</li>
 </ul>
-<h2 id="quando-os-olhos-não-bastam-analise-forense">Quando os olhos não bastam: análise forense</h2>
+<h2 id="quando-os-olhos-nao-bastam-analise-forense">Quando os olhos não bastam: análise forense</h2>
 <p>Cada sinal acima desbota a cada versão dos modelos, e a pesquisa mostra repetidamente que humanos identificam vídeo sintético de alta qualidade em taxas pouco melhores que o acaso. A abordagem robusta é a das ferramentas forenses: <strong>combinar sinais independentes em vez de confiar em um só.</strong></p>
 <p>O <strong><a href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener noreferrer">Verifyco</a></strong> executa essa fusão direto no seu iPhone: consistência temporal e fluxo óptico (as coisas se movem e persistem como objetos reais?), análise no domínio da frequência (a impressão estatística que os modelos de difusão deixam), forense de metadados e codificação, checagem de procedência e análise facial neural quando há rostos. Você recebe uma pontuação de confiança de 0 a 100 com o detalhamento por camada — e honestidade quando a evidência é inconclusiva, o que é comum em clipes sociais muito recomprimidos. Também dá para colar um link de uma plataforma social em vez de baixar o arquivo. Tudo roda <strong>no dispositivo</strong>: o clipe nunca sai do telefone (<a href="/pt/blog/on-device-verification-explained">por que isso importa</a>).</p>
 <h3 id="checklist-rapido">Checklist rápido</h3>
@@ -173,7 +173,7 @@ Pause em qualquer texto da cena e depois confira os reflexos. Os dois continuam 
 Gerações longas acumulam erros de consistência — objetos derivam, rostos mutam, cenas se contradizem. Muitos clipes sintéticos ficam abaixo de ~10–15 segundos ou se escondem atrás de cortes rápidos justamente para não se entregarem.</p>
 <p><strong>Marca-d’água ou credencial é prova em algum sentido?</strong>
 A presença de uma credencial de IA é evidência forte de que é sintético. A ausência não prova absolutamente nada — a maioria dos clipes reais <em>e</em> falsos da internet já teve os metadados removidos pelas plataformas.</p>
-<h2 id="conclusão">Conclusão</h2>
+<h2 id="conclusao">Conclusão</h2>
 <p>O vídeo totalmente gerado por IA quebrou a velha regra do “ver para crer”, mas não quebrou a verificação: física, permanência, procedência e forense continuam pegando o que o olho perde. Crie o hábito — <strong>verifique antes de compartilhar</strong> — e mantenha à mão o guia irmão para imagens estáticas: <a href="/pt/blog/how-to-tell-if-an-image-is-ai-generated">como saber se uma imagem foi gerada por IA</a>.</p>
 
         
@@ -215,7 +215,7 @@ A presença de uma credencial de IA é evidência forte de que é sintético. A 
         <img src="/assets/app/signals.png" alt="Inspeção de uma foto no iPhone em busca de sinais de edição e manipulação" loading="lazy" decoding="async" />
       </a>
       <div class="card-body">
-        <div class="card-tags"><a class="chip" href="/pt/blog/tag/guias">Guias</a><a class="chip" href="/pt/blog/tag/deteccão-de-ia">Detecção de IA</a></div>
+        <div class="card-tags"><a class="chip" href="/pt/blog/tag/guias">Guias</a><a class="chip" href="/pt/blog/tag/deteccao-de-ia">Detecção de IA</a></div>
         <h2 class="card-title"><a href="/pt/blog/how-to-tell-if-a-photo-is-edited">Como saber se uma foto foi editada (7 checagens que funcionam)</a></h2>
         <p class="card-excerpt">Não é IA — só adulterada. Aprenda a saber se uma foto foi editada ou photoshopada: sombras e bordas, análise de nível de erro, metadados, busca reversa e ferramentas forenses.</p>
         <div class="card-meta">
@@ -230,7 +230,7 @@ A presença de uma credencial de IA é evidência forte de que é sintético. A 
         <img src="/assets/app/signals.png" alt="Entendendo a precisão dos detectores de IA e as pontuações de confiança" loading="lazy" decoding="async" />
       </a>
       <div class="card-body">
-        <div class="card-tags"><a class="chip" href="/pt/blog/tag/deteccão-de-ia">Detecção de IA</a><a class="chip" href="/pt/blog/tag/pesquisa">Pesquisa</a></div>
+        <div class="card-tags"><a class="chip" href="/pt/blog/tag/deteccao-de-ia">Detecção de IA</a><a class="chip" href="/pt/blog/tag/pesquisa">Pesquisa</a></div>
         <h2 class="card-title"><a href="/pt/blog/how-accurate-are-ai-detectors">Quão precisos são os detectores de IA, de verdade? (O que os números significam)</a></h2>
         <p class="card-excerpt">Detectores de IA prometem 99% de precisão — a realidade é mais complexa. O que a precisão realmente mede, por que acontecem falsos positivos, o que quebra os detectores e como ler uma pontuação de confiança.</p>
         <div class="card-meta">

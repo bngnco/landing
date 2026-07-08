@@ -310,13 +310,25 @@ const slugify = (s = "") =>
     .toLowerCase()
     .trim()
     .replace(/['’]/g, "")
+    // Fold every Latin diacritic to ASCII (ã→a, ç→c, ö→o, é→e …) via canonical
+    // decomposition + stripping the combining marks. This catches accents the
+    // TRANSLIT map missed (e.g. ã/õ) so Latin-script slugs stay pure ASCII.
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .normalize("NFC")
+    // Leftovers that don't decompose (ı, ß) still need the explicit map.
     .replace(/[çğıöşüâîûáàäéèêëíóôúñß]/g, (c) => TRANSLIT[c] || c)
     // Keep Unicode letters/numbers (Arabic, Cyrillic, CJK, …) so non-Latin
     // tags/headings get real slugs instead of collapsing to empty. ASCII
-    // stays clean; other scripts are preserved (browsers + Google handle
-    // UTF-8 URLs fine).
+    // stays clean; other scripts are preserved (they are percent-encoded via
+    // slugURL() before being emitted into any URL).
     .replace(/[^\p{L}\p{N}\p{M}]+/gu, "-")
     .replace(/^-+|-+$/g, "");
+
+// URL-safe form of a slug: percent-encodes non-ASCII (e.g. Arabic) so it is a
+// valid URL for <loc>, canonical and hrefs. Filenames keep the RAW slugify()
+// output — the host decodes the request path back to that on-disk name.
+const slugURL = (s) => encodeURIComponent(slugify(s));
 
 const abs = (p) => (p && p.startsWith("http") ? p : SITE.url + (p || ""));
 
@@ -571,7 +583,7 @@ ${FOOT_JS}
 
 /* ── Tag chips ────────────────────────────────────────────────────── */
 const tagChip = (t, lang) =>
-  `<a class="chip" href="${langPrefix(lang)}/blog/tag/${slugify(t)}">${esc(t)}</a>`;
+  `<a class="chip" href="${langPrefix(lang)}/blog/tag/${slugURL(t)}">${esc(t)}</a>`;
 
 /* ── Post card (index/tag listings) ───────────────────────────────── */
 function postCard(p, ui) {
@@ -751,7 +763,7 @@ function listingPage({
   const tagFilter = `
     <div class="tag-filter">
       <a class="chip${!activeTag ? " is-on" : ""}" href="${pre}/blog">${esc(ui.all)}</a>
-      ${allTags.map((t) => `<a class="chip${activeTag === t ? " is-on" : ""}" href="${pre}/blog/tag/${slugify(t)}">${esc(t)}</a>`).join("")}
+      ${allTags.map((t) => `<a class="chip${activeTag === t ? " is-on" : ""}" href="${pre}/blog/tag/${slugURL(t)}">${esc(t)}</a>`).join("")}
     </div>`;
 
   const collection = jsonLd({
@@ -1003,12 +1015,12 @@ function build() {
           eyebrow: ui.topic,
           heading: esc(tag),
           lead: `${SITE.name} · ${esc(tag)}`,
-          canonical: `${SITE.url}${pre}/blog/tag/${slugify(tag)}`,
+          canonical: `${SITE.url}${pre}/blog/tag/${slugURL(tag)}`,
           title: `${tag} — ${SITE.blogName}`,
           description: ui.listDesc,
         })
       );
-      sitemapUrls.push({ loc: `${SITE.url}${pre}/blog/tag/${slugify(tag)}`, priority: "0.4" });
+      sitemapUrls.push({ loc: `${SITE.url}${pre}/blog/tag/${slugURL(tag)}`, priority: "0.4" });
     }
 
     // Per-language RSS feed
