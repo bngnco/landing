@@ -8,7 +8,7 @@ author: Verifyco-Team
 tags:
   - Deepfakes
   - Leitfäden
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png
+image: /uploads/blog/deepfake-victim-guide-cover.jpg
 imageAlt: Schritt-für-Schritt-Reaktion nach der Entdeckung eines Deepfakes von sich selbst
 ---
 

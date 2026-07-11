@@ -7,7 +7,7 @@ author: Verifyco Team
 tags:
   - AI Detection
   - Guides
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+image: /uploads/blog/ai-profile-pictures-cover.jpg
 imageAlt: Checking whether a dating profile picture is AI-generated on iPhone
 updated: 2026-07-03
 ---

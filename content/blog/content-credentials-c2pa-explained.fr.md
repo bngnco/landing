@@ -7,7 +7,7 @@ author: L’équipe Verifyco
 tags:
   - Recherche
   - Guides
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png
+image: /uploads/blog/content-credentials-c2pa-cover.jpg
 imageAlt: Vérification des Content Credentials C2PA d'une photo sur iPhone
 updated: 2026-07-03
 ---

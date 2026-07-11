@@ -7,7 +7,7 @@ author: Verifyco Ekibi
 tags:
   - AI Tespiti
   - Rehberler
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+image: /uploads/blog/ai-profile-pictures-cover.jpg
 imageAlt: Bir flört profili fotoğrafının AI üretimi olup olmadığını iPhone'da kontrol etme
 updated: 2026-07-03
 ---

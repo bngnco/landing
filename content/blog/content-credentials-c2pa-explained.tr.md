@@ -7,7 +7,7 @@ author: Verifyco Ekibi
 tags:
   - Araştırma
   - Rehberler
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png
+image: /uploads/blog/content-credentials-c2pa-cover.jpg
 imageAlt: iPhone'da bir fotoğrafın C2PA İçerik Kimlik Bilgilerini kontrol etme
 updated: 2026-07-03
 ---

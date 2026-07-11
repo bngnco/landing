@@ -7,7 +7,7 @@ author: فريق Verifyco
 tags:
   - أبحاث
   - أدلّة
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png
+image: /uploads/blog/content-credentials-c2pa-cover.jpg
 imageAlt: فحص بيانات اعتماد المحتوى C2PA لصورة على iPhone
 updated: 2026-07-03
 ---

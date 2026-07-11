@@ -7,7 +7,7 @@ author: Team Verifyco
 tags:
   - Rilevamento IA
   - Guide
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+image: /uploads/blog/ai-profile-pictures-cover.jpg
 imageAlt: Controllare su iPhone se la foto di un profilo di incontri è generata dall'IA
 updated: 2026-07-03
 ---

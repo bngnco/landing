@@ -7,7 +7,7 @@ author: Verifyco-Team
 tags:
   - KI-Erkennung
   - Leitfäden
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+image: /uploads/blog/ai-profile-pictures-cover.jpg
 imageAlt: Prüfung auf dem iPhone, ob ein Dating-Profilbild KI-generiert ist
 updated: 2026-07-03
 ---

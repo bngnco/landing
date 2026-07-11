@@ -7,7 +7,7 @@ author: Verifyco-Team
 tags:
   - KI-Erkennung
   - iOS
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
+image: /uploads/blog/deepfake-detector-app-cover.jpg
 imageAlt: Auswahl einer vertrauenswürdigen Deepfake-Detektor-App auf dem iPhone
 updated: 2026-07-03
 ---

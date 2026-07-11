@@ -7,7 +7,7 @@ author: Verifyco Team
 tags:
   - AI Detection
   - iOS
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
+image: /uploads/blog/deepfake-detector-app-cover.jpg
 imageAlt: Choosing a trustworthy deepfake detector app on iPhone
 updated: 2026-07-03
 ---

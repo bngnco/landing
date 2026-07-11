@@ -8,7 +8,7 @@ author: فريق Verifyco
 tags:
   - التزييف العميق
   - أدلّة
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png
+image: /uploads/blog/deepfake-victim-guide-cover.jpg
 imageAlt: الاستجابة خطوة بخطوة بعد اكتشاف تزييف عميق لنفسك
 ---
 

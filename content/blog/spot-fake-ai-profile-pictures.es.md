@@ -7,7 +7,7 @@ author: Equipo Verifyco
 tags:
   - Detección de IA
   - Guías
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+image: /uploads/blog/ai-profile-pictures-cover.jpg
 imageAlt: Comprobando en iPhone si la foto de un perfil de citas está generada por IA
 updated: 2026-07-03
 ---

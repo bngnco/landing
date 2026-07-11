@@ -7,7 +7,7 @@ author: فريق Verifyco
 tags:
   - كشف الذكاء الاصطناعي
   - iOS
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
+image: /uploads/blog/deepfake-detector-app-cover.jpg
 imageAlt: اختيار تطبيق موثوق لكشف التزييف العميق على iPhone
 updated: 2026-07-03
 ---

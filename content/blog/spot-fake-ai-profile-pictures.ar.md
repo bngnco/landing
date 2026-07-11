@@ -7,7 +7,7 @@ author: فريق Verifyco
 tags:
   - كشف الذكاء الاصطناعي
   - أدلّة
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+image: /uploads/blog/ai-profile-pictures-cover.jpg
 imageAlt: التحقق على iPhone من أن صورة ملف شخصي في تطبيق مواعدة مولّدة بالذكاء الاصطناعي
 updated: 2026-07-03
 ---

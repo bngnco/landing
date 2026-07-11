@@ -8,7 +8,7 @@ author: Verifyco Ekibi
 tags:
   - Deepfake
   - Rehberler
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png
+image: /uploads/blog/deepfake-victim-guide-cover.jpg
 imageAlt: Kendi deepfake'ini keşfettikten sonra adım adım müdahale
 ---
 

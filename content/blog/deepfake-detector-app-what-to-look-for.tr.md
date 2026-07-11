@@ -7,7 +7,7 @@ author: Verifyco Ekibi
 tags:
   - AI Tespiti
   - iOS
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
+image: /uploads/blog/deepfake-detector-app-cover.jpg
 imageAlt: iPhone'da güvenilir bir deepfake tespit uygulaması seçmek
 updated: 2026-07-03
 ---

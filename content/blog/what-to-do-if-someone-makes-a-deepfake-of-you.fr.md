@@ -8,7 +8,7 @@ author: L’équipe Verifyco
 tags:
   - Deepfakes
   - Guides
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png
+image: /uploads/blog/deepfake-victim-guide-cover.jpg
 imageAlt: Réponse étape par étape après la découverte d'un deepfake de soi
 ---
 

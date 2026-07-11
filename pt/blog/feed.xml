@@ -5,7 +5,11 @@
     <link>https://verifyco.info/pt/blog</link>
     <description>Guias e pesquisa sobre como detectar deepfakes e mídia gerada ou manipulada por IA — da equipe Verifyco, verificação forense no iPhone.</description>
     <language>pt</language>
+<<<<<<< ours
     <lastBuildDate>Sat, 11 Jul 2026 22:14:03 GMT</lastBuildDate>
+=======
+    <lastBuildDate>Sat, 11 Jul 2026 20:08:19 GMT</lastBuildDate>
+>>>>>>> theirs
     <atom:link href="https://verifyco.info/pt/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fizeram um deepfake de você: o que fazer, passo a passo</title>

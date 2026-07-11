@@ -33,7 +33,7 @@ const SITE = {
   defaultImage: "/assets/app/signals.png",
   twitter: "@verifyco",
   // Existing top-level pages, included in the sitemap (clean URLs).
-  staticPages: ["/", "/deepdetect-plus", "/support", "/privacy", "/terms"],
+  staticPages: ["/", "/deepdetect-plus", "/vera", "/support", "/privacy", "/terms"],
 };
 
 /* ── Languages ────────────────────────────────────────────────────────
