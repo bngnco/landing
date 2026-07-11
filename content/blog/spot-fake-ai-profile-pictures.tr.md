@@ -1,15 +1,15 @@
 ---
-title: "Sahte AI Profil Fotoğrafları Nasıl Anlaşılır (Flört Uygulamaları ve Sosyal Medya)"
-description: "Romantik dolandırıcılar ve bot ağları AI üretimi profil fotoğraflarıyla çalışıyor. Sahte profil fotoğrafının görsel işaretleri, tersine görsel arama akışı ve saniyeler içinde doğrulama."
+title: Sahte AI Profil Fotoğrafları Nasıl Anlaşılır (Flört Uygulamaları ve Sosyal Medya)
+description: Romantik dolandırıcılar ve bot ağları AI üretimi profil fotoğraflarıyla çalışıyor. Sahte profil fotoğrafının görsel işaretleri, tersine görsel arama akışı ve saniyeler içinde doğrulama.
 slug: spot-fake-ai-profile-pictures
 date: 2026-06-22
-updated: 2026-07-03
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - AI Tespiti
   - Rehberler
-image: ''
-imageAlt: "Bir flört profili fotoğrafının AI üretimi olup olmadığını iPhone'da kontrol etme"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+imageAlt: Bir flört profili fotoğrafının AI üretimi olup olmadığını iPhone'da kontrol etme
+updated: 2026-07-03
 ---
 
 Profil çekici, tanıtım yazısı sevimli, sohbet şüphe uyandıracak kadar akıcı. Giderek büyüyen bir bölümünün arkasında hiç kimse yok — bir senaryoya bağlanmış, yapay zekâ üretimi bir yüz var yalnızca. Romantik dolandırıcılık tek başına, bildirilen kayıplarda yılda bir milyar doları aşıyor (gerçek rakam daha yüksek; utanç bildirimleri bastırıyor) ve sahte profilleri endüstriyelleştiren şey, tek kullanımlık, aramada iz bırakmayan AI yüzleri oldu.

@@ -1,15 +1,15 @@
 ---
-title: "How to Spot Fake AI Profile Pictures on Dating Apps & Social Media"
-description: "Romance scammers and bot networks run on AI-generated profile photos. Learn the visual tells of a fake profile picture, the reverse-search workflow, and how to verify in seconds."
+title: How to Spot Fake AI Profile Pictures on Dating Apps & Social Media
+description: Romance scammers and bot networks run on AI-generated profile photos. Learn the visual tells of a fake profile picture, the reverse-search workflow, and how to verify in seconds.
 slug: spot-fake-ai-profile-pictures
 date: 2026-06-22
-updated: 2026-07-03
-author: "Verifyco Team"
+author: Verifyco Team
 tags:
   - AI Detection
   - Guides
-image: ''
-imageAlt: "Checking whether a dating profile picture is AI-generated on iPhone"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+imageAlt: Checking whether a dating profile picture is AI-generated on iPhone
+updated: 2026-07-03
 ---
 
 The profile is attractive, the bio is charming, and the conversation is suspiciously effortless. Behind a growing share of them there is no person at all — just an AI-generated face wired to a script. Romance scams alone cost victims over a billion dollars a year in reported losses (the real figure is higher; shame suppresses reporting), and disposable, unsearchable AI faces are what made fake profiles industrial.
@@ -30,7 +30,7 @@ Individually none of these is proof; in combination they're telling:
 - **Background logic.** Melted architecture, dreamlike interiors, and text (shopfronts, book spines, T-shirts) that turns into pseudo-letters when zoomed. Background text is one of the most durable tells — the full artifact checklist is in [how to tell if an image is AI-generated](/blog/how-to-tell-if-an-image-is-ai-generated).
 - **The single-photo problem.** One flawless, front-facing, studio-quality portrait and nothing else. Real people have angles, contexts, other humans, bad lighting, years of accumulation.
 
-**The strongest visual test: ask for variety.** A generated identity struggles to produce the same face from a different angle, in different lighting, doing something specific. Which leads to the classic move — ask for a photo *holding today's date on paper* or making an unusual gesture. Delays and excuses are an answer.
+**The strongest visual test: ask for variety.** A generated identity struggles to produce the same face from a different angle, in different lighting, doing something specific. Which leads to the classic move — ask for a photo _holding today's date on paper_ or making an unusual gesture. Delays and excuses are an answer.
 
 [[cta]]
 
@@ -39,17 +39,17 @@ Individually none of these is proof; in combination they're telling:
 1. **Reverse image search first.** Google Images, Google Lens or TikTok's search on the profile photo. A hit on a stock model or someone else's account settles it — a stolen photo, not a synthetic one. No hit proves nothing (that's what AI faces are for), so continue.
 2. **Zoom the details.** Accessories, teeth, hair edges, background text — the list above.
 3. **Audit the profile as a whole.** Freshly created account, few followers but aggressive outreach, no tagged photos by others, a feed where every image has the same too-clean AI sheen. Bot networks reuse bios and post timing, too.
-4. **Run the photo through forensic analysis.** Visual inspection catches yesterday's generators; the current ones need signal analysis. **[Verifyco](https://apps.apple.com/app/id6772592963)** checks a saved profile photo directly on your iPhone — neural face analysis tuned to generator artifacts, frequency-domain fingerprints of diffusion models, metadata forensics — and returns a confidence score with the reasoning broken out per layer. On-device, so the awkward "I'm checking my date's photo" moment stays entirely on your phone ([how that works](/blog/on-device-verification-explained)).
-5. **Watch the behaviour.** The photo gets you in the door; the scam is in the pattern: love-bombing on an accelerated schedule, always a reason video calls fail, a sudden crisis, and eventually — money, gift cards or crypto "investment opportunities" (the *pig butchering* playbook). The moment money enters a relationship that began online: full stop, verify identity out-of-band.
+4. **Run the photo through forensic analysis.** Visual inspection catches yesterday's generators; the current ones need signal analysis. [**Verifyco**](https://apps.apple.com/app/id6772592963) checks a saved profile photo directly on your iPhone — neural face analysis tuned to generator artifacts, frequency-domain fingerprints of diffusion models, metadata forensics — and returns a confidence score with the reasoning broken out per layer. On-device, so the awkward "I'm checking my date's photo" moment stays entirely on your phone ([how that works](/blog/on-device-verification-explained)).
+5. **Watch the behaviour.** The photo gets you in the door; the scam is in the pattern: love-bombing on an accelerated schedule, always a reason video calls fail, a sudden crisis, and eventually — money, gift cards or crypto "investment opportunities" (the _pig butchering_ playbook). The moment money enters a relationship that began online: full stop, verify identity out-of-band.
 
 ## If it's a video call, don't relax yet
 
-Live face-swapping is real and cheap now. A video call that *connects* proves less than it used to: watch for the face-edge shimmer during fast head turns, lighting that doesn't match the room, lip-sync drift — the full list is in [5 signs a video has been deepfaked](/blog/5-signs-a-video-has-been-deepfaked). Asking the person to turn profile, wave a hand across their face, or pick up a named object stresses exactly what real-time swaps do worst.
+Live face-swapping is real and cheap now. A video call that _connects_ proves less than it used to: watch for the face-edge shimmer during fast head turns, lighting that doesn't match the room, lip-sync drift — the full list is in [5 signs a video has been deepfaked](/blog/5-signs-a-video-has-been-deepfaked). Asking the person to turn profile, wave a hand across their face, or pick up a named object stresses exactly what real-time swaps do worst.
 
 ## Frequently asked questions
 
 **Can reverse image search detect AI-generated profile photos?**
-No — that's precisely why scammers use them. Reverse search finds *stolen* photos with an original elsewhere. A generated face has no original, so a clean reverse search result means nothing on its own.
+No — that's precisely why scammers use them. Reverse search finds _stolen_ photos with an original elsewhere. A generated face has no original, so a clean reverse search result means nothing on its own.
 
 **What's the fastest tell on a suspected fake profile picture?**
 Zoom on paired details: earrings, glasses frames, ears. Then any text in the background. Those two checks take thirty seconds and still catch a large share of generated portraits.

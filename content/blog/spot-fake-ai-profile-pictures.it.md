@@ -1,15 +1,15 @@
 ---
-title: "Come riconoscere le foto profilo false generate dall'IA (app di incontri e social)"
-description: "Truffatori sentimentali e reti di bot girano su foto profilo generate dall'IA. Impara i segni visivi di una foto profilo falsa, il flusso di ricerca inversa e come verificare in pochi secondi."
+title: Come riconoscere le foto profilo false generate dall'IA (app di incontri e social)
+description: Truffatori sentimentali e reti di bot girano su foto profilo generate dall'IA. Impara i segni visivi di una foto profilo falsa, il flusso di ricerca inversa e come verificare in pochi secondi.
 slug: spot-fake-ai-profile-pictures
 date: 2026-06-22
-updated: 2026-07-03
-author: "Team Verifyco"
+author: Team Verifyco
 tags:
   - Rilevamento IA
   - Guide
-image: ''
-imageAlt: "Controllare su iPhone se la foto di un profilo di incontri è generata dall'IA"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+imageAlt: Controllare su iPhone se la foto di un profilo di incontri è generata dall'IA
+updated: 2026-07-03
 ---
 
 Il profilo è attraente, la bio simpatica, e la conversazione scorre con una facilità sospetta. Dietro una quota crescente di questi profili non c'è nessuno — solo un volto generato dall'IA collegato a un copione. Le sole truffe sentimentali superano il miliardo di dollari l'anno di perdite denunciate (la cifra reale è più alta; la vergogna soffoca le denunce), e ciò che ha industrializzato i profili falsi sono i volti IA usa-e-getta, introvabili nelle ricerche.

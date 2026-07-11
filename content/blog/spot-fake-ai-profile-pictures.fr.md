@@ -1,15 +1,15 @@
 ---
-title: "Repérer les fausses photos de profil générées par IA (applis de rencontre et réseaux)"
-description: "Escrocs sentimentaux et réseaux de bots carburent aux photos de profil générées par IA. Apprenez les signes visuels d'une fausse photo de profil, le flux de recherche inversée et la vérification en quelques secondes."
+title: Repérer les fausses photos de profil générées par IA (applis de rencontre et réseaux)
+description: Escrocs sentimentaux et réseaux de bots carburent aux photos de profil générées par IA. Apprenez les signes visuels d'une fausse photo de profil, le flux de recherche inversée et la vérification en quelques secondes.
 slug: spot-fake-ai-profile-pictures
 date: 2026-06-22
-updated: 2026-07-03
-author: "L’équipe Verifyco"
+author: L’équipe Verifyco
 tags:
   - Détection d’IA
   - Guides
-image: ''
-imageAlt: "Vérifier sur iPhone si la photo d'un profil de rencontre est générée par IA"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+imageAlt: Vérifier sur iPhone si la photo d'un profil de rencontre est générée par IA
+updated: 2026-07-03
 ---
 
 Le profil est séduisant, la bio charmante, et la conversation coule avec une facilité suspecte. Derrière une part croissante d'entre eux, il n'y a personne — juste un visage généré par IA branché sur un script. Les seules arnaques sentimentales dépassent le milliard de dollars de pertes déclarées par an (le chiffre réel est plus élevé ; la honte étouffe les plaintes), et ce qui a industrialisé les faux profils, ce sont les visages IA jetables et introuvables.

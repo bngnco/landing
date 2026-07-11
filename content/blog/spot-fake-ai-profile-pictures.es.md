@@ -1,15 +1,15 @@
 ---
-title: "Cómo detectar fotos de perfil falsas hechas con IA (apps de citas y redes)"
-description: "Los estafadores románticos y las redes de bots funcionan con fotos de perfil generadas por IA. Aprende las señales visuales de una foto de perfil falsa, el flujo de búsqueda inversa y cómo verificar en segundos."
+title: Cómo detectar fotos de perfil falsas hechas con IA (apps de citas y redes)
+description: Los estafadores románticos y las redes de bots funcionan con fotos de perfil generadas por IA. Aprende las señales visuales de una foto de perfil falsa, el flujo de búsqueda inversa y cómo verificar en segundos.
 slug: spot-fake-ai-profile-pictures
 date: 2026-06-22
-updated: 2026-07-03
-author: "Equipo Verifyco"
+author: Equipo Verifyco
 tags:
   - Detección de IA
   - Guías
-image: ''
-imageAlt: "Comprobando en iPhone si la foto de un perfil de citas está generada por IA"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+imageAlt: Comprobando en iPhone si la foto de un perfil de citas está generada por IA
+updated: 2026-07-03
 ---
 
 El perfil es atractivo, la bio encantadora y la conversación fluye con una facilidad sospechosa. Detrás de una parte creciente de ellos no hay nadie — solo una cara generada por IA conectada a un guion. Solo las estafas románticas superan los mil millones de dólares al año en pérdidas denunciadas (la cifra real es mayor; la vergüenza silencia denuncias), y lo que industrializó los perfiles falsos fueron las caras de IA desechables e imposibles de rastrear.

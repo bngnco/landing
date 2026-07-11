@@ -1,15 +1,15 @@
 ---
-title: "Como identificar fotos de perfil falsas feitas por IA (apps de namoro e redes)"
-description: "Golpistas românticos e redes de bots rodam sobre fotos de perfil geradas por IA. Aprenda os sinais visuais de uma foto de perfil falsa, o fluxo de busca reversa e como verificar em segundos."
+title: Como identificar fotos de perfil falsas feitas por IA (apps de namoro e redes)
+description: Golpistas românticos e redes de bots rodam sobre fotos de perfil geradas por IA. Aprenda os sinais visuais de uma foto de perfil falsa, o fluxo de busca reversa e como verificar em segundos.
 slug: spot-fake-ai-profile-pictures
 date: 2026-06-22
-updated: 2026-07-03
-author: "Equipe Verifyco"
+author: Equipe Verifyco
 tags:
   - Detecção de IA
   - Guias
-image: ''
-imageAlt: "Checando no iPhone se a foto de um perfil de namoro foi gerada por IA"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
+imageAlt: Checando no iPhone se a foto de um perfil de namoro foi gerada por IA
+updated: 2026-07-03
 ---
 
 O perfil é atraente, a bio é charmosa e a conversa flui com uma facilidade suspeita. Por trás de uma fatia crescente deles não há ninguém — só um rosto gerado por IA ligado a um roteiro. Só os golpes românticos passam de um bilhão de dólares por ano em perdas reportadas (o número real é maior; a vergonha abafa denúncias), e o que industrializou os perfis falsos foram os rostos de IA descartáveis e irrastreáveis.
