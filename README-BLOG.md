@@ -73,6 +73,9 @@ identical across a post's language files (translate the *tags* per language).
 
 **In the admin panel:** each entry has a language tab (EN · TR · ES · DE · FR ·
 IT · PT · AR). Fill the ones you want and Publish; the CMS writes the files above.
+Whenever you make a meaningful content, link, structured-data or featured-image
+change, also set **Last significant update**. The build uses that date for
+`sitemap.xml`; cosmetic edits can leave it unchanged.
 
 **By hand:** copy `content/blog/foo.md` to `content/blog/foo.<code>.md`, translate
 the frontmatter + body, keep the same `slug`, run `npm run blog`.
@@ -159,17 +162,19 @@ The tech is handled; rankings come from **content + reputation**:
    biggest external ranking factor. Share posts, answer on Reddit/Quora/forums,
    reach out to journalists covering deepfakes. I can't create these; they come
    from your content being worth citing.
-4. **Submit your sitemap** once live: Google Search Console → add
-   `https://verifyco.info`, submit `sitemap.xml`. Do the same in Bing Webmaster.
-5. **Keep posts fresh.** Update older posts; the sitemap `lastmod` updates
-   automatically when you rebuild.
+4. **Submit your sitemap** once live: Google Search Console → add the Domain
+   property `verifyco.info`, submit `https://verifyco.info/sitemap.xml`. Do the
+   same in Bing Webmaster. Do not submit the `www` alias.
+5. **Keep posts fresh.** Update older posts and set **Last significant update**;
+   the build publishes that truthful date as sitemap `lastmod`.
 
 ## Deploy notes
 
-- `vercel.json` runs `node scripts/build-blog.mjs` on each deploy and serves the
-  repo root, with `cleanUrls` for `/blog/<slug>` URLs.
-- The generated `/blog`, `sitemap.xml`, `robots.txt` are also committed, so the
-  site works even without a build.
+- `vercel.json` regenerates the blog and runs `scripts/verify-site.mjs` on each
+  deploy, then serves the repo root with `cleanUrls` for `/blog/<slug>` URLs.
+- The generated `/blog`, `sitemap.xml`, and `robots.txt` are tracked as a static
+  fallback. CMS commits update source Markdown first; Vercel's build output is
+  the production source of truth until generated files are committed again.
 - The admin bundle is **self-hosted** at `admin/sveltia-cms.js` (no third-party
   CDN). To update it later:
   `npm i @sveltia/cms && cp node_modules/@sveltia/cms/dist/sveltia-cms.js admin/`

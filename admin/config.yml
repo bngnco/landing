@@ -58,7 +58,15 @@ collections:
     view_filters:
       - { label: "Drafts", field: draft, pattern: true }
     fields:
-      - { name: title, label: "Title (H1 + SEO title)", widget: string, i18n: true }
+      - { name: title, label: "Title (H1)", widget: string, i18n: true }
+      - {
+          name: metaTitle,
+          label: "SEO title override",
+          widget: string,
+          required: false,
+          i18n: true,
+          hint: "Optional. Use a natural, specific search title around 50–60 characters. Leave blank to use the H1.",
+        }
       - {
           name: description,
           label: "Meta description / excerpt",
@@ -82,6 +90,17 @@ collections:
           time_format: false,
           picker_utc: true,
         }
+      - {
+          name: updated,
+          label: "Last significant update",
+          widget: datetime,
+          required: false,
+          i18n: duplicate,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          picker_utc: true,
+          hint: "Set this when the article text, structured data, links, or featured image changes. It drives sitemap lastmod.",
+        }
       - { name: author, label: "Author", widget: string, default: "Verifyco Team", i18n: true }
       - {
           name: tags,
@@ -97,7 +116,7 @@ collections:
           widget: image,
           required: false,
           i18n: duplicate,
-          choose_url: true,
+          choose_url: false,
           hint: "Upload or pick an image — JPG/PNG/WebP up to a few MB works best (recommended 1200×630). iPhone HEIC photos may not process in the browser: convert to JPG first. Stored in /uploads/blog; leave blank for the default.",
         }
       - { name: imageAlt, label: "Featured image — alt text", widget: string, required: false, i18n: true }

@@ -9,7 +9,7 @@ tags:
   - Rehberler
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
 imageAlt: Bir flört profili fotoğrafının AI üretimi olup olmadığını iPhone'da kontrol etme
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 Profil çekici, tanıtım yazısı sevimli, sohbet şüphe uyandıracak kadar akıcı. Giderek büyüyen bir bölümünün arkasında hiç kimse yok — bir senaryoya bağlanmış, yapay zekâ üretimi bir yüz var yalnızca. Romantik dolandırıcılık tek başına, bildirilen kayıplarda yılda bir milyar doları aşıyor (gerçek rakam daha yüksek; utanç bildirimleri bastırıyor) ve sahte profilleri endüstriyelleştiren şey, tek kullanımlık, aramada iz bırakmayan AI yüzleri oldu.

@@ -9,7 +9,7 @@ tags:
   - Guide
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
 imageAlt: Controllare su iPhone se la foto di un profilo di incontri è generata dall'IA
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 Il profilo è attraente, la bio simpatica, e la conversazione scorre con una facilità sospetta. Dietro una quota crescente di questi profili non c'è nessuno — solo un volto generato dall'IA collegato a un copione. Le sole truffe sentimentali superano il miliardo di dollari l'anno di perdite denunciate (la cifra reale è più alta; la vergogna soffoca le denunce), e ciò che ha industrializzato i profili falsi sono i volti IA usa-e-getta, introvabili nelle ricerche.

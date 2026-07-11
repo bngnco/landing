@@ -9,7 +9,7 @@ tags:
   - Guides
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
 imageAlt: Checking whether a dating profile picture is AI-generated on iPhone
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 The profile is attractive, the bio is charming, and the conversation is suspiciously effortless. Behind a growing share of them there is no person at all — just an AI-generated face wired to a script. Romance scams alone cost victims over a billion dollars a year in reported losses (the real figure is higher; shame suppresses reporting), and disposable, unsearchable AI faces are what made fake profiles industrial.

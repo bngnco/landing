@@ -9,7 +9,7 @@ tags:
   - Guias
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
 imageAlt: Checando no iPhone se a foto de um perfil de namoro foi gerada por IA
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 O perfil é atraente, a bio é charmosa e a conversa flui com uma facilidade suspeita. Por trás de uma fatia crescente deles não há ninguém — só um rosto gerado por IA ligado a um roteiro. Só os golpes românticos passam de um bilhão de dólares por ano em perdas reportadas (o número real é maior; a vergonha abafa denúncias), e o que industrializou os perfis falsos foram os rostos de IA descartáveis e irrastreáveis.

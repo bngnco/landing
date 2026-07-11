@@ -9,7 +9,7 @@ tags:
   - Leitfäden
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png
 imageAlt: Prüfung auf dem iPhone, ob ein Dating-Profilbild KI-generiert ist
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 Das Profil ist attraktiv, die Bio charmant, und das Gespräch läuft verdächtig mühelos. Hinter einem wachsenden Teil davon steckt überhaupt kein Mensch — nur ein KI-generiertes Gesicht, verdrahtet mit einem Skript. Allein Romance-Scams verursachen jährlich über eine Milliarde Dollar an gemeldeten Verlusten (die echte Zahl liegt höher; Scham unterdrückt Anzeigen), und was gefälschte Profile industrialisiert hat, sind wegwerfbare, nicht rückverfolgbare KI-Gesichter.
