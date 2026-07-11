@@ -2,8 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
-  "buildCommand": "node scripts/build-blog.mjs",
+  "buildCommand": "node scripts/build-blog.mjs && node scripts/verify-site.mjs",
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "www.verifyco.info" }
+      ],
+      "destination": "https://verifyco.info/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/sitemap.xml",

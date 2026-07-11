@@ -298,6 +298,13 @@ const esc = (s = "") =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+function metaDescription(value, max = 160) {
+  const text = String(value || "").replace(/\s+/g, " ").trim();
+  if (text.length <= max) return text;
+  const clipped = text.slice(0, max - 1).replace(/\s+\S*$/, "").trim();
+  return `${clipped || text.slice(0, max - 1)}…`;
+}
+
 // Transliterate common Turkish / Latin diacritics so non-English tag slugs
 // stay readable (Araştırma → arastirma) instead of losing whole characters.
 const TRANSLIT = {
@@ -330,7 +337,10 @@ const slugify = (s = "") =>
 // output — the host decodes the request path back to that on-disk name.
 const slugURL = (s) => encodeURIComponent(slugify(s));
 
-const abs = (p) => (p && p.startsWith("http") ? p : SITE.url + (p || ""));
+// URL serialisation belongs in one place. URL.href percent-encodes spaces and
+// other unsafe path characters from CMS uploads while preserving already-safe
+// absolute URLs.
+const abs = (p) => new URL(p || "/", SITE.url).href;
 
 const bcp47 = (lang) => (langMeta(lang).locale || "en_US").replace("_", "-");
 const fmtDate = (d, lang) =>
@@ -342,6 +352,13 @@ const fmtDate = (d, lang) =>
   }).format(d);
 
 const isoDate = (d) => d.toISOString().replace(/\.\d{3}Z$/, "+00:00");
+
+const latestUpdated = (posts = []) =>
+  posts.reduce((latest, post) => (!latest || post.updated > latest ? post.updated : latest), null);
+const latestUpdatedDate = (posts = []) => {
+  const latest = latestUpdated(posts);
+  return latest ? isoDate(latest).slice(0, 10) : undefined;
+};
 
 function readingTime(markdown) {
   const words = markdown.replace(/```[\s\S]*?```/g, " ").split(/\s+/).filter(Boolean).length;
@@ -534,20 +551,21 @@ function page({
   const img = abs(image || SITE.defaultImage);
   const meta = langMeta(lang);
   const ui = strings(lang);
+  const searchDescription = metaDescription(description);
   return `<!DOCTYPE html>
 <html lang="${meta.code}" dir="${meta.dir}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>${esc(title)}</title>
-  <meta name="description" content="${esc(description)}" />
+  <meta name="description" content="${esc(searchDescription)}" />
   <link rel="canonical" href="${esc(canonical)}" />
   <meta name="theme-color" content="#0B0908" />
   <meta name="robots" content="index, follow, max-image-preview:large" />${hreflangLinks(alternates)}
 
   <meta property="og:site_name" content="${esc(SITE.name)}" />
   <meta property="og:title" content="${esc(title)}" />
-  <meta property="og:description" content="${esc(description)}" />
+  <meta property="og:description" content="${esc(searchDescription)}" />
   <meta property="og:url" content="${esc(canonical)}" />
   <meta property="og:image" content="${esc(img)}" />
   <meta property="og:locale" content="${meta.locale}" />${
@@ -561,7 +579,7 @@ function page({
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="${SITE.twitter}" />
   <meta name="twitter:title" content="${esc(title)}" />
-  <meta name="twitter:description" content="${esc(description)}" />
+  <meta name="twitter:description" content="${esc(searchDescription)}" />
   <meta name="twitter:image" content="${esc(img)}" />
 
   <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
@@ -569,7 +587,7 @@ function page({
   <link rel="alternate" type="application/rss+xml" title="${esc(SITE.blogName)}" href="${SITE.url}${langPrefix(lang)}/blog/feed.xml" />
   ${THEME_BOOT}
   ${FONTS}
-  <link rel="stylesheet" href="/assets/blog.css?v=2" />
+  <link rel="stylesheet" href="/assets/blog.css?v=3" />
 ${head}
 </head>
 <body class="${bodyClass}">
@@ -865,15 +883,20 @@ function buildPostRecord(file, lang) {
   }
 
   const pre = langPrefix(lang);
-  const urlPath = `${pre}${SITE.blogPath}/${slug}`;
+  // Keep the on-disk filename human-readable, but always emit an RFC-safe URL.
+  const urlPath = `${pre}${SITE.blogPath}/${slugURL(slug)}`;
   const words = content.replace(/```[\s\S]*?```/g, " ").split(/\s+/).filter(Boolean).length;
+  const title = data.title || slug;
+  const brandedTitle = `${title} | ${SITE.name} Blog`;
   return {
     slug,
     lang,
     urlPath,
     canonical: SITE.url + urlPath,
-    title: data.title || slug,
-    metaTitle: (data.metaTitle || data.title || slug) + " | " + SITE.name + " Blog",
+    title,
+    // Avoid forcing a brand suffix onto already-descriptive titles. Editors can
+    // still provide an explicit metaTitle when a shorter search title is best.
+    metaTitle: data.metaTitle || (brandedTitle.length <= 65 ? brandedTitle : title),
     description: data.description || "",
     author: data.author || SITE.defaultAuthor,
     tags,
@@ -915,6 +938,29 @@ function loadPosts() {
     for (const code of Object.keys(byLang)) byLang[code].alternates = alternates;
   }
 
+  // A translated article may contain an older root-English internal link.
+  // Point it at the same-language target whenever that translation exists;
+  // otherwise keep the English fallback instead of creating a 404.
+  for (const byLang of groups.values()) {
+    for (const [code, post] of Object.entries(byLang)) {
+      if (code === DEFAULT_LANG) continue;
+      post.html = post.html.replace(
+        /href="\/blog\/([^"#?]+)((?:[?#][^"]*)?)"/g,
+        (match, encodedSlug, suffix = "") => {
+          let targetSlug;
+          try {
+            targetSlug = decodeURIComponent(encodedSlug);
+          } catch {
+            return match;
+          }
+          return groups.get(targetSlug)?.[code]
+            ? `href="${langPrefix(code)}/blog/${slugURL(targetSlug)}${suffix}"`
+            : match;
+        },
+      );
+    }
+  }
+
   const byLang = {};
   for (const code of LANG_CODES) {
     byLang[code] = [...groups.values()]
@@ -944,12 +990,9 @@ function build() {
     fs.rmSync(dir, { recursive: true, force: true });
   }
 
-  const sitemapUrls = [
-    ...SITE.staticPages.map((u) => ({
-      loc: SITE.url + (u === "/" ? "/" : u),
-      priority: u === "/" ? "1.0" : "0.7",
-    })),
-  ];
+  const sitemapUrls = SITE.staticPages.map((u) => ({
+    loc: SITE.url + (u === "/" ? "/" : u),
+  }));
 
   for (const code of LANG_CODES) {
     const posts = byLang[code];
@@ -970,9 +1013,7 @@ function build() {
       sitemapUrls.push({
         loc: p.canonical,
         lastmod: p.isoUpdated.slice(0, 10),
-        priority: "0.7",
         image: p.imageAbs,
-        imageAlt: p.imageAlt,
         alternates: p.alternates,
       });
     }
@@ -997,8 +1038,7 @@ function build() {
     );
     sitemapUrls.push({
       loc: SITE.url + pre + "/blog",
-      lastmod: posts[0] ? posts[0].iso.slice(0, 10) : undefined,
-      priority: "0.8",
+      lastmod: latestUpdatedDate(posts),
       alternates: indexAlternates,
     });
 
@@ -1017,10 +1057,13 @@ function build() {
           lead: `${SITE.name} · ${esc(tag)}`,
           canonical: `${SITE.url}${pre}/blog/tag/${slugURL(tag)}`,
           title: `${tag} — ${SITE.blogName}`,
-          description: ui.listDesc,
+          description: `${tag} — ${ui.listDesc}`,
         })
       );
-      sitemapUrls.push({ loc: `${SITE.url}${pre}/blog/tag/${slugURL(tag)}`, priority: "0.4" });
+      sitemapUrls.push({
+        loc: `${SITE.url}${pre}/blog/tag/${slugURL(tag)}`,
+        lastmod: latestUpdatedDate(tagged),
+      });
     }
 
     // Per-language RSS feed
@@ -1045,7 +1088,7 @@ function build() {
       `    <link>${SITE.url}${pre}/blog</link>\n` +
       `    <description>${esc(ui.listDesc)}</description>\n` +
       `    <language>${code}</language>\n` +
-      `    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n` +
+      `    <lastBuildDate>${(latestUpdated(posts) || new Date(0)).toUTCString()}</lastBuildDate>\n` +
       `    <atom:link href="${SITE.url}${pre}/blog/feed.xml" rel="self" type="application/rss+xml" />\n` +
       feedItems +
       `\n  </channel>\n</rss>\n`;
@@ -1053,30 +1096,30 @@ function build() {
   }
 
   // sitemap.xml (image extension + xhtml hreflang alternates)
-  const today = isoDate(new Date()).slice(0, 10);
   const sitemap =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
     sitemapUrls
       .map((u) => {
-        const lastmod = `\n    <lastmod>${u.lastmod || today}</lastmod>`;
-        const priority = `\n    <priority>${u.priority}</priority>`;
+        // Omit unknown dates instead of claiming every static page changed on
+        // each blog build. Google only trusts accurate, significant lastmod.
+        const lastmod = u.lastmod ? `\n    <lastmod>${esc(u.lastmod)}</lastmod>` : "";
         const alts =
           u.alternates && Object.keys(u.alternates).length > 1
             ? LANG_CODES.filter((c) => u.alternates[c])
                 .map(
                   (c) =>
-                    `\n    <xhtml:link rel="alternate" hreflang="${c}" href="${u.alternates[c]}"/>`
+                    `\n    <xhtml:link rel="alternate" hreflang="${c}" href="${esc(u.alternates[c])}"/>`
                 )
                 .join("") +
               (u.alternates[DEFAULT_LANG]
-                ? `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${u.alternates[DEFAULT_LANG]}"/>`
+                ? `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(u.alternates[DEFAULT_LANG])}"/>`
                 : "")
             : "";
         const img = u.image
-          ? `\n    <image:image><image:loc>${u.image}</image:loc><image:title>${esc(u.imageAlt)}</image:title></image:image>`
+          ? `\n    <image:image><image:loc>${esc(u.image)}</image:loc></image:image>`
           : "";
-        return `  <url>\n    <loc>${u.loc}</loc>${lastmod}${priority}${alts}${img}\n  </url>`;
+        return `  <url>\n    <loc>${esc(u.loc)}</loc>${lastmod}${alts}${img}\n  </url>`;
       })
       .join("\n") +
     `\n</urlset>\n`;

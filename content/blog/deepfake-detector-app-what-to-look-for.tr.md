@@ -9,7 +9,7 @@ tags:
   - iOS
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
 imageAlt: iPhone'da güvenilir bir deepfake tespit uygulaması seçmek
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 Herhangi bir uygulama mağazasında "deepfake detector" diye aratın; iddialı isimler ve %99 doğruluk vaatleriyle dolu onlarca sonuç bulursunuz. Bazıları ciddi adli araçlardır. Bazıları tek bir bulut modelinin üzerine geçirilmiş ince bir arayüzdür. Birkaçı ise tam da endişelendiğiniz fotoğrafları toplayan düpedüz dolandırıcılıktır.

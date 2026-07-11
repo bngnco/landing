@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════
    VERIFYCO — site.js (Fable redesign)
-   GSAP 3.13 + ScrollTrigger + Lenis · i18n · hero · menus
+   GSAP 3.13 + ScrollTrigger · i18n · hero · menus
    ════════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
@@ -11,6 +11,7 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var finePointer = window.matchMedia("(pointer: fine)").matches;
   var hasGSAP = false;
+  var ambientTweens = [];
 
   /* ── i18n ─────────────────────────────────────────────── */
   function detectLang() {
@@ -174,7 +175,7 @@
     // looping scanline on the hero phone — animate transform (composited),
     // not `top`, which would relayout/repaint the clipped phone every frame.
     if (!reduceMotion) {
-      gsap.fromTo("[data-scan]",
+      ambientTweens.push(gsap.fromTo("[data-scan]",
         { yPercent: 0 },
         {
           yPercent: 515,
@@ -183,17 +184,54 @@
           repeat: -1,
           repeatDelay: 2.0,
           delay: 1.6
-        });
+        }));
       // slow float
-      gsap.to("[data-hero-ph]", {
+      ambientTweens.push(gsap.to("[data-hero-ph]", {
         y: -12,
         duration: 3.6,
         yoyo: true,
         repeat: -1,
         ease: "sine.inOut",
         delay: 2.0
+      }));
+    }
+  }
+
+  /* ── Pause ambient work outside the viewport ─────────── */
+  function ambientVisibility() {
+    var hero = document.querySelector(".hero");
+    var engine = document.querySelector(".dd-core");
+    var roots = [hero, document.querySelector(".mq"), engine && engine.closest("section")].filter(Boolean);
+    if (!roots.length) return;
+
+    var inView = new Map();
+    function setPaused(root, paused) {
+      root.classList.toggle("is-ambient-paused", paused);
+      if (root === hero) {
+        ambientTweens.forEach(function (tween) { paused ? tween.pause() : tween.resume(); });
+      }
+      root.querySelectorAll("svg").forEach(function (svg) {
+        try {
+          if (paused && svg.pauseAnimations) svg.pauseAnimations();
+          else if (!paused && svg.unpauseAnimations) svg.unpauseAnimations();
+        } catch (e) {}
       });
     }
+    function sync(root) { setPaused(root, reduceMotion || document.hidden || !inView.get(root)); }
+
+    roots.forEach(function (root) { inView.set(root, false); setPaused(root, true); });
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          inView.set(entry.target, entry.isIntersecting);
+          sync(entry.target);
+        });
+      }, { rootMargin: "160px 0px", threshold: 0 });
+      roots.forEach(function (root) { observer.observe(root); });
+    }
+    document.addEventListener("visibilitychange", function () {
+      roots.forEach(sync);
+    });
   }
 
   /* ── Scroll effects ───────────────────────────────────── */
@@ -281,16 +319,6 @@
     window.addEventListener("load", function () { ScrollTrigger.refresh(); });
   }
 
-  /* ── Lenis smooth scroll ──────────────────────────────── */
-  var lenis = null;
-  function smoothScroll() {
-    if (typeof Lenis === "undefined" || reduceMotion || !finePointer || !hasGSAP) return;
-    lenis = new Lenis({ lerp: 0.115, wheelMultiplier: 1.0 });
-    lenis.on("scroll", function () { if (window.ScrollTrigger) ScrollTrigger.update(); });
-    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
-    gsap.ticker.lagSmoothing(0);
-  }
-
   function anchors() {
     document.querySelectorAll('a[href^="#"]').forEach(function (a) {
       a.addEventListener("click", function (e) {
@@ -301,8 +329,7 @@
         e.preventDefault();
         closeMenu();
         var top = target.getBoundingClientRect().top + window.scrollY - 70;
-        if (lenis) lenis.scrollTo(top, { duration: 1.15 });
-        else window.scrollTo({ top: top, behavior: "smooth" });
+        window.scrollTo({ top: top, behavior: reduceMotion ? "auto" : "smooth" });
       });
     });
   }
@@ -384,7 +411,6 @@
     applyLang(detectLang());
     mobileMenu();
     anchors();
-    smoothScroll();
     scrollFX();
     magnets();
     activeNav();
@@ -392,6 +418,7 @@
     // No splash — the page is interactive immediately; the hero simply
     // animates in on load.
     heroIn();
+    ambientVisibility();
   }
 
   if (document.readyState === "loading") {

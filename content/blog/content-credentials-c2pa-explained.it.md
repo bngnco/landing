@@ -9,7 +9,7 @@ tags:
   - Guide
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png
 imageAlt: Verifica delle Content Credentials C2PA di una foto su iPhone
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 Ogni immagine online ormai solleva la stessa domanda: *da dove viene davvero?* Le Content Credentials sono la risposta dell'industria — un'"etichetta nutrizionale" a prova di manomissione che viaggia dentro una foto o un video e registra chi l'ha creata, con cosa, e cosa le è stato fatto da allora. Produttori di fotocamere, Adobe, Google, OpenAI e le grandi piattaforme hanno aderito tutte — il che la rende la cosa più vicina a uno standard di provenienza che il web possieda.

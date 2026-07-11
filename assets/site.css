@@ -35,7 +35,7 @@
 
 /* ── Reset ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: auto; }
+html { scroll-behavior: smooth; }
 html, body { margin: 0; padding: 0; }
 
 body {
@@ -139,23 +139,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   top: 0; left: 0; right: 0;
   z-index: 500;
   height: var(--nav-h);
-  transition: background 380ms ease, border-color 380ms ease, backdrop-filter 380ms ease;
+  transition: background 380ms ease, border-color 380ms ease;
   border-bottom: 1px solid transparent;
 }
 .nav.is-solid {
-  /* Solid fallback everywhere. A live backdrop-filter on a fixed bar forces
-     the browser to re-blur the page behind it on every scroll frame — the
-     single biggest scroll-jank source on phones — so the blur is added back
-     only on larger, hover-capable devices below. */
-  background: rgba(6, 5, 4, 0.94);
+  /* Keep the fixed layer opaque: backdrop blur forces a viewport repaint on
+     every scroll frame and was the main source of scroll jank. */
+  background: rgba(6, 5, 4, 0.97);
   border-bottom-color: var(--line);
-}
-@media (min-width: 861px) {
-  .nav.is-solid {
-    background: rgba(6, 5, 4, 0.78);
-    -webkit-backdrop-filter: blur(18px) saturate(1.3);
-    backdrop-filter: blur(18px) saturate(1.3);
-  }
 }
 
 .nav-in {
@@ -976,9 +967,9 @@ footer { margin-top: clamp(90px, 11vw, 150px); border-top: 1px solid var(--line)
    ════════════════════════════════════════════════════════ */
 @media (max-width: 1020px) {
   .nav-links { display: none; }
+  .burger { display: block; }
 }
 @media (max-width: 860px) {
-  .burger { display: block; }
   .nav-right .btn { display: none; }
   /* Language switcher stays pinned in the bar on every breakpoint so the
      visitor can always reach it — it auto-selects their language on arrival. */
@@ -1030,8 +1021,16 @@ html.js.no-anim [data-hero-ph],
 html.js.no-anim [data-chip],
 html.js.no-anim .hero .scroll-cue { opacity: 1; }
 
+/* Ambient motion only runs while its section is near the viewport. */
+.is-ambient-paused .mq-track,
+.is-ambient-paused .chip--s .bars i,
+.is-ambient-paused .dd-core,
+.is-ambient-paused .hero-ticker::before,
+.is-ambient-paused .scroll-cue i { animation-play-state: paused; }
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .mq-track { animation: none; }
   .chip--s .bars i, .dd-core, .hero-ticker::before, .scroll-cue i { animation: none; }
   html.js [data-rv] { opacity: 1; transform: none; }

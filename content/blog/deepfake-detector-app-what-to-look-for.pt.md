@@ -9,7 +9,7 @@ tags:
   - iOS
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
 imageAlt: Escolhendo um app detector de deepfake confiável no iPhone
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 Pesquise "deepfake detector" em qualquer loja de aplicativos e você encontra dezenas de resultados com nomes confiantes e promessas de 99% de precisão. Alguns são ferramentas forenses sérias. Outros, uma interface fina sobre um único modelo na nuvem. Uns poucos são golpes puros, coletando exatamente as fotos que te preocupam.

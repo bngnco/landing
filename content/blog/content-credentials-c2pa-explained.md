@@ -9,7 +9,7 @@ tags:
   - Guides
 image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png
 imageAlt: Checking a photo's C2PA Content Credentials on iPhone
-updated: 2026-07-03
+updated: 2026-07-11
 ---
 
 Every image online provokes the same question now: *where did this actually come from?* Content Credentials are the industry's answer — a tamper-evident "nutrition label" travelling inside a photo or video that records who made it, with what, and what was done to it since. Camera makers, Adobe, Google, OpenAI and the major platforms have all signed on, which makes this the closest thing the web has to a provenance standard.
