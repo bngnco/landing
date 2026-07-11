@@ -1,15 +1,15 @@
 ---
 title: "İçerik Kimlik Bilgileri (C2PA): Fotoğrafların 'Besin Etiketi'"
-description: "İçerik Kimlik Bilgileri nedir? C2PA kaynak doğrulama nasıl çalışır, bir fotoğrafın kökeni nasıl kontrol edilir, neyi kanıtlar, neyi kanıtlayamaz — ve neden webin güven katmanı oluyor."
+description: İçerik Kimlik Bilgileri nedir? C2PA kaynak doğrulama nasıl çalışır, bir fotoğrafın kökeni nasıl kontrol edilir, neyi kanıtlar, neyi kanıtlayamaz — ve neden webin güven katmanı oluyor.
 slug: content-credentials-c2pa-explained
 date: 2026-06-26
-updated: 2026-07-03
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - Araştırma
   - Rehberler
-image: ''
-imageAlt: "iPhone'da bir fotoğrafın C2PA İçerik Kimlik Bilgilerini kontrol etme"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png
+imageAlt: iPhone'da bir fotoğrafın C2PA İçerik Kimlik Bilgilerini kontrol etme
+updated: 2026-07-03
 ---
 
 İnternetteki her görsel artık aynı soruyu doğuruyor: *bu gerçekte nereden geldi?* İçerik Kimlik Bilgileri sektörün yanıtı — bir fotoğraf veya videonun içinde yolculuk eden, onu kimin, neyle ürettiğini ve o zamandan beri ne yapıldığını kaydeden, kurcalamaya karşı korumalı bir "besin etiketi". Kamera üreticileri, Adobe, Google, OpenAI ve büyük platformların hepsi imza attı; bu da onu webin kaynak doğrulama standardına en yakın şey yapıyor.

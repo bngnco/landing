@@ -1,15 +1,15 @@
 ---
-title: "Content Credentials (C2PA), erklärt: das Nährwertetikett für Fotos"
-description: "Was sind Content Credentials? Wie C2PA-Herkunftsnachweise funktionieren, wie man die Herkunft eines Fotos prüft, was sie beweisen können und was nicht — und warum sie zur Vertrauensschicht des Webs werden."
+title: 'Content Credentials (C2PA), erklärt: das Nährwertetikett für Fotos'
+description: Was sind Content Credentials? Wie C2PA-Herkunftsnachweise funktionieren, wie man die Herkunft eines Fotos prüft, was sie beweisen können und was nicht — und warum sie zur Vertrauensschicht des Webs werden.
 slug: content-credentials-c2pa-explained
 date: 2026-06-26
-updated: 2026-07-03
-author: "Verifyco-Team"
+author: Verifyco-Team
 tags:
   - Forschung
   - Leitfäden
-image: ''
-imageAlt: "Prüfung der C2PA Content Credentials eines Fotos auf dem iPhone"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png
+imageAlt: Prüfung der C2PA Content Credentials eines Fotos auf dem iPhone
+updated: 2026-07-03
 ---
 
 Jedes Bild im Netz wirft inzwischen dieselbe Frage auf: *Woher stammt das eigentlich?* Content Credentials sind die Antwort der Industrie — ein manipulationssicheres „Nährwertetikett", das in einem Foto oder Video mitreist und festhält, wer es erstellt hat, womit, und was seither damit geschehen ist. Kamerahersteller, Adobe, Google, OpenAI und die großen Plattformen sind an Bord — damit ist es das Näheste an einem Herkunftsstandard, das das Web hat.

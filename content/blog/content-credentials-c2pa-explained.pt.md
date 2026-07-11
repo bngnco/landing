@@ -1,15 +1,15 @@
 ---
-title: "Content Credentials (C2PA), explicado: o rótulo nutricional das fotos"
-description: "O que são Content Credentials? Como funciona a procedência C2PA, como checar a origem de uma foto, o que ela pode ou não provar — e por que está virando a camada de confiança da web."
+title: 'Content Credentials (C2PA), explicado: o rótulo nutricional das fotos'
+description: O que são Content Credentials? Como funciona a procedência C2PA, como checar a origem de uma foto, o que ela pode ou não provar — e por que está virando a camada de confiança da web.
 slug: content-credentials-c2pa-explained
 date: 2026-06-26
-updated: 2026-07-03
-author: "Equipe Verifyco"
+author: Equipe Verifyco
 tags:
   - Pesquisa
   - Guias
-image: ''
-imageAlt: "Checando as Content Credentials C2PA de uma foto no iPhone"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png
+imageAlt: Checando as Content Credentials C2PA de uma foto no iPhone
+updated: 2026-07-03
 ---
 
 Toda imagem online agora provoca a mesma pergunta: *de onde isso veio, de verdade?* As Content Credentials são a resposta da indústria — um "rótulo nutricional" à prova de adulteração que viaja dentro de uma foto ou vídeo e registra quem o criou, com o quê, e o que foi feito com ele desde então. Fabricantes de câmeras, Adobe, Google, OpenAI e as grandes plataformas aderiram — o que faz disso a coisa mais próxima de um padrão de procedência que a web possui.
