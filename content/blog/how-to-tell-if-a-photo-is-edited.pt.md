@@ -1,15 +1,15 @@
 ---
-title: "Como saber se uma foto foi editada (7 checagens que funcionam)"
-description: "Não é IA — só adulterada. Aprenda a saber se uma foto foi editada ou photoshopada: sombras e bordas, análise de nível de erro, metadados, busca reversa e ferramentas forenses."
+title: Como saber se uma foto foi editada (7 checagens que funcionam)
+description: 'Não é IA — só adulterada. Aprenda a saber se uma foto foi editada ou photoshopada: sombras e bordas, análise de nível de erro, metadados, busca reversa e ferramentas forenses.'
 slug: how-to-tell-if-a-photo-is-edited
 date: 2026-07-05
 updated: 2026-07-07
-author: "Equipe Verifyco"
+author: Equipe Verifyco
 tags:
   - Guias
   - Detecção de IA
-image: ''
-imageAlt: "Inspeção de uma foto no iPhone em busca de sinais de edição e manipulação"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+imageAlt: Inspeção de uma foto no iPhone em busca de sinais de edição e manipulação
 ---
 
 Todo mundo pergunta "isso é IA?" — mas a pergunta mais antiga ainda causa a maior parte do estrago: **esta foto real foi *editada*?** Uma fotografia genuína com um objeto removido, um rosto enxertado, um detalhe apagado com carimbo engana muitas vezes melhor do que uma imagem totalmente gerada — justamente porque todo o resto nela é autêntico.

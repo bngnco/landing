@@ -1,15 +1,15 @@
 ---
-title: "Bir Fotoğrafın Düzenlendiği Nasıl Anlaşılır (İşe Yarayan 7 Kontrol)"
-description: "AI değil — sadece oynanmış. Bir fotoğrafın düzenlendiğini ya da photoshoplandığını anlamanın yolları: gölge ve kenar kontrolleri, hata seviyesi analizi, üstveri, tersine arama ve adli araçlar."
+title: Bir Fotoğrafın Düzenlendiği Nasıl Anlaşılır (İşe Yarayan 7 Kontrol)
+description: 'AI değil — sadece oynanmış. Bir fotoğrafın düzenlendiğini ya da photoshoplandığını anlamanın yolları: gölge ve kenar kontrolleri, hata seviyesi analizi, üstveri, tersine arama ve adli araçlar.'
 slug: how-to-tell-if-a-photo-is-edited
 date: 2026-07-05
 updated: 2026-07-07
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - Rehberler
   - AI Tespiti
-image: ''
-imageAlt: "iPhone'da bir fotoğrafı düzenleme ve manipülasyon izleri için inceleme"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+imageAlt: iPhone'da bir fotoğrafı düzenleme ve manipülasyon izleri için inceleme
 ---
 
 Herkes "bu AI mı?" diye soruyor — ama hasarın çoğunu hâlâ daha eski soru veriyor: **bu gerçek fotoğraf *düzenlenmiş* mi?** Tek bir nesnesi silinmiş, tek bir yüzü değiştirilmiş, tek bir ayrıntısı klonla kapatılmış gerçek bir fotoğraf, tamamen üretilmiş bir görselden çoğu zaman daha aldatıcıdır — çünkü geri kalan her şeyi sahicidir.

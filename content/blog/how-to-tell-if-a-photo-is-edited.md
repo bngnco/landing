@@ -1,15 +1,16 @@
 ---
-title: "How to Tell if a Photo Has Been Edited (7 Checks That Work)"
-description: "Not AI — just faked. Learn how to tell if a photo is edited or photoshopped: shadow and edge checks, error level analysis, metadata, reverse search and forensic tools."
+title: How to Tell if a Photo Has Been Edited (7 Checks That Work)
+metaTitle: ''
+description: 'Not AI — just faked. Learn how to tell if a photo is edited or photoshopped: shadow and edge checks, error level analysis, metadata, reverse search and forensic tools.'
 slug: how-to-tell-if-a-photo-is-edited
 date: 2026-07-05
 updated: 2026-07-07
-author: "Verifyco Team"
+author: Verifyco Team
 tags:
   - Guides
   - AI Detection
-image: ''
-imageAlt: "Inspecting a photo on iPhone for signs of editing and manipulation"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+imageAlt: Inspecting a photo on iPhone for signs of editing and manipulation
 ---
 
 Everyone's asking "is this AI?" — but the older question still does most of the damage: **is this real photo *edited*?** A genuine photograph with one object removed, one face swapped in, one detail cloned out is often more deceptive than a fully generated image, precisely because everything else in it is authentic.

@@ -1,15 +1,15 @@
 ---
-title: "Woran erkennt man, ob ein Foto bearbeitet wurde? (7 Checks, die funktionieren)"
-description: "Nicht KI — nur manipuliert. So erkennen Sie, ob ein Foto bearbeitet oder gephotoshopt ist: Schatten- und Kantenprüfung, Fehlerpegel-Analyse, Metadaten, Rückwärtssuche und forensische Tools."
+title: Woran erkennt man, ob ein Foto bearbeitet wurde? (7 Checks, die funktionieren)
+description: 'Nicht KI — nur manipuliert. So erkennen Sie, ob ein Foto bearbeitet oder gephotoshopt ist: Schatten- und Kantenprüfung, Fehlerpegel-Analyse, Metadaten, Rückwärtssuche und forensische Tools.'
 slug: how-to-tell-if-a-photo-is-edited
 date: 2026-07-05
 updated: 2026-07-07
-author: "Verifyco-Team"
+author: Verifyco-Team
 tags:
   - Leitfäden
   - KI-Erkennung
-image: ''
-imageAlt: "Prüfung eines Fotos auf dem iPhone auf Spuren von Bearbeitung und Manipulation"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+imageAlt: Prüfung eines Fotos auf dem iPhone auf Spuren von Bearbeitung und Manipulation
 ---
 
 Alle fragen „ist das KI?" — doch den größten Schaden richtet immer noch die ältere Frage an: **Ist dieses echte Foto *bearbeitet*?** Eine echte Aufnahme mit einem entfernten Objekt, einem eingesetzten Gesicht, einem weggestempelten Detail täuscht oft besser als ein komplett generiertes Bild — gerade weil alles andere darin authentisch ist.

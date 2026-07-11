@@ -1,15 +1,15 @@
 ---
-title: "Come capire se una foto è stata modificata (7 controlli che funzionano)"
+title: Come capire se una foto è stata modificata (7 controlli che funzionano)
 description: "Non IA — solo ritoccata. Impara a capire se una foto è modificata o photoshoppata: controlli di ombre e bordi, analisi del livello d'errore, metadati, ricerca inversa e strumenti forensi."
 slug: how-to-tell-if-a-photo-is-edited
 date: 2026-07-05
 updated: 2026-07-07
-author: "Team Verifyco"
+author: Team Verifyco
 tags:
   - Guide
   - Rilevamento IA
-image: ''
-imageAlt: "Ispezione di una foto su iPhone alla ricerca di segni di modifica e manipolazione"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+imageAlt: Ispezione di una foto su iPhone alla ricerca di segni di modifica e manipolazione
 ---
 
 Tutti chiedono "è IA?" — ma la domanda più vecchia fa ancora la maggior parte dei danni: **questa foto vera è stata *modificata*?** Una fotografia autentica con un oggetto rimosso, un volto innestato, un dettaglio clonato via inganna spesso meglio di un'immagine interamente generata — proprio perché tutto il resto è vero.

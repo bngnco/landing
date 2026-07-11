@@ -1,15 +1,15 @@
 ---
-title: "Comment savoir si une photo a été retouchée (7 vérifications qui marchent)"
+title: Comment savoir si une photo a été retouchée (7 vérifications qui marchent)
 description: "Pas de l'IA — juste truquée. Apprenez à savoir si une photo est retouchée ou photoshopée : ombres et bords, analyse de niveau d'erreur, métadonnées, recherche inversée et outils forensiques."
 slug: how-to-tell-if-a-photo-is-edited
 date: 2026-07-05
 updated: 2026-07-07
-author: "L’équipe Verifyco"
+author: L’équipe Verifyco
 tags:
   - Guides
   - Détection d’IA
-image: ''
-imageAlt: "Inspection d'une photo sur iPhone à la recherche de traces de retouche et de manipulation"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+imageAlt: Inspection d'une photo sur iPhone à la recherche de traces de retouche et de manipulation
 ---
 
 Tout le monde demande « c'est de l'IA ? » — mais la question plus ancienne fait encore l'essentiel des dégâts : **cette vraie photo a-t-elle été *retouchée* ?** Une photographie authentique avec un objet effacé, un visage greffé, un détail tamponné trompe souvent mieux qu'une image entièrement générée — précisément parce que tout le reste y est vrai.
