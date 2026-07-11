@@ -1,15 +1,15 @@
 ---
-title: "Deepfake Yasal mı? 2026'da Dünyada Deepfake Yasaları"
-description: "Deepfake yapmak suç mu? 2026 deepfake yasalarının sade haritası — ABD TAKE IT DOWN Yasası, AB Yapay Zekâ Yasası'nın etiketleme kuralları, Birleşik Krallık; ne serbest, ne değil."
+title: Deepfake Yasal mı? 2026'da Dünyada Deepfake Yasaları
+description: Deepfake yapmak suç mu? 2026 deepfake yasalarının sade haritası — ABD TAKE IT DOWN Yasası, AB Yapay Zekâ Yasası'nın etiketleme kuralları, Birleşik Krallık; ne serbest, ne değil.
 slug: are-deepfakes-illegal-laws-2026
 date: 2026-07-06
 updated: 2026-07-07
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - Deepfake
   - Araştırma
-image: ''
-imageAlt: "2026'da deepfake yasaları ve düzenlemelerine genel bakış"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png
+imageAlt: 2026'da deepfake yasaları ve düzenlemelerine genel bakış
 ---
 
 Kısa cevap: **deepfake'in kendisi yasa dışı değil — belirli kullanımları yasa dışı, ve o kullanım listesi hızla uzuyor.** Bir film şakası için yüz değiştiren teknoloji, mahrem görüntü istismarının ve ses klonlu dolandırıcılığın arkasındaki teknolojiyle aynı; hukuk algoritmayı değil, zararı hedefler.

@@ -1,15 +1,16 @@
 ---
-title: "Are Deepfakes Illegal? Deepfake Laws Around the World in 2026"
-description: "Is making a deepfake a crime? A plain-language map of deepfake laws in 2026 — the US TAKE IT DOWN Act, the EU AI Act's labelling rules, UK, and what's legal, what isn't."
+title: Are Deepfakes Illegal? Deepfake Laws Around the World in 2026
+metaTitle: ''
+description: Is making a deepfake a crime? A plain-language map of deepfake laws in 2026 — the US TAKE IT DOWN Act, the EU AI Act's labelling rules, UK, and what's legal, what isn't.
 slug: are-deepfakes-illegal-laws-2026
 date: 2026-07-06
 updated: 2026-07-07
-author: "Verifyco Team"
+author: Verifyco Team
 tags:
   - Deepfakes
   - Research
-image: ''
-imageAlt: "Overview of deepfake laws and regulations in 2026"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png
+imageAlt: Overview of deepfake laws and regulations in 2026
 ---
 
 Short answer: **deepfakes themselves aren't illegal — specific uses of them are, and the list of illegal uses is growing fast.** The technology that swaps a face for a film joke is the same technology behind intimate-image abuse and voice-clone fraud; the law targets the harm, not the algorithm.
@@ -23,7 +24,7 @@ Almost every deepfake law in the world attaches to one of four harms:
 1. **Non-consensual intimate imagery (NCII)** — sexual deepfakes of real people. The most criminalised category worldwide, and the fastest-moving.
 2. **Fraud and impersonation** — voice clones and video fakes used to move money or credentials. Prosecuted under existing fraud law nearly everywhere; several jurisdictions have added AI-specific aggravations.
 3. **Election manipulation** — synthetic media of candidates. A patchwork of disclosure requirements and windows-before-election bans.
-4. **Undisclosed synthetic media** — a newer, broader duty: AI content must be *labelled* as AI, aimed at platforms and creators rather than individual harm.
+4. **Undisclosed synthetic media** — a newer, broader duty: AI content must be _labelled_ as AI, aimed at platforms and creators rather than individual harm.
 
 ## United States
 
@@ -40,12 +41,12 @@ Alongside it, the **Digital Services Act** obliges large platforms to act on ill
 
 ## United Kingdom
 
-The **Online Safety Act** criminalised *sharing* intimate deepfakes without consent; subsequent legislation extended liability to *creating* them and *requesting* their creation. Fraud, harassment and stalking statutes cover the rest. Platforms carry proactive duties to prevent this content circulating — which is why UK reporting lanes tend to move quickly.
+The **Online Safety Act** criminalised _sharing_ intimate deepfakes without consent; subsequent legislation extended liability to _creating_ them and _requesting_ their creation. Fraud, harassment and stalking statutes cover the rest. Platforms carry proactive duties to prevent this content circulating — which is why UK reporting lanes tend to move quickly.
 
 ## Elsewhere in brief
 
 - **China** has the strictest labelling regime: deep-synthesis rules and 2025 AI-labelling measures require visible and embedded marks on synthetic media, with real-name obligations for providers.
-- **South Korea** criminalises not just making and sharing sexual deepfakes but knowingly *possessing or viewing* them — the world's hardest line.
+- **South Korea** criminalises not just making and sharing sexual deepfakes but knowingly _possessing or viewing_ them — the world's hardest line.
 - **Denmark** made headlines by moving to give every person copyright-like control over their own face and voice — a template other countries are watching.
 - **Australia, Canada, Japan** and many others cover deepfake harms through NCII, fraud and defamation law, with dedicated bills advancing.
 
@@ -57,12 +58,12 @@ The **Online Safety Act** criminalised *sharing* intimate deepfakes without cons
 
 **If you create or share AI content:** the direction of travel is unambiguous — **label it**. Parody and satire generally remain protected, but undisclosed synthetic media of real people is becoming legally radioactive: NCII is criminal nearly everywhere, election fakes are restricted in wide parts of the world, and the EU's disclosure duty lands in August 2026.
 
-**If you receive a suspicious video:** the law punishes after the fact; it doesn't protect you in the moment. A video of a politician, a CEO authorising a transfer, or a relative in distress deserves verification *before* you act on it or share it. That's a forensics problem, not a legal one — **[Verifyco](https://apps.apple.com/app/id6772592963)** runs five independent forensic signals on your iPhone, on-device, and tells you how much the file can be trusted ([how the analysis works](/blog/how-to-tell-if-a-video-is-ai-generated)).
+**If you receive a suspicious video:** the law punishes after the fact; it doesn't protect you in the moment. A video of a politician, a CEO authorising a transfer, or a relative in distress deserves verification _before_ you act on it or share it. That's a forensics problem, not a legal one — [**Verifyco**](https://apps.apple.com/app/id6772592963) runs five independent forensic signals on your iPhone, on-device, and tells you how much the file can be trusted ([how the analysis works](/blog/how-to-tell-if-a-video-is-ai-generated)).
 
 ## Frequently asked questions
 
 **Is it illegal to make a deepfake of someone without consent?**
-It depends on content and jurisdiction. Sexual deepfakes: criminal in most of the US, UK, South Korea and much of Europe — in the UK, even creating one is an offence. Non-sexual deepfakes: generally lawful to *make*, but using them for fraud, harassment, defamation or undisclosed political messaging is where the law bites.
+It depends on content and jurisdiction. Sexual deepfakes: criminal in most of the US, UK, South Korea and much of Europe — in the UK, even creating one is an offence. Non-sexual deepfakes: generally lawful to _make_, but using them for fraud, harassment, defamation or undisclosed political messaging is where the law bites.
 
 **Are deepfakes for parody or satire legal?**
 Mostly yes — satire, parody and commentary enjoy strong protection in democracies, and the EU AI Act carves lighter treatment for evidently artistic or satirical works. The safe harbour shrinks fast when the fake is presented as real, sexual, or aimed at deceiving voters or customers.

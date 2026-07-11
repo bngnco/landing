@@ -1,15 +1,15 @@
 ---
-title: "Les deepfakes sont-ils illégaux ? Les lois dans le monde en 2026"
-description: "Créer un deepfake est-il un délit ? Une carte en langage clair des lois deepfake en 2026 — la loi TAKE IT DOWN américaine, l'étiquetage du règlement IA de l'UE, le Royaume-Uni et plus."
+title: Les deepfakes sont-ils illégaux ? Les lois dans le monde en 2026
+description: Créer un deepfake est-il un délit ? Une carte en langage clair des lois deepfake en 2026 — la loi TAKE IT DOWN américaine, l'étiquetage du règlement IA de l'UE, le Royaume-Uni et plus.
 slug: are-deepfakes-illegal-laws-2026
 date: 2026-07-06
 updated: 2026-07-07
-author: "L’équipe Verifyco"
+author: L’équipe Verifyco
 tags:
   - Deepfakes
   - Recherche
-image: ''
-imageAlt: "Panorama des lois et régulations sur les deepfakes en 2026"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png
+imageAlt: Panorama des lois et régulations sur les deepfakes en 2026
 ---
 
 Réponse courte : **les deepfakes en eux-mêmes ne sont pas illégaux — certains usages le sont, et la liste de ces usages s'allonge vite.** La technologie qui échange un visage pour une blague de cinéma est la même que celle derrière l'abus d'images intimes et la fraude au clone vocal ; la loi vise le préjudice, pas l'algorithme.
