@@ -4,12 +4,12 @@ description: "Vous avez découvert un deepfake de vous — fausse vidéo, votre 
 slug: what-to-do-if-someone-makes-a-deepfake-of-you
 date: 2026-07-07
 updated: 2026-07-07
-author: "L’équipe Verifyco"
+author: L’équipe Verifyco
 tags:
   - Deepfakes
   - Guides
-image: ''
-imageAlt: "Réponse étape par étape après la découverte d'un deepfake de soi"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png
+imageAlt: Réponse étape par étape après la découverte d'un deepfake de soi
 ---
 
 Découvrir un deepfake de soi est un coup de poing au ventre : une vidéo de vous disant des choses que vous n'avez jamais dites, votre visage sur un corps qui n'est pas le vôtre, votre voix vendant une arnaque à votre propre famille. C'est une violation, c'est effrayant — et c'est de plus en plus courant, parce qu'en produire un ne coûte plus rien à l'attaquant.

@@ -1,15 +1,15 @@
 ---
-title: "Alguien hizo un deepfake de ti: qué hacer, paso a paso"
-description: "¿Encontraste un deepfake tuyo — un vídeo falso, tu voz o una imagen íntima? La lista de emergencia: pruebas, retiradas, denuncias en plataformas, opciones legales y control de daños."
+title: 'Alguien hizo un deepfake de ti: qué hacer, paso a paso'
+description: '¿Encontraste un deepfake tuyo — un vídeo falso, tu voz o una imagen íntima? La lista de emergencia: pruebas, retiradas, denuncias en plataformas, opciones legales y control de daños.'
 slug: what-to-do-if-someone-makes-a-deepfake-of-you
 date: 2026-07-07
 updated: 2026-07-07
-author: "Equipo Verifyco"
+author: Equipo Verifyco
 tags:
   - Deepfakes
   - Guías
-image: ''
-imageAlt: "Respuesta paso a paso tras descubrir un deepfake de uno mismo"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png
+imageAlt: Respuesta paso a paso tras descubrir un deepfake de uno mismo
 ---
 
 Descubrir un deepfake de ti mismo es un golpe al estómago: un vídeo tuyo diciendo cosas que nunca dijiste, tu cara en un cuerpo que no es el tuyo, tu voz empujando una estafa a tu propia familia. Es una violación, da miedo — y es cada vez más común, porque crear uno ya no le cuesta nada al atacante.

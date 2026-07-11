@@ -4,12 +4,12 @@ description: "Kendinizin deepfake'ini mi buldunuz — sahte video, ses veya mahr
 slug: what-to-do-if-someone-makes-a-deepfake-of-you
 date: 2026-07-07
 updated: 2026-07-07
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - Deepfake
   - Rehberler
-image: ''
-imageAlt: "Kendi deepfake'ini keşfettikten sonra adım adım müdahale"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png
+imageAlt: Kendi deepfake'ini keşfettikten sonra adım adım müdahale
 ---
 
 Kendinizin deepfake'ini keşfetmek mideye yumruk gibidir: hiç söylemediğiniz şeyleri söylediğiniz bir video, sizin olmayan bir bedende yüzünüz, kendi ailenize dolandırıcılık pazarlayan sesiniz. İhlal edicidir, korkutucudur — ve giderek yaygınlaşıyor, çünkü birini üretmek saldırgana artık hiçbir şeye mal olmuyor.
