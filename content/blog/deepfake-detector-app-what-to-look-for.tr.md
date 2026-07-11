@@ -1,15 +1,15 @@
 ---
-title: "Deepfake Tespit Uygulamaları: Güvenmeden Önce Kontrol Edilecek 7 Şey"
-description: "Her deepfake tespit uygulaması eşit değildir. Güvenilir bir AI dedektörünü yazı turadan ayıran 7 kriter — gizlilik, çok sinyalli analiz, dürüstlük ve daha fazlası."
+title: 'Deepfake Tespit Uygulamaları: Güvenmeden Önce Kontrol Edilecek 7 Şey'
+description: Her deepfake tespit uygulaması eşit değildir. Güvenilir bir AI dedektörünü yazı turadan ayıran 7 kriter — gizlilik, çok sinyalli analiz, dürüstlük ve daha fazlası.
 slug: deepfake-detector-app-what-to-look-for
 date: 2026-06-30
-updated: 2026-07-03
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - AI Tespiti
   - iOS
-image: ''
-imageAlt: "iPhone'da güvenilir bir deepfake tespit uygulaması seçmek"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
+imageAlt: iPhone'da güvenilir bir deepfake tespit uygulaması seçmek
+updated: 2026-07-03
 ---
 
 Herhangi bir uygulama mağazasında "deepfake detector" diye aratın; iddialı isimler ve %99 doğruluk vaatleriyle dolu onlarca sonuç bulursunuz. Bazıları ciddi adli araçlardır. Bazıları tek bir bulut modelinin üzerine geçirilmiş ince bir arayüzdür. Birkaçı ise tam da endişelendiğiniz fotoğrafları toplayan düpedüz dolandırıcılıktır.

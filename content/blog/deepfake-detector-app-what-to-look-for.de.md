@@ -1,15 +1,15 @@
 ---
-title: "Deepfake-Detektor-Apps: 7 Dinge, die Sie vor dem Vertrauen prüfen sollten"
-description: "Nicht alle Deepfake-Detektor-Apps sind gleich. Diese 7 Kriterien trennen einen vertrauenswürdigen KI-Detektor vom Münzwurf — Privatsphäre, Multi-Signal-Analyse, Ehrlichkeit und mehr."
+title: 'Deepfake-Detektor-Apps: 7 Dinge, die Sie vor dem Vertrauen prüfen sollten'
+description: Nicht alle Deepfake-Detektor-Apps sind gleich. Diese 7 Kriterien trennen einen vertrauenswürdigen KI-Detektor vom Münzwurf — Privatsphäre, Multi-Signal-Analyse, Ehrlichkeit und mehr.
 slug: deepfake-detector-app-what-to-look-for
 date: 2026-06-30
-updated: 2026-07-03
-author: "Verifyco-Team"
+author: Verifyco-Team
 tags:
   - KI-Erkennung
   - iOS
-image: ''
-imageAlt: "Auswahl einer vertrauenswürdigen Deepfake-Detektor-App auf dem iPhone"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
+imageAlt: Auswahl einer vertrauenswürdigen Deepfake-Detektor-App auf dem iPhone
+updated: 2026-07-03
 ---
 
 Suchen Sie in einem beliebigen App Store nach „Deepfake Detector", und Sie finden Dutzende Treffer mit selbstbewussten Namen und 99-%-Genauigkeitsversprechen. Manche sind ernsthafte forensische Werkzeuge. Manche sind eine dünne Oberfläche über einem einzigen Cloud-Modell. Einige sind schlicht Betrug und sammeln genau die Fotos ein, um die Sie sich sorgen.

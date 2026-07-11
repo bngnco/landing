@@ -1,15 +1,15 @@
 ---
-title: "Applis de détection de deepfakes : 7 points à vérifier avant de faire confiance"
-description: "Toutes les applis de détection de deepfakes ne se valent pas. Voici les 7 critères qui séparent un détecteur d'IA fiable d'un pile ou face — confidentialité, analyse multi-signaux, honnêteté et plus."
+title: 'Applis de détection de deepfakes : 7 points à vérifier avant de faire confiance'
+description: Toutes les applis de détection de deepfakes ne se valent pas. Voici les 7 critères qui séparent un détecteur d'IA fiable d'un pile ou face — confidentialité, analyse multi-signaux, honnêteté et plus.
 slug: deepfake-detector-app-what-to-look-for
 date: 2026-06-30
-updated: 2026-07-03
-author: "L’équipe Verifyco"
+author: L’équipe Verifyco
 tags:
   - Détection d’IA
   - iOS
-image: ''
-imageAlt: "Choisir une appli de détection de deepfakes fiable sur iPhone"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
+imageAlt: Choisir une appli de détection de deepfakes fiable sur iPhone
+updated: 2026-07-03
 ---
 
 Cherchez « deepfake detector » dans n'importe quelle boutique d'applications : des dizaines de résultats aux noms assurés et aux promesses de précision à 99 %. Certains sont de sérieux outils forensiques. D'autres, une interface mince posée sur un unique modèle cloud. Quelques-uns sont de pures arnaques qui collectent précisément les photos qui vous inquiètent.

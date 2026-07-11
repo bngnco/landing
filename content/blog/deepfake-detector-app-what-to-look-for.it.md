@@ -1,15 +1,15 @@
 ---
-title: "App per rilevare deepfake: 7 cose da controllare prima di fidarti"
-description: "Non tutte le app per rilevare deepfake sono uguali. Ecco i 7 criteri che separano un rilevatore IA affidabile dal lancio di una moneta — privacy, analisi multi-segnale, onestà e altro."
+title: 'App per rilevare deepfake: 7 cose da controllare prima di fidarti'
+description: Non tutte le app per rilevare deepfake sono uguali. Ecco i 7 criteri che separano un rilevatore IA affidabile dal lancio di una moneta — privacy, analisi multi-segnale, onestà e altro.
 slug: deepfake-detector-app-what-to-look-for
 date: 2026-06-30
-updated: 2026-07-03
-author: "Team Verifyco"
+author: Team Verifyco
 tags:
   - Rilevamento IA
   - iOS
-image: ''
-imageAlt: "Scegliere un'app affidabile per rilevare deepfake su iPhone"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png
+imageAlt: Scegliere un'app affidabile per rilevare deepfake su iPhone
+updated: 2026-07-03
 ---
 
 Cerca "deepfake detector" in qualsiasi app store e troverai decine di risultati con nomi sicuri di sé e promesse di precisione al 99%. Alcuni sono strumenti forensi seri. Altri, un'interfaccia sottile sopra un singolo modello in cloud. Qualcuno è una truffa vera e propria che raccoglie proprio le foto che ti preoccupano.
