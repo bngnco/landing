@@ -1,15 +1,16 @@
 ---
-title: "How Accurate Are AI Detectors, Really? (What the Numbers Mean)"
-description: "AI detectors claim 99% accuracy — reality is messier. What detection accuracy really means, why false positives happen, what breaks detectors, and how to read a confidence score."
+title: How Accurate Are AI Detectors, Really? (What the Numbers Mean)
+metaTitle: ''
+description: AI detectors claim 99% accuracy — reality is messier. What detection accuracy really means, why false positives happen, what breaks detectors, and how to read a confidence score.
 slug: how-accurate-are-ai-detectors
 date: 2026-07-04
 updated: 2026-07-07
-author: "Verifyco Team"
+author: Verifyco Team
 tags:
   - AI Detection
   - Research
-image: ''
-imageAlt: "Understanding AI detector accuracy and confidence scores"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+imageAlt: Understanding AI detector accuracy and confidence scores
 ---
 
 Every AI detector's marketing page says something like "99% accurate." Every frustrated user has a story about a real photo flagged as AI, or an obvious fake waved through. Both things are true at once — and understanding *why* is the difference between using detection well and being misled by it.

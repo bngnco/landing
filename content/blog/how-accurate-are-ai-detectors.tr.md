@@ -1,15 +1,15 @@
 ---
-title: "AI Dedektörleri Gerçekte Ne Kadar Doğru? (Rakamların Anlamı)"
-description: "AI dedektörleri %99 doğruluk iddia ediyor — gerçek daha karmaşık. Tespit doğruluğu gerçekte ne ölçer, yanlış pozitifler neden olur, dedektörleri ne bozar ve güven puanı nasıl okunur."
+title: AI Dedektörleri Gerçekte Ne Kadar Doğru? (Rakamların Anlamı)
+description: AI dedektörleri %99 doğruluk iddia ediyor — gerçek daha karmaşık. Tespit doğruluğu gerçekte ne ölçer, yanlış pozitifler neden olur, dedektörleri ne bozar ve güven puanı nasıl okunur.
 slug: how-accurate-are-ai-detectors
 date: 2026-07-04
 updated: 2026-07-07
-author: "Verifyco Ekibi"
+author: Verifyco Ekibi
 tags:
   - AI Tespiti
   - Araştırma
-image: ''
-imageAlt: "AI dedektör doğruluğunu ve güven puanlarını anlamak"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+imageAlt: AI dedektör doğruluğunu ve güven puanlarını anlamak
 ---
 
 Her AI dedektörünün tanıtım sayfasında "%99 doğru" benzeri bir ifade var. Her hüsrana uğramış kullanıcının da AI diye işaretlenen gerçek bir fotoğraf, ya da elini kolunu sallayarak geçen bariz bir sahte hikâyesi. İkisi aynı anda doğru — ve *nedenini* anlamak, tespiti iyi kullanmakla onun tarafından yanıltılmak arasındaki farktır.

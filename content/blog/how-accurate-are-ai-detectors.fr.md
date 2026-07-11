@@ -1,15 +1,15 @@
 ---
-title: "Quelle est la vraie précision des détecteurs d'IA ? (Ce que disent les chiffres)"
-description: "Les détecteurs d'IA promettent 99 % de précision — la réalité est plus nuancée. Ce que mesure vraiment la précision, d'où viennent les faux positifs, ce qui casse les détecteurs et comment lire un score de confiance."
+title: Quelle est la vraie précision des détecteurs d'IA ? (Ce que disent les chiffres)
+description: Les détecteurs d'IA promettent 99 % de précision — la réalité est plus nuancée. Ce que mesure vraiment la précision, d'où viennent les faux positifs, ce qui casse les détecteurs et comment lire un score de confiance.
 slug: how-accurate-are-ai-detectors
 date: 2026-07-04
 updated: 2026-07-07
-author: "L’équipe Verifyco"
+author: L’équipe Verifyco
 tags:
   - Détection d’IA
   - Recherche
-image: ''
-imageAlt: "Comprendre la précision des détecteurs d'IA et les scores de confiance"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+imageAlt: Comprendre la précision des détecteurs d'IA et les scores de confiance
 ---
 
 La page marketing de chaque détecteur d'IA affiche quelque chose comme « 99 % de précision ». Et chaque utilisateur frustré a son histoire : une vraie photo étiquetée IA, ou un faux évident passé sans encombre. Les deux sont vrais en même temps — et comprendre *pourquoi* fait la différence entre bien utiliser la détection et se faire berner par elle.

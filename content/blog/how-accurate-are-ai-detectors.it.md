@@ -1,15 +1,15 @@
 ---
-title: "Quanto sono precisi davvero i rilevatori di IA? (Cosa significano i numeri)"
-description: "I rilevatori di IA promettono il 99% di precisione — la realtà è più complessa. Cosa misura davvero la precisione, perché avvengono i falsi positivi, cosa rompe i rilevatori e come leggere un punteggio di fiducia."
+title: Quanto sono precisi davvero i rilevatori di IA? (Cosa significano i numeri)
+description: I rilevatori di IA promettono il 99% di precisione — la realtà è più complessa. Cosa misura davvero la precisione, perché avvengono i falsi positivi, cosa rompe i rilevatori e come leggere un punteggio di fiducia.
 slug: how-accurate-are-ai-detectors
 date: 2026-07-04
 updated: 2026-07-07
-author: "Team Verifyco"
+author: Team Verifyco
 tags:
   - Rilevamento IA
   - Ricerca
-image: ''
-imageAlt: "Capire la precisione dei rilevatori di IA e i punteggi di fiducia"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+imageAlt: Capire la precisione dei rilevatori di IA e i punteggi di fiducia
 ---
 
 La pagina marketing di ogni rilevatore di IA recita qualcosa come "99% di precisione". E ogni utente frustrato ha una storia: una foto vera marchiata come IA, o un falso evidente passato liscio. Entrambe le cose sono vere allo stesso tempo — e capire il *perché* è la differenza tra usare bene il rilevamento ed esserne ingannati.

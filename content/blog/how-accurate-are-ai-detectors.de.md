@@ -1,15 +1,15 @@
 ---
-title: "Wie genau sind KI-Detektoren wirklich? (Was die Zahlen bedeuten)"
-description: "KI-Detektoren werben mit 99 % Genauigkeit — die Realität ist komplizierter. Was Erkennungsgenauigkeit wirklich misst, warum Fehlalarme passieren, was Detektoren bricht und wie man einen Vertrauenswert liest."
+title: Wie genau sind KI-Detektoren wirklich? (Was die Zahlen bedeuten)
+description: KI-Detektoren werben mit 99 % Genauigkeit — die Realität ist komplizierter. Was Erkennungsgenauigkeit wirklich misst, warum Fehlalarme passieren, was Detektoren bricht und wie man einen Vertrauenswert liest.
 slug: how-accurate-are-ai-detectors
 date: 2026-07-04
 updated: 2026-07-07
-author: "Verifyco-Team"
+author: Verifyco-Team
 tags:
   - KI-Erkennung
   - Forschung
-image: ''
-imageAlt: "Genauigkeit von KI-Detektoren und Vertrauenswerte verstehen"
+image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+imageAlt: Genauigkeit von KI-Detektoren und Vertrauenswerte verstehen
 ---
 
 Auf jeder Marketingseite eines KI-Detektors steht etwas wie „99 % genau". Und jeder frustrierte Nutzer kennt eine Geschichte vom echten Foto, das als KI markiert wurde, oder vom offensichtlichen Fake, der durchgewunken wurde. Beides stimmt gleichzeitig — und das *Warum* zu verstehen ist der Unterschied zwischen guter Nutzung der Erkennung und dem Getäuschtwerden durch sie.
