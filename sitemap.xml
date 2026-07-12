@@ -2,41 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://verifyco.info/</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://verifyco.info/deepdetect-plus</loc>
-    <lastmod>2026-07-11</lastmod>
-<<<<<<< ours
-=======
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verifyco.info/vera</loc>
-    <lastmod>2026-07-11</lastmod>
->>>>>>> theirs
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verifyco.info/support</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verifyco.info/privacy</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verifyco.info/terms</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -46,16 +30,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png</image:loc><image:title>Step-by-step response after discovering a deepfake of yourself</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc><image:title>Step-by-step response after discovering a deepfake of yourself</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/are-deepfakes-illegal-laws-2026</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026"/>
@@ -65,12 +44,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png</image:loc><image:title>Overview of deepfake laws and regulations in 2026</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/are-deepfakes-illegal-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited"/>
@@ -80,12 +58,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png</image:loc><image:title>Inspecting a photo on iPhone for signs of editing and manipulation</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/how-accurate-are-ai-detectors</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-accurate-are-ai-detectors"/>
@@ -95,12 +72,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png</image:loc><image:title>Understanding AI detector accuracy and confidence scores</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-accurate-are-ai-detectors-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself"/>
@@ -110,12 +86,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc><image:title>Protecting yourself from an AI voice cloning scam call</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated"/>
@@ -125,12 +100,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc><image:title>Analysing a video on iPhone to tell if it is AI-generated</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/deepfake-detector-app-what-to-look-for</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for"/>
@@ -140,16 +114,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png</image:loc><image:title>Choosing a trustworthy deepfake detector app on iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc><image:title>Choosing a trustworthy deepfake detector app on iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone"/>
@@ -159,12 +128,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc><image:title>Checking whether a photo is real or AI, privately on an iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-spot-a-deepfake-video"/>
@@ -174,12 +142,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc><image:title>Analysing a video clip for deepfake warning signs on an iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated"/>
@@ -189,12 +156,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc><image:title>Forensic image analysis on iPhone highlighting AI-generation artifacts</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/content-credentials-c2pa-explained</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/content-credentials-c2pa-explained"/>
@@ -204,16 +170,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png</image:loc><image:title>Checking a photo's C2PA Content Credentials on iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc><image:title>Checking a photo's C2PA Content Credentials on iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/spot-fake-ai-profile-pictures</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/spot-fake-ai-profile-pictures"/>
@@ -223,16 +184,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png</image:loc><image:title>Checking whether a dating profile picture is AI-generated on iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc><image:title>Checking whether a dating profile picture is AI-generated on iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/what-is-a-deepfake</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
@@ -242,12 +198,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc><image:title>Side-by-side authentic and deepfaked portrait under forensic comparison</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked"/>
@@ -257,12 +212,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc><image:title>Verifyco signal pipeline analysing a video frame by frame</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog/on-device-verification-explained</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained"/>
@@ -272,12 +226,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc><image:title>Verifyco running a private, on-device analysis on iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/blog</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
@@ -290,33 +243,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/ai-detection</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/guides</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/ios</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-03</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/blog/tag/research</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -326,16 +273,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png</image:loc><image:title>Kendi deepfake'ini keşfettikten sonra adım adım müdahale</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc><image:title>Kendi deepfake'ini keşfettikten sonra adım adım müdahale</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026"/>
@@ -345,12 +287,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png</image:loc><image:title>2026'da deepfake yasaları ve düzenlemelerine genel bakış</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/are-deepfakes-illegal-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited"/>
@@ -360,12 +301,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png</image:loc><image:title>iPhone'da bir fotoğrafı düzenleme ve manipülasyon izleri için inceleme</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/how-accurate-are-ai-detectors</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-accurate-are-ai-detectors"/>
@@ -375,12 +315,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png</image:loc><image:title>AI dedektör doğruluğunu ve güven puanlarını anlamak</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-accurate-are-ai-detectors-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself"/>
@@ -390,12 +329,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc><image:title>AI ses klonlama dolandırıcılık aramasından korunma</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated"/>
@@ -405,12 +343,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc><image:title>Bir videonun AI üretimi olup olmadığını iPhone'da analiz etme</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for"/>
@@ -420,16 +357,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png</image:loc><image:title>iPhone'da güvenilir bir deepfake tespit uygulaması seçmek</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc><image:title>iPhone'da güvenilir bir deepfake tespit uygulaması seçmek</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone"/>
@@ -439,12 +371,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc><image:title>Bir fotoğrafın gerçek mi yapay zekâ mı olduğunu iPhone'da gizlice kontrol etme</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-spot-a-deepfake-video"/>
@@ -454,12 +385,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc><image:title>Bir video klibini deepfake işaretleri için iPhone'da analiz etme</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated"/>
@@ -469,12 +399,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc><image:title>iPhone'da yapay zekâ üretim izlerini vurgulayan adli görsel analizi</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/content-credentials-c2pa-explained</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/content-credentials-c2pa-explained"/>
@@ -484,16 +413,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png</image:loc><image:title>iPhone'da bir fotoğrafın C2PA İçerik Kimlik Bilgilerini kontrol etme</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc><image:title>iPhone'da bir fotoğrafın C2PA İçerik Kimlik Bilgilerini kontrol etme</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/spot-fake-ai-profile-pictures"/>
@@ -503,16 +427,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png</image:loc><image:title>Bir flört profili fotoğrafının AI üretimi olup olmadığını iPhone'da kontrol etme</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc><image:title>Bir flört profili fotoğrafının AI üretimi olup olmadığını iPhone'da kontrol etme</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/what-is-a-deepfake</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
@@ -522,12 +441,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc><image:title>Adli karşılaştırma altında yan yana gerçek ve deepfake portre</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked"/>
@@ -537,12 +455,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc><image:title>Verifyco sinyal hattı bir videoyu kare kare analiz ediyor</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/on-device-verification-explained</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained"/>
@@ -552,12 +469,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc><image:title>Verifyco iPhone'da gizli, cihazda çalışan bir analiz yürütüyor</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
@@ -570,33 +486,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/ai-tespiti</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/arastirma</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/deepfake</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/ios</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-03</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/tr/blog/tag/rehberler</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -606,16 +516,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png</image:loc><image:title>Respuesta paso a paso tras descubrir un deepfake de uno mismo</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc><image:title>Respuesta paso a paso tras descubrir un deepfake de uno mismo</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026"/>
@@ -625,12 +530,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png</image:loc><image:title>Panorama de las leyes y regulaciones sobre deepfakes en 2026</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/are-deepfakes-illegal-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited"/>
@@ -640,12 +544,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png</image:loc><image:title>Inspección de una foto en iPhone en busca de señales de edición y manipulación</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/how-accurate-are-ai-detectors</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-accurate-are-ai-detectors"/>
@@ -655,12 +558,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png</image:loc><image:title>Entendiendo la precisión de los detectores de IA y las puntuaciones de confianza</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-accurate-are-ai-detectors-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself"/>
@@ -670,12 +572,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc><image:title>Protegerse de una llamada de estafa con voz clonada por IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated"/>
@@ -685,12 +586,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc><image:title>Analizando un vídeo en iPhone para saber si está generado por IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for"/>
@@ -700,16 +600,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png</image:loc><image:title>Eligiendo una app detectora de deepfakes fiable en iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc><image:title>Eligiendo una app detectora de deepfakes fiable en iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone"/>
@@ -719,12 +614,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc><image:title>Comprobando si una foto es real o IA, de forma privada en un iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-spot-a-deepfake-video"/>
@@ -734,12 +628,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc><image:title>Analizando un vídeo en busca de señales de deepfake en un iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated"/>
@@ -749,12 +642,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc><image:title>Análisis forense de imagen en iPhone destacando artefactos de generación por IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/content-credentials-c2pa-explained</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/content-credentials-c2pa-explained"/>
@@ -764,16 +656,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png</image:loc><image:title>Comprobando las Content Credentials C2PA de una foto en iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc><image:title>Comprobando las Content Credentials C2PA de una foto en iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/spot-fake-ai-profile-pictures</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/spot-fake-ai-profile-pictures"/>
@@ -783,16 +670,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png</image:loc><image:title>Comprobando en iPhone si la foto de un perfil de citas está generada por IA</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc><image:title>Comprobando en iPhone si la foto de un perfil de citas está generada por IA</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/what-is-a-deepfake</loc>
     <lastmod>2026-06-22</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
@@ -802,12 +684,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc><image:title>Retrato auténtico y deepfake comparados lado a lado bajo análisis forense</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked"/>
@@ -817,12 +698,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc><image:title>El pipeline de señales de Verifyco analizando un vídeo fotograma a fotograma</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/on-device-verification-explained</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained"/>
@@ -832,12 +712,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc><image:title>Verifyco ejecutando un análisis privado en el dispositivo en un iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
@@ -850,33 +729,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/deteccion-de-ia</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/guias</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/investigacion</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/es/blog/tag/ios</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-03</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -886,16 +759,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png</image:loc><image:title>Schritt-für-Schritt-Reaktion nach der Entdeckung eines Deepfakes von sich selbst</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc><image:title>Schritt-für-Schritt-Reaktion nach der Entdeckung eines Deepfakes von sich selbst</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/are-deepfakes-illegal-laws-2026</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026"/>
@@ -905,12 +773,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png</image:loc><image:title>Überblick über Deepfake-Gesetze und Regulierung 2026</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/are-deepfakes-illegal-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/how-to-tell-if-a-photo-is-edited</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited"/>
@@ -920,12 +787,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png</image:loc><image:title>Prüfung eines Fotos auf dem iPhone auf Spuren von Bearbeitung und Manipulation</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/how-accurate-are-ai-detectors</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-accurate-are-ai-detectors"/>
@@ -935,12 +801,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png</image:loc><image:title>Genauigkeit von KI-Detektoren und Vertrauenswerte verstehen</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-accurate-are-ai-detectors-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/ai-voice-cloning-scams-protect-yourself</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself"/>
@@ -950,12 +815,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc><image:title>Schutz vor einem Betrugsanruf mit KI-geklonter Stimme</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/how-to-tell-if-a-video-is-ai-generated</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated"/>
@@ -965,12 +829,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc><image:title>Analyse eines Videos auf dem iPhone, um KI-Erzeugung zu erkennen</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/deepfake-detector-app-what-to-look-for</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for"/>
@@ -980,16 +843,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png</image:loc><image:title>Auswahl einer vertrauenswürdigen Deepfake-Detektor-App auf dem iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc><image:title>Auswahl einer vertrauenswürdigen Deepfake-Detektor-App auf dem iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone"/>
@@ -999,12 +857,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc><image:title>Privat auf dem iPhone prüfen, ob ein Foto echt oder KI ist</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-spot-a-deepfake-video"/>
@@ -1014,12 +871,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc><image:title>Ein Videoclip wird auf dem iPhone auf Deepfake-Warnsignale analysiert</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated"/>
@@ -1029,12 +885,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc><image:title>Forensische Bildanalyse auf dem iPhone zeigt KI-Generierungsartefakte</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/content-credentials-c2pa-explained</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/content-credentials-c2pa-explained"/>
@@ -1044,16 +899,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png</image:loc><image:title>Prüfung der C2PA Content Credentials eines Fotos auf dem iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc><image:title>Prüfung der C2PA Content Credentials eines Fotos auf dem iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/spot-fake-ai-profile-pictures</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/spot-fake-ai-profile-pictures"/>
@@ -1063,16 +913,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png</image:loc><image:title>Prüfung auf dem iPhone, ob ein Dating-Profilbild KI-generiert ist</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc><image:title>Prüfung auf dem iPhone, ob ein Dating-Profilbild KI-generiert ist</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/what-is-a-deepfake</loc>
     <lastmod>2026-06-22</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
@@ -1082,12 +927,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc><image:title>Echtes und deepgefaktes Porträt im forensischen Vergleich nebeneinander</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/5-signs-a-video-has-been-deepfaked</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked"/>
@@ -1097,12 +941,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc><image:title>Die Verifyco-Signalpipeline analysiert ein Video Frame für Frame</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/on-device-verification-explained</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained"/>
@@ -1112,12 +955,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc><image:title>Verifyco führt eine private On-Device-Analyse auf dem iPhone aus</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
@@ -1130,33 +972,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/forschung</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/ios</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-03</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/ki-erkennung</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/de/blog/tag/leitfaden</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -1166,16 +1002,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png</image:loc><image:title>Réponse étape par étape après la découverte d'un deepfake de soi</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc><image:title>Réponse étape par étape après la découverte d'un deepfake de soi</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/are-deepfakes-illegal-laws-2026</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026"/>
@@ -1185,12 +1016,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png</image:loc><image:title>Panorama des lois et régulations sur les deepfakes en 2026</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/are-deepfakes-illegal-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/how-to-tell-if-a-photo-is-edited</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited"/>
@@ -1200,12 +1030,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png</image:loc><image:title>Inspection d'une photo sur iPhone à la recherche de traces de retouche et de manipulation</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/how-accurate-are-ai-detectors</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-accurate-are-ai-detectors"/>
@@ -1215,12 +1044,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png</image:loc><image:title>Comprendre la précision des détecteurs d'IA et les scores de confiance</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-accurate-are-ai-detectors-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/ai-voice-cloning-scams-protect-yourself</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself"/>
@@ -1230,12 +1058,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc><image:title>Se protéger d'un appel frauduleux à la voix clonée par IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/how-to-tell-if-a-video-is-ai-generated</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated"/>
@@ -1245,12 +1072,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc><image:title>Analyse d'une vidéo sur iPhone pour savoir si elle est générée par IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/deepfake-detector-app-what-to-look-for</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for"/>
@@ -1260,16 +1086,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png</image:loc><image:title>Choisir une appli de détection de deepfakes fiable sur iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc><image:title>Choisir une appli de détection de deepfakes fiable sur iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone"/>
@@ -1279,12 +1100,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc><image:title>Vérifier en privé sur un iPhone si une photo est réelle ou IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-spot-a-deepfake-video"/>
@@ -1294,12 +1114,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc><image:title>Analyse d’un clip vidéo à la recherche de signes de deepfake sur un iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated"/>
@@ -1309,12 +1128,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc><image:title>Analyse forensique d’image sur iPhone mettant en évidence des artefacts de génération par IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/content-credentials-c2pa-explained</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/content-credentials-c2pa-explained"/>
@@ -1324,16 +1142,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png</image:loc><image:title>Vérification des Content Credentials C2PA d'une photo sur iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc><image:title>Vérification des Content Credentials C2PA d'une photo sur iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/spot-fake-ai-profile-pictures</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/spot-fake-ai-profile-pictures"/>
@@ -1343,16 +1156,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png</image:loc><image:title>Vérifier sur iPhone si la photo d'un profil de rencontre est générée par IA</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc><image:title>Vérifier sur iPhone si la photo d'un profil de rencontre est générée par IA</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/what-is-a-deepfake</loc>
     <lastmod>2026-06-22</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
@@ -1362,12 +1170,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc><image:title>Portrait authentique et deepfake comparés côte à côte en analyse forensique</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/5-signs-a-video-has-been-deepfaked</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked"/>
@@ -1377,12 +1184,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc><image:title>Le pipeline de signaux Verifyco analyse une vidéo image par image</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/on-device-verification-explained</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained"/>
@@ -1392,12 +1198,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc><image:title>Verifyco exécute une analyse privée sur l’appareil, sur un iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
@@ -1410,33 +1215,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/detection-dia</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/guides</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/ios</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-03</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/fr/blog/tag/recherche</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -1446,16 +1245,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png</image:loc><image:title>Risposta passo dopo passo dopo la scoperta di un deepfake di sé</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc><image:title>Risposta passo dopo passo dopo la scoperta di un deepfake di sé</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/are-deepfakes-illegal-laws-2026</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026"/>
@@ -1465,12 +1259,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png</image:loc><image:title>Panoramica delle leggi e regolamenti sui deepfake nel 2026</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/are-deepfakes-illegal-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/how-to-tell-if-a-photo-is-edited</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited"/>
@@ -1480,12 +1273,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png</image:loc><image:title>Ispezione di una foto su iPhone alla ricerca di segni di modifica e manipolazione</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/how-accurate-are-ai-detectors</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-accurate-are-ai-detectors"/>
@@ -1495,12 +1287,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png</image:loc><image:title>Capire la precisione dei rilevatori di IA e i punteggi di fiducia</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-accurate-are-ai-detectors-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/ai-voice-cloning-scams-protect-yourself</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself"/>
@@ -1510,12 +1301,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc><image:title>Proteggersi da una chiamata truffa con voce clonata dall'IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/how-to-tell-if-a-video-is-ai-generated</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated"/>
@@ -1525,12 +1315,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc><image:title>Analisi di un video su iPhone per capire se è generato dall'IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/deepfake-detector-app-what-to-look-for</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for"/>
@@ -1540,16 +1329,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png</image:loc><image:title>Scegliere un'app affidabile per rilevare deepfake su iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc><image:title>Scegliere un'app affidabile per rilevare deepfake su iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone"/>
@@ -1559,12 +1343,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc><image:title>Verificare in privato su un iPhone se una foto è reale o IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-spot-a-deepfake-video"/>
@@ -1574,12 +1357,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc><image:title>Analisi di una clip video alla ricerca di segnali di deepfake su un iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated"/>
@@ -1589,12 +1371,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc><image:title>Analisi forense di un’immagine su iPhone che evidenzia artefatti di generazione IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/content-credentials-c2pa-explained</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/content-credentials-c2pa-explained"/>
@@ -1604,16 +1385,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png</image:loc><image:title>Verifica delle Content Credentials C2PA di una foto su iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc><image:title>Verifica delle Content Credentials C2PA di una foto su iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/spot-fake-ai-profile-pictures</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/spot-fake-ai-profile-pictures"/>
@@ -1623,16 +1399,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png</image:loc><image:title>Controllare su iPhone se la foto di un profilo di incontri è generata dall'IA</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc><image:title>Controllare su iPhone se la foto di un profilo di incontri è generata dall'IA</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/what-is-a-deepfake</loc>
     <lastmod>2026-06-22</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
@@ -1642,12 +1413,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc><image:title>Ritratto autentico e deepfake a confronto sotto analisi forense</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/5-signs-a-video-has-been-deepfaked</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked"/>
@@ -1657,12 +1427,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc><image:title>La pipeline di segnali Verifyco analizza un video fotogramma per fotogramma</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/on-device-verification-explained</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained"/>
@@ -1672,12 +1441,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc><image:title>Verifyco esegue un’analisi privata sul dispositivo su un iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
@@ -1690,33 +1458,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/deepfake</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/guide</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/ios</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-03</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/ricerca</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/it/blog/tag/rilevamento-ia</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -1726,16 +1488,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png</image:loc><image:title>Resposta passo a passo após descobrir um deepfake de si mesmo</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc><image:title>Resposta passo a passo após descobrir um deepfake de si mesmo</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026"/>
@@ -1745,12 +1502,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png</image:loc><image:title>Panorama das leis e regulações sobre deepfakes em 2026</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/are-deepfakes-illegal-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited"/>
@@ -1760,12 +1516,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png</image:loc><image:title>Inspeção de uma foto no iPhone em busca de sinais de edição e manipulação</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/how-accurate-are-ai-detectors</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-accurate-are-ai-detectors"/>
@@ -1775,12 +1530,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png</image:loc><image:title>Entendendo a precisão dos detectores de IA e as pontuações de confiança</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-accurate-are-ai-detectors-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself"/>
@@ -1790,12 +1544,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc><image:title>Proteção contra uma ligação de golpe com voz clonada por IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated"/>
@@ -1805,12 +1558,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc><image:title>Análise de um vídeo no iPhone para saber se foi gerado por IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for"/>
@@ -1820,16 +1572,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png</image:loc><image:title>Escolhendo um app detector de deepfake confiável no iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc><image:title>Escolhendo um app detector de deepfake confiável no iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone"/>
@@ -1839,12 +1586,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc><image:title>Verificando em privado num iPhone se uma foto é real ou IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-spot-a-deepfake-video"/>
@@ -1854,12 +1600,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc><image:title>Analisando um clipe de vídeo em busca de sinais de deepfake num iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated"/>
@@ -1869,12 +1614,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc><image:title>Análise forense de imagem no iPhone destacando artefatos de geração por IA</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/content-credentials-c2pa-explained</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/content-credentials-c2pa-explained"/>
@@ -1884,16 +1628,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png</image:loc><image:title>Checando as Content Credentials C2PA de uma foto no iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc><image:title>Checando as Content Credentials C2PA de uma foto no iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/spot-fake-ai-profile-pictures"/>
@@ -1903,16 +1642,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png</image:loc><image:title>Checando no iPhone se a foto de um perfil de namoro foi gerada por IA</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc><image:title>Checando no iPhone se a foto de um perfil de namoro foi gerada por IA</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/what-is-a-deepfake</loc>
     <lastmod>2026-06-22</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
@@ -1922,12 +1656,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc><image:title>Retrato autêntico e deepfake comparados lado a lado sob análise forense</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked"/>
@@ -1937,12 +1670,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc><image:title>O pipeline de sinais do Verifyco analisando um vídeo quadro a quadro</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/on-device-verification-explained</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained"/>
@@ -1952,12 +1684,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc><image:title>Verifyco executando uma análise privada no dispositivo num iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
@@ -1970,33 +1701,27 @@
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/deteccao-de-ia</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/guias</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/ios</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-03</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/pt/blog/tag/pesquisa</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -2006,16 +1731,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 22_54_58.png</image:loc><image:title>الاستجابة خطوة بخطوة بعد اكتشاف تزييف عميق لنفسك</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc><image:title>الاستجابة خطوة بخطوة بعد اكتشاف تزييف عميق لنفسك</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-victim-guide-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/are-deepfakes-illegal-laws-2026"/>
@@ -2025,12 +1745,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/are-deepfakes-illegal-laws-2026"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/are-deepfakes-illegal-laws-2026"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png</image:loc><image:title>نظرة عامة على قوانين وتنظيمات التزييف العميق في 2026</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/are-deepfakes-illegal-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-photo-is-edited"/>
@@ -2040,12 +1759,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-photo-is-edited"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png</image:loc><image:title>فحص صورة على iPhone بحثًا عن آثار التعديل والتلاعب</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/how-accurate-are-ai-detectors</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-accurate-are-ai-detectors"/>
@@ -2055,12 +1773,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-accurate-are-ai-detectors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-accurate-are-ai-detectors"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png</image:loc><image:title>فهم دقة كواشف الذكاء الاصطناعي ودرجات الثقة</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/how-accurate-are-ai-detectors-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/ai-voice-cloning-scams-protect-yourself"/>
@@ -2070,12 +1787,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/ai-voice-cloning-scams-protect-yourself"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc><image:title>الحماية من مكالمة احتيال بصوت مستنسخ بالذكاء الاصطناعي</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000344.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-a-video-is-ai-generated"/>
@@ -2085,12 +1801,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-a-video-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc><image:title>تحليل فيديو على iPhone لمعرفة ما إذا كان مولّدًا بالذكاء الاصطناعي</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000350.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/deepfake-detector-app-what-to-look-for"/>
@@ -2100,16 +1815,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/deepfake-detector-app-what-to-look-for"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/deepfake-detector-app-what-to-look-for"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_08_26.png</image:loc><image:title>اختيار تطبيق موثوق لكشف التزييف العميق على iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc><image:title>اختيار تطبيق موثوق لكشف التزييف العميق على iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/deepfake-detector-app-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/check-if-photo-is-ai-on-iphone"/>
@@ -2119,12 +1829,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/check-if-photo-is-ai-on-iphone"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/check-if-photo-is-ai-on-iphone"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc><image:title>التحقق بخصوصية على iPhone من أن صورة حقيقية أم ذكاء اصطناعي</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012577.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-spot-a-deepfake-video"/>
@@ -2134,12 +1843,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-spot-a-deepfake-video"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-spot-a-deepfake-video"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc><image:title>تحليل مقطع فيديو بحثًا عن علامات التزييف العميق على iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012578.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/how-to-tell-if-an-image-is-ai-generated"/>
@@ -2149,12 +1857,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/how-to-tell-if-an-image-is-ai-generated"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc><image:title>تحليل جنائي لصورة على iPhone يُبرز آثار التوليد بالذكاء الاصطناعي</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000000140.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/content-credentials-c2pa-explained</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/content-credentials-c2pa-explained"/>
@@ -2164,16 +1871,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/content-credentials-c2pa-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/content-credentials-c2pa-explained"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_11_01.png</image:loc><image:title>فحص بيانات اعتماد المحتوى C2PA لصورة على iPhone</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc><image:title>فحص بيانات اعتماد المحتوى C2PA لصورة على iPhone</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/content-credentials-c2pa-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures</loc>
     <lastmod>2026-07-03</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/spot-fake-ai-profile-pictures"/>
@@ -2183,16 +1885,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/spot-fake-ai-profile-pictures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/spot-fake-ai-profile-pictures"/>
-<<<<<<< ours
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ChatGPT Image 11 Tem 2026 15_12_33.png</image:loc><image:title>التحقق على iPhone من أن صورة ملف شخصي في تطبيق مواعدة مولّدة بالذكاء الاصطناعي</image:title></image:image>
-=======
-    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc><image:title>التحقق على iPhone من أن صورة ملف شخصي في تطبيق مواعدة مولّدة بالذكاء الاصطناعي</image:title></image:image>
->>>>>>> theirs
+    <image:image><image:loc>https://verifyco.info/uploads/blog/ai-profile-pictures-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/what-is-a-deepfake</loc>
     <lastmod>2026-06-22</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/what-is-a-deepfake"/>
@@ -2202,12 +1899,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/what-is-a-deepfake"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/what-is-a-deepfake"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc><image:title>صورة حقيقية وأخرى مزيّفة عميقًا جنبًا إلى جنب تحت المقارنة الجنائية</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012583.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/5-signs-a-video-has-been-deepfaked"/>
@@ -2217,12 +1913,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/5-signs-a-video-has-been-deepfaked"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc><image:title>خط إشارات Verifyco يحلّل فيديو إطارًا بإطار</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012582.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/on-device-verification-explained</loc>
     <lastmod>2026-07-01</lastmod>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog/on-device-verification-explained"/>
@@ -2232,12 +1927,11 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://verifyco.info/pt/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://verifyco.info/ar/blog/on-device-verification-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://verifyco.info/blog/on-device-verification-explained"/>
-    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc><image:title>Verifyco يجري تحليلًا خاصًّا على الجهاز على iPhone</image:title></image:image>
+    <image:image><image:loc>https://verifyco.info/uploads/blog/1000012581.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog</loc>
     <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.info/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.info/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.info/es/blog"/>
@@ -2250,27 +1944,22 @@
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/ios</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-03</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/%D8%A3%D8%AF%D9%84%D9%91%D8%A9</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/%D8%A7%D9%84%D8%AA%D8%B2%D9%8A%D9%8A%D9%81-%D8%A7%D9%84%D8%B9%D9%85%D9%8A%D9%82</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://verifyco.info/ar/blog/tag/%D9%83%D8%B4%D9%81-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.4</priority>
+    <lastmod>2026-07-07</lastmod>
   </url>
 </urlset>

@@ -8,7 +8,7 @@ author: Equipo Verifyco
 tags:
   - Detección de IA
   - Investigación
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+image: /uploads/blog/how-accurate-are-ai-detectors-cover.jpg
 imageAlt: Entendiendo la precisión de los detectores de IA y las puntuaciones de confianza
 ---
 

@@ -9,7 +9,7 @@ author: Verifyco Team
 tags:
   - AI Detection
   - Research
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+image: /uploads/blog/how-accurate-are-ai-detectors-cover.jpg
 imageAlt: Understanding AI detector accuracy and confidence scores
 ---
 

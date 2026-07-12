@@ -39,6 +39,29 @@
   var hero = document.querySelector(".vr-hero");
   if (hero) requestAnimationFrame(function () { hero.classList.add("in"); });
 
+  /* ── 3D deck: pointer parallax + device tilt (rAF-throttled) ─ */
+  var deck = document.querySelector("[data-deck]");
+  var stage = document.querySelector("[data-tilt]");
+  if (deck && stage && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    var BX = 7, BY = -21, tx = BX, ty = BY, cx = BX, cy = BY, raf = 0;
+    function loop() {
+      cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08;
+      deck.style.setProperty("--rx", cx.toFixed(2) + "deg");
+      deck.style.setProperty("--ry", cy.toFixed(2) + "deg");
+      raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.05 ? requestAnimationFrame(loop) : 0;
+    }
+    stage.addEventListener("pointermove", function (e) {
+      var r = stage.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - 0.5;   // -0.5 … 0.5
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      tx = BX - py * 12; ty = BY + px * 20;
+      if (!raf) raf = requestAnimationFrame(loop);
+    });
+    stage.addEventListener("pointerleave", function () {
+      tx = BX; ty = BY; if (!raf) raf = requestAnimationFrame(loop);
+    });
+  }
+
   /* ── Scroll reveals ───────────────────────────────────────── */
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) {
@@ -219,15 +242,22 @@
         later(next, reduceMotion ? 0 : 750);
         return;
       }
-      if (step.pre) body.insertAdjacentHTML("beforeend", step.pre);
       var typed = step.typed || step.text || "";
-      later(function () {
+      var startType = function () {
+        if (step.pre) body.insertAdjacentHTML("beforeend", step.pre);
         typeHTML(body, typed, function () {
           if (step.post) body.insertAdjacentHTML("beforeend", step.post);
           if (step.afterLayers) revealLayers(msg, next);
           else later(next, reduceMotion ? 0 : 550);
         });
-      }, reduceMotion ? 0 : 350);
+      };
+      if (reduceMotion) { startType(); return; }
+      // show a typing indicator before Vera answers
+      var typingEl = document.createElement("div");
+      typingEl.className = "vr-typing";
+      typingEl.innerHTML = "<i></i><i></i><i></i>";
+      body.appendChild(typingEl);
+      later(function () { typingEl.remove(); startType(); }, 720);
     })();
   }
 

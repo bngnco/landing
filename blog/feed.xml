@@ -5,11 +5,7 @@
     <link>https://verifyco.info/blog</link>
     <description>Guides, breakdowns and research on detecting deepfakes, AI-generated and manipulated media — from the team behind Verifyco, on-device forensic verification for iPhone.</description>
     <language>en</language>
-<<<<<<< ours
-    <lastBuildDate>Sat, 11 Jul 2026 22:14:03 GMT</lastBuildDate>
-=======
-    <lastBuildDate>Sat, 11 Jul 2026 20:08:18 GMT</lastBuildDate>
->>>>>>> theirs
+    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://verifyco.info/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Someone Made a Deepfake of You: What to Do, Step by Step</title>

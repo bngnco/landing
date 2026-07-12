@@ -8,7 +8,7 @@ author: فريق Verifyco
 tags:
   - أدلّة
   - كشف الذكاء الاصطناعي
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+image: /uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg
 imageAlt: فحص صورة على iPhone بحثًا عن آثار التعديل والتلاعب
 ---
 

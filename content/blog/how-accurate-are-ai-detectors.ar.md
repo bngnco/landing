@@ -8,7 +8,7 @@ author: فريق Verifyco
 tags:
   - كشف الذكاء الاصطناعي
   - أبحاث
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+image: /uploads/blog/how-accurate-are-ai-detectors-cover.jpg
 imageAlt: فهم دقة كواشف الذكاء الاصطناعي ودرجات الثقة
 ---
 

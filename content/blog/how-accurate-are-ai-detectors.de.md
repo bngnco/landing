@@ -8,7 +8,7 @@ author: Verifyco-Team
 tags:
   - KI-Erkennung
   - Forschung
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+image: /uploads/blog/how-accurate-are-ai-detectors-cover.jpg
 imageAlt: Genauigkeit von KI-Detektoren und Vertrauenswerte verstehen
 ---
 

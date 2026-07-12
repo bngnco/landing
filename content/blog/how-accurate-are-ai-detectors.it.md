@@ -8,7 +8,7 @@ author: Team Verifyco
 tags:
   - Rilevamento IA
   - Ricerca
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+image: /uploads/blog/how-accurate-are-ai-detectors-cover.jpg
 imageAlt: Capire la precisione dei rilevatori di IA e i punteggi di fiducia
 ---
 

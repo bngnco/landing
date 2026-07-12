@@ -8,7 +8,7 @@ author: فريق Verifyco
 tags:
   - التزييف العميق
   - أبحاث
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png
+image: /uploads/blog/are-deepfakes-illegal-cover.jpg
 imageAlt: نظرة عامة على قوانين وتنظيمات التزييف العميق في 2026
 ---
 

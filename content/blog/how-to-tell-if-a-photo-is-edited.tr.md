@@ -8,7 +8,7 @@ author: Verifyco Ekibi
 tags:
   - Rehberler
   - AI Tespiti
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+image: /uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg
 imageAlt: iPhone'da bir fotoğrafı düzenleme ve manipülasyon izleri için inceleme
 ---
 

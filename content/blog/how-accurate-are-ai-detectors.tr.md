@@ -8,7 +8,7 @@ author: Verifyco Ekibi
 tags:
   - AI Tespiti
   - Araştırma
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_42.png
+image: /uploads/blog/how-accurate-are-ai-detectors-cover.jpg
 imageAlt: AI dedektör doğruluğunu ve güven puanlarını anlamak
 ---
 

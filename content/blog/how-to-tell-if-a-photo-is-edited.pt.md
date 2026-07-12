@@ -8,7 +8,7 @@ author: Equipe Verifyco
 tags:
   - Guias
   - Detecção de IA
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+image: /uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg
 imageAlt: Inspeção de uma foto no iPhone em busca de sinais de edição e manipulação
 ---
 

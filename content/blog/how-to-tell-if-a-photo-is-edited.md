@@ -9,7 +9,7 @@ author: Verifyco Team
 tags:
   - Guides
   - AI Detection
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_08_11.png
+image: /uploads/blog/how-to-tell-if-a-photo-is-edited-cover.jpg
 imageAlt: Inspecting a photo on iPhone for signs of editing and manipulation
 ---
 

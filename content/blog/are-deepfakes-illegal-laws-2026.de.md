@@ -8,7 +8,7 @@ author: Verifyco-Team
 tags:
   - Deepfakes
   - Forschung
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png
+image: /uploads/blog/are-deepfakes-illegal-cover.jpg
 imageAlt: Überblick über Deepfake-Gesetze und Regulierung 2026
 ---
 

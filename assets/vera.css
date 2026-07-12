@@ -25,19 +25,32 @@
 /* Nav: active Vera link + PREVIEW pill (also used on index) */
 .nav-links a.is-vera { color: var(--vr-2); }
 .pill-preview {
-  display: inline-block;
-  vertical-align: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   margin-left: 7px;
-  padding: 2.5px 7px;
+  padding: 3px 8px 3px 6px;
   border: 1px solid var(--vr-line-2);
   border-radius: 999px;
   font-family: var(--f-mono);
   font-size: 8.5px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  color: var(--vr);
-  background: var(--vr-soft);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #EAF4FA;
+  background: linear-gradient(180deg, rgba(159, 196, 218, 0.16), rgba(159, 196, 218, 0.06));
+  vertical-align: middle;
+  transform: translateY(-1px);
 }
+.pill-preview i {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--vr);
+  box-shadow: 0 0 7px var(--vr);
+  animation: pulse 2.2s ease-in-out infinite;
+}
+/* Footer variant sits inline with larger text — nudge it back down */
+.foot-col .pill-preview { transform: none; font-size: 8px; }
+@media (prefers-reduced-motion: reduce) { .pill-preview i { animation: none; } }
 
 /* ── Reveals (this page does not load GSAP) ────────────────── */
 .v-rv { opacity: 0; transform: translateY(26px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
@@ -51,14 +64,27 @@
    ════════════════════════════════════════════════════════════ */
 .vr-hero {
   position: relative;
-  min-height: 88svh;
+  min-height: 92svh;
   display: flex;
   align-items: center;
-  padding: calc(var(--nav-h) + 48px) 0 64px;
+  padding: calc(var(--nav-h) + 40px) 0 60px;
   overflow: clip;
-  text-align: center;
+  text-align: left;
 }
-.vr-hero .wrap { position: relative; display: grid; justify-items: center; gap: 24px; }
+.vr-hero-in {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 60px);
+}
+.vr-hero-copy { display: grid; justify-items: start; gap: 22px; }
+@media (max-width: 940px) {
+  .vr-hero { text-align: center; padding-top: calc(var(--nav-h) + 24px); }
+  .vr-hero-in { grid-template-columns: 1fr; gap: 8px; }
+  .vr-hero-copy { justify-items: center; gap: 20px; order: 2; }
+  .vr-hero-stage { order: 1; }
+}
 
 /* Aurora — the page's signature: cool light over the espresso base */
 .vr-aurora {
@@ -144,6 +170,136 @@
 .btn-ice-line:hover { border-color: var(--vr); background: var(--vr-soft); transform: translateY(-2px); }
 
 .vr-hero-note { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-3); }
+
+/* ════════════════════════════════════════════════════════════
+   HERO · 3D forensic evidence deck
+   The six layers Vera reads, floating in perspective, with a
+   reasoning node at the front and a scanning beam. Pure CSS 3D;
+   pointer parallax + idle float driven from vera.js.
+   ════════════════════════════════════════════════════════════ */
+.vr-hero-stage {
+  position: relative;
+  perspective: 1500px;
+  display: grid;
+  place-items: center;
+  min-height: 500px;
+}
+@media (max-width: 940px) { .vr-hero-stage { min-height: 400px; } .vr-deck { --ry: -16deg; width: min(330px, 84%); } }
+@media (max-width: 460px) { .vr-hero-stage { min-height: 340px; } .vr-deck { --ry: -13deg; width: 280px; } }
+
+.vr-stage-glow {
+  position: absolute; inset: 8% 4%;
+  background:
+    radial-gradient(ellipse 58% 52% at 54% 46%, rgba(159, 196, 218, 0.22) 0%, transparent 68%),
+    radial-gradient(ellipse 40% 40% at 40% 62%, rgba(110, 146, 168, 0.14) 0%, transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+  animation: vrGlow 8s ease-in-out infinite;
+}
+@keyframes vrGlow { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+
+.vr-deck {
+  --rx: 7deg; --ry: -21deg;
+  position: relative;
+  width: min(370px, 82%);
+  aspect-ratio: 1 / 1.08;
+  transform-style: preserve-3d;
+  animation: vrFloat 7.5s ease-in-out infinite;
+}
+@keyframes vrFloat {
+  0%, 100% { transform: translateY(0)     rotateX(var(--rx)) rotateY(var(--ry)); }
+  50%      { transform: translateY(-15px) rotateX(var(--rx)) rotateY(var(--ry)); }
+}
+
+/* each layer + the node share the staircase transform */
+.vr-pane, .vr-node {
+  position: absolute; left: 5%; right: 5%;
+  transform: translateZ(calc(var(--i) * 27px)) translateY(calc(var(--i) * -19px - 2%));
+  transform-style: preserve-3d;
+}
+.vr-pane {
+  top: 45%; height: 56px;
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 15px;
+  border-radius: 14px;
+  border: 1px solid var(--vr-line);
+  background: linear-gradient(158deg, rgba(20, 29, 35, 0.94) 0%, rgba(9, 13, 16, 0.9) 100%);
+  box-shadow: 0 26px 48px -26px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(159, 196, 218, 0.09);
+}
+.vr-pane-k {
+  font-family: var(--f-mono); font-size: 9.5px; letter-spacing: 0.12em;
+  color: var(--vr-2); flex: none; width: 74px;
+}
+.vr-pane-st {
+  margin-left: auto; flex: none;
+  font-family: var(--f-mono); font-size: 9.5px; letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+.vr-pane-st.ok { color: var(--green); }
+.vr-pane-st.warn { color: #E4B96B; }
+.vr-pane-st.bad { color: var(--red); }
+
+/* mini signal vizzes inside the panes */
+.vr-wave, .vr-spectrum { display: flex; align-items: center; gap: 2.5px; flex: 1; height: 24px; }
+.vr-wave i { width: 2.5px; border-radius: 2px; background: var(--vr); opacity: 0.85; height: 30%; animation: vrWave 1.4s ease-in-out infinite; }
+.vr-wave i:nth-child(2n) { height: 66%; } .vr-wave i:nth-child(3n) { height: 90%; } .vr-wave i:nth-child(4n) { height: 46%; } .vr-wave i:nth-child(5n) { height: 100%; }
+.vr-wave i:nth-child(odd) { animation-delay: 0.2s; } .vr-wave i:nth-child(3n) { animation-delay: 0.4s; }
+@keyframes vrWave { 50% { transform: scaleY(0.45); } }
+.vr-spectrum i { width: 3px; border-radius: 2px 2px 0 0; background: linear-gradient(180deg, #E4B96B, var(--vr-deep)); height: 40%; align-self: flex-end; }
+.vr-spectrum i:nth-child(2n) { height: 80%; } .vr-spectrum i:nth-child(3n) { height: 58%; } .vr-spectrum i:nth-child(4n) { height: 100%; } .vr-spectrum i:nth-child(5n) { height: 30%; }
+.vr-strip { display: flex; gap: 3px; flex: 1; }
+.vr-strip i { flex: 1; height: 22px; border-radius: 3px; border: 1px solid var(--vr-line); background: rgba(159, 196, 218, 0.07); }
+.vr-strip i.hot { border-color: rgba(228, 185, 107, 0.7); background: rgba(228, 185, 107, 0.14); }
+.vr-heat { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5px; width: 26px; height: 26px; flex: none; }
+.vr-heat i { border-radius: 2px; background: rgba(159, 196, 218, 0.16); }
+.vr-heat i.hot { background: var(--red); box-shadow: 0 0 6px rgba(194, 85, 63, 0.7); }
+.vr-lines { display: grid; gap: 4px; flex: 1; }
+.vr-lines i { height: 3px; border-radius: 2px; background: rgba(159, 196, 218, 0.28); }
+.vr-lines i:nth-child(2) { width: 70%; } .vr-lines i:nth-child(3) { width: 45%; }
+.vr-shield { flex: 1; color: var(--vr); display: flex; }
+.vr-shield svg { width: 22px; height: 22px; }
+
+/* the reasoning node — front-most, ice-lit, where evidence becomes an answer */
+.vr-node {
+  top: 41%; padding: 15px 17px;
+  border-radius: 16px;
+  border: 1px solid var(--vr-line-2);
+  background:
+    radial-gradient(ellipse 90% 80% at 50% 0%, rgba(159, 196, 218, 0.18) 0%, transparent 70%),
+    linear-gradient(158deg, rgba(12, 20, 26, 0.97) 0%, rgba(7, 11, 14, 0.95) 100%);
+  box-shadow: 0 34px 60px -28px rgba(0, 0, 0, 0.98), 0 0 34px -8px rgba(159, 196, 218, 0.32), inset 0 1px 0 rgba(215, 233, 244, 0.14);
+}
+.vr-node-id {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.18em; color: var(--vr-2);
+  margin-bottom: 12px;
+}
+.vr-node-id i { width: 6px; height: 6px; border-radius: 50%; background: var(--vr); box-shadow: 0 0 8px var(--vr); animation: pulse 2s ease-in-out infinite; }
+.vr-node-verdict { display: flex; align-items: baseline; gap: 12px; }
+.vr-node-num { font-family: var(--f-mono); font-size: 32px; font-weight: 500; letter-spacing: -0.03em; color: var(--red); line-height: 1; }
+.vr-node-num small { font-size: 15px; color: var(--ink-3); }
+.vr-node-lab { font-family: var(--f-mono); font-size: 9.5px; letter-spacing: 0.16em; color: var(--red); }
+
+/* scanning beam sweeping the deck front */
+.vr-beam {
+  position: absolute; left: -6%; right: -6%; top: 45%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--vr-2) 20%, #fff 50%, var(--vr-2) 80%, transparent);
+  box-shadow: 0 0 16px 3px rgba(159, 196, 218, 0.55);
+  transform: translateZ(180px);
+  animation: vrBeam 4.5s ease-in-out infinite;
+  opacity: 0.9;
+}
+@keyframes vrBeam {
+  0%, 100% { transform: translateZ(180px) translateY(52px); opacity: 0; }
+  12%, 88% { opacity: 0.85; }
+  50% { transform: translateZ(180px) translateY(-118px); opacity: 0.85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vr-deck { animation: none; transform: rotateX(var(--rx)) rotateY(var(--ry)); }
+  .vr-stage-glow, .vr-beam, .vr-wave i, .vr-node-id i { animation: none; }
+  .vr-beam { opacity: 0.5; }
+}
 
 /* ════════════════════════════════════════════════════════════
    01 · THE SHIFT — score → conversation
@@ -235,6 +391,31 @@
 .vr-replay svg { width: 11px; height: 11px; }
 
 .vr-chat { padding: clamp(20px, 3.5vw, 36px); display: grid; gap: 16px; min-height: 480px; align-content: start; }
+
+/* typing indicator — three dots in a Vera bubble before it answers */
+.vr-typing { display: inline-flex; align-items: center; gap: 5px; padding: 3px 2px; }
+.vr-typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--vr-deep); animation: vrType 1.25s ease-in-out infinite; }
+.vr-typing i:nth-child(2) { animation-delay: 0.16s; }
+.vr-typing i:nth-child(3) { animation-delay: 0.32s; }
+@keyframes vrType { 0%, 60%, 100% { opacity: 0.3; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
+
+/* faux input bar at the foot of the console */
+.vr-console-input {
+  display: flex; align-items: center; gap: 12px;
+  margin: 0 clamp(20px, 3.5vw, 36px) clamp(20px, 3.5vw, 30px);
+  padding: 12px 12px 12px 18px;
+  border: 1px solid var(--vr-line); border-radius: 14px;
+  background: rgba(159, 196, 218, 0.04);
+}
+.vr-input-field { flex: 1; font-size: 14px; color: var(--ink-3); display: inline-flex; align-items: center; }
+.vr-input-caret { display: inline-block; width: 2px; height: 15px; margin-left: 3px; background: var(--vr); animation: vrCaret 1s step-end infinite; }
+.vr-input-send {
+  width: 38px; height: 38px; flex: none; border-radius: 10px;
+  display: grid; place-items: center;
+  background: linear-gradient(160deg, #E8F3FA 0%, #9FC4DA 100%); color: #0B1319;
+}
+.vr-input-send svg { width: 18px; height: 18px; }
+@media (prefers-reduced-motion: reduce) { .vr-typing i, .vr-input-caret { animation: none; } }
 
 .vr-msg { max-width: min(640px, 88%); opacity: 0; transform: translateY(14px); transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
 .vr-msg.on { opacity: 1; transform: none; }

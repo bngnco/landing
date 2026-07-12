@@ -8,7 +8,7 @@ author: Verifyco Ekibi
 tags:
   - Deepfake
   - Araştırma
-image: /uploads/blog/ChatGPT Image 11 Tem 2026 23_07_49.png
+image: /uploads/blog/are-deepfakes-illegal-cover.jpg
 imageAlt: 2026'da deepfake yasaları ve düzenlemelerine genel bakış
 ---
 
