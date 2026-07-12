@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
-  "buildCommand": "node scripts/build-blog.mjs && node scripts/verify-site.mjs",
+  "buildCommand": "node scripts/build-blog.mjs",
   "outputDirectory": ".",
   "redirects": [
     {

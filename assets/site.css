@@ -174,7 +174,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--bronze-2);
 }
 
-.nav-links { display: flex; align-items: center; gap: 34px; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
 .nav-links a {
   font-size: 14.5px;
   font-weight: 500;
@@ -274,11 +274,18 @@ ul { margin: 0; padding: 0; list-style: none; }
   overflow: hidden;
 }
 .btn-fill {
-  background: linear-gradient(160deg, #F2DDC2 0%, #D6AC86 100%);
+  background: linear-gradient(135deg, #F7E7D2 0%, #E0BC98 46%, #CBA079 100%);
   color: #1A120A;
-  box-shadow: 0 14px 34px -14px rgba(214, 172, 134, 0.5);
+  box-shadow: 0 10px 30px -12px rgba(214, 172, 134, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
-.btn-fill:hover { transform: translateY(-2px); box-shadow: 0 22px 44px -16px rgba(214, 172, 134, 0.65); }
+.btn-fill::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.5) 48%, transparent 64%);
+  transform: translateX(-130%); transition: transform 720ms var(--ease); pointer-events: none;
+}
+.btn-fill:hover { transform: translateY(-2px); box-shadow: 0 20px 46px -14px rgba(214, 172, 134, 0.72), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+.btn-fill:hover::after { transform: translateX(130%); }
+@media (prefers-reduced-motion: reduce) { .btn-fill::after { transition: none; } }
 .btn-line {
   border: 1px solid var(--line-2);
   color: var(--cream);
@@ -314,9 +321,7 @@ body.menu-open .burger span:nth-child(3) { top: 20px; transform: rotate(-45deg);
 .mmenu {
   position: fixed; inset: 0;
   z-index: 600;
-  background: rgba(6, 5, 4, 0.97);
-  -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
+  background: rgba(6, 5, 4, 0.985);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1028,7 +1033,9 @@ footer { margin-top: clamp(90px, 11vw, 150px); border-top: 1px solid var(--line)
 /* ════════════════════════════════════════════════════════
    RESPONSIVE — hero & nav
    ════════════════════════════════════════════════════════ */
-@media (max-width: 1020px) {
+/* Collapse to the hamburger BEFORE the 7 links can cram/wrap — the longest
+   language (Turkish/German) needs the full bar width, so switch early. */
+@media (max-width: 1200px) {
   .nav-links { display: none; }
   .burger { display: block; }
 }

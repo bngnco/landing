@@ -77,6 +77,18 @@
   }, { rootMargin: "0px 0px -10% 0px", threshold: 0.05 });
   document.querySelectorAll(".v-rv, .vr-arch").forEach(function (el) { io.observe(el); });
 
+  /* ── Pause continuous animations in off-screen sections ──────
+     Only the section on screen keeps compositing — big win for
+     scroll smoothness and battery on a long, animated page. */
+  var animRoots = [hero].concat(Array.prototype.slice.call(document.querySelectorAll(".sec"))).filter(Boolean);
+  var visIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { en.target.classList.toggle("vr-off", !en.isIntersecting); });
+  }, { rootMargin: "120px 0px 120px 0px" });
+  animRoots.forEach(function (el) { visIO.observe(el); });
+  document.addEventListener("visibilitychange", function () {
+    animRoots.forEach(function (el) { el.classList.toggle("vr-off", document.hidden); });
+  });
+
   /* ══════════════════════════════════════════════════════════
      E · "Ask the evidence" — deterministic, honest sample data.
      Not connected to a live model; Vera is in training.

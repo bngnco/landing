@@ -173,14 +173,27 @@
 }
 
 .vr-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 6px; }
+
+/* Premium ice buttons — gradient fill, light sheen sweep on hover, soft glow */
+.btn-ice, .btn-ice-line { height: 52px; padding: 0 28px; border-radius: 13px; font-size: 15.5px; }
 .btn-ice {
-  background: linear-gradient(160deg, #E8F3FA 0%, #9FC4DA 100%);
-  color: #0B1319;
-  box-shadow: 0 14px 34px -14px rgba(159, 196, 218, 0.45);
+  background: linear-gradient(135deg, #F2F9FD 0%, #B8DCEC 46%, #8FBAD2 100%);
+  color: #0A1319; font-weight: 650;
+  box-shadow: 0 10px 30px -12px rgba(159, 196, 218, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
-.btn-ice:hover { transform: translateY(-2px); box-shadow: 0 22px 44px -16px rgba(159, 196, 218, 0.6); }
-.btn-ice-line { border: 1px solid var(--vr-line-2); color: var(--vr-2); background: rgba(159, 196, 218, 0.05); }
-.btn-ice-line:hover { border-color: var(--vr); background: var(--vr-soft); transform: translateY(-2px); }
+.btn-ice::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.6) 48%, transparent 64%);
+  transform: translateX(-130%); transition: transform 720ms var(--ease); pointer-events: none;
+}
+.btn-ice:hover { transform: translateY(-2px); box-shadow: 0 20px 46px -14px rgba(159, 196, 218, 0.72), inset 0 1px 0 rgba(255, 255, 255, 0.6); }
+.btn-ice:hover::after { transform: translateX(130%); }
+.btn-ice-line {
+  border: 1px solid var(--vr-line-2); color: var(--vr-2);
+  background: linear-gradient(180deg, rgba(159, 196, 218, 0.09), rgba(159, 196, 218, 0.03));
+}
+.btn-ice-line:hover { border-color: var(--vr); color: #EAF4FA; transform: translateY(-2px); box-shadow: 0 0 26px -6px rgba(159, 196, 218, 0.5); }
+@media (prefers-reduced-motion: reduce) { .btn-ice::after { transition: none; } }
 
 .vr-hero-note { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-3); }
 
@@ -917,6 +930,9 @@
 .vr-timeline li.is-now .vr-tl-st { color: var(--vr-2); }
 .vr-tl-n { font-size: 16px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
 .vr-tl-d { font-size: 12.5px; color: var(--ink-2); line-height: 1.45; }
+
+/* Pause every animation inside an off-screen section (set from vera.js). */
+.vr-off, .vr-off *, .vr-off *::before, .vr-off *::after { animation-play-state: paused !important; }
 
 /* ── Reduced motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
