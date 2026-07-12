@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Vera — Verifyco's Forensic Reasoning Model (Preview)</title>
-  <meta name="description" content="Vera is Verifyco's multimodal forensic reasoning model, in training — built to examine images, video and audio the way an expert examiner would: layer by layer, with evidence you can question." />
+  <title>Vera by Verifyco — Forensic Media Reasoning, Explained</title>
+  <meta name="description" content="Meet Vera by Verifyco, an in-development reasoning experience designed to turn media-analysis signals into evidence-aware explanations and follow-up questions. An examination, not an oracle." />
   <meta name="theme-color" content="#060504" />
   <link rel="canonical" href="https://verifyco.info/vera" />
   <meta property="og:site_name" content="Verifyco" />
-  <meta property="og:title" content="Vera — The forensic model you can talk to" />
-  <meta property="og:description" content="Verifyco's multimodal forensic reasoning model, in training. Six evidence layers, honest uncertainty, privacy by architecture." />
+  <meta property="og:title" content="Vera by Verifyco — The forensic model you can question" />
+  <meta property="og:description" content="An in-development reasoning experience that turns media-analysis signals into evidence you can examine — what was found, why it matters, and what stays uncertain." />
   <meta property="og:url" content="https://verifyco.info/vera" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://verifyco.info/assets/vera-og.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vera — The forensic model you can talk to" />
-  <meta name="twitter:description" content="Verifyco's multimodal forensic reasoning model, in training." />
+  <meta name="twitter:title" content="Vera by Verifyco — The forensic model you can question" />
+  <meta name="twitter:description" content="Turn media-analysis signals into an evidence-aware examination. In development at Verifyco." />
   <meta name="twitter:image" content="https://verifyco.info/assets/vera-og.png" />
 
   <link rel="icon" type="image/png" href="assets/verifyco-icon.png" />
@@ -26,15 +26,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/site.css?v=4" />
-  <link rel="stylesheet" href="assets/vera.css?v=3" />
+  <link rel="stylesheet" href="assets/vera.css?v=4" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Vera — Verifyco's Forensic Reasoning Model",
+    "name": "Vera by Verifyco — Forensic Media Reasoning",
     "url": "https://verifyco.info/vera",
-    "description": "Vera is Verifyco's multimodal forensic reasoning model, in training — built to examine images, video and audio layer by layer, with evidence you can question.",
+    "description": "Vera by Verifyco is an in-development reasoning experience designed to turn media-analysis signals into evidence-aware explanations and follow-up questions.",
     "isPartOf": { "@type": "WebSite", "@id": "https://verifyco.info/#website" },
     "publisher": { "@type": "Organization", "@id": "https://verifyco.info/#org" }
   }
@@ -42,6 +42,7 @@
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#examine">Skip to how Vera examines</a>
 
   <!-- ═══════════ NAV ═══════════ -->
   <header class="nav" id="nav">
@@ -59,7 +60,7 @@
 
       <div class="nav-right">
         <a class="btn btn-fill btn-sm" href="index.html#download">Download</a>
-        <button type="button" class="burger" data-burger aria-label="Menu">
+        <button type="button" class="burger" data-burger aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -81,8 +82,8 @@
     </div>
   </div>
 
-  <main>
-    <!-- ═══════════ HERO ═══════════ -->
+  <main id="main">
+    <!-- ═══════════ B · HERO ═══════════ -->
     <section class="vr-hero" id="top">
       <div class="vr-aurora" aria-hidden="true"></div>
       <div class="vr-grid" aria-hidden="true"></div>
@@ -90,34 +91,36 @@
 
       <div class="wrap vr-hero-in">
         <div class="vr-hero-copy">
-          <span class="vr-eyebrow">Verifyco Research · Forensic Reasoning Model</span>
+          <span class="vr-eyebrow">Verifyco Research · Private Preview</span>
 
           <h1 class="vr-h1">
             <span class="vr-word"><span class="vr-wi">Meet</span></span>
             <span class="vr-word"><span class="vr-wi"><span class="vhl">Vera.</span></span></span>
           </h1>
-          <p class="vr-tag">The forensic model you can talk to.</p>
+          <p class="vr-tag">The forensic model you can question.</p>
 
           <p class="vr-lead">
-            Vera is Verifyco's multimodal forensic reasoning model, in training — built to examine
-            images, video and audio the way an expert examiner would: layer by layer, with evidence
-            you can question.
+            A score can flag a risk. Vera is being built to show the signals behind it,
+            reason across the evidence, and answer what you need to examine next — from
+            the team behind Verifyco's on-device detection.
           </p>
 
-          <span class="vr-status"><i></i>In development</span>
+          <span class="vr-status"><i></i>In development · Preview access is limited</span>
 
           <div class="vr-ctas">
-            <a class="btn btn-ice" href="#waitlist">Join the waitlist</a>
-            <a class="btn btn-ice-line" href="#architecture">Read the approach</a>
+            <a class="btn btn-ice" href="#waitlist">Join the private preview</a>
+            <a class="btn btn-ice-line" href="#examine">See how Vera examines</a>
           </div>
 
-          <span class="vr-hero-note">Multimodal · Evidence-led · Private by architecture</span>
+          <span class="vr-hero-note">Vera <em>by Verifyco</em> · Evidence-led · An examination, not an oracle</span>
         </div>
 
-        <!-- 3D forensic evidence deck — the six layers Vera reads, in perspective -->
-        <div class="vr-hero-stage" data-tilt aria-hidden="true">
-          <div class="vr-stage-glow"></div>
-          <div class="vr-deck" data-deck>
+        <!-- Examination console — the six layers Vera reads, resolving to one signal.
+             Illustrative preview: Vera is in training; this is not a real result. -->
+        <div class="vr-hero-stage" data-tilt aria-label="Illustrative preview of a Vera examination">
+          <span class="vr-stage-tag">Illustrative preview</span>
+          <div class="vr-stage-glow" aria-hidden="true"></div>
+          <div class="vr-deck" data-deck aria-hidden="true">
             <div class="vr-beam" data-beam></div>
 
             <div class="vr-pane vr-pane--audio" style="--i:0">
@@ -129,7 +132,7 @@
             <div class="vr-pane vr-pane--freq" style="--i:1">
               <span class="vr-pane-k">FREQUENCY</span>
               <span class="vr-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-              <span class="vr-pane-st warn">GAN ridge</span>
+              <span class="vr-pane-st warn">ridge</span>
             </div>
 
             <div class="vr-pane vr-pane--temporal" style="--i:2">
@@ -158,100 +161,153 @@
               <span class="vr-pane-st">no sig</span>
             </div>
 
-            <!-- reasoning node — where the layers become an answer -->
+            <!-- reasoning node — where the layers become one signal, and a question -->
             <div class="vr-node" style="--i:6">
-              <span class="vr-node-id"><i></i>VERA · REASONING</span>
+              <span class="vr-node-id"><i></i>VERA · READING 6 LAYERS</span>
               <div class="vr-node-verdict">
                 <span class="vr-node-num">27<small>/100</small></span>
-                <span class="vr-node-lab">LIKELY MANIPULATED</span>
+                <span class="vr-node-lab">ANOMALY SIGNAL<em>· why?</em></span>
               </div>
-              <span class="vr-node-links" aria-hidden="true"></span>
             </div>
           </div>
         </div>
       </div>
+
+      <a class="vr-scrollcue" href="#problem" aria-label="Scroll to read more"><span>Scroll</span><i></i></a>
     </section>
 
-    <!-- ═══════════ 01 · THE SHIFT ═══════════ -->
-    <section class="sec" id="shift">
+    <!-- ═══════════ C · THE PROBLEM ═══════════ -->
+    <section class="sec vr-problem" id="problem">
+      <span class="vr-thread" aria-hidden="true"></span>
       <div class="wrap">
         <div class="sec-head">
-          <span class="eyebrow v-rv" style="color:var(--vr)">01 · THE SHIFT</span>
-          <h2 class="t-display v-rv" data-d="1">From a score… <span class="vhl">to a conversation.</span></h2>
-          <p class="sub v-rv" data-d="2">Detectors give you a number. Vera gives you an examination — ask why, ask where, ask what to check next.</p>
+          <span class="eyebrow v-rv" style="color:var(--vr)">01 · The gap</span>
+          <h2 class="t-display v-rv" data-d="1">A score is a <span class="vhl">starting point.</span></h2>
+          <p class="sub v-rv" data-d="2">A single probability can tell you something deserves attention. It can't tell you which signals mattered, what conflicts with them, or what to examine next.</p>
         </div>
 
-        <div class="vr-shift">
-          <div class="vr-mock v-rv">
-            <div class="vr-mock-label">Today · Verifyco engine</div>
-            <div class="vr-scorecard">
-              <span class="n">27<small>/100</small></span>
-              <span class="bar"><i></i></span>
-              <span class="v">LIKELY MANIPULATED</span>
-              <span class="q">…but why?</span>
-            </div>
+        <div class="vr-frag">
+          <div class="vr-frag-score v-rv">
+            <span class="vr-frag-num">27<small>/100</small></span>
+            <span class="vr-frag-lab">Detector output</span>
           </div>
-
-          <div class="vr-shift-arrow v-rv" data-d="1" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 12h17M14 6l6 6-6 6"/></svg>
+          <div class="vr-frag-arrow v-rv" data-d="1" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 12h17M14 6l6 6-6 6"/></svg>
           </div>
-
-          <div class="vr-mock vr-mock--chat v-rv" data-d="2">
-            <div class="vr-mock-label">Next · Vera</div>
-            <div class="vr-minichat">
-              <div class="b u">Why 27?</div>
-              <div class="b a">The <b>lip-sync drifts 3 frames</b> behind the audio, and DeepDetect+ flags a <b>boundary artefact on the jawline</b>. Want the frames?</div>
-              <div class="b u">What should I check next?</div>
-              <div class="b a">Find the <b>original source</b> — this copy was re-encoded twice, so provenance is stripped.</div>
-            </div>
-          </div>
+          <ul class="vr-frag-qs">
+            <li class="v-rv" data-d="1">What caused the score?</li>
+            <li class="v-rv" data-d="2">Which evidence is strongest?</li>
+            <li class="v-rv" data-d="3">What remains uncertain?</li>
+          </ul>
         </div>
+        <p class="vr-frag-foot v-rv">Vera builds on Verifyco's analysis — it doesn't replace the score, it opens it.</p>
       </div>
     </section>
 
-    <!-- ═══════════ 02 · SIMULATED CONVERSATION ═══════════ -->
-    <section class="sec" id="preview">
+    <!-- ═══════════ D · FROM SIGNAL TO EXAMINATION ═══════════ -->
+    <section class="sec vr-demo" id="examine">
+      <span class="vr-thread" aria-hidden="true"></span>
       <div class="wrap">
         <div class="sec-head">
-          <span class="eyebrow v-rv" style="color:var(--vr)">02 · PREVIEW</span>
-          <h2 class="t-display v-rv" data-d="1">An examination, <span class="vhl">not an oracle.</span></h2>
-          <p class="sub v-rv" data-d="2">A preview of Vera's report format. This conversation is scripted — Vera is in training, and we won't pretend otherwise.</p>
+          <span class="eyebrow v-rv" style="color:var(--vr)">02 · The examination</span>
+          <h2 class="t-display v-rv" data-d="1">From a signal <span class="vhl">to an examination.</span></h2>
+          <p class="sub v-rv" data-d="2">The same file, opened step by step: received, structured into evidence, reasoned over, questioned — and resolved into a report you can inspect.</p>
         </div>
 
-        <div class="vr-console v-rv">
-          <div class="vr-console-top">
-            <span class="vr-console-id"><i></i>VERA CONSOLE</span>
-            <span class="vr-sim-tag">Simulated preview — Vera is in training</span>
-            <button type="button" class="vr-replay" data-replay>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
-              Replay
-            </button>
-          </div>
-          <div class="vr-chat" id="vr-chat" aria-label="Simulated conversation with Vera"></div>
-          <div class="vr-console-input" aria-hidden="true">
-            <span class="vr-input-field">Ask Vera about a file<span class="vr-input-caret"></span></span>
-            <span class="vr-input-send">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+        <div class="vr-demo-grid">
+          <ol class="vr-beats" aria-label="Examination stages">
+            <li data-beat="0" class="v-rv"><span class="vr-beat-n">01</span><span class="vr-beat-k">Receive</span><span class="vr-beat-d">The media, its context, the signals already available.</span></li>
+            <li data-beat="1" class="v-rv" data-d="1"><span class="vr-beat-n">02</span><span class="vr-beat-k">Structure</span><span class="vr-beat-d">Signals stay traceable instead of collapsing into one number.</span></li>
+            <li data-beat="2" class="v-rv" data-d="2"><span class="vr-beat-n">03</span><span class="vr-beat-k">Reason</span><span class="vr-beat-d">Supporting and conflicting evidence, weighed — with the limits stated.</span></li>
+            <li data-beat="3" class="v-rv" data-d="3"><span class="vr-beat-n">04</span><span class="vr-beat-k">Question</span><span class="vr-beat-d">Ask in plain language; every claim traces back to a signal.</span></li>
+            <li data-beat="4" class="v-rv" data-d="3"><span class="vr-beat-n">05</span><span class="vr-beat-k">Examination</span><span class="vr-beat-d">A report: finding, evidence, uncertainty, next step.</span></li>
+          </ol>
+
+          <div class="vr-console v-rv" data-d="1">
+            <div class="vr-console-top">
+              <span class="vr-console-id"><i></i>VERA CONSOLE</span>
+              <span class="vr-sim-tag">Illustrative preview — Vera is in training</span>
+              <button type="button" class="vr-replay" data-replay>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+                Replay
+              </button>
+            </div>
+            <div class="vr-chat" id="vr-chat" aria-label="Illustrative conversation with Vera"></div>
+            <div class="vr-console-input" aria-hidden="true">
+              <span class="vr-input-field">Ask Vera about a file<span class="vr-input-caret"></span></span>
+              <span class="vr-input-send">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════ 03 · ARCHITECTURE ═══════════ -->
+    <!-- ═══════════ E · ASK THE EVIDENCE (interactive) ═══════════ -->
+    <section class="sec vr-ask" id="ask">
+      <span class="vr-thread" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow v-rv" style="color:var(--vr)">03 · Try it</span>
+          <h2 class="t-display v-rv" data-d="1">Ask the <span class="vhl">evidence.</span></h2>
+          <p class="sub v-rv" data-d="2">Pick a question to see how an examination can stay grounded in the signals that produced it. Sample data — Vera is in training.</p>
+        </div>
+
+        <div class="vr-ask-panel v-rv">
+          <div class="vr-ask-side">
+            <span class="vr-ask-label">Interactive product concept — sample data</span>
+            <div class="vr-ask-chips" role="group" aria-label="Choose a question for Vera">
+              <button type="button" class="vr-chip-q is-on" data-q="flag">Why was this flagged?</button>
+              <button type="button" class="vr-chip-q" data-q="strong">What evidence is strongest?</button>
+              <button type="button" class="vr-chip-q" data-q="against">What argues against manipulation?</button>
+              <button type="button" class="vr-chip-q" data-q="next">What should I check next?</button>
+            </div>
+
+            <div class="vr-ask-nodes" aria-hidden="true">
+              <span class="vr-nodelab">Evidence considered</span>
+              <div class="vr-nodes-row">
+                <span class="vr-enode" data-node="c2pa">C2PA</span>
+                <span class="vr-enode" data-node="meta">Metadata</span>
+                <span class="vr-enode" data-node="neural">Neural</span>
+                <span class="vr-enode" data-node="temporal">Temporal</span>
+                <span class="vr-enode" data-node="freq">Frequency</span>
+                <span class="vr-enode" data-node="audio">Audio</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vr-ask-answer">
+            <div class="vr-ans-head">
+              <span class="vr-ans-who"><i></i>Vera · illustrative</span>
+              <span class="vr-ans-conf" data-conf>Confidence: moderate</span>
+            </div>
+            <p class="vr-ans-body" id="vr-ans-body" aria-live="polite">Select a question to see how Vera would ground an answer in evidence.</p>
+            <div class="vr-ans-meta">
+              <div><span class="vr-ans-mk">Signals used</span><span class="vr-ans-mv" data-used>—</span></div>
+              <div><span class="vr-ans-mk">Uncertainty</span><span class="vr-ans-mv" data-unc>—</span></div>
+              <div><span class="vr-ans-mk">Suggested next</span><span class="vr-ans-mv" data-next>—</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ F · HOW VERA THINKS (pipeline) ═══════════ -->
     <section class="sec" id="architecture">
+      <span class="vr-thread" aria-hidden="true"></span>
       <div class="wrap">
         <div class="sec-head">
-          <span class="eyebrow v-rv" style="color:var(--vr)">03 · ARCHITECTURE</span>
+          <span class="eyebrow v-rv" style="color:var(--vr)">04 · Architecture</span>
           <h2 class="t-display v-rv" data-d="1">How Vera <span class="vhl">thinks.</span></h2>
-          <p class="sub v-rv" data-d="2">Forensic signals become structured evidence; a reasoning core weighs their agreements and contradictions; the output is a report you can interrogate.</p>
+          <p class="sub v-rv" data-d="2">Forensic signals become structured evidence; a reasoning core weighs their agreements and contradictions; the output is a report you can interrogate — never a hidden monologue.</p>
         </div>
 
         <div class="vr-arch">
           <div class="vr-stage v-rv">
             <span class="vr-stage-dot">1</span>
-            <h3><span class="m">STAGE 01</span>Perception</h3>
-            <p>Six independent evidence layers examine the file itself — nothing is taken on trust.</p>
+            <h3><span class="m">STAGE 01 · in: media</span>Reception</h3>
+            <p>Independent evidence layers examine the file itself — nothing is taken on trust.</p>
             <div class="vr-chipset">
               <span class="vr-chip">C2PA</span>
               <span class="vr-chip">Metadata</span>
@@ -264,115 +320,164 @@
 
           <div class="vr-stage v-rv" data-d="1">
             <span class="vr-stage-dot">2</span>
-            <h3><span class="m">STAGE 02</span>Evidence graph</h3>
+            <h3><span class="m">STAGE 02 · out: evidence graph</span>Evidence graph</h3>
             <p>Raw findings become structured, cross-referenced evidence — each claim tied to the layer, region and timestamp that produced it.</p>
           </div>
 
           <div class="vr-stage v-rv" data-d="2">
             <span class="vr-stage-dot">3</span>
-            <h3><span class="m">STAGE 03</span>Reasoning core</h3>
-            <p>A multimodal model fine-tuned for forensic reasoning weighs agreements and contradictions across modalities — does the voice match the lips? Does the light match the scene?</p>
+            <h3><span class="m">STAGE 03 · reasoning</span>Reasoning loop</h3>
+            <p>A model designed for forensic reasoning weighs agreements and contradictions across modalities — does the voice match the lips? Does the light match the scene?</p>
           </div>
 
           <div class="vr-stage v-rv" data-d="3">
             <span class="vr-stage-dot">4</span>
-            <h3><span class="m">STAGE 04</span>Examination report</h3>
+            <h3><span class="m">STAGE 04 · out: report</span>Examination report</h3>
             <p>A conversational report: what was found, where, why it matters — and what remains genuinely uncertain.</p>
           </div>
         </div>
 
         <p class="vr-arch-note v-rv">
-          GROUNDED IN THE RESEARCH FRONTIER OF EXPLAINABLE MULTIMODAL FORENSICS —
-          MLLM-BASED DETECTION &amp; LOCALIZATION ·
-          <a href="https://arxiv.org/abs/2410.02761" target="_blank" rel="noopener">FAKESHIELD, ICLR 2025 →</a>
+          Vera surfaces evidence summaries and rationale — not hidden internal tokens.
+          Grounded in the research frontier of explainable multimodal forensics ·
+          <a href="https://arxiv.org/abs/2410.02761" target="_blank" rel="noopener">FakeShield, ICLR 2025 →</a>
         </p>
       </div>
     </section>
 
-    <!-- ═══════════ 04 · PRINCIPLES ═══════════ -->
-    <section class="sec" id="principles">
+    <!-- ═══════════ G · DETECTION vs VERA ═══════════ -->
+    <section class="sec vr-vs" id="difference">
+      <span class="vr-thread" aria-hidden="true"></span>
       <div class="wrap">
         <div class="sec-head">
-          <span class="eyebrow v-rv" style="color:var(--vr)">04 · PRINCIPLES</span>
+          <span class="eyebrow v-rv" style="color:var(--vr)">05 · The wedge</span>
+          <h2 class="t-display v-rv" data-d="1">Detection flags. <span class="vhl">Vera examines.</span></h2>
+          <p class="sub v-rv" data-d="2">Vera is a reasoning layer on top of Verifyco's detection — it complements DeepDetect+, it doesn't replace the underlying analysis.</p>
+        </div>
+
+        <div class="vr-vs-grid v-rv">
+          <div class="vr-vs-col vr-vs-col--a">
+            <span class="vr-vs-h">Detection layer</span>
+            <ul>
+              <li>Produces signals and scores</li>
+              <li>Flags media for attention</li>
+              <li>Answers the first question</li>
+              <li>Measures confidence</li>
+            </ul>
+          </div>
+          <div class="vr-vs-thread" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="vr-vs-col vr-vs-col--b">
+            <span class="vr-vs-h">Vera reasoning layer</span>
+            <ul>
+              <li>Organises signals into evidence</li>
+              <li>Helps explain <em>why</em> it was flagged</li>
+              <li>Supports follow-up questions</li>
+              <li>Communicates uncertainty and limits</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="vr-platform v-rv" data-d="1" aria-label="Where Vera sits">
+          <span class="vr-plat-node">Verifyco detection layers</span>
+          <span class="vr-plat-arrow" aria-hidden="true">→</span>
+          <span class="vr-plat-node is-vera">Vera reasoning layer</span>
+          <span class="vr-plat-arrow" aria-hidden="true">→</span>
+          <span class="vr-plat-node">iOS · Web <em>· API (planned)</em></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ H · EVIDENCE CHARTER ═══════════ -->
+    <section class="sec vr-charter" id="principles">
+      <span class="vr-thread" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow v-rv" style="color:var(--vr)">06 · The charter</span>
           <h2 class="t-display v-rv" data-d="1">Built the way evidence <span class="vhl">deserves.</span></h2>
         </div>
 
-        <div class="vr-prin">
-          <div class="vr-prin-card v-rv">
-            <div class="vr-prin-ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3v18M5 7l7-4 7 4M5 7v4c0 2.5 1.5 4 3.5 4M19 7v4c0 2.5-1.5 4-3.5 4"/><path d="M3.5 15h4M16.5 15h4"/></svg>
+        <div class="vr-charter-list">
+          <div class="vr-rule v-rv">
+            <span class="vr-rule-n">01</span>
+            <div>
+              <h3>Evidence over verdicts</h3>
+              <p>Every conclusion stays connected to the signals that support — or limit — it. Unavailable signals are declared, never hidden.</p>
             </div>
-            <h3>Evidence over verdicts</h3>
-            <p>Every claim traceable to a layer, a region, a timestamp. Unavailable signals are declared, never hidden.</p>
           </div>
-
-          <div class="vr-prin-card v-rv" data-d="1">
-            <div class="vr-prin-ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16.5" r="0.6" fill="currentColor"/></svg>
+          <div class="vr-rule v-rv" data-d="1">
+            <span class="vr-rule-n">02</span>
+            <div>
+              <h3>Uncertainty stays visible</h3>
+              <p>Vera says what it cannot determine, rather than hiding ambiguity behind a confident sentence. "Inconclusive" is a valid answer.</p>
             </div>
-            <h3>Honest uncertainty</h3>
-            <p>"Inconclusive" is a valid answer, and Vera will say it. Confidence you can't justify is confidence you shouldn't ship.</p>
           </div>
-
-          <div class="vr-prin-card v-rv" data-d="2">
-            <div class="vr-prin-ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3 L19 6 V11 C19 15.5 16 18.7 12 21 C8 18.7 5 15.5 5 11 V6 Z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div class="vr-rule v-rv" data-d="2">
+            <span class="vr-rule-n">03</span>
+            <div>
+              <h3>Privacy is architectural</h3>
+              <p>Verifyco's detection runs on-device today. Vera's hybrid design keeps as much as possible local and is never trained on your media. <a href="privacy.html">Read the privacy policy →</a></p>
             </div>
-            <h3>Privacy by architecture</h3>
-            <p>Hybrid design: on-device layers (Neural Engine, DeepDetect+) wherever possible, ephemeral processing elsewhere — and never trained on user media.</p>
+          </div>
+          <div class="vr-rule v-rv" data-d="3">
+            <span class="vr-rule-n">04</span>
+            <div>
+              <h3>Human judgment stays in the loop</h3>
+              <p>Vera supports an investigation; it doesn't make consequential decisions for people. An examination aid, not an oracle.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════ 05 · ROADMAP ═══════════ -->
-    <section class="sec" id="roadmap">
+    <!-- ═══════════ I · ROADMAP ═══════════ -->
+    <section class="sec vr-road-sec" id="roadmap">
+      <span class="vr-thread" aria-hidden="true"></span>
       <div class="wrap">
         <div class="sec-head" style="text-align:center;max-width:none;justify-items:center;display:grid;">
-          <span class="eyebrow v-rv" style="color:var(--vr)">05 · ROADMAP</span>
+          <span class="eyebrow v-rv" style="color:var(--vr)">07 · The system</span>
           <h2 class="t-display v-rv" data-d="1">One engine, <span class="vhl">growing.</span></h2>
+          <p class="sub v-rv" data-d="2" style="margin-inline:auto;">The goal isn't another detector. It's an interface for examining digital evidence across media.</p>
         </div>
 
-        <div class="vr-road">
-          <div class="vr-road-item live v-rv">
-            <div class="vr-road-head"><h3>Verifyco iOS</h3><span class="vr-road-pill">Live</span></div>
-            <p>The five-signal on-device engine — forensic verification on iPhone, fully offline.</p>
+        <div class="vr-groups">
+          <div class="vr-group v-rv">
+            <span class="vr-group-h"><i class="now"></i>Now</span>
+            <div class="vr-group-item"><h3>Verifyco iOS</h3><p>The on-device detection engine — forensic verification on iPhone, fully offline.</p></div>
+            <div class="vr-group-item"><h3>Verifyco Web</h3><p>Evidence-led analysis in the browser, with shareable reports.</p></div>
           </div>
-          <div class="vr-road-item live v-rv" data-d="1">
-            <div class="vr-road-head"><h3>Verifyco Web</h3><span class="vr-road-pill">Live</span></div>
-            <p>Evidence-led analysis in the browser, with shareable examination reports.</p>
+          <div class="vr-group v-rv" data-d="1">
+            <span class="vr-group-h"><i class="dev"></i>In development</span>
+            <div class="vr-group-item"><h3>Vera</h3><p>The reasoning layer — six evidence sources, one examination you can question.</p></div>
           </div>
-          <div class="vr-road-item now v-rv" data-d="2">
-            <div class="vr-road-head"><h3>Vera</h3><span class="vr-road-pill">In training</span></div>
-            <p>The multimodal forensic reasoning model — six evidence layers, one conversation.</p>
-          </div>
-          <div class="vr-road-item v-rv" data-d="3">
-            <div class="vr-road-head"><h3>Vera API &amp; integrations</h3><span class="vr-road-pill">Planned</span></div>
-            <p>The same examination, available to platforms, newsrooms and workflows.</p>
-          </div>
-          <div class="vr-road-item v-rv" data-d="3">
-            <div class="vr-road-head"><h3>Android &amp; cross-platform</h3><span class="vr-road-pill">Planned</span></div>
-            <p>The full engine beyond iOS.</p>
+          <div class="vr-group v-rv" data-d="2">
+            <span class="vr-group-h"><i class="exp"></i>Exploring</span>
+            <div class="vr-group-item"><h3>Vera API &amp; integrations</h3><p>The same examination, available to platforms, newsrooms and workflows.</p></div>
+            <div class="vr-group-item"><h3>Cross-platform</h3><p>The engine beyond iOS and the browser.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════ 06 · WAITLIST ═══════════ -->
+    <!-- ═══════════ J · WAITLIST ═══════════ -->
     <section class="sec" id="waitlist">
       <div class="wrap">
         <div class="vr-wait v-rv">
-          <span class="vr-eyebrow">06 · Early access</span>
+          <span class="vr-eyebrow">08 · Early access</span>
           <h2 class="t-display">Be there when <span class="vhl">Vera opens.</span></h2>
-          <p class="sub" style="margin-inline:auto;">One email when the preview opens — evidence formats, honest limits, and how to try it first.</p>
+          <p class="sub" style="margin-inline:auto;">Join the preview list for product updates and early access opportunities. Access is limited — a request, not a guarantee.</p>
 
-          <form class="vr-wait-form" data-waitlist>
-            <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email address" />
-            <button class="btn btn-ice" type="submit">Notify me</button>
+          <form class="vr-wait-form" data-waitlist novalidate>
+            <label class="vr-wait-label" for="vr-email">Email address</label>
+            <div class="vr-wait-row">
+              <input id="vr-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email" inputmode="email" />
+              <button class="btn btn-ice" type="submit">Request preview access</button>
+            </div>
+            <p class="vr-wait-msg" data-msg role="status" aria-live="polite"></p>
           </form>
           <p class="vr-wait-ok">Thanks — your email draft is ready to send. See you at the preview. ✓</p>
 
-          <span class="vr-wait-note">No spam. One email when Vera opens. · <a href="mailto:support@verifyco.info?subject=Vera%20Waitlist">or email us directly</a></span>
+          <span class="vr-wait-note">No spam, no pre-checked consent. One email when Vera opens. · <a href="privacy.html">Privacy</a></span>
+          <a class="vr-partner" href="mailto:support@verifyco.info?subject=Vera%20%E2%80%94%20media%20integrity%20partnership">Building in media integrity? Talk to Verifyco →</a>
         </div>
       </div>
     </section>
@@ -384,7 +489,7 @@
       <div class="foot-grid">
         <div>
           <a class="brand foot-brand" href="index.html">Verify<em>co</em></a>
-          <p class="foot-tag">On-device forensic verification for photos and videos. Designed and built with care.</p>
+          <p class="foot-tag">On-device forensic verification for photos and videos. Vera <em>by Verifyco</em> — the reasoning layer, in development.</p>
           <p class="mono-note foot-dom">VERIFYCO.INFO</p>
         </div>
         <div class="foot-col">
@@ -393,7 +498,7 @@
             <li><a href="index.html#how">How it works</a></li>
             <li><a href="index.html#app">Features</a></li>
             <li><a href="deepdetect-plus.html">DeepDetect+</a></li>
-            <li><a href="vera.html">Vera <span class="pill-preview">Preview</span></a></li>
+            <li><a href="vera.html">Vera <span class="pill-preview"><i></i>Preview</span></a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="index.html#pricing">Pricing</a></li>
           </ul>
@@ -421,6 +526,6 @@
     </div>
   </footer>
 
-  <script src="assets/vera.js?v=3" defer></script>
+  <script src="assets/vera.js?v=4" defer></script>
 </body>
 </html>
