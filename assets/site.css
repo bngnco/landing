@@ -458,6 +458,21 @@ body.menu-open .mmenu { opacity: 1; visibility: visible; }
 .webapp .as-s { font-size: 11px; color: var(--ink-2); font-weight: 400; }
 .webapp .as-b { font-size: 19px; font-weight: 600; letter-spacing: -0.015em; color: var(--ink); }
 
+/* Android badge — deliberately inactive ("coming soon") */
+.androidsoon {
+  display: inline-flex; align-items: center; gap: 13px;
+  height: 60px; padding: 0 24px; border-radius: 15px;
+  background: linear-gradient(180deg, #131110 0%, #0A0807 100%);
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  cursor: default; opacity: 0.72;
+}
+.androidsoon .wa-ic { width: 34px; height: 34px; flex: none; display: grid; place-items: center; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03); }
+.androidsoon .wa-ic svg { width: 20px; height: 20px; color: var(--ink-3); }
+.androidsoon .as-l { display: grid; line-height: 1.16; text-align: start; }
+.androidsoon .as-s { font-size: 11px; color: var(--ink-3); font-weight: 400; }
+.androidsoon .as-b { font-size: 17px; font-weight: 600; letter-spacing: -0.015em; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
+.androidsoon .soon { font-family: var(--f-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bronze-2); border: 1px solid rgba(214, 172, 134, 0.3); border-radius: 5px; padding: 2px 5px; }
+
 .hero-ticker {
   display: inline-flex;
   align-items: center;
