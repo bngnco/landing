@@ -499,6 +499,7 @@ function footer(lang, ui) {
           <li><a href="/support">${ui.navSupport}</a></li>
           <li><a href="/privacy">Privacy</a></li>
           <li><a href="/terms">Terms</a></li>
+          <li><a href="/sitemap">Sitemap</a></li>
           <li><a href="${SITE.appStore}" target="_blank" rel="noopener">App Store</a></li>
         </ul>
       </div>
@@ -976,6 +977,63 @@ function writeFileSafe(file, contents) {
   fs.writeFileSync(file, contents);
 }
 
+/* ── HTML sitemap ─────────────────────────────────────────────────────
+   A crawlable, human-readable index of every URL, grouped by section and
+   language. Linked from the footer so search engines always have a path
+   to every page even if the XML sitemap fetch is delayed. */
+function sitemapHtmlPage(byLang) {
+  const pageLabels = {
+    "/": "Home", "/deepdetect-plus": "DeepDetect+", "/vera": "Vera",
+    "/support": "Support", "/privacy": "Privacy", "/terms": "Terms",
+  };
+  const list = (items) => `<ul class="sm-list">${items}</ul>`;
+  const li = (href, label) => `<li><a href="${esc(href)}">${esc(label)}</a></li>`;
+
+  const pagesList = list(SITE.staticPages.map((u) => li(u, pageLabels[u] || u)).join(""));
+
+  const langSections = LANGS.filter((l) => byLang[l.code] && byLang[l.code].length)
+    .map((l) => {
+      const pre = langPrefix(l.code);
+      const posts = byLang[l.code];
+      const allTags = [...new Set(posts.flatMap((p) => p.tags))].sort((a, b) => a.localeCompare(b));
+      const items = [li(`${pre}/blog`, `${l.native} — Blog`)]
+        .concat(posts.map((p) => li(p.urlPath, p.title)))
+        .concat(allTags.map((t) => li(`${pre}/blog/tag/${slugURL(t)}`, `#${t}`)))
+        .join("");
+      return `<section class="sm-group"><h2>${esc(l.native)}</h2>${list(items)}</section>`;
+    })
+    .join("");
+
+  const main = `
+  <main class="bmain">
+    <header class="blog-hero bwrap">
+      <span class="eyebrow">SITEMAP</span>
+      <h1>All pages</h1>
+      <p class="lead">Every page on Verifyco, for people and crawlers alike. The machine-readable version is <a href="/sitemap.xml">sitemap.xml</a>.</p>
+    </header>
+    <div class="bwrap sm-body">
+      <section class="sm-group"><h2>Pages</h2>${pagesList}</section>
+      ${langSections}
+    </div>
+  </main>`;
+
+  return page({
+    title: "Sitemap — Verifyco",
+    description: "A complete index of Verifyco pages and blog articles, in every language.",
+    canonical: SITE.url + "/sitemap",
+    active: "",
+    bodyClass: "is-listing",
+    head: `  <style>
+    .sm-body{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:32px 40px;padding-bottom:80px;}
+    .sm-group h2{font-size:15px;letter-spacing:.02em;margin:0 0 12px;opacity:.85;}
+    .sm-list{list-style:none;margin:0;padding:0;display:grid;gap:8px;}
+    .sm-list a{color:var(--ink-2,#cfc9c2);text-decoration:none;font-size:14.5px;line-height:1.4;border-bottom:1px solid transparent;}
+    .sm-list a:hover{color:var(--cream,#fff);border-bottom-color:currentColor;}
+  </style>`,
+    main,
+  });
+}
+
 /* ── Build ────────────────────────────────────────────────────────── */
 function build() {
   const { byLang } = loadPosts();
@@ -1124,6 +1182,13 @@ function build() {
       .join("\n") +
     `\n</urlset>\n`;
   writeFileSafe(path.join(ROOT, "sitemap.xml"), sitemap);
+
+  // sitemap.html — a human- and crawler-friendly index of every page.
+  // The XML sitemap is valid, but a linked HTML sitemap is the standard
+  // fallback that guarantees discovery when Search Console is slow to
+  // fetch the XML (a known, transient Google/Vercel condition). Served at
+  // /sitemap thanks to cleanUrls.
+  writeFileSafe(path.join(ROOT, "sitemap.html"), sitemapHtmlPage(byLang));
 
   // robots.txt
   writeFileSafe(
