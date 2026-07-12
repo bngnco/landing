@@ -947,3 +947,112 @@
   .vr-flayer { opacity: 1 !important; }
   .vr-arch::before { transform: none; }
 }
+
+/* ════════════════════════════════════════════════════════════
+   PREMIUM SKIN — vivid, glowing AI aesthetic (Vera pages only)
+   Re-tints the whole ice accent to electric cyan/indigo and adds
+   glow, glass and a luminous animated hero core.
+   ════════════════════════════════════════════════════════════ */
+body.vera {
+  --vr: #58D3FF;
+  --vr-2: #D2ECFB;
+  --vr-deep: #6E86FF;
+  --vr-soft: rgba(88, 211, 255, 0.10);
+  --vr-line: rgba(88, 211, 255, 0.17);
+  --vr-line-2: rgba(88, 211, 255, 0.36);
+  --v1: #58D3FF;   /* electric cyan */
+  --v2: #6E86FF;   /* electric indigo */
+  --v3: #A88BFF;   /* violet accent  */
+}
+body.vera { background: #05070C; }
+
+/* Brighter multi-stop highlight */
+body.vera .vhl {
+  background: linear-gradient(108deg, #EAF7FF 0%, var(--v1) 46%, var(--v2) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Vivid animated hero mesh */
+body.vera .vr-aurora {
+  background:
+    radial-gradient(ellipse 52% 42% at 72% 26%, rgba(88, 211, 255, 0.16), transparent 70%),
+    radial-gradient(ellipse 46% 40% at 28% 56%, rgba(110, 134, 255, 0.13), transparent 70%),
+    radial-gradient(ellipse 42% 38% at 56% 78%, rgba(168, 139, 255, 0.09), transparent 72%);
+  animation: vrMesh 20s ease-in-out infinite alternate;
+}
+@keyframes vrMesh { to { transform: translate3d(0, -16px, 0) scale(1.05); } }
+body.vera .vr-grid { opacity: 0.7; }
+
+/* Big glowing pill buttons */
+body.vera .btn-ice, body.vera .btn-ice-line { height: 56px; padding: 0 34px; border-radius: 999px; font-size: 16px; }
+body.vera .btn-ice {
+  background: linear-gradient(120deg, var(--v1) 0%, var(--v2) 100%);
+  color: #04121A; font-weight: 650;
+  box-shadow: 0 0 42px -8px var(--v1), 0 14px 36px -14px var(--v2), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+body.vera .btn-ice:hover { transform: translateY(-2px); box-shadow: 0 0 62px -6px var(--v1), 0 20px 48px -14px var(--v2), inset 0 1px 0 rgba(255, 255, 255, 0.55); }
+body.vera .btn-ice-line {
+  border: 1px solid rgba(120, 180, 255, 0.42); color: #DCEBF7;
+  background: linear-gradient(180deg, rgba(110, 134, 255, 0.09), rgba(110, 134, 255, 0.03));
+}
+body.vera .btn-ice-line:hover { border-color: var(--v1); color: #fff; transform: translateY(-2px); box-shadow: 0 0 34px -8px var(--v1); }
+
+/* Glass + glow re-skin for the neutral surfaces */
+body.vera .vr-fnode, body.vera .vr-pc, body.vera .vr-timeline li,
+body.vera .vr-console, body.vera .vr-sa-line, body.vera .vr-shift-score,
+body.vera .vr-ask-answer, body.vera .vr-stage-tag {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012));
+  border-color: rgba(255, 255, 255, 0.09);
+}
+body.vera .vr-ask-panel {
+  border-color: var(--vr-line);
+  box-shadow: 0 0 60px -30px var(--v1);
+  background: radial-gradient(ellipse 70% 50% at 28% 0%, rgba(88, 211, 255, 0.07), transparent 65%), linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.008));
+}
+body.vera .vr-pc:hover { box-shadow: 0 0 44px -20px var(--v1); }
+body.vera .vr-fnode--core { box-shadow: 0 0 60px -24px var(--v1); }
+
+/* ── Vera core — luminous examination engine ─────────────────── */
+.vr-corewrap { position: relative; display: grid; place-items: center; min-height: 500px; }
+@media (max-width: 940px) { .vr-corewrap { min-height: 420px; } }
+@media (max-width: 460px) { .vr-corewrap { min-height: 360px; } }
+.vr-core-glow {
+  position: absolute; inset: -6%; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 50% 46%, rgba(88, 211, 255, 0.24), transparent 62%), radial-gradient(circle at 62% 60%, rgba(110, 134, 255, 0.18), transparent 60%);
+  filter: blur(26px); animation: vrGlowPulse 7s ease-in-out infinite;
+}
+@keyframes vrGlowPulse { 0%, 100% { opacity: 0.8; } 50% { opacity: 1; } }
+.vr-core { position: relative; width: min(400px, 88%); aspect-ratio: 1; --r: 170px; }
+@media (max-width: 940px) { .vr-core { --r: 145px; } }
+@media (max-width: 460px) { .vr-core { --r: 120px; } }
+.vr-ring { position: absolute; border-radius: 50%; -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px)); mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px)); }
+.vr-ring-1 { inset: 0; background: conic-gradient(from 0deg, transparent 0 52%, var(--v1) 74%, transparent 86%); animation: vrSpin 16s linear infinite; }
+.vr-ring-2 { inset: 13%; background: conic-gradient(from 130deg, transparent 0 58%, var(--v2) 78%, transparent 90%); animation: vrSpin 22s linear infinite reverse; }
+.vr-ring-3 { inset: 26%; border: 1px dashed rgba(88, 211, 255, 0.28); -webkit-mask: none; mask: none; animation: vrSpin 34s linear infinite; }
+.vr-core-scan { position: absolute; inset: 4%; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 80%, rgba(210, 240, 255, 0.28) 92%, transparent 100%); -webkit-mask: radial-gradient(farthest-side, transparent 34%, #000 36%); mask: radial-gradient(farthest-side, transparent 34%, #000 36%); animation: vrSpin 6s linear infinite; }
+.vr-core-center {
+  position: absolute; top: 50%; left: 50%; width: 116px; height: 116px; transform: translate(-50%, -50%);
+  border-radius: 50%; display: grid; place-items: center; color: #04121A;
+  background: radial-gradient(circle at 42% 36%, #ffffff, var(--v1) 40%, var(--v2) 94%);
+  box-shadow: 0 0 54px -4px var(--v1), 0 0 120px -18px var(--v2), inset 0 0 30px rgba(255, 255, 255, 0.35);
+  animation: vrCorePulse 4.2s ease-in-out infinite;
+}
+.vr-core-center svg { width: 44px; height: 44px; }
+@keyframes vrCorePulse { 0%, 100% { box-shadow: 0 0 54px -4px var(--v1), 0 0 120px -18px var(--v2), inset 0 0 30px rgba(255,255,255,0.35); } 50% { box-shadow: 0 0 74px 2px var(--v1), 0 0 160px -10px var(--v2), inset 0 0 36px rgba(255,255,255,0.45); } }
+.vr-onode {
+  position: absolute; top: 50%; left: 50%; display: flex; align-items: center; gap: 7px;
+  padding: 7px 12px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 16, 26, 0.74); box-shadow: 0 8px 22px -10px #000;
+  font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.05em; color: #CFE8F5; white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(calc(var(--i) * 60deg)) translateY(calc(-1 * var(--r))) rotate(calc(var(--i) * -60deg));
+}
+.vr-onode i { width: 6px; height: 6px; border-radius: 50%; background: var(--v1); box-shadow: 0 0 8px var(--v1); animation: pulse 2.4s ease-in-out infinite; }
+.vr-onode--hot i { background: #FF9E6B; box-shadow: 0 0 9px #FF9E6B; }
+.vr-core-read { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); display: grid; justify-items: center; gap: 9px; text-align: center; }
+.vr-core-tag { font-family: var(--f-mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #E4B96B; border: 1px dashed rgba(228, 185, 107, 0.5); border-radius: 6px; padding: 4px 10px; }
+.vr-core-line { display: flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.08em; color: #9FBDD0; }
+.vr-core-line i { width: 6px; height: 6px; border-radius: 50%; background: var(--v1); box-shadow: 0 0 8px var(--v1); animation: pulse 2s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vr-ring, .vr-ring-2, .vr-ring-3, .vr-core-scan, .vr-core-center, .vr-core-glow, .vr-onode i, .vr-core-line i, .vr-aurora { animation: none !important; }
+}

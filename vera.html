@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/site.css?v=5" />
-  <link rel="stylesheet" href="assets/vera.css?v=6" />
+  <link rel="stylesheet" href="assets/vera.css?v=7" />
 
   <script type="application/ld+json">
   {
@@ -111,22 +111,27 @@
           <span class="vr-hero-note">Vera <em>by Verifyco</em> · Evidence-led · An examination, not an oracle</span>
         </div>
 
-        <!-- Illustrative examination deck — Vera is in training. -->
-        <div class="vr-hero-stage" data-tilt aria-label="Illustrative preview of a Vera examination">
-          <span class="vr-stage-tag">Illustrative preview</span>
-          <div class="vr-stage-glow" aria-hidden="true"></div>
-          <div class="vr-deck" data-deck aria-hidden="true">
-            <div class="vr-beam" data-beam></div>
-            <div class="vr-pane vr-pane--audio" style="--i:0"><span class="vr-pane-k">AUDIO</span><span class="vr-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="vr-pane-st ok">clean</span></div>
-            <div class="vr-pane vr-pane--freq" style="--i:1"><span class="vr-pane-k">FREQUENCY</span><span class="vr-spectrum"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="vr-pane-st warn">ridge</span></div>
-            <div class="vr-pane vr-pane--temporal" style="--i:2"><span class="vr-pane-k">TEMPORAL</span><span class="vr-strip"><i></i><i></i><i></i><i class="hot"></i><i class="hot"></i><i></i></span><span class="vr-pane-st warn">desync 3f</span></div>
-            <div class="vr-pane vr-pane--neural" style="--i:3"><span class="vr-pane-k">NEURAL · DD+</span><span class="vr-heat"><i></i><i></i><i></i><i class="hot"></i><i class="hot"></i><i></i><i></i><i></i><i></i></span><span class="vr-pane-st bad">0.83</span></div>
-            <div class="vr-pane vr-pane--meta" style="--i:4"><span class="vr-pane-k">METADATA</span><span class="vr-lines"><i></i><i></i><i></i></span><span class="vr-pane-st warn">re-enc ×2</span></div>
-            <div class="vr-pane vr-pane--c2pa" style="--i:5"><span class="vr-pane-k">C2PA</span><span class="vr-shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3l7 3v5c0 4.4-3 7.2-7 9-4-1.8-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="vr-pane-st">no sig</span></div>
-            <div class="vr-node" style="--i:6">
-              <span class="vr-node-id"><i></i>VERA · READING 6 LAYERS</span>
-              <div class="vr-node-verdict"><span class="vr-node-num">27<small>/100</small></span><span class="vr-node-lab">ANOMALY SIGNAL<em>· why?</em></span></div>
-            </div>
+        <!-- Vera core — a living examination engine. Illustrative preview. -->
+        <div class="vr-corewrap" data-tilt aria-label="Illustrative preview of Vera examining six evidence layers">
+          <div class="vr-core-glow" aria-hidden="true"></div>
+          <div class="vr-core" data-core aria-hidden="true">
+            <span class="vr-ring vr-ring-1"></span>
+            <span class="vr-ring vr-ring-2"></span>
+            <span class="vr-ring vr-ring-3"></span>
+            <span class="vr-core-scan"></span>
+            <span class="vr-core-center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1.5v3M12 19.5v3M22.5 12h-3M4.5 12h-3"/></svg>
+            </span>
+            <span class="vr-onode" style="--i:0"><b>C2PA</b><i></i></span>
+            <span class="vr-onode" style="--i:1"><b>METADATA</b><i></i></span>
+            <span class="vr-onode vr-onode--hot" style="--i:2"><b>NEURAL</b><i></i></span>
+            <span class="vr-onode vr-onode--hot" style="--i:3"><b>TEMPORAL</b><i></i></span>
+            <span class="vr-onode" style="--i:4"><b>FREQUENCY</b><i></i></span>
+            <span class="vr-onode" style="--i:5"><b>AUDIO</b><i></i></span>
+          </div>
+          <div class="vr-core-read">
+            <span class="vr-core-tag">Illustrative preview</span>
+            <span class="vr-core-line"><i></i>VERA · reading 6 evidence layers</span>
           </div>
         </div>
       </div>
