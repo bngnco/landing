@@ -404,13 +404,48 @@
     document.querySelectorAll("[data-magnet]").forEach(function (el) {
       var xTo = gsap.quickTo(el, "x", { duration: 0.4, ease: "power3.out" });
       var yTo = gsap.quickTo(el, "y", { duration: 0.4, ease: "power3.out" });
+      // Measure once on enter, not on every move: reading layout mid-move
+      // (interleaved with GSAP's transform writes) forces a sync reflow each
+      // frame — the stutter you feel on the header buttons.
+      var r = null;
+      el.addEventListener("pointerenter", function () { r = el.getBoundingClientRect(); });
       el.addEventListener("pointermove", function (e) {
-        var r = el.getBoundingClientRect();
+        if (!r) r = el.getBoundingClientRect();
         xTo((e.clientX - r.left - r.width / 2) * 0.18);
         yTo((e.clientY - r.top - r.height / 2) * 0.3);
       });
-      el.addEventListener("pointerleave", function () { xTo(0); yTo(0); });
+      el.addEventListener("pointerleave", function () { r = null; xTo(0); yTo(0); });
     });
+  }
+
+  /* ── Pricing platform switch (iPhone ⇄ Web) ───────────── */
+  function pricingTabs() {
+    var sw = document.querySelector("[data-price-switch]");
+    if (!sw) return;
+    var btns = Array.prototype.slice.call(sw.querySelectorAll(".ps-btn"));
+    var glider = sw.querySelector(".ps-glider");
+    function move(btn) {
+      if (glider) { glider.style.width = btn.offsetWidth + "px"; glider.style.transform = "translateX(" + btn.offsetLeft + "px)"; }
+    }
+    function select(tab) {
+      btns.forEach(function (b) {
+        var on = b.getAttribute("data-ptab") === tab;
+        b.classList.toggle("is-on", on);
+        b.setAttribute("aria-selected", on ? "true" : "false");
+        if (on) move(b);
+      });
+      document.querySelectorAll("[data-ppanel]").forEach(function (p) {
+        p.hidden = p.getAttribute("data-ppanel") !== tab;
+      });
+      document.querySelectorAll("[data-ppanel-note]").forEach(function (n) {
+        n.hidden = n.getAttribute("data-ppanel-note") !== tab;
+      });
+    }
+    btns.forEach(function (b) { b.addEventListener("click", function () { select(b.getAttribute("data-ptab")); }); });
+    // Position the glider under the initial tab (and keep it correct on resize).
+    var initial = sw.querySelector(".ps-btn.is-on") || btns[0];
+    requestAnimationFrame(function () { move(initial); });
+    window.addEventListener("resize", function () { var on = sw.querySelector(".ps-btn.is-on"); if (on) move(on); }, { passive: true });
   }
 
   /* ── Boot ─────────────────────────────────────────────── */
@@ -424,6 +459,7 @@
     scrollFX();
     magnets();
     activeNav();
+    pricingTabs();
 
     // No splash — the page is interactive immediately; the hero simply
     // animates in on load.

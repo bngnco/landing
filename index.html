@@ -29,7 +29,7 @@
 
   <link rel="preload" as="image" href="assets/app/home.png" fetchpriority="high" />
 
-  <link rel="stylesheet" href="assets/site.css?v=6" />
+  <link rel="stylesheet" href="assets/site.css?v=7" />
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
@@ -393,7 +393,20 @@
           <p class="sub" data-rv data-i18n="pricing.sub">Three free analyses on the house. An optional rewarded ad unlocks one more, anytime. Pro removes the limit.</p>
         </div>
 
-        <div class="plans">
+        <div class="price-switch" role="tablist" aria-label="Choose platform" data-price-switch>
+          <span class="ps-glider" aria-hidden="true"></span>
+          <button type="button" class="ps-btn is-on" role="tab" aria-selected="true" data-ptab="ios">
+            <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+            iPhone app
+          </button>
+          <button type="button" class="ps-btn" role="tab" aria-selected="false" data-ptab="web">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+            Web app
+          </button>
+        </div>
+
+        <!-- iPhone plans -->
+        <div class="plans" data-ppanel="ios">
           <div class="plan" data-rv>
             <span class="plan-name" data-i18n="pricing.free.name">Free</span>
             <span class="plan-amt"><small>$</small><span data-i18n="pricing.free.amount">0</span></span>
@@ -443,6 +456,75 @@
             <a class="btn btn-fill" href="#download" data-i18n="nav.download">Download</a>
           </div>
         </div>
+
+        <!-- Web app plans -->
+        <div class="plans plans--web" data-ppanel="web" hidden>
+          <div class="plan plan--web" data-rv>
+            <span class="plan-name">Starter Pack</span>
+            <span class="plan-amt"><small>$</small>5<span class="plan-once">one-time</span></span>
+            <span class="plan-per">credits never expire</span>
+            <p class="plan-desc">A one-time pack to try the full engine at your own pace.</p>
+            <div class="plan-chips"><span class="plan-chip">25 analyses</span><span class="plan-chip ghost">$0.20 / analysis</span></div>
+            <dl class="plan-spec">
+              <div><dt>Max file size</dt><dd>100 MB</dd></div>
+              <div><dt>Forensic layers</dt><dd>2 of 5</dd></div>
+              <div><dt>Full report + JSON</dt><dd class="no">—</dd></div>
+              <div><dt>PDF export</dt><dd class="no">—</dd></div>
+            </dl>
+            <a class="btn btn-line" href="https://web.verifyco.info/pricing" target="_blank" rel="noopener">Choose this plan</a>
+          </div>
+
+          <div class="plan plan--web plan--hot" data-rv>
+            <span class="plan-badge">Most popular</span>
+            <span class="plan-name">Analyst</span>
+            <span class="plan-amt"><small>$</small>14.99<span class="plan-cyc">/ mo</span></span>
+            <span class="plan-per">billed monthly</span>
+            <p class="plan-desc">For journalists, moderators and researchers verifying media weekly.</p>
+            <div class="plan-chips"><span class="plan-chip">150 analyses / mo</span><span class="plan-chip ghost">$0.10 / analysis</span></div>
+            <dl class="plan-spec">
+              <div><dt>Max file size</dt><dd>250 MB</dd></div>
+              <div><dt>Forensic layers</dt><dd>5 of 5</dd></div>
+              <div><dt>Full report + JSON</dt><dd class="yes">Included</dd></div>
+              <div><dt>PDF export</dt><dd class="yes">Included</dd></div>
+            </dl>
+            <a class="btn btn-fill" href="https://web.verifyco.info/pricing" target="_blank" rel="noopener">Choose this plan</a>
+          </div>
+
+          <div class="plan plan--web" data-rv>
+            <span class="plan-name">Pro</span>
+            <span class="plan-amt"><small>$</small>39.99<span class="plan-cyc">/ mo</span></span>
+            <span class="plan-per">billed monthly</span>
+            <p class="plan-desc">High-volume verification with larger files and full evidence reports.</p>
+            <div class="plan-chips"><span class="plan-chip">600 analyses / mo</span><span class="plan-chip ghost">$0.07 / analysis</span></div>
+            <dl class="plan-spec">
+              <div><dt>Max file size</dt><dd>500 MB</dd></div>
+              <div><dt>Forensic layers</dt><dd>5 of 5</dd></div>
+              <div><dt>Full report + JSON</dt><dd class="yes">Included</dd></div>
+              <div><dt>PDF export</dt><dd class="yes">Included</dd></div>
+            </dl>
+            <a class="btn btn-line" href="https://web.verifyco.info/pricing" target="_blank" rel="noopener">Choose this plan</a>
+          </div>
+
+          <div class="plan plan--web" data-rv>
+            <span class="plan-name">Business</span>
+            <span class="plan-amt"><small>$</small>99.99<span class="plan-cyc">/ mo</span></span>
+            <span class="plan-per">billed monthly</span>
+            <p class="plan-desc">Maximum monthly volume for organizations verifying media every day.</p>
+            <div class="plan-chips"><span class="plan-chip">2500 analyses / mo</span><span class="plan-chip ghost">$0.04 / analysis</span></div>
+            <dl class="plan-spec">
+              <div><dt>Max file size</dt><dd>500 MB</dd></div>
+              <div><dt>Forensic layers</dt><dd>5 of 5</dd></div>
+              <div><dt>Full report + JSON</dt><dd class="yes">Included</dd></div>
+              <div><dt>PDF export</dt><dd class="yes">Included</dd></div>
+            </dl>
+            <a class="btn btn-line" href="https://web.verifyco.info/pricing" target="_blank" rel="noopener">Choose this plan</a>
+          </div>
+        </div>
+
+        <p class="price-foot">
+          <span data-ppanel-note="ios">In-app purchases · manage or cancel anytime in the App Store.</span>
+          <span data-ppanel-note="web" hidden>Billed securely at <a href="https://web.verifyco.info/pricing" target="_blank" rel="noopener">web.verifyco.info</a> · credits &amp; subscriptions.</span>
+        </p>
       </div>
     </section>
 
@@ -522,6 +604,6 @@
   </footer>
 
   <script src="assets/i18n.js" defer></script>
-  <script src="assets/site.js?v=6" defer></script>
+  <script src="assets/site.js?v=7" defer></script>
 </body>
 </html>

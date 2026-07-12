@@ -874,9 +874,10 @@
 /* ════════════════════════════════════════════════════════════
    Balanced, centered nav (Vera) — brand | links | actions
    ════════════════════════════════════════════════════════════ */
-.nav-in--v { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 18px; }
+/* Brand hard-left; links + actions grouped on the far right. */
+.nav-in--v { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 22px; }
 .nav-in--v .brand { justify-self: start; }
-.nav-in--v .nav-links { justify-self: center; }
+.nav-in--v .nav-links { justify-self: end; }
 .nav-in--v .nav-right { justify-self: end; }
 
 /* ════════════════════════════════════════════════════════════
@@ -1050,6 +1051,50 @@ body.vera .vr-ask-panel {
 body.vera .vr-pc:hover { box-shadow: 0 0 44px -20px var(--v1); }
 body.vera .vr-fnode--core { box-shadow: 0 0 60px -24px var(--v1); }
 
+/* ── Ambient "Vera" wordmark — faint, breathing, behind everything ─────── */
+.vr-ghosts { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.vr-ghost {
+  position: absolute; left: var(--x); top: var(--y);
+  font-family: var(--f-sans); font-weight: 700;
+  font-size: var(--s); line-height: 0.8; letter-spacing: -0.05em;
+  color: transparent;
+  background: linear-gradient(120deg, var(--v1), var(--v3));
+  -webkit-background-clip: text; background-clip: text;
+  opacity: 0; filter: blur(2px);
+  animation: vrGhost var(--dur, 18s) ease-in-out infinite; animation-delay: var(--delay, 0s);
+}
+@keyframes vrGhost {
+  0%, 100% { opacity: 0; transform: translateY(14px) scale(0.98); }
+  50%      { opacity: 0.06; transform: translateY(-14px) scale(1.03); }
+}
+@media (prefers-reduced-motion: reduce) { .vr-ghost { animation: none; opacity: 0.04; } }
+
+/* ── Console — a lighter, frosted "app window" that reads as professional ── */
+body.vera .vr-console {
+  background:
+    radial-gradient(ellipse 82% 60% at 50% 0%, rgba(120, 190, 255, 0.12), transparent 62%),
+    linear-gradient(180deg, rgba(228, 243, 255, 0.075) 0%, rgba(196, 222, 246, 0.035) 100%);
+  border-color: rgba(150, 196, 240, 0.26);
+  box-shadow: 0 34px 90px -46px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+}
+body.vera .vr-console-top {
+  background: linear-gradient(180deg, rgba(230, 244, 255, 0.08), rgba(230, 244, 255, 0.02));
+  border-bottom-color: rgba(150, 196, 240, 0.20);
+}
+body.vera .vr-msg--a .vr-bubble {
+  background: linear-gradient(180deg, rgba(233, 245, 255, 0.07), rgba(233, 245, 255, 0.028));
+  border-color: rgba(150, 196, 240, 0.18);
+}
+body.vera .vr-msg--u .vr-bubble {
+  background: linear-gradient(180deg, rgba(88, 211, 255, 0.16), rgba(88, 211, 255, 0.08));
+  border-color: rgba(88, 211, 255, 0.42);
+}
+body.vera .vr-console-input {
+  background: rgba(233, 245, 255, 0.05);
+  border-color: rgba(150, 196, 240, 0.22);
+}
+
 /* ── Vera core — luminous examination engine ─────────────────── */
 .vr-corewrap { position: relative; display: grid; place-items: center; min-height: 500px; }
 @media (max-width: 940px) { .vr-corewrap { min-height: 420px; } }
@@ -1076,6 +1121,17 @@ body.vera .vr-fnode--core { box-shadow: 0 0 60px -24px var(--v1); }
   animation: vrCorePulse 4.2s ease-in-out infinite;
 }
 .vr-core-center svg { width: 44px; height: 44px; }
+/* Vera monogram in the luminous core — a crisp mark the glow lights up */
+.vr-core-v {
+  font-family: var(--f-sans);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #06121B;
+  transform: translateY(-1px);
+  text-shadow: 0 1.5px 0 rgba(255, 255, 255, 0.55), 0 -1px 3px rgba(4, 12, 22, 0.25);
+}
 @keyframes vrCorePulse { 0%, 100% { box-shadow: 0 0 54px -4px var(--v1), 0 0 120px -18px var(--v2), inset 0 0 30px rgba(255,255,255,0.35); } 50% { box-shadow: 0 0 74px 2px var(--v1), 0 0 160px -10px var(--v2), inset 0 0 36px rgba(255,255,255,0.45); } }
 .vr-onode {
   position: absolute; top: 50%; left: 50%; display: flex; align-items: center; gap: 7px;
