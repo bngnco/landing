@@ -137,7 +137,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 500;
+  z-index: 700; /* above the mobile-menu overlay (600) so the burger/✕ stays clickable */
   height: var(--nav-h);
   transition: background 380ms ease, border-color 380ms ease;
   border-bottom: 1px solid transparent;

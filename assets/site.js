@@ -335,16 +335,22 @@
   }
 
   /* ── Mobile menu ──────────────────────────────────────── */
-  function closeMenu() { document.body.classList.remove("menu-open"); }
+  var burgerEl;
+  function closeMenu() {
+    document.body.classList.remove("menu-open");
+    if (burgerEl) burgerEl.setAttribute("aria-expanded", "false");
+  }
 
   function mobileMenu() {
     var burger = document.querySelector("[data-burger]");
     var menu = document.querySelector("[data-mmenu]");
     if (!burger || !menu) return;
+    burgerEl = burger;
 
     burger.addEventListener("click", function () {
       var opening = !document.body.classList.contains("menu-open");
       document.body.classList.toggle("menu-open");
+      burger.setAttribute("aria-expanded", opening ? "true" : "false");
       if (opening && hasGSAP) {
         gsap.fromTo(".mmenu .mlink",
           { opacity: 0, y: 22 },
@@ -358,8 +364,12 @@
       }
     });
 
-    menu.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", closeMenu);
+    // Close on: a link, the ✕ button, a tap on the empty backdrop, or Escape.
+    menu.addEventListener("click", function (e) {
+      if (e.target.closest("a") || e.target.closest("[data-mclose]") || e.target === menu || e.target.tagName === "NAV") closeMenu();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && document.body.classList.contains("menu-open")) closeMenu();
     });
   }
 

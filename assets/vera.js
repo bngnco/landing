@@ -31,18 +31,22 @@
   var burger = document.querySelector("[data-burger]");
   var menu = document.querySelector("[data-mmenu]");
   if (burger && menu) {
-    burger.addEventListener("click", function () {
-      var opening = !document.body.classList.contains("menu-open");
-      document.body.classList.toggle("menu-open");
-      burger.setAttribute("aria-expanded", opening ? "true" : "false");
-      if (opening) {
+    function setMenu(open) {
+      document.body.classList.toggle("menu-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      if (open) {
         menu.querySelectorAll(".mlink").forEach(function (l) { l.style.opacity = 1; l.style.transform = "none"; });
         var foot = menu.querySelector(".mmenu-foot");
         if (foot) foot.style.opacity = 1;
       }
+    }
+    burger.addEventListener("click", function () { setMenu(!document.body.classList.contains("menu-open")); });
+    // Close on: a link, the ✕ button, a tap on the empty backdrop, or Escape.
+    menu.addEventListener("click", function (e) {
+      if (e.target.closest("a") || e.target.closest("[data-mclose]") || e.target === menu || e.target.tagName === "NAV") setMenu(false);
     });
-    menu.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () { document.body.classList.remove("menu-open"); burger.setAttribute("aria-expanded", "false"); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && document.body.classList.contains("menu-open")) setMenu(false);
     });
   }
 
@@ -162,10 +166,18 @@
     beats.forEach(function (b) { b.classList.toggle("is-active", +b.getAttribute("data-beat") === i); });
   }
 
-  var FILE_CHIP =
-    '<span class="vr-file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">' +
-    '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg>' +
-    "press_statement.mp4 · 00:41</span>";
+  // A realistic media attachment card — a video thumbnail with a face,
+  // play control, duration and file facts, the way a person would share it.
+  var MEDIA_CARD =
+    '<div class="vr-att">' +
+      '<span class="vr-att-thumb" aria-hidden="true">' +
+        '<span class="vr-att-scene"></span><span class="vr-att-face"></span>' +
+        '<span class="vr-att-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>' +
+        '<span class="vr-att-dur">0:41</span>' +
+      "</span>" +
+      '<span class="vr-att-meta"><b>press_statement.mp4</b>' +
+        '<span>1080×1920 · 8.4&nbsp;MB · shared clip</span></span>' +
+    "</div>";
 
   var LAYERS = [
     ["C2PA PROVENANCE", "none found"], ["METADATA", "re-encoded ×2"], ["NEURAL · DEEPDETECT+", "anomaly 0.83"],
@@ -191,20 +203,20 @@
   }
 
   var SCRIPT = [
-    { type: "u", beat: 0, html: FILE_CHIP + "<div>Is this statement real?</div>" },
-    { type: "a", beat: 1, text: "Running 6 evidence layers…", post: layersHTML(), afterLayers: true },
+    { type: "u", beat: 0, html: MEDIA_CARD + "<div>Someone forwarded me this clip of the minister. Can you check if it's actually real?</div>" },
+    { type: "a", beat: 1, text: "Of course — give me a moment. I'll read all six evidence layers across the video and the audio.", post: layersHTML(), afterLayers: true },
     { type: "a", beat: 2, typed:
-      "<b>Provenance:</b> no C2PA credentials — common for social exports, <i>not</i> proof of fakery. " +
-      "<b>Metadata:</b> re-encoded twice. " +
-      "<b>Neural (DeepDetect+):</b> face-region anomaly <span class=\"warn\">0.83</span> around the jawline, frames 112–178. " +
-      "<b>Temporal:</b> lip-sync drifts <span class=\"warn\">3 frames</span> behind audio in two segments. " +
-      "<b>Frequency:</b> GAN-typical spectral ridge detected." },
+      "Here's what stood out. <b>Provenance:</b> no C2PA credentials — that's common for social exports, so <i>not</i> proof of fakery on its own. " +
+      "<b>Metadata:</b> the file was re-encoded twice. " +
+      "<b>Neural (DeepDetect+):</b> a face-region anomaly of <span class=\"warn\">0.83</span> around the jawline, frames 112–178. " +
+      "<b>Temporal:</b> the lip-sync drifts <span class=\"warn\">3 frames</span> behind the audio in two segments. " +
+      "<b>Frequency:</b> a GAN-typical spectral ridge is present." },
     { type: "a", beat: 2, pre:
       '<div class="vr-meter"><span class="num">27<small>/100</small></span>' +
       '<span class="track"><span class="fill"></span></span><span class="lab">LIKELY MANIPULATED</span></div>',
-      typed: "<b>Assessment:</b> the strongest evidence is the audio-visual desync combined with the jawline boundary. Want me to show the frames?" },
-    { type: "u", beat: 3, html: "<div>Show me.</div>" },
-    { type: "a", beat: 4, typed: "Here are the three frames where the boundary artefact peaks — the dashed region is what DeepDetect+ flagged:", post: framesHTML() }
+      typed: "So my read: the strongest thread is the audio-visual desync lining up with that jawline boundary — two independent layers agreeing. Want me to show you exactly where?" },
+    { type: "u", beat: 3, html: "<div>Yes please — show me where.</div>" },
+    { type: "a", beat: 4, typed: "Here are the three frames where the artefact peaks. The dashed region is what DeepDetect+ flagged — notice how the jawline edge doesn't quite settle:", post: framesHTML() }
   ];
 
   var playing = false, timers = [];
@@ -218,7 +230,10 @@
     chat.appendChild(wrap);
     return wrap;
   }
-  function show(el) { requestAnimationFrame(function () { el.classList.add("on"); }); }
+  function show(el) { requestAnimationFrame(function () { el.classList.add("on"); scrollChat(); }); }
+  // Keep the newest message pinned to the bottom of the console — inside
+  // the chat box only, so the page itself never scrolls during playback.
+  function scrollChat() { if (chat) chat.scrollTop = chat.scrollHeight; }
 
   function typeHTML(target, html, done) {
     if (reduceMotion) { target.insertAdjacentHTML("beforeend", html); done(); return; }
@@ -238,6 +253,7 @@
           (function tick() {
             var burst = 2 + ((Math.random() * 2) | 0);
             t.textContent = text.slice(0, (j += burst));
+            scrollChat();
             if (j < text.length) later(tick, 14); else step();
           })();
         } else {
@@ -254,7 +270,7 @@
     var rows = msg.querySelectorAll(".vr-layer"), i = 0;
     (function next() {
       if (i >= rows.length) { later(done, 250); return; }
-      rows[i++].classList.add("on");
+      rows[i++].classList.add("on"); scrollChat();
       later(next, reduceMotion ? 0 : 340);
     })();
   }
@@ -273,9 +289,9 @@
       if (step.type === "u") { el.innerHTML = step.html; later(next, reduceMotion ? 0 : 750); return; }
       var typed = step.typed || step.text || "";
       var startType = function () {
-        if (step.pre) el.insertAdjacentHTML("beforeend", step.pre);
+        if (step.pre) { el.insertAdjacentHTML("beforeend", step.pre); scrollChat(); }
         typeHTML(el, typed, function () {
-          if (step.post) el.insertAdjacentHTML("beforeend", step.post);
+          if (step.post) { el.insertAdjacentHTML("beforeend", step.post); scrollChat(); }
           if (step.afterLayers) revealLayers(msg, next); else later(next, reduceMotion ? 0 : 550);
         });
       };

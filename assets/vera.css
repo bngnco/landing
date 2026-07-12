@@ -416,7 +416,19 @@
 .vr-replay:hover { color: var(--vr-2); border-color: var(--vr-line-2); }
 .vr-replay svg { width: 11px; height: 11px; }
 
-.vr-chat { padding: clamp(20px, 3.5vw, 36px); display: grid; gap: 16px; min-height: 480px; align-content: start; }
+/* Fixed height + internal scroll: the chat never grows the page or
+   pushes the sections below it, so playback can't nudge the viewport. */
+.vr-chat {
+  padding: clamp(20px, 3.5vw, 36px);
+  display: grid; gap: 16px;
+  height: clamp(430px, 62vh, 560px);
+  overflow-y: auto; overscroll-behavior: contain;
+  align-content: start;
+}
+.vr-chat::-webkit-scrollbar { width: 8px; }
+.vr-chat::-webkit-scrollbar-thumb { background: rgba(88, 211, 255, 0.22); border-radius: 8px; }
+.vr-chat::-webkit-scrollbar-track { background: transparent; }
+.vr-chat { scrollbar-width: thin; scrollbar-color: rgba(88, 211, 255, 0.22) transparent; }
 
 /* typing indicator — three dots in a Vera bubble before it answers */
 .vr-typing { display: inline-flex; align-items: center; gap: 5px; padding: 3px 2px; }
@@ -478,6 +490,19 @@
   font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.04em; color: var(--vr-2);
 }
 .vr-file svg { width: 15px; height: 15px; color: var(--vr); flex: none; }
+
+/* realistic shared-media attachment card (video thumbnail) */
+.vr-att { display: flex; align-items: center; gap: 12px; margin-bottom: 11px; padding: 9px; border: 1px solid var(--vr-line-2); border-radius: 14px; background: rgba(88, 211, 255, 0.06); max-width: 310px; }
+.vr-att-thumb { position: relative; width: 64px; height: 82px; border-radius: 10px; overflow: hidden; flex: none; box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.7); }
+.vr-att-scene { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 55% at 50% 16%, rgba(130, 160, 190, 0.5), transparent 62%), linear-gradient(180deg, #24384c 0%, #0f1824 100%); }
+.vr-att-scene::after { content: ""; position: absolute; left: 12%; bottom: 0; width: 76%; height: 34%; border-radius: 60% 60% 0 0 / 100% 100% 0 0; background: linear-gradient(180deg, #2c4056, #16202e); }
+.vr-att-face { position: absolute; left: 50%; top: 41%; transform: translate(-50%, -50%); width: 34%; aspect-ratio: 0.82; border-radius: 50% 50% 46% 46%; background: linear-gradient(180deg, #e2edf5, #a9c0d4); box-shadow: 0 4px 10px -3px rgba(0, 0, 0, 0.5); }
+.vr-att-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 26px; height: 26px; border-radius: 50%; background: rgba(6, 10, 16, 0.5); border: 1px solid rgba(255, 255, 255, 0.55); display: grid; place-items: center; }
+.vr-att-play svg { width: 11px; height: 11px; color: #fff; margin-left: 1px; }
+.vr-att-dur { position: absolute; right: 5px; bottom: 5px; font-family: var(--f-mono); font-size: 8.5px; letter-spacing: 0.03em; color: #fff; background: rgba(6, 10, 16, 0.72); border-radius: 5px; padding: 2px 5px; }
+.vr-att-meta { display: grid; gap: 3px; min-width: 0; }
+.vr-att-meta b { font-size: 13px; color: var(--ink); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vr-att-meta span { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.03em; color: var(--ink-3); }
 
 /* layer progress inside a Vera message */
 .vr-layers { display: grid; gap: 7px; margin-top: 11px; }
@@ -997,6 +1022,19 @@ body.vera .btn-ice-line {
 }
 body.vera .btn-ice-line:hover { border-color: var(--v1); color: #fff; transform: translateY(-2px); box-shadow: 0 0 34px -8px var(--v1); }
 
+/* Waitlist form — full-size pill field that matches the button */
+body.vera .vr-wait-form { width: min(560px, 100%); }
+body.vera .vr-wait-row { gap: 12px; }
+body.vera .vr-wait-row input {
+  height: 56px; padding: 0 24px; border-radius: 999px;
+  font-size: 15.5px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(120, 180, 255, 0.30);
+}
+body.vera .vr-wait-row input:focus { border-color: var(--v1); box-shadow: 0 0 0 3px rgba(88, 211, 255, 0.14); }
+body.vera .vr-wait-row .btn-ice { flex: none; white-space: nowrap; }
+@media (max-width: 480px) { body.vera .vr-wait-row .btn-ice { width: 100%; } }
+
 /* Glass + glow re-skin for the neutral surfaces */
 body.vera .vr-fnode, body.vera .vr-pc, body.vera .vr-timeline li,
 body.vera .vr-console, body.vera .vr-sa-line, body.vera .vr-shift-score,
@@ -1053,6 +1091,62 @@ body.vera .vr-fnode--core { box-shadow: 0 0 60px -24px var(--v1); }
 .vr-core-line { display: flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.08em; color: #9FBDD0; }
 .vr-core-line i { width: 6px; height: 6px; border-radius: 50%; background: var(--v1); box-shadow: 0 0 8px var(--v1); animation: pulse 2s ease-in-out infinite; }
 
+/* Radar graduation ring — fine ticks that slowly sweep */
+.vr-core::before {
+  content: ""; position: absolute; inset: 29%; border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, rgba(210, 240, 255, 0.22) 0 0.7deg, transparent 0.7deg 15deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px));
+          mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px));
+  animation: vrSpin 44s linear infinite; opacity: 0.55; pointer-events: none;
+}
+/* Counter-rotating luminous sheen sweeping the field */
+.vr-core::after {
+  content: ""; position: absolute; inset: 7%; border-radius: 50%;
+  background: conic-gradient(from 90deg, transparent, rgba(110, 134, 255, 0.14) 28%, transparent 52%, rgba(88, 211, 255, 0.16) 76%, transparent);
+  animation: vrSpin 26s linear infinite reverse; pointer-events: none; opacity: 0.9;
+}
+/* Richer center — layered core light with a breathing inner corona */
+.vr-core-center {
+  background:
+    radial-gradient(circle at 38% 32%, #ffffff 0%, #BFF0FF 22%, var(--v1) 46%, var(--v2) 96%);
+}
+.vr-core-center::before {
+  content: ""; position: absolute; inset: -9px; border-radius: 50%;
+  border: 1px solid rgba(210, 240, 255, 0.35);
+  animation: vrCorona 4.2s ease-in-out infinite;
+}
+@keyframes vrCorona { 0%, 100% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.12); opacity: 0.15; } }
+/* Node pills — brighter glass, glow on the live layers */
+.vr-onode {
+  background: linear-gradient(180deg, rgba(20, 30, 48, 0.82), rgba(9, 14, 24, 0.82));
+  box-shadow: 0 10px 26px -12px #000, inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(3px);
+}
+.vr-onode--hot { border-color: rgba(255, 158, 107, 0.5); box-shadow: 0 10px 26px -12px #000, 0 0 22px -8px rgba(255, 158, 107, 0.6); }
+.vr-onode b { font-weight: 600; }
+
 @media (prefers-reduced-motion: reduce) {
-  .vr-ring, .vr-ring-2, .vr-ring-3, .vr-core-scan, .vr-core-center, .vr-core-glow, .vr-onode i, .vr-core-line i, .vr-aurora { animation: none !important; }
+  .vr-ring, .vr-ring-2, .vr-ring-3, .vr-core-scan, .vr-core-center, .vr-core-glow, .vr-onode i, .vr-core-line i, .vr-aurora,
+  .vr-core::before, .vr-core::after, .vr-core-center::before { animation: none !important; }
+}
+
+/* ────────────────────────────────────────────────────────────
+   MOBILE CORE — placed last so it wins the cascade over the base
+   .vr-core / .vr-onode / .vr-core-read rules above.
+   Stacks the caption UNDER the core (no overlap) and pulls the
+   orbit + pills inward so the first screen never overflows.
+   ──────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .vr-corewrap { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 0; gap: 4px; padding: 6px 0 0; overflow: visible; }
+  .vr-core-read { position: static; left: auto; bottom: auto; transform: none; margin-top: 6px; }
+}
+@media (max-width: 460px) {
+  .vr-core { --r: 108px; width: 280px; }
+  .vr-onode { font-size: 8.5px; padding: 5px 9px; gap: 5px; }
+  .vr-core-center { width: 100px; height: 100px; }
+  .vr-core-center svg { width: 38px; height: 38px; }
+}
+@media (max-width: 360px) {
+  .vr-core { --r: 96px; width: 248px; }
+  .vr-onode { font-size: 8px; padding: 4px 8px; letter-spacing: 0.02em; }
 }
