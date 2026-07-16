@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/blog.css?v=3" />
+  <link rel="stylesheet" href="/assets/blog.css?v=4" />
   <link rel="preload" as="image" href="/uploads/blog/are-deepfakes-illegal-cover.jpg" fetchpriority="high" />
   <meta name="author" content="Equipo Verifyco" />
   <meta property="og:type" content="article" />
@@ -78,11 +78,11 @@
           <span class="t-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z"></path></svg></span><span class="t-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"></path></svg></span>
         </button>
         <a class="btn btn-fill btn-sm" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">Descargar la app</a>
-        <button type="button" class="bburger" data-bburger aria-label="Menu"><span></span><span></span><span></span></button>
+        <button type="button" class="bburger" data-bburger aria-label="Menu" aria-expanded="false" aria-controls="blog-mobile-menu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
-  <div class="bmenu" data-bmenu>
+  <div class="bmenu" id="blog-mobile-menu" data-bmenu aria-hidden="true" inert>
     <nav aria-label="Mobile">
       <a href="/#app">Funciones</a>
       <a href="/#how">Cómo funciona</a>
@@ -118,7 +118,7 @@
       </div>
 
       <figure class="post-hero">
-        <img src="/uploads/blog/are-deepfakes-illegal-cover.jpg" alt="Panorama de las leyes y regulaciones sobre deepfakes en 2026" decoding="async" fetchpriority="high" />
+        <img src="/uploads/blog/are-deepfakes-illegal-cover.jpg" alt="Panorama de las leyes y regulaciones sobre deepfakes en 2026" width="1200" height="630" loading="eager" decoding="async" fetchpriority="high" />
       </figure>
       
       <nav class="toc measure" aria-label="Table of contents">
@@ -198,7 +198,7 @@ Cada vez más, sí. El Reglamento de IA de la UE exige marcado legible por máqu
       <div class="post-grid">
     <article class="card">
       <a class="card-media" href="/es/blog/what-to-do-if-someone-makes-a-deepfake-of-you" aria-label="Alguien hizo un deepfake de ti: qué hacer, paso a paso">
-        <img src="/uploads/blog/deepfake-victim-guide-cover.jpg" alt="Respuesta paso a paso tras descubrir un deepfake de uno mismo" loading="lazy" decoding="async" />
+        <img src="/uploads/blog/deepfake-victim-guide-cover.jpg" alt="Respuesta paso a paso tras descubrir un deepfake de uno mismo" width="1200" height="632" loading="lazy" decoding="async" />
       </a>
       <div class="card-body">
         <div class="card-tags"><a class="chip" href="/es/blog/tag/deepfakes">Deepfakes</a><a class="chip" href="/es/blog/tag/guias">Guías</a></div>
@@ -213,7 +213,7 @@ Cada vez más, sí. El Reglamento de IA de la UE exige marcado legible por máqu
     </article>
     <article class="card">
       <a class="card-media" href="/es/blog/how-accurate-are-ai-detectors" aria-label="¿Qué tan precisos son los detectores de IA en realidad? (Qué significan los números)">
-        <img src="/uploads/blog/how-accurate-are-ai-detectors-cover.jpg" alt="Entendiendo la precisión de los detectores de IA y las puntuaciones de confianza" loading="lazy" decoding="async" />
+        <img src="/uploads/blog/how-accurate-are-ai-detectors-cover.jpg" alt="Entendiendo la precisión de los detectores de IA y las puntuaciones de confianza" width="1200" height="630" loading="lazy" decoding="async" />
       </a>
       <div class="card-body">
         <div class="card-tags"><a class="chip" href="/es/blog/tag/deteccion-de-ia">Detección de IA</a><a class="chip" href="/es/blog/tag/investigacion">Investigación</a></div>
@@ -228,7 +228,7 @@ Cada vez más, sí. El Reglamento de IA de la UE exige marcado legible por máqu
     </article>
     <article class="card">
       <a class="card-media" href="/es/blog/ai-voice-cloning-scams-protect-yourself" aria-label="Estafas de clonación de voz con IA: cómo protegerte en 2026">
-        <img src="/uploads/blog/1000000344.jpg" alt="Protegerse de una llamada de estafa con voz clonada por IA" loading="lazy" decoding="async" />
+        <img src="/uploads/blog/1000000344.jpg" alt="Protegerse de una llamada de estafa con voz clonada por IA" width="1200" height="630" loading="lazy" decoding="async" />
       </a>
       <div class="card-body">
         <div class="card-tags"><a class="chip" href="/es/blog/tag/deepfakes">Deepfakes</a><a class="chip" href="/es/blog/tag/guias">Guías</a></div>
@@ -277,6 +277,88 @@ Cada vez más, sí. El Reglamento de IA de la UE exige marcado legible por máqu
       <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
     </div>
   </footer>
-<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>
+<script>(function(){
+  "use strict";
+  var root=document.documentElement;
+  var body=document.body;
+  var theme=document.querySelector("[data-theme-toggle]");
+  var burger=document.querySelector("[data-bburger]");
+  var menu=document.querySelector("[data-bmenu]");
+  var nav=document.getElementById("bnav");
+  var progress=document.querySelector(".read-progress");
+  var returnFocus=null;
+
+  if(theme){
+    theme.addEventListener("click",function(){
+      var next=root.getAttribute("data-theme")==="light"?"dark":"light";
+      root.setAttribute("data-theme",next);
+      try{localStorage.setItem("vfy-theme",next);}catch(error){}
+    });
+  }
+
+  function menuIsOpen(){return body.classList.contains("bmenu-open");}
+  function setMenu(open,restoreFocus){
+    if(!burger||!menu)return;
+    if(open){returnFocus=document.activeElement;}
+    body.classList.toggle("bmenu-open",open);
+    burger.setAttribute("aria-expanded",open?"true":"false");
+    menu.setAttribute("aria-hidden",open?"false":"true");
+    if(open)menu.removeAttribute("inert");else menu.setAttribute("inert","");
+    if(open){
+      var first=menu.querySelector("a[href],button:not([disabled])");
+      if(first)requestAnimationFrame(function(){first.focus();});
+    }else if(restoreFocus){
+      var target=returnFocus&&returnFocus.focus?returnFocus:burger;
+      requestAnimationFrame(function(){target.focus();});
+      returnFocus=null;
+    }
+  }
+
+  if(burger&&menu){
+    burger.addEventListener("click",function(){setMenu(!menuIsOpen(),true);});
+    menu.addEventListener("click",function(event){
+      if(event.target===menu)setMenu(false,true);
+      else if(event.target.closest("a"))setMenu(false,false);
+    });
+    document.addEventListener("keydown",function(event){
+      if(!menuIsOpen())return;
+      if(event.key==="Escape"){
+        event.preventDefault();
+        setMenu(false,true);
+        return;
+      }
+      if(event.key!=="Tab")return;
+      var items=Array.prototype.slice.call(menu.querySelectorAll("a[href],button:not([disabled])"));
+      items.push(burger);
+      if(!items.length)return;
+      event.preventDefault();
+      var index=items.indexOf(document.activeElement);
+      var next=event.shiftKey?(index<=0?items.length-1:index-1):(index<0||index===items.length-1?0:index+1);
+      items[next].focus();
+    });
+    var desktop=window.matchMedia("(min-width: 1161px)");
+    var closeAtDesktop=function(event){if(event.matches&&menuIsOpen())setMenu(false,true);};
+    if(desktop.addEventListener)desktop.addEventListener("change",closeAtDesktop);
+    else if(desktop.addListener)desktop.addListener(closeAtDesktop);
+  }
+
+  var frame=0;
+  function updateViewport(){
+    frame=0;
+    if(nav)nav.classList.toggle("is-solid",window.scrollY>8);
+    if(progress){
+      var page=document.documentElement;
+      var max=page.scrollHeight-page.clientHeight;
+      var y=window.scrollY||page.scrollTop||0;
+      progress.style.transform="scaleX("+(max>0?Math.min(1,y/max):0)+")";
+    }
+  }
+  function scheduleViewportUpdate(){
+    if(!frame)frame=requestAnimationFrame(updateViewport);
+  }
+  updateViewport();
+  window.addEventListener("scroll",scheduleViewportUpdate,{passive:true});
+  window.addEventListener("resize",scheduleViewportUpdate,{passive:true});
+})();</script>
 </body>
 </html>

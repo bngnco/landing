@@ -259,6 +259,80 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const CONTENT_DIR = path.join(ROOT, "content", "blog");
 
+// Read trustworthy intrinsic dimensions from local source files without adding
+// a runtime dependency. Unknown, external or unsupported images deliberately
+// return null so the generator never invents width/height values.
+const IMAGE_SIZE_CACHE = new Map();
+const JPEG_SOF_MARKERS = new Set([
+  0xc0, 0xc1, 0xc2, 0xc3,
+  0xc5, 0xc6, 0xc7,
+  0xc9, 0xca, 0xcb,
+  0xcd, 0xce, 0xcf,
+]);
+
+function localImageDimensions(src) {
+  if (typeof src !== "string" || !src.startsWith("/") || src.startsWith("//")) return null;
+
+  let decoded;
+  try {
+    decoded = decodeURIComponent(src.split(/[?#]/, 1)[0]);
+  } catch {
+    return null;
+  }
+
+  const file = path.resolve(ROOT, decoded.slice(1));
+  const rootPrefix = ROOT.toLowerCase() + path.sep;
+  if (!file.toLowerCase().startsWith(rootPrefix)) return null;
+  if (IMAGE_SIZE_CACHE.has(file)) return IMAGE_SIZE_CACHE.get(file);
+
+  let size = null;
+  try {
+    const bytes = fs.readFileSync(file);
+
+    // PNG: the IHDR width/height fields are fixed at byte offsets 16 and 20.
+    if (
+      bytes.length >= 24 &&
+      bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47 &&
+      bytes[4] === 0x0d && bytes[5] === 0x0a && bytes[6] === 0x1a && bytes[7] === 0x0a
+    ) {
+      const width = bytes.readUInt32BE(16);
+      const height = bytes.readUInt32BE(20);
+      if (width > 0 && height > 0) size = { width, height };
+    }
+
+    // JPEG: walk marker segments until a Start Of Frame block supplies size.
+    if (!size && bytes.length >= 4 && bytes[0] === 0xff && bytes[1] === 0xd8) {
+      let offset = 2;
+      while (offset + 3 < bytes.length) {
+        while (offset < bytes.length && bytes[offset] !== 0xff) offset += 1;
+        while (offset < bytes.length && bytes[offset] === 0xff) offset += 1;
+        if (offset >= bytes.length) break;
+
+        const marker = bytes[offset];
+        offset += 1;
+        if (marker === 0xd9 || marker === 0xda) break;
+        if (marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) continue;
+        if (offset + 1 >= bytes.length) break;
+
+        const length = bytes.readUInt16BE(offset);
+        if (length < 2 || offset + length > bytes.length) break;
+        if (JPEG_SOF_MARKERS.has(marker) && length >= 7) {
+          const height = bytes.readUInt16BE(offset + 3);
+          const width = bytes.readUInt16BE(offset + 5);
+          if (width > 0 && height > 0) size = { width, height };
+          break;
+        }
+        offset += length;
+      }
+    }
+  } catch {
+    size = null;
+  }
+
+  IMAGE_SIZE_CACHE.set(file, size);
+  return size;
+}
+
 /* ── Markdown engine ──────────────────────────────────────────────── */
 const md = new MarkdownIt({ html: true, linkify: true, typographer: true });
 md.use(anchor, { level: [2, 3], tabIndex: false, slugify: (s) => slugify(s) });
@@ -455,11 +529,11 @@ function header(active, lang, ui, alternates) {
           <span class="t-dark">${MOON}</span><span class="t-light">${SUN}</span>
         </button>
         <a class="btn btn-fill btn-sm" href="${SITE.appStore}" target="_blank" rel="noopener">${ui.getApp}</a>
-        <button type="button" class="bburger" data-bburger aria-label="Menu"><span></span><span></span><span></span></button>
+        <button type="button" class="bburger" data-bburger aria-label="Menu" aria-expanded="false" aria-controls="blog-mobile-menu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
-  <div class="bmenu" data-bmenu>
+  <div class="bmenu" id="blog-mobile-menu" data-bmenu aria-hidden="true" inert>
     <nav aria-label="Mobile">
       <a href="/#app">${ui.navFeatures}</a>
       <a href="/#how">${ui.navHow}</a>
@@ -511,7 +585,89 @@ function footer(lang, ui) {
   </footer>`;
 }
 
-const FOOT_JS = `<script>(function(){var r=document.documentElement;var tt=document.querySelector("[data-theme-toggle]");if(tt){tt.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="light"?"dark":"light";r.setAttribute("data-theme",n);try{localStorage.setItem("vfy-theme",n);}catch(e){}});}var b=document.querySelector("[data-bburger]"),m=document.querySelector("[data-bmenu]");if(b){b.addEventListener("click",function(){document.body.classList.toggle("bmenu-open");});}if(m){m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("bmenu-open");});});}var nav=document.getElementById("bnav");if(nav){var on=function(){nav.classList.toggle("is-solid",window.scrollY>8);};on();window.addEventListener("scroll",on,{passive:true});}var pr=document.querySelector(".read-progress");if(pr){var up=function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;pr.style.transform="scaleX("+(max>0?Math.min(1,h.scrollTop/max):0)+")";};up();window.addEventListener("scroll",up,{passive:true});window.addEventListener("resize",up);}})();</script>`;
+const FOOT_JS = `<script>(function(){
+  "use strict";
+  var root=document.documentElement;
+  var body=document.body;
+  var theme=document.querySelector("[data-theme-toggle]");
+  var burger=document.querySelector("[data-bburger]");
+  var menu=document.querySelector("[data-bmenu]");
+  var nav=document.getElementById("bnav");
+  var progress=document.querySelector(".read-progress");
+  var returnFocus=null;
+
+  if(theme){
+    theme.addEventListener("click",function(){
+      var next=root.getAttribute("data-theme")==="light"?"dark":"light";
+      root.setAttribute("data-theme",next);
+      try{localStorage.setItem("vfy-theme",next);}catch(error){}
+    });
+  }
+
+  function menuIsOpen(){return body.classList.contains("bmenu-open");}
+  function setMenu(open,restoreFocus){
+    if(!burger||!menu)return;
+    if(open){returnFocus=document.activeElement;}
+    body.classList.toggle("bmenu-open",open);
+    burger.setAttribute("aria-expanded",open?"true":"false");
+    menu.setAttribute("aria-hidden",open?"false":"true");
+    if(open)menu.removeAttribute("inert");else menu.setAttribute("inert","");
+    if(open){
+      var first=menu.querySelector("a[href],button:not([disabled])");
+      if(first)requestAnimationFrame(function(){first.focus();});
+    }else if(restoreFocus){
+      var target=returnFocus&&returnFocus.focus?returnFocus:burger;
+      requestAnimationFrame(function(){target.focus();});
+      returnFocus=null;
+    }
+  }
+
+  if(burger&&menu){
+    burger.addEventListener("click",function(){setMenu(!menuIsOpen(),true);});
+    menu.addEventListener("click",function(event){
+      if(event.target===menu)setMenu(false,true);
+      else if(event.target.closest("a"))setMenu(false,false);
+    });
+    document.addEventListener("keydown",function(event){
+      if(!menuIsOpen())return;
+      if(event.key==="Escape"){
+        event.preventDefault();
+        setMenu(false,true);
+        return;
+      }
+      if(event.key!=="Tab")return;
+      var items=Array.prototype.slice.call(menu.querySelectorAll("a[href],button:not([disabled])"));
+      items.push(burger);
+      if(!items.length)return;
+      event.preventDefault();
+      var index=items.indexOf(document.activeElement);
+      var next=event.shiftKey?(index<=0?items.length-1:index-1):(index<0||index===items.length-1?0:index+1);
+      items[next].focus();
+    });
+    var desktop=window.matchMedia("(min-width: 1161px)");
+    var closeAtDesktop=function(event){if(event.matches&&menuIsOpen())setMenu(false,true);};
+    if(desktop.addEventListener)desktop.addEventListener("change",closeAtDesktop);
+    else if(desktop.addListener)desktop.addListener(closeAtDesktop);
+  }
+
+  var frame=0;
+  function updateViewport(){
+    frame=0;
+    if(nav)nav.classList.toggle("is-solid",window.scrollY>8);
+    if(progress){
+      var page=document.documentElement;
+      var max=page.scrollHeight-page.clientHeight;
+      var y=window.scrollY||page.scrollTop||0;
+      progress.style.transform="scaleX("+(max>0?Math.min(1,y/max):0)+")";
+    }
+  }
+  function scheduleViewportUpdate(){
+    if(!frame)frame=requestAnimationFrame(updateViewport);
+  }
+  updateViewport();
+  window.addEventListener("scroll",scheduleViewportUpdate,{passive:true});
+  window.addEventListener("resize",scheduleViewportUpdate,{passive:true});
+})();</script>`;
 
 /* ── CTA components ───────────────────────────────────────────────── */
 function ctaBlock(ui) {
@@ -588,7 +744,7 @@ function page({
   <link rel="alternate" type="application/rss+xml" title="${esc(SITE.blogName)}" href="${SITE.url}${langPrefix(lang)}/blog/feed.xml" />
   ${THEME_BOOT}
   ${FONTS}
-  <link rel="stylesheet" href="/assets/blog.css?v=3" />
+  <link rel="stylesheet" href="/assets/blog.css?v=4" />
 ${head}
 </head>
 <body class="${bodyClass}">
@@ -605,11 +761,16 @@ const tagChip = (t, lang) =>
   `<a class="chip" href="${langPrefix(lang)}/blog/tag/${slugURL(t)}">${esc(t)}</a>`;
 
 /* ── Post card (index/tag listings) ───────────────────────────────── */
-function postCard(p, ui) {
+function postCard(p, ui, priority = false) {
+  const dimensions =
+    p.imageWidth && p.imageHeight ? ` width="${p.imageWidth}" height="${p.imageHeight}"` : "";
+  const loading = priority
+    ? ' loading="eager" fetchpriority="high"'
+    : ' loading="lazy"';
   return `
     <article class="card">
       <a class="card-media" href="${p.urlPath}" aria-label="${esc(p.title)}">
-        <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" loading="lazy" decoding="async" />
+        <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}"${dimensions}${loading} decoding="async" />
       </a>
       <div class="card-body">
         <div class="card-tags">${p.tags.slice(0, 2).map((t) => tagChip(t, p.lang)).join("")}</div>
@@ -628,6 +789,8 @@ function postCard(p, ui) {
 function articlePage(p, related) {
   const ui = strings(p.lang);
   const pre = langPrefix(p.lang);
+  const heroDimensions =
+    p.imageWidth && p.imageHeight ? ` width="${p.imageWidth}" height="${p.imageHeight}"` : "";
   const crumbs = `
     <nav class="crumbs" aria-label="Breadcrumb">
       <a href="/">${esc(ui.home)}</a><span class="sep">/</span>
@@ -725,7 +888,7 @@ function articlePage(p, related) {
       </div>
 
       <figure class="post-hero">
-        <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" decoding="async" fetchpriority="high" />
+        <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}"${heroDimensions} loading="eager" decoding="async" fetchpriority="high" />
       </figure>
       ${tocHtml}
 
@@ -810,7 +973,7 @@ function listingPage({
       ${tagFilter}
     </header>
     <section class="post-grid bwrap">
-      ${posts.map((p) => postCard(p, ui)).join("")}
+      ${posts.map((p, index) => postCard(p, ui, index === 0)).join("")}
     </section>
   </main>`;
 
@@ -889,6 +1052,8 @@ function buildPostRecord(file, lang) {
   const words = content.replace(/```[\s\S]*?```/g, " ").split(/\s+/).filter(Boolean).length;
   const title = data.title || slug;
   const brandedTitle = `${title} | ${SITE.name} Blog`;
+  const image = data.image || SITE.defaultImage;
+  const imageDimensions = localImageDimensions(image);
   return {
     slug,
     lang,
@@ -901,8 +1066,10 @@ function buildPostRecord(file, lang) {
     description: data.description || "",
     author: data.author || SITE.defaultAuthor,
     tags,
-    image: data.image || SITE.defaultImage,
-    imageAbs: abs(data.image || SITE.defaultImage),
+    image,
+    imageAbs: abs(image),
+    imageWidth: imageDimensions?.width || null,
+    imageHeight: imageDimensions?.height || null,
     imageAlt: data.imageAlt || data.title || "Verifyco",
     date,
     updated,

@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="js">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add("js");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Verifyco — Reality, verified in every pixel</title>
-  <meta name="description" content="Verifyco runs five forensic signals on your iPhone to spot deepfakes, AI-generated and manipulated media — in seconds, fully offline, never uploaded." />
+  <title>Verifyco — Deepfake &amp; AI Media Verification for iOS and Web</title>
+  <meta name="description" content="Verify photos and videos for deepfakes, AI generation and manipulation. Private on-device analysis on iOS, plus a professional forensic workflow on the web." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#060504" />
   <link rel="canonical" href="https://verifyco.info/" />
   <meta property="og:site_name" content="Verifyco" />
   <meta property="og:title" content="Verifyco — Reality, verified in every pixel" />
-  <meta property="og:description" content="On-device forensic verification for photos and videos. Five signals, one verdict — fully offline." />
+  <meta property="og:description" content="Forensic media verification for iOS and web. Five independent signals turn suspicious photos and videos into an evidence-led verdict." />
   <meta property="og:url" content="https://verifyco.info/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://verifyco.info/assets/verifyco-icon.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="Verifyco app icon" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Verifyco — Reality, verified in every pixel" />
-  <meta name="twitter:description" content="On-device forensic verification for photos and videos. Five signals, one verdict — fully offline." />
+  <meta name="twitter:description" content="Forensic media verification for iOS and web. Five signals, one evidence-led verdict." />
   <meta name="twitter:image" content="https://verifyco.info/assets/verifyco-icon.png" />
+  <meta name="twitter:image:alt" content="Verifyco app icon" />
 
   <link rel="alternate" type="application/rss+xml" title="The Verifyco Blog" href="https://verifyco.info/blog/feed.xml" />
 
@@ -29,10 +35,7 @@
 
   <link rel="preload" as="image" href="assets/app/home.png" fetchpriority="high" />
 
-  <link rel="stylesheet" href="assets/site.css?v=7" />
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=8" />
 
   <!-- Structured data — helps Google understand the brand + app. -->
   <script type="application/ld+json">
@@ -65,6 +68,15 @@
         "description": "On-device forensic verification for photos and videos. Verifyco runs five forensic signals on your iPhone to spot deepfakes, AI-generated and manipulated media — in seconds, fully offline, never uploaded.",
         "publisher": { "@id": "https://verifyco.info/#org" },
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Verifyco Web",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Any",
+        "url": "https://web.verifyco.info/",
+        "description": "A browser-based forensic workspace for analysing photos, videos and media links for signs of AI generation and manipulation.",
+        "publisher": { "@id": "https://verifyco.info/#org" }
       }
     ]
   }
@@ -79,16 +91,16 @@
   <!-- ═══════════ NAV ═══════════ -->
   <header class="nav" id="nav">
     <div class="wrap nav-in">
-      <a class="brand" href="index.html" aria-label="Verifyco">Verify<em>co</em></a>
+      <a class="brand" href="/" aria-label="Verifyco">Verify<em>co</em></a>
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#app" data-i18n="nav.features">Features</a>
         <a href="#how" data-i18n="nav.signals">How it works</a>
-        <a href="deepdetect-plus.html" data-i18n="nav.dd">DeepDetect+</a>
-        <a href="vera.html">Vera<span class="pill-preview"><i></i>Preview</span></a>
+          <a href="/deepdetect-plus" data-i18n="nav.dd">DeepDetect+</a>
+          <a href="/vera">Vera<span class="pill-preview"><i></i>Preview</span></a>
         <a href="/blog" data-i18n="nav.blog">Blog</a>
         <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
-        <a href="support.html" data-i18n="nav.support">Support</a>
+          <a href="/support" data-i18n="nav.support">Support</a>
       </nav>
 
       <div class="nav-right">
@@ -113,11 +125,11 @@
     <nav aria-label="Mobile">
       <a class="mlink" href="#app" data-i18n="nav.features">Features</a>
       <a class="mlink" href="#how" data-i18n="nav.signals">How it works</a>
-      <a class="mlink" href="deepdetect-plus.html">DeepDetect<em>+</em></a>
-      <a class="mlink" href="vera.html">Vera<span class="pill-preview"><i></i>Preview</span></a>
+      <a class="mlink" href="/deepdetect-plus">DeepDetect<em>+</em></a>
+      <a class="mlink" href="/vera">Vera<span class="pill-preview"><i></i>Preview</span></a>
       <a class="mlink" href="/blog" data-i18n="nav.blog">Blog</a>
       <a class="mlink" href="#pricing" data-i18n="nav.pricing">Pricing</a>
-      <a class="mlink" href="support.html" data-i18n="nav.support">Support</a>
+      <a class="mlink" href="/support" data-i18n="nav.support">Support</a>
     </nav>
     <div class="mmenu-foot">
       <div class="mmenu-langs" data-mmenu-langs></div>
@@ -130,43 +142,79 @@
     <section class="hero" id="top">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-ufo" data-ufo aria-hidden="true">
+        <svg viewBox="0 0 420 210" focusable="false">
+          <defs>
+            <linearGradient id="ufoDome" x1="0" y1="0" x2="0.7" y2="1">
+              <stop offset="0" stop-color="#f2deb6" stop-opacity=".88" />
+              <stop offset=".34" stop-color="#626878" stop-opacity=".62" />
+              <stop offset="1" stop-color="#2a3040" stop-opacity=".3" />
+            </linearGradient>
+            <linearGradient id="ufoHull" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#4a4e5c" />
+              <stop offset=".32" stop-color="#262a34" />
+              <stop offset=".7" stop-color="#16181e" />
+              <stop offset="1" stop-color="#a07757" />
+            </linearGradient>
+            <radialGradient id="ufoLight">
+              <stop offset="0" stop-color="#f2deb6" stop-opacity=".72" />
+              <stop offset="1" stop-color="#c89b78" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <ellipse cx="210" cy="150" rx="150" ry="26" fill="url(#ufoLight)" opacity=".58" />
+          <path class="ufo-beam" d="M176 156h68l48 54H128z" fill="url(#ufoLight)" />
+          <path d="M137 104c13-43 39-66 73-66s60 23 73 66z" fill="url(#ufoDome)" stroke="#f2ddc2" stroke-opacity=".46" />
+          <path d="M66 108c33-17 81-25 144-25s111 8 144 25l-31 42c-31 13-69 19-113 19s-82-6-113-19z" fill="url(#ufoHull)" stroke="#e7c9a4" stroke-opacity=".5" />
+          <ellipse cx="210" cy="109" rx="145" ry="29" fill="#101218" stroke="#c89b78" stroke-opacity=".55" />
+          <ellipse cx="210" cy="106" rx="117" ry="18" fill="url(#ufoHull)" opacity=".92" />
+          <path d="M111 147c56 18 142 18 198 0-19 31-53 46-99 46s-80-15-99-46z" fill="#16181e" stroke="#a07757" stroke-opacity=".62" />
+          <g fill="#f5d2a8">
+            <circle cx="116" cy="139" r="4" fill="#c89b78" /><circle cx="153" cy="151" r="4" fill="#8daa6f" /><circle cx="210" cy="156" r="4" fill="#f2deb6" /><circle cx="267" cy="151" r="4" fill="#8daa6f" /><circle cx="304" cy="139" r="4" fill="#c89b78" />
+          </g>
+        </svg>
+      </div>
 
       <div class="wrap hero-in">
         <div class="hero-copy">
-          <span class="eyebrow" data-hero-el data-i18n="hero.eyebrow">ON-DEVICE FORENSIC ANALYSIS</span>
+          <span class="eyebrow" data-hero-el>FORENSIC VERIFICATION · iOS + WEB</span>
           <h1 class="t-display hero-h1" data-hero-title data-i18n="hero.title">Reality, <span class="hl">verified</span> in every pixel.</h1>
           <p class="sub hero-sub" data-hero-el data-i18n="hero.sub">Verifyco runs five forensic signals on your iPhone to spot deepfakes, AI-generated and manipulated media — in seconds, fully offline, never uploaded.</p>
 
-          <div class="hero-ctas" data-hero-el>
-            <a class="appstore" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener" data-magnet>
-              <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
-              <span class="as-l">
-                <span class="as-s" data-i18n="hero.cta.appstore.small">Download on the</span>
-                <span class="as-b" data-i18n="hero.cta.appstore">App Store</span>
+          <div class="hero-ctas platform-actions" data-hero-el>
+            <div class="platform-primary">
+              <a class="platform-card platform-card--ios appstore" href="https://apps.apple.com/app/id6772592963" target="_blank" rel="noopener">
+                <span class="platform-icon">
+                  <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+                </span>
+                <span class="platform-copy">
+                  <span class="platform-kicker" data-i18n="platform.ios.kicker">Private · on-device</span>
+                  <strong data-i18n="platform.ios.title">Get the iOS app</strong>
+                  <small data-i18n="platform.ios.detail">No upload. Works offline.</small>
+                </span>
+                <span class="platform-go" aria-hidden="true">↗</span>
+              </a>
+              <a class="platform-card platform-card--web webapp" href="https://web.verifyco.info" target="_blank" rel="noopener" aria-label="Open the Verifyco web app">
+                <span class="platform-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+                </span>
+                <span class="platform-copy">
+                  <span class="platform-kicker" data-i18n="platform.web.kicker">Browser · professional</span>
+                  <strong data-i18n="platform.web.title">Open Verifyco Web</strong>
+                  <small data-i18n="platform.web.detail">Uploads, links and reports.</small>
+                </span>
+                <span class="platform-go" aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div class="platform-secondary">
+              <span class="androidsoon" role="img" aria-label="Android app coming soon">
+                <svg class="android-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48 19.44 6.3a.63.63 0 0 0-1.09-.63l-1.87 3.24A10.9 10.9 0 0 0 12 8c-1.58 0-3.09.33-4.48.91L5.65 5.67a.63.63 0 1 0-1.09.63L6.4 9.48A9.6 9.6 0 0 0 2 17h20a9.6 9.6 0 0 0-4.4-7.52ZM7.5 14.25a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm9 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>
+                <span data-i18n="platform.android">Android</span><b data-i18n="platform.android.status">Coming next</b>
               </span>
-            </a>
-            <a class="webapp" href="https://web.verifyco.info" target="_blank" rel="noopener" data-magnet aria-label="Open the Verifyco web app">
-              <span class="wa-ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
-              </span>
-              <span class="as-l">
-                <span class="as-s">Open the</span>
-                <span class="as-b">Web app</span>
-              </span>
-            </a>
-            <span class="androidsoon" role="img" aria-label="Android app coming soon">
-              <span class="wa-ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 9h12v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 19v2M15 19v2M6 9a6 6 0 0 1 12 0M9 6.5 7.5 4.5M15 6.5 16.5 4.5"/><circle cx="10" cy="6.5" r=".4" fill="currentColor"/><circle cx="14" cy="6.5" r=".4" fill="currentColor"/></svg>
-              </span>
-              <span class="as-l">
-                <span class="as-s">Android</span>
-                <span class="as-b">App<span class="soon">Soon</span></span>
-              </span>
-            </span>
-            <a class="btn btn-line" href="#how" data-magnet data-i18n="hero.cta.learn">How it works</a>
+              <a class="workflow-link" href="#how"><span data-i18n="hero.cta.learn">How it works</span><i aria-hidden="true">↓</i></a>
+            </div>
           </div>
 
-          <span class="hero-ticker" data-hero-el data-i18n="hero.trust">ENGINE READY · 0 NETWORK CALLS · NEURAL ENGINE</span>
+          <span class="hero-ticker" data-hero-el data-i18n="hero.trust">iOS · ENGINE READY · 0 NETWORK CALLS · NEURAL ENGINE</span>
         </div>
 
         <div class="hero-stage" data-hero-stage>
@@ -180,10 +228,19 @@
               </defs>
               <circle cx="260" cy="260" r="250" fill="url(#hg)"></circle>
               <circle cx="260" cy="260" r="208" fill="none" stroke="#BC8E64" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 9">
-                <animateTransform attributeName="transform" type="rotate" from="0 260 260" to="360 260 260" dur="70s" repeatCount="indefinite"></animateTransform>
               </circle>
               <circle cx="260" cy="260" r="160" fill="none" stroke="#BC8E64" stroke-opacity="0.12" stroke-width="1"></circle>
             </svg>
+          </div>
+
+          <div class="web-workbench" data-hero-el aria-hidden="true">
+            <div class="web-workbench-top"><span><i></i>VERIFYCO WEB</span><b>ANALYSIS READY</b></div>
+            <div class="web-workbench-file">
+              <span class="web-file-preview"></span>
+              <span><b>source_clip.mp4</b><small>00:42 · 1080p · SHA-256 locked</small></span>
+            </div>
+            <div class="web-workbench-score"><span><small>TRUST SCORE</small><b>27</b></span><i></i><em>REVIEW</em></div>
+            <div class="web-workbench-layers"><span>C2PA</span><span>Metadata</span><span class="hot">Neural</span><span>Temporal</span><span>Frequency</span></div>
           </div>
 
           <div class="ph hero-ph" data-hero-ph>
@@ -214,8 +271,8 @@
     <!-- ═══════════ MARQUEE ═══════════ -->
     <div class="mq" aria-hidden="true">
       <div class="mq-track">
-        <span>C2PA</span><span>EXIF FORENSICS</span><span>APPLE VISION</span><span>DCT SPECTRUM</span><span>OPTICAL FLOW</span><span>SHA-256</span><span>0 UPLOADS</span><span>NEURAL ENGINE</span><span>MP4 · MOV · JPEG · PNG · HEIC</span>
-        <span>C2PA</span><span>EXIF FORENSICS</span><span>APPLE VISION</span><span>DCT SPECTRUM</span><span>OPTICAL FLOW</span><span>SHA-256</span><span>0 UPLOADS</span><span>NEURAL ENGINE</span><span>MP4 · MOV · JPEG · PNG · HEIC</span>
+        <span>C2PA</span><span>EXIF FORENSICS</span><span>APPLE VISION</span><span>DCT SPECTRUM</span><span>OPTICAL FLOW</span><span>SHA-256</span><span>iOS · 0 UPLOADS</span><span>VERIFYCO WEB</span><span>MP4 · MOV · JPEG · PNG · HEIC</span>
+        <span>C2PA</span><span>EXIF FORENSICS</span><span>APPLE VISION</span><span>DCT SPECTRUM</span><span>OPTICAL FLOW</span><span>SHA-256</span><span>iOS · 0 UPLOADS</span><span>VERIFYCO WEB</span><span>MP4 · MOV · JPEG · PNG · HEIC</span>
       </div>
     </div>
 
@@ -226,30 +283,44 @@
           <span class="eyebrow" data-rv data-i18n="showcase.eyebrow">02 · THE APP</span>
           <h2 class="t-display" data-rv data-i18n="showcase.title">Forensic <span class="hl">precision</span>, in your pocket.</h2>
           <p class="sub" data-rv data-i18n="showcase.sub">Crafted dark-first to read like a verification instrument. Every detail earns its place.</p>
+          <p class="showcase-hint" data-rv><span aria-hidden="true">↗</span> <span data-i18n="showcase.inspect">Select a screen to inspect the interface</span></p>
         </div>
 
         <div class="shelf" data-shelf>
-          <div class="shelf-item" data-rv>
+          <button type="button" class="shelf-item screen-trigger" data-rv data-screen-src="assets/app/onb-uap.png" data-screen-title="Forensic onboarding">
             <div class="ph" data-speed="0.06"><div class="ph-scr"><img src="assets/app/onb-uap.png" alt="Verifyco onboarding" loading="lazy" decoding="async" width="1290" height="2796" /></div></div>
             <span class="shelf-cap" data-i18n="showcase.cap.welcome">Onboarding</span>
-          </div>
-          <div class="shelf-item" data-rv>
+          </button>
+          <button type="button" class="shelf-item screen-trigger" data-rv data-screen-src="assets/app/deepfake.png" data-screen-title="Verdict comparison">
             <div class="ph" data-speed="-0.05"><div class="ph-scr"><img src="assets/app/deepfake.png" alt="Verdict comparison" loading="lazy" decoding="async" width="1290" height="2796" /></div></div>
             <span class="shelf-cap" data-i18n="showcase.cap.deepfake">Verdict A/B</span>
-          </div>
-          <div class="shelf-item" data-rv>
+          </button>
+          <button type="button" class="shelf-item screen-trigger" data-rv data-screen-src="assets/app/signals.png" data-screen-title="Signal pipeline">
             <div class="ph" data-speed="0.04"><div class="ph-scr"><img src="assets/app/signals.png" alt="Signal pipeline" loading="lazy" decoding="async" width="1290" height="2796" /></div></div>
             <span class="shelf-cap" data-i18n="showcase.cap.signals">Signal pipeline</span>
-          </div>
-          <div class="shelf-item" data-rv>
+          </button>
+          <button type="button" class="shelf-item screen-trigger" data-rv data-screen-src="assets/app/face.png" data-screen-title="Layer trace">
             <div class="ph" data-speed="-0.07"><div class="ph-scr"><img src="assets/app/face.png" alt="Layer trace" loading="lazy" decoding="async" width="1290" height="2796" /></div></div>
             <span class="shelf-cap" data-i18n="showcase.cap.layer">Layer trace</span>
-          </div>
-          <div class="shelf-item" data-rv>
+          </button>
+          <button type="button" class="shelf-item screen-trigger" data-rv data-screen-src="assets/app/url.png" data-screen-title="Link analysis">
             <div class="ph" data-speed="0.05"><div class="ph-scr"><img src="assets/app/url.png" alt="Link analysis" loading="lazy" decoding="async" width="1290" height="2796" /></div></div>
             <span class="shelf-cap" data-i18n="showcase.cap.url">Link analysis</span>
-          </div>
+          </button>
         </div>
+
+        <dialog class="screen-dialog" data-screen-dialog aria-labelledby="screen-dialog-title">
+          <div class="screen-dialog-card">
+            <div class="screen-dialog-top">
+              <span><i></i>VERIFYCO · iOS INTERFACE</span>
+              <button type="button" class="screen-dialog-close" data-screen-close aria-label="Close preview">×</button>
+            </div>
+            <figure>
+              <img data-screen-image src="assets/app/onb-uap.png" alt="" width="1290" height="2796" />
+              <figcaption id="screen-dialog-title" data-screen-caption>Forensic onboarding</figcaption>
+            </figure>
+          </div>
+        </dialog>
       </div>
     </section>
 
@@ -308,40 +379,30 @@
             </span>
             <h2 class="t-display" data-i18n="dd.tagline">Advanced deepfake detection</h2>
             <p class="sub" data-i18n="dd.desc">DeepDetect+ is Verifyco's advanced detection engine, combining multi-layer forensic inspection with a neural architecture trained on adversarial deepfakes, generative-AI artifacts, and historic manipulation patterns — designed to surface the evidence that matters.</p>
-            <a class="btn btn-line" href="deepdetect-plus.html" data-magnet data-i18n="dd.more">Learn more about DeepDetect+</a>
+          <a class="btn btn-line" href="/deepdetect-plus" data-magnet data-i18n="dd.more">Learn more about DeepDetect+</a>
           </div>
 
-          <div class="dd-orb" aria-hidden="true">
-            <svg viewBox="0 0 360 360">
-              <g stroke="#BC8E64" stroke-opacity="0.2" stroke-width="1" fill="none">
-                <path d="M58 122 L130 78 L238 58 L304 122 L326 205 L270 286 L172 320 L80 272 L44 188 Z"></path>
-                <path d="M130 78 L180 180 L304 122"></path>
-                <path d="M80 272 L180 180 L270 286"></path>
-                <path d="M58 122 L180 180 L238 58"></path>
-                <path d="M326 205 L180 180 L172 320"></path>
-              </g>
-              <circle cx="180" cy="180" r="140" fill="none" stroke="#BC8E64" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3 9">
-                <animateTransform attributeName="transform" type="rotate" from="0 180 180" to="360 180 180" dur="46s" repeatCount="indefinite"></animateTransform>
-              </circle>
-              <path d="M180 50 A130 130 0 0 1 310 180" fill="none" stroke="#E7C9A4" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round">
-                <animateTransform attributeName="transform" type="rotate" from="0 180 180" to="360 180 180" dur="8s" repeatCount="indefinite"></animateTransform>
-              </path>
-              <g fill="#E7C9A4">
-                <circle cx="58" cy="122" r="3.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.4s" repeatCount="indefinite"></animate></circle>
-                <circle cx="130" cy="78" r="4.5"><animate attributeName="opacity" values="1;0.4;1" dur="4s" repeatCount="indefinite"></animate></circle>
-                <circle cx="238" cy="58" r="3.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.7s" repeatCount="indefinite"></animate></circle>
-                <circle cx="304" cy="122" r="4.5"><animate attributeName="opacity" values="1;0.5;1" dur="4.5s" repeatCount="indefinite"></animate></circle>
-                <circle cx="326" cy="205" r="3.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.1s" repeatCount="indefinite"></animate></circle>
-                <circle cx="270" cy="286" r="4.5"><animate attributeName="opacity" values="0.6;1;0.6" dur="4.2s" repeatCount="indefinite"></animate></circle>
-                <circle cx="172" cy="320" r="3.5"><animate attributeName="opacity" values="1;0.4;1" dur="3.5s" repeatCount="indefinite"></animate></circle>
-                <circle cx="80" cy="272" r="4.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.9s" repeatCount="indefinite"></animate></circle>
-              </g>
-            </svg>
-            <div class="dd-core">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 2 L20 5 V11 C20 16 16.5 19.5 12 22 C7.5 19.5 4 16 4 11 V5 Z" fill="#1A120A" stroke="#3A2A18" stroke-width="0.5"></path>
-                <path d="M12 4 L12 20 C8.6 18 6 15 6 11 V6.2 Z" fill="#0E0A06"></path>
+          <div class="dd-visual" data-dd-visual role="img" aria-label="Illustrative DeepDetect Plus forensic analysis showing corroborating neural, temporal and frequency evidence">
+            <div class="dd-visual-top"><span><i></i>DEEPDETECT+ · FORENSIC RUN</span><b>00:01.842</b></div>
+            <div class="dd-scan-stage" aria-hidden="true">
+              <svg class="dd-face-map" viewBox="0 0 360 250" fill="none">
+                <path class="dd-contour" d="M180 27c-53 0-86 41-86 96 0 63 34 103 86 103s86-40 86-103c0-55-33-96-86-96Z" />
+                <path d="M121 105c18-13 38-15 59-5 21-10 41-8 59 5M139 135c11 9 25 11 41 6 16 5 30 3 41-6M154 177c18 9 34 9 52 0M180 101v57" />
+                <g class="dd-mesh">
+                  <path d="M94 123 139 135 121 105 180 101 239 105 221 135 266 123M139 135l15 42 26-36 26 36 15-42M121 105l33-36 26 32 26-32 33 36M154 177l26 49 26-49" />
+                  <circle cx="121" cy="105" r="3"/><circle cx="139" cy="135" r="3"/><circle cx="154" cy="177" r="3"/><circle cx="180" cy="101" r="3"/><circle cx="180" cy="141" r="3"/><circle cx="180" cy="226" r="3"/><circle cx="206" cy="177" r="3"/><circle cx="221" cy="135" r="3"/><circle cx="239" cy="105" r="3"/>
+                </g>
+                <path class="dd-anomaly" d="M204 156c15 5 23 15 25 30-12 11-27 15-43 9" />
               </svg>
+              <span class="dd-corner dd-corner--tl"></span><span class="dd-corner dd-corner--tr"></span><span class="dd-corner dd-corner--bl"></span><span class="dd-corner dd-corner--br"></span>
+              <span class="dd-scanline"></span>
+              <span class="dd-region">REGION 04 · JAWLINE <b>0.83</b></span>
+              <div class="dd-verdict"><small>FUSED VERDICT</small><strong>Likely manipulated</strong><span>27 / 100 trust</span></div>
+            </div>
+            <div class="dd-evidence" aria-hidden="true">
+              <span><i></i><b>Neural</b><em>0.83 anomaly</em></span>
+              <span><i></i><b>Temporal</b><em>3f drift</em></span>
+              <span><i></i><b>Frequency</b><em>ridge found</em></span>
             </div>
           </div>
         </div>
@@ -349,13 +410,21 @@
         <!-- Vera teaser — Verifyco Research -->
         <div class="vera-teaser" data-rv>
           <div class="vera-teaser-copy">
-            <span class="vera-teaser-eyebrow"><i></i>Next · Verifyco Research</span>
-            <h3>Vera — <em>the forensic model you can talk to.</em></h3>
-            <p>A multimodal forensic reasoning model, in training: six evidence layers, one conversation. Ask why, ask where, ask what to check next.</p>
+            <span class="vera-teaser-eyebrow"><i></i><span data-i18n="vera.eyebrow">Verifyco Research · Private preview</span></span>
+            <h3 data-i18n="vera.title">Detection tells you <em>what.</em><br />Vera helps explain <em>why.</em></h3>
+            <p data-i18n="vera.desc">Our evidence-aware forensic model turns six analysis layers into an examination you can question. It shows supporting signals, contradictions and what remains uncertain.</p>
+            <div class="vera-teaser-proof"><span data-i18n="vera.proof.1">Grounded answers</span><span data-i18n="vera.proof.2">Visible uncertainty</span><span data-i18n="vera.proof.3">Actionable next checks</span></div>
+          <a class="vera-teaser-cta" href="/vera"><span data-i18n="vera.cta">Enter the Vera research preview</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
           </div>
-          <a class="vera-teaser-cta" href="vera.html">Meet Vera
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
-          </a>
+          <div class="vera-teaser-workspace" aria-hidden="true">
+            <div class="vera-mini-top"><span><i></i>VERA · CASE VC-042</span><b>ILLUSTRATIVE</b></div>
+            <div class="vera-mini-file"><span class="vera-mini-thumb"></span><span><b>press_statement.mp4</b><small>6 evidence layers · examination complete</small></span></div>
+            <div class="vera-mini-question">Why was this clip flagged?</div>
+            <div class="vera-mini-answer"><span>V</span><p><b>Two independent signals agree.</b> Lip-sync drifts three frames while a jawline anomaly peaks in the same segment. Metadata only shows re-encoding, so it is supporting context—not proof.</p></div>
+            <div class="vera-mini-foot"><span>Confidence · moderate</span><span>Uncertainty preserved</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -460,14 +529,14 @@
         <!-- Web app plans -->
         <div class="plans plans--web" data-ppanel="web" hidden>
           <div class="plan plan--web" data-rv>
-            <span class="plan-name">Starter Pack</span>
-            <span class="plan-amt"><small>$</small>5<span class="plan-once">one-time</span></span>
-            <span class="plan-per">credits never expire</span>
-            <p class="plan-desc">A one-time pack to try the full engine at your own pace.</p>
-            <div class="plan-chips"><span class="plan-chip">25 analyses</span><span class="plan-chip ghost">$0.20 / analysis</span></div>
+            <span class="plan-name">Starter · Weekly</span>
+            <span class="plan-amt"><small>$</small>5<span class="plan-cyc">/ wk</span></span>
+            <span class="plan-per">renews weekly until cancelled</span>
+            <p class="plan-desc">A weekly plan for trying the full engine with a clear, renewable allowance.</p>
+            <div class="plan-chips"><span class="plan-chip">25 analyses / wk</span><span class="plan-chip ghost">$0.20 / analysis</span></div>
             <dl class="plan-spec">
               <div><dt>Max file size</dt><dd>100 MB</dd></div>
-              <div><dt>Forensic layers</dt><dd>2 of 5</dd></div>
+              <div><dt>Forensic workflow</dt><dd>Core signals</dd></div>
               <div><dt>Full report + JSON</dt><dd class="no">—</dd></div>
               <div><dt>PDF export</dt><dd class="no">—</dd></div>
             </dl>
@@ -483,7 +552,7 @@
             <div class="plan-chips"><span class="plan-chip">150 analyses / mo</span><span class="plan-chip ghost">$0.10 / analysis</span></div>
             <dl class="plan-spec">
               <div><dt>Max file size</dt><dd>250 MB</dd></div>
-              <div><dt>Forensic layers</dt><dd>5 of 5</dd></div>
+              <div><dt>Forensic workflow</dt><dd>Full available</dd></div>
               <div><dt>Full report + JSON</dt><dd class="yes">Included</dd></div>
               <div><dt>PDF export</dt><dd class="yes">Included</dd></div>
             </dl>
@@ -498,7 +567,7 @@
             <div class="plan-chips"><span class="plan-chip">600 analyses / mo</span><span class="plan-chip ghost">$0.07 / analysis</span></div>
             <dl class="plan-spec">
               <div><dt>Max file size</dt><dd>500 MB</dd></div>
-              <div><dt>Forensic layers</dt><dd>5 of 5</dd></div>
+              <div><dt>Forensic workflow</dt><dd>Full available</dd></div>
               <div><dt>Full report + JSON</dt><dd class="yes">Included</dd></div>
               <div><dt>PDF export</dt><dd class="yes">Included</dd></div>
             </dl>
@@ -513,7 +582,7 @@
             <div class="plan-chips"><span class="plan-chip">2500 analyses / mo</span><span class="plan-chip ghost">$0.04 / analysis</span></div>
             <dl class="plan-spec">
               <div><dt>Max file size</dt><dd>500 MB</dd></div>
-              <div><dt>Forensic layers</dt><dd>5 of 5</dd></div>
+              <div><dt>Forensic workflow</dt><dd>Full available</dd></div>
               <div><dt>Full report + JSON</dt><dd class="yes">Included</dd></div>
               <div><dt>PDF export</dt><dd class="yes">Included</dd></div>
             </dl>
@@ -523,7 +592,7 @@
 
         <p class="price-foot">
           <span data-ppanel-note="ios">In-app purchases · manage or cancel anytime in the App Store.</span>
-          <span data-ppanel-note="web" hidden>Billed securely at <a href="https://web.verifyco.info/pricing" target="_blank" rel="noopener">web.verifyco.info</a> · credits &amp; subscriptions.</span>
+          <span data-ppanel-note="web" hidden>Billed securely at <a href="https://web.verifyco.info/pricing" target="_blank" rel="noopener">web.verifyco.info</a> · Starter renews weekly; other subscriptions renew monthly until cancelled.</span>
         </p>
       </div>
     </section>
@@ -564,7 +633,7 @@
     <div class="wrap">
       <div class="foot-grid">
         <div>
-          <a class="brand foot-brand" href="index.html">Verify<em>co</em></a>
+        <a class="brand foot-brand" href="/">Verify<em>co</em></a>
           <p class="foot-tag" data-i18n="footer.tag">On-device forensic verification for photos and videos. Designed and built with care.</p>
           <p class="mono-note foot-dom">VERIFYCO.INFO</p>
         </div>
@@ -573,8 +642,8 @@
           <ul>
             <li><a href="#how" data-i18n="nav.signals">How it works</a></li>
             <li><a href="#app" data-i18n="footer.features">Features</a></li>
-            <li><a href="deepdetect-plus.html" data-i18n="footer.dd">DeepDetect+</a></li>
-            <li><a href="vera.html">Vera <span class="pill-preview"><i></i>Preview</span></a></li>
+            <li><a href="/deepdetect-plus" data-i18n="footer.dd">DeepDetect+</a></li>
+            <li><a href="/vera">Vera <span class="pill-preview"><i></i>Preview</span></a></li>
             <li><a href="/blog" data-i18n="nav.blog">Blog</a></li>
             <li><a href="#pricing" data-i18n="footer.pricing">Pricing</a></li>
           </ul>
@@ -582,28 +651,28 @@
         <div class="foot-col">
           <h4 data-i18n="footer.legal">Legal</h4>
           <ul>
-            <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
-            <li><a href="terms.html" data-i18n="footer.terms">Terms of Use</a></li>
-            <li><a href="terms.html" data-i18n="footer.eula">EULA</a></li>
+            <li><a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></li>
+            <li><a href="/terms" data-i18n="footer.terms">Terms of Use</a></li>
+            <li><a href="/terms" data-i18n="footer.eula">EULA</a></li>
             <li><a href="/sitemap">Sitemap</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h4 data-i18n="footer.company">Company</h4>
           <ul>
-            <li><a href="support.html" data-i18n="footer.support">Support</a></li>
+            <li><a href="/support" data-i18n="footer.support">Support</a></li>
             <li><a href="mailto:support@verifyco.info">support@verifyco.info</a></li>
           </ul>
         </div>
       </div>
       <div class="foot-bot">
         <span data-i18n="footer.copy">© 2026 Verifyco · All rights reserved</span>
-        <span>ON-DEVICE · 0 UPLOADS · EST. 2026</span>
+        <span>iOS · ON-DEVICE · 0 UPLOADS · EST. 2026</span>
       </div>
     </div>
   </footer>
 
-  <script src="assets/i18n.js" defer></script>
-  <script src="assets/site.js?v=7" defer></script>
+  <script src="assets/i18n.js?v=8" defer></script>
+  <script src="assets/site.js?v=8" defer></script>
 </body>
 </html>

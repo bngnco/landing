@@ -1,9 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
   "trailingSlash": false,
-  "buildCommand": "node scripts/build-blog.mjs",
-  "outputDirectory": ".",
+  "buildCommand": "node scripts/build-deploy.mjs",
+  "outputDirectory": "dist",
   "redirects": [
     {
       "source": "/:path*",
@@ -12,9 +11,52 @@
       ],
       "destination": "https://verifyco.info/:path*",
       "permanent": true
-    }
+    },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/vera.html", "destination": "/vera", "permanent": true },
+    { "source": "/deepdetect-plus.html", "destination": "/deepdetect-plus", "permanent": true },
+    { "source": "/support.html", "destination": "/support", "permanent": true },
+    { "source": "/privacy.html", "destination": "/privacy", "permanent": true },
+    { "source": "/terms.html", "destination": "/terms", "permanent": true },
+    { "source": "/sitemap.html", "destination": "/sitemap", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/vera", "destination": "/vera.html" },
+    { "source": "/deepdetect-plus", "destination": "/deepdetect-plus.html" },
+    { "source": "/support", "destination": "/support.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/sitemap", "destination": "/sitemap.html" }
   ],
   "headers": [
+    {
+      "source": "/admin/:path*",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "frame-ancestors 'none'" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
+    {
+      "source": "/assets/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=2592000" }
+      ]
+    },
+    {
+      "source": "/uploads/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, immutable" }
+      ]
+    },
     {
       "source": "/sitemap.xml",
       "headers": [

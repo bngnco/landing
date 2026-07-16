@@ -171,7 +171,9 @@ ul, ol { margin: 0; }
 .bnav {
   position: fixed;
   inset: 0 0 auto 0;
-  z-index: 500;
+  /* Keep the close control above the full-screen menu. A child z-index cannot
+     escape the nav's stacking context, so the parent must sit above .bmenu. */
+  z-index: 700;
   height: var(--nav-h);
   display: flex;
   align-items: center;
@@ -181,6 +183,15 @@ ul, ol { margin: 0; }
 .bnav.is-solid {
   background: var(--bg);
   border-bottom-color: var(--line);
+}
+body.bmenu-open { overflow: hidden; }
+body.bmenu-open .bnav {
+  background: var(--bg);
+  border-bottom-color: var(--line);
+}
+body.bmenu-open .bnav-right > :not(.bburger) {
+  visibility: hidden;
+  pointer-events: none;
 }
 /* NOTE: no width here — the shared .bwrap class provides the centered,
    margin-safe width. A width:100% would override it and pin the logo to
@@ -233,16 +244,32 @@ body.bmenu-open .bburger span:nth-child(3) { top: 19px; transform: rotate(-45deg
 .bmenu {
   position: fixed; inset: 0;
   z-index: 600;
+  min-height: 100vh;
+  height: 100dvh;
   background: var(--bg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 22px;
-  padding: 90px 32px 40px;
+  padding:
+    calc(var(--nav-h) + 24px)
+    max(24px, env(safe-area-inset-right))
+    max(32px, env(safe-area-inset-bottom))
+    max(24px, env(safe-area-inset-left));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   opacity: 0; visibility: hidden;
+  pointer-events: none;
   transition: opacity 320ms ease, visibility 320ms ease;
 }
-body.bmenu-open .bmenu { opacity: 1; visibility: visible; }
+body.bmenu-open .bmenu { opacity: 1; visibility: visible; pointer-events: auto; }
+.bmenu nav,
+.bmenu-lang,
+.bmenu > .btn {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
 .bmenu nav { display: grid; gap: 6px; }
 .bmenu nav a {
   font-size: clamp(28px, 7vw, 36px);
@@ -253,6 +280,13 @@ body.bmenu-open .bmenu { opacity: 1; visibility: visible; }
   border-bottom: 1px solid var(--line);
 }
 .bmenu .btn { margin-top: 16px; }
+
+@media (max-height: 640px) and (max-width: 1160px) {
+  .bmenu { gap: 14px; padding-top: calc(var(--nav-h) + 14px); padding-bottom: 24px; }
+  .bmenu nav a { padding: 8px 0; font-size: clamp(22px, 5.5vw, 30px); }
+  .bmenu .bmenu-lang { margin-top: 2px; padding-top: 10px; gap: 10px; }
+  .bmenu .btn { margin-top: 6px; }
+}
 
 /* ── Main ─────────────────────────────────────────────────────────── */
 .bmain { padding-top: var(--nav-h); min-height: 70vh; }
@@ -499,6 +533,7 @@ body.bmenu-open .bmenu { opacity: 1; visibility: visible; }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
   .card, .card-media img, .btn { transition: none; }
+  .bmenu, .bburger span { transition: none; }
 }
 
 /* ── Language switcher (blog i18n) ─────────────────────────────────── */

@@ -11,20 +11,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css?v=8" />
 </head>
 <body>
   <header class="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="nav__logo" aria-label="Verifyco">
+    <a href="/" class="nav__logo" aria-label="Verifyco">
         <span>Verify<em>co</em></span>
       </a>
       <nav class="nav__links">
-        <a href="index.html#signals" data-i18n="nav.signals">How it works</a>
-        <a href="index.html#showcase" data-i18n="nav.features">Features</a>
-        <a href="deepdetect-plus.html" data-i18n="nav.dd">DeepDetect+</a>
-        <a href="index.html#pricing" data-i18n="nav.pricing">Pricing</a>
-        <a href="support.html" data-i18n="nav.support">Support</a>
+      <a href="/#how" data-i18n="nav.signals">How it works</a>
+      <a href="/#app" data-i18n="nav.features">Features</a>
+      <a href="/deepdetect-plus" data-i18n="nav.dd">DeepDetect+</a>
+      <a href="/#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="/support" data-i18n="nav.support">Support</a>
       </nav>
       <div class="nav__right">
         <div class="lang">
@@ -35,7 +35,7 @@
           </button>
           <div class="lang__menu" data-lang-menu role="listbox"></div>
         </div>
-        <a class="btn btn--primary btn--sm" href="index.html#download" data-i18n="nav.download">Download</a>
+    <a class="btn btn--primary btn--sm" href="/#download" data-i18n="nav.download">Download</a>
       </div>
     </div>
   </header>
@@ -47,17 +47,16 @@
       <div class="footer__bottom" style="border:0;padding:0;">
         <span data-i18n="footer.copy">© 2026 Verifyco · All rights reserved</span>
         <span>
-          <a href="terms.html" style="color:var(--text-3);" data-i18n="footer.terms">Terms of Use</a> ·
-          <a href="support.html" style="color:var(--text-3);" data-i18n="footer.support">Support</a>
+      <a href="/terms" style="color:var(--text-3);" data-i18n="footer.terms">Terms of Use</a> ·
+      <a href="/support" style="color:var(--text-3);" data-i18n="footer.support">Support</a>
         </span>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="assets/i18n.js"></script>
+  <script src="assets/i18n.js?v=8"></script>
   <script src="assets/legal.js"></script>
-  <script src="assets/landing.js"></script>
+  <script src="assets/landing.js?v=8"></script>
   <script>
     (function () {
       function render() {

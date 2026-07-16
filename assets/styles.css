@@ -492,7 +492,25 @@ section { contain: layout style; }
 }
 
 @media (max-width: 880px) {
-  .nav__links { display: none; }
+  .nav__inner {
+    height: auto;
+    min-height: 64px;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    gap: 8px 14px;
+  }
+  .nav__links {
+    order: 3;
+    display: flex;
+    width: 100%;
+    gap: 22px;
+    padding: 9px 0 11px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-top: 1px solid var(--hairline);
+    scrollbar-width: none;
+  }
+  .nav__links::-webkit-scrollbar { display: none; }
 }
 
 /* Language switcher */
@@ -2365,6 +2383,42 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   .forensic__beam, .forensic__scan::before { animation: none; opacity: 0.5; }
+}
+
+/* 2026 performance baseline for legacy/static product and legal pages. */
+.nav,
+.nav.is-scrolled {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgba(10, 10, 10, .97);
+}
+
+@supports (content-visibility: auto) {
+  .section,
+  .doc,
+  footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 760px;
+  }
+}
+
+.is-offscreen,
+.is-offscreen *,
+.is-offscreen *::before,
+.is-offscreen *::after {
+  animation-play-state: paused !important;
+}
+
+@media (max-width: 760px) {
+  .ddx-orbit__core,
+  .forensic__beam,
+  .forensic__scan::before,
+  .tracker__pulse,
+  .signal__bar,
+  .hero__rings,
+  .hero__particle {
+    animation: none !important;
+  }
 }
 
 /* ============================================================

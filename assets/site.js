@@ -1,7 +1,4 @@
-/* ════════════════════════════════════════════════════════════
-   VERIFYCO — site.js (Fable redesign)
-   GSAP 3.13 + ScrollTrigger · i18n · hero · menus
-   ════════════════════════════════════════════════════════════ */
+/* Verifyco marketing site — dependency-free interaction layer. */
 (function () {
   "use strict";
 
@@ -9,45 +6,40 @@
   var RTL = { ar: true };
   var doc = document.documentElement;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var finePointer = window.matchMedia("(pointer: fine)").matches;
-  var hasGSAP = false;
-  var ambientTweens = [];
 
-  /* ── i18n ─────────────────────────────────────────────── */
   function detectLang() {
-    // 1) Honour an explicit choice the visitor made before.
     try {
       var saved = localStorage.getItem(LANG_KEY);
-      if (saved && window.VERIFYCO_I18N[saved]) return saved;
-    } catch (e) {}
-    // 2) Otherwise auto-select from the visitor's locale preferences,
-    //    walking the full ordered list the browser/region exposes.
-    var prefs = (navigator.languages && navigator.languages.length)
+      if (saved && window.VERIFYCO_I18N && window.VERIFYCO_I18N[saved]) return saved;
+    } catch (error) {}
+
+    var prefs = navigator.languages && navigator.languages.length
       ? navigator.languages
       : [navigator.language || "en"];
-    for (var i = 0; i < prefs.length; i++) {
+    for (var i = 0; i < prefs.length; i += 1) {
       var code = (prefs[i] || "").slice(0, 2).toLowerCase();
-      if (code && window.VERIFYCO_I18N[code]) return code;
+      if (code && window.VERIFYCO_I18N && window.VERIFYCO_I18N[code]) return code;
     }
     return "en";
   }
 
   function applyLang(code) {
-    if (!window.VERIFYCO_I18N) return;
+    if (!window.VERIFYCO_I18N || !window.VERIFYCO_TR) return;
     var lang = window.VERIFYCO_I18N[code] ? code : "en";
-    try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+    try { localStorage.setItem(LANG_KEY, lang); } catch (error) {}
+
     doc.lang = lang;
     doc.dir = RTL[lang] ? "rtl" : "ltr";
-
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      el.innerHTML = window.VERIFYCO_TR(lang, el.getAttribute("data-i18n"));
+    document.querySelectorAll("[data-i18n]").forEach(function (element) {
+      element.innerHTML = window.VERIFYCO_TR(lang, element.getAttribute("data-i18n"));
     });
 
-    var cur = document.querySelector("[data-lang-current]");
-    if (cur) cur.textContent = lang.toUpperCase();
-
-    document.querySelectorAll("[data-lang-option]").forEach(function (b) {
-      b.classList.toggle("on", b.getAttribute("data-lang-option") === lang);
+    var current = document.querySelector("[data-lang-current]");
+    if (current) current.textContent = lang.toUpperCase();
+    document.querySelectorAll("[data-lang-option]").forEach(function (button) {
+      var selected = button.getAttribute("data-lang-option") === lang;
+      button.classList.toggle("on", selected);
+      button.setAttribute("aria-selected", selected ? "true" : "false");
     });
   }
 
@@ -55,421 +47,329 @@
     if (!window.VERIFYCO_LANGS) return;
     var menu = document.querySelector("[data-lang-menu]");
     var cloud = document.querySelector("[data-lang-cloud]");
-    var mob = document.querySelector("[data-mmenu-langs]");
+    var mobile = document.querySelector("[data-mmenu-langs]");
 
-    window.VERIFYCO_LANGS.forEach(function (l) {
+    window.VERIFYCO_LANGS.forEach(function (language) {
+      function choose() {
+        applyLang(language.code);
+        var wrap = document.querySelector("[data-lang]");
+        if (wrap) wrap.classList.remove("open");
+      }
+
       if (menu) {
-        var b = document.createElement("button");
-        b.type = "button";
-        b.setAttribute("data-lang-option", l.code);
-        b.setAttribute("role", "option");
-        b.innerHTML = "<span>" + l.native + "</span><span class=\"cd\">" + l.code + "</span>";
-        b.addEventListener("click", function () {
-          applyLang(l.code);
-          document.querySelector("[data-lang]").classList.remove("open");
-        });
-        menu.appendChild(b);
+        var option = document.createElement("button");
+        option.type = "button";
+        option.setAttribute("data-lang-option", language.code);
+        option.setAttribute("role", "option");
+        option.innerHTML = "<span>" + language.native + "</span><span class=\"cd\">" + language.code + "</span>";
+        option.addEventListener("click", choose);
+        menu.appendChild(option);
       }
       if (cloud) {
-        var c = document.createElement("button");
-        c.type = "button";
-        c.setAttribute("data-lang-option", l.code);
-        c.textContent = l.native;
-        c.addEventListener("click", function () { applyLang(l.code); });
-        cloud.appendChild(c);
+        var cloudOption = document.createElement("button");
+        cloudOption.type = "button";
+        cloudOption.setAttribute("data-lang-option", language.code);
+        cloudOption.textContent = language.native;
+        cloudOption.addEventListener("click", choose);
+        cloud.appendChild(cloudOption);
       }
-      if (mob) {
-        var m = document.createElement("button");
-        m.type = "button";
-        m.setAttribute("data-lang-option", l.code);
-        m.textContent = l.code.toUpperCase();
-        m.addEventListener("click", function () { applyLang(l.code); });
-        mob.appendChild(m);
+      if (mobile) {
+        var mobileOption = document.createElement("button");
+        mobileOption.type = "button";
+        mobileOption.setAttribute("data-lang-option", language.code);
+        mobileOption.textContent = language.code.toUpperCase();
+        mobileOption.addEventListener("click", choose);
+        mobile.appendChild(mobileOption);
       }
     });
 
     var wrap = document.querySelector("[data-lang]");
-    if (wrap) {
-      var btn = wrap.querySelector(".lang-btn");
-      var sync = function () {
-        btn.setAttribute("aria-expanded", wrap.classList.contains("open") ? "true" : "false");
-      };
-      sync();
-      btn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        wrap.classList.toggle("open");
-        sync();
-      });
-      document.addEventListener("click", function (e) {
-        if (!wrap.contains(e.target)) { wrap.classList.remove("open"); sync(); }
-      });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && wrap.classList.contains("open")) {
-          wrap.classList.remove("open"); sync(); btn.focus();
-        }
-      });
+    if (!wrap) return;
+    var trigger = wrap.querySelector(".lang-btn");
+    function setOpen(open) {
+      wrap.classList.toggle("open", open);
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
     }
-  }
-
-  /* ── Word splitter (keeps .hl spans) ──────────────────── */
-  function splitWords(el) {
-    var inners = [];
-    function process(node, hl) {
-      var out = document.createDocumentFragment();
-      Array.prototype.slice.call(node.childNodes).forEach(function (child) {
-        if (child.nodeType === 3) {
-          child.textContent.split(/(\s+)/).forEach(function (part) {
-            if (!part) return;
-            if (/^\s+$/.test(part)) { out.appendChild(document.createTextNode(" ")); return; }
-            var w = document.createElement("span");
-            w.className = "w";
-            var wi = document.createElement("span");
-            wi.className = "wi" + (hl ? " hl" : "");
-            wi.textContent = part;
-            w.appendChild(wi);
-            out.appendChild(w);
-            inners.push(wi);
-          });
-        } else if (child.nodeType === 1) {
-          out.appendChild(process(child, child.classList.contains("hl") || hl));
-        }
-      });
-      return out;
-    }
-    var frag = process(el, false);
-    el.innerHTML = "";
-    el.appendChild(frag);
-    return inners;
-  }
-
-  /* ── Hero entrance ────────────────────────────────────── */
-  function heroIn() {
-    if (!hasGSAP) { doc.classList.add("no-anim"); return; }
-
-    // Respect reduced-motion: present the hero instantly, no entrance tween.
-    // (CSS reveals these elements for the reduced-motion case.)
-    if (reduceMotion) { doc.classList.add("hero-ready"); return; }
-
-    doc.classList.add("hero-ready");
-
-    var title = document.querySelector("[data-hero-title]");
-    var words = title ? splitWords(title) : [];
-
-    var tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-    tl.from("#nav", { y: -28, opacity: 0, duration: 0.7 }, 0);
-    if (words.length) {
-      tl.to(words, { y: 0, duration: 0.95, stagger: 0.07, ease: "power4.out" }, 0.08);
-    }
-    tl.fromTo("[data-hero-el]",
-      { opacity: 0, y: 26 },
-      { opacity: 1, y: 0, duration: 0.8, stagger: 0.1 }, 0.3)
-      .fromTo("[data-hero-ph]",
-        { opacity: 0, y: 90, rotateY: -22, rotateZ: -4 },
-        { opacity: 1, y: 0, rotateY: -8, rotateZ: -1.6, duration: 1.25, ease: "power4.out" }, 0.35)
-      .fromTo("[data-chip]",
-        { opacity: 0, scale: 0.7, y: 14 },
-        { opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(2)", stagger: 0.14 }, 0.95)
-      .fromTo(".scroll-cue", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1.4);
-
-    // looping scanline on the hero phone — animate transform (composited),
-    // not `top`, which would relayout/repaint the clipped phone every frame.
-    if (!reduceMotion) {
-      ambientTweens.push(gsap.fromTo("[data-scan]",
-        { yPercent: 0 },
-        {
-          yPercent: 515,
-          duration: 2.6,
-          ease: "none",
-          repeat: -1,
-          repeatDelay: 2.0,
-          delay: 1.6
-        }));
-      // slow float
-      ambientTweens.push(gsap.to("[data-hero-ph]", {
-        y: -12,
-        duration: 3.6,
-        yoyo: true,
-        repeat: -1,
-        ease: "sine.inOut",
-        delay: 2.0
-      }));
-    }
-  }
-
-  /* ── Pause ambient work outside the viewport ─────────── */
-  function ambientVisibility() {
-    var hero = document.querySelector(".hero");
-    var engine = document.querySelector(".dd-core");
-    var roots = [hero, document.querySelector(".mq"), engine && engine.closest("section")].filter(Boolean);
-    if (!roots.length) return;
-
-    var inView = new Map();
-    function setPaused(root, paused) {
-      root.classList.toggle("is-ambient-paused", paused);
-      if (root === hero) {
-        ambientTweens.forEach(function (tween) { paused ? tween.pause() : tween.resume(); });
-      }
-      root.querySelectorAll("svg").forEach(function (svg) {
-        try {
-          if (paused && svg.pauseAnimations) svg.pauseAnimations();
-          else if (!paused && svg.unpauseAnimations) svg.unpauseAnimations();
-        } catch (e) {}
-      });
-    }
-    function sync(root) { setPaused(root, reduceMotion || document.hidden || !inView.get(root)); }
-
-    roots.forEach(function (root) { inView.set(root, false); setPaused(root, true); });
-    if (!reduceMotion && "IntersectionObserver" in window) {
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          inView.set(entry.target, entry.isIntersecting);
-          sync(entry.target);
-        });
-      }, { rootMargin: "160px 0px", threshold: 0 });
-      roots.forEach(function (root) { observer.observe(root); });
-    }
-    document.addEventListener("visibilitychange", function () {
-      roots.forEach(sync);
+    setOpen(false);
+    trigger.addEventListener("click", function (event) {
+      event.stopPropagation();
+      setOpen(!wrap.classList.contains("open"));
     });
-  }
-
-  /* ── Scroll effects ───────────────────────────────────── */
-  function scrollFX() {
-    if (!hasGSAP || !window.ScrollTrigger) { doc.classList.add("no-anim"); return; }
-    gsap.registerPlugin(ScrollTrigger);
-
-    // reveals
-    gsap.utils.toArray("[data-rv]").forEach(function (el) {
-      gsap.fromTo(el,
-        { opacity: 0, y: 28 },
-        {
-          opacity: 1, y: 0,
-          duration: 0.95,
-          ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 88%", once: true },
-          onStart: function () {
-            if (el.classList.contains("sig-row")) el.classList.add("lit");
-          }
-        });
+    document.addEventListener("click", function (event) {
+      if (!wrap.contains(event.target)) setOpen(false);
     });
-
-    // parallax phones (desktop only)
-    if (window.matchMedia("(min-width: 861px)").matches && !reduceMotion) {
-      gsap.utils.toArray("[data-speed]").forEach(function (el) {
-        var sp = parseFloat(el.getAttribute("data-speed")) || 0;
-        gsap.to(el, {
-          y: sp * 420,
-          ease: "none",
-          scrollTrigger: {
-            trigger: el.closest(".sec") || el,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.8
-          }
-        });
-      });
-
-      // hero phone gentle parallax out
-      gsap.to(".hero-stage", {
-        y: 70,
-        ease: "none",
-        scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 0.8 }
-      });
-    }
-
-    // nav solid state
-    ScrollTrigger.create({
-      start: 8,
-      onUpdate: function (self) {
-        document.getElementById("nav").classList.toggle("is-solid", self.scroll() > 8);
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && wrap.classList.contains("open")) {
+        setOpen(false);
+        trigger.focus();
       }
     });
-    document.getElementById("nav").classList.toggle("is-solid", window.scrollY > 8);
-
-    // stat scramble
-    var GLYPHS = "0123456789ABCDEF·-";
-    gsap.utils.toArray("[data-scramble]").forEach(function (el) {
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top 90%",
-        once: true,
-        onEnter: function () {
-          var final = el.textContent;
-          var t = { p: 0 };
-          gsap.to(t, {
-            p: 1,
-            duration: 1.1,
-            ease: "power2.out",
-            onUpdate: function () {
-              var n = Math.floor(final.length * t.p);
-              var s = final.slice(0, n);
-              for (var i = n; i < final.length; i++) {
-                s += final[i] === " " ? " " : GLYPHS[(Math.random() * GLYPHS.length) | 0];
-              }
-              el.textContent = s;
-            },
-            onComplete: function () { el.textContent = final; }
-          });
-        }
-      });
-    });
-
-    // refresh once images settle
-    window.addEventListener("load", function () { ScrollTrigger.refresh(); });
   }
 
-  function anchors() {
-    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-      a.addEventListener("click", function (e) {
-        var id = a.getAttribute("href");
-        if (id.length < 2) return;
+  var burger;
+  var mobileMenu;
+  var menuReturnFocus;
+
+  function setMobileMenu(open) {
+    if (!burger || !mobileMenu) return;
+    document.body.classList.toggle("menu-open", open);
+    document.body.style.overflow = open ? "hidden" : "";
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+
+    mobileMenu.querySelectorAll(".mlink").forEach(function (link, index) {
+      link.style.opacity = open ? "1" : "";
+      link.style.transform = open ? "none" : "";
+      link.style.transitionDelay = open ? (80 + index * 35) + "ms" : "0ms";
+    });
+    var foot = mobileMenu.querySelector(".mmenu-foot");
+    if (foot) {
+      foot.style.opacity = open ? "1" : "";
+      foot.style.transitionDelay = open ? "220ms" : "0ms";
+    }
+
+    if (open) {
+      menuReturnFocus = document.activeElement;
+      var first = mobileMenu.querySelector("a, button");
+      if (first) requestAnimationFrame(function () { first.focus(); });
+    } else if (menuReturnFocus && menuReturnFocus.focus) {
+      menuReturnFocus.focus();
+      menuReturnFocus = null;
+    }
+  }
+
+  function setupMobileMenu() {
+    burger = document.querySelector("[data-burger]");
+    mobileMenu = document.querySelector("[data-mmenu]");
+    if (!burger || !mobileMenu) return;
+
+    burger.setAttribute("aria-controls", "mobile-menu");
+    mobileMenu.id = "mobile-menu";
+    setMobileMenu(false);
+    burger.addEventListener("click", function () {
+      setMobileMenu(!document.body.classList.contains("menu-open"));
+    });
+    mobileMenu.addEventListener("click", function (event) {
+      if (event.target.closest("a") || event.target === mobileMenu) setMobileMenu(false);
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && document.body.classList.contains("menu-open")) setMobileMenu(false);
+      if (event.key !== "Tab" || !document.body.classList.contains("menu-open")) return;
+      var focusable = Array.prototype.slice.call(mobileMenu.querySelectorAll("a[href], button:not([disabled])"));
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    });
+  }
+
+  function setupAnchors() {
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      anchor.addEventListener("click", function (event) {
+        var id = anchor.getAttribute("href");
+        if (!id || id.length < 2) return;
         var target = document.querySelector(id);
         if (!target) return;
-        e.preventDefault();
-        closeMenu();
+        event.preventDefault();
+        setMobileMenu(false);
         var top = target.getBoundingClientRect().top + window.scrollY - 70;
         window.scrollTo({ top: top, behavior: reduceMotion ? "auto" : "smooth" });
+        if (history.replaceState) history.replaceState(null, "", id);
       });
     });
   }
 
-  /* ── Mobile menu ──────────────────────────────────────── */
-  var burgerEl;
-  function closeMenu() {
-    document.body.classList.remove("menu-open");
-    if (burgerEl) burgerEl.setAttribute("aria-expanded", "false");
+  function setupNavState() {
+    var nav = document.getElementById("nav");
+    if (!nav) return;
+    var scheduled = false;
+    function update() {
+      nav.classList.toggle("is-solid", window.scrollY > 8);
+      scheduled = false;
+    }
+    update();
+    window.addEventListener("scroll", function () {
+      if (!scheduled) {
+        scheduled = true;
+        requestAnimationFrame(update);
+      }
+    }, { passive: true });
   }
 
-  function mobileMenu() {
-    var burger = document.querySelector("[data-burger]");
-    var menu = document.querySelector("[data-mmenu]");
-    if (!burger || !menu) return;
-    burgerEl = burger;
+  function setupReveals() {
+    var elements = Array.prototype.slice.call(document.querySelectorAll("[data-rv]"));
+    if (!elements.length) return;
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      elements.forEach(function (element) {
+        element.classList.add("is-visible");
+        if (element.classList.contains("sig-row")) element.classList.add("lit");
+      });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        if (entry.target.classList.contains("sig-row")) entry.target.classList.add("lit");
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -7% 0px", threshold: 0.04 });
+    elements.forEach(function (element) { observer.observe(element); });
+  }
 
-    burger.addEventListener("click", function () {
-      var opening = !document.body.classList.contains("menu-open");
-      document.body.classList.toggle("menu-open");
-      burger.setAttribute("aria-expanded", opening ? "true" : "false");
-      if (opening && hasGSAP) {
-        gsap.fromTo(".mmenu .mlink",
-          { opacity: 0, y: 22 },
-          { opacity: 1, y: 0, duration: 0.55, stagger: 0.06, ease: "power3.out", delay: 0.12 });
-        gsap.fromTo(".mmenu-foot",
-          { opacity: 0 },
-          { opacity: 1, duration: 0.5, delay: 0.42 });
-      } else if (opening) {
-        menu.querySelectorAll(".mlink").forEach(function (l) { l.style.opacity = 1; l.style.transform = "none"; });
-        menu.querySelector(".mmenu-foot").style.opacity = 1;
+  function setupActiveNav() {
+    if (!("IntersectionObserver" in window)) return;
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+    var items = links.map(function (link) {
+      return { link: link, section: document.querySelector(link.getAttribute("href")) };
+    }).filter(function (item) { return item.section; });
+    if (!items.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        items.forEach(function (item) {
+          item.link.classList.toggle("is-here", item.section === entry.target);
+        });
+      });
+    }, { rootMargin: "-42% 0px -52% 0px", threshold: 0 });
+    items.forEach(function (item) { observer.observe(item.section); });
+  }
+
+  function setupPricing() {
+    var switcher = document.querySelector("[data-price-switch]");
+    if (!switcher) return;
+    var buttons = Array.prototype.slice.call(switcher.querySelectorAll(".ps-btn"));
+    var glider = switcher.querySelector(".ps-glider");
+
+    buttons.forEach(function (button) {
+      var tab = button.getAttribute("data-ptab");
+      button.id = "pricing-tab-" + tab;
+      button.setAttribute("aria-controls", "pricing-panel-" + tab);
+      var panel = document.querySelector('[data-ppanel="' + tab + '"]');
+      if (panel) {
+        panel.id = "pricing-panel-" + tab;
+        panel.setAttribute("role", "tabpanel");
+        panel.setAttribute("aria-labelledby", button.id);
       }
     });
 
-    // Close on: a link, the ✕ button, a tap on the empty backdrop, or Escape.
-    menu.addEventListener("click", function (e) {
-      if (e.target.closest("a") || e.target.closest("[data-mclose]") || e.target === menu || e.target.tagName === "NAV") closeMenu();
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && document.body.classList.contains("menu-open")) closeMenu();
-    });
-  }
-
-  /* ── Active section → nav link ────────────────────────── */
-  function activeNav() {
-    if (!("IntersectionObserver" in window)) return;
-    var links = Array.prototype.slice.call(
-      document.querySelectorAll('.nav-links a[href^="#"]')
-    );
-    var map = [];
-    links.forEach(function (a) {
-      var sec = document.querySelector(a.getAttribute("href"));
-      if (sec) map.push({ a: a, sec: sec });
-    });
-    if (!map.length) return;
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        for (var i = 0; i < map.length; i++) {
-          map[i].a.classList.toggle("is-here", map[i].sec === en.target);
-        }
-      });
-    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
-
-    map.forEach(function (m) { io.observe(m.sec); });
-  }
-
-  /* ── Magnetic buttons ─────────────────────────────────── */
-  function magnets() {
-    if (!finePointer || reduceMotion || !hasGSAP) return;
-    document.querySelectorAll("[data-magnet]").forEach(function (el) {
-      var xTo = gsap.quickTo(el, "x", { duration: 0.4, ease: "power3.out" });
-      var yTo = gsap.quickTo(el, "y", { duration: 0.4, ease: "power3.out" });
-      // Measure once on enter, not on every move: reading layout mid-move
-      // (interleaved with GSAP's transform writes) forces a sync reflow each
-      // frame — the stutter you feel on the header buttons.
-      var r = null;
-      el.addEventListener("pointerenter", function () { r = el.getBoundingClientRect(); });
-      el.addEventListener("pointermove", function (e) {
-        if (!r) r = el.getBoundingClientRect();
-        xTo((e.clientX - r.left - r.width / 2) * 0.18);
-        yTo((e.clientY - r.top - r.height / 2) * 0.3);
-      });
-      el.addEventListener("pointerleave", function () { r = null; xTo(0); yTo(0); });
-    });
-  }
-
-  /* ── Pricing platform switch (iPhone ⇄ Web) ───────────── */
-  function pricingTabs() {
-    var sw = document.querySelector("[data-price-switch]");
-    if (!sw) return;
-    var btns = Array.prototype.slice.call(sw.querySelectorAll(".ps-btn"));
-    var glider = sw.querySelector(".ps-glider");
-    function move(btn) {
-      if (glider) { glider.style.width = btn.offsetWidth + "px"; glider.style.transform = "translateX(" + btn.offsetLeft + "px)"; }
+    function move(button) {
+      if (!glider || !button) return;
+      glider.style.width = button.offsetWidth + "px";
+      glider.style.transform = "translateX(" + button.offsetLeft + "px)";
     }
     function select(tab) {
-      btns.forEach(function (b) {
-        var on = b.getAttribute("data-ptab") === tab;
-        b.classList.toggle("is-on", on);
-        b.setAttribute("aria-selected", on ? "true" : "false");
-        if (on) move(b);
+      var selected;
+      buttons.forEach(function (button) {
+        var on = button.getAttribute("data-ptab") === tab;
+        button.classList.toggle("is-on", on);
+        button.setAttribute("aria-selected", on ? "true" : "false");
+        button.tabIndex = on ? 0 : -1;
+        if (on) selected = button;
       });
-      document.querySelectorAll("[data-ppanel]").forEach(function (p) {
-        p.hidden = p.getAttribute("data-ppanel") !== tab;
+      document.querySelectorAll("[data-ppanel]").forEach(function (panel) {
+        panel.hidden = panel.getAttribute("data-ppanel") !== tab;
       });
-      document.querySelectorAll("[data-ppanel-note]").forEach(function (n) {
-        n.hidden = n.getAttribute("data-ppanel-note") !== tab;
+      document.querySelectorAll("[data-ppanel-note]").forEach(function (note) {
+        note.hidden = note.getAttribute("data-ppanel-note") !== tab;
       });
+      requestAnimationFrame(function () { move(selected); });
     }
-    btns.forEach(function (b) { b.addEventListener("click", function () { select(b.getAttribute("data-ptab")); }); });
-    // Position the glider under the initial tab (and keep it correct on resize).
-    var initial = sw.querySelector(".ps-btn.is-on") || btns[0];
-    requestAnimationFrame(function () { move(initial); });
-    window.addEventListener("resize", function () { var on = sw.querySelector(".ps-btn.is-on"); if (on) move(on); }, { passive: true });
+    buttons.forEach(function (button, index) {
+      button.addEventListener("click", function () { select(button.getAttribute("data-ptab")); });
+      button.addEventListener("keydown", function (event) {
+        var nextIndex = null;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % buttons.length;
+        if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + buttons.length) % buttons.length;
+        if (event.key === "Home") nextIndex = 0;
+        if (event.key === "End") nextIndex = buttons.length - 1;
+        if (nextIndex === null) return;
+        event.preventDefault();
+        select(buttons[nextIndex].getAttribute("data-ptab"));
+        buttons[nextIndex].focus();
+      });
+    });
+    select((switcher.querySelector(".ps-btn.is-on") || buttons[0]).getAttribute("data-ptab"));
+    var resizeFrame;
+    window.addEventListener("resize", function () {
+      cancelAnimationFrame(resizeFrame);
+      resizeFrame = requestAnimationFrame(function () { move(switcher.querySelector(".ps-btn.is-on")); });
+    }, { passive: true });
   }
 
-  /* ── Boot ─────────────────────────────────────────────── */
-  function boot() {
-    hasGSAP = typeof window.gsap !== "undefined";
+  function setupScreenViewer() {
+    var dialog = document.querySelector("[data-screen-dialog]");
+    if (!dialog) return;
+    var image = dialog.querySelector("[data-screen-image]");
+    var caption = dialog.querySelector("[data-screen-caption]");
+    var close = dialog.querySelector("[data-screen-close]");
+    var returnFocus;
 
+    document.querySelectorAll("[data-screen-src]").forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        image.src = trigger.getAttribute("data-screen-src");
+        image.alt = trigger.getAttribute("data-screen-title") || "Verifyco interface preview";
+        caption.textContent = trigger.getAttribute("data-screen-title") || "Verifyco interface";
+        returnFocus = trigger;
+        if (dialog.showModal) dialog.showModal();
+        else dialog.setAttribute("open", "");
+      });
+    });
+    function closeDialog() {
+      if (dialog.close) dialog.close();
+      else dialog.removeAttribute("open");
+      if (returnFocus) returnFocus.focus();
+    }
+    close.addEventListener("click", closeDialog);
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) closeDialog();
+    });
+  }
+
+  function setupAmbientWork() {
+    var roots = Array.prototype.slice.call(document.querySelectorAll(".hero, .mq, [data-dd-visual], .vera-teaser"));
+    if (!("IntersectionObserver" in window)) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.classList.toggle("is-ambient-paused", !entry.isIntersecting || document.hidden);
+        if (entry.isIntersecting && entry.target.hasAttribute("data-dd-visual")) {
+          entry.target.classList.add("is-active");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "140px 0px", threshold: 0 });
+    roots.forEach(function (root) { observer.observe(root); });
+    document.addEventListener("visibilitychange", function () {
+      roots.forEach(function (root) { root.classList.toggle("is-ambient-paused", document.hidden); });
+    });
+  }
+
+  function startHero() {
+    var hero = document.querySelector(".hero");
+    if (hero) requestAnimationFrame(function () { hero.classList.add("hero-ready"); });
+    var ufo = document.querySelector("[data-ufo]");
+    if (!ufo || reduceMotion) return;
+    var launch = function () { ufo.classList.add("is-flying"); };
+    if ("requestIdleCallback" in window) requestIdleCallback(launch, { timeout: 1300 });
+    else window.setTimeout(launch, 700);
+  }
+
+  function boot() {
     buildLangUIs();
     applyLang(detectLang());
-    mobileMenu();
-    anchors();
-    scrollFX();
-    magnets();
-    activeNav();
-    pricingTabs();
-
-    // No splash — the page is interactive immediately; the hero simply
-    // animates in on load.
-    heroIn();
-    ambientVisibility();
+    setupMobileMenu();
+    setupAnchors();
+    setupNavState();
+    setupReveals();
+    setupActiveNav();
+    setupPricing();
+    setupScreenViewer();
+    setupAmbientWork();
+    startHero();
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot);
-  } else {
-    boot();
-  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
 })();
