@@ -1,6 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": false,
+  "cleanUrls": false,
   "buildCommand": "node scripts/build-deploy.mjs",
   "outputDirectory": "dist",
   "redirects": [
@@ -12,6 +13,12 @@
       "destination": "https://verifyco.info/:path*",
       "permanent": true
     },
+    { "source": "/blog/index.html", "destination": "/blog", "permanent": true },
+    { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog/index.html", "destination": "/:lang/blog", "permanent": true },
+    { "source": "/blog/tag/:slug([a-z0-9-]+).html", "destination": "/blog/tag/:slug", "permanent": true },
+    { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog/tag/:slug([a-z0-9-]+).html", "destination": "/:lang/blog/tag/:slug", "permanent": true },
+    { "source": "/blog/:slug([a-z0-9-]+).html", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog/:slug([a-z0-9-]+).html", "destination": "/:lang/blog/:slug", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/vera.html", "destination": "/vera", "permanent": true },
     { "source": "/deepdetect-plus.html", "destination": "/deepdetect-plus", "permanent": true },
@@ -21,6 +28,12 @@
     { "source": "/sitemap.html", "destination": "/sitemap", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog", "destination": "/:lang/blog/index.html" },
+    { "source": "/blog/tag/:slug([a-z0-9-]+)", "destination": "/blog/tag/:slug.html" },
+    { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog/tag/:slug([a-z0-9-]+)", "destination": "/:lang/blog/tag/:slug.html" },
+    { "source": "/blog/:slug([a-z0-9-]+)", "destination": "/blog/:slug.html" },
+    { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog/:slug([a-z0-9-]+)", "destination": "/:lang/blog/:slug.html" },
     { "source": "/vera", "destination": "/vera.html" },
     { "source": "/deepdetect-plus", "destination": "/deepdetect-plus.html" },
     { "source": "/support", "destination": "/support.html" },

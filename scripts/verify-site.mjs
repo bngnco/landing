@@ -229,6 +229,39 @@ check(
 );
 
 const vercel = JSON.parse(read("vercel.json"));
+// Keep cleanUrls disabled so Google's ownership verification file remains a
+// direct 200 at its exact .html URL. Blog clean URLs are mapped explicitly,
+// which avoids coupling search canonical URLs to that global Vercel switch.
+check(vercel.cleanUrls !== true, "vercel cleanUrls must remain disabled for the Google HTML verification file");
+
+const hasRoute = (routes, source, destination) =>
+  (routes || []).some((route) => route.source === source && route.destination === destination);
+
+const requiredBlogRewrites = [
+  ["/blog", "/blog/index.html"],
+  ["/:lang(tr|es|de|fr|it|pt|ar)/blog", "/:lang/blog/index.html"],
+  ["/blog/tag/:slug([a-z0-9-]+)", "/blog/tag/:slug.html"],
+  ["/:lang(tr|es|de|fr|it|pt|ar)/blog/tag/:slug([a-z0-9-]+)", "/:lang/blog/tag/:slug.html"],
+  ["/blog/:slug([a-z0-9-]+)", "/blog/:slug.html"],
+  ["/:lang(tr|es|de|fr|it|pt|ar)/blog/:slug([a-z0-9-]+)", "/:lang/blog/:slug.html"],
+];
+for (const [source, destination] of requiredBlogRewrites) {
+  check(hasRoute(vercel.rewrites, source, destination), `vercel.json is missing blog rewrite ${source} -> ${destination}`);
+}
+
+const requiredBlogRedirects = [
+  ["/blog/index.html", "/blog"],
+  ["/:lang(tr|es|de|fr|it|pt|ar)/blog/index.html", "/:lang/blog"],
+  ["/blog/tag/:slug([a-z0-9-]+).html", "/blog/tag/:slug"],
+  ["/:lang(tr|es|de|fr|it|pt|ar)/blog/tag/:slug([a-z0-9-]+).html", "/:lang/blog/tag/:slug"],
+  ["/blog/:slug([a-z0-9-]+).html", "/blog/:slug"],
+  ["/:lang(tr|es|de|fr|it|pt|ar)/blog/:slug([a-z0-9-]+).html", "/:lang/blog/:slug"],
+];
+for (const [source, destination] of requiredBlogRedirects) {
+  const route = (vercel.redirects || []).find((candidate) => candidate.source === source);
+  check(route?.destination === destination && route?.permanent === true, `vercel.json is missing permanent blog redirect ${source} -> ${destination}`);
+}
+
 const canonicalRedirect = (vercel.redirects || []).some(
   (redirect) =>
     redirect.source === "/:path*" &&
