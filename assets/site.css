@@ -319,23 +319,34 @@ body.menu-open .burger span:nth-child(3) { top: 20px; transform: rotate(-45deg);
 .mmenu {
   position: fixed; inset: 0;
   z-index: 600;
-  background: rgba(6, 5, 4, 0.985);
+  /* Fully opaque: any page bleed-through behind the big links reads as mess. */
+  background: #060504;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 90px 34px 44px;
+  /* Start below the fixed header (the nav stays visible above the overlay)
+     and scroll internally when links + language pills exceed the viewport.
+     `justify-content: center` overflowed equally top AND bottom, pushing the
+     first links up underneath the brand. The auto-margins on nav/foot below
+     re-center the group only when there is room. */
+  justify-content: flex-start;
+  padding: calc(var(--nav-h) + 18px) 34px 40px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
   visibility: hidden;
   transition: opacity 360ms ease, visibility 360ms ease;
 }
+.mmenu > nav { margin-top: auto; }
+.mmenu .mmenu-foot { margin-bottom: auto; }
 body.menu-open .mmenu { opacity: 1; visibility: visible; }
 .mmenu a.mlink {
   display: block;
-  font-size: clamp(30px, 7.5vw, 40px);
+  font-size: clamp(24px, 6.4vw, 38px);
   font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--ink);
-  padding: 13px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--line);
   opacity: 0;
   transform: translateY(22px);
@@ -1525,8 +1536,23 @@ html.js .hero:not(.hero-ready) [data-hero-ph] { transform: translateY(34px) rota
   .vera-mini-foot { gap: 10px; align-items: flex-start; }
 }
 
+/* Narrow phones (≤360px CSS — very common): keep the tidy 2×2 grid and make
+   the cards more compact instead of collapsing into four stacked slabs. */
 @media (max-width: 360px) {
-  .platform-primary { grid-template-columns: 1fr; }
+  .platform-primary { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .platform-card,
+  .platform-card.appstore,
+  .platform-card.webapp { min-height: 56px; padding: 9px 10px; grid-template-columns: 28px minmax(0, 1fr); gap: 8px; }
+  .platform-card--android,
+  .platform-card--android.androidsoon { min-height: 56px; padding: 9px 10px; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; }
+  .platform-go { display: none; }
+  .platform-icon, .platform-icon--android { width: 28px; height: 28px; border-radius: 8px; }
+  .platform-card .platform-icon svg,
+  .platform-card.appstore .platform-icon svg { width: 16px; height: 17px; }
+  .platform-icon--android .android-mark,
+  .platform-card .platform-icon--android .android-mark { width: 21px; }
+  .platform-copy strong { font-size: 12px; }
+  .platform-status { padding: 3px 5px; font-size: 6.5px; }
 }
 
 @media (hover: none) {

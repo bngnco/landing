@@ -42,7 +42,7 @@ body.vera .nav-links a:hover,
 body.vera .nav-links a.is-here { color: var(--vr-2); }
 body.vera .nav-links a::after { background: var(--vr); }
 body.vera .burger { border-color: var(--vr-line); }
-body.vera .mmenu { background: rgba(5, 7, 12, .992); }
+body.vera .mmenu { background: #05070c; }
 body.vera .mmenu a.mlink { border-bottom-color: var(--vr-line); }
 
 .vhl {
