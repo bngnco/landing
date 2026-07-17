@@ -1164,22 +1164,30 @@ footer { margin-top: clamp(90px, 11vw, 150px); border-top: 1px solid var(--line)
   .chip { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(13, 11, 9, 0.95); }
 
   /* Mobile analysis composition: the phone is "being examined" — a light
-     travels its frame, the verdict classes sit on the left and the score
-     answers on the right. Both chips glow so neither floats meaninglessly. */
+     travels its frame while the labels emerge from BEHIND the device
+     (z-index under the phone, tucked edges), never covering the screen.
+     Score slides out over the top-right shoulder, the verdict classes
+     slide out beneath the bottom edge. */
   .ph-beam { display: block; }
   .chip--v {
-    top: 11%; right: 0;
+    z-index: 1;
+    top: -30px; right: 2%;
+    padding: 10px 16px 18px;
     border-color: rgba(87, 168, 120, 0.42);
     box-shadow: 0 0 30px -8px rgba(87, 168, 120, 0.55), 0 24px 50px -18px rgba(0, 0, 0, 0.8);
   }
   .chip--verdict {
-    display: grid; gap: 7px;
-    top: 34%; left: 0;
-    padding: 12px 15px;
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+    gap: 14px;
+    z-index: 1;
+    top: auto; bottom: -32px; left: 6%; right: 6%;
+    padding: 18px 14px 11px;
     border-color: rgba(214, 172, 134, 0.32);
     box-shadow: 0 0 26px -10px rgba(214, 172, 134, 0.45), 0 24px 50px -18px rgba(0, 0, 0, 0.8);
   }
-  .chip--s { left: -2%; bottom: 8%; }
+  .chip--verdict .cv-h { display: none; }
+  .chip--verdict .cv-row { gap: 6px; font-size: 9px; }
+  .chip--s { display: none; }
 }
 @media (max-width: 400px) {
   .hero-ph { --phw: 235px; }
