@@ -254,6 +254,43 @@ ul { margin: 0; padding: 0; list-style: none; }
 .lang-menu button.on { color: var(--bronze-2); background: var(--bronze-soft); }
 .lang-menu .cd { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
 
+/* ── Nav dropdown (Verifyco Web) — same language as the lang menu ────── */
+.navdrop { position: relative; display: flex; align-items: center; }
+.navdrop-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 14.5px; font-weight: 500;
+  color: var(--ink-2);
+  transition: color 220ms ease;
+}
+.navdrop-btn .car { width: 9px; height: 9px; transition: transform 240ms ease; }
+.navdrop-btn:hover, .navdrop.open .navdrop-btn { color: var(--cream); }
+.navdrop.open .navdrop-btn .car { transform: rotate(180deg); }
+.navdrop-menu {
+  position: absolute;
+  top: calc(100% + 16px); left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  background: rgba(13, 11, 9, 0.98);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(0.98);
+  transition: all 240ms var(--ease);
+}
+.navdrop.open .navdrop-menu { opacity: 1; visibility: visible; transform: none; }
+.navdrop-menu a {
+  display: block;
+  padding: 9px 12px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+  transition: background 160ms ease, color 160ms ease;
+}
+.navdrop-menu a:hover { background: var(--bronze-soft); color: var(--cream); }
+.navdrop-menu a:first-child { color: var(--bronze-2); }
+
 /* Buttons */
 .btn {
   position: relative;
@@ -340,6 +377,9 @@ body.menu-open .burger span:nth-child(3) { top: 20px; transform: rotate(-45deg);
 .mmenu > nav { margin-top: auto; }
 .mmenu .mmenu-foot { margin-bottom: auto; }
 body.menu-open .mmenu { opacity: 1; visibility: visible; }
+/* Keep the header bar opaque while the menu is open, so scrolled menu
+   links pass cleanly under it instead of colliding with the brand. */
+body.menu-open .nav { background: #060504; }
 .mmenu a.mlink {
   display: block;
   font-size: clamp(24px, 6.4vw, 38px);
@@ -365,6 +405,23 @@ body.menu-open .mmenu { opacity: 1; visibility: visible; }
   color: var(--ink-2);
 }
 .mmenu-langs button.on { border-color: var(--bronze-2); color: var(--bronze-2); background: var(--bronze-soft); }
+
+/* Verifyco Web quick links inside the mobile menu — compact pill row */
+.mmenu-web { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.mmenu-web-h {
+  width: 100%;
+  font-family: var(--f-mono); font-size: 9.5px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--bronze-2);
+}
+.mmenu-web a {
+  font-size: 13px; font-weight: 500;
+  padding: 8px 14px;
+  border: 1px solid rgba(214, 172, 134, 0.28);
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(214, 172, 134, 0.06);
+}
 
 /* ════════════════════════════════════════════════════════
    HERO
@@ -585,7 +642,9 @@ body.menu-open .mmenu { opacity: 1; visibility: visible; }
 
 /* Verdict chip — the left-hand companion of the AUTHENTIC 98 chip on
    mobile: the three classes the engine decides between, REAL lit. */
-.chip--verdict { display: none; }
+/* Double-class so this always beats the generic `.chip` display rule below
+   (same-specificity order bit us here once already). */
+.chip.chip--verdict { display: none; }
 .chip--verdict .cv-h {
   font-size: 8px; letter-spacing: 0.22em; color: var(--ink-3);
   padding-bottom: 2px; border-bottom: 1px solid var(--line);
@@ -1033,6 +1092,46 @@ body.menu-open .mmenu { opacity: 1; visibility: visible; }
 .price-foot { text-align: center; margin-top: 28px; font-size: 12.5px; color: var(--ink-3); }
 .price-foot a { color: var(--bronze-2); border-bottom: 1px solid rgba(214, 172, 134, 0.4); }
 
+/* ── Verifyco Web · for teams — three linked cards, detail lives on web ── */
+.webx { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 900px) { .webx { grid-template-columns: 1fr; } }
+.webx-card {
+  display: grid; gap: 12px; align-content: start;
+  padding: 28px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--rad);
+  background:
+    radial-gradient(120% 130% at 12% 0%, rgba(188, 142, 100, 0.09), transparent 52%),
+    linear-gradient(170deg, #0E0B09 0%, #0A0807 100%);
+  transition: transform 260ms var(--ease), border-color 260ms ease, box-shadow 260ms ease;
+}
+.webx-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(214, 172, 134, 0.5);
+  box-shadow: 0 24px 48px -28px rgba(188, 142, 100, 0.35);
+}
+.webx-ic {
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  border: 1px solid rgba(214, 172, 134, 0.26);
+  background: linear-gradient(180deg, rgba(214, 172, 134, 0.13), rgba(214, 172, 134, 0.04));
+  color: var(--bronze-2);
+}
+.webx-ic svg { width: 21px; height: 21px; }
+.webx-card h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.015em; color: var(--ink); }
+.webx-card p { font-size: 14px; line-height: 1.6; color: var(--ink-2); text-wrap: pretty; }
+.webx-card p em { font-style: normal; color: var(--bronze-2); }
+.webx-go {
+  margin-top: 4px;
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em;
+  color: var(--bronze-2);
+  transition: color 200ms ease;
+}
+.webx-card:hover .webx-go { color: var(--cream); }
+.webx-inline { color: var(--bronze-2); border-bottom: 1px solid rgba(214, 172, 134, 0.4); }
+.webx-inline:hover { color: var(--cream); }
+
 /* ════════════════════════════════════════════════════════
    LANGUAGES
    ════════════════════════════════════════════════════════ */
@@ -1188,7 +1287,7 @@ footer { margin-top: clamp(90px, 11vw, 150px); border-top: 1px solid var(--line)
     background: linear-gradient(180deg, rgba(246, 227, 200, 0.9), rgba(214, 172, 134, 0.2));
   }
 
-  .chip--verdict {
+  .chip.chip--verdict {
     display: flex; flex-direction: row; align-items: center; justify-content: center;
     gap: 20px;
     z-index: 1;

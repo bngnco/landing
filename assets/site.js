@@ -218,6 +218,34 @@
     elements.forEach(function (element) { observer.observe(element); });
   }
 
+  function setupNavDropdown() {
+    var drop = document.querySelector("[data-navdrop]");
+    if (!drop) return;
+    var trigger = drop.querySelector(".navdrop-btn");
+    function setOpen(open) {
+      drop.classList.toggle("open", open);
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    setOpen(false);
+    // Hover opens/closes on fine pointers; click only ever OPENS (a click
+    // right after pointerenter must not toggle the menu straight back shut).
+    trigger.addEventListener("click", function (event) {
+      event.stopPropagation();
+      setOpen(true);
+    });
+    drop.addEventListener("pointerenter", function () { setOpen(true); });
+    drop.addEventListener("pointerleave", function () { setOpen(false); });
+    document.addEventListener("click", function (event) {
+      if (!drop.contains(event.target)) setOpen(false);
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && drop.classList.contains("open")) {
+        setOpen(false);
+        trigger.focus();
+      }
+    });
+  }
+
   function setupActiveNav() {
     if (!("IntersectionObserver" in window)) return;
     var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
@@ -364,6 +392,7 @@
     setupNavState();
     setupReveals();
     setupActiveNav();
+    setupNavDropdown();
     setupPricing();
     setupScreenViewer();
     setupAmbientWork();

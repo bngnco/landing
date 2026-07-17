@@ -35,7 +35,7 @@
 
   <link rel="preload" as="image" href="assets/app/home.png" fetchpriority="high" />
 
-  <link rel="stylesheet" href="assets/site.css?v=14" />
+  <link rel="stylesheet" href="assets/site.css?v=15" />
 
   <!-- Structured data — helps Google understand the brand + app. -->
   <script type="application/ld+json">
@@ -47,7 +47,8 @@
         "@id": "https://verifyco.info/#org",
         "name": "Verifyco",
         "url": "https://verifyco.info/",
-        "logo": "https://verifyco.info/assets/verifyco-icon.png"
+        "logo": "https://verifyco.info/assets/verifyco-icon.png",
+        "sameAs": ["https://web.verifyco.info"]
       },
       {
         "@type": "WebSite",
@@ -98,6 +99,19 @@
         <a href="#how" data-i18n="nav.signals">How it works</a>
           <a href="/deepdetect-plus" data-i18n="nav.dd">DeepDetect+</a>
           <a href="/vera">Vera<span class="pill-preview"><i></i>Preview</span></a>
+        <div class="navdrop" data-navdrop>
+          <button type="button" class="navdrop-btn" aria-haspopup="true" aria-expanded="false">
+            Web App
+            <svg class="car" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1.5l5 5 5-5"></path></svg>
+          </button>
+          <div class="navdrop-menu">
+            <a href="https://web.verifyco.info">Open the Web App</a>
+            <a href="https://web.verifyco.info/pricing">Pricing</a>
+            <a href="https://web.verifyco.info/developers">API</a>
+            <a href="https://web.verifyco.info/security">Security</a>
+            <a href="https://web.verifyco.info/help">Help</a>
+          </div>
+        </div>
         <a href="/blog" data-i18n="nav.blog">Blog</a>
         <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
           <a href="/support" data-i18n="nav.support">Support</a>
@@ -132,6 +146,14 @@
       <a class="mlink" href="/support" data-i18n="nav.support">Support</a>
     </nav>
     <div class="mmenu-foot">
+      <div class="mmenu-web" aria-label="Verifyco Web">
+        <span class="mmenu-web-h">Verifyco Web</span>
+        <a href="https://web.verifyco.info">Web App</a>
+        <a href="https://web.verifyco.info/pricing">Pricing</a>
+        <a href="https://web.verifyco.info/developers">API</a>
+        <a href="https://web.verifyco.info/security">Security</a>
+        <a href="https://web.verifyco.info/help">Help</a>
+      </div>
       <div class="mmenu-langs" data-mmenu-langs></div>
       <a class="btn btn-fill" href="#download" data-i18n="nav.download">Download</a>
     </div>
@@ -597,6 +619,46 @@
       </div>
     </section>
 
+    <!-- ═══════════ VERIFYCO WEB · FOR TEAMS ═══════════ -->
+    <section class="sec" id="platform" data-screen-label="Web Platform">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow" data-rv>VERIFYCO WEB · FOR TEAMS</span>
+          <h2 class="t-display" data-rv>Built for <span class="hl">professional</span> workflows.</h2>
+          <p class="sub" data-rv>The full engine runs in the browser as an <a class="webx-inline" href="https://web.verifyco.info">AI media verification</a> workspace — everything below lives on the web platform.</p>
+        </div>
+
+        <div class="webx" data-rv>
+          <a class="webx-card" href="https://web.verifyco.info/developers">
+            <span class="webx-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+            </span>
+            <h3>Enterprise API</h3>
+            <p>Run the same five-signal forensic engine from your own stack — moderation queues, newsroom tooling, KYC pipelines. Currently in private beta; the waitlist lives in the docs.</p>
+            <span class="webx-go">Read the API docs →</span>
+          </a>
+
+          <a class="webx-card" href="https://web.verifyco.info/security">
+            <span class="webx-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v5c0 4.4-3 7.2-7 9-4-1.8-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </span>
+            <h3>Trust &amp; Security</h3>
+            <p>Ephemeral processing — files are analysed and discarded, never stored. Every verdict is an evidence-first report you can audit signal by signal.</p>
+            <span class="webx-go">Visit the Trust Center →</span>
+          </a>
+
+          <a class="webx-card" href="https://web.verifyco.info/trial">
+            <span class="webx-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            </span>
+            <h3>7-day pilot</h3>
+            <p>Put the <em>deepfake detector online</em> to work on your team's real cases for a week — full engine, full reports. Apply on the web platform.</p>
+            <span class="webx-go">Start a 7-day pilot →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══════════ LANGUAGES ═══════════ -->
     <section class="sec" id="languages" data-screen-label="Languages">
       <div class="wrap langs">
@@ -649,6 +711,17 @@
           </ul>
         </div>
         <div class="foot-col">
+          <h4>Verifyco Web</h4>
+          <ul>
+            <li><a href="https://web.verifyco.info">Web App</a></li>
+            <li><a href="https://web.verifyco.info/developers">API Docs</a></li>
+            <li><a href="https://web.verifyco.info/security">Security</a></li>
+            <li><a href="https://web.verifyco.info/refunds">Refund Policy</a></li>
+            <li><a href="https://web.verifyco.info/terms">Terms</a></li>
+            <li><a href="https://web.verifyco.info/privacy">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
           <h4 data-i18n="footer.legal">Legal</h4>
           <ul>
             <li><a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a></li>
@@ -674,6 +747,6 @@
   </footer>
 
   <script src="assets/i18n.js?v=10" defer></script>
-  <script src="assets/site.js?v=8" defer></script>
+  <script src="assets/site.js?v=9" defer></script>
 </body>
 </html>
