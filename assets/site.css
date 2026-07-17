@@ -1163,30 +1163,51 @@ footer { margin-top: clamp(90px, 11vw, 150px); border-top: 1px solid var(--line)
   /* Drop the live blur on the floating chips too — solid bg is free. */
   .chip { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(13, 11, 9, 0.95); }
 
-  /* Mobile analysis composition: the phone is "being examined" — a light
-     travels its frame while the labels emerge from BEHIND the device
-     (z-index under the phone, tucked edges), never covering the screen.
-     Score slides out over the top-right shoulder, the verdict classes
-     slide out beneath the bottom edge. */
+  /* Mobile analysis composition: no boxes, no frames — bare annotation
+     text in the theme bronze, tied to the device by thin light leader
+     lines that dive into its frame (the same light language as the
+     travelling beam). The screen itself stays fully unobstructed. */
   .ph-beam { display: block; }
+  .hero { padding-bottom: 84px; }
+
   .chip--v {
     z-index: 1;
-    top: -30px; right: 2%;
-    padding: 10px 16px 18px;
-    border-color: rgba(87, 168, 120, 0.42);
-    box-shadow: 0 0 30px -8px rgba(87, 168, 120, 0.55), 0 24px 50px -18px rgba(0, 0, 0, 0.8);
+    top: -52px; right: 6%;
+    padding: 0; background: none; border: none; box-shadow: none;
+    gap: 9px;
+    color: var(--bronze-2);
   }
+  .chip--v .dot { background: var(--bronze-2); box-shadow: 0 0 10px rgba(214, 172, 134, 0.85); }
+  .chip--v b { font-size: 17px; }
+  /* leader line: from the text down, plugging into the device's shoulder */
+  .chip--v::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 6px); right: 26px;
+    width: 1.5px; height: 52px;
+    background: linear-gradient(180deg, rgba(246, 227, 200, 0.9), rgba(214, 172, 134, 0.2));
+  }
+
   .chip--verdict {
     display: flex; flex-direction: row; align-items: center; justify-content: center;
-    gap: 14px;
+    gap: 20px;
     z-index: 1;
-    top: auto; bottom: -32px; left: 6%; right: 6%;
-    padding: 18px 14px 11px;
-    border-color: rgba(214, 172, 134, 0.32);
-    box-shadow: 0 0 26px -10px rgba(214, 172, 134, 0.45), 0 24px 50px -18px rgba(0, 0, 0, 0.8);
+    top: auto; bottom: -52px; left: 0; right: 0;
+    padding: 0; background: none; border: none; box-shadow: none;
   }
   .chip--verdict .cv-h { display: none; }
-  .chip--verdict .cv-row { gap: 6px; font-size: 9px; }
+  .chip--verdict .cv-row { gap: 7px; font-size: 9.5px; color: rgba(139, 126, 112, 0.8); }
+  .chip--verdict .cv-row i { background: rgba(139, 126, 112, 0.4); }
+  .chip--verdict .cv-row.is-on { color: var(--cream); }
+  .chip--verdict .cv-row.is-on i { background: var(--bronze-2); box-shadow: 0 0 10px rgba(214, 172, 134, 0.9); }
+  /* leader line: out of the device's chin, down to the verdict words */
+  .chip--verdict::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 6px); left: 50%; margin-left: -1px;
+    width: 1.5px; height: 44px;
+    background: linear-gradient(180deg, rgba(214, 172, 134, 0.2), rgba(246, 227, 200, 0.9));
+  }
   .chip--s { display: none; }
 }
 @media (max-width: 400px) {
