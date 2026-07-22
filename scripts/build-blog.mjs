@@ -24,7 +24,7 @@ import anchor from "markdown-it-anchor";
 
 /* ── Site config ──────────────────────────────────────────────────── */
 const SITE = {
-  url: "https://verifyco.info",
+  url: "https://verifyco.app",
   name: "Verifyco",
   blogName: "The Verifyco Blog",
   blogPath: "/blog",
@@ -345,7 +345,7 @@ const defaultLinkOpen =
   };
 md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
   const href = tokens[idx].attrGet("href") || "";
-  if (/^https?:\/\//i.test(href) && !/(^|\.)verifyco\.info/i.test(href)) {
+  if (/^https?:\/\//i.test(href) && !/(^|\.)verifyco\.app/i.test(href)) {
     tokens[idx].attrSet("target", "_blank");
     tokens[idx].attrSet("rel", "noopener noreferrer");
   }
@@ -555,7 +555,7 @@ function footer(lang, ui) {
       <div class="bfoot-brand">
         <a class="brand" href="/">Verify<em>co</em></a>
         <p>${esc(ui.footerTagline)}</p>
-        <p class="mono-note">VERIFYCO.INFO</p>
+        <p class="mono-note">VERIFYCO.APP</p>
       </div>
       <div class="bfoot-col">
         <h4>${esc(ui.product)}</h4>

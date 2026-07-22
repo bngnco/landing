@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://verifyco.info/sitemap.xml
+Sitemap: https://verifyco.app/sitemap.xml

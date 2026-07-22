@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Verifyco Blog</title>
-    <link>https://verifyco.info/blog</link>
+    <link>https://verifyco.app/blog</link>
     <description>Guides, breakdowns and research on detecting deepfakes, AI-generated and manipulated media — from the team behind Verifyco, on-device forensic verification for iPhone.</description>
     <language>en</language>
     <lastBuildDate>Tue, 07 Jul 2026 00:00:00 GMT</lastBuildDate>
-    <atom:link href="https://verifyco.info/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://verifyco.app/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Someone Made a Deepfake of You: What to Do, Step by Step</title>
-      <link>https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/what-to-do-if-someone-makes-a-deepfake-of-you</guid>
+      <link>https://verifyco.app/blog/what-to-do-if-someone-makes-a-deepfake-of-you</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/what-to-do-if-someone-makes-a-deepfake-of-you</guid>
       <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
       <description>Found a deepfake of yourself — a fake video, voice or intimate image? Here's the emergency checklist: evidence, takedowns, platform reporting, legal options and damage control.</description>
       <category>Deepfakes</category>
@@ -18,8 +18,8 @@
     </item>
     <item>
       <title>Are Deepfakes Illegal? Deepfake Laws Around the World in 2026</title>
-      <link>https://verifyco.info/blog/are-deepfakes-illegal-laws-2026</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/are-deepfakes-illegal-laws-2026</guid>
+      <link>https://verifyco.app/blog/are-deepfakes-illegal-laws-2026</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/are-deepfakes-illegal-laws-2026</guid>
       <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
       <description>Is making a deepfake a crime? A plain-language map of deepfake laws in 2026 — the US TAKE IT DOWN Act, the EU AI Act's labelling rules, UK, and what's legal, what isn't.</description>
       <category>Deepfakes</category>
@@ -27,8 +27,8 @@
     </item>
     <item>
       <title>How to Tell if a Photo Has Been Edited (7 Checks That Work)</title>
-      <link>https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/how-to-tell-if-a-photo-is-edited</guid>
+      <link>https://verifyco.app/blog/how-to-tell-if-a-photo-is-edited</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/how-to-tell-if-a-photo-is-edited</guid>
       <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
       <description>Not AI — just faked. Learn how to tell if a photo is edited or photoshopped: shadow and edge checks, error level analysis, metadata, reverse search and forensic tools.</description>
       <category>Guides</category>
@@ -36,8 +36,8 @@
     </item>
     <item>
       <title>How Accurate Are AI Detectors, Really? (What the Numbers Mean)</title>
-      <link>https://verifyco.info/blog/how-accurate-are-ai-detectors</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/how-accurate-are-ai-detectors</guid>
+      <link>https://verifyco.app/blog/how-accurate-are-ai-detectors</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/how-accurate-are-ai-detectors</guid>
       <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
       <description>AI detectors claim 99% accuracy — reality is messier. What detection accuracy really means, why false positives happen, what breaks detectors, and how to read a confidence score.</description>
       <category>AI Detection</category>
@@ -45,8 +45,8 @@
     </item>
     <item>
       <title>AI Voice Cloning Scams: How to Protect Yourself in 2026</title>
-      <link>https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/ai-voice-cloning-scams-protect-yourself</guid>
+      <link>https://verifyco.app/blog/ai-voice-cloning-scams-protect-yourself</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/ai-voice-cloning-scams-protect-yourself</guid>
       <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
       <description>Scammers can clone a voice from three seconds of audio. Learn how AI voice cloning scams work, the red flags of a fake voice call, and the habits that actually protect you.</description>
       <category>Deepfakes</category>
@@ -54,8 +54,8 @@
     </item>
     <item>
       <title>How to Tell if a Video Is AI-Generated (2026 Guide)</title>
-      <link>https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/how-to-tell-if-a-video-is-ai-generated</guid>
+      <link>https://verifyco.app/blog/how-to-tell-if-a-video-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/how-to-tell-if-a-video-is-ai-generated</guid>
       <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
       <description>Sora-class models now make video from a text prompt. Learn how to tell if a video is AI-generated: physics tells, texture artifacts, provenance checks and forensic tools.</description>
       <category>AI Detection</category>
@@ -63,8 +63,8 @@
     </item>
     <item>
       <title>Deepfake Detector Apps: 7 Things to Check Before You Trust One</title>
-      <link>https://verifyco.info/blog/deepfake-detector-app-what-to-look-for</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/deepfake-detector-app-what-to-look-for</guid>
+      <link>https://verifyco.app/blog/deepfake-detector-app-what-to-look-for</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/deepfake-detector-app-what-to-look-for</guid>
       <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
       <description>Not all deepfake detector apps are equal. Here are the 7 things that separate a trustworthy AI detector from a coin flip — privacy, multi-signal analysis, honesty and more.</description>
       <category>AI Detection</category>
@@ -72,8 +72,8 @@
     </item>
     <item>
       <title>How to Check If a Photo Is Real or AI on Your iPhone (2026)</title>
-      <link>https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/check-if-photo-is-ai-on-iphone</guid>
+      <link>https://verifyco.app/blog/check-if-photo-is-ai-on-iphone</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/check-if-photo-is-ai-on-iphone</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Want to verify a photo right on your iPhone without uploading it anywhere? Here's how to check if an image is real or AI-generated, privately and on-device.</description>
       <category>AI Detection</category>
@@ -82,8 +82,8 @@
     </item>
     <item>
       <title>How to Spot a Deepfake Video: 9 Warning Signs for 2026</title>
-      <link>https://verifyco.info/blog/how-to-spot-a-deepfake-video</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/how-to-spot-a-deepfake-video</guid>
+      <link>https://verifyco.app/blog/how-to-spot-a-deepfake-video</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/how-to-spot-a-deepfake-video</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Deepfake videos are fooling almost everyone in 2026. Learn the 9 signs that still give them away — plus why your eyes alone aren't enough anymore.</description>
       <category>Deepfakes</category>
@@ -92,8 +92,8 @@
     </item>
     <item>
       <title>How to Tell If an Image Is AI-Generated: The Complete 2026 Guide</title>
-      <link>https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/how-to-tell-if-an-image-is-ai-generated</guid>
+      <link>https://verifyco.app/blog/how-to-tell-if-an-image-is-ai-generated</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/how-to-tell-if-an-image-is-ai-generated</guid>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Can't tell if a photo is real or AI? Learn the 2026 method that actually works: provenance checks, detector tools, and the physics cues AI still gets wrong.</description>
       <category>AI Detection</category>
@@ -101,8 +101,8 @@
     </item>
     <item>
       <title>Content Credentials (C2PA) Explained: The Nutrition Label for Photos</title>
-      <link>https://verifyco.info/blog/content-credentials-c2pa-explained</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/content-credentials-c2pa-explained</guid>
+      <link>https://verifyco.app/blog/content-credentials-c2pa-explained</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/content-credentials-c2pa-explained</guid>
       <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
       <description>What are Content Credentials? How C2PA provenance works, how to check a photo's origin, what it can and can't prove — and why it's becoming the web's trust layer.</description>
       <category>Research</category>
@@ -110,8 +110,8 @@
     </item>
     <item>
       <title>How to Spot Fake AI Profile Pictures on Dating Apps &amp; Social Media</title>
-      <link>https://verifyco.info/blog/spot-fake-ai-profile-pictures</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/spot-fake-ai-profile-pictures</guid>
+      <link>https://verifyco.app/blog/spot-fake-ai-profile-pictures</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/spot-fake-ai-profile-pictures</guid>
       <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
       <description>Romance scammers and bot networks run on AI-generated profile photos. Learn the visual tells of a fake profile picture, the reverse-search workflow, and how to verify in seconds.</description>
       <category>AI Detection</category>
@@ -119,8 +119,8 @@
     </item>
     <item>
       <title>What Is a Deepfake? A Plain-English Guide (2026)</title>
-      <link>https://verifyco.info/blog/what-is-a-deepfake</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/what-is-a-deepfake</guid>
+      <link>https://verifyco.app/blog/what-is-a-deepfake</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/what-is-a-deepfake</guid>
       <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
       <description>Deepfakes explained simply: what they are, how they're made, why they've become so convincing, the real-world risks, and how to tell a synthetic face or voice from the real thing.</description>
       <category>Deepfakes</category>
@@ -128,8 +128,8 @@
     </item>
     <item>
       <title>5 Signs a Video Has Been Deepfaked (+ How to Check)</title>
-      <link>https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/5-signs-a-video-has-been-deepfaked</guid>
+      <link>https://verifyco.app/blog/5-signs-a-video-has-been-deepfaked</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/5-signs-a-video-has-been-deepfaked</guid>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
       <description>A practical checklist for spotting deepfaked video — the edge artifacts, lip-sync drift, lighting tells, unnatural motion and audio clues that still give synthetic clips away.</description>
       <category>Deepfakes</category>
@@ -138,8 +138,8 @@
     </item>
     <item>
       <title>On-Device Verification, Explained (Nothing Leaves Your iPhone)</title>
-      <link>https://verifyco.info/blog/on-device-verification-explained</link>
-      <guid isPermaLink="true">https://verifyco.info/blog/on-device-verification-explained</guid>
+      <link>https://verifyco.app/blog/on-device-verification-explained</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/on-device-verification-explained</guid>
       <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
       <description>Why Verifyco runs entirely on your iPhone: how on-device forensic analysis works, what the Neural Engine does, cloud vs on-device trade-offs, and why nothing is ever uploaded.</description>
       <category>iOS</category>

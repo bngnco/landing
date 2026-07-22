@@ -358,7 +358,7 @@
 
         var subject = encodeURIComponent("Vera preview access request");
         var message = encodeURIComponent("Please add me to the Vera by Verifyco preview list.\n\nEmail: " + email);
-        window.location.href = "mailto:support@verifyco.info?subject=" + subject + "&body=" + message;
+        window.location.href = "mailto:support@verifyco.app?subject=" + subject + "&body=" + message;
       });
     }
   }

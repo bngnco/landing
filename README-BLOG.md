@@ -14,7 +14,7 @@ Vercel serves plain files and rebuilds on every push.
 
 ## Option A — Write in the admin panel (recommended)
 
-Open **https://verifyco.info/admin**. It's [Sveltia CMS](https://github.com/sveltia/sveltia-cms),
+Open **https://verifyco.app/admin**. It's [Sveltia CMS](https://github.com/sveltia/sveltia-cms),
 a modern git-based editor. Three ways to sign in:
 
 ### 1. Sign In Using Access Token  ← simplest, works from anywhere (incl. phone)
@@ -160,7 +160,7 @@ The tech is handled; rankings come from **content + reputation**:
    reach out to journalists covering deepfakes. I can't create these; they come
    from your content being worth citing.
 4. **Submit your sitemap** once live: Google Search Console → add
-   `https://verifyco.info`, submit `sitemap.xml`. Do the same in Bing Webmaster.
+   `https://verifyco.app`, submit `sitemap.xml`. Do the same in Bing Webmaster.
 5. **Keep posts fresh.** Update older posts; the sitemap `lastmod` updates
    automatically when you rebuild.
 

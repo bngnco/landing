@@ -8,9 +8,25 @@
     {
       "source": "/:path*",
       "has": [
+        { "type": "host", "value": "www.verifyco.app" }
+      ],
+      "destination": "https://verifyco.app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "verifyco.info" }
+      ],
+      "destination": "https://verifyco.app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
         { "type": "host", "value": "www.verifyco.info" }
       ],
-      "destination": "https://verifyco.info/:path*",
+      "destination": "https://verifyco.app/:path*",
       "permanent": true
     },
     { "source": "/blog/index.html", "destination": "/blog", "permanent": true },

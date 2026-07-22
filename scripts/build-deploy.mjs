@@ -46,7 +46,7 @@ async function copyRequiredUploads() {
   for (const file of publishedFiles) {
     if (!TEXT_EXTENSIONS.has(path.extname(file).toLowerCase())) continue;
     const source = await readFile(file, "utf8");
-    const matches = source.matchAll(/(?:https:\/\/verifyco\.info)?(\/uploads\/[^"'<>?#]+)(?:[?#][^"'<>]*)?/g);
+    const matches = source.matchAll(/(?:https:\/\/verifyco\.app)?(\/uploads\/[^"'<>?#]+)(?:[?#][^"'<>]*)?/g);
     for (const match of matches) {
       let pathname = match[1];
       try { pathname = decodeURIComponent(pathname); } catch {}

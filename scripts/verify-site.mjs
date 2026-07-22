@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const CANONICAL_ORIGIN = "https://verifyco.info";
+const CANONICAL_ORIGIN = "https://verifyco.app";
 const MAX_SITEMAP_BYTES = 50 * 1024 * 1024;
 const MAX_SITEMAP_URLS = 50_000;
 
@@ -268,7 +268,7 @@ const canonicalRedirect = (vercel.redirects || []).some(
     redirect.destination === `${CANONICAL_ORIGIN}/:path*` &&
     redirect.permanent === true &&
     (redirect.has || []).some(
-      (condition) => condition.type === "host" && condition.value === "www.verifyco.info",
+      (condition) => condition.type === "host" && condition.value === "www.verifyco.app",
     ),
 );
 check(canonicalRedirect, "vercel.json is missing the permanent www-to-apex redirect");

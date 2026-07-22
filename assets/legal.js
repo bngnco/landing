@@ -24,7 +24,7 @@ By using Verifyco you confirm that you have read and understood this Policy. If 
 
 ## 1. Who We Are
 
-Verifyco is provided by the Verifyco app developer (the "Developer"). For any privacy question, contact us at support@verifyco.info. Where required by law, the Developer acts as the data controller for the limited information described below.
+Verifyco is provided by the Verifyco app developer (the "Developer"). For any privacy question, contact us at support@verifyco.app. Where required by law, the Developer acts as the data controller for the limited information described below.
 
 ## 2. Our Privacy-First Design
 
@@ -80,7 +80,7 @@ Where optional diagnostics or advertising data is processed by Apple or Google, 
 
 ## 13. Your Rights (GDPR / UK GDPR)
 
-Subject to applicable law, you may have the right to access, correct, delete, restrict, or object to processing of your personal data, to data portability, and to withdraw consent. Because we hold no account and no media, most data subject to these rights lives only on your device and is under your direct control (for example, deleting your history in Settings). To exercise any right regarding provider-side diagnostics or advertising data, contact support@verifyco.info. You also have the right to lodge a complaint with your local supervisory authority.
+Subject to applicable law, you may have the right to access, correct, delete, restrict, or object to processing of your personal data, to data portability, and to withdraw consent. Because we hold no account and no media, most data subject to these rights lives only on your device and is under your direct control (for example, deleting your history in Settings). To exercise any right regarding provider-side diagnostics or advertising data, contact support@verifyco.app. You also have the right to lodge a complaint with your local supervisory authority.
 
 ## 14. Your US State Privacy Rights
 
@@ -88,7 +88,7 @@ Depending on your state (for example, California, and other states with comprehe
 
 ## 15. Children's Privacy
 
-Verifyco is not directed to children under 13 (or the minimum age required in your country), and we do not knowingly collect personal information from children. If you believe a child has provided information to us, contact support@verifyco.info and we will take appropriate steps.
+Verifyco is not directed to children under 13 (or the minimum age required in your country), and we do not knowingly collect personal information from children. If you believe a child has provided information to us, contact support@verifyco.app and we will take appropriate steps.
 
 ## 16. Third-Party Services and Links
 
@@ -100,7 +100,7 @@ We may update this Policy to reflect changes to the App or the law. Material cha
 
 ## 18. Contact Us
 
-Questions or requests: support@verifyco.info`,
+Questions or requests: support@verifyco.app`,
 
     tr: `# Gizlilik Politikası
 
@@ -119,7 +119,7 @@ Verifyco'yu kullanarak bu Politikayı okuduğunuzu ve anladığınızı onaylars
 
 ## 1. Kim Olduğumuz
 
-Verifyco, Verifyco uygulama geliştiricisi ("Geliştirici") tarafından sunulur. Gizlilikle ilgili her soru için support@verifyco.info adresinden bize ulaşın. Yasaların gerektirdiği yerlerde Geliştirici, aşağıda açıklanan sınırlı bilgiler için veri sorumlusu olarak hareket eder.
+Verifyco, Verifyco uygulama geliştiricisi ("Geliştirici") tarafından sunulur. Gizlilikle ilgili her soru için support@verifyco.app adresinden bize ulaşın. Yasaların gerektirdiği yerlerde Geliştirici, aşağıda açıklanan sınırlı bilgiler için veri sorumlusu olarak hareket eder.
 
 ## 2. Gizlilik Öncelikli Tasarımımız
 
@@ -174,7 +174,7 @@ Analiz cihazınızda gerçekleştiği ve bir medya sunucusu işletmediğimiz iç
 
 ## 13. Haklarınız (GDPR / BK GDPR)
 
-Geçerli yasalara tabi olarak; kişisel verilerinize erişme, düzeltme, silme, işlemeyi kısıtlama veya itiraz etme, veri taşınabilirliği ve rızayı geri çekme haklarına sahip olabilirsiniz. Hesap ve medya tutmadığımız için bu haklara konu verilerin çoğu yalnızca cihazınızda bulunur ve doğrudan sizin kontrolünüzdedir (örneğin geçmişinizi Ayarlar'dan silmek). Sağlayıcı tarafındaki tanılama veya reklam verileriyle ilgili bir hakkı kullanmak için support@verifyco.info ile iletişime geçin. Ayrıca yerel denetim makamınıza şikayette bulunma hakkınız vardır.
+Geçerli yasalara tabi olarak; kişisel verilerinize erişme, düzeltme, silme, işlemeyi kısıtlama veya itiraz etme, veri taşınabilirliği ve rızayı geri çekme haklarına sahip olabilirsiniz. Hesap ve medya tutmadığımız için bu haklara konu verilerin çoğu yalnızca cihazınızda bulunur ve doğrudan sizin kontrolünüzdedir (örneğin geçmişinizi Ayarlar'dan silmek). Sağlayıcı tarafındaki tanılama veya reklam verileriyle ilgili bir hakkı kullanmak için support@verifyco.app ile iletişime geçin. Ayrıca yerel denetim makamınıza şikayette bulunma hakkınız vardır.
 
 ## 14. ABD Eyalet Gizlilik Haklarınız
 
@@ -182,7 +182,7 @@ Bulunduğunuz eyalete bağlı olarak (örneğin Kaliforniya ve kapsamlı gizlili
 
 ## 15. Çocukların Gizliliği
 
-Verifyco 13 yaşından küçük çocuklara (veya ülkenizde gereken asgari yaş) yönelik değildir ve bilerek çocuklardan kişisel bilgi toplamayız. Bir çocuğun bize bilgi verdiğini düşünüyorsanız support@verifyco.info ile iletişime geçin; gerekli adımları atarız.
+Verifyco 13 yaşından küçük çocuklara (veya ülkenizde gereken asgari yaş) yönelik değildir ve bilerek çocuklardan kişisel bilgi toplamayız. Bir çocuğun bize bilgi verdiğini düşünüyorsanız support@verifyco.app ile iletişime geçin; gerekli adımları atarız.
 
 ## 16. Üçüncü Taraf Hizmetleri ve Bağlantılar
 
@@ -194,7 +194,7 @@ Bu Politikayı, Uygulamadaki veya yasalardaki değişiklikleri yansıtmak için 
 
 ## 18. İletişim
 
-Sorular veya talepler: support@verifyco.info`,
+Sorular veya talepler: support@verifyco.app`,
   },
 
   terms: {
@@ -283,7 +283,7 @@ We may modify, suspend, or discontinue features of the App at any time. We may a
 
 ## 17. Governing Law and Disputes
 
-These Terms are governed by the laws of the jurisdiction in which the Developer is established, without regard to conflict-of-laws rules, and subject to any mandatory consumer-protection laws of your country of residence. Before bringing a formal claim, you agree to first try to resolve the dispute informally by contacting support@verifyco.info.
+These Terms are governed by the laws of the jurisdiction in which the Developer is established, without regard to conflict-of-laws rules, and subject to any mandatory consumer-protection laws of your country of residence. Before bringing a formal claim, you agree to first try to resolve the dispute informally by contacting support@verifyco.app.
 
 ## 18. Apple-Specific Terms
 
@@ -295,7 +295,7 @@ If any provision of these Terms is held unenforceable, the remaining provisions 
 
 ## 20. Contact
 
-Questions: support@verifyco.info`,
+Questions: support@verifyco.app`,
 
     tr: `# Kullanım Koşulları
 
@@ -382,7 +382,7 @@ Uygulamanın özelliklerini istediğimiz zaman değiştirebilir, askıya alabili
 
 ## 17. Geçerli Hukuk ve Uyuşmazlıklar
 
-Bu Koşullar, kanunlar ihtilafı kurallarına bakılmaksızın Geliştirici'nin kurulu olduğu yargı bölgesinin yasalarına ve ikamet ülkenizin zorunlu tüketici koruma yasalarına tabi olarak yönetilir. Resmi bir talepte bulunmadan önce, uyuşmazlığı önce support@verifyco.info ile iletişime geçerek gayri resmi şekilde çözmeye çalışmayı kabul edersiniz.
+Bu Koşullar, kanunlar ihtilafı kurallarına bakılmaksızın Geliştirici'nin kurulu olduğu yargı bölgesinin yasalarına ve ikamet ülkenizin zorunlu tüketici koruma yasalarına tabi olarak yönetilir. Resmi bir talepte bulunmadan önce, uyuşmazlığı önce support@verifyco.app ile iletişime geçerek gayri resmi şekilde çözmeye çalışmayı kabul edersiniz.
 
 ## 18. Apple'a Özgü Koşullar
 
@@ -394,7 +394,7 @@ Bu Koşulların herhangi bir hükmü uygulanamaz bulunursa, kalan hükümler tam
 
 ## 20. İletişim
 
-Sorular: support@verifyco.info`,
+Sorular: support@verifyco.app`,
   },
 };
 
