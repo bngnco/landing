@@ -216,6 +216,69 @@
       });
     }, { rootMargin: "0px 0px -7% 0px", threshold: 0.04 });
     elements.forEach(function (element) { observer.observe(element); });
+    // IntersectionObserver is an enhancement, never a content gate. A browser
+    // restore, automation capture or interrupted main thread must not leave
+    // entire sections transparent forever.
+    window.setTimeout(function () {
+      elements.forEach(function (element) {
+        element.classList.add("is-visible");
+        if (element.classList.contains("sig-row")) element.classList.add("lit");
+        observer.unobserve(element);
+      });
+    }, 2200);
+  }
+
+  function setupAnnouncement() {
+    var announcements = Array.prototype.slice.call(document.querySelectorAll("[data-announcement]"));
+    if (!announcements.length) return;
+
+    var mobileNav = document.querySelector("[data-mmenu] nav");
+    if (mobileNav && !mobileNav.querySelector("[data-announcement]")) {
+      var mobileAnnouncement = announcements[0].cloneNode(true);
+      mobileNav.insertBefore(mobileAnnouncement, mobileNav.firstChild);
+      announcements.push(mobileAnnouncement);
+    }
+
+    function apply(config) {
+      var enabled = !config || config.enabled !== false;
+      var kicker = config && typeof config.kicker === "string" ? config.kicker.trim() : "NEWS";
+      var title = config && typeof config.title === "string" ? config.title.trim() : "The new Verifyco engine is arriving";
+      var href = config && typeof config.url === "string" ? config.url.trim() : "/blog";
+      try {
+        var parsed = new URL(href || "/blog", window.location.origin);
+        if (parsed.protocol !== "http:" && parsed.protocol !== "https:") href = "/blog";
+      } catch (error) { href = "/blog"; }
+
+      announcements.forEach(function (announcement) {
+        announcement.hidden = !enabled;
+        announcement.href = href || "/blog";
+        var kickerNode = announcement.querySelector("[data-announcement-kicker]");
+        var titleNode = announcement.querySelector("[data-announcement-title]");
+        if (kickerNode) kickerNode.textContent = kicker || "NEWS";
+        if (titleNode) titleNode.textContent = title || "Latest from Verifyco";
+      });
+    }
+
+    apply(null);
+    fetch("/content/site/announcement.json", { cache: "no-store" })
+      .then(function (response) { return response.ok ? response.json() : null; })
+      .then(function (config) { if (config) apply(config); })
+      .catch(function () { /* The static fallback remains usable. */ });
+  }
+
+  function setupComparisons() {
+    document.querySelectorAll("[data-compare]").forEach(function (comparison) {
+      var range = comparison.querySelector(".compare-range");
+      if (!range) return;
+      function update() {
+        var value = Math.max(1, Math.min(100, Number(range.value) || 50));
+        comparison.style.setProperty("--compare-position", value + "%");
+        comparison.style.setProperty("--compare-full-width", (10000 / value) + "%");
+        range.setAttribute("aria-valuetext", value + " percent AI-generated, " + (100 - value) + " percent camera");
+      }
+      range.addEventListener("input", update);
+      update();
+    });
   }
 
   function setupNavDropdown() {
@@ -376,7 +439,10 @@
 
   function startHero() {
     var hero = document.querySelector(".hero");
-    if (hero) requestAnimationFrame(function () { hero.classList.add("hero-ready"); });
+    if (hero) requestAnimationFrame(function () {
+      hero.classList.add("hero-ready");
+      doc.classList.add("hero-ready");
+    });
     var ufo = document.querySelector("[data-ufo]");
     if (!ufo || reduceMotion) return;
     var launch = function () { ufo.classList.add("is-flying"); };
@@ -385,6 +451,7 @@
   }
 
   function boot() {
+    setupAnnouncement();
     buildLangUIs();
     applyLang(detectLang());
     setupMobileMenu();
@@ -395,6 +462,7 @@
     setupNavDropdown();
     setupPricing();
     setupScreenViewer();
+    setupComparisons();
     setupAmbientWork();
     startHero();
   }

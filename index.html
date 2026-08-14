@@ -35,7 +35,7 @@
 
   <link rel="preload" as="image" href="assets/app/home.png" fetchpriority="high" />
 
-  <link rel="stylesheet" href="assets/site.css?v=15" />
+  <link rel="stylesheet" href="assets/site.css?v=16" />
 
   <!-- Structured data — helps Google understand the brand + app. -->
   <script type="application/ld+json">
@@ -116,6 +116,12 @@
         <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
           <a href="/support" data-i18n="nav.support">Support</a>
       </nav>
+
+      <a class="nav-announcement" data-announcement href="/blog">
+        <span data-announcement-kicker>NEWS</span>
+        <strong data-announcement-title>The new Verifyco engine is arriving</strong>
+        <i aria-hidden="true">&#8599;</i>
+      </a>
 
       <div class="nav-right">
         <div class="lang" data-lang>
@@ -391,6 +397,35 @@
     </section>
 
     <!-- ═══════════ DEEPDETECT+ ═══════════ -->
+    <section class="sec train-eye" id="train-eye" data-screen-label="Train your eye">
+      <div class="wrap train-eye-grid">
+        <div class="train-eye-copy">
+          <span class="eyebrow" data-rv data-i18n="train.eyebrow">INTERACTIVE · TRAIN YOUR EYE</span>
+          <h2 class="t-display" data-rv data-i18n="train.title">Learn to notice what <span class="hl">generators miss.</span></h2>
+          <p class="sub" data-rv data-i18n="train.sub">Slide between a camera photograph and an AI-generated counterpart, then continue with guided challenges inside the iPhone app.</p>
+          <div class="train-capabilities" data-rv aria-label="Verifyco media capabilities">
+            <span>4K INPUT</span><span>GIF</span><span>JPEG / PNG</span><span>MOV / MP4</span><span>5 SIGNALS</span>
+          </div>
+          <a class="btn btn-line" href="#download" data-i18n="train.cta">Open the visual training lab</a>
+        </div>
+
+        <figure class="compare-card" data-compare data-rv style="--compare-position: 50%">
+          <div class="compare-stage">
+            <img class="compare-image" src="assets/challenge/pair01-real.jpg" alt="Camera photograph of a coffee cup" width="1620" height="1080" loading="lazy" decoding="async" />
+            <div class="compare-layer">
+              <img class="compare-image" src="assets/challenge/pair01-fake.jpg" alt="AI-generated coffee cup image" width="1620" height="1080" loading="lazy" decoding="async" />
+            </div>
+            <span class="compare-label compare-label--real" data-i18n="train.real">CAMERA</span>
+            <span class="compare-label compare-label--fake" data-i18n="train.fake">AI-GENERATED</span>
+            <span class="compare-divider" aria-hidden="true"><i></i></span>
+          </div>
+          <label class="sr-only" for="train-eye-slider">Compare the camera and AI-generated images</label>
+          <input id="train-eye-slider" class="compare-range" type="range" min="0" max="100" value="50" aria-valuetext="50 percent camera, 50 percent AI-generated" />
+          <figcaption><span data-i18n="train.hint">Drag to compare</span><b data-i18n="train.note">Same subject. Different evidence.</b></figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="sec" id="dd" data-screen-label="DeepDetect+">
       <div class="wrap">
         <div class="dd-panel" data-rv>
@@ -404,26 +439,18 @@
           <a class="btn btn-line" href="/deepdetect-plus" data-magnet data-i18n="dd.more">Learn more about DeepDetect+</a>
           </div>
 
-          <div class="dd-visual" data-dd-visual role="img" aria-label="Illustrative DeepDetect Plus forensic analysis showing corroborating neural, temporal and frequency evidence">
+          <div class="dd-visual" data-dd-visual role="img" aria-label="Illustrative DeepDetect Plus image analysis showing corroborating neural, metadata and frequency evidence">
             <div class="dd-visual-top"><span><i></i>DEEPDETECT+ · FORENSIC RUN</span><b>00:01.842</b></div>
             <div class="dd-scan-stage" aria-hidden="true">
-              <svg class="dd-face-map" viewBox="0 0 360 250" fill="none">
-                <path class="dd-contour" d="M180 27c-53 0-86 41-86 96 0 63 34 103 86 103s86-40 86-103c0-55-33-96-86-96Z" />
-                <path d="M121 105c18-13 38-15 59-5 21-10 41-8 59 5M139 135c11 9 25 11 41 6 16 5 30 3 41-6M154 177c18 9 34 9 52 0M180 101v57" />
-                <g class="dd-mesh">
-                  <path d="M94 123 139 135 121 105 180 101 239 105 221 135 266 123M139 135l15 42 26-36 26 36 15-42M121 105l33-36 26 32 26-32 33 36M154 177l26 49 26-49" />
-                  <circle cx="121" cy="105" r="3"/><circle cx="139" cy="135" r="3"/><circle cx="154" cy="177" r="3"/><circle cx="180" cy="101" r="3"/><circle cx="180" cy="141" r="3"/><circle cx="180" cy="226" r="3"/><circle cx="206" cy="177" r="3"/><circle cx="221" cy="135" r="3"/><circle cx="239" cy="105" r="3"/>
-                </g>
-                <path class="dd-anomaly" d="M204 156c15 5 23 15 25 30-12 11-27 15-43 9" />
-              </svg>
+              <img class="dd-source-image" src="assets/challenge/pair01-fake.jpg" alt="" width="1620" height="1080" loading="lazy" decoding="async" />
               <span class="dd-corner dd-corner--tl"></span><span class="dd-corner dd-corner--tr"></span><span class="dd-corner dd-corner--bl"></span><span class="dd-corner dd-corner--br"></span>
               <span class="dd-scanline"></span>
-              <span class="dd-region">REGION 04 · JAWLINE <b>0.83</b></span>
+              <span class="dd-region">REGION 04 · TEXTURE <b>0.83</b></span>
               <div class="dd-verdict"><small>FUSED VERDICT</small><strong>Likely manipulated</strong><span>27 / 100 trust</span></div>
             </div>
             <div class="dd-evidence" aria-hidden="true">
               <span><i></i><b>Neural</b><em>0.83 anomaly</em></span>
-              <span><i></i><b>Temporal</b><em>3f drift</em></span>
+              <span><i></i><b>Metadata</b><em>marker found</em></span>
               <span><i></i><b>Frequency</b><em>ridge found</em></span>
             </div>
           </div>
@@ -442,7 +469,7 @@
           </div>
           <div class="vera-teaser-workspace" aria-hidden="true">
             <div class="vera-mini-top"><span><i></i>VERA · CASE VC-042</span><b>ILLUSTRATIVE</b></div>
-            <div class="vera-mini-file"><span class="vera-mini-thumb"></span><span><b>press_statement.mp4</b><small>6 evidence layers · examination complete</small></span></div>
+            <div class="vera-mini-file"><span class="vera-mini-thumb"><img src="assets/challenge/pair03-fake.jpg" alt="" width="1620" height="1080" loading="lazy" decoding="async" /></span><span><b>press_statement.mp4</b><small>6 evidence layers · examination complete</small></span></div>
             <div class="vera-mini-question">Why was this clip flagged?</div>
             <div class="vera-mini-answer"><span>V</span><p><b>Two independent signals agree.</b> Lip-sync drifts three frames while a jawline anomaly peaks in the same segment. Metadata only shows re-encoding, so it is supporting context—not proof.</p></div>
             <div class="vera-mini-foot"><span>Confidence · moderate</span><span>Uncertainty preserved</span></div>
@@ -552,7 +579,7 @@
         <div class="plans plans--web" data-ppanel="web" hidden>
           <div class="plan plan--web" data-rv>
             <span class="plan-name">Starter · Weekly</span>
-            <span class="plan-amt"><small>$</small>5<span class="plan-cyc">/ wk</span></span>
+            <span class="plan-amt"><small>$</small>7<span class="plan-cyc">/ wk</span></span>
             <span class="plan-per">renews weekly until cancelled</span>
             <p class="plan-desc">A weekly plan for trying the full engine with a clear, renewable allowance.</p>
             <div class="plan-chips"><span class="plan-chip">25 analyses / wk</span><span class="plan-chip ghost">$0.20 / analysis</span></div>
@@ -746,7 +773,7 @@
     </div>
   </footer>
 
-  <script src="assets/i18n.js?v=10" defer></script>
-  <script src="assets/site.js?v=9" defer></script>
+  <script src="assets/i18n.js?v=11" defer></script>
+  <script src="assets/site.js?v=10" defer></script>
 </body>
 </html>

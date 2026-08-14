@@ -7,7 +7,7 @@
 backend:
   name: github
   repo: bngnco/landing
-  branch: main            # the branch Vercel deploys to production
+  branch: claude/landing-page-animation-mobile-sipxgu # current production branch
   # NOTE: no OAuth proxy/server is required. Sign in with a GitHub
   # Personal Access Token ("Sign In Using Access Token") — see README-BLOG.md.
   # OPTIONAL one-click "Sign In with GitHub" needs a free Cloudflare auth
@@ -25,8 +25,8 @@ media_folder: "uploads/blog"
 public_folder: "/uploads/blog"
 
 # Show a "View live" link from the editor.
-site_url: https://verifyco.info
-display_url: https://verifyco.info/blog
+site_url: https://verifyco.app
+display_url: https://verifyco.app/blog
 
 # ── Internationalisation ─────────────────────────────────────────────
 # One entry, edited in every language side by side, is written as separate
@@ -43,10 +43,24 @@ i18n:
   omit_default_locale_from_file_path: true
 
 collections:
+  - name: site
+    label: "Site settings"
+    i18n: false
+    files:
+      - name: announcement
+        label: "Header announcement"
+        file: "content/site/announcement.json"
+        format: json
+        fields:
+          - { name: enabled, label: "Show announcement", widget: boolean, default: true }
+          - { name: kicker, label: "Short label", widget: string, default: "NEWS" }
+          - { name: title, label: "Announcement text", widget: string }
+          - { name: url, label: "Link", widget: string, default: "/blog", hint: "Use /blog/... for an article or a full https:// URL." }
+
   - name: blog
     label: "Blog posts"
     label_singular: "Post"
-    description: "Articles published at verifyco.info/blog"
+    description: "Articles published at verifyco.app/blog"
     folder: "content/blog"
     create: true
     extension: md

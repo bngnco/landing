@@ -13,6 +13,40 @@
 
   root.classList.add("vera-ready");
 
+  /* Header announcement is stored as content so Sveltia CMS can update it
+     without editing this page. Keep a static fallback if the request fails. */
+  (function setupAnnouncement() {
+    var announcements = Array.prototype.slice.call(document.querySelectorAll("[data-announcement]"));
+    if (!announcements.length) return;
+    var mobileNav = document.querySelector("[data-mmenu] nav");
+    if (mobileNav && !mobileNav.querySelector("[data-announcement]")) {
+      var mobileAnnouncement = announcements[0].cloneNode(true);
+      mobileNav.insertBefore(mobileAnnouncement, mobileNav.firstChild);
+      announcements.push(mobileAnnouncement);
+    }
+    function apply(config) {
+      var enabled = !config || config.enabled !== false;
+      var href = config && typeof config.url === "string" ? config.url.trim() : "/blog";
+      try {
+        var parsed = new URL(href || "/blog", window.location.origin);
+        if (parsed.protocol !== "http:" && parsed.protocol !== "https:") href = "/blog";
+      } catch (error) { href = "/blog"; }
+      announcements.forEach(function (announcement) {
+        announcement.hidden = !enabled;
+        announcement.href = href || "/blog";
+        var kicker = announcement.querySelector("[data-announcement-kicker]");
+        var title = announcement.querySelector("[data-announcement-title]");
+        if (kicker) kicker.textContent = config && config.kicker ? config.kicker : "NEWS";
+        if (title) title.textContent = config && config.title ? config.title : "The new Verifyco engine is arriving";
+      });
+    }
+    apply(null);
+    fetch("/content/site/announcement.json", { cache: "no-store" })
+      .then(function (response) { return response.ok ? response.json() : null; })
+      .then(function (config) { if (config) apply(config); })
+      .catch(function () {});
+  })();
+
   /* ── Scroll state (one rAF-throttled listener) ───────────── */
   var nav = document.getElementById("nav");
   var scrollFrame = 0;
@@ -198,6 +232,12 @@
     }, { rootMargin: "0px 0px -10% 0px", threshold: 0.05 });
 
     revealItems.forEach(function (element) { revealObserver.observe(element); });
+    window.setTimeout(function () {
+      revealItems.forEach(function (element) {
+        element.classList.add("in");
+        revealObserver.unobserve(element);
+      });
+    }, 2200);
   }
 
   /* ── Pause CSS animation outside the viewport or hidden tab ─ */
@@ -245,7 +285,7 @@
 
     var states = {
       flag: {
-        html: "<b>[E-03] Neural</b> marks a face-region boundary in frames 112–178. <b>[E-04] Temporal</b> finds audio-visual drift in the same interval, while <b>[E-06] Frequency</b> adds contextual support. <b>Counterevidence:</b> <span class=\"ok\">[E-05] Audio</span> contains no detected splice artefact. Together these signals justify review, not a final authenticity verdict.",
+        html: "<b>[E-03] Visual</b> marks a localized texture boundary in frames 112–178. <b>[E-04] Temporal</b> finds audio-visual drift in the same interval, while <b>[E-06] Frequency</b> adds contextual support. <b>Counterevidence:</b> <span class=\"ok\">[E-05] Audio</span> contains no detected splice artefact. Together these signals justify review, not a final authenticity verdict.",
         support: "Evidence support: moderate",
         hit: ["neural", "temporal", "freq"],
         against: ["audio"],

@@ -29,8 +29,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=15" />
-  <link rel="stylesheet" href="assets/vera.css?v=12" />
+  <link rel="stylesheet" href="assets/site.css?v=16" />
+  <link rel="stylesheet" href="assets/vera.css?v=13" />
 
   <script type="application/ld+json">
   {
@@ -59,6 +59,11 @@
         <a href="#validation">Model card</a>
         <a href="/blog">Blog</a>
       </nav>
+      <a class="nav-announcement" data-announcement href="/blog">
+        <span data-announcement-kicker>NEWS</span>
+        <strong data-announcement-title>The new Verifyco engine is arriving</strong>
+        <i aria-hidden="true">&#8599;</i>
+      </a>
       <div class="nav-right">
         <a class="btn btn-ice btn-sm" href="#waitlist">Request access</a>
         <button type="button" class="burger" data-burger aria-label="Menu" aria-expanded="false">
@@ -106,7 +111,7 @@
             <b>ILLUSTRATIVE</b>
           </div>
           <div class="vr-case-file">
-            <span class="vr-file-thumb"><i></i><b>00:41</b></span>
+            <span class="vr-file-thumb"><img src="assets/challenge/pair03-fake.jpg" alt="" width="1620" height="1080" decoding="async" /><b>00:41</b></span>
             <span><strong>press_statement.mp4</strong><small>1080 × 1920 · shared copy · SHA-256 4fd8…a21c</small></span>
             <em>EXAMINATION READY</em>
           </div>
@@ -115,7 +120,7 @@
               <div class="vr-panel-label"><span>Evidence ledger</span><b>6 layers</b></div>
               <span class="vr-evidence"><b>E-01</b><i class="unknown"></i><span>C2PA provenance<small>No credentials found · inconclusive</small></span></span>
               <span class="vr-evidence"><b>E-02</b><i class="context"></i><span>Metadata context<small>Re-encoded twice · weak alone</small></span></span>
-              <span class="vr-evidence is-hot"><b>E-03</b><i class="support"></i><span>Neural region finding<small>Jawline boundary · frames 112–178</small></span></span>
+              <span class="vr-evidence is-hot"><b>E-03</b><i class="support"></i><span>Visual region finding<small>Texture boundary · frames 112–178</small></span></span>
               <span class="vr-evidence is-hot"><b>E-04</b><i class="support"></i><span>Temporal finding<small>Lip-sync drift in same segment</small></span></span>
               <span class="vr-evidence"><b>E-05</b><i class="counter"></i><span>Audio counterevidence<small>No splice artefact detected</small></span></span>
             </div>
@@ -176,8 +181,8 @@
           <div class="vr-exam-grid">
             <div class="vr-source-panel">
               <div class="vr-panel-label"><span>Source region</span><b>00:11.2–00:17.8</b></div>
-              <div class="vr-source-frame" aria-hidden="true">
-                <span class="vr-source-person"></span>
+              <div class="vr-source-frame" role="img" aria-label="Illustrative source frame with a highlighted examination region">
+                <img src="assets/challenge/pair03-real.jpg" alt="" width="1620" height="1080" loading="lazy" decoding="async" />
                 <span class="vr-source-box"><b>REGION E-03</b></span>
                 <span class="vr-source-time">00:14.1</span>
               </div>
@@ -189,7 +194,7 @@
               <div class="vr-panel-label"><span>Evidence ledger</span><b>selectable context</b></div>
               <span class="vr-evidence vr-enode" data-node="c2pa"><b>E-01</b><i class="unknown"></i><span>C2PA provenance<small>Inconclusive</small></span></span>
               <span class="vr-evidence vr-enode" data-node="meta"><b>E-02</b><i class="context"></i><span>Metadata<small>Context only</small></span></span>
-              <span class="vr-evidence vr-enode is-hot" data-node="neural"><b>E-03</b><i class="support"></i><span>Neural region<small>Supporting</small></span></span>
+              <span class="vr-evidence vr-enode is-hot" data-node="neural"><b>E-03</b><i class="support"></i><span>Visual region<small>Supporting</small></span></span>
               <span class="vr-evidence vr-enode is-hot" data-node="temporal"><b>E-04</b><i class="support"></i><span>Temporal alignment<small>Supporting</small></span></span>
               <span class="vr-evidence vr-enode" data-node="audio"><b>E-05</b><i class="counter"></i><span>Audio integrity<small>Counterevidence</small></span></span>
               <span class="vr-evidence vr-enode" data-node="freq"><b>E-06</b><i class="context"></i><span>Frequency pattern<small>Contextual</small></span></span>
@@ -197,7 +202,7 @@
 
             <div class="vr-answer-panel">
               <div class="vr-ans-head"><span class="vr-ans-who"><i></i>Vera · cited examination</span><span class="vr-ans-conf" data-conf>Confidence: moderate</span></div>
-              <p class="vr-ans-body" id="vr-ans-body" aria-live="polite">Two independent findings point to the same segment. The face-region boundary <b>[E-03]</b> overlaps the audio-visual timing drift <b>[E-04]</b>. Metadata <b>[E-02]</b> only shows re-encoding, while clean audio <b>[E-05]</b> is counterevidence. The original source is still missing.</p>
+              <p class="vr-ans-body" id="vr-ans-body" aria-live="polite">Two independent findings point to the same segment. The localized texture boundary <b>[E-03]</b> overlaps the audio-visual timing drift <b>[E-04]</b>. Metadata <b>[E-02]</b> only shows re-encoding, while clean audio <b>[E-05]</b> is counterevidence. The original source is still missing.</p>
               <dl class="vr-ans-meta">
                 <div><dt>Evidence used</dt><dd data-used>[E-03] · [E-04] · [E-02]</dd></div>
                 <div><dt>Counterevidence / uncertainty</dt><dd data-unc>[E-05] is clean; no original source for comparison.</dd></div>
@@ -288,6 +293,6 @@
     </div>
   </footer>
 
-  <script src="assets/vera.js?v=10" defer></script>
+  <script src="assets/vera.js?v=11" defer></script>
 </body>
 </html>
