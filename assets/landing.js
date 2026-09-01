@@ -29,6 +29,10 @@
     document.querySelectorAll("[data-i18n]").forEach(function (element) {
       element.innerHTML = window.VERIFYCO_TR(lang, element.getAttribute("data-i18n"));
     });
+    document.querySelectorAll("[data-i18n-aria-label]").forEach(function (element) {
+      var translated = window.VERIFYCO_TR(lang, element.getAttribute("data-i18n-aria-label"));
+      element.setAttribute("aria-label", translated.replace(/<[^>]*>/g, ""));
+    });
     var current = document.querySelector("[data-lang-current]");
     if (current) current.textContent = lang.toUpperCase();
     document.querySelectorAll("[data-lang-option]").forEach(function (button) {

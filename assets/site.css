@@ -879,6 +879,55 @@ body.menu-open .nav { background: #060504; }
 }
 
 /* ════════════════════════════════════════════════════════
+   ADVANCED FORENSICS — diagnostic sidecar, not a sixth vote
+   ════════════════════════════════════════════════════════ */
+.advanced-lab {
+  background:
+    radial-gradient(circle at 82% 45%, rgba(214,172,134,.09), transparent 34%),
+    linear-gradient(180deg, transparent, rgba(14,10,7,.72), transparent);
+}
+.advanced-lab-grid { display: grid; grid-template-columns: minmax(0,.84fr) minmax(520px,1.16fr); gap: clamp(42px,7vw,94px); align-items: center; }
+.advanced-lab-copy { display: grid; justify-items: start; gap: 21px; }
+.advanced-lab-copy .sub { max-width: 57ch; }
+.advanced-boundary { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: center; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(214,172,134,.045); }
+.advanced-boundary span { padding: 5px 7px; border-radius: 999px; color: #080604; background: var(--bronze-2); font: 700 7px/1 var(--f-mono); letter-spacing: .13em; }
+.advanced-boundary b { color: var(--ink-2); font: 500 10px/1.55 var(--f-mono); letter-spacing: .035em; }
+.advanced-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.advanced-instrument { overflow: hidden; border: 1px solid var(--line-2); border-radius: 26px; background: linear-gradient(150deg,#100c09,#080605); box-shadow: 0 32px 80px rgba(0,0,0,.28); }
+.advanced-instrument-top,.advanced-instrument-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 17px; color: var(--ink-3); font: 500 8px/1 var(--f-mono); letter-spacing: .15em; }
+.advanced-instrument-top { border-bottom: 1px solid var(--line); }
+.advanced-instrument-top span { display: flex; align-items: center; gap: 8px; }
+.advanced-instrument-top i { width: 6px; height: 6px; border-radius: 50%; background: #4fbd78; box-shadow: 0 0 10px rgba(79,189,120,.48); }
+.advanced-instrument-foot { border-top: 1px solid var(--line); line-height: 1.45; }
+.advanced-instrument-foot b { color: var(--bronze-2); text-align: right; }
+.advanced-core { padding: clamp(19px,3vw,30px); }
+.advanced-release { padding: 18px; border: 1px solid rgba(79,189,120,.2); border-radius: 17px; background: linear-gradient(120deg,rgba(79,189,120,.055),rgba(255,255,255,.012)); }
+.advanced-release small { display: block; color: #71c892; font: 600 8px/1 var(--f-mono); letter-spacing: .17em; }
+.advanced-release strong { display: block; margin-top: 8px; color: var(--cream); font: 600 clamp(20px,3vw,31px)/1 var(--f-display); letter-spacing: -.02em; }
+.advanced-signal-pills { display: grid; grid-template-columns: repeat(5,1fr); gap: 6px; margin-top: 17px; }
+.advanced-signal-pills span { padding: 8px 4px; border: 1px solid var(--line); border-radius: 8px; color: var(--ink-2); background: rgba(255,255,255,.018); text-align: center; font: 600 7px/1 var(--f-mono); letter-spacing: .1em; }
+.advanced-rail { display: flex; height: 28px; align-items: stretch; justify-content: center; gap: 64px; }
+.advanced-rail i { width: 1px; background: linear-gradient(var(--line-2),var(--bronze-2)); opacity: .65; }
+.advanced-diagnostics { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+.advanced-diagnostics article { position: relative; min-height: 190px; padding: 19px; border: 1px solid var(--line-2); border-radius: 17px; background: linear-gradient(145deg,rgba(214,172,134,.075),rgba(255,255,255,.012)); }
+.advanced-diagnostics .advanced-document { grid-column: 1 / -1; min-height: 148px; background: linear-gradient(120deg,rgba(214,172,134,.09),rgba(79,189,120,.025)); }
+.advanced-diagnostics article > span { display: inline-grid; width: 32px; height: 32px; place-items: center; border: 1px solid rgba(214,172,134,.35); border-radius: 9px; color: var(--bronze-2); font: 700 10px/1 var(--f-mono); }
+.advanced-diagnostics h3 { margin-top: 15px; color: var(--cream); font-size: 16px; line-height: 1.2; }
+.advanced-diagnostics p { margin-top: 8px; color: var(--ink-2); font-size: 11.5px; line-height: 1.55; }
+.advanced-diagnostics em { position: absolute; left: 19px; bottom: 15px; color: var(--ink-3); font: 600 7px/1 var(--f-mono); letter-spacing: .14em; font-style: normal; }
+@media (max-width: 980px) { .advanced-lab-grid { grid-template-columns: 1fr; } .advanced-instrument { max-width: 720px; width: 100%; } }
+@media (max-width: 560px) {
+  .advanced-diagnostics { grid-template-columns: 1fr; }
+  .advanced-diagnostics article { min-height: 170px; }
+  .advanced-diagnostics .advanced-document { min-height: 190px; }
+  .advanced-signal-pills { grid-template-columns: repeat(3,1fr); }
+  .advanced-instrument-foot { align-items: flex-start; flex-direction: column; }
+  .advanced-instrument-foot b { text-align: left; }
+  .advanced-actions { width: 100%; }
+  .advanced-actions .btn { width: 100%; }
+}
+
+/* ════════════════════════════════════════════════════════
    DEEPDETECT+ TEASER
    ════════════════════════════════════════════════════════ */
 .dd-panel {

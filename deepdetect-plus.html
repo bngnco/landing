@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DeepDetect+ — Verifyco</title>
-  <meta name="description" content="DeepDetect+ — Verifyco's advanced detection engine. Multi-layer forensic inspection and an on-device neural architecture trained on adversarial deepfakes." />
+  <meta name="description" content="DeepDetect+ combines five governed forensic evidence families with an on-device neural model and separate diagnostic edit and consistency observations." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://verifyco.app/deepdetect-plus" />
   <link rel="icon" type="image/png" href="assets/verifyco-icon.png" />
@@ -149,6 +149,12 @@
     .ddx-card__icon svg { width: 23px; height: 23px; }
     .ddx-card__title { font-size: 19px; font-weight: 600; letter-spacing: -0.012em; margin: 0 0 10px; color: var(--text); }
     .ddx-card__desc { font-size: 14.5px; line-height: 1.55; color: var(--text-2); margin: 0; text-wrap: pretty; }
+    .ddx-boundary { margin-top: 18px; display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center; padding: 20px 22px; border: 1px solid rgba(214,172,134,.28); border-radius: 18px; background: linear-gradient(120deg,rgba(214,172,134,.075),rgba(255,255,255,.012)); }
+    .ddx-boundary__mark { display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid rgba(214,172,134,.35); border-radius: 12px; color: var(--scan-bright); font: 700 10px/1 var(--f-mono); }
+    .ddx-boundary h3 { margin: 0; color: var(--text); font-size: 17px; }
+    .ddx-boundary p { margin: 5px 0 0; color: var(--text-2); font-size: 12.5px; line-height: 1.5; }
+    .ddx-boundary a { white-space: nowrap; color: var(--scan-bright); font: 600 10px/1 var(--f-mono); letter-spacing: .08em; }
+    @media (max-width: 680px) { .ddx-boundary { grid-template-columns: auto 1fr; } .ddx-boundary a { grid-column: 1 / -1; } }
 
     /* ===================== Who it's for ===================== */
     .ddx-uses {
@@ -337,7 +343,7 @@
       <p class="ddx-tagline" data-i18n="dd.tagline">Advanced deepfake detection</p>
 
       <p class="ddx-desc" data-i18n="dd.desc">
-        DeepDetect+ is Verifyco's advanced detection engine, combining multi-layer forensic inspection with a neural architecture trained on adversarial deepfakes, generative-AI artifacts, and historic manipulation patterns — designed to surface the evidence that matters.
+        DeepDetect+ combines five governed evidence families with an on-device neural model. Every unavailable or uncalibrated check is reported explicitly instead of being turned into false confidence.
       </p>
 
       <div class="ddx-powered">
@@ -358,7 +364,15 @@
       <div class="section__head reveal">
         <span class="eyebrow" data-i18n="dd.layers.eyebrow">HOW IT WORKS</span>
         <h2 class="section__title" data-i18n="dd.layers.title">Detection <em>layers.</em></h2>
-        <p class="section__sub" data-i18n="dd.layers.sub">Six independent forensic methods run on every file, then fuse into a single, explainable verdict.</p>
+        <p class="section__sub" data-i18n="dd.layers.sub">Five governed evidence families run when applicable. Separate advanced diagnostics explain structure and consistency without becoming a sixth vote.</p>
+      </div>
+      <div class="ddx-boundary reveal">
+        <span class="ddx-boundary__mark">L6/7</span>
+        <div>
+          <h3 data-i18n="dd.boundary.title">Advanced report, separate authority</h3>
+          <p data-i18n="dd.boundary.body">JPEG/PNG workflow traces and cross-layer consistency now appear beside the verdict at 0% release reliability. They are visible context, not hidden score multipliers.</p>
+        </div>
+        <a href="/#advanced-forensics" data-i18n="dd.boundary.cta">EXPLORE THE CONTRACT →</a>
       </div>
 
       <div class="ddx-layers reveal">
@@ -479,10 +493,10 @@
           <div class="ddx-tech-body">
             <div class="ddx-tech-head">
               <span class="ddx-tech-num">01</span>
-              <span class="ddx-tech-pill" data-i18n="dd.active">Active</span>
+              <span class="ddx-tech-pill" data-i18n="dd.tooling">Tooling ready</span>
             </div>
-            <h3 class="ddx-tech-title" data-i18n="dd.t1.t">Adversarial dataset</h3>
-            <p class="ddx-tech-desc" data-i18n="dd.t1.d">Trained on authentic media, classical edits, and AI-generated content spanning multiple state-of-the-art generative models.</p>
+            <h3 class="ddx-tech-title" data-i18n="dd.t1.t">Transformation-corpus tooling</h3>
+            <p class="ddx-tech-desc" data-i18n="dd.t1.d">Versioned schemas and deterministic generators enforce source lineage, split isolation and region-mask contracts. Corpus population, locking and calibration remain release gates.</p>
           </div>
         </div>
 

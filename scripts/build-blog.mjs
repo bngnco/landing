@@ -1368,17 +1368,19 @@ function build() {
   const enPosts = byLang[DEFAULT_LANG] || [];
   const llms =
     `# Verifyco\n\n` +
-    `> Verifyco is an iPhone app for on-device forensic verification of photos and videos. ` +
-    `It fuses five forensic signals (C2PA content credentials, metadata forensics, neural face analysis, ` +
-    `motion/temporal consistency, DCT frequency analysis) into a 0-100 trust score to detect deepfakes, ` +
-    `AI-generated and manipulated media. Analysis runs entirely on-device via Apple's Neural Engine - ` +
-    `nothing is uploaded, no account required, works offline. Free to try.\n\n` +
+    `> Verifyco provides evidence-led photo and video verification on iPhone and the web. ` +
+    `The governed Fusion 2.8 result combines five evidence families: C2PA provenance, metadata, ` +
+    `neural artifact screening, temporal consistency for moving media, and bounded frequency diagnostics. ` +
+    `Optional L6 edit/container observations and L7 consistency context are shown separately with zero ` +
+    `release reliability until corpus calibration, so they cannot overrule the public score or verdict. ` +
+    `A private server-key PDF structure endpoint, CLI and local MCP tool return diagnostic-only reports with no document verdict. ` +
+    `Local-file analysis on iPhone runs on device; public-link and web analysis use temporary backend processing.\n\n` +
     `App Store: ${SITE.appStore}\n\n` +
     `## Key pages\n\n` +
     `- [Home](${SITE.url}/): product overview, how it works, pricing\n` +
-    `- [DeepDetect+](${SITE.url}/deepdetect-plus): the advanced detection engine\n` +
+    `- [DeepDetect+](${SITE.url}/deepdetect-plus): governed evidence and score-excluded advanced diagnostics\n` +
     `- [Support](${SITE.url}/support)\n` +
-    `- [Privacy](${SITE.url}/privacy): no uploads, no accounts, on-device only\n\n` +
+    `- [Privacy](${SITE.url}/privacy): on-device iPhone files, temporary link/web processing, and web-account data handling\n\n` +
     `## Blog (guides on deepfake & AI-media detection)\n\n` +
     enPosts.map((p) => `- [${p.title}](${p.canonical}): ${p.description}`).join("\n") +
     `\n\n## Languages\n\nThe blog is also available in: ` +
