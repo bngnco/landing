@@ -910,7 +910,7 @@ body.menu-open .nav { background: #060504; }
 .advanced-rail i { width: 1px; background: linear-gradient(var(--line-2),var(--bronze-2)); opacity: .65; }
 .advanced-diagnostics { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
 .advanced-diagnostics article { position: relative; min-height: 190px; padding: 19px; border: 1px solid var(--line-2); border-radius: 17px; background: linear-gradient(145deg,rgba(214,172,134,.075),rgba(255,255,255,.012)); }
-.advanced-diagnostics .advanced-document { grid-column: 1 / -1; min-height: 148px; background: linear-gradient(120deg,rgba(214,172,134,.09),rgba(79,189,120,.025)); }
+.advanced-diagnostics .advanced-document { min-height: 190px; background: linear-gradient(120deg,rgba(214,172,134,.09),rgba(79,189,120,.025)); }
 .advanced-diagnostics article > span { display: inline-grid; width: 32px; height: 32px; place-items: center; border: 1px solid rgba(214,172,134,.35); border-radius: 9px; color: var(--bronze-2); font: 700 10px/1 var(--f-mono); }
 .advanced-diagnostics h3 { margin-top: 15px; color: var(--cream); font-size: 16px; line-height: 1.2; }
 .advanced-diagnostics p { margin-top: 8px; color: var(--ink-2); font-size: 11.5px; line-height: 1.55; }
@@ -919,7 +919,7 @@ body.menu-open .nav { background: #060504; }
 @media (max-width: 560px) {
   .advanced-diagnostics { grid-template-columns: 1fr; }
   .advanced-diagnostics article { min-height: 170px; }
-  .advanced-diagnostics .advanced-document { min-height: 190px; }
+  .advanced-diagnostics .advanced-document { min-height: 170px; }
   .advanced-signal-pills { grid-template-columns: repeat(3,1fr); }
   .advanced-instrument-foot { align-items: flex-start; flex-direction: column; }
   .advanced-instrument-foot b { text-align: left; }
