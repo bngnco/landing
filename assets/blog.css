@@ -164,6 +164,16 @@ ul, ol { margin: 0; }
   color: var(--text);
   line-height: 1;
   display: inline-flex;
+  align-items: center;
+}
+.brand::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  margin-right: 8px;
+  background: url("verifyco-mark.png") center / contain no-repeat;
+  filter: drop-shadow(0 7px 14px rgba(193, 133, 84, 0.2));
 }
 .brand em { font-family: var(--f-serif); font-style: italic; font-weight: 400; color: var(--bronze-2); }
 

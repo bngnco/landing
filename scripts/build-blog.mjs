@@ -744,7 +744,7 @@ function page({
   <link rel="alternate" type="application/rss+xml" title="${esc(SITE.blogName)}" href="${SITE.url}${langPrefix(lang)}/blog/feed.xml" />
   ${THEME_BOOT}
   ${FONTS}
-  <link rel="stylesheet" href="/assets/blog.css?v=4" />
+  <link rel="stylesheet" href="/assets/blog.css?v=5" />
 ${head}
 </head>
 <body class="${bodyClass}">
