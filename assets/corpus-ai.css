@@ -1,4 +1,4 @@
-/* Vera by Verifyco — evidence-led research page. */
+/* Corpus AI by Verifyco — conversational evidence research page. */
 :root {
   --vr: #9fc4da;
   --vr-2: #d7e9f4;
@@ -16,12 +16,12 @@
   --vr-green: #7bc9a2;
 }
 
-body.vera {
+body.corpus-ai-page {
   background: var(--vr-bg);
   color: var(--vr-text);
 }
-body.vera ::selection { background: rgba(159, 196, 218, .28); color: #fff; }
-body.vera :focus-visible { outline-color: var(--vr); }
+body.corpus-ai-page ::selection { background: rgba(159, 196, 218, .28); color: #fff; }
+body.corpus-ai-page :focus-visible { outline-color: var(--vr); }
 
 .skip-link {
   position: fixed;
@@ -37,14 +37,14 @@ body.vera :focus-visible { outline-color: var(--vr); }
 }
 .skip-link:focus { transform: none; }
 
-body.vera .nav.is-solid { background: rgba(5, 7, 12, .98); border-bottom-color: var(--vr-line); }
-body.vera .nav-links a:hover,
-body.vera .nav-links a.is-here { color: var(--vr-2); }
-body.vera .nav-links a::after { background: var(--vr); }
-body.vera .burger { border-color: var(--vr-line); }
-body.vera .mmenu { background: #05070c; }
-body.vera.menu-open .nav { background: #05070c; }
-body.vera .mmenu a.mlink { border-bottom-color: var(--vr-line); }
+body.corpus-ai-page .nav.is-solid { background: rgba(5, 7, 12, .98); border-bottom-color: var(--vr-line); }
+body.corpus-ai-page .nav-links a:hover,
+body.corpus-ai-page .nav-links a.is-here { color: var(--vr-2); }
+body.corpus-ai-page .nav-links a::after { background: var(--vr); }
+body.corpus-ai-page .burger { border-color: var(--vr-line); }
+body.corpus-ai-page .mmenu { background: #05070c; }
+body.corpus-ai-page.menu-open .nav { background: #05070c; }
+body.corpus-ai-page .mmenu a.mlink { border-bottom-color: var(--vr-line); }
 
 .vhl {
   background: linear-gradient(108deg, #eaf7ff 0%, #9fc4da 50%, #6f91a6 100%);
@@ -52,8 +52,8 @@ body.vera .mmenu a.mlink { border-bottom-color: var(--vr-line); }
   background-clip: text;
   color: transparent;
 }
-body.vera .eyebrow { color: var(--vr); }
-body.vera .eyebrow::before { background: var(--vr-deep); }
+body.corpus-ai-page .eyebrow { color: var(--vr); }
+body.corpus-ai-page .eyebrow::before { background: var(--vr-deep); }
 
 .btn-ice,
 .btn-ice-line {
@@ -78,12 +78,12 @@ body.vera .eyebrow::before { background: var(--vr-deep); }
 
 /* Reveal only after JS opts in; no-JS stays readable. */
 .v-rv { transition: opacity 620ms var(--ease), transform 620ms var(--ease); }
-.vera-ready .v-rv { opacity: 0; transform: translateY(20px); }
-.vera-ready .v-rv.in,
-.vera-ready .v-rv.is-visible { opacity: 1; transform: none; }
+.corpus-ready .v-rv { opacity: 0; transform: translateY(20px); }
+.corpus-ready .v-rv.in,
+.corpus-ready .v-rv.is-visible { opacity: 1; transform: none; }
 
 @supports (content-visibility: auto) {
-  body.vera .sec {
+  body.corpus-ai-page .sec {
     content-visibility: auto;
     contain-intrinsic-size: auto 820px;
   }
@@ -379,8 +379,8 @@ body.vera .eyebrow::before { background: var(--vr-deep); }
 .vr-partner { color: var(--vr); border-bottom: 1px solid var(--vr-line-2); }
 .vr-partner { margin-top: 5px; font-size: 12px; }
 
-body.vera footer { border-top-color: var(--vr-line); }
-body.vera .foot-col a:hover { color: var(--vr-2); }
+body.corpus-ai-page footer { border-top-color: var(--vr-line); }
+body.corpus-ai-page .foot-col a:hover { color: var(--vr-2); }
 
 /* Pause any shared ambient animation outside the viewport. */
 .vr-off,
@@ -437,7 +437,7 @@ body.vera .foot-col a:hover { color: var(--vr-2); }
 }
 
 @media (max-width: 480px) {
-  body.vera .nav-right .btn { display: none; }
+  body.corpus-ai-page .nav-right .btn { display: none; }
   .vr-hero-copy { gap: 18px; }
   .vr-ctas { width: 100%; }
   .vr-ctas .btn { width: 100%; }
@@ -451,7 +451,7 @@ body.vera .foot-col a:hover { color: var(--vr-2); }
 
 @media (prefers-reduced-motion: reduce) {
   .v-rv { transition: none; }
-  .vera-ready .v-rv { opacity: 1; transform: none; }
+  .corpus-ready .v-rv { opacity: 1; transform: none; }
   .btn-ice:hover,
   .btn-ice-line:hover { transform: none; }
 }

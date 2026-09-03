@@ -33,7 +33,7 @@ const SITE = {
   defaultImage: "/assets/app/signals.png",
   twitter: "@verifyco",
   // Existing top-level pages, included in the sitemap (clean URLs).
-  staticPages: ["/", "/deepdetect-plus", "/vera", "/support", "/privacy", "/terms"],
+  staticPages: ["/", "/deepdetect-plus", "/corpus-ai", "/support", "/privacy", "/terms"],
 };
 
 /* ── Languages ────────────────────────────────────────────────────────
@@ -1150,7 +1150,7 @@ function writeFileSafe(file, contents) {
    to every page even if the XML sitemap fetch is delayed. */
 function sitemapHtmlPage(byLang) {
   const pageLabels = {
-    "/": "Home", "/deepdetect-plus": "DeepDetect+", "/vera": "Vera",
+    "/": "Home", "/deepdetect-plus": "DeepDetect+", "/corpus-ai": "Corpus AI",
     "/support": "Support", "/privacy": "Privacy", "/terms": "Terms",
   };
   const list = (items) => `<ul class="sm-list">${items}</ul>`;
@@ -1369,16 +1369,15 @@ function build() {
   const llms =
     `# Verifyco\n\n` +
     `> Verifyco provides evidence-led photo and video verification on iPhone and the web. ` +
-    `The governed Fusion 2.8 result combines five evidence families: C2PA provenance, metadata, ` +
-    `neural artifact screening, temporal consistency for moving media, and bounded frequency diagnostics. ` +
-    `Optional L6 edit/container observations and L7 consistency context are shown separately with zero ` +
-    `release reliability until corpus calibration, so they cannot overrule the public score or verdict. ` +
-    `A private server-key PDF structure endpoint, CLI and local MCP tool return diagnostic-only reports with no document verdict. ` +
+    `Its multi-signal result keeps provenance, media observations, unavailable checks and uncertainty distinct. ` +
+    `Additional edit, consistency and document findings are shown separately and cannot silently overrule the public result. ` +
+    `API, CLI and MCP tools extend the same evidence workflow for approved developer use. ` +
     `Local-file analysis on iPhone runs on device; public-link and web analysis use temporary backend processing.\n\n` +
     `App Store: ${SITE.appStore}\n\n` +
     `## Key pages\n\n` +
     `- [Home](${SITE.url}/): product overview, how it works, pricing\n` +
     `- [DeepDetect+](${SITE.url}/deepdetect-plus): governed evidence and score-excluded advanced diagnostics\n` +
+    `- [Corpus AI](${SITE.url}/corpus-ai): conversational media-analysis assistant in development\n` +
     `- [Support](${SITE.url}/support)\n` +
     `- [Privacy](${SITE.url}/privacy): on-device iPhone files, temporary link/web processing, and web-account data handling\n\n` +
     `## Blog (guides on deepfake & AI-media detection)\n\n` +

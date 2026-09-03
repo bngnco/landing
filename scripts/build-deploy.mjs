@@ -9,7 +9,7 @@ const DIST = path.join(ROOT, "dist");
 
 const PUBLIC_FILES = [
   "index.html",
-  "vera.html",
+  "corpus-ai.html",
   "deepdetect-plus.html",
   "support.html",
   "privacy.html",

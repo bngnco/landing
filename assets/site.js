@@ -424,7 +424,7 @@
   }
 
   function setupAmbientWork() {
-    var roots = Array.prototype.slice.call(document.querySelectorAll(".hero, .mq, [data-dd-visual], .vera-teaser"));
+    var roots = Array.prototype.slice.call(document.querySelectorAll(".hero, .mq, [data-dd-visual], .corpus-teaser"));
     if (!("IntersectionObserver" in window)) return;
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

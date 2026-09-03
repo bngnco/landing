@@ -1,6 +1,6 @@
 # Verifyco
 
-> Verifyco provides evidence-led photo and video verification on iPhone and the web. The governed Fusion 2.8 result combines five evidence families: C2PA provenance, metadata, neural artifact screening, temporal consistency for moving media, and bounded frequency diagnostics. Optional L6 edit/container observations and L7 consistency context are shown separately with zero release reliability until corpus calibration, so they cannot overrule the public score or verdict. A private server-key PDF structure endpoint, CLI and local MCP tool return diagnostic-only reports with no document verdict. Local-file analysis on iPhone runs on device; public-link and web analysis use temporary backend processing.
+> Verifyco provides evidence-led photo and video verification on iPhone and the web. Its multi-signal result keeps provenance, media observations, unavailable checks and uncertainty distinct. Additional edit, consistency and document findings are shown separately and cannot silently overrule the public result. API, CLI and MCP tools extend the same evidence workflow for approved developer use. Local-file analysis on iPhone runs on device; public-link and web analysis use temporary backend processing.
 
 App Store: https://apps.apple.com/app/id6772592963
 
@@ -8,6 +8,7 @@ App Store: https://apps.apple.com/app/id6772592963
 
 - [Home](https://verifyco.app/): product overview, how it works, pricing
 - [DeepDetect+](https://verifyco.app/deepdetect-plus): governed evidence and score-excluded advanced diagnostics
+- [Corpus AI](https://verifyco.app/corpus-ai): conversational media-analysis assistant in development
 - [Support](https://verifyco.app/support)
 - [Privacy](https://verifyco.app/privacy): on-device iPhone files, temporary link/web processing, and web-account data handling
 

@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════
-   VERIFYCO — vera.js
-   Small, dependency-free behaviour layer for the Vera preview.
+   VERIFYCO — corpus-ai.js
+   Small, dependency-free behaviour layer for the Corpus AI preview.
    Static HTML remains the source of truth; JavaScript adds
    navigation, progressive reveals and deterministic sample data.
    ════════════════════════════════════════════════════════════ */
@@ -11,7 +11,7 @@
   var body = document.body;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  root.classList.add("vera-ready");
+  root.classList.add("corpus-ready");
 
   /* Header announcement is stored as content so Sveltia CMS can update it
      without editing this page. Keep a static fallback if the request fails. */
@@ -69,7 +69,7 @@
   var menu = document.querySelector("[data-mmenu]");
 
   if (burger && menu) {
-    var menuId = menu.id || "vera-mobile-menu";
+    var menuId = menu.id || "corpus-mobile-menu";
     var lastFocused = null;
     var lockedScrollY = 0;
     var previousBodyOverflow = "";
@@ -396,8 +396,8 @@
         formMessage.textContent = "Email draft opened; send it to complete your request.";
         formMessage.className = "vr-wait-msg ok";
 
-        var subject = encodeURIComponent("Vera preview access request");
-        var message = encodeURIComponent("Please add me to the Vera by Verifyco preview list.\n\nEmail: " + email);
+        var subject = encodeURIComponent("Corpus AI preview access request");
+        var message = encodeURIComponent("Please add me to the Corpus AI by Verifyco preview list.\n\nEmail: " + email);
         window.location.href = "mailto:support@verifyco.app?subject=" + subject + "&body=" + message;
       });
     }
