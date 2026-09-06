@@ -158,24 +158,17 @@ ul, ol { margin: 0; }
 
 /* ── Brand wordmark ───────────────────────────────────────────────── */
 .brand {
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  line-height: 1;
+  width: 142px;
+  height: 38px;
+  flex: 0 0 142px;
   display: inline-flex;
-  align-items: center;
+  background: url("verifyco-wordmark-tight.png") center / contain no-repeat;
+  font-size: 0;
+  line-height: 0;
+  filter: drop-shadow(0 7px 14px rgba(193, 133, 84, 0.16));
 }
-.brand::before {
-  content: "";
-  width: 32px;
-  height: 32px;
-  flex: 0 0 32px;
-  margin-right: 8px;
-  background: url("verifyco-mark.png") center / contain no-repeat;
-  filter: drop-shadow(0 7px 14px rgba(193, 133, 84, 0.2));
-}
-.brand em { font-family: var(--f-serif); font-style: italic; font-weight: 400; color: var(--bronze-2); }
+.brand::before { content: none; }
+.brand em { display: none; }
 
 /* ── Nav ──────────────────────────────────────────────────────────── */
 .bnav {

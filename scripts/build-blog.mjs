@@ -739,12 +739,12 @@ function page({
   <meta name="twitter:description" content="${esc(searchDescription)}" />
   <meta name="twitter:image" content="${esc(img)}" />
 
-  <link rel="icon" type="image/png" href="/assets/verifyco-icon.png" />
+  <link rel="icon" type="image/png" href="/assets/verifyco-mark.png" />
   <link rel="apple-touch-icon" href="/assets/verifyco-icon.png" />
   <link rel="alternate" type="application/rss+xml" title="${esc(SITE.blogName)}" href="${SITE.url}${langPrefix(lang)}/blog/feed.xml" />
   ${THEME_BOOT}
   ${FONTS}
-  <link rel="stylesheet" href="/assets/blog.css?v=5" />
+  <link rel="stylesheet" href="/assets/blog.css?v=6" />
 ${head}
 </head>
 <body class="${bodyClass}">
