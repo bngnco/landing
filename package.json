@@ -8,7 +8,8 @@
     "blog": "node scripts/build-blog.mjs",
     "build": "node scripts/build-deploy.mjs",
     "check": "node scripts/verify-site.mjs",
-    "test": "node scripts/build-deploy.mjs && node scripts/verify-site.mjs"
+    "check:claims": "node scripts/verify-claims.mjs",
+    "test": "node scripts/build-deploy.mjs && node scripts/verify-site.mjs && npm run check:claims"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
