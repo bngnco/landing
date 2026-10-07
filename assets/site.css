@@ -1110,6 +1110,49 @@ body.menu-open .nav { background: #060504; }
 /* [hidden] is a UA style that any author display rule overrides — restore it
    for the panels/notes so the inactive platform is actually hidden. */
 .plans[hidden] { display: none; }
+
+/* One-time credit packs + Lifetime strip under the iPhone plans (1.3). */
+.packs {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 16px;
+  padding: 24px 26px;
+  border: 1px dashed var(--line-2);
+  border-radius: var(--rad);
+  background: var(--bronze-soft);
+}
+.packs-title {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bronze-2);
+}
+.packs-sub { margin: 8px 0 0; font-size: 14px; line-height: 1.55; color: var(--ink-2); text-wrap: pretty; }
+.packs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.packs-list li {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(10, 8, 7, 0.6);
+}
+.packs-list strong { font-family: var(--f-serif); font-weight: 400; font-size: 24px; line-height: 1; color: var(--ink); }
+.packs-list li.packs-life strong { font-size: 18px; }
+.packs-list span { font-size: 12px; line-height: 1.4; color: var(--ink-2); }
+.packs-list em { font-style: normal; font-family: var(--f-mono); font-size: 13px; color: var(--bronze-2); margin-top: 4px; }
+.packs-note { margin: 0; font-size: 12px; line-height: 1.5; color: var(--ink-3); }
+@media (max-width: 1060px) { .packs-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .packs-list { grid-template-columns: 1fr; } .packs { padding: 20px 18px; } }
 [data-ppanel-note][hidden] { display: none; }
 
 /* ── Platform switch (iPhone ⇄ Web) ─────────────────────────────────── */
