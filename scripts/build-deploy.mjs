@@ -1,6 +1,7 @@
 import "./build-blog.mjs";
 
-import { cp, copyFile, mkdir, readFile, readdir, rm, stat } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { cp, copyFile, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -93,6 +94,42 @@ if (await exists(announcementSource)) {
   await copyFile(announcementSource, path.join(DIST, "assets", "announcement.json"));
 }
 
+// Cache busting (verification batch 14, V14-4): /assets/* is served with a
+// seven-day max-age, and a hand-maintained ?v= fell behind every edit, so
+// returning visitors ran a stale i18n.js against new markup (raw keys on
+// the page). Every assets/<file>.js|css reference in a published HTML page
+// now carries a content hash of the file it names; the source files keep
+// whatever ?v= they have.
+async function stampAssetVersions() {
+  const hashes = new Map();
+  async function hashFor(assetPath) {
+    if (!hashes.has(assetPath)) {
+      const absolute = path.join(DIST, assetPath);
+      if (!await exists(absolute)) return null;
+      hashes.set(assetPath, createHash("sha1").update(await readFile(absolute)).digest("hex").slice(0, 10));
+    }
+    return hashes.get(assetPath);
+  }
+  let stamped = 0;
+  for (const file of await walk(DIST)) {
+    if (path.extname(file).toLowerCase() !== ".html") continue;
+    const source = await readFile(file, "utf8");
+    const pattern = /((?:\.\.\/|\.\/|\/)?assets\/[A-Za-z0-9_.-]+\.(?:js|css))(\?v=[A-Za-z0-9_.-]+)?(?=["'\s>])/g;
+    const replacements = [];
+    for (const match of source.matchAll(pattern)) {
+      const relative = match[1].replace(/^(?:\.\.\/|\.\/|\/)/, "");
+      const hash = await hashFor(relative);
+      if (hash) replacements.push([match[0], `${match[1]}?v=${hash}`]);
+    }
+    if (!replacements.length) continue;
+    let output = source;
+    for (const [from, to] of replacements) output = output.split(from).join(to);
+    if (output !== source) { await writeFile(file, output); stamped += 1; }
+  }
+  return stamped;
+}
+const stampedPages = await stampAssetVersions();
+
 const uploadCount = await copyRequiredUploads();
 
 const forbidden = ["content", "scripts", "node_modules", ".git", ".preview", "package.json", "package-lock.json"];
@@ -100,4 +137,4 @@ for (const item of forbidden) {
   if (await exists(path.join(DIST, item))) throw new Error(`Private build input leaked into dist: ${item}`);
 }
 
-console.log(`Production bundle ready: dist/ · ${uploadCount} referenced upload assets copied · source inputs excluded.`);
+console.log(`Production bundle ready: dist/ · ${uploadCount} referenced upload assets copied · asset versions stamped on ${stampedPages} pages · source inputs excluded.`);
