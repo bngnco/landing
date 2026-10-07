@@ -9,18 +9,19 @@ window.VERIFYCO_LEGAL = {
   privacy: {
     en: `# Privacy Policy
 
-_Last updated: June 2026_
+_Last updated: October 2026_
 
-This Privacy Policy explains how Verifyco ("Verifyco", "the App", "we", "us", or "our") handles information when you use the Verifyco mobile application. Verifyco is built privacy-first: the App is designed so that the photos and videos you analyze never have to leave your device.
+This Privacy Policy explains how Verifyco ("Verifyco", "the App", "we", "us", or "our") handles information when you use the Verifyco mobile application. Files selected from your device are analyzed on-device. If you choose social-link import, the submitted URL and the linked media pass through Verifyco's extraction service so the media can be delivered to your device for analysis.
 
 By using Verifyco you confirm that you have read and understood this Policy. If you do not agree with it, please do not use the App.
 
 ## Summary
 
-- Your media is analyzed entirely on your device and is never uploaded to us.
+- Files selected from your device are analyzed locally and are not uploaded to Verifyco.
+- Social-link import sends the URL to our extraction service; linked media is processed temporarily and deleted after transfer.
 - We do not require an account, email address, or phone number.
 - We do not sell or rent personal data, and we do not use it to build advertising profiles.
-- Optional, anonymous diagnostics, push notifications, and free-tier advertising are the only data flows, and you control them.
+- Optional diagnostics, push notifications, purchases, advertising, and social-link import are the limited data flows described below.
 
 ## 1. Who We Are
 
@@ -28,11 +29,11 @@ Verifyco is provided by the Verifyco app developer (the "Developer"). For any pr
 
 ## 2. Our Privacy-First Design
 
-All authenticity analysis — content credentials, metadata forensics, AI and deepfake detection, frequency analysis, and audio checks — runs locally on your device using on-device processing. The media you select for analysis is **not** transmitted to Verifyco or to any third-party analysis server.
+Authenticity analysis — content credentials, metadata forensics, AI-media analysis, frequency analysis, and audio checks — runs locally on your device. A file selected from Photos, Files, or Camera is not transmitted to Verifyco. Social-link import is the explicit exception: the App submits the URL to our extraction service, which retrieves the linked media, streams it to the App, and removes its temporary server copy after the response completes.
 
 ## 3. Information We Do Not Collect
 
-- We do not collect, upload, or store your photos, videos, or audio files.
+- We do not upload files you select locally. Social-link media may be held only in temporary server storage during extraction and transfer; it is not retained as an analysis library.
 - We do not require you to create an account and do not collect your name, email, or phone number.
 - We do not collect your contacts, precise location, browsing history, or health data.
 - We do not track you across other companies' apps or websites for our own purposes.
@@ -41,14 +42,18 @@ All authenticity analysis — content credentials, metadata forensics, AI and de
 
 When you choose media to analyze, the App reads that file solely to perform the analysis on your device. A local analysis history (such as file name, trust score, verdict, and a small thumbnail) may be stored on your device so you can revisit past results. This history stays on your device and is never sent to us. You can delete it at any time in Settings, including via Settings → Delete Account, which removes all local data immediately and irreversibly.
 
+Photos and videos you take with the in-app camera are temporary files deleted after analysis. Only if you turn on **Save In-App Captures to Photos** in Settings (off by default) does the App add an unaltered copy of the exact file it analysed to your Photos library, using add-only access, for your own records and testing. These copies stay on your device and in your own library, are never uploaded to Verifyco, and remain until you delete them in Photos.
+
 ## 5. Information We or Our Providers May Process
 
 The only limited data flows are:
 
-- **Diagnostics (optional).** If you opt in, anonymous crash and performance diagnostics may be collected to help us improve stability. These reports never include your media and are not used to identify you. You can turn diagnostics off at any time in Settings.
+- **Social-link import (when you use it).** The App sends the social-media URL to Verifyco's extraction service. The service may retrieve the linked media using the platform URL and account-session cookies configured by Verifyco, then streams the media to your device. Temporary files are deleted after transfer or cleanup. The local five-layer analysis still runs on your device.
+- **Diagnostics (optional, off by default).** Only if you agree — in the one-time prompt or in Settings — anonymous crash reports and usage statistics are sent to Google Firebase (Crashlytics and Analytics) to help us fix problems and improve stability. Nothing is sent before you agree. These reports never include your media and are not used to identify you. You can turn diagnostics off at any time in Settings.
 - **Advertising (free tier only).** If you use Verifyco without a subscription, the App may show ads served by Google AdMob. Depending on your App Tracking Transparency choice and regional settings, the ad provider may process a device identifier and limited technical data (such as device type, coarse region, and ad interaction events) to deliver and measure ads and to limit repetition. See Google's privacy information at [policies.google.com/privacy](https://policies.google.com/privacy) and [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites).
 - **Push notifications (optional).** If you allow notifications, the App registers a device token with Apple Push Notification service (APNs) and Firebase Cloud Messaging (FCM) so we can deliver feature updates and important notices. The token is a random identifier — it does not reveal your identity, location, or content. You can disable notifications at any time in the iOS Settings app.
 - **Purchases.** Subscriptions and credit packs are processed by Apple through the App Store. Apple handles your payment; we never receive or store your payment card details. We receive only the transaction and entitlement status needed to unlock paid features.
+- **Web access (optional).** Only if you tap "Use Pro on the web", Sign in with Apple gives us a stable Apple user identifier (no name or email is requested). RevenueCat links your App Store purchases to that identifier so your Pro access is recognised when you sign in with the same Apple ID on web.verifyco.app. You can unlink it at any time in Settings.
 
 ## 6. App Tracking Transparency
 
@@ -64,23 +69,23 @@ Where data protection law applies, we rely on: your **consent** (diagnostics and
 
 ## 9. Data Sharing and Disclosure
 
-We do not sell or rent personal data. Limited data may be processed by service providers acting on our or your behalf, namely Apple (App Store, in-app purchases, optional diagnostics) and Google (AdMob advertising on the free tier and Firebase Cloud Messaging for push notifications). We may disclose information if required by law, to enforce our Terms, or to protect the rights, safety, or property of users or the public.
+We do not sell or rent personal data. Limited data may be processed by service providers acting on our or your behalf, namely Apple (App Store, in-app purchases), RevenueCat (purchase and entitlement status) and Google (Firebase Crashlytics and Analytics for optional diagnostics, AdMob advertising on the free tier and Firebase Cloud Messaging for push notifications). We may disclose information if required by law, to enforce our Terms, or to protect the rights, safety, or property of users or the public.
 
 ## 10. Data Retention
 
-Media is never retained by us because it is never uploaded. Your local analysis history is retained on your device until you delete it or remove the App. Optional diagnostics and advertising data are retained by the respective providers in accordance with their policies and only for as long as necessary for the purposes described here.
+Files selected locally are not retained by us. Social-link extraction uses temporary server files that are deleted after transfer or cleanup; Verifyco does not keep them as a media library or analysis history. Your local analysis history is retained on your device until you delete it or remove the App. Optional diagnostics and advertising data are retained by the respective providers under their policies only as long as necessary for the purposes described here.
 
 ## 11. Security
 
-Because analysis happens on your device and we do not operate a media server, the most sensitive data — your files — is never exposed to us in transit or at rest. For the limited data described above, we and our providers use technical and organizational measures appropriate to the risk. No method of processing is completely secure, and we cannot guarantee absolute security.
+Local-file analysis stays on your device. Social-link import necessarily transmits the submitted URL and linked media through our extraction service over encrypted transport and uses temporary storage during transfer. For these limited flows, we and our providers use measures appropriate to the risk. No method of processing is completely secure, and we cannot guarantee absolute security.
 
 ## 12. International Transfers
 
-Where optional diagnostics or advertising data is processed by Apple or Google, it may be processed in countries other than your own. Those providers implement safeguards (such as standard contractual clauses) where required by applicable law.
+Where purchase, optional diagnostics or advertising data is processed by Apple, RevenueCat or Google, it may be processed in countries other than your own. Those providers implement safeguards (such as standard contractual clauses) where required by applicable law.
 
 ## 13. Your Rights (GDPR / UK GDPR)
 
-Subject to applicable law, you may have the right to access, correct, delete, restrict, or object to processing of your personal data, to data portability, and to withdraw consent. Because we hold no account and no media, most data subject to these rights lives only on your device and is under your direct control (for example, deleting your history in Settings). To exercise any right regarding provider-side diagnostics or advertising data, contact support@verifyco.app. You also have the right to lodge a complaint with your local supervisory authority.
+Subject to applicable law, you may have the right to access, correct, delete, restrict, or object to processing of your personal data, to data portability, and to withdraw consent. Because the App holds no media and, unless you link web access, no account, most data subject to these rights lives only on your device and is under your direct control (for example, deleting your history in Settings). To exercise any right regarding provider-side diagnostics or advertising data, contact support@verifyco.app. You also have the right to lodge a complaint with your local supervisory authority.
 
 ## 14. Your US State Privacy Rights
 
@@ -92,7 +97,7 @@ Verifyco is not directed to children under 13 (or the minimum age required in yo
 
 ## 16. Third-Party Services and Links
 
-The App relies on Apple (App Store, StoreKit, optional diagnostics) and Google (AdMob on the free tier, Firebase Cloud Messaging for push notifications). Their handling of data is governed by their own privacy policies. Any links we provide are for convenience and do not imply endorsement; we are not responsible for third-party practices.
+The App relies on Apple (App Store, StoreKit), RevenueCat (purchase validation) and Google (Firebase Crashlytics and Analytics for optional diagnostics, AdMob on the free tier, Firebase Cloud Messaging for push notifications). Their handling of data is governed by their own privacy policies. Any links we provide are for convenience and do not imply endorsement; we are not responsible for third-party practices.
 
 ## 17. Changes to This Policy
 
@@ -101,21 +106,21 @@ We may update this Policy to reflect changes to the App or the law. Material cha
 ## 18. Contact Us
 
 Questions or requests: support@verifyco.app`,
-
     tr: `# Gizlilik Politikası
 
-_Son güncelleme: Mayıs 2026_
+_Son güncelleme: Ekim 2026_
 
-Bu Gizlilik Politikası, Verifyco mobil uygulamasını ("Verifyco", "Uygulama", "biz") kullandığınızda bilgilerin nasıl ele alındığını açıklar. Verifyco öncelikli olarak gizlilik düşünülerek geliştirilmiştir: Uygulama, analiz ettiğiniz fotoğraf ve videoların cihazınızdan asla çıkmaması için tasarlanmıştır.
+Bu Gizlilik Politikası, Verifyco mobil uygulamasını ("Verifyco", "Uygulama", "biz") kullandığınızda bilgilerin nasıl ele alındığını açıklar. Cihazınızdan seçtiğiniz dosyalar cihaz üzerinde analiz edilir. Sosyal bağlantı içe aktarmayı seçerseniz gönderdiğiniz URL ve bağlantılı medya, analiz için cihazınıza teslim edilebilmesi amacıyla Verifyco'nun çıkarma hizmetinden geçer.
 
 Verifyco'yu kullanarak bu Politikayı okuduğunuzu ve anladığınızı onaylarsınız. Kabul etmiyorsanız lütfen Uygulamayı kullanmayın.
 
 ## Özet
 
-- Medyanız tamamen cihazınızda analiz edilir ve bize asla yüklenmez.
+- Cihazınızdan seçtiğiniz dosyalar yerel olarak analiz edilir ve Verifyco'ya yüklenmez.
+- Sosyal bağlantı içe aktarma URL'yi çıkarma hizmetimize gönderir; bağlantılı medya geçici işlenir ve aktarım sonrası silinir.
 - Hesap, e-posta veya telefon numarası gerektirmeyiz.
 - Kişisel verileri satmaz veya kiralamayız ve reklam profili oluşturmak için kullanmayız.
-- İsteğe bağlı anonim tanılama ve ücretsiz katmandaki reklamlar tek veri akışıdır; her ikisini de siz kontrol edersiniz.
+- İsteğe bağlı tanılama, bildirimler, satın almalar, reklam ve sosyal bağlantı içe aktarma aşağıda açıklanan sınırlı veri akışlarıdır.
 
 ## 1. Kim Olduğumuz
 
@@ -123,11 +128,11 @@ Verifyco, Verifyco uygulama geliştiricisi ("Geliştirici") tarafından sunulur.
 
 ## 2. Gizlilik Öncelikli Tasarımımız
 
-Tüm doğruluk analizi — içerik kimlik bilgileri, meta veri adli incelemesi, yapay zeka ve deepfake tespiti, frekans analizi ve ses kontrolleri — cihazınızda yerel olarak çalışır. Analiz için seçtiğiniz medya Verifyco'ya veya herhangi bir üçüncü taraf analiz sunucusuna **iletilmez**.
+Doğruluk analizi — içerik kimlik bilgileri, meta veri adli incelemesi, yapay zekâ medya analizi, frekans analizi ve ses kontrolleri — cihazınızda yerel olarak çalışır. Fotoğraflar, Dosyalar veya Kamera'dan seçtiğiniz dosya Verifyco'ya iletilmez. Sosyal bağlantı içe aktarma açık istisnadır: Uygulama URL'yi çıkarma hizmetimize gönderir; hizmet bağlantılı medyayı alır, Uygulamaya aktarır ve yanıt tamamlandıktan sonra geçici sunucu kopyasını siler.
 
 ## 3. Toplamadığımız Bilgiler
 
-- Fotoğraflarınızı, videolarınızı veya ses dosyalarınızı toplamaz, yüklemez veya saklamayız.
+- Yerel olarak seçtiğiniz dosyaları yüklemeyiz. Sosyal bağlantı medyası yalnızca çıkarma ve aktarım sırasında geçici sunucu alanında tutulabilir; analiz arşivi olarak saklanmaz.
 - Hesap oluşturmanızı istemez; adınızı, e-postanızı veya telefon numaranızı toplamayız.
 - Kişilerinizi, kesin konumunuzu, tarama geçmişinizi veya sağlık verilerinizi toplamayız.
 - Sizi kendi amaçlarımız için başka şirketlerin uygulama veya sitelerinde izlemeyiz.
@@ -136,13 +141,18 @@ Tüm doğruluk analizi — içerik kimlik bilgileri, meta veri adli incelemesi, 
 
 Analiz için medya seçtiğinizde, Uygulama o dosyayı yalnızca cihazınızda analiz yapmak için okur. Yerel bir analiz geçmişi (dosya adı, güven skoru, sonuç ve küçük bir önizleme gibi) geçmiş sonuçlara tekrar bakabilmeniz için cihazınızda saklanabilir. Bu geçmiş cihazınızda kalır ve bize hiçbir zaman gönderilmez. Ayarlar'dan istediğiniz zaman silebilirsiniz; Ayarlar → Hesabı Sil seçeneği tüm yerel verileri anında ve geri alınamaz şekilde kaldırır.
 
+Uygulama içi kamerayla çektiğiniz fotoğraf ve videolar, analizden sonra silinen geçici dosyalardır. Yalnızca Ayarlar'da **Uygulama İçi Çekimleri Fotoğraflar'a Kaydet** seçeneğini açarsanız (varsayılan olarak kapalıdır) Uygulama, kendi kayıtlarınız ve testleriniz için analiz ettiği dosyanın değiştirilmemiş birebir kopyasını yalnızca ekleme izniyle Fotoğraflar arşivinize ekler. Bu kopyalar cihazınızda ve kendi arşivinizde kalır, Verifyco'ya asla yüklenmez ve siz Fotoğraflar'dan silene kadar kalır.
+
 ## 5. Bizim veya Sağlayıcılarımızın İşleyebileceği Bilgiler
 
 Tek sınırlı veri akışları şunlardır:
 
-- **Tanılama (isteğe bağlı).** İzin verirseniz, kararlılığı artırmamıza yardımcı olmak için anonim çökme ve performans verileri toplanabilir. Bu raporlar asla medyanızı içermez ve sizi tanımlamak için kullanılmaz. Tanılamayı Ayarlar'dan istediğiniz zaman kapatabilirsiniz.
+- **Sosyal bağlantı içe aktarma (kullandığınızda).** Uygulama sosyal medya URL'sini Verifyco çıkarma hizmetine gönderir. Hizmet, bağlantılı medyayı platform URL'si ve Verifyco tarafından yapılandırılan hesap oturumu çerezleriyle alabilir, ardından medyayı cihazınıza aktarır. Geçici dosyalar aktarım veya temizlik sonrasında silinir. Beş katmanlı analiz cihazınızda çalışmaya devam eder.
+- **Tanılama (isteğe bağlı, varsayılan kapalı).** Yalnızca siz onaylarsanız — tek seferlik soruda veya Ayarlar'da — sorunları gidermemize ve kararlılığı artırmamıza yardımcı olmak için anonim çökme raporları ve kullanım istatistikleri Google Firebase'e (Crashlytics ve Analytics) gönderilir. Onay vermeden önce hiçbir şey gönderilmez. Bu raporlar asla medyanızı içermez ve sizi tanımlamak için kullanılmaz. Tanılamayı Ayarlar'dan istediğiniz zaman kapatabilirsiniz.
 - **Reklamcılık (yalnızca ücretsiz katman).** Verifyco'yu abonelik olmadan kullanırsanız, Uygulama Google AdMob tarafından sunulan reklamlar gösterebilir. İzleme Şeffaflığı tercihinize ve bölgesel ayarlara bağlı olarak reklam sağlayıcı, reklamları sunmak, ölçmek ve tekrarı sınırlamak için bir cihaz tanımlayıcısı ve sınırlı teknik veriler (cihaz türü, kaba bölge ve reklam etkileşim olayları gibi) işleyebilir. Google'ın gizlilik bilgileri için bkz. [policies.google.com/privacy](https://policies.google.com/privacy) ve [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites).
+- **Anlık bildirimler (isteğe bağlı).** Bildirimlere izin verirseniz, Uygulama özellik güncellemeleri ve önemli bildirimler göndermek için Apple Push Notification servisi (APNs) ve Firebase Cloud Messaging (FCM) aracılığıyla bir cihaz token'ı kaydeder. Token, rastgele bir tanımlayıcıdır — kimliğinizi, konumunuzu veya içeriğinizi ortaya koymaz. Bildirimleri iOS Ayarlar uygulamasından istediğiniz zaman kapatabilirsiniz.
 - **Satın almalar.** Abonelikler ve kredi paketleri Apple tarafından App Store üzerinden işlenir. Ödemenizi Apple yürütür; ödeme kartı bilgilerinizi asla almaz veya saklamayız. Yalnızca ücretli özellikleri açmak için gereken işlem ve yetki durumunu alırız.
+- **Web erişimi (isteğe bağlı).** Yalnızca "Pro'yu Web'de Kullan"a dokunursanız, Apple ile Giriş bize sabit bir Apple kullanıcı kimliği verir (ad veya e-posta istenmez). RevenueCat, App Store satın alımlarınızı bu kimliğe bağlar; böylece aynı Apple Kimliği ile web.verifyco.app'te oturum açtığınızda Pro erişiminiz tanınır. Bağlantıyı Ayarlar'dan istediğiniz zaman kaldırabilirsiniz.
 
 ## 6. İzleme Şeffaflığı (App Tracking Transparency)
 
@@ -158,23 +168,23 @@ Veri koruma hukukunun uygulandığı yerlerde şunlara dayanırız: **rızanız*
 
 ## 9. Veri Paylaşımı ve Açıklama
 
-Kişisel verileri satmaz veya kiralamayız. Sınırlı veriler, bizim veya sizin adınıza hareket eden hizmet sağlayıcılar tarafından işlenebilir; bunlar Apple (App Store, uygulama içi satın alma, isteğe bağlı tanılama) ve Google'dır (ücretsiz katmanda AdMob reklamcılığı). Yasaların gerektirdiği durumlarda, Koşullarımızı uygulamak veya kullanıcıların ya da kamunun haklarını, güvenliğini veya mülkiyetini korumak için bilgileri açıklayabiliriz.
+Kişisel verileri satmaz veya kiralamayız. Sınırlı veriler, bizim veya sizin adınıza hareket eden hizmet sağlayıcılar tarafından işlenebilir; bunlar Apple (App Store, uygulama içi satın alma), RevenueCat (satın alma ve yetki durumu) ve Google'dır (isteğe bağlı tanılama için Firebase Crashlytics ve Analytics, ücretsiz katmanda AdMob reklamcılığı ve anlık bildirimler için Firebase Cloud Messaging). Yasaların gerektirdiği durumlarda, Koşullarımızı uygulamak veya kullanıcıların ya da kamunun haklarını, güvenliğini veya mülkiyetini korumak için bilgileri açıklayabiliriz.
 
 ## 10. Veri Saklama
 
-Medya hiçbir zaman yüklenmediği için bizde saklanmaz. Yerel analiz geçmişiniz, siz silene veya Uygulamayı kaldırana kadar cihazınızda saklanır. İsteğe bağlı tanılama ve reklam verileri ilgili sağlayıcılar tarafından kendi politikalarına uygun olarak ve yalnızca burada açıklanan amaçlar için gerekli olduğu sürece saklanır.
+Yerel seçilen dosyalar bizde saklanmaz. Sosyal bağlantı çıkarma, aktarım veya temizlik sonrasında silinen geçici sunucu dosyaları kullanır; Verifyco bunları medya kütüphanesi veya analiz geçmişi olarak tutmaz. Yerel analiz geçmişiniz siz silene veya Uygulamayı kaldırana kadar cihazınızda saklanır. İsteğe bağlı tanılama ve reklam verileri ilgili sağlayıcıların politikalarına göre yalnızca gerekli süre boyunca tutulur.
 
 ## 11. Güvenlik
 
-Analiz cihazınızda gerçekleştiği ve bir medya sunucusu işletmediğimiz için en hassas veri — dosyalarınız — bize iletim sırasında veya saklanırken asla açık olmaz. Yukarıda açıklanan sınırlı veriler için biz ve sağlayıcılarımız riske uygun teknik ve kurumsal önlemler kullanırız. Hiçbir işleme yöntemi tamamen güvenli değildir ve mutlak güvenliği garanti edemeyiz.
+Yerel dosya analizi cihazınızda kalır. Sosyal bağlantı içe aktarma, gönderilen URL'nin ve bağlantılı medyanın şifreli aktarım üzerinden çıkarma hizmetimizden geçmesini ve aktarım sırasında geçici depolama kullanılmasını gerektirir. Bu sınırlı akışlar için biz ve sağlayıcılarımız riske uygun önlemler kullanırız. Hiçbir işleme yöntemi tamamen güvenli değildir ve mutlak güvenliği garanti edemeyiz.
 
 ## 12. Uluslararası Aktarımlar
 
-İsteğe bağlı tanılama veya reklam verileri Apple ya da Google tarafından işlendiğinde, kendi ülkeniz dışındaki ülkelerde işlenebilir. Bu sağlayıcılar, geçerli yasaların gerektirdiği yerlerde güvenceler (standart sözleşme maddeleri gibi) uygular.
+Satın alma, isteğe bağlı tanılama veya reklam verileri Apple, RevenueCat ya da Google tarafından işlendiğinde, kendi ülkeniz dışındaki ülkelerde işlenebilir. Bu sağlayıcılar, geçerli yasaların gerektirdiği yerlerde güvenceler (standart sözleşme maddeleri gibi) uygular.
 
 ## 13. Haklarınız (GDPR / BK GDPR)
 
-Geçerli yasalara tabi olarak; kişisel verilerinize erişme, düzeltme, silme, işlemeyi kısıtlama veya itiraz etme, veri taşınabilirliği ve rızayı geri çekme haklarına sahip olabilirsiniz. Hesap ve medya tutmadığımız için bu haklara konu verilerin çoğu yalnızca cihazınızda bulunur ve doğrudan sizin kontrolünüzdedir (örneğin geçmişinizi Ayarlar'dan silmek). Sağlayıcı tarafındaki tanılama veya reklam verileriyle ilgili bir hakkı kullanmak için support@verifyco.app ile iletişime geçin. Ayrıca yerel denetim makamınıza şikayette bulunma hakkınız vardır.
+Geçerli yasalara tabi olarak; kişisel verilerinize erişme, düzeltme, silme, işlemeyi kısıtlama veya itiraz etme, veri taşınabilirliği ve rızayı geri çekme haklarına sahip olabilirsiniz. Medya ve (web erişimini bağlamadıkça) hesap tutmadığımız için bu haklara konu verilerin çoğu yalnızca cihazınızda bulunur ve doğrudan sizin kontrolünüzdedir (örneğin geçmişinizi Ayarlar'dan silmek). Sağlayıcı tarafındaki tanılama veya reklam verileriyle ilgili bir hakkı kullanmak için support@verifyco.app ile iletişime geçin. Ayrıca yerel denetim makamınıza şikayette bulunma hakkınız vardır.
 
 ## 14. ABD Eyalet Gizlilik Haklarınız
 
@@ -186,7 +196,7 @@ Verifyco 13 yaşından küçük çocuklara (veya ülkenizde gereken asgari yaş)
 
 ## 16. Üçüncü Taraf Hizmetleri ve Bağlantılar
 
-Uygulama, Apple (App Store, StoreKit, isteğe bağlı tanılama) ve ücretsiz katmanda Google AdMob'a dayanır. Verileri ele alışları kendi gizlilik politikalarına tabidir. Sağladığımız bağlantılar kolaylık içindir ve onay anlamına gelmez; üçüncü taraf uygulamalarından sorumlu değiliz.
+Uygulama, Apple (App Store, StoreKit), RevenueCat (satın alma doğrulaması) ve Google'a (isteğe bağlı tanılama için Firebase Crashlytics ve Analytics, ücretsiz katmanda AdMob, anlık bildirimler için Firebase Cloud Messaging) dayanır. Verileri ele alışları kendi gizlilik politikalarına tabidir. Sağladığımız bağlantılar kolaylık içindir ve onay anlamına gelmez; üçüncü taraf uygulamalarından sorumlu değiliz.
 
 ## 17. Bu Politikadaki Değişiklikler
 
@@ -194,9 +204,8 @@ Bu Politikayı, Uygulamadaki veya yasalardaki değişiklikleri yansıtmak için 
 
 ## 18. İletişim
 
-Sorular veya talepler: support@verifyco.app`,
+Sorular veya talepler: support@verifyco.app`
   },
-
   terms: {
     en: `# Terms of Service
 
@@ -210,7 +219,7 @@ You must be at least 13 years old, and old enough to form a binding contract in 
 
 ## 2. What Verifyco Is
 
-Verifyco estimates the likelihood that a photo, video, or audio file has been manipulated or AI-generated, using on-device forensic signals such as content credentials, metadata, AI and deepfake detection, frequency, and audio analysis. The App produces a probabilistic trust score and explanatory findings.
+Verifyco estimates the likelihood that a photo, video, or audio file has been manipulated or AI-generated, using on-device forensic signals such as content credentials, metadata, AI-media analysis, frequency, and audio analysis. The App produces a probabilistic trust score and explanatory findings.
 
 ## 3. No Guarantee of Accuracy; Not Professional Advice
 
@@ -296,12 +305,11 @@ If any provision of these Terms is held unenforceable, the remaining provisions 
 ## 20. Contact
 
 Questions: support@verifyco.app`,
-
     tr: `# Kullanım Koşulları
 
-_Son güncelleme: Mayıs 2026_
+_Son güncelleme: Haziran 2026_
 
-Bu Kullanım Koşulları ("Koşullar"), sizinle Verifyco uygulama geliştiricisi ("Verifyco", "biz") arasında, Verifyco mobil uygulamasını ve özelliklerini ("Uygulama") kullanımınızı düzenleyen bağlayıcı bir sözleşmedir. Uygulamayı indirerek, erişerek veya kullanarak bu Koşulları ve Gizlilik Politikamızı kabul edersiniz. Kabul etmiyorsanız Uygulamayı kullanmayın.
+Bu Kullanım Koşulları ("Koşullar", sizinle Verifyco uygulama geliştiricisi ("Verifyco", "biz") arasında, Verifyco mobil uygulamasını ve özelliklerini ("Uygulama") kullanımınızı düzenleyen bağlayıcı bir sözleşmedir. Uygulamayı indirerek, erişerek veya kullanarak bu Koşulları ve Gizlilik Politikamızı kabul edersiniz. Kabul etmiyorsanız Uygulamayı kullanmayın.
 
 ## 1. Uygunluk
 
@@ -309,7 +317,7 @@ Uygulamayı kullanmak için en az 13 yaşında ve yargı bölgenizde bağlayıc�
 
 ## 2. Verifyco Nedir
 
-Verifyco, içerik kimlik bilgileri, meta veri, yapay zeka ve deepfake tespiti, frekans ve ses analizi gibi cihaz üzerindeki adli sinyalleri kullanarak bir fotoğraf, video veya ses dosyasının manipüle veya yapay zeka üretimi olma olasılığını tahmin eder. Uygulama, olasılıksal bir güven skoru ve açıklayıcı bulgular üretir.
+Verifyco, içerik kimlik bilgileri, meta veri, yapay zekâ medya analizi, frekans ve ses analizi gibi cihaz üzerindeki adli sinyalleri kullanarak bir fotoğraf, video veya ses dosyasının manipüle veya yapay zeka üretimi olma olasılığını tahmin eder. Uygulama, olasılıksal bir güven skoru ve açıklayıcı bulgular üretir.
 
 ## 3. Doğruluk Garantisi Yoktur; Profesyonel Tavsiye Değildir
 
@@ -394,8 +402,8 @@ Bu Koşulların herhangi bir hükmü uygulanamaz bulunursa, kalan hükümler tam
 
 ## 20. İletişim
 
-Sorular: support@verifyco.app`,
-  },
+Sorular: support@verifyco.app`
+  }
 };
 
 /* ---- Lightweight markdown renderer (mirrors the in-app parser) ---- */

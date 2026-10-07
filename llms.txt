@@ -28,7 +28,7 @@ App Store: https://apps.apple.com/app/id6772592963
 - [How to Spot Fake AI Profile Pictures on Dating Apps & Social Media](https://verifyco.app/blog/spot-fake-ai-profile-pictures): Romance scammers and bot networks run on AI-generated profile photos. Learn the visual tells of a fake profile picture, the reverse-search workflow, and how to verify in seconds.
 - [What Is a Deepfake? A Plain-English Guide (2026)](https://verifyco.app/blog/what-is-a-deepfake): Deepfakes explained simply: what they are, how they're made, why they've become so convincing, the real-world risks, and how to tell a synthetic face or voice from the real thing.
 - [5 Signs a Video Has Been Deepfaked (+ How to Check)](https://verifyco.app/blog/5-signs-a-video-has-been-deepfaked): A practical checklist for spotting deepfaked video — the edge artifacts, lip-sync drift, lighting tells, unnatural motion and audio clues that still give synthetic clips away.
-- [On-Device Verification, Explained (Nothing Leaves Your iPhone)](https://verifyco.app/blog/on-device-verification-explained): Why Verifyco runs entirely on your iPhone: how on-device forensic analysis works, what the Neural Engine does, cloud vs on-device trade-offs, and why nothing is ever uploaded.
+- [On-Device Verification, Explained (Your Local Files Stay on Your iPhone)](https://verifyco.app/blog/on-device-verification-explained): Why Verifyco analyzes the files you pick on your iPhone: how on-device forensic analysis works, what the Neural Engine does, cloud vs on-device trade-offs, and which paths use temporary server processing.
 
 ## Languages
 

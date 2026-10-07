@@ -7,7 +7,7 @@
 backend:
   name: github
   repo: bngnco/landing
-  branch: claude/landing-page-animation-mobile-sipxgu # current production branch
+  branch: main  # Vercel deploys main to production
   # NOTE: no OAuth proxy/server is required. Sign in with a GitHub
   # Personal Access Token ("Sign In Using Access Token") — see README-BLOG.md.
   # OPTIONAL one-click "Sign In with GitHub" needs a free Cloudflare auth

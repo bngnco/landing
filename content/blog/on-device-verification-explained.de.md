@@ -20,6 +20,8 @@ Fotos und Videos verlassen das Gerät nie. Hier ist, was das bedeutet, wie es
 möglich ist und warum es zählt — gerade bei dem sensiblen Material, das Menschen
 am häufigsten prüfen wollen.
 
+> **Geltungsbereich.** Dieser Artikel behandelt Fotos und Videos, die Sie auf Ihrem iPhone auswählen. Zwei Verifyco-Wege nutzen eine vorübergehende Verarbeitung auf dem Server und zeigen das in der App an: Ein öffentlicher Social-Media-Link wird vom Verifyco-Server abgerufen und an Ihr Telefon übergeben (die Analyse läuft weiterhin auf dem Gerät, der Server löscht die Medien sofort), und Verifyco Web verarbeitet Uploads flüchtig und behält nur den Bericht.
+
 ## Warum On-Device wichtig ist
 
 - **Privatsphäre.** Was du am dringendsten verifizieren willst, ist oft das

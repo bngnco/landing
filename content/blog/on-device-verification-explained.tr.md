@@ -1,6 +1,6 @@
 ---
-title: Cihazda Doğrulama Nedir? (Hiçbir Şey iPhone'undan Çıkmaz)
-description: "Verifyco neden tamamen iPhone'unda çalışır: cihazda adli analiz nasıl işler, Neural Engine ne yapar, bulut ile cihaz karşılaştırması ve neden hiçbir şey asla yüklenmez."
+title: Cihazda Doğrulama Nedir? (Yerel Dosyaların iPhone'unda Kalır)
+description: "Verifyco, iPhone'unda seçtiğin dosyaları neden cihazda analiz eder: cihazda adli analiz nasıl işler, Neural Engine ne yapar, bulut ile cihaz karşılaştırması ve hangi yollarda geçici sunucu işlemesi kullanılır."
 slug: on-device-verification-explained
 date: 2026-06-08
 author: Verifyco Ekibi
@@ -18,6 +18,8 @@ modelleri onu bulutta analiz eder ve sonucu geri alırsın. Verifyco öyle yapma
 Her sinyal **iPhone'unda yerel olarak** çalışır ve fotoğrafların ile videoların
 cihazdan asla çıkmaz. İşte bunun anlamı, nasıl mümkün olduğu ve neden önemli
 olduğu — özellikle insanların en sık kontrol etmek istediği hassas içerikler için.
+
+> **Kapsam.** Bu yazı iPhone'undan seçtiğin fotoğraf ve videolar hakkında. Verifyco'nun iki yolu geçici sunucu işlemesi kullanır ve bunu uygulamada açıkça belirtir: herkese açık bir sosyal medya bağlantısı Verifyco'nun sunucusu tarafından alınıp telefonuna iletilir (analiz yine cihazda çalışır, sunucu medyayı hemen siler); Verifyco Web ise yüklemeleri geçici olarak işler ve yalnızca raporu saklar.
 
 ## Cihazda olmak neden önemli
 
@@ -68,7 +70,7 @@ ve [bir videonun deepfake olduğunun 5 işareti](/tr/blog/5-signs-a-video-has-be
 
 | | Bulut doğrulama | Cihazda (Verifyco) |
 | --- | --- | --- |
-| Medyan | Bir sunucuya yüklenir | Telefonundan asla çıkmaz |
+| Medyan | Bir sunucuya yüklenir | Yerel dosyalar telefonundan çıkmaz |
 | Hız | Yükleme + kuyruk + indirme | Anında başlar |
 | Çevrimdışı | Hayır | Evet |
 | Hesap gerekli | Genellikle | Hayır |

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-itunes-app" content="app-id=6772592963" />
   <title>Support — Verifyco</title>
   <meta name="description" content="Get help with Verifyco, the private on-device AI media verification app for iPhone." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -143,11 +144,11 @@
     <div class="faq">
       <details class="faq__item" open>
         <summary class="faq__q">Does Verifyco upload my photos or videos?</summary>
-        <div class="faq__a">No. All analysis runs locally on your iPhone using Apple's Neural Engine. There is no server-side inference; your media is never transmitted to Verifyco or anywhere else. You can verify this with iOS Settings → Privacy &amp; Security → App Privacy Report, which will show zero network activity from Verifyco during analysis.</div>
+        <div class="faq__a">Photos and videos you pick from your device are analyzed locally on your iPhone with the Neural Engine; those files are never transmitted to Verifyco. Two paths use temporary server processing and are labeled as such: a public social-media link is fetched by Verifyco's server and handed to your phone (the analysis still runs on the device, and the server deletes the media right away), and Verifyco Web processes uploads ephemerally, keeping only the report. You can check local-file analysis with iOS Settings → Privacy &amp; Security → App Privacy Report.</div>
       </details>
       <details class="faq__item">
         <summary class="faq__q">What does the 0–100 trust score actually mean?</summary>
-        <div class="faq__a">It is a fused probability that the file is authentic. 75–100 reads as Authentic, 45–74 as Suspicious (artifacts present, review recommended), 0–44 as Manipulated. The weights of each signal are dynamic — when C2PA content credentials are present, the calculation is weighted 35% C2PA, 15% metadata, 35% AI detection, 15% audio; when absent, it is 25/55/20 across metadata / AI detection / audio.</div>
+        <div class="faq__a">It is a 0–100 evidence ranking, not a probability. Verifyco fuses five evidence families — Content Credentials (C2PA), metadata, a neural visual model, temporal consistency and frequency analysis — each with a fixed weight (images and videos use different weights) and a reliability that limits how much that evidence may count. The bands are 78–100 Likely authentic, 58–77 Inconclusive (shown with the direction the evidence leans), 42–57 Needs review and 0–41 Likely manipulated. A trusted Content Credential that declares AI generation is decisive on its own; unsigned camera metadata never is. The full rules are versioned in the engine contract that ships with each release.</div>
       </details>
       <details class="faq__item">
         <summary class="faq__q">Is Verifyco a definitive truth oracle?</summary>
@@ -167,7 +168,7 @@
       </details>
       <details class="faq__item">
         <summary class="faq__q">Can I use Verifyco as legal evidence in court?</summary>
-        <div class="faq__a">The PDF report Pro generates includes the trust score, the per-signal breakdown, the SHA-256 hash and a tamper-evident timestamp — which is often a strong supporting document. Whether a court admits it depends on jurisdiction and the role you're asking it to play. We strongly recommend consulting a forensic examiner alongside.</div>
+        <div class="faq__a">The PDF report Pro generates includes the verdict, the evidence breakdown by family, the file's SHA-256 hash, the engine and contract versions and the analysis date. It is supporting documentation — evidence, not proof — rather than a certified forensic finding. Whether a court admits it depends on jurisdiction and the role you're asking it to play; for proceedings, consult a qualified forensic examiner alongside.</div>
       </details>
       <details class="faq__item">
         <summary class="faq__q">Which languages does Verifyco support?</summary>

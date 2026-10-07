@@ -19,6 +19,8 @@ Verifyco no. Cada señal corre **localmente en tu iPhone**, y tus fotos y vídeo
 nunca salen del dispositivo. Esto es lo que significa, cómo es posible y por qué
 importa — sobre todo para el material sensible que la gente más necesita comprobar.
 
+> **Alcance.** Este artículo trata de las fotos y vídeos que eliges en tu iPhone. Dos rutas de Verifyco usan procesamiento temporal en servidor y lo indican en la app: un enlace público de redes sociales lo descarga el servidor de Verifyco y lo entrega a tu teléfono (el análisis sigue ejecutándose en el dispositivo y el servidor borra el contenido de inmediato), y Verifyco Web procesa las subidas de forma efímera y solo conserva el informe.
+
 ## Por qué importa que sea en el dispositivo
 
 - **Privacidad.** Lo que más quieres verificar suele ser lo más sensible — una
@@ -74,7 +76,7 @@ y [5 señales de que un vídeo ha sido deepfakeado](/es/blog/5-signs-a-video-has
 
 | | Verificación en la nube | En el dispositivo (Verifyco) |
 | --- | --- | --- |
-| Tu contenido | Se sube a un servidor | Nunca sale de tu teléfono |
+| Tu contenido | Se sube a un servidor | Los archivos locales nunca salen de tu teléfono |
 | Velocidad | Subida + cola + descarga | Empieza al instante |
 | Sin conexión | No | Sí |
 | Cuenta necesaria | Normalmente | No |

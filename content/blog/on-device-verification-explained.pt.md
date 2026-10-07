@@ -17,6 +17,8 @@ fotos e vídeos nunca saem do aparelho. Veja o que isso significa, como é
 possível e por que importa — principalmente para o material sensível que as
 pessoas mais precisam checar.
 
+> **Escopo.** Este artigo trata das fotos e vídeos que você escolhe no seu iPhone. Dois caminhos do Verifyco usam processamento temporário no servidor e informam isso no app: um link público de rede social é buscado pelo servidor do Verifyco e entregue ao seu celular (a análise continua rodando no dispositivo e o servidor apaga a mídia na hora), e o Verifyco Web processa envios de forma efêmera, guardando apenas o relatório.
+
 ## Por que "no dispositivo" importa
 
 - **Privacidade.** O que você mais quer verificar costuma ser o mais sensível —
@@ -70,7 +72,7 @@ e [5 sinais de que um vídeo foi deepfakado](/pt/blog/5-signs-a-video-has-been-d
 
 | | Verificação na nuvem | No dispositivo (Verifyco) |
 | --- | --- | --- |
-| Sua mídia | Enviada a um servidor | Nunca sai do seu celular |
+| Sua mídia | Enviada a um servidor | Arquivos locais nunca saem do seu celular |
 | Velocidade | Upload + fila + download | Começa na hora |
 | Offline | Não | Sim |
 | Conta necessária | Geralmente | Não |

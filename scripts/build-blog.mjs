@@ -714,6 +714,7 @@ function page({
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-itunes-app" content="app-id=6772592963" />
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(searchDescription)}" />
   <link rel="canonical" href="${esc(canonical)}" />

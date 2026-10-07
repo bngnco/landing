@@ -17,6 +17,8 @@ foto e i tuoi video non lasciano mai il dispositivo. Ecco cosa significa, com’
 possibile e perché conta — soprattutto per il materiale sensibile che le persone
 hanno più spesso bisogno di controllare.
 
+> **Ambito.** Questo articolo riguarda le foto e i video che scegli sul tuo iPhone. Due percorsi di Verifyco usano un’elaborazione temporanea sul server e lo dichiarano nell’app: un link pubblico di un social viene recuperato dal server di Verifyco e consegnato al tuo telefono (l’analisi continua a girare sul dispositivo e il server elimina subito il file), e Verifyco Web elabora i caricamenti in modo effimero conservando solo il report.
+
 ## Perché "sul dispositivo" conta
 
 - **Privacy.** Ciò che vuoi verificare di più è spesso il più sensibile — una

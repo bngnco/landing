@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-itunes-app" content="app-id=6772592963" />
   <title>Verifizierung auf dem Gerät, erklärt (nichts verlässt dein iPhone)</title>
   <meta name="description" content="Warum Verifyco vollständig auf deinem iPhone läuft: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und warum nie…" />
   <link rel="canonical" href="https://verifyco.app/de/blog/on-device-verification-explained" />
@@ -58,7 +59,7 @@
   <meta property="article:tag" content="iOS" />
   <meta property="article:tag" content="Forschung" />
   <meta property="article:tag" content="Leitfäden" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Verifizierung auf dem Gerät, erklärt (nichts verlässt dein iPhone)","description":"Warum Verifyco vollständig auf deinem iPhone läuft: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und warum nie etwas hochgeladen wird.","image":["https://verifyco.app/uploads/blog/1000012581.png"],"datePublished":"2026-06-08T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","author":{"@type":"Organization","name":"Verifyco-Team","url":"https://verifyco.app"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.app/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.app/de/blog/on-device-verification-explained"},"articleSection":"iOS","keywords":"iOS, Forschung, Leitfäden","wordCount":691,"timeRequired":"PT3M","inLanguage":"de","isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Verifizierung auf dem Gerät, erklärt (nichts verlässt dein iPhone)","description":"Warum Verifyco vollständig auf deinem iPhone läuft: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und warum nie etwas hochgeladen wird.","image":["https://verifyco.app/uploads/blog/1000012581.png"],"datePublished":"2026-06-08T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","author":{"@type":"Organization","name":"Verifyco-Team","url":"https://verifyco.app"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.app/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.app/de/blog/on-device-verification-explained"},"articleSection":"iOS","keywords":"iOS, Forschung, Leitfäden","wordCount":757,"timeRequired":"PT4M","inLanguage":"de","isAccessibleForFree":true}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://verifyco.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://verifyco.app/de/blog"},{"@type":"ListItem","position":3,"name":"Verifizierung auf dem Gerät, erklärt (nichts verlässt dein iPhone)","item":"https://verifyco.app/de/blog/on-device-verification-explained"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ist On-Device so genau wie die Cloud?","acceptedAnswer":{"@type":"Answer","text":"Für diese forensischen Signale ja — die Analyse ist dieselbe Mathematik; nur der Ort ändert sich. Erkennung bleibt ein bewegliches Ziel (Generatoren werden besser) — deshalb fusioniert Verifyco mehrere Signale und verbessert sich mit App-Updates."}},{"@type":"Question","name":"Leert es meinen Akku?","acceptedAnswer":{"@type":"Answer","text":"Eine einzelne Analyse ist ein kurzer Schub Neural- Engine-Arbeit — vergleichbar mit einem aufwendigen Fotofilter, dann fertig."}},{"@type":"Question","name":"Welche iPhones?","acceptedAnswer":{"@type":"Answer","text":"Jedes moderne iPhone mit Neural Engine (iOS 17+). Neuere Chips sind einfach schneller fertig."}},{"@type":"Question","name":"Seht ihr je meine Dateien?","acceptedAnswer":{"@type":"Answer","text":"Nein. Es gibt überhaupt keinen Upload-Pfad — die Funktion, die deine Medien an uns senden würde, existiert nicht."}}]}</script>
 </head>
@@ -113,7 +114,7 @@
           <span class="dot">·</span>
           <time datetime="2026-06-08T00:00:00+00:00">8. Juni 2026</time>
           <span class="dot">·</span>
-          <span>3 Min. Lesezeit</span>
+          <span>4 Min. Lesezeit</span>
           <span class="dot">·</span><span class="updated">Aktualisiert 1. Juli 2026</span>
         </div>
       </div>
@@ -134,6 +135,9 @@ zurück. Verifyco nicht. Jedes Signal läuft <strong>lokal auf deinem iPhone</st
 Fotos und Videos verlassen das Gerät nie. Hier ist, was das bedeutet, wie es
 möglich ist und warum es zählt — gerade bei dem sensiblen Material, das Menschen
 am häufigsten prüfen wollen.</p>
+<blockquote>
+<p><strong>Geltungsbereich.</strong> Dieser Artikel behandelt Fotos und Videos, die Sie auf Ihrem iPhone auswählen. Zwei Verifyco-Wege nutzen eine vorübergehende Verarbeitung auf dem Server und zeigen das in der App an: Ein öffentlicher Social-Media-Link wird vom Verifyco-Server abgerufen und an Ihr Telefon übergeben (die Analyse läuft weiterhin auf dem Gerät, der Server löscht die Medien sofort), und Verifyco Web verarbeitet Uploads flüchtig und behält nur den Bericht.</p>
+</blockquote>
 <h2 id="warum-on-device-wichtig-ist">Warum On-Device wichtig ist</h2>
 <ul>
 <li><strong>Privatsphäre.</strong> Was du am dringendsten verifizieren willst, ist oft das

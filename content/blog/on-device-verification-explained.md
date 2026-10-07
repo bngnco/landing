@@ -1,6 +1,6 @@
 ---
-title: On-Device Verification, Explained (Nothing Leaves Your iPhone)
-description: 'Why Verifyco runs entirely on your iPhone: how on-device forensic analysis works, what the Neural Engine does, cloud vs on-device trade-offs, and why nothing is ever uploaded.'
+title: On-Device Verification, Explained (Your Local Files Stay on Your iPhone)
+description: 'Why Verifyco analyzes the files you pick on your iPhone: how on-device forensic analysis works, what the Neural Engine does, cloud vs on-device trade-offs, and which paths use temporary server processing.'
 slug: on-device-verification-explained
 date: 2026-06-08
 author: Verifyco Team
@@ -18,6 +18,8 @@ their models analyse it in the cloud, and you get a result back. Verifyco doesn'
 Every signal runs **locally on your iPhone**, and your photos and videos never
 leave the device. Here's what that means, how it's possible, and why it matters —
 especially for the sensitive material people most often need to check.
+
+> **Scope.** This article is about photos and videos you pick from your iPhone. Two Verifyco paths use temporary server processing and say so in the app: a public social-media link is fetched by Verifyco's server and handed to your phone (the analysis still runs on the device, and the server deletes the media right away), and Verifyco Web processes uploads ephemerally, keeping only the report.
 
 ## Why on-device matters
 
@@ -70,7 +72,7 @@ and [5 signs a video has been deepfaked](/blog/5-signs-a-video-has-been-deepfake
 
 |  | Cloud verification | On-device (Verifyco) |
 | --- | --- | --- |
-| Your media | Uploaded to a server | Never leaves your phone |
+| Your media | Uploaded to a server | Local files never leave your phone |
 | Speed | Upload + queue + download | Starts instantly |
 | Works offline | No | Yes |
 | Account required | Usually | No |

@@ -17,6 +17,8 @@ votre iPhone**, et vos photos et vidéos ne quittent jamais l’appareil. Voici 
 que cela signifie, comment c’est possible et pourquoi c’est important — surtout
 pour les contenus sensibles que l’on a le plus besoin de vérifier.
 
+> **Périmètre.** Cet article concerne les photos et vidéos que vous choisissez sur votre iPhone. Deux parcours Verifyco utilisent un traitement temporaire côté serveur et l’indiquent dans l’app : un lien public de réseau social est récupéré par le serveur de Verifyco puis transmis à votre téléphone (l’analyse s’exécute toujours sur l’appareil et le serveur supprime le média immédiatement), et Verifyco Web traite les envois de façon éphémère en ne conservant que le rapport.
+
 ## Pourquoi « sur l’appareil » compte
 
 - **Confidentialité.** Ce que vous voulez le plus vérifier est souvent le plus

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-itunes-app" content="app-id=6772592963" />
   <title>A verificação no dispositivo, explicada (nada sai do seu iPhone)</title>
   <meta name="description" content="Por que o Verifyco roda inteiramente no seu iPhone: como funciona a análise forense no dispositivo, o que o Neural Engine faz, nuvem vs dispositivo — e por…" />
   <link rel="canonical" href="https://verifyco.app/pt/blog/on-device-verification-explained" />
@@ -58,7 +59,7 @@
   <meta property="article:tag" content="iOS" />
   <meta property="article:tag" content="Pesquisa" />
   <meta property="article:tag" content="Guias" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"A verificação no dispositivo, explicada (nada sai do seu iPhone)","description":"Por que o Verifyco roda inteiramente no seu iPhone: como funciona a análise forense no dispositivo, o que o Neural Engine faz, nuvem vs dispositivo — e por que nada é enviado, nunca.","image":["https://verifyco.app/uploads/blog/1000012581.png"],"datePublished":"2026-06-08T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","author":{"@type":"Organization","name":"Equipe Verifyco","url":"https://verifyco.app"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.app/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.app/pt/blog/on-device-verification-explained"},"articleSection":"iOS","keywords":"iOS, Pesquisa, Guias","wordCount":769,"timeRequired":"PT4M","inLanguage":"pt","isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"A verificação no dispositivo, explicada (nada sai do seu iPhone)","description":"Por que o Verifyco roda inteiramente no seu iPhone: como funciona a análise forense no dispositivo, o que o Neural Engine faz, nuvem vs dispositivo — e por que nada é enviado, nunca.","image":["https://verifyco.app/uploads/blog/1000012581.png"],"datePublished":"2026-06-08T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","author":{"@type":"Organization","name":"Equipe Verifyco","url":"https://verifyco.app"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.app/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.app/pt/blog/on-device-verification-explained"},"articleSection":"iOS","keywords":"iOS, Pesquisa, Guias","wordCount":844,"timeRequired":"PT4M","inLanguage":"pt","isAccessibleForFree":true}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://verifyco.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://verifyco.app/pt/blog"},{"@type":"ListItem","position":3,"name":"A verificação no dispositivo, explicada (nada sai do seu iPhone)","item":"https://verifyco.app/pt/blog/on-device-verification-explained"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"No dispositivo é tão preciso quanto na nuvem?","acceptedAnswer":{"@type":"Answer","text":"Para esses sinais forenses, sim — a análise é a mesma matemática; só muda o lugar. A detecção é sempre um alvo móvel (os geradores melhoram), e por isso o Verifyco funde vários sinais e melhora com as atualizações do app."}},{"@type":"Question","name":"Acaba com a minha bateria?","acceptedAnswer":{"@type":"Answer","text":"Uma análise é uma rajada curta de trabalho do Neural Engine — comparável a aplicar um filtro de foto pesado, e pronto."}},{"@type":"Question","name":"Quais iPhones?","acceptedAnswer":{"@type":"Answer","text":"Qualquer iPhone moderno com Neural Engine (iOS 17+). Chips mais novos só terminam mais rápido."}},{"@type":"Question","name":"Vocês veem meus arquivos alguma vez?","acceptedAnswer":{"@type":"Answer","text":"Não. Não existe nenhum caminho de upload — o recurso que enviaria sua mídia para nós simplesmente não existe."}}]}</script>
 </head>
@@ -134,6 +135,9 @@ resultado. O Verifyco não. Cada sinal roda <strong>localmente no seu iPhone</st
 fotos e vídeos nunca saem do aparelho. Veja o que isso significa, como é
 possível e por que importa — principalmente para o material sensível que as
 pessoas mais precisam checar.</p>
+<blockquote>
+<p><strong>Escopo.</strong> Este artigo trata das fotos e vídeos que você escolhe no seu iPhone. Dois caminhos do Verifyco usam processamento temporário no servidor e informam isso no app: um link público de rede social é buscado pelo servidor do Verifyco e entregue ao seu celular (a análise continua rodando no dispositivo e o servidor apaga a mídia na hora), e o Verifyco Web processa envios de forma efêmera, guardando apenas o relatório.</p>
+</blockquote>
 <h2 id="por-que-no-dispositivo-importa">Por que “no dispositivo” importa</h2>
 <ul>
 <li><strong>Privacidade.</strong> O que você mais quer verificar costuma ser o mais sensível —
@@ -192,7 +196,7 @@ e <a href="/pt/blog/5-signs-a-video-has-been-deepfaked">5 sinais de que um víde
 <tr>
 <td>Sua mídia</td>
 <td>Enviada a um servidor</td>
-<td>Nunca sai do seu celular</td>
+<td>Arquivos locais nunca saem do seu celular</td>
 </tr>
 <tr>
 <td>Velocidade</td>
