@@ -34,8 +34,7 @@ especially for the sensitive material people most often need to check.
 - **No account, no trail.** Nothing to sign up for, nothing tying a checked file
   to your identity.
 
-> There is no server. There is no upload. There is no account. Your media stays
-> on your phone, full stop.
+> For a file you pick from your phone there is no server, no upload and no account: your media stays on your phone, full stop. Link checks and Verifyco Web use temporary server processing, as the scope note above says.
 
 ## What "on-device" actually means
 
@@ -96,8 +95,7 @@ Engine work — comparable to applying a heavy photo filter, then done.
 **Which iPhones?** Any modern iPhone with a Neural Engine (iOS 17+). Newer chips
 simply finish faster.
 
-**Do you ever see my files?** No. There's no upload path at all — the feature
-that would send your media to us doesn't exist.
+**Do you ever see my files?** Not the files you pick from your phone: that path has no upload at all. A public link you paste is fetched by our server and deleted right after the hand-off, and Verifyco Web processes uploads ephemerally, keeping only the report.
 
 ## The bottom line
 

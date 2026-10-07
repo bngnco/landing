@@ -60,7 +60,8 @@
   <script>
     (function () {
       function render() {
-        var saved = localStorage.getItem("verifyco_lang") || "en";
+        var saved = "en";
+        try { saved = localStorage.getItem("verifyco_lang") || "en"; } catch (error) { saved = "en"; }
         var lang = (saved === "tr") ? "tr" : "en";
         var md = window.VERIFYCO_LEGAL.terms[lang] || window.VERIFYCO_LEGAL.terms.en;
         document.getElementById("legalDoc").innerHTML = window.VERIFYCO_RENDER_LEGAL(md);

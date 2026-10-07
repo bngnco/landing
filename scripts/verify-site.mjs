@@ -240,8 +240,8 @@ const hasRoute = (routes, source, destination) =>
 const requiredBlogRewrites = [
   ["/blog", "/blog/index.html"],
   ["/:lang(tr|es|de|fr|it|pt|ar)/blog", "/:lang/blog/index.html"],
-  ["/blog/tag/:slug([a-z0-9-]+)", "/blog/tag/:slug.html"],
-  ["/:lang(tr|es|de|fr|it|pt|ar)/blog/tag/:slug([a-z0-9-]+)", "/:lang/blog/tag/:slug.html"],
+  ["/blog/tag/:slug([^/.]+)", "/blog/tag/:slug.html"],
+  ["/:lang(tr|es|de|fr|it|pt|ar)/blog/tag/:slug([^/.]+)", "/:lang/blog/tag/:slug.html"],
   ["/blog/:slug([a-z0-9-]+)", "/blog/:slug.html"],
   ["/:lang(tr|es|de|fr|it|pt|ar)/blog/:slug([a-z0-9-]+)", "/:lang/blog/:slug.html"],
 ];

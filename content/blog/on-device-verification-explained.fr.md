@@ -35,8 +35,7 @@ pour les contenus sensibles que l’on a le plus besoin de vérifier.
 - **Pas de compte, pas de trace.** Rien à créer, rien qui relie un fichier
   vérifié à votre identité.
 
-> Il n’y a pas de serveur. Il n’y a pas de téléversement. Il n’y a pas de compte.
-> Vos médias restent sur votre téléphone, point.
+> Pour un fichier que vous choisissez sur votre téléphone, il n’y a ni serveur, ni téléversement, ni compte : vos médias restent sur votre téléphone, point. Les vérifications de liens et Verifyco Web utilisent un traitement temporaire côté serveur, comme l’indique la note de périmètre ci-dessus.
 
 ## Ce que « sur l’appareil » veut vraiment dire
 
@@ -100,8 +99,7 @@ du Neural Engine — comparable à un filtre photo lourd, puis c’est fini.
 **Quels iPhone ?** Tout iPhone moderne avec Neural Engine (iOS 17+). Les puces
 plus récentes finissent simplement plus vite.
 
-**Voyez-vous un jour mes fichiers ?** Non. Il n’existe aucun chemin de
-téléversement — la fonction qui enverrait vos médias chez nous n’existe pas.
+**Voyez-vous un jour mes fichiers ?** Pas ceux que vous choisissez sur votre téléphone : ce parcours n’a aucun téléversement. Un lien public que vous collez est récupéré par notre serveur puis supprimé juste après la remise ; Verifyco Web traite les envois de façon éphémère et ne conserve que le rapport.
 
 ## En résumé
 

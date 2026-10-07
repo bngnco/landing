@@ -33,8 +33,7 @@ pessoas mais precisam checar.
 - **Sem conta, sem rastro.** Nada para cadastrar, nada ligando um arquivo
   checado à sua identidade.
 
-> Não há servidor. Não há upload. Não há conta. Sua mídia fica no seu celular,
-> ponto final.
+> Para um arquivo que você escolhe no seu celular não há servidor, nem upload, nem conta: sua mídia fica no seu celular, ponto final. As verificações de links e o Verifyco Web usam processamento temporário no servidor, como diz a nota de escopo acima.
 
 ## O que "no dispositivo" significa de verdade
 
@@ -96,8 +95,7 @@ Neural Engine — comparável a aplicar um filtro de foto pesado, e pronto.
 **Quais iPhones?** Qualquer iPhone moderno com Neural Engine (iOS 17+). Chips
 mais novos só terminam mais rápido.
 
-**Vocês veem meus arquivos alguma vez?** Não. Não existe nenhum caminho de
-upload — o recurso que enviaria sua mídia para nós simplesmente não existe.
+**Vocês veem meus arquivos alguma vez?** Os que você escolhe no seu celular, não: esse caminho não tem upload nenhum. Um link público que você cola é buscado pelo nosso servidor e apagado logo após a entrega; o Verifyco Web processa envios de forma efêmera e guarda só o relatório.
 
 ## Conclusão
 

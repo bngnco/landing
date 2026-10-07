@@ -34,7 +34,7 @@ olduğu — özellikle insanların en sık kontrol etmek istediği hassas içeri
 - **Hesap yok, iz yok.** Kaydolunacak bir şey yok; kontrol edilen bir dosyayı
   kimliğine bağlayan hiçbir şey yok.
 
-> Sunucu yok. Yükleme yok. Hesap yok. Medyan telefonunda kalır, nokta.
+> Telefonundan seçtiğin bir dosya için sunucu yok, yükleme yok, hesap yok: medyan telefonunda kalır, nokta. Bağlantı kontrolleri ve Verifyco Web, yukarıdaki kapsam notunda dendiği gibi geçici sunucu işleme kullanır.
 
 ## "Cihazda" tam olarak ne demek
 
@@ -93,8 +93,7 @@ ağır bir fotoğraf filtresi uygulamakla kıyaslanabilir, sonra biter.
 **Hangi iPhone'lar?** Neural Engine'i olan her modern iPhone (iOS 17+). Daha yeni
 çipler sadece daha hızlı bitirir.
 
-**Dosyalarımı hiç görüyor musunuz?** Hayır. Hiçbir yükleme yolu yok — medyanı bize
-gönderecek özellik zaten mevcut değil.
+**Dosyalarımı hiç görüyor musunuz?** Telefonundan seçtiğin dosyaları hayır: o yolda hiç yükleme yok. Yapıştırdığın herkese açık bir bağlantıyı sunucumuz çeker ve teslimden hemen sonra siler; Verifyco Web ise yüklemeleri geçici olarak işler ve yalnız raporu saklar.
 
 ## Özet
 

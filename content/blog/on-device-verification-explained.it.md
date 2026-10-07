@@ -35,8 +35,7 @@ hanno più spesso bisogno di controllare.
 - **Niente account, niente tracce.** Nulla a cui registrarsi, nulla che colleghi
   un file controllato alla tua identità.
 
-> Non c’è un server. Non c’è un upload. Non c’è un account. I tuoi contenuti
-> restano sul tuo telefono, punto.
+> Per un file che scegli sul tuo telefono non c’è un server, non c’è un upload, non c’è un account: i tuoi contenuti restano sul tuo telefono, punto. I controlli dei link e Verifyco Web usano un’elaborazione temporanea sul server, come dice la nota sull’ambito qui sopra.
 
 ## Cosa significa davvero "sul dispositivo"
 
@@ -99,8 +98,7 @@ Neural Engine — paragonabile a un filtro fotografico pesante, poi finisce lì.
 **Quali iPhone?** Qualsiasi iPhone moderno con Neural Engine (iOS 17+). I chip
 più recenti finiscono semplicemente prima.
 
-**Vedete mai i miei file?** No. Non esiste alcun percorso di upload — la
-funzione che invierebbe i tuoi contenuti a noi semplicemente non esiste.
+**Vedete mai i miei file?** Quelli che scegli sul tuo telefono no: quel percorso non ha alcun upload. Un link pubblico che incolli viene recuperato dal nostro server ed eliminato subito dopo la consegna; Verifyco Web elabora i caricamenti in modo effimero e conserva solo il report.
 
 ## In sintesi
 

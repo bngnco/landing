@@ -48,8 +48,8 @@
   "rewrites": [
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog", "destination": "/:lang/blog/index.html" },
-    { "source": "/blog/tag/:slug([a-z0-9-]+)", "destination": "/blog/tag/:slug.html" },
-    { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog/tag/:slug([a-z0-9-]+)", "destination": "/:lang/blog/tag/:slug.html" },
+    { "source": "/blog/tag/:slug([^/.]+)", "destination": "/blog/tag/:slug.html" },
+    { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog/tag/:slug([^/.]+)", "destination": "/:lang/blog/tag/:slug.html" },
     { "source": "/blog/:slug([a-z0-9-]+)", "destination": "/blog/:slug.html" },
     { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog/:slug([a-z0-9-]+)", "destination": "/:lang/blog/:slug.html" },
     { "source": "/corpus-ai", "destination": "/corpus-ai.html" },

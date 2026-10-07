@@ -38,8 +38,7 @@ am häufigsten prüfen wollen.
 - **Kein Konto, keine Spur.** Nichts zu registrieren, nichts, das eine geprüfte
   Datei mit deiner Identität verknüpft.
 
-> Es gibt keinen Server. Es gibt keinen Upload. Es gibt kein Konto. Deine Medien
-> bleiben auf deinem Handy, Punkt.
+> Für eine Datei, die du auf deinem Handy auswählst, gibt es keinen Server, keinen Upload und kein Konto: Deine Medien bleiben auf deinem Handy, Punkt. Link-Prüfungen und Verifyco Web nutzen eine vorübergehende Verarbeitung auf dem Server, wie der Hinweis zum Geltungsbereich oben sagt.
 
 ## Was "auf dem Gerät" wirklich heißt
 
@@ -102,8 +101,7 @@ Engine-Arbeit — vergleichbar mit einem aufwendigen Fotofilter, dann fertig.
 **Welche iPhones?** Jedes moderne iPhone mit Neural Engine (iOS 17+). Neuere
 Chips sind einfach schneller fertig.
 
-**Seht ihr je meine Dateien?** Nein. Es gibt überhaupt keinen Upload-Pfad — die
-Funktion, die deine Medien an uns senden würde, existiert nicht.
+**Seht ihr je meine Dateien?** Die Dateien, die du auf deinem Handy auswählst, nicht: Dieser Weg hat überhaupt keinen Upload. Einen öffentlichen Link, den du einfügst, ruft unser Server ab und löscht ihn direkt nach der Übergabe; Verifyco Web verarbeitet Uploads vorübergehend und behält nur den Bericht.
 
 ## Fazit
 

@@ -35,8 +35,7 @@ importa — sobre todo para el material sensible que la gente más necesita comp
 - **Sin cuenta, sin rastro.** Nada que registrar, nada que vincule un archivo
   comprobado con tu identidad.
 
-> No hay servidor. No hay subida. No hay cuenta. Tu contenido se queda en tu
-> teléfono, punto.
+> Para un archivo que eliges en tu teléfono no hay servidor, ni subida, ni cuenta: tu contenido se queda en tu teléfono, punto. Las comprobaciones de enlaces y Verifyco Web usan un procesamiento temporal en el servidor, como indica la nota de alcance de arriba.
 
 ## Qué significa realmente "en el dispositivo"
 
@@ -100,8 +99,7 @@ Engine — comparable a aplicar un filtro de foto pesado, y listo.
 **¿Qué iPhones?** Cualquier iPhone moderno con Neural Engine (iOS 17+). Los chips
 más nuevos simplemente terminan antes.
 
-**¿Alguna vez veis mis archivos?** No. No existe ninguna vía de subida — la
-función que enviaría tu contenido a nosotros directamente no existe.
+**¿Alguna vez veis mis archivos?** Los que eliges en tu teléfono, no: esa vía no tiene ninguna subida. Un enlace público que pegas lo recupera nuestro servidor y lo borra justo después de entregarlo; Verifyco Web procesa las subidas de forma efímera y conserva solo el informe.
 
 ## Conclusión
 

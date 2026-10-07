@@ -84,6 +84,15 @@ for (const directory of PUBLIC_DIRS) {
   await cp(source, path.join(DIST, directory), { recursive: true });
 }
 
+// The header announcement the CMS edits (content/site/announcement.json)
+// ships under assets/: the content/ tree is a private build input, and the
+// page script reads /assets/announcement.json.
+const announcementSource = path.join(ROOT, "content", "site", "announcement.json");
+if (await exists(announcementSource)) {
+  JSON.parse(await readFile(announcementSource, "utf8")); // a broken JSON fails the build, not the page
+  await copyFile(announcementSource, path.join(DIST, "assets", "announcement.json"));
+}
+
 const uploadCount = await copyRequiredUploads();
 
 const forbidden = ["content", "scripts", "node_modules", ".git", ".preview", "package.json", "package-lock.json"];

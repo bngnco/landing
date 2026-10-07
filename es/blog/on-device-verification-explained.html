@@ -59,9 +59,9 @@
   <meta property="article:tag" content="iOS" />
   <meta property="article:tag" content="Investigación" />
   <meta property="article:tag" content="Guías" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"La verificación en el dispositivo, explicada (nada sale de tu iPhone)","description":"Por qué Verifyco corre enteramente en tu iPhone: cómo funciona el análisis forense en el dispositivo, qué hace el Neural Engine, nube vs dispositivo, y por qué nunca se sube nada.","image":["https://verifyco.app/uploads/blog/1000012581.png"],"datePublished":"2026-06-08T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","author":{"@type":"Organization","name":"Equipo Verifyco","url":"https://verifyco.app"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.app/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.app/es/blog/on-device-verification-explained"},"articleSection":"iOS","keywords":"iOS, Investigación, Guías","wordCount":869,"timeRequired":"PT4M","inLanguage":"es","isAccessibleForFree":true}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"La verificación en el dispositivo, explicada (nada sale de tu iPhone)","description":"Por qué Verifyco corre enteramente en tu iPhone: cómo funciona el análisis forense en el dispositivo, qué hace el Neural Engine, nube vs dispositivo, y por qué nunca se sube nada.","image":["https://verifyco.app/uploads/blog/1000012581.png"],"datePublished":"2026-06-08T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","author":{"@type":"Organization","name":"Equipo Verifyco","url":"https://verifyco.app"},"publisher":{"@type":"Organization","name":"Verifyco","logo":{"@type":"ImageObject","url":"https://verifyco.app/assets/verifyco-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://verifyco.app/es/blog/on-device-verification-explained"},"articleSection":"iOS","keywords":"iOS, Investigación, Guías","wordCount":919,"timeRequired":"PT5M","inLanguage":"es","isAccessibleForFree":true}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://verifyco.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://verifyco.app/es/blog"},{"@type":"ListItem","position":3,"name":"La verificación en el dispositivo, explicada (nada sale de tu iPhone)","item":"https://verifyco.app/es/blog/on-device-verification-explained"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿El análisis en el dispositivo es tan preciso como en la nube?","acceptedAnswer":{"@type":"Answer","text":"Para estas señales forenses, sí — el análisis es la misma matemática; solo cambia el lugar. La detección siempre es un objetivo móvil (los generadores mejoran), y por eso Verifyco fusiona varias señales y mejora con las actualizaciones."}},{"@type":"Question","name":"¿Gasta mucha batería?","acceptedAnswer":{"@type":"Answer","text":"Un análisis es una ráfaga corta de trabajo del Neural Engine — comparable a aplicar un filtro de foto pesado, y listo."}},{"@type":"Question","name":"¿Qué iPhones?","acceptedAnswer":{"@type":"Answer","text":"Cualquier iPhone moderno con Neural Engine (iOS 17+). Los chips más nuevos simplemente terminan antes."}},{"@type":"Question","name":"¿Alguna vez veis mis archivos?","acceptedAnswer":{"@type":"Answer","text":"No. No existe ninguna vía de subida — la función que enviaría tu contenido a nosotros directamente no existe."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿El análisis en el dispositivo es tan preciso como en la nube?","acceptedAnswer":{"@type":"Answer","text":"Para estas señales forenses, sí — el análisis es la misma matemática; solo cambia el lugar. La detección siempre es un objetivo móvil (los generadores mejoran), y por eso Verifyco fusiona varias señales y mejora con las actualizaciones."}},{"@type":"Question","name":"¿Gasta mucha batería?","acceptedAnswer":{"@type":"Answer","text":"Un análisis es una ráfaga corta de trabajo del Neural Engine — comparable a aplicar un filtro de foto pesado, y listo."}},{"@type":"Question","name":"¿Qué iPhones?","acceptedAnswer":{"@type":"Answer","text":"Cualquier iPhone moderno con Neural Engine (iOS 17+). Los chips más nuevos simplemente terminan antes."}},{"@type":"Question","name":"¿Alguna vez veis mis archivos?","acceptedAnswer":{"@type":"Answer","text":"Los que eliges en tu teléfono, no: esa vía no tiene ninguna subida. Un enlace público que pegas lo recupera nuestro servidor y lo borra justo después de entregarlo; Verifyco Web procesa las subidas de forma efímera y conserva solo el informe."}}]}</script>
 </head>
 <body class="is-post">
 
@@ -114,7 +114,7 @@
           <span class="dot">·</span>
           <time datetime="2026-06-08T00:00:00+00:00">8 de junio de 2026</time>
           <span class="dot">·</span>
-          <span>4 min de lectura</span>
+          <span>5 min de lectura</span>
           <span class="dot">·</span><span class="updated">Actualizado 1 de julio de 2026</span>
         </div>
       </div>
@@ -152,8 +152,7 @@ sin red — sigue funcionando, porque no hay ninguna llamada de red que hacer.</
 comprobado con tu identidad.</li>
 </ul>
 <blockquote>
-<p>No hay servidor. No hay subida. No hay cuenta. Tu contenido se queda en tu
-teléfono, punto.</p>
+<p>Para un archivo que eliges en tu teléfono no hay servidor, ni subida, ni cuenta: tu contenido se queda en tu teléfono, punto. Las comprobaciones de enlaces y Verifyco Web usan un procesamiento temporal en el servidor, como indica la nota de alcance de arriba.</p>
 </blockquote>
 <h2 id="que-significa-realmente-en-el-dispositivo">Qué significa realmente “en el dispositivo”</h2>
 <p>Los iPhone modernos incluyen un <strong>Neural Engine</strong> dedicado — silicio construido
@@ -234,8 +233,7 @@ por eso Verifyco fusiona varias señales y mejora con las actualizaciones.</p>
 Engine — comparable a aplicar un filtro de foto pesado, y listo.</p>
 <p><strong>¿Qué iPhones?</strong> Cualquier iPhone moderno con Neural Engine (iOS 17+). Los chips
 más nuevos simplemente terminan antes.</p>
-<p><strong>¿Alguna vez veis mis archivos?</strong> No. No existe ninguna vía de subida — la
-función que enviaría tu contenido a nosotros directamente no existe.</p>
+<p><strong>¿Alguna vez veis mis archivos?</strong> Los que eliges en tu teléfono, no: esa vía no tiene ninguna subida. Un enlace público que pegas lo recupera nuestro servidor y lo borra justo después de entregarlo; Verifyco Web procesa las subidas de forma efímera y conserva solo el informe.</p>
 <h2 id="conclusion">Conclusión</h2>
 <p>La verificación en el dispositivo te da una segunda opinión de nivel forense que
 es <strong>privada por diseño y lo bastante rápida para usarla de verdad</strong> — antes de

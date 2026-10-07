@@ -24,24 +24,34 @@
       mobileNav.insertBefore(mobileAnnouncement, mobileNav.firstChild);
       announcements.push(mobileAnnouncement);
     }
+    /* The static markup is the fallback: its text is current (it ships with
+       the page), so no script default may override it. The CMS JSON, when it
+       loads, replaces it. */
+    var first = announcements[0];
+    var defaults = {
+      href: first.getAttribute("href") || "/blog",
+      kicker: (first.querySelector("[data-announcement-kicker]") || {}).textContent || "NEWS",
+      title: (first.querySelector("[data-announcement-title]") || {}).textContent || ""
+    };
     function apply(config) {
       var enabled = !config || config.enabled !== false;
-      var href = config && typeof config.url === "string" ? config.url.trim() : "/blog";
+      var href = config && typeof config.url === "string" && config.url.trim() ? config.url.trim() : defaults.href;
       try {
-        var parsed = new URL(href || "/blog", window.location.origin);
-        if (parsed.protocol !== "http:" && parsed.protocol !== "https:") href = "/blog";
-      } catch (error) { href = "/blog"; }
+        var parsed = new URL(href || defaults.href, window.location.origin);
+        if (parsed.protocol !== "http:" && parsed.protocol !== "https:") href = defaults.href;
+      } catch (error) { href = defaults.href; }
       announcements.forEach(function (announcement) {
         announcement.hidden = !enabled;
-        announcement.href = href || "/blog";
+        announcement.href = href || defaults.href;
         var kicker = announcement.querySelector("[data-announcement-kicker]");
         var title = announcement.querySelector("[data-announcement-title]");
-        if (kicker) kicker.textContent = config && config.kicker ? config.kicker : "NEWS";
-        if (title) title.textContent = config && config.title ? config.title : "The new Verifyco engine is arriving";
+        if (kicker) kicker.textContent = config && config.kicker ? config.kicker : defaults.kicker;
+        if (title) title.textContent = config && config.title ? config.title : defaults.title;
       });
     }
-    apply(null);
-    fetch("/content/site/announcement.json", { cache: "no-store" })
+    /* Published by scripts/build-deploy.mjs from content/site/announcement.json
+       (the content/ tree itself never ships). */
+    fetch("/assets/announcement.json", { cache: "no-store" })
       .then(function (response) { return response.ok ? response.json() : null; })
       .then(function (config) { if (config) apply(config); })
       .catch(function () {});
