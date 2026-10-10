@@ -5,8 +5,38 @@
     <link>https://verifyco.app/blog</link>
     <description>Guides, breakdowns and research on detecting deepfakes, AI-generated and manipulated media — from the team behind Verifyco, on-device forensic verification for iPhone.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://verifyco.app/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Check a UFO or UAP Video for AI Generation and Editing</title>
+      <link>https://verifyco.app/blog/how-to-check-a-ufo-video-for-ai-or-editing</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/how-to-check-a-ufo-video-for-ai-or-editing</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A practical, evidence-first way to vet a UFO/UAP clip before you share it: provenance, metadata, visual model, temporal and spectral signals, and what &quot;inconclusive&quot; really means for sky footage.</description>
+      <category>Guides</category>
+      <category>Deepfakes</category>
+      <category>Research</category>
+    </item>
+    <item>
+      <title>What's New in Verifyco (October 2026): Evidence Lean, Document Checks, Web and Links</title>
+      <link>https://verifyco.app/blog/whats-new-in-verifyco-october-2026</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/whats-new-in-verifyco-october-2026</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Everything Verifyco added since launch: the evidence lean and score legend, PDF document inspection, public-link analysis, the web app, credit packs, 20 languages and the developer tools — and what is still deliberately not promised.</description>
+      <category>iOS</category>
+      <category>Product</category>
+      <category>Guides</category>
+    </item>
+    <item>
+      <title>Why &quot;Inconclusive&quot; Is a Real Answer (and What Evidence Lean Adds)</title>
+      <link>https://verifyco.app/blog/why-inconclusive-is-a-real-answer</link>
+      <guid isPermaLink="true">https://verifyco.app/blog/why-inconclusive-is-a-real-answer</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Detectors that always answer are guessing. How Verifyco decides between authentic, inconclusive, suspicious and manipulated, why the inconclusive band now carries a lean, and how to read the score legend.</description>
+      <category>Research</category>
+      <category>Guides</category>
+      <category>Deepfakes</category>
+    </item>
     <item>
       <title>Someone Made a Deepfake of You: What to Do, Step by Step</title>
       <link>https://verifyco.app/blog/what-to-do-if-someone-makes-a-deepfake-of-you</link>

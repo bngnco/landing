@@ -19,6 +19,21 @@
     <loc>https://verifyco.app/terms</loc>
   </url>
   <url>
+    <loc>https://verifyco.app/blog/how-to-check-a-ufo-video-for-ai-or-editing</loc>
+    <lastmod>2026-10-10</lastmod>
+    <image:image><image:loc>https://verifyco.app/uploads/blog/signals.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.app/blog/whats-new-in-verifyco-october-2026</loc>
+    <lastmod>2026-10-10</lastmod>
+    <image:image><image:loc>https://verifyco.app/uploads/blog/home.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://verifyco.app/blog/why-inconclusive-is-a-real-answer</loc>
+    <lastmod>2026-10-10</lastmod>
+    <image:image><image:loc>https://verifyco.app/uploads/blog/url.png</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://verifyco.app/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
     <lastmod>2026-07-07</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.app/blog/what-to-do-if-someone-makes-a-deepfake-of-you"/>
@@ -230,7 +245,7 @@
   </url>
   <url>
     <loc>https://verifyco.app/blog</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://verifyco.app/blog"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://verifyco.app/tr/blog"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://verifyco.app/es/blog"/>
@@ -247,19 +262,23 @@
   </url>
   <url>
     <loc>https://verifyco.app/blog/tag/deepfakes</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://verifyco.app/blog/tag/guides</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://verifyco.app/blog/tag/ios</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://verifyco.app/blog/tag/product</loc>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://verifyco.app/blog/tag/research</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://verifyco.app/tr/blog/what-to-do-if-someone-makes-a-deepfake-of-you</loc>
