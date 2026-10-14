@@ -55,6 +55,8 @@ The only limited data flows are:
 - **Purchases.** Subscriptions and credit packs are processed by Apple through the App Store. Apple handles your payment; we never receive or store your payment card details. We receive only the transaction and entitlement status needed to unlock paid features.
 - **Web access (optional).** Only if you tap "Use Pro on the web", Sign in with Apple gives us a stable Apple user identifier (no name or email is requested). RevenueCat links your App Store purchases to that identifier so your Pro access is recognised when you sign in with the same Apple ID on web.verifyco.app. You can unlink it at any time in Settings.
 
+- **Provider provenance check (optional, off by default).** Only if you switch it on in Settings, still images you analyse that do not already carry trusted Content Credentials are sent through our server to OpenAI's Content Provenance API, which checks for OpenAI's own provenance signals (Content Credentials it issued and its SynthID watermark). OpenAI states that submitted files are processed only for this check, are not stored unless legally required and are not used to train its models. Our server deletes the image as soon as the check completes and keeps no copy. Images analysed on the web and media fetched from public links are checked the same way when the service is configured. You can switch the check off at any time in Settings.
+
 ## 6. App Tracking Transparency
 
 Verifyco does not track you across other companies' apps and websites, and we do not request App Tracking Transparency permission. Any ads shown on the free tier are served on a non-personalized basis (no IDFA-based tracking). You can further limit ad personalization in the iOS Settings app under Privacy & Security → Tracking and → Apple Advertising.
@@ -69,7 +71,7 @@ Where data protection law applies, we rely on: your **consent** (diagnostics and
 
 ## 9. Data Sharing and Disclosure
 
-We do not sell or rent personal data. Limited data may be processed by service providers acting on our or your behalf, namely Apple (App Store, in-app purchases), RevenueCat (purchase and entitlement status) and Google (Firebase Crashlytics and Analytics for optional diagnostics, AdMob advertising on the free tier and Firebase Cloud Messaging for push notifications). We may disclose information if required by law, to enforce our Terms, or to protect the rights, safety, or property of users or the public.
+We do not sell or rent personal data. Limited data may be processed by service providers acting on our or your behalf, namely Apple (App Store, in-app purchases), RevenueCat (purchase and entitlement status), Google (Firebase Crashlytics and Analytics for optional diagnostics, AdMob advertising on the free tier and Firebase Cloud Messaging for push notifications) and OpenAI (Content Provenance API for the optional provider provenance check of images). We may disclose information if required by law, to enforce our Terms, or to protect the rights, safety, or property of users or the public.
 
 ## 10. Data Retention
 
@@ -81,7 +83,7 @@ Local-file analysis stays on your device. Social-link import necessarily transmi
 
 ## 12. International Transfers
 
-Where purchase, optional diagnostics or advertising data is processed by Apple, RevenueCat or Google, it may be processed in countries other than your own. Those providers implement safeguards (such as standard contractual clauses) where required by applicable law.
+Where purchase, optional diagnostics, advertising or provider provenance-check data is processed by Apple, RevenueCat, Google or OpenAI, it may be processed in countries other than your own. Those providers implement safeguards (such as standard contractual clauses) where required by applicable law.
 
 ## 13. Your Rights (GDPR / UK GDPR)
 
@@ -97,7 +99,7 @@ Verifyco is not directed to children under 13 (or the minimum age required in yo
 
 ## 16. Third-Party Services and Links
 
-The App relies on Apple (App Store, StoreKit), RevenueCat (purchase validation) and Google (Firebase Crashlytics and Analytics for optional diagnostics, AdMob on the free tier, Firebase Cloud Messaging for push notifications). Their handling of data is governed by their own privacy policies. Any links we provide are for convenience and do not imply endorsement; we are not responsible for third-party practices.
+The App relies on Apple (App Store, StoreKit), RevenueCat (purchase validation), Google (Firebase Crashlytics and Analytics for optional diagnostics, AdMob on the free tier, Firebase Cloud Messaging for push notifications) and, only when you enable it, OpenAI (Content Provenance API). Their handling of data is governed by their own privacy policies. Any links we provide are for convenience and do not imply endorsement; we are not responsible for third-party practices.
 
 ## 17. Changes to This Policy
 
@@ -154,6 +156,8 @@ Tek sınırlı veri akışları şunlardır:
 - **Satın almalar.** Abonelikler ve kredi paketleri Apple tarafından App Store üzerinden işlenir. Ödemenizi Apple yürütür; ödeme kartı bilgilerinizi asla almaz veya saklamayız. Yalnızca ücretli özellikleri açmak için gereken işlem ve yetki durumunu alırız.
 - **Web erişimi (isteğe bağlı).** Yalnızca "Pro'yu Web'de Kullan"a dokunursanız, Apple ile Giriş bize sabit bir Apple kullanıcı kimliği verir (ad veya e-posta istenmez). RevenueCat, App Store satın alımlarınızı bu kimliğe bağlar; böylece aynı Apple Kimliği ile web.verifyco.app'te oturum açtığınızda Pro erişiminiz tanınır. Bağlantıyı Ayarlar'dan istediğiniz zaman kaldırabilirsiniz.
 
+- **Sağlayıcı köken kontrolü (isteğe bağlı, varsayılan kapalı).** Yalnızca Ayarlar'dan açarsanız, analiz ettiğiniz ve hâlihazırda güvenilir Content Credentials taşımayan sabit görseller sunucumuz üzerinden OpenAI'ın Content Provenance API'sine gönderilir; bu servis OpenAI'ın kendi köken sinyallerini (OpenAI'ın verdiği Content Credentials ve SynthID filigranı) arar. OpenAI, gönderilen dosyaların yalnızca bu kontrol için işlendiğini, yasal zorunluluk dışında saklanmadığını ve modellerini eğitmek için kullanılmadığını belirtir. Sunucumuz kontrol biter bitmez görseli siler ve kopya tutmaz. Web'de analiz edilen görseller ve herkese açık bağlantılardan alınan medya, servis yapılandırıldığında aynı şekilde kontrol edilir. Kontrolü Ayarlar'dan istediğiniz zaman kapatabilirsiniz.
+
 ## 6. İzleme Şeffaflığı (App Tracking Transparency)
 
 Verifyco sizi diğer şirketlerin uygulama ve web sitelerinde izlemez ve App Tracking Transparency izni istemez. Ücretsiz katmanda gösterilen reklamlar kişiselleştirilmemiş olarak sunulur (IDFA tabanlı izleme yapılmaz). Reklam kişiselleştirmesini iOS Ayarlar uygulamasında Gizlilik ve Güvenlik → İzleme ve → Apple Reklamcılığı bölümünden daha da kısıtlayabilirsiniz.
@@ -168,7 +172,7 @@ Veri koruma hukukunun uygulandığı yerlerde şunlara dayanırız: **rızanız*
 
 ## 9. Veri Paylaşımı ve Açıklama
 
-Kişisel verileri satmaz veya kiralamayız. Sınırlı veriler, bizim veya sizin adınıza hareket eden hizmet sağlayıcılar tarafından işlenebilir; bunlar Apple (App Store, uygulama içi satın alma), RevenueCat (satın alma ve yetki durumu) ve Google'dır (isteğe bağlı tanılama için Firebase Crashlytics ve Analytics, ücretsiz katmanda AdMob reklamcılığı ve anlık bildirimler için Firebase Cloud Messaging). Yasaların gerektirdiği durumlarda, Koşullarımızı uygulamak veya kullanıcıların ya da kamunun haklarını, güvenliğini veya mülkiyetini korumak için bilgileri açıklayabiliriz.
+Kişisel verileri satmaz veya kiralamayız. Sınırlı veriler, bizim veya sizin adınıza hareket eden hizmet sağlayıcılar tarafından işlenebilir; bunlar Apple (App Store, uygulama içi satın alma), RevenueCat (satın alma ve yetki durumu), Google (isteğe bağlı tanılama için Firebase Crashlytics ve Analytics, ücretsiz katmanda AdMob reklamcılığı ve anlık bildirimler için Firebase Cloud Messaging) ve OpenAI'dır (görsellerin isteğe bağlı sağlayıcı köken kontrolü için Content Provenance API). Yasaların gerektirdiği durumlarda, Koşullarımızı uygulamak veya kullanıcıların ya da kamunun haklarını, güvenliğini veya mülkiyetini korumak için bilgileri açıklayabiliriz.
 
 ## 10. Veri Saklama
 
@@ -180,7 +184,7 @@ Yerel dosya analizi cihazınızda kalır. Sosyal bağlantı içe aktarma, gönde
 
 ## 12. Uluslararası Aktarımlar
 
-Satın alma, isteğe bağlı tanılama veya reklam verileri Apple, RevenueCat ya da Google tarafından işlendiğinde, kendi ülkeniz dışındaki ülkelerde işlenebilir. Bu sağlayıcılar, geçerli yasaların gerektirdiği yerlerde güvenceler (standart sözleşme maddeleri gibi) uygular.
+Satın alma, isteğe bağlı tanılama, reklam veya sağlayıcı köken kontrolü verileri Apple, RevenueCat, Google ya da OpenAI tarafından işlendiğinde, kendi ülkeniz dışındaki ülkelerde işlenebilir. Bu sağlayıcılar, geçerli yasaların gerektirdiği yerlerde güvenceler (standart sözleşme maddeleri gibi) uygular.
 
 ## 13. Haklarınız (GDPR / BK GDPR)
 
@@ -196,7 +200,7 @@ Verifyco 13 yaşından küçük çocuklara (veya ülkenizde gereken asgari yaş)
 
 ## 16. Üçüncü Taraf Hizmetleri ve Bağlantılar
 
-Uygulama, Apple (App Store, StoreKit), RevenueCat (satın alma doğrulaması) ve Google'a (isteğe bağlı tanılama için Firebase Crashlytics ve Analytics, ücretsiz katmanda AdMob, anlık bildirimler için Firebase Cloud Messaging) dayanır. Verileri ele alışları kendi gizlilik politikalarına tabidir. Sağladığımız bağlantılar kolaylık içindir ve onay anlamına gelmez; üçüncü taraf uygulamalarından sorumlu değiliz.
+Uygulama, Apple (App Store, StoreKit), RevenueCat (satın alma doğrulaması), Google'a (isteğe bağlı tanılama için Firebase Crashlytics ve Analytics, ücretsiz katmanda AdMob, anlık bildirimler için Firebase Cloud Messaging) ve yalnızca siz açtığınızda OpenAI'a (Content Provenance API) dayanır. Verileri ele alışları kendi gizlilik politikalarına tabidir. Sağladığımız bağlantılar kolaylık içindir ve onay anlamına gelmez; üçüncü taraf uygulamalarından sorumlu değiliz.
 
 ## 17. Bu Politikadaki Değişiklikler
 
