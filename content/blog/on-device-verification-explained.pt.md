@@ -1,6 +1,6 @@
 ---
-title: "A verificação no dispositivo, explicada (nada sai do seu iPhone)"
-description: "Por que o Verifyco roda inteiramente no seu iPhone: como funciona a análise forense no dispositivo, o que o Neural Engine faz, nuvem vs dispositivo — e por que nada é enviado, nunca."
+title: "A verificação no dispositivo, explicada (seus arquivos locais são analisados no seu iPhone)"
+description: "Por que o Verifyco analisa no dispositivo os arquivos que você escolhe no seu iPhone: como funciona a análise forense no dispositivo, o que o Neural Engine faz, nuvem vs dispositivo — e quais caminhos usam processamento temporário no servidor."
 slug: on-device-verification-explained
 date: 2026-06-08
 updated: 2026-07-01
@@ -12,28 +12,32 @@ imageAlt: "Verifyco executando uma análise privada no dispositivo num iPhone"
 
 A maioria das ferramentas de checagem de mídia funciona igual: você envia seu
 arquivo a um servidor, os modelos deles o analisam na nuvem e você recebe um
-resultado. O Verifyco não. Cada sinal roda **localmente no seu iPhone**, e suas
-fotos e vídeos nunca saem do aparelho. Veja o que isso significa, como é
+resultado. O Verifyco não. A análise roda **localmente no seu iPhone**, e as fotos e
+vídeos que você escolhe ficam no aparelho, a menos que você ative a verificação
+opcional da OpenAI descrita mais abaixo. Veja o que isso significa, como é
 possível e por que importa — principalmente para o material sensível que as
 pessoas mais precisam checar.
 
-> **Escopo.** Este artigo trata das fotos e vídeos que você escolhe no seu iPhone. Dois caminhos do Verifyco usam processamento temporário no servidor e informam isso no app: um link público de rede social é buscado pelo servidor do Verifyco e entregue ao seu celular (a análise continua rodando no dispositivo e o servidor apaga a mídia na hora), e o Verifyco Web processa envios de forma efêmera, guardando apenas o relatório.
+> **Escopo.** Este artigo trata das fotos e vídeos que você escolhe no seu iPhone. Três caminhos do Verifyco usam um servidor e informam isso no app: a mídia de um link público de rede social é buscada para a verificação e entregue ao seu celular (a análise continua rodando no dispositivo e nós não a armazenamos); o Verifyco Web processa envios de forma efêmera, guardando apenas o relatório; e a verificação de procedência da OpenAI nos Ajustes, opcional e desativada por padrão, envia imagens JPEG, PNG e WebP à OpenAI pelo nosso servidor apenas se você a ativar.
 
 ## Por que "no dispositivo" importa
 
 - **Privacidade.** O que você mais quer verificar costuma ser o mais sensível —
   uma foto privada, um clipe vazado, uma imagem íntima que te mandaram. Análise
-  no dispositivo significa que nada disso toca o servidor de terceiros, nunca
-  fica num log e não pode vazar de uma violação que não é sua.
-- **Velocidade.** Sem upload, sem fila, sem ida e volta. A análise começa no
-  instante em que você escolhe o arquivo — e isso importa quando é um vídeo 4K,
-  não uma miniatura.
+  no dispositivo significa que nada disso vai parar no servidor de terceiros,
+  nos logs deles ou nas violações de dados deles, a menos que você ative a
+  verificação opcional da OpenAI, desativada por padrão, descrita mais abaixo.
+- **Velocidade.** A análise no dispositivo não tem fila nem ida e volta, então
+  começa no instante em que você escolhe o arquivo — e isso importa quando é
+  um vídeo 4K, não uma miniatura.
 - **Funciona offline.** No avião, com sinal ruim ou num ambiente seguro sem
-  rede — funciona do mesmo jeito, porque não há chamada de rede a fazer.
+  rede — a análise no dispositivo funciona do mesmo jeito, porque não faz
+  nenhuma chamada de rede. Só a verificação opcional da OpenAI, se você a
+  ativou, precisa de conexão.
 - **Sem conta, sem rastro.** Nada para cadastrar, nada ligando um arquivo
   checado à sua identidade.
 
-> Para um arquivo que você escolhe no seu celular não há servidor, nem upload, nem conta: sua mídia fica no seu celular, ponto final. As verificações de links e o Verifyco Web usam processamento temporário no servidor, como diz a nota de escopo acima.
+> Para um arquivo que você escolhe no seu celular não há servidor, nem upload, nem conta, a menos que você ative nos Ajustes a verificação de procedência da OpenAI, opcional e desativada por padrão: nesse caso, imagens JPEG, PNG e WebP passam pelo nosso servidor até a Content Provenance API da OpenAI, e nosso servidor apaga a imagem depois. As verificações de links e o Verifyco Web usam processamento temporário no servidor, como diz a nota de escopo acima.
 
 ## O que "no dispositivo" significa de verdade
 
@@ -45,7 +49,9 @@ execute redes neurais direto nesse hardware.
 O Verifyco usa isso para fazer localmente o que outras ferramentas mandam para
 uma GPU num datacenter: análise neural de rostos e cenas, transformadas de
 frequência, leitura de metadados e hash do arquivo — tudo na memória do próprio
-telefone, em segundos, sem transmitir um único byte da sua mídia.
+telefone, em segundos. A análise em si não envia sua mídia a lugar nenhum; só
+a verificação opcional da OpenAI, desativada por padrão, se você a ativar,
+envia uma imagem à OpenAI pelo nosso servidor.
 
 ## Os cinco sinais, rodando localmente
 
@@ -61,9 +67,9 @@ confiança de 0 a 100:
 5. **Análise de frequência** — a impressão espectral DCT dos modelos de difusão
    e GAN, invisível ao olho.
 
-Nenhuma camada é decisiva sozinha — essa é a questão. É a fusão de vários sinais
-independentes que torna o veredicto robusto: enganar um é fácil, enganar todos ao
-mesmo tempo é difícil. (O que cada camada pega na prática:
+A maioria das camadas não é decisiva sozinha — essa é a questão. É a fusão de
+vários sinais independentes que torna o veredicto robusto: enganar um é fácil,
+enganar todos ao mesmo tempo é difícil. (O que cada camada pega na prática:
 [como saber se uma imagem foi gerada por IA](/pt/blog/how-to-tell-if-an-image-is-ai-generated)
 e [5 sinais de que um vídeo foi deepfakado](/pt/blog/5-signs-a-video-has-been-deepfaked).)
 
@@ -71,11 +77,11 @@ e [5 sinais de que um vídeo foi deepfakado](/pt/blog/5-signs-a-video-has-been-d
 
 | | Verificação na nuvem | No dispositivo (Verifyco) |
 | --- | --- | --- |
-| Sua mídia | Enviada a um servidor | Arquivos locais nunca saem do seu celular |
+| Sua mídia | Enviada a um servidor | Arquivos locais ficam no seu celular, a menos que você ative a verificação da OpenAI |
 | Velocidade | Upload + fila + download | Começa na hora |
-| Offline | Não | Sim |
+| Offline | Não | Sim (a verificação opcional da OpenAI precisa de conexão) |
 | Conta necessária | Geralmente | Não |
-| Exposição de privacidade | Logs de servidor, violações | Nenhuma além do seu aparelho |
+| Exposição de privacidade | Logs de servidor, violações | Nenhuma além do seu aparelho, a menos que você ative a verificação da OpenAI |
 
 A única coisa que a nuvem pode oferecer é um modelo central gigante. Mas para a
 verificação forense, os sinais que importam — procedência, metadados, padrões de
@@ -84,8 +90,8 @@ ganho de privacidade é enorme.
 
 ## Perguntas frequentes
 
-**No dispositivo é tão preciso quanto na nuvem?** Para esses sinais forenses,
-sim — a análise é a mesma matemática; só muda o *lugar*. A detecção é sempre um
+**A análise no dispositivo é mais fraca que a da nuvem?** Para esses sinais
+forenses, a análise é a mesma matemática; só muda o *lugar*. A detecção é sempre um
 alvo móvel (os geradores melhoram), e por isso o Verifyco funde vários sinais e
 melhora com as atualizações do app.
 
@@ -95,7 +101,7 @@ Neural Engine — comparável a aplicar um filtro de foto pesado, e pronto.
 **Quais iPhones?** Qualquer iPhone moderno com Neural Engine (iOS 17+). Chips
 mais novos só terminam mais rápido.
 
-**Vocês veem meus arquivos alguma vez?** Os que você escolhe no seu celular, não: esse caminho não tem upload nenhum. Um link público que você cola é buscado pelo nosso servidor e apagado logo após a entrega; o Verifyco Web processa envios de forma efêmera e guarda só o relatório.
+**Vocês veem meus arquivos alguma vez?** Os que você escolhe no seu celular, não, a menos que você ative a verificação opcional de procedência da OpenAI (desativada por padrão), que envia imagens JPEG, PNG e WebP à OpenAI pelo nosso servidor; depois, nosso servidor apaga cada imagem. A mídia de um link público que você cola é buscada para a verificação e não é armazenada por nós; o Verifyco Web processa envios de forma efêmera e guarda só o relatório.
 
 ## Conclusão
 

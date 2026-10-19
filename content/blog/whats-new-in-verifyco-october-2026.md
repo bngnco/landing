@@ -1,6 +1,6 @@
 ---
 title: "What's New in Verifyco (October 2026): Evidence Lean, Document Checks, Web and Links"
-description: 'Everything Verifyco added since launch: the evidence lean and score legend, PDF document inspection, public-link analysis, the web app, credit packs, 20 languages and the developer tools — and what is still deliberately not promised.'
+description: 'Everything Verifyco added since launch: the evidence lean and score legend, PDF document inspection, public-link analysis, the web app, credit packs, 20 languages in the iPhone app and the developer tools — and what is still deliberately not promised.'
 slug: whats-new-in-verifyco-october-2026
 date: 2026-10-10
 author: Verifyco Team
@@ -19,9 +19,12 @@ surfaces around it have changed a lot, and most of our older guides describe
 the launch version. This post is the current picture, in one place.
 
 > **Scope.** Local files you pick on your iPhone are still analysed on the
-> device. Two paths use temporary server processing and say so in the app: a
-> public social-media link is fetched by our server and handed to your phone,
-> and Verifyco Web processes uploads ephemerally and keeps only the report.
+> device. Three paths use a server and say so in the app: a public social-media
+> link is fetched for the check and handed to your phone, Verifyco Web processes
+> uploads ephemerally and keeps only the report, and the optional,
+> off-by-default OpenAI provenance check in the iPhone app's Settings sends
+> JPEG, PNG and WebP images through our server to OpenAI only if you switch it
+> on; our server deletes the image afterwards.
 
 ## 1. Inconclusive now says which way the evidence leans
 
@@ -50,11 +53,9 @@ never the media authenticity score, and it is not a legal finding.
 
 ## 4. Public links from Instagram, X, TikTok, YouTube and Facebook
 
-Paste a public post link. Our server fetches the media, hands it to your
-phone, and deletes it right after; the analysis itself still runs on the
-device. On a carousel or multi-photo post, the slide or photo you opened is
-the one analysed, or the app tells you it could not be fetched. Private or
-deleted posts fail gracefully.
+Paste a public post link. The media is fetched for the check, handed to your
+phone and not stored by us; the analysis itself still runs on the device.
+Private or deleted posts fail gracefully.
 
 ## 5. Verifyco Web
 
@@ -77,21 +78,22 @@ Photos and videos captured inside Verifyco carry first-party acquisition
 evidence. That confirms where the file came from, not the truth of the scene,
 and the result wording says exactly that.
 
-## 8. Credit packs, 20 languages, developer tools
+## 8. Credit packs, 20 app languages, developer tools
 
 - One-time credit packs (5, 20, 50) with no subscription, plus a lifetime
   option. Credits never expire.
-- The app, reports and PDF exports are fully translated in 20 languages.
-- A documented API, a command-line tool and an MCP server let teams run the
-  same engine from their own workflows; see [/developers](https://verifyco.app/developers).
+- Detailed reports and PDF exports are translated in all 20 languages in the iPhone app.
+- A documented API, a command-line tool and an MCP server, in private beta,
+  let teams run the same engine from their own workflows; see
+  [web.verifyco.app/developers](https://web.verifyco.app/developers).
 
 ## What we still do not promise
 
 We do not publish an accuracy percentage, and we will not until an
 independent, source-matched corpus with confidence intervals exists. Every
-layer that enters the score has a documented authority; experimental layers
-(temporal, frequency diagnostics) stay visible but carry no weight. "We don't
-know" remains an allowed answer.
+layer that enters the score has a documented authority; the temporal and
+frequency diagnostics stay visible but cannot change the verdict on their own.
+"We don't know" remains an allowed answer.
 
 If you wrote about Verifyco in June or July, this is the version to look at
 again. The [App Store listing](https://apps.apple.com/app/id6772592963) and

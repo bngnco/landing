@@ -1,6 +1,6 @@
 ---
-title: Verifizierung auf dem Gerät, erklärt (nichts verlässt dein iPhone)
-description: 'Warum Verifyco vollständig auf deinem iPhone läuft: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und warum nie etwas hochgeladen wird.'
+title: Verifizierung auf dem Gerät, erklärt (deine lokalen Dateien werden auf deinem iPhone analysiert)
+description: 'Warum Verifyco die Dateien, die du auf deinem iPhone auswählst, auf dem Gerät analysiert: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und welche Wege eine vorübergehende Verarbeitung auf dem Server nutzen.'
 slug: on-device-verification-explained
 date: 2026-06-08
 author: Verifyco-Team
@@ -15,30 +15,33 @@ updated: 2026-07-01
 
 Die meisten Medienprüf-Tools funktionieren gleich: Du lädst deine Datei auf einen
 Server, ihre Modelle analysieren sie in der Cloud, und du bekommst ein Ergebnis
-zurück. Verifyco nicht. Jedes Signal läuft **lokal auf deinem iPhone**, und deine
-Fotos und Videos verlassen das Gerät nie. Hier ist, was das bedeutet, wie es
+zurück. Verifyco nicht. Die Analyse läuft **lokal auf deinem iPhone**, und die Fotos
+und Videos, die du auswählst, bleiben auf dem Gerät, es sei denn, du schaltest
+die weiter unten beschriebene optionale OpenAI-Prüfung ein. Hier ist, was das bedeutet, wie es
 möglich ist und warum es zählt — gerade bei dem sensiblen Material, das Menschen
 am häufigsten prüfen wollen.
 
-> **Geltungsbereich.** Dieser Artikel behandelt Fotos und Videos, die Sie auf Ihrem iPhone auswählen. Zwei Verifyco-Wege nutzen eine vorübergehende Verarbeitung auf dem Server und zeigen das in der App an: Ein öffentlicher Social-Media-Link wird vom Verifyco-Server abgerufen und an Ihr Telefon übergeben (die Analyse läuft weiterhin auf dem Gerät, der Server löscht die Medien sofort), und Verifyco Web verarbeitet Uploads flüchtig und behält nur den Bericht.
+> **Geltungsbereich.** Dieser Artikel behandelt Fotos und Videos, die du auf deinem iPhone auswählst. Drei Verifyco-Wege nutzen einen Server und zeigen das in der App an: Bei einem öffentlichen Social-Media-Link werden die Medien für die Prüfung abgerufen und an dein Telefon übergeben (die Analyse läuft weiterhin auf dem Gerät, und wir speichern die Medien nicht); Verifyco Web verarbeitet Uploads flüchtig und behält nur den Bericht; und die optionale, standardmäßig deaktivierte OpenAI-Herkunftsprüfung in den Einstellungen sendet JPEG-, PNG- und WebP-Bilder nur dann über unseren Server an OpenAI, wenn du sie einschaltest.
 
 ## Warum On-Device wichtig ist
 
 - **Privatsphäre.** Was du am dringendsten verifizieren willst, ist oft das
   Sensibelste — ein privates Foto, ein geleakter Clip, ein intimes Bild, das dir
-  jemand geschickt hat. On-Device-Analyse heißt: Es berührt nie den Server eines
-  anderen, liegt nie in einem Log und kann nicht aus einem fremden Datenleck
-  entweichen.
-- **Geschwindigkeit.** Kein Upload, keine Warteschlange, kein Hin und Her. Die
-  Analyse startet in dem Moment, in dem du die Datei wählst — was zählt, wenn du
-  ein 4K-Video prüfst und kein Vorschaubild.
+  jemand geschickt hat. On-Device-Analyse heißt: Es landet nicht auf dem Server
+  eines anderen, nicht in dessen Logs und nicht in dessen Datenlecks, es sei denn,
+  du schaltest die weiter unten beschriebene optionale, standardmäßig deaktivierte
+  OpenAI-Prüfung ein.
+- **Geschwindigkeit.** Die Analyse auf dem Gerät kennt keine Warteschlange und
+  kein Hin und Her, deshalb startet sie in dem Moment, in dem du die Datei wählst —
+  was zählt, wenn du ein 4K-Video prüfst und kein Vorschaubild.
 - **Funktioniert offline.** Im Flugzeug, bei schlechtem Empfang oder in einer
-  gesicherten Umgebung ohne Netz — es funktioniert trotzdem, weil es keinen
-  Netzwerkaufruf gibt, den man machen müsste.
+  gesicherten Umgebung ohne Netz — die Analyse auf dem Gerät funktioniert
+  trotzdem, weil sie keinen Netzwerkaufruf macht. Nur die optionale
+  OpenAI-Prüfung braucht eine Verbindung, falls du sie eingeschaltet hast.
 - **Kein Konto, keine Spur.** Nichts zu registrieren, nichts, das eine geprüfte
   Datei mit deiner Identität verknüpft.
 
-> Für eine Datei, die du auf deinem Handy auswählst, gibt es keinen Server, keinen Upload und kein Konto: Deine Medien bleiben auf deinem Handy, Punkt. Link-Prüfungen und Verifyco Web nutzen eine vorübergehende Verarbeitung auf dem Server, wie der Hinweis zum Geltungsbereich oben sagt.
+> Für eine Datei, die du auf deinem Handy auswählst, gibt es keinen Server, keinen Upload und kein Konto, es sei denn, du schaltest in den Einstellungen die optionale, standardmäßig deaktivierte OpenAI-Herkunftsprüfung ein: Dann gehen JPEG-, PNG- und WebP-Bilder über unseren Server an die Content Provenance API von OpenAI, und unser Server löscht das Bild danach. Link-Prüfungen und Verifyco Web nutzen eine vorübergehende Verarbeitung auf dem Server, wie der Hinweis zum Geltungsbereich oben sagt.
 
 ## Was "auf dem Gerät" wirklich heißt
 
@@ -50,8 +53,9 @@ direkt auf dieser Hardware laufen.
 Verifyco nutzt das, um lokal zu erledigen, was andere Tools an eine GPU im
 Rechenzentrum schicken: neuronale Analyse von Gesichtern und Szenen,
 Frequenztransformationen, Metadaten-Parsing und Datei-Hashing — alles im
-Speicher des Telefons, in Sekunden, ohne ein einziges Byte deiner Medien zu
-übertragen.
+Speicher des Telefons, in Sekunden. Die Analyse selbst sendet deine Medien
+nirgendwohin; nur die optionale, standardmäßig deaktivierte OpenAI-Prüfung sendet
+ein Bild über unseren Server an OpenAI, wenn du sie einschaltest.
 
 ## Die fünf Signale, lokal ausgeführt
 
@@ -67,7 +71,7 @@ Vertrauens-Score von 0 bis 100:
 5. **Frequenzanalyse** — der DCT-Spektral-Fingerabdruck von Diffusions- und
    GAN-Modellen, unsichtbar fürs Auge.
 
-Keine Ebene ist für sich entscheidend — das ist der Punkt. Erst die Fusion
+Die meisten Ebenen sind für sich allein nicht entscheidend — das ist der Punkt. Erst die Fusion
 mehrerer unabhängiger Signale macht das Urteil robust: Eine zu täuschen ist
 leicht, alle gleichzeitig ist schwer. (Was jede Ebene in der Praxis fängt:
 [Woran erkennt man KI-generierte Bilder](/de/blog/how-to-tell-if-an-image-is-ai-generated)
@@ -77,11 +81,11 @@ und [5 Anzeichen, dass ein Video deepfaked wurde](/de/blog/5-signs-a-video-has-b
 
 | | Cloud-Verifizierung | Auf dem Gerät (Verifyco) |
 | --- | --- | --- |
-| Deine Medien | Werden auf einen Server geladen | Verlassen dein Handy nie |
+| Deine Medien | Werden auf einen Server geladen | Lokale Dateien bleiben auf deinem Handy, außer du aktivierst die OpenAI-Prüfung |
 | Geschwindigkeit | Upload + Warteschlange + Download | Startet sofort |
-| Offline | Nein | Ja |
+| Offline | Nein | Ja (die optionale OpenAI-Prüfung braucht eine Verbindung) |
 | Konto nötig | Meistens | Nein |
-| Privatsphäre-Risiko | Server-Logs, Datenlecks | Keins jenseits deines Geräts |
+| Privatsphäre-Risiko | Server-Logs, Datenlecks | Keins jenseits deines Geräts, außer du aktivierst die OpenAI-Prüfung |
 
 Das Einzige, was Clouds bieten können, ist ein riesiges zentrales Modell. Aber
 für forensische Verifizierung laufen die Signale, auf die es ankommt — Herkunft,
@@ -90,8 +94,8 @@ Privatsphäre-Gewinn ist enorm.
 
 ## Häufige Fragen
 
-**Ist On-Device so genau wie die Cloud?** Für diese forensischen Signale ja —
-die Analyse ist dieselbe Mathematik; nur der *Ort* ändert sich. Erkennung bleibt
+**Ist On-Device schwächer als die Cloud?** Für diese forensischen Signale ist die
+Analyse dieselbe Mathematik; nur der *Ort* ändert sich. Erkennung bleibt
 ein bewegliches Ziel (Generatoren werden besser) — deshalb fusioniert Verifyco
 mehrere Signale und verbessert sich mit App-Updates.
 
@@ -101,7 +105,7 @@ Engine-Arbeit — vergleichbar mit einem aufwendigen Fotofilter, dann fertig.
 **Welche iPhones?** Jedes moderne iPhone mit Neural Engine (iOS 17+). Neuere
 Chips sind einfach schneller fertig.
 
-**Seht ihr je meine Dateien?** Die Dateien, die du auf deinem Handy auswählst, nicht: Dieser Weg hat überhaupt keinen Upload. Einen öffentlichen Link, den du einfügst, ruft unser Server ab und löscht ihn direkt nach der Übergabe; Verifyco Web verarbeitet Uploads vorübergehend und behält nur den Bericht.
+**Seht ihr je meine Dateien?** Die Dateien, die du auf deinem Handy auswählst, sehen wir nicht, es sei denn, du schaltest die optionale OpenAI-Herkunftsprüfung ein (standardmäßig aus): Dann gehen JPEG-, PNG- und WebP-Bilder über unseren Server an OpenAI; unser Server löscht jedes Bild danach. Bei einem öffentlichen Link, den du einfügst, werden die Medien für die Prüfung abgerufen und nicht von uns gespeichert; Verifyco Web verarbeitet Uploads vorübergehend und behält nur den Bericht.
 
 ## Fazit
 
