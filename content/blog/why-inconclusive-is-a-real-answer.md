@@ -9,7 +9,7 @@ tags:
   - Guides
   - Deepfakes
 image: /uploads/blog/why-inconclusive-is-a-real-answer-cover.jpg
-imageAlt: Why inconclusive is a real answer: the deep inspection screen beside a verdict card reading Inconclusive, leans authentic
+imageAlt: "Why inconclusive is a real answer: the deep inspection screen beside a verdict card reading Inconclusive, leans authentic"
 updated: 2026-10-10
 ---
 

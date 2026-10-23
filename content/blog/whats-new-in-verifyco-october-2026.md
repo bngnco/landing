@@ -9,7 +9,7 @@ tags:
   - Product
   - Guides
 image: /uploads/blog/whats-new-october-2026-cover.jpg
-imageAlt: What's new in Verifyco 1.3: the iPhone home screen beside a card listing the evidence lean, score legend, document review, links and 20 languages
+imageAlt: "What's new in Verifyco 1.3: the iPhone home screen beside a card listing the evidence lean, score legend, document review, links and 20 languages"
 updated: 2026-10-10
 ---
 
