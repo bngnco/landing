@@ -8,8 +8,8 @@ tags:
   - Guides
   - Deepfakes
   - Research
-image: /uploads/blog/signals.png
-imageAlt: Verifyco's evidence layers applied to a night-sky clip
+image: /uploads/blog/how-to-check-a-ufo-video-cover.jpg
+imageAlt: How to check a UFO video for AI or editing: the Verifyco analysis screen beside a five-point checklist
 updated: 2026-10-10
 ---
 

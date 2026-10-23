@@ -8,8 +8,8 @@ tags:
   - Research
   - Guides
   - Deepfakes
-image: /uploads/blog/url.png
-imageAlt: An inconclusive Verifyco result showing which way the evidence leans
+image: /uploads/blog/why-inconclusive-is-a-real-answer-cover.jpg
+imageAlt: Why inconclusive is a real answer: the deep inspection screen beside a verdict card reading Inconclusive, leans authentic
 updated: 2026-10-10
 ---
 
