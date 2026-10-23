@@ -137,11 +137,11 @@
       <category>Leitfäden</category>
     </item>
     <item>
-      <title>Verifizierung auf dem Gerät, erklärt (nichts verlässt dein iPhone)</title>
+      <title>Verifizierung auf dem Gerät, erklärt (deine lokalen Dateien werden auf deinem iPhone analysiert)</title>
       <link>https://verifyco.app/de/blog/on-device-verification-explained</link>
       <guid isPermaLink="true">https://verifyco.app/de/blog/on-device-verification-explained</guid>
       <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Warum Verifyco vollständig auf deinem iPhone läuft: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und warum nie etwas hochgeladen wird.</description>
+      <description>Warum Verifyco die Dateien, die du auf deinem iPhone auswählst, auf dem Gerät analysiert: wie forensische On-Device-Analyse funktioniert, was die Neural Engine tut, Cloud vs. Gerät — und welche Wege eine vorübergehende Verarbeitung auf dem Server nutzen.</description>
       <category>iOS</category>
       <category>Forschung</category>
       <category>Leitfäden</category>
