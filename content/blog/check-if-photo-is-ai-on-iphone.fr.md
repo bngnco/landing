@@ -57,7 +57,7 @@ C’est précisément pour cela que nous avons conçu **[Verifyco](https://apps.
 
 ### Vérifier une photo avec Verifyco, étape par étape
 
-1. **Téléchargez Verifyco** depuis l’App Store (essai gratuit, sans compte).
+1. **Téléchargez Verifyco** depuis l’App Store (gratuit à essayer, sans compte).
 2. **Ajoutez la photo** — choisissez une image de votre bibliothèque ou de l’appareil photo, ou collez un lien. La Share Extension fonctionne depuis n’importe quelle app.
 3. **Laissez l’analyse tourner.** La vérification forensique s’exécute automatiquement sur votre appareil et prend quelques secondes.
 4. **Lisez le résultat.** Vous obtenez un score de confiance plus un détail couche par couche. Un score élevé : les signaux sont cohérents avec une vraie capture ; un score bas : des signes d’IA ou de manipulation sont apparus ; un résultat moyen/« non concluant » : les preuves ne suffisent pas pour trancher.

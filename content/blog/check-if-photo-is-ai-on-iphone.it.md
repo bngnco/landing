@@ -57,7 +57,7 @@ Per qualunque cosa oltre l’occhiata veloce, ti serve uno strumento che analizz
 
 ### Come controllare una foto con Verifyco, passo per passo
 
-1. **Scarica Verifyco** dall’App Store (prova gratuita, senza account).
+1. **Scarica Verifyco** dall’App Store (gratis da provare, senza account).
 2. **Aggiungi la foto** — scegli un’immagine dalla libreria o dalla fotocamera, oppure incolla un link. Funziona anche la Share Extension da qualsiasi app.
 3. **Lascia che analizzi.** Il controllo forense gira automaticamente sul tuo dispositivo e richiede pochi secondi.
 4. **Leggi il risultato.** Ottieni un punteggio di fiducia più un dettaglio livello per livello. Punteggio alto: i segnali sono coerenti con uno scatto reale; basso: sono emersi segni di IA o manipolazione; risultato medio/"non conclusivo": le prove non bastano per decidere in nessuna direzione.

@@ -213,7 +213,7 @@ Sorular veya talepler: support@verifyco.app`
   terms: {
     en: `# Terms of Service
 
-_Last updated: June 2026_
+_Last updated: October 2026_
 
 These Terms of Service ("Terms") are a binding agreement between you and the Verifyco app developer ("Verifyco", "we", "us", or "our") governing your use of the Verifyco mobile application and its features (the "App"). By downloading, accessing, or using the App you agree to these Terms and to our Privacy Policy. If you do not agree, do not use the App.
 
@@ -247,13 +247,13 @@ You agree not to:
 
 You retain all rights to the media you analyze. Because analysis runs on your device, we do not receive, claim, or store any rights in your content. You are solely responsible for the media you choose to analyze and for how you use Verifyco's results.
 
-## 7. Subscriptions, Free Trials, and Credit Packs
+## 7. Subscriptions, Introductory Offers, and Credit Packs
 
 Verifyco offers optional auto-renewing subscriptions (for example, weekly, monthly, and annual plans) and one-time consumable analysis credit packs. Current prices are shown in the App before purchase and may vary by region and over time.
 
 - **Billing.** Payment is charged to your Apple ID at confirmation of purchase.
 - **Auto-renewal.** Subscriptions renew automatically for the same period unless cancelled at least 24 hours before the end of the current period. Your account is charged for renewal within 24 hours before the period ends.
-- **Free trial.** Where a free trial is offered (for example, on the annual plan), any unused portion is forfeited if you purchase a subscription during the trial. If you do not cancel before the trial ends, the subscription converts to a paid period automatically.
+- **Introductory offers.** Where an introductory price is offered (for example, a discounted first year on the annual plan), the App shows the offer price, how long it lasts, and the regular price it renews at before you purchase. An introductory offer can be redeemed once per subscription group per Apple ID. Unless you cancel at least 24 hours before the offer period ends, the subscription renews automatically at the regular price.
 - **Manage or cancel.** You can manage or cancel subscriptions in your App Store account settings. Deleting the App does not cancel a subscription.
 - **Credit packs.** Analysis credit packs are one-time consumable purchases. They are applied to your device, are non-transferable, and, except where required by law, are non-refundable once delivered.
 - **Price changes.** If we change subscription pricing, changes apply to future periods and, where required, will be communicated and consented to in accordance with App Store rules.
@@ -311,7 +311,7 @@ If any provision of these Terms is held unenforceable, the remaining provisions 
 Questions: support@verifyco.app`,
     tr: `# Kullanım Koşulları
 
-_Son güncelleme: Haziran 2026_
+_Son güncelleme: Ekim 2026_
 
 Bu Kullanım Koşulları ("Koşullar", sizinle Verifyco uygulama geliştiricisi ("Verifyco", "biz") arasında, Verifyco mobil uygulamasını ve özelliklerini ("Uygulama") kullanımınızı düzenleyen bağlayıcı bir sözleşmedir. Uygulamayı indirerek, erişerek veya kullanarak bu Koşulları ve Gizlilik Politikamızı kabul edersiniz. Kabul etmiyorsanız Uygulamayı kullanmayın.
 
@@ -345,13 +345,13 @@ Bu Koşullara tabi olarak, Uygulamayı sahip olduğunuz veya kontrol ettiğiniz 
 
 Analiz ettiğiniz medyanın tüm hakları sizde kalır. Analiz cihazınızda çalıştığı için içeriğinizde herhangi bir hak almaz, talep etmez veya saklamayız. Analiz etmeyi seçtiğiniz medyadan ve Verifyco sonuçlarını nasıl kullandığınızdan yalnızca siz sorumlusunuz.
 
-## 7. Abonelikler, Ücretsiz Denemeler ve Kredi Paketleri
+## 7. Abonelikler, Tanıtım Teklifleri ve Kredi Paketleri
 
 Verifyco, isteğe bağlı otomatik yenilenen abonelikler (örneğin haftalık, aylık ve yıllık planlar) ve tek seferlik tüketilebilir analiz kredisi paketleri sunar. Güncel fiyatlar satın almadan önce Uygulamada gösterilir; bölgeye ve zamana göre değişebilir.
 
 - **Faturalandırma.** Ödeme, satın alma onayında Apple Kimliğinizden alınır.
 - **Otomatik yenileme.** Abonelikler, mevcut dönemin bitiminden en az 24 saat önce iptal edilmedikçe aynı süre için otomatik yenilenir. Yenileme ücreti, dönem bitiminden önceki 24 saat içinde hesabınızdan alınır.
-- **Ücretsiz deneme.** Bir ücretsiz deneme sunulduğunda (örneğin yıllık planda), deneme sırasında abonelik satın alırsanız kullanılmayan kısım iptal olur. Deneme bitmeden iptal etmezseniz abonelik otomatik olarak ücretli döneme geçer.
+- **Tanıtım teklifleri.** Bir tanıtım fiyatı sunulduğunda (örneğin yıllık planda indirimli ilk yıl), Uygulama satın almadan önce teklif fiyatını, ne kadar süreceğini ve yenileneceği normal fiyatı gösterir. Bir tanıtım teklifi, her Apple Kimliği için abonelik grubu başına bir kez kullanılabilir. Teklif dönemi bitmeden en az 24 saat önce iptal etmezseniz abonelik normal fiyattan otomatik olarak yenilenir.
 - **Yönetme veya iptal.** Abonelikleri App Store hesap ayarlarınızdan yönetebilir veya iptal edebilirsiniz. Uygulamayı silmek aboneliği iptal etmez.
 - **Kredi paketleri.** Analiz kredisi paketleri tek seferlik tüketilebilir satın almalardır. Cihazınıza uygulanır, devredilemez ve yasanın gerektirdiği durumlar dışında teslim edildikten sonra iade edilemez.
 - **Fiyat değişiklikleri.** Abonelik fiyatlandırmasını değiştirirsek, değişiklikler gelecekteki dönemlere uygulanır ve gerekli olduğunda App Store kurallarına uygun şekilde bildirilir ve onayınız alınır.
