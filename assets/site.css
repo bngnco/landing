@@ -1329,6 +1329,10 @@ footer { margin-top: clamp(90px, 11vw, 150px); border-top: 1px solid var(--line)
 .foot-brand { width: 168px; height: 46px; flex-basis: 168px; }
 .foot-tag { margin-top: 16px; font-size: 14px; color: var(--ink-3); max-width: 30ch; line-height: 1.6; }
 .foot-dom { margin-top: 16px; }
+.foot-social { display: flex; gap: 10px; margin-top: 18px; }
+.foot-social a { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--line); color: var(--ink-2); transition: color 200ms ease, border-color 200ms ease, background 200ms ease; }
+.foot-social a:hover { color: var(--cream); border-color: var(--line-2); background: var(--bronze-soft); }
+.foot-social svg { width: 16px; height: 16px; }
 .foot-col h4 {
   font-family: var(--f-mono);
   font-size: 10.5px;

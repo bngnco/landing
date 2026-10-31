@@ -31,9 +31,9 @@ const SITE = {
   appStore: "https://apps.apple.com/app/id6772592963",
   defaultAuthor: "Verifyco Team",
   defaultImage: "/assets/app/signals.png",
-  twitter: "@verifyco",
+  twitter: "@Realdetect",
   // Existing top-level pages, included in the sitemap (clean URLs).
-  staticPages: ["/", "/deepdetect-plus", "/corpus-ai", "/support", "/privacy", "/terms"],
+  staticPages: ["/", "/pitch", "/deepdetect-plus", "/corpus-ai", "/support", "/privacy", "/terms"],
 };
 
 /* ── Languages ────────────────────────────────────────────────────────
@@ -1151,7 +1151,7 @@ function writeFileSafe(file, contents) {
    to every page even if the XML sitemap fetch is delayed. */
 function sitemapHtmlPage(byLang) {
   const pageLabels = {
-    "/": "Home", "/deepdetect-plus": "DeepDetect+", "/corpus-ai": "Corpus AI",
+    "/": "Home", "/pitch": "Pitch", "/deepdetect-plus": "DeepDetect+", "/corpus-ai": "Corpus AI",
     "/support": "Support", "/privacy": "Privacy", "/terms": "Terms",
   };
   const list = (items) => `<ul class="sm-list">${items}</ul>`;
