@@ -1,8 +1,9 @@
 /* ════════════════════════════════════════════════════════════
    VERIFYCO — corpus-ai.js
    Behaviour layer for the Corpus AI page: navigation, reveals,
-   the animated eye, the scripted console and the honest mailto
-   access form. Static HTML remains the source of truth.
+   the living eye, the scripted chat with its visual cards, the
+   section illustrations and the honest mailto access form.
+   Static HTML remains the source of truth.
    ════════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
@@ -10,10 +11,23 @@
   var root = document.documentElement;
   var body = document.body;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   root.classList.add("corpus-ready");
   /* This page is where the homepage splash sends people; do not show it to them again. */
   try { localStorage.setItem("verifyco_splash_corpus_v1", String(Date.now())); } catch (error) {}
+
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+  function svgEl(markup) {
+    var wrap = document.createElement("div");
+    wrap.innerHTML = markup.trim();
+    return wrap.firstChild;
+  }
 
   /* ── Header announcement (CMS JSON replaces the static text) ── */
   (function setupAnnouncement() {
@@ -191,11 +205,13 @@
     }, 2600);
   }
 
-  /* ── The eye ──────────────────────────────────────────────── */
+  /* ── The living eye: gaze, saccades, blinks, pupil ────────── */
   (function mountEye() {
     var canvas = document.querySelector("[data-eye]");
-    var stage = canvas && canvas.parentNode;
-    if (!canvas || !window.CorpusEye || !canvas.getContext) return;
+    var stage = document.querySelector("[data-eye-stage]");
+    var mover = document.querySelector("[data-eye-move]");
+    var lids = document.querySelector("[data-eye-lids]");
+    if (!canvas || !stage || !mover || !window.CorpusEye || !canvas.getContext) return;
     var image = stage.querySelector(".vr-eye-img");
     var eye = null;
     var resizeTimer = 0;
@@ -213,15 +229,85 @@
       window.clearTimeout(resizeTimer);
       resizeTimer = window.setTimeout(function () { if (Math.abs(size() - canvas.clientWidth) > 24) build(); }, 180);
     });
+
+    var visible = true;
     function setPaused(flag) { if (eye) eye.pause(flag); }
     if ("IntersectionObserver" in window) {
-      var eyeVisible = true;
       var eyeObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) { eyeVisible = entry.isIntersecting; setPaused(document.hidden || !eyeVisible); });
+        entries.forEach(function (entry) { visible = entry.isIntersecting; setPaused(document.hidden || !visible); });
       }, { threshold: 0 });
       eyeObserver.observe(canvas);
-      document.addEventListener("visibilitychange", function () { setPaused(document.hidden || !eyeVisible); });
+      document.addEventListener("visibilitychange", function () { setPaused(document.hidden || !visible); });
     }
+    if (reduceMotion) return;
+
+    /* Gaze: the iris drifts like a resting eye (fixations and quick jumps),
+       and follows a fine pointer when one is over the hero. */
+    var gaze = { x: 0, y: 0 };      /* current, in units of max shift */
+    var target = { x: 0, y: 0 };
+    var pointer = null;
+    var pointerSeen = 0;
+    var nextSaccade = 0;
+    var moveSpeed = 0.12;
+    var heroEl = document.querySelector("[data-hero]");
+    function pickFixation(now) {
+      var big = Math.random() < 0.3;
+      var reach = big ? 1 : 0.45;
+      target = { x: (Math.random() * 2 - 1) * reach, y: (Math.random() * 2 - 1) * reach * 0.7 };
+      moveSpeed = 0.22;  /* a saccade is quick */
+      nextSaccade = now + 1800 + Math.random() * 3400;
+    }
+    if (finePointer && heroEl) {
+      heroEl.addEventListener("pointermove", function (event) {
+        var rect = stage.getBoundingClientRect();
+        var cx = rect.left + rect.width / 2, cy = rect.top + rect.height / 2;
+        var dx = (event.clientX - cx) / (window.innerWidth * 0.5);
+        var dy = (event.clientY - cy) / (window.innerHeight * 0.5);
+        pointer = { x: Math.max(-1, Math.min(1, dx)), y: Math.max(-1, Math.min(1, dy)) };
+        pointerSeen = performance.now();
+      }, { passive: true });
+      heroEl.addEventListener("pointerleave", function () { pointer = null; });
+    }
+    function gazeTick(now) {
+      window.requestAnimationFrame(gazeTick);
+      if (document.hidden || !visible) return;
+      if (pointer && now - pointerSeen < 2500) {
+        target = pointer;
+        moveSpeed = 0.1;
+        nextSaccade = now + 1200;
+        /* near the centre the pupil narrows a little, as if looking at a light */
+        var d = Math.sqrt(pointer.x * pointer.x + pointer.y * pointer.y);
+        if (eye) eye.setDilation(0.96 + Math.min(0.1, d * 0.08));
+      } else {
+        if (now > nextSaccade) pickFixation(now);
+        if (eye) eye.setDilation(1);
+      }
+      gaze.x += (target.x - gaze.x) * moveSpeed;
+      gaze.y += (target.y - gaze.y) * moveSpeed;
+      moveSpeed += (0.06 - moveSpeed) * 0.05; /* settle into a slow drift after each jump */
+      var max = stage.clientWidth * 0.035;
+      var drift = Math.sin(now / 1900) * 0.6;
+      mover.style.transform = "translate(" + (gaze.x * max + drift).toFixed(2) + "px," + (gaze.y * max).toFixed(2) + "px)";
+    }
+    window.requestAnimationFrame(gazeTick);
+
+    /* Blinks: a quick lid close every few seconds, sometimes twice. */
+    function blink(times) {
+      if (document.hidden || !visible) return;
+      lids.classList.add("is-blinking");
+      window.setTimeout(function () {
+        lids.classList.remove("is-blinking");
+        if (eye) { eye.setDilation(1.06); window.setTimeout(function () { eye.setDilation(1); }, 500); }
+        if (times > 1) window.setTimeout(function () { blink(times - 1); }, 190);
+      }, 230);
+    }
+    function scheduleBlink() {
+      window.setTimeout(function () {
+        blink(Math.random() < 0.18 ? 2 : 1);
+        scheduleBlink();
+      }, 3200 + Math.random() * 5200);
+    }
+    window.setTimeout(scheduleBlink, 2600);
   })();
 
   /* ── Pause ambient CSS animation outside the viewport ─────── */
@@ -244,32 +330,79 @@
     animationRoots.forEach(updateAnimationState);
   });
 
-  /* ── The scripted console ─────────────────────────────────── */
-  (function initialiseConsole() {
+  /* ── Shared visual builders (SVG strings) ─────────────────── */
+  var ICONS = {
+    cc: '<path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/>',
+    meta: '<path d="M4 6h16M4 12h10M4 18h7"/><circle cx="18" cy="16" r="3"/>',
+    ai: '<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
+    freq: '<path d="M2 12h3l2-6 3 12 3-9 2 6 2-3h5"/>',
+    temporal: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M3 15h18M8 5v14M16 5v14"/>',
+    photo: '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-7 8"/>',
+    video: '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/>',
+    upload: '<path d="M12 16V5m0 0-4 4m4-4 4 4M5 19h14"/>',
+    frames: '<rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/>',
+    file: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/>',
+    pin: '<path d="M12 21s6-5.5 6-11a6 6 0 0 0-12 0c0 5.5 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/>',
+    clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'
+  };
+  var LAYER_ICON = { "Content Credentials": "cc", "Metadata Forensics": "meta", "AI Detection": "ai", "Frequency Analysis": "freq", "Temporal Consistency": "temporal" };
+  function icon(name, cls) { return '<svg class="vr-ic ' + (cls || "") + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONS[name] + "</svg>"; }
+  var STATUS_TEXT = { ok: "Ran · agrees", flag: "Ran · finding", weak: "Ran · weak", na: "Could not run" };
+
+  function coverageRing(ran, total, tone) {
+    var r = 26, c = 2 * Math.PI * r, frac = ran / total;
+    return '<svg class="vr-ring tone-' + tone + '" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="' + r + '" class="vr-ring-bg"/><circle cx="32" cy="32" r="' + r + '" class="vr-ring-fg" style="stroke-dasharray:' + c.toFixed(1) + ';stroke-dashoffset:' + (c * (1 - frac)).toFixed(1) + '"/><text x="32" y="30" text-anchor="middle" class="vr-ring-n">' + ran + '/' + total + '</text><text x="32" y="41" text-anchor="middle" class="vr-ring-l">ran</text></svg>';
+  }
+  function layerRows(layers) {
+    return '<ul class="vr-lrows">' + layers.map(function (l) {
+      return '<li class="st-' + l.status + '">' + icon(LAYER_ICON[l.name] || "file") + '<span class="vr-lrow-txt"><b>' + l.name + '</b><small>' + l.text + '</small></span><em>' + STATUS_TEXT[l.status] + '</em></li>';
+    }).join("") + "</ul>";
+  }
+
+  /* A seeded "sample file" thumbnail: a soft mosaic, deliberately not a real photo. */
+  function mosaic(canvas, seed, palette) {
+    var ctx = canvas.getContext("2d");
+    var w = canvas.width, h = canvas.height;
+    var s = seed >>> 0 || 1;
+    function rnd() { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }
+    ctx.fillStyle = palette[0];
+    ctx.fillRect(0, 0, w, h);
+    for (var i = 0; i < 28; i += 1) {
+      var x = rnd() * w, y = rnd() * h, r = (0.18 + rnd() * 0.5) * Math.max(w, h);
+      var g = ctx.createRadialGradient(x, y, 0, x, y, r);
+      var col = palette[1 + Math.floor(rnd() * (palette.length - 1))];
+      g.addColorStop(0, col);
+      g.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.globalAlpha = 0.55;
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, w, h);
+    }
+    ctx.globalAlpha = 1;
+    /* blocky grain, like a heavily compressed copy */
+    var cell = Math.max(6, Math.round(w / 26));
+    for (var yy = 0; yy < h; yy += cell) for (var xx = 0; xx < w; xx += cell) {
+      ctx.fillStyle = "rgba(" + (rnd() < 0.5 ? "255,255,255" : "0,0,0") + "," + (rnd() * 0.08).toFixed(3) + ")";
+      ctx.fillRect(xx, yy, cell, cell);
+    }
+  }
+
+  /* ── The scripted chat ────────────────────────────────────── */
+  (function initialiseChat() {
     var consoleEl = document.querySelector("[data-console]");
     if (!consoleEl) return;
     var caseList = consoleEl.querySelector("[data-cases]");
     var log = consoleEl.querySelector("[data-log]");
     var askRow = consoleEl.querySelector("[data-ask]");
-    var fileName = consoleEl.querySelector("[data-file-name]");
-    var fileMeta = consoleEl.querySelector("[data-file-meta]");
-    var headline = consoleEl.querySelector("[data-headline]");
-    var coverage = consoleEl.querySelector("[data-coverage]");
-    var verdict = consoleEl.querySelector("[data-verdict]");
-    var layers = consoleEl.querySelector("[data-layers]");
     var replay = consoleEl.querySelector("[data-replay]");
+    var srStatus = consoleEl.querySelector("[data-log-sr]");
 
     /* Layer status: ok (agrees), flag (finding), weak (low-confidence), na (could not run). */
     var CASES = [
       {
-        id: "protest",
-        label: "Protest photo",
-        kind: "Forwarded from a chat app",
-        file: "protest_photo.jpg",
-        meta: "1280 × 960 · JPEG · re-encoded · SHA-256 9c1e…4b07",
-        headline: "Inconclusive",
-        tone: "inconclusive",
-        coverage: "Evidence coverage · 2 of 5 checks ran",
+        id: "protest", label: "Protest photo", kind: "Forwarded from a chat app", type: "photo", seed: 11,
+        palette: ["#2a2f36", "#5b6b78", "#9b7b5a", "#c9b79c", "#3d4f66", "#8a8f94"],
+        file: "protest_photo.jpg", meta: "1280 × 960 · JPEG · re-encoded · SHA-256 9c1e…4b07",
+        headline: "Inconclusive", tone: "inconclusive", ran: 2, total: 5,
         layers: [
           { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
           { name: "Metadata Forensics", status: "na", text: "Metadata is not available" },
@@ -279,22 +412,20 @@
         ],
         turns: [
           { q: "A newsroom says a chatbot called this photo fake. What do you see?",
-            a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone, so only two of the five checks could run. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**" },
+            a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone, so only two of the five checks could run. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**",
+            visual: "coverage" },
           { q: "So is it real or not?",
-            a: "This copy cannot answer that, and a sentence from any model would not change the evidence. What would: **the earliest upload of this image, a second photo from the same moment, or the original file from the photographer.** Bring one of those back and I will compare them at full resolution." },
+            a: "This copy cannot answer that, and a sentence from any model would not change the evidence. What would: **the earliest upload of this image, a second photo from the same moment, or the original file from the photographer.** Bring one of those back and I will compare them at full resolution.",
+            visual: "change" },
           { q: "What should I write in the fact-check?",
             a: "Say what was checked, what could not be, and why. A line you can defend: **\"A re-encoded copy of the photo was examined; provenance and camera data were unavailable, and the image-level check was inconclusive.\"** That is weaker than a verdict and more honest than one." }
         ]
       },
       {
-        id: "clip",
-        label: "Press clip",
-        kind: "Downloaded from X",
-        file: "press_clip.mp4",
-        meta: "1280 × 720 · 00:41 · H.264 · SHA-256 4fd8…a21c",
-        headline: "Needs a Closer Look",
-        tone: "look",
-        coverage: "Evidence coverage · 4 of 5 checks ran",
+        id: "clip", label: "Press clip", kind: "Downloaded from X", type: "video", seed: 23,
+        palette: ["#161b24", "#2b3d57", "#6d7f94", "#b8c4d1", "#3a2f27", "#8c5f3b"],
+        file: "press_clip.mp4", meta: "1280 × 720 · 00:41 · H.264 · SHA-256 4fd8…a21c",
+        headline: "Needs a Closer Look", tone: "look", ran: 4, total: 5,
         layers: [
           { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
           { name: "Metadata Forensics", status: "ok", text: "Container labels match a platform re-encode" },
@@ -304,7 +435,8 @@
         ],
         turns: [
           { q: "Was this clip edited?",
-            a: "Something changes at 00:23. The experimental temporal layer flags a motion discontinuity there: the frame-to-frame change spikes the way a cut does. The visual layer finds no synthetic lean on the sampled frames, and the container labels say the file came through the platform's encoder, which is expected for a download. **So: a cut is likely, generation is not indicated.** A cut can be ordinary editing. I would ask what was removed, not whether the clip is fake." },
+            a: "Something changes at 00:23. The experimental temporal layer flags a motion discontinuity there: the frame-to-frame change spikes the way a cut does. The visual layer finds no synthetic lean on the sampled frames, and the container labels say the file came through the platform's encoder, which is expected for a download. **So: a cut is likely, generation is not indicated.** A cut can be ordinary editing. I would ask what was removed, not whether the clip is fake.",
+            visual: "spike" },
           { q: "Can you tell what was cut?",
             a: "Not from this file. **I can tell you where, not what.** Compare it against a longer or earlier upload: if the sentence before 00:23 ends differently in the other copy, you have your answer. I keep the counterevidence in the record as well: clean frames and platform-standard labels." },
           { q: "How sure is the temporal layer?",
@@ -312,14 +444,10 @@
         ]
       },
       {
-        id: "claim",
-        label: "Claim photo",
-        kind: "From the policyholder's phone",
-        file: "claim_photo.jpg",
-        meta: "4032 × 3024 · JPEG · capture credential · SHA-256 b7a0…e913",
-        headline: "Likely Authentic",
-        tone: "authentic",
-        coverage: "Evidence coverage · 4 of 5 checks ran",
+        id: "claim", label: "Claim photo", kind: "From the policyholder's phone", type: "photo", seed: 37,
+        palette: ["#2b2420", "#6b5a4a", "#a98c6c", "#d9c7ad", "#4a4a4a", "#8c8277"],
+        file: "claim_photo.jpg", meta: "4032 × 3024 · JPEG · capture credential · SHA-256 b7a0…e913",
+        headline: "Likely Authentic", tone: "authentic", ran: 4, total: 5,
         layers: [
           { name: "Content Credentials", status: "ok", text: "Signed capture credential · verified offline against the trust list" },
           { name: "Metadata Forensics", status: "ok", text: "Camera make, model, lens and GPS present · capture 14:02 local" },
@@ -329,7 +457,8 @@
         ],
         turns: [
           { q: "Can I rely on this photo for the claim?",
-            a: "This is the strongest kind of file I see. It carries a **signed capture credential that verified against the trust list, and the visual reading agrees with it.** Under the engine's own rule, a capture credential counts as authentic evidence only when the visual reading agrees; here it does. The camera fields are complete and the capture time sits forty minutes after the reported incident. One thing to confirm outside the file: that the GPS location matches the address on the claim." },
+            a: "This is the strongest kind of file I see. It carries a **signed capture credential that verified against the trust list, and the visual reading agrees with it.** Under the engine's own rule, a capture credential counts as authentic evidence only when the visual reading agrees; here it does. The camera fields are complete and the capture time sits forty minutes after the reported incident. One thing to confirm outside the file: that the GPS location matches the address on the claim.",
+            visual: "chain" },
           { q: "Could a credential be faked?",
             a: "A credential can be stripped, but it cannot be moved onto different pixels or survive an undeclared edit: the hash would no longer match and verification would fail. What a valid capture credential cannot tell me is whether the camera was pointed at something real; a photo of a screen or a print carries a genuine capture credential too. **That is why the visual reading has to agree, and here it does.**" },
           { q: "What would make you change your mind?",
@@ -337,14 +466,10 @@
         ]
       },
       {
-        id: "listing",
-        label: "Listing image",
-        kind: "Marketplace listing",
-        file: "IMG_4821.JPG",
-        meta: "2304 × 1792 · PNG inside a JPG name · SHA-256 e0c4…77d2",
-        headline: "Likely AI-Generated",
-        tone: "ai",
-        coverage: "Evidence coverage · 4 of 5 checks ran",
+        id: "listing", label: "Listing image", kind: "Marketplace listing", type: "photo", seed: 53,
+        palette: ["#1f2022", "#5a5e63", "#b9bcc0", "#e2ddd5", "#7a6a5a", "#3b3f45"],
+        file: "IMG_4821.JPG", meta: "2304 × 1792 · PNG inside a JPG name · SHA-256 e0c4…77d2",
+        headline: "Likely AI-Generated", tone: "ai", ran: 4, total: 5,
         layers: [
           { name: "Content Credentials", status: "flag", text: "Credential present · signed by the generator's maker · declares AI-generated" },
           { name: "Metadata Forensics", status: "weak", text: "No camera fields · expected for a PNG" },
@@ -354,7 +479,8 @@
         ],
         turns: [
           { q: "The seller says this is a photo of the actual item.",
-            a: "The file says otherwise, twice. It carries a **Content Credential signed by the tool that made it, and that credential declares the image as AI-generated.** Independently, the visual layer leans synthetic and the pattern matches a generator family in my memory. The name was changed to look like a camera file; it is still a PNG inside. Names are the easiest field to change." },
+            a: "The file says otherwise, twice. It carries a **Content Credential signed by the tool that made it, and that credential declares the image as AI-generated.** Independently, the visual layer leans synthetic and the pattern matches a generator family in my memory. The name was changed to look like a camera file; it is still a PNG inside. Names are the easiest field to change.",
+            visual: "name" },
           { q: "Could the seller have used AI to clean up a real photo?",
             a: "Then the credential would usually record an edit on top of a capture, and the camera fields would survive. **Here there is no capture underneath: the credential's origin is a generation, and there are no camera fields at all.** Ask the seller for a photo from a phone, with its original file." },
           { q: "What do I tell the buyer?",
@@ -363,71 +489,110 @@
       }
     ];
 
-    var current = 0;
-    var playing = false;
-    var token = 0;
-    var started = false;
+    /* Inline visuals shown under an answer. Values are illustrative and say so. */
+    var VISUALS = {
+      coverage: function (c) {
+        return '<div class="vr-vis"><div class="vr-vis-head"><span>Evidence coverage</span><b>' + c.ran + ' of ' + c.total + ' checks ran</b></div>' + layerRows(c.layers) + '<p class="vr-vis-note">Layer names as in the Verifyco app · sample values</p></div>';
+      },
+      change: function () {
+        var items = [["upload", "Earliest upload", "Find the first place this image appeared"], ["frames", "Second photo", "Another frame or angle from the same moment"], ["file", "Original file", "From the photographer's device, not a copy"]];
+        return '<div class="vr-vis"><div class="vr-vis-head"><span>What would change the answer</span></div><ul class="vr-steps">' + items.map(function (i) { return '<li>' + icon(i[0]) + '<b>' + i[1] + '</b><small>' + i[2] + '</small></li>'; }).join("") + '</ul></div>';
+      },
+      spike: function () {
+        var n = 48, bars = [], seed = 5;
+        function rnd() { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }
+        for (var i = 0; i < n; i += 1) { var v = 6 + rnd() * 10; if (i === 27) v = 86; if (i === 26 || i === 28) v = 18 + rnd() * 6; bars.push(v); }
+        var w = 480, h = 120, bw = w / n;
+        var rects = bars.map(function (v, i) { var bh = v / 100 * 96; return '<rect x="' + (i * bw + 1).toFixed(1) + '" y="' + (110 - bh).toFixed(1) + '" width="' + (bw - 2).toFixed(1) + '" height="' + bh.toFixed(1) + '" rx="1.5" class="' + (i === 27 ? "hot" : "") + '"/>'; }).join("");
+        return '<div class="vr-vis"><div class="vr-vis-head"><span>Frame-to-frame change</span><b>spike at 00:23</b></div><svg class="vr-spike" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' + rects + '<text x="' + (27 * bw + bw / 2).toFixed(1) + '" y="12" text-anchor="middle" class="vr-spike-t">00:23</text><text x="2" y="118" class="vr-spike-a">00:00</text><text x="' + (w - 2) + '" y="118" text-anchor="end" class="vr-spike-a">00:41</text></svg><p class="vr-vis-note">Temporal Consistency is experimental in the app · illustrative values</p></div>';
+      },
+      chain: function () {
+        var steps = [["cc", "Capture credential signed"], ["cc", "Verified against the trust list"], ["ai", "Visual reading agrees"], ["meta", "Camera fields complete"]];
+        return '<div class="vr-vis"><div class="vr-vis-head"><span>Why the engine says Likely Authentic</span></div><ol class="vr-chain">' + steps.map(function (s) { return '<li>' + icon(s[0]) + '<span>' + s[1] + '</span></li>'; }).join("") + '</ol><div class="vr-timebar"><span><i>' + icon("clock") + '</i><b>13:22</b><small>reported incident</small></span><em>40 min</em><span><i>' + icon("photo") + '</i><b>14:02</b><small>capture time in the file</small></span></div><p class="vr-vis-note">' + icon("pin") + ' GPS vs the address on the claim: to be confirmed outside the file</p></div>';
+      },
+      name: function () {
+        return '<div class="vr-vis"><div class="vr-vis-head"><span>The name and the contents disagree</span></div><div class="vr-namevs"><div class="vr-namevs-a">' + icon("file") + '<b>IMG_4821.JPG</b><small>what the name says</small></div><span class="vr-namevs-x">≠</span><div class="vr-namevs-b">' + icon("cc") + '<b>PNG · Content Credential</b><small>signed by the generator\'s maker · declares AI-generated</small></div></div><p class="vr-vis-note">Two independent signals agree: the credential and the visual layer</p></div>';
+      }
+    };
 
-    function el(tag, className, text) {
-      var node = document.createElement(tag);
-      if (className) node.className = className;
-      if (text != null) node.textContent = text;
-      return node;
+    var current = 0, playing = false, token = 0, started = false;
+
+    function thumb(c, w, h) {
+      var cv = document.createElement("canvas");
+      cv.width = w; cv.height = h; cv.className = "vr-thumb";
+      try { mosaic(cv, c.seed, c.palette); } catch (error) {}
+      return cv;
     }
+    function announce(text) { if (srStatus) srStatus.textContent = text; }
+    function stamp() { var d = new Date(); return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0"); }
 
     function renderCases() {
       caseList.innerHTML = "";
       CASES.forEach(function (c, index) {
-        var button = el("button", "vr-case-btn" + (index === current ? " is-on" : ""));
+        var button = el("button", "vr-thread" + (index === current ? " is-on" : ""));
         button.type = "button";
         button.setAttribute("aria-pressed", index === current ? "true" : "false");
-        button.setAttribute("data-index", String(index));
-        button.innerHTML = "<b></b><span></span><small></small>";
-        button.querySelector("b").textContent = "0" + (index + 1);
-        button.querySelector("span").textContent = c.label;
-        button.querySelector("small").textContent = c.kind;
+        var pic = el("span", "vr-thread-pic");
+        pic.appendChild(thumb(c, 88, 88));
+        pic.appendChild(svgEl(icon(c.type === "video" ? "video" : "photo", "vr-thread-type")));
+        var txt = el("span", "vr-thread-txt");
+        txt.appendChild(el("b", null, c.label));
+        txt.appendChild(el("small", null, c.kind));
+        var dot = el("i", "vr-thread-dot tone-" + c.tone);
+        button.appendChild(pic); button.appendChild(txt); button.appendChild(dot);
         button.addEventListener("click", function () { selectCase(index); });
         caseList.appendChild(button);
       });
     }
 
-    function renderEngine(c) {
-      fileName.textContent = c.file;
-      fileMeta.textContent = c.meta;
-      headline.textContent = c.headline;
-      coverage.textContent = c.coverage;
-      verdict.className = "vr-verdict tone-" + c.tone;
-      layers.innerHTML = "";
-      c.layers.forEach(function (layer) {
-        var item = el("li", "vr-layer st-" + layer.status);
-        item.innerHTML = "<i></i><div><b></b><span></span></div>";
-        item.querySelector("b").textContent = layer.name;
-        item.querySelector("span").textContent = layer.text;
-        layers.appendChild(item);
-      });
+    function message(kind) {
+      var row = el("div", "vr-m vr-m--" + kind);
+      if (kind === "ai") {
+        var av = el("span", "vr-m-avatar");
+        var img = document.createElement("img");
+        img.src = "assets/corpus-eye-700.jpg"; img.alt = ""; img.width = 700; img.height = 700; img.loading = "lazy"; img.decoding = "async";
+        av.appendChild(img);
+        row.appendChild(av);
+      }
+      var col = el("div", "vr-m-col");
+      var bubble = el("div", "vr-m-bubble");
+      col.appendChild(bubble);
+      col.appendChild(el("span", "vr-m-time", stamp()));
+      row.appendChild(col);
+      log.appendChild(row);
+      log.scrollTop = log.scrollHeight;
+      return bubble;
     }
 
-    /* **bold** segments become <b>; everything else is text. */
+    function fileCard(c) {
+      var card = el("div", "vr-filecard");
+      var pic = el("span", "vr-filecard-pic");
+      pic.appendChild(thumb(c, c.type === "video" ? 240 : 200, c.type === "video" ? 135 : 150));
+      if (c.type === "video") pic.appendChild(svgEl('<span class="vr-filecard-play">' + icon("video") + "</span>"));
+      pic.appendChild(el("em", "vr-filecard-sample", "sample"));
+      var txt = el("span", "vr-filecard-txt");
+      txt.appendChild(el("b", null, c.file));
+      txt.appendChild(el("small", null, c.meta));
+      card.appendChild(pic); card.appendChild(txt);
+      return card;
+    }
+
+    function engineCard(c) {
+      var card = el("div", "vr-engine-card tone-" + c.tone);
+      card.innerHTML = '<div class="vr-engine-top"><span class="vr-engine-who"><i></i>Verifyco engine · report</span><b>5 layers</b></div>'
+        + '<div class="vr-engine-verdict">' + coverageRing(c.ran, c.total, c.tone) + '<div><span>Headline</span><strong>' + c.headline + '</strong><small>Evidence coverage · ' + c.ran + ' of ' + c.total + ' checks ran</small></div></div>'
+        + layerRows(c.layers)
+        + '<p class="vr-engine-note">Layer names and headline labels are the ones the Verifyco app uses. Values are illustrative.</p>';
+      return card;
+    }
+
     function segments(text) {
       var parts = text.split("**");
       return parts.map(function (part, index) { return { text: part, bold: index % 2 === 1 }; }).filter(function (part) { return part.text.length; });
     }
-
-    function bubble(who) {
-      var wrap = el("div", "vr-msg vr-msg--" + who);
-      var avatar = el("span", "vr-msg-who", who === "c" ? "C" : "You");
-      var content = el("div", "vr-msg-body");
-      wrap.appendChild(avatar);
-      wrap.appendChild(content);
-      log.appendChild(wrap);
-      log.scrollTop = log.scrollHeight;
-      return content;
-    }
-
     function wait(ms, myToken) {
       return new Promise(function (resolve) { window.setTimeout(function () { if (myToken === token) resolve(); }, ms); });
     }
-
     function typeInto(content, text, myToken) {
       return new Promise(function (resolve) {
         var segs = segments(text);
@@ -445,10 +610,7 @@
           var budget = perFrame;
           while (budget > 0 && si < segs.length) {
             var seg = segs[si];
-            if (!node) {
-              node = seg.bold ? el("b") : document.createTextNode("");
-              content.appendChild(node);
-            }
+            if (!node) { node = seg.bold ? el("b") : document.createTextNode(""); content.appendChild(node); }
             var slice = seg.text.slice(ci, ci + budget);
             if (seg.bold) node.textContent += slice; else node.data += slice;
             ci += slice.length;
@@ -463,26 +625,41 @@
       });
     }
 
-    var srStatus = consoleEl.querySelector("[data-log-sr]");
-    function announce(text) { if (srStatus) srStatus.textContent = text; }
+    function setChipsDisabled(flag) {
+      Array.prototype.forEach.call(askRow.querySelectorAll(".vr-ask-chip"), function (chip) { chip.disabled = flag; });
+    }
+    function typingBubble() {
+      var b = message("ai");
+      b.classList.add("is-typing");
+      var dots = el("span", "vr-typing");
+      dots.innerHTML = "<i></i><i></i><i></i>";
+      b.appendChild(dots);
+      return { bubble: b, dots: dots };
+    }
 
-    function playPair(pair, myToken) {
+    function playPair(c, pair, myToken) {
       playing = true;
       consoleEl.classList.add("is-playing");
       setChipsDisabled(true);
-      var user = bubble("u");
+      var user = message("user");
       user.textContent = pair.q;
       announce("You: " + pair.q);
       return wait(reduceMotion ? 0 : 520, myToken).then(function () {
         if (myToken !== token) return;
-        var assistant = bubble("c");
-        var dots = el("span", "vr-typing");
-        dots.innerHTML = "<i></i><i></i><i></i>";
-        assistant.appendChild(dots);
-        return wait(reduceMotion ? 0 : 760, myToken).then(function () {
+        var t = typingBubble();
+        return wait(reduceMotion ? 0 : 820, myToken).then(function () {
           if (myToken !== token) return;
-          assistant.removeChild(dots);
-          return typeInto(assistant, pair.a, myToken);
+          t.bubble.removeChild(t.dots);
+          t.bubble.classList.remove("is-typing");
+          return typeInto(t.bubble, pair.a, myToken).then(function () {
+            if (myToken !== token) return;
+            if (pair.visual && VISUALS[pair.visual]) {
+              var vis = svgEl(VISUALS[pair.visual](c));
+              vis.classList.add("is-new");
+              t.bubble.appendChild(vis);
+              log.scrollTop = log.scrollHeight;
+            }
+          });
         });
       }).then(function () {
         if (myToken !== token) return;
@@ -491,10 +668,6 @@
         announce("Corpus AI: " + pair.a.replace(/\*\*/g, ""));
         setChipsDisabled(false);
       });
-    }
-
-    function setChipsDisabled(flag) {
-      Array.prototype.forEach.call(askRow.querySelectorAll(".vr-ask-chip"), function (chip) { chip.disabled = flag; });
     }
 
     function chip(tag, text, onClick) {
@@ -506,17 +679,15 @@
       button.addEventListener("click", onClick);
       return button;
     }
-
     function focusAsk() {
       var first = askRow.querySelector(".vr-ask-chip:not([hidden])");
       (first || askRow).focus({ preventScroll: true });
     }
-
     function renderAsk(c, remaining) {
       askRow.innerHTML = "";
       if (!remaining.length) {
         var nextIndex = (current + 1) % CASES.length;
-        askRow.appendChild(chip("Again", "Replay this case", function () { if (!playing) selectCase(current); }));
+        askRow.appendChild(chip("Again", "Replay this conversation", function () { if (!playing) selectCase(current); }));
         askRow.appendChild(chip("Next", CASES[nextIndex].label + ": " + CASES[nextIndex].kind, function () { if (!playing) selectCase(nextIndex); }));
         return;
       }
@@ -526,7 +697,7 @@
           var myToken = token;
           var rest = remaining.filter(function (i) { return i !== index; });
           button.hidden = true;
-          playPair(c.turns[index], myToken).then(function () {
+          playPair(c, c.turns[index], myToken).then(function () {
             if (myToken !== token) return;
             renderAsk(c, rest);
             focusAsk();
@@ -547,31 +718,117 @@
         button.classList.toggle("is-on", i === index);
         button.setAttribute("aria-pressed", i === index ? "true" : "false");
       });
-      renderEngine(c);
       log.innerHTML = "";
       askRow.innerHTML = "";
-      playPair(c.turns[0], myToken).then(function () {
+      /* 1. the user sends the file */
+      var sent = message("user");
+      sent.classList.add("vr-m-bubble--file");
+      sent.appendChild(fileCard(c));
+      sent.appendChild(el("p", "vr-m-filetext", "Here is the file."));
+      announce("You sent " + c.file);
+      /* 2. the engine reports */
+      wait(reduceMotion ? 0 : 700, myToken).then(function () {
+        if (myToken !== token) return;
+        var t = typingBubble();
+        t.bubble.classList.add("vr-m-bubble--engine");
+        t.dots.insertAdjacentText("afterbegin", "Running the five layers ");
+        return wait(reduceMotion ? 0 : 1100, myToken).then(function () {
+          if (myToken !== token) return;
+          t.bubble.innerHTML = "";
+          t.bubble.classList.remove("is-typing");
+          t.bubble.appendChild(engineCard(c));
+          log.scrollTop = log.scrollHeight;
+          announce("Verifyco engine: " + c.headline + ". Evidence coverage " + c.ran + " of " + c.total + " checks ran.");
+        });
+      }).then(function () {
+        if (myToken !== token) return;
+        return wait(reduceMotion ? 0 : 600, myToken);
+      }).then(function () {
+        if (myToken !== token) return;
+        return playPair(c, c.turns[0], myToken);
+      }).then(function () {
         if (myToken !== token) return;
         renderAsk(c, c.turns.map(function (t, i) { return i; }).slice(1));
       });
     }
 
     renderCases();
-    renderEngine(CASES[0]);
     replay.addEventListener("click", function () { selectCase(current); });
 
-    function start() {
-      if (started) return;
-      started = true;
-      selectCase(0);
-    }
+    function start() { if (started) return; started = true; selectCase(0); }
     if (reduceMotion || !("IntersectionObserver" in window)) start();
     else {
       var consoleObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) { if (entry.isIntersecting) { start(); consoleObserver.disconnect(); } });
-      }, { threshold: 0.25 });
+      }, { threshold: 0.2 });
       consoleObserver.observe(consoleEl);
       window.setTimeout(start, 9000);
+    }
+
+    /* "A sentence vs evidence": the same report renderer, outside the chat. */
+    var versus = document.querySelector("[data-versus-report]");
+    if (versus) {
+      var c0 = CASES[0];
+      versus.innerHTML = '<div class="vr-versus-file">' + icon("photo") + '<b>' + c0.file + '</b><small>' + c0.meta + '</small></div>'
+        + '<div class="vr-engine-verdict">' + coverageRing(c0.ran, c0.total, c0.tone) + '<div><span>Headline</span><strong>' + c0.headline + '</strong><small>what could not be checked is listed, not hidden</small></div></div>'
+        + layerRows(c0.layers)
+        + '<p class="vr-vis-note">What would change it: the earliest upload, a second photo, or the original file.</p>';
+    }
+  })();
+
+  /* ── Section illustrations ────────────────────────────────── */
+  (function illustrations() {
+    var mini = document.querySelector("[data-mini-eye]");
+    if (mini && window.CorpusEye && mini.getContext) {
+      try { window.CorpusEye.render(mini, { size: 300, dpr: 1, keepStyle: true, time: 3.1, seed: 9 }); } catch (error) {}
+    }
+    var mem = document.querySelector("[data-memory]");
+    if (mem && mem.getContext) {
+      var ctx = mem.getContext("2d");
+      var W = mem.width, H = mem.height, cols = 22, rows = 11;
+      var cw = W / cols, ch = H / rows;
+      var s = 42;
+      function rnd() { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }
+      var cellsM = [];
+      for (var r = 0; r < rows; r += 1) for (var q = 0; q < cols; q += 1) {
+        var v = rnd();
+        cellsM.push({ x: q * cw, y: r * ch, kind: v > 0.93 ? "ice" : v > 0.6 ? "bronze" : "deep", phase: rnd() * 6.28, speed: 0.4 + rnd() * 0.9 });
+      }
+      function paint(t) {
+        ctx.clearRect(0, 0, W, H);
+        for (var i = 0; i < cellsM.length; i += 1) {
+          var c = cellsM[i];
+          var pulse = 0.5 + 0.5 * Math.sin(t * c.speed + c.phase);
+          var fill = c.kind === "ice" ? "rgba(159,196,218," + (0.35 + pulse * 0.6).toFixed(2) + ")" : c.kind === "bronze" ? "rgba(188,142,100," + (0.18 + pulse * 0.22).toFixed(2) + ")" : "rgba(74,44,24," + (0.25 + pulse * 0.15).toFixed(2) + ")";
+          ctx.fillStyle = fill;
+          ctx.fillRect(c.x + 2, c.y + 2, cw - 4, ch - 4);
+        }
+      }
+      paint(1);
+      if (!reduceMotion) {
+        var memVisible = false, memStart = null;
+        function memTick(now) {
+          window.requestAnimationFrame(memTick);
+          if (!memVisible || document.hidden) return;
+          if (memStart === null) memStart = now;
+          paint((now - memStart) / 1000);
+        }
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver(function (entries) { entries.forEach(function (e) { memVisible = e.isIntersecting; }); }, { threshold: 0 }).observe(mem);
+        } else memVisible = true;
+        window.requestAnimationFrame(memTick);
+      }
+    }
+    var judge = document.querySelector("[data-judge]");
+    if (judge) {
+      var layers = ["Content Credentials", "Metadata Forensics", "AI Detection", "Frequency Analysis", "Temporal Consistency"];
+      var allowed = ["may decide the verdict when trusted", "context, never a verdict alone", "supporting signal until the benchmark", "can only argue against", "experimental, flags for review"];
+      judge.innerHTML = '<svg viewBox="0 0 600 300" aria-hidden="true" class="vr-judge">'
+        + layers.map(function (l, i) { var y = 30 + i * 54; return '<g class="vr-judge-row" style="animation-delay:' + (i * 0.4) + 's"><rect x="20" y="' + (y - 16) + '" width="190" height="32" rx="8"/><text x="34" y="' + (y + 5) + '" class="vr-judge-l">' + l + '</text><path d="M212 ' + y + ' C 260 ' + y + ', 270 150, 318 150" /></g>'; }).join("")
+        + '<rect x="318" y="118" width="110" height="64" rx="12" class="vr-judge-rule"/><text x="373" y="146" text-anchor="middle" class="vr-judge-rt">RULE SET</text><text x="373" y="164" text-anchor="middle" class="vr-judge-rs">what each may claim</text>'
+        + '<path d="M428 150 C 470 150, 480 60, 520 60 M428 150 C 470 150, 480 150, 520 150 M428 150 C 470 150, 480 240, 520 240" class="vr-judge-out"/>'
+        + '<text x="528" y="64" class="vr-judge-o">Likely Authentic</text><text x="528" y="154" class="vr-judge-o hot">Inconclusive</text><text x="528" y="244" class="vr-judge-o">Likely AI-Generated</text>'
+        + '</svg><ul class="vr-judge-legend">' + layers.map(function (l, i) { return "<li><b>" + l + "</b><span>" + allowed[i] + "</span></li>"; }).join("") + "</ul>";
     }
   })();
 

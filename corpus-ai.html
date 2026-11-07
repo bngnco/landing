@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/site.css?v=20" />
-  <link rel="stylesheet" href="assets/corpus-ai.css?v=21" />
+  <link rel="stylesheet" href="assets/corpus-ai.css?v=30" />
 
   <script type="application/ld+json">
   {
@@ -40,7 +40,7 @@
     "@id": "https://verifyco.app/corpus-ai#page",
     "url": "https://verifyco.app/corpus-ai",
     "name": "Corpus AI by Verifyco — We are building a big eye",
-    "description": "Corpus AI is a detection model with a visual memory, in development at Verifyco. It reads a file against how cameras, editors, generators and platforms leave their marks, then explains what was checked, what could not be, and what to look at next.",
+    "description": "Corpus AI is a detection model with a visual memory, in development at Verifyco. It reads a file against how cameras, editors, generators and platforms leave their marks, then says what was checked and what could not be.",
     "isPartOf": { "@type": "WebSite", "@id": "https://verifyco.app/#website", "url": "https://verifyco.app/" },
     "about": { "@type": "SoftwareApplication", "name": "Corpus AI by Verifyco", "applicationCategory": "SecurityApplication", "applicationStatus": "InDevelopment" },
     "publisher": { "@type": "Organization", "@id": "https://verifyco.app/#org", "name": "Verifyco", "url": "https://verifyco.app/" }
@@ -55,7 +55,7 @@
       <a class="brand" href="/" aria-label="Verifyco home">Verify<em>co</em></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="/">Verifyco</a>
-        <a href="#console">Console</a>
+        <a href="#console">Chat</a>
         <a href="#why">Why</a>
         <a href="#sectors">Sectors</a>
         <a href="#roadmap">Roadmap</a>
@@ -78,7 +78,7 @@
   <div class="mmenu" data-mmenu aria-hidden="true">
     <nav aria-label="Mobile">
       <a class="mlink" href="/">Verifyco</a>
-      <a class="mlink" href="#console">Console</a>
+      <a class="mlink" href="#console">Chat</a>
       <a class="mlink" href="#why">Why</a>
       <a class="mlink" href="#sectors">Sectors</a>
       <a class="mlink" href="#roadmap">Roadmap</a>
@@ -89,7 +89,7 @@
 
   <main id="main">
     <!-- ═══════════ HERO ═══════════ -->
-    <section class="vr-hero" id="top">
+    <section class="vr-hero" id="top" data-hero>
       <div class="vr-aurora" aria-hidden="true"></div>
       <div class="vr-grid" aria-hidden="true"></div>
       <div class="wrap vr-hero-in">
@@ -100,18 +100,21 @@
           <div class="vr-status-row">
             <span class="vr-status"><i></i>Model · retrain next</span>
             <span class="vr-status"><i class="warm"></i>Memory · corpus growing</span>
-            <span class="vr-status vr-status--quiet">Console · scripted preview</span>
+            <span class="vr-status vr-status--quiet">Chat · scripted preview</span>
           </div>
           <div class="vr-ctas">
-            <a class="btn btn-ice" href="#console">Open the console</a>
+            <a class="btn btn-ice" href="#console">Talk to the eye</a>
             <a class="btn btn-ice-line" href="#investors">For investors and partners</a>
           </div>
         </div>
 
-        <div class="vr-eye-stage" aria-hidden="true">
+        <div class="vr-eye-stage" aria-hidden="true" data-eye-stage>
           <div class="vr-eye-ring"></div>
-          <img class="vr-eye-img" src="assets/corpus-eye-1400.jpg" alt="" width="1400" height="1400" decoding="async" fetchpriority="high" />
-          <canvas class="vr-eye" data-eye></canvas>
+          <div class="vr-eye-move" data-eye-move>
+            <img class="vr-eye-img" src="assets/corpus-eye-1400.jpg" alt="" width="1400" height="1400" decoding="async" fetchpriority="high" />
+            <canvas class="vr-eye" data-eye></canvas>
+            <div class="vr-eye-lids" data-eye-lids><span></span><span></span></div>
+          </div>
           <span class="vr-eye-label l1"><i></i>Memory cells</span>
           <span class="vr-eye-label l2"><i></i>Generator families</span>
           <span class="vr-eye-label l3"><i></i>Platform re-encodes</span>
@@ -136,18 +139,21 @@
         </div>
         <div class="vr-organ-grid">
           <article class="vr-organ v-rv">
+            <div class="vr-organ-vis" aria-hidden="true"><canvas data-mini-eye width="300" height="300"></canvas></div>
             <span class="vr-organ-k">The eye</span>
             <h3>Looks at the file at the resolution it was made.</h3>
             <p>A detection model that reads native-resolution views of an image and sampled frames of a video instead of a downscaled thumbnail. It runs on the phone where it can and on the server where it must, under one contract, so both give the same verdict for the same evidence.</p>
             <span class="vr-organ-s"><i></i>Model · native-resolution retrain is next</span>
           </article>
           <article class="vr-organ v-rv">
+            <div class="vr-organ-vis" aria-hidden="true"><canvas data-memory width="600" height="300"></canvas></div>
             <span class="vr-organ-k warm">The memory</span>
             <h3>Remembers how marks are made.</h3>
             <p>A curated corpus where every file carries its source, its transformation chain and its hash: which generator made it, which editor touched it, which chat app or platform re-encoded it. A locked test set is never used for training, so a benchmark number can be trusted when it is published.</p>
             <span class="vr-organ-s"><i class="warm"></i>Corpus · growing, hashed, grouped</span>
           </article>
           <article class="vr-organ v-rv">
+            <div class="vr-organ-vis vr-organ-vis--judge" aria-hidden="true" data-judge></div>
             <span class="vr-organ-k">The judgment</span>
             <h3>Decides what each signal may conclude.</h3>
             <p>A written rule set says what every signal is allowed to claim. Corpus AI reads the engine's own layers, cites them, keeps counterevidence in view and answers "inconclusive" when the evidence is thin, instead of inventing confidence.</p>
@@ -157,52 +163,36 @@
       </div>
     </section>
 
-    <!-- ═══════════ 02 · CONSOLE ═══════════ -->
+    <!-- ═══════════ 02 · CHAT ═══════════ -->
     <section class="sec vr-console-sec" id="console">
       <div class="wrap">
         <div class="sec-head">
-          <span class="eyebrow v-rv">02 · The console</span>
-          <h2 class="t-display v-rv">Ask the eye <span class="vhl">what it saw.</span></h2>
-          <p class="sub v-rv">Four sample cases, scripted around the kinds of files newsrooms, insurers and marketplaces actually receive. Corpus AI reads the Verifyco engine's result for the same file, says what it trusts, what it does not, and what would change its mind.</p>
+          <span class="eyebrow v-rv">02 · The chat</span>
+          <h2 class="t-display v-rv">Send it a file. <span class="vhl">Then ask.</span></h2>
+          <p class="sub v-rv">Four sample conversations, scripted around the kinds of files newsrooms, insurers and marketplaces actually receive. The Verifyco engine reports first; Corpus AI then says what it trusts, what it does not, and what would change its mind.</p>
         </div>
 
-        <div class="vr-console v-rv" data-console>
-          <div class="vr-console-bar">
-            <span class="vr-console-id"><i></i>Corpus AI Console</span>
-            <span class="vr-console-mid">Scripted preview · sample data · no live model yet</span>
-            <span class="vr-console-right"><button type="button" class="vr-replay" data-replay>Replay</button></span>
-          </div>
+        <div class="vr-chatapp v-rv" data-console>
+          <aside class="vr-threads" aria-label="Sample conversations">
+            <div class="vr-threads-head"><span>Conversations</span><b>4 samples</b></div>
+            <div class="vr-thread-list" role="group" aria-label="Choose a sample conversation" data-cases></div>
+            <p class="vr-threads-note">Scripted preview with sample files. No live model yet.</p>
+          </aside>
 
-          <div class="vr-console-grid">
-            <aside class="vr-cases" aria-label="Sample cases">
-              <div class="vr-panel-label"><span>Cases</span><b>4 samples</b></div>
-              <div class="vr-case-list" role="group" aria-label="Choose a sample case" data-cases></div>
-            </aside>
-
-            <div class="vr-chat" aria-label="Corpus AI conversation">
-              <div class="vr-chat-head">
-                <span class="vr-chat-file" data-file-name>protest_photo.jpg</span>
-                <span class="vr-chat-meta" data-file-meta></span>
-              </div>
-              <div class="vr-chat-log" data-log></div>
-              <p class="sr-only" data-log-sr role="status" aria-live="polite"></p>
-              <div class="vr-chat-ask" data-ask aria-label="Follow-up questions" tabindex="-1"></div>
-              <div class="vr-chat-input" aria-hidden="true">
-                <input type="text" disabled placeholder="Ask about this file…" tabindex="-1" />
-                <b>Preview</b>
-              </div>
+          <div class="vr-chatwin" aria-label="Corpus AI conversation">
+            <div class="vr-chatwin-head">
+              <span class="vr-chat-avatar"><img src="assets/corpus-eye-700.jpg" alt="" width="700" height="700" loading="lazy" decoding="async" /></span>
+              <span class="vr-chatwin-who"><b>Corpus AI</b><small><i></i>Scripted preview · no live model yet</small></span>
+              <button type="button" class="vr-replay" data-replay>Replay</button>
             </div>
-
-            <aside class="vr-engine" aria-label="Verifyco engine result">
-              <div class="vr-panel-label"><span>Engine result</span><b>Verifyco · 5 layers</b></div>
-              <div class="vr-verdict" data-verdict>
-                <span class="vr-verdict-k">Headline</span>
-                <strong data-headline>Inconclusive</strong>
-                <span class="vr-verdict-c" data-coverage>Evidence coverage · 2 of 5 checks ran</span>
-              </div>
-              <ul class="vr-layers" data-layers></ul>
-              <p class="vr-engine-note">Layer names and headline labels are the ones the Verifyco app uses. Values are illustrative.</p>
-            </aside>
+            <div class="vr-messages" data-log></div>
+            <p class="sr-only" data-log-sr role="status" aria-live="polite"></p>
+            <div class="vr-chat-ask" data-ask aria-label="Follow-up questions" tabindex="-1"></div>
+            <div class="vr-composer" aria-hidden="true">
+              <span class="vr-composer-clip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M21 11.5 12.5 20a5.5 5.5 0 0 1-7.8-7.8l8.6-8.6a3.7 3.7 0 0 1 5.2 5.2l-8.6 8.6a1.8 1.8 0 0 1-2.6-2.6L15.5 7"/></svg></span>
+              <input type="text" disabled placeholder="Ask about this file…" tabindex="-1" />
+              <span class="vr-composer-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+            </div>
           </div>
         </div>
       </div>
@@ -215,6 +205,19 @@
           <span class="eyebrow v-rv">03 · Why a memory</span>
           <h2 class="t-display v-rv">A sentence <span class="vhl">is not evidence.</span></h2>
           <p class="sub v-rv">In 2026, confident one-line verdicts did visible damage. BOOM's report on its August to October fact-checks records chatbots telling users that real protest photos were not genuine, and a news channel running a fact-check video on that basis before deleting it.</p>
+        </div>
+
+        <div class="vr-versus v-rv" data-versus>
+          <div class="vr-versus-a">
+            <span class="vr-versus-k">What a sentence gives you</span>
+            <div class="vr-versus-bubble"><span class="vr-versus-who">A chatbot</span><p>"This photo is fake."</p></div>
+            <ul class="vr-versus-miss"><li>No file named</li><li>No check listed</li><li>No limit stated</li><li>No way to argue back</li></ul>
+          </div>
+          <div class="vr-versus-mid" aria-hidden="true"><span>vs</span></div>
+          <div class="vr-versus-b">
+            <span class="vr-versus-k">What evidence gives you</span>
+            <div class="vr-versus-report" data-versus-report></div>
+          </div>
         </div>
 
         <div class="vr-why-grid">
@@ -253,17 +256,17 @@
         <div class="sec-head">
           <span class="eyebrow v-rv">04 · Where it is needed first</span>
           <h2 class="t-display v-rv">Every file that will be believed <span class="vhl">needs a check first.</span></h2>
-          <p class="sub v-rv">One question per sector, and six design-partner slots, one per sector: bring real files, get the console early, shape what it says.</p>
+          <p class="sub v-rv">One question per sector, and six design-partner slots, one per sector: bring real files, get the chat early, shape what it says.</p>
         </div>
         <div class="vr-sector-grid">
-          <article class="vr-sector v-rv"><span class="vr-sector-n">01</span><h3>Newsrooms and fact-checkers</h3><p>Is this the file or a copy, and what can a desk say about it on deadline?</p></article>
-          <article class="vr-sector v-rv"><span class="vr-sector-n">02</span><h3>Platforms and trust and safety</h3><p>Which uploads carry signed provenance, which carry a generator's mark, which carry nothing at all?</p></article>
-          <article class="vr-sector v-rv"><span class="vr-sector-n">03</span><h3>Insurance and claims</h3><p>Was this photo taken where and when the claim says, by the device the claim says?</p></article>
-          <article class="vr-sector v-rv"><span class="vr-sector-n">04</span><h3>Courts, law firms and eDiscovery</h3><p>Can this exhibit's history be shown step by step, with each check and its result on the record?</p></article>
-          <article class="vr-sector v-rv"><span class="vr-sector-n">05</span><h3>Elections and public institutions</h3><p>Is a clip of a candidate cut, generated, or only re-encoded on its way here?</p></article>
-          <article class="vr-sector v-rv"><span class="vr-sector-n">06</span><h3>Marketplaces and brands</h3><p>Is the listing image a photo of the item or a render that was renamed to look like one?</p></article>
-          <article class="vr-sector v-rv"><span class="vr-sector-n">07</span><h3>Schools and research</h3><p>Teach the checks: what a file can show, and what it cannot.</p><em>Open to educators</em></article>
-          <article class="vr-sector vr-sector--cta v-rv"><h3>Your sector</h3><p>Tell us which file type costs you the most time. The memory grows where the damage is.</p><a class="vr-inline-link" href="#access">Request access →</a></article>
+          <article class="vr-sector v-rv"><span class="vr-sector-ic"><svg viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2V5Zm13 4h3v8a2 2 0 0 1-2 2M7 9h7M7 13h7M7 16h4"/></svg></span><span class="vr-sector-n">01</span><h3>Newsrooms and fact-checkers</h3><p>Is this the file or a copy, and what can a desk say about it on deadline?</p></article>
+          <article class="vr-sector v-rv"><span class="vr-sector-ic"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="vr-sector-n">02</span><h3>Platforms and trust and safety</h3><p>Which uploads carry signed provenance, which carry a generator's mark, which carry nothing at all?</p></article>
+          <article class="vr-sector v-rv"><span class="vr-sector-ic"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0H3Zm9 0v7a2 2 0 0 0 4 0"/></svg></span><span class="vr-sector-n">03</span><h3>Insurance and claims</h3><p>Was this photo taken where and when the claim says, by the device the claim says?</p></article>
+          <article class="vr-sector v-rv"><span class="vr-sector-ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0L7 7Zm10 0-3 7a3 3 0 0 0 6 0l-3-7ZM9 21h6"/></svg></span><span class="vr-sector-n">04</span><h3>Courts, law firms and eDiscovery</h3><p>Can this exhibit's history be shown step by step, with each check and its result on the record?</p></article>
+          <article class="vr-sector v-rv"><span class="vr-sector-ic"><svg viewBox="0 0 24 24"><path d="M4 11h16v9H4zM4 11l2-5h12l2 5M12 6v5M9 14h6"/></svg></span><span class="vr-sector-n">05</span><h3>Elections and public institutions</h3><p>Is a clip of a candidate cut, generated, or only re-encoded on its way here?</p></article>
+          <article class="vr-sector v-rv"><span class="vr-sector-ic"><svg viewBox="0 0 24 24"><path d="M3 12V5h7l9 9-7 7-9-9Z"/><circle cx="7.5" cy="9.5" r="1.3"/></svg></span><span class="vr-sector-n">06</span><h3>Marketplaces and brands</h3><p>Is the listing image a photo of the item or a render that was renamed to look like one?</p></article>
+          <article class="vr-sector v-rv"><span class="vr-sector-ic"><svg viewBox="0 0 24 24"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4V5Zm16 0h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7V5Z"/></svg></span><span class="vr-sector-n">07</span><h3>Schools and research</h3><p>Teach the checks: what a file can show, and what it cannot.</p><em>Open to educators</em></article>
+          <article class="vr-sector vr-sector--cta v-rv"><span class="vr-sector-ic warm"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span><h3>Your sector</h3><p>Tell us which file type costs you the most time. The memory grows where the damage is.</p><a class="vr-inline-link" href="#access">Request access →</a></article>
         </div>
       </div>
     </section>
@@ -281,15 +284,20 @@
               <a class="btn btn-ice-line" href="https://web.verifyco.app" target="_blank" rel="noopener">Open the web app ↗</a>
             </div>
           </div>
-          <ul class="vr-facts v-rv">
-            <li><b>iPhone app in 20 languages</b><span>Analysis on the device by default. Local files are examined where they are.</span></li>
-            <li><b>Content Credentials verified offline</b><span>C2PA manifests checked against the official trust lists, without sending the file anywhere.</span></li>
-            <li><b>Five governed layers</b><span>Content Credentials, Metadata Forensics, AI Detection, Frequency Analysis and Temporal Consistency, under one written contract.</span></li>
-            <li><b>Our own detection model</b><span>Fine-tuned and pinned by us, and held to the same cases as the server.</span></li>
-            <li><b>Web app, API, CLI and MCP server</b><span>Shareable reports on the web; developer surfaces in private beta.</span></li>
-            <li><b>A parity grid</b><span>1,773 cases keep the iPhone and the server on the same verdict for the same evidence. More than 1,700 automated tests.</span></li>
-          </ul>
+          <div class="vr-devices v-rv" aria-label="Verifyco on iPhone and the web">
+            <figure class="vr-device vr-device--web"><img src="assets/pitch/web.jpg" alt="The Verifyco web app report page" width="1600" height="1070" loading="lazy" decoding="async" /><figcaption>Web app · report</figcaption></figure>
+            <figure class="vr-device vr-device--phone a"><img src="assets/app/report.jpg" alt="A Verifyco iPhone report with the five evidence layers" width="760" height="1647" loading="lazy" decoding="async" /><figcaption>iPhone · report</figcaption></figure>
+            <figure class="vr-device vr-device--phone b"><img src="assets/app/evidence.jpg" alt="The five evidence families in the Verifyco iPhone app" width="760" height="1647" loading="lazy" decoding="async" /><figcaption>iPhone · five families</figcaption></figure>
+          </div>
         </div>
+        <ul class="vr-facts v-rv">
+          <li><b>iPhone app in 20 languages</b><span>Analysis on the device by default. Local files are examined where they are.</span></li>
+          <li><b>Content Credentials verified offline</b><span>C2PA manifests checked against the official trust lists, without sending the file anywhere.</span></li>
+          <li><b>Five governed layers</b><span>Content Credentials, Metadata Forensics, AI Detection, Frequency Analysis and Temporal Consistency, under one written contract.</span></li>
+          <li><b>Our own detection model</b><span>Fine-tuned and pinned by us, and held to the same cases as the server.</span></li>
+          <li><b>Web app, API, CLI and MCP server</b><span>Shareable reports on the web; developer surfaces in private beta.</span></li>
+          <li><b>A parity grid</b><span>1,773 cases keep the iPhone and the server on the same verdict for the same evidence. More than 1,700 automated tests.</span></li>
+        </ul>
       </div>
     </section>
 
@@ -301,10 +309,11 @@
           <h2 class="t-display v-rv">The memory first, <span class="vhl">then the eye, then the voice.</span></h2>
           <p class="sub v-rv">Planned work, in order. Nothing here is a promise of a date; the first item is in progress, the rest follow it.</p>
         </div>
+        <div class="vr-tl-track v-rv" aria-hidden="true"><i class="done"></i><span class="now"></span><span></span><span></span><span></span></div>
         <ol class="vr-timeline v-rv" aria-label="Corpus AI roadmap">
           <li class="now"><span class="vr-tl-k">Now</span><b>The 2026 video corpus</b><p>Generator video as it actually looks after X, TikTok and YouTube re-encode it, with provenance and transformation chains recorded for every file. A locked benchmark that is never used for training.</p></li>
           <li><span class="vr-tl-k">Next</span><b>Native-resolution retrain</b><p>Two models under one contract: a mobile base model for the phone and a larger web specialist for faces and video. Trained on native-resolution views, evaluated on the locked benchmark.</p></li>
-          <li><span class="vr-tl-k">Then</span><b>Memory retrieval and the console</b><p>A new file compared against generator families and re-encode signatures in the corpus. The console opens as a private preview to design partners, with the conversation grounded in the engine's cited layers.</p></li>
+          <li><span class="vr-tl-k">Then</span><b>Memory retrieval and the chat</b><p>A new file compared against generator families and re-encode signatures in the corpus. The chat opens as a private preview to design partners, with every answer grounded in the engine's cited layers.</p></li>
           <li><span class="vr-tl-k">Gate</span><b>Published model card</b><p>Measured calibration, generalisation and failure modes, published before the preview is called a product. No number appears on this page before it is measured.</p></li>
         </ol>
       </div>
@@ -356,7 +365,7 @@
         <div class="vr-wait v-rv">
           <span class="vr-eyebrow">09 · Early access</span>
           <h2 class="t-display">Bring the files that <span class="vhl">cost you the most time.</span></h2>
-          <p class="sub">The console opens first to design partners. The form opens a prepared email in your mail app; nothing is stored on this page until you send it.</p>
+          <p class="sub">The chat opens first to design partners. The form opens a prepared email in your mail app; nothing is stored on this page until you send it.</p>
           <form class="vr-wait-form" data-waitlist novalidate>
             <label class="vr-wait-label" for="vr-email">Work email</label>
             <div class="vr-wait-row">
@@ -386,14 +395,14 @@
           </div>
         </div>
         <div class="foot-col"><h4>Product</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#app">iOS app</a></li><li><a href="https://web.verifyco.app">Web app</a></li><li><a href="/deepdetect-plus">DeepDetect+</a></li><li><a href="/blog">Blog</a></li></ul></div>
-        <div class="foot-col"><h4>Corpus AI</h4><ul><li><a href="#console">Console</a></li><li><a href="#roadmap">Roadmap</a></li><li><a href="#validation">Model card</a></li><li><a href="#access">Early access</a></li></ul></div>
+        <div class="foot-col"><h4>Corpus AI</h4><ul><li><a href="#console">Chat</a></li><li><a href="#roadmap">Roadmap</a></li><li><a href="#validation">Model card</a></li><li><a href="#access">Early access</a></li></ul></div>
         <div class="foot-col"><h4>Company</h4><ul><li><a href="/pitch">Pitch</a></li><li><a href="/support">Support</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/terms">Terms</a></li><li><a href="mailto:support@verifyco.app">support@verifyco.app</a></li></ul></div>
       </div>
       <div class="foot-bot"><span>© 2026 Verifyco · All rights reserved</span><span>CORPUS AI · IN DEVELOPMENT · SCRIPTED PREVIEW</span></div>
     </div>
   </footer>
 
-  <script src="assets/corpus-eye.js?v=1" defer></script>
-  <script src="assets/corpus-ai.js?v=21" defer></script>
+  <script src="assets/corpus-eye.js?v=2" defer></script>
+  <script src="assets/corpus-ai.js?v=30" defer></script>
 </body>
 </html>

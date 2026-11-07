@@ -6,7 +6,8 @@
    and the banner renderer.
 
    window.CorpusEye.render(canvas, options) -> draws one frame
-   window.CorpusEye.mount(canvas, options)  -> animates, returns stop()
+   window.CorpusEye.mount(canvas, options)  -> animates; returns
+     { stop(), pause(flag), setDilation(d), state }
    ════════════════════════════════════════════════════════════ */
 (function () {
   "use strict";
@@ -49,7 +50,8 @@
     pupil: [3, 4, 7]
   };
 
-  /* Build the static tile list once per size: radial fibers, crypts, cells. */
+  /* Build the static tile list once per size: radial fibers, crypts, cells.
+     Tiles start inside the resting pupil radius so the pupil can contract. */
   function buildTiles(S, seed) {
     var noise = makeNoise(seed || 7);
     var noise2 = makeNoise((seed || 7) + 101);
@@ -60,17 +62,17 @@
     var ringGap = tileLen * 0.66;
     var tiles = [];
     var cells = [];
-    var rings = Math.floor((R - P - tileLen * 0.3) / ringGap);
+    var inner = P * 0.78;
+    var rings = Math.floor((R - inner - tileLen * 0.3) / ringGap);
     for (var ri = 0; ri < rings; ri += 1) {
-      var r = P + tileLen * 0.55 + ri * ringGap;
-      var f = (r - P) / (R - P); /* 0 at pupil, 1 at rim */
+      var r = inner + tileLen * 0.4 + ri * ringGap;
+      var f = clamp((r - P) / (R - P), 0, 1); /* 0 at resting pupil, 1 at rim */
       var circ = 2 * Math.PI * r;
       var tileW = Math.max(1.2, S / 210) * (0.8 + 0.5 * f);
       var count = Math.floor(circ / (tileW * 1.7));
-      var offset = noise3(ri * 0.77, 3) ; /* break the lattice ring by ring */
+      var offset = noise3(ri * 0.77, 3);
       for (var ti = 0; ti < count; ti += 1) {
         var a = ((ti + offset) / count) * Math.PI * 2;
-        /* fibers run along the radius: brightness keyed mostly by angle */
         var fiber = noise(Math.cos(a) * 11 + 50, Math.sin(a) * 11 + 50);
         var fine = noise2(a * 9.5 + 2, f * 3.1 + 1);
         var crypt = noise2(Math.cos(a) * 3.4 + f * 2.8 + 9, Math.sin(a) * 3.4 + 9);
@@ -89,8 +91,7 @@
         else col = lerpColor(PALETTE.deep, PALETTE.bronze, bright / 0.62);
         var alpha = clamp(0.5 + bright * 0.55, 0.3, 1);
         var len = tileLen * (0.7 + fine * 0.8);
-        var tile = { a: a + aj, r: r + jitter, w: tileW, l: len, col: col, alpha: alpha };
-        tiles.push(tile);
+        tiles.push({ a: a + aj, r: r + jitter, w: tileW, l: len, col: col, alpha: alpha });
         var isCell = noise(ti * 1.91 + 3, ri * 2.73 + 7) > 0.935 && f > 0.06 && f < 0.9;
         if (isCell) cells.push({ a: a + aj, r: r + jitter, w: tileW * 0.9, l: len * 1.1, phase: noise(ti, ri) * Math.PI * 2, speed: 0.5 + noise2(ti, ri) * 1.3 });
       }
@@ -109,33 +110,25 @@
     ctx.restore();
   }
 
-  /* Static layers: glow, iris tiles, limbus, pupil, catchlight. */
+  /* Static layers: glow, iris ground, tiles, limbus. The pupil is dynamic. */
   function paintStatic(ctx, S, model) {
     var cx = S / 2, cy = S / 2, R = model.R, P = model.P;
     ctx.clearRect(0, 0, S, S);
-
-    /* ambient glow behind the iris */
     var glow = ctx.createRadialGradient(cx, cy, R * 0.6, cx, cy, S * 0.5);
     glow.addColorStop(0, "rgba(188,142,100,0.20)");
     glow.addColorStop(0.55, "rgba(188,142,100,0.05)");
     glow.addColorStop(1, "rgba(188,142,100,0)");
     ctx.fillStyle = glow;
     ctx.fillRect(0, 0, S, S);
-
-    /* iris ground */
-    var ground = ctx.createRadialGradient(cx, cy, P, cx, cy, R);
+    var ground = ctx.createRadialGradient(cx, cy, P * 0.7, cx, cy, R);
     ground.addColorStop(0, "rgba(120,80,46,0.95)");
     ground.addColorStop(0.5, "rgba(70,42,24,0.95)");
     ground.addColorStop(1, "rgba(16,10,6,1)");
     ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fillStyle = ground; ctx.fill();
-
-    /* tiles */
     for (var i = 0; i < model.tiles.length; i += 1) {
       var t = model.tiles[i];
       drawTile(ctx, cx, cy, t, rgba(t.col, t.alpha));
     }
-
-    /* limbus: dark vignette at the rim, thin ice edge */
     var limbus = ctx.createRadialGradient(cx, cy, R * 0.78, cx, cy, R);
     limbus.addColorStop(0, "rgba(6,4,2,0)");
     limbus.addColorStop(0.86, "rgba(6,4,2,0.35)");
@@ -145,35 +138,18 @@
     ctx.lineWidth = Math.max(1, S / 520);
     ctx.strokeStyle = "rgba(159,196,218,0.35)";
     ctx.stroke();
-
-    /* pupil */
-    var pupil = ctx.createRadialGradient(cx - P * 0.1, cy - P * 0.1, P * 0.1, cx, cy, P);
-    pupil.addColorStop(0, "rgba(10,12,16,1)");
-    pupil.addColorStop(0.85, "rgba(3,4,7,1)");
-    pupil.addColorStop(1, "rgba(3,4,7,1)");
-    ctx.beginPath(); ctx.arc(cx, cy, P, 0, Math.PI * 2); ctx.fillStyle = pupil; ctx.fill();
-    /* pupil edge: soft dark halo over the collarette */
-    var edge = ctx.createRadialGradient(cx, cy, P, cx, cy, P * 1.22);
-    edge.addColorStop(0, "rgba(3,4,7,0.9)");
-    edge.addColorStop(1, "rgba(3,4,7,0)");
-    ctx.beginPath(); ctx.arc(cx, cy, P * 1.22, 0, Math.PI * 2); ctx.fillStyle = edge; ctx.fill();
-    /* faint ice reflection arc inside the pupil */
-    ctx.beginPath();
-    ctx.arc(cx, cy, P * 0.82, Math.PI * 1.08, Math.PI * 1.62);
-    ctx.lineWidth = Math.max(1, S / 300);
-    ctx.strokeStyle = "rgba(159,196,218,0.22)";
-    ctx.stroke();
   }
 
-  /* Dynamic layer: memory cells pulsing and the catchlight. */
-  function paintDynamic(ctx, S, model, time) {
-    var cx = S / 2, cy = S / 2, P = model.P;
+  /* Dynamic layer: memory cells in slow waves, the pupil at its current
+     dilation, and the catchlight. */
+  function paintDynamic(ctx, S, model, time, dil) {
+    var cx = S / 2, cy = S / 2, P = model.P * (dil || 1);
     ctx.clearRect(0, 0, S, S);
     for (var i = 0; i < model.cells.length; i += 1) {
       var c = model.cells[i];
-      var pulse = 0.5 + 0.5 * Math.sin(time * c.speed + c.phase);
+      var pulse = 0.5 + 0.5 * Math.sin(time * c.speed + c.phase + c.a * 1.6 + c.r / model.R * 2.2);
       var col = lerpColor(PALETTE.ice, PALETTE.iceBright, pulse);
-      drawTile(ctx, cx, cy, c, rgba(col, 0.25 + pulse * 0.6));
+      drawTile(ctx, cx, cy, c, rgba(col, 0.22 + pulse * 0.62));
       if (pulse > 0.82) {
         ctx.save();
         ctx.globalAlpha = (pulse - 0.82) * 1.8;
@@ -181,6 +157,21 @@
         ctx.restore();
       }
     }
+    /* pupil */
+    var pupil = ctx.createRadialGradient(cx - P * 0.1, cy - P * 0.1, P * 0.1, cx, cy, P);
+    pupil.addColorStop(0, "rgba(10,12,16,1)");
+    pupil.addColorStop(0.85, "rgba(3,4,7,1)");
+    pupil.addColorStop(1, "rgba(3,4,7,1)");
+    ctx.beginPath(); ctx.arc(cx, cy, P, 0, Math.PI * 2); ctx.fillStyle = pupil; ctx.fill();
+    var edge = ctx.createRadialGradient(cx, cy, P, cx, cy, P * 1.22);
+    edge.addColorStop(0, "rgba(3,4,7,0.9)");
+    edge.addColorStop(1, "rgba(3,4,7,0)");
+    ctx.beginPath(); ctx.arc(cx, cy, P * 1.22, 0, Math.PI * 2); ctx.fillStyle = edge; ctx.fill();
+    ctx.beginPath();
+    ctx.arc(cx, cy, P * 0.82, Math.PI * 1.08, Math.PI * 1.62);
+    ctx.lineWidth = Math.max(1, S / 300);
+    ctx.strokeStyle = "rgba(159,196,218,0.22)";
+    ctx.stroke();
     /* catchlight */
     var kx = cx - P * 0.52, ky = cy - P * 0.58;
     var kr = P * 0.30;
@@ -208,11 +199,11 @@
     var base = document.createElement("canvas"); base.width = S; base.height = S;
     paintStatic(base.getContext("2d"), S, model);
     var dyn = document.createElement("canvas"); dyn.width = S; dyn.height = S;
-    return { S: S, model: model, base: base, dyn: dyn, ctx: canvas.getContext("2d") };
+    return { S: S, model: model, base: base, dyn: dyn, ctx: canvas.getContext("2d"), dil: 1, target: 1 };
   }
 
   function compose(state, time) {
-    paintDynamic(state.dyn.getContext("2d"), state.S, state.model, time);
+    paintDynamic(state.dyn.getContext("2d"), state.S, state.model, time, state.dil);
     state.ctx.clearRect(0, 0, state.S, state.S);
     state.ctx.drawImage(state.base, 0, 0);
     state.ctx.drawImage(state.dyn, 0, 0);
@@ -236,13 +227,18 @@
       if (now - last < interval) return;
       last = now;
       if (start === null) start = now;
-      compose(state, (now - start) / 1000 + 1.7);
+      var t = (now - start) / 1000 + 1.7;
+      /* slow breathing plus a smoothed target set from outside */
+      var breathe = 1 + 0.025 * Math.sin(t * 0.55);
+      state.dil += (state.target * breathe - state.dil) * 0.08;
+      compose(state, t);
     }
     compose(state, 1.7);
     frame = window.requestAnimationFrame(tick);
     return {
       stop: function () { running = false; if (frame) window.cancelAnimationFrame(frame); },
       pause: function (flag) { paused = !!flag; },
+      setDilation: function (d) { state.target = clamp(d, 0.8, 1.2); },
       state: state
     };
   }
