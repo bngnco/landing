@@ -91,7 +91,7 @@
         else col = lerpColor(PALETTE.deep, PALETTE.bronze, bright / 0.62);
         var alpha = clamp(0.5 + bright * 0.55, 0.3, 1);
         var len = tileLen * (0.7 + fine * 0.8);
-        tiles.push({ a: a + aj, r: r + jitter, w: tileW, l: len, col: col, alpha: alpha });
+        tiles.push({ a: a + aj, r: r + jitter, w: tileW, l: len, col: col, alpha: alpha, d: f * 0.7 + noise3(ti * 0.13, ri * 0.7) * 0.3, fly: S * (0.25 + noise2(ti * 0.3, ri) * 0.45), spin: (noise(ti * 0.11, ri * 0.19) - 0.5) * 0.9 });
         var isCell = noise(ti * 1.91 + 3, ri * 2.73 + 7) > 0.935 && f > 0.06 && f < 0.9;
         if (isCell) cells.push({ a: a + aj, r: r + jitter, w: tileW * 0.9, l: len * 1.1, phase: noise(ti, ri) * Math.PI * 2, speed: 0.5 + noise2(ti, ri) * 1.3 });
       }
@@ -111,8 +111,10 @@
   }
 
   /* Static layers: glow, iris ground, tiles, limbus. The pupil is dynamic. */
-  function paintStatic(ctx, S, model) {
+  /* progress 0..1 draws the tiles mid-flight (intro); 1 draws them settled. */
+  function paintStatic(ctx, S, model, progress) {
     var cx = S / 2, cy = S / 2, R = model.R, P = model.P;
+    var pr = progress == null ? 1 : progress;
     ctx.clearRect(0, 0, S, S);
     var glow = ctx.createRadialGradient(cx, cy, R * 0.6, cx, cy, S * 0.5);
     glow.addColorStop(0, "rgba(188,142,100,0.20)");
@@ -124,10 +126,15 @@
     ground.addColorStop(0, "rgba(120,80,46,0.95)");
     ground.addColorStop(0.5, "rgba(70,42,24,0.95)");
     ground.addColorStop(1, "rgba(16,10,6,1)");
-    ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fillStyle = ground; ctx.fill();
+    ctx.save(); ctx.globalAlpha = pr; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fillStyle = ground; ctx.fill(); ctx.restore();
     for (var i = 0; i < model.tiles.length; i += 1) {
       var t = model.tiles[i];
-      drawTile(ctx, cx, cy, t, rgba(t.col, t.alpha));
+      if (pr >= 1) { drawTile(ctx, cx, cy, t, rgba(t.col, t.alpha)); continue; }
+      /* each tile has its own start time so the iris knits together ring by ring */
+      var e = clamp((pr - t.d * 0.55) / 0.45, 0, 1);
+      e = 1 - Math.pow(1 - e, 3);
+      if (e <= 0) continue;
+      drawTile(ctx, cx, cy, { a: t.a + (1 - e) * t.spin, r: t.r + (1 - e) * t.fly, w: t.w, l: t.l }, rgba(t.col, t.alpha * e));
     }
     var limbus = ctx.createRadialGradient(cx, cy, R * 0.78, cx, cy, R);
     limbus.addColorStop(0, "rgba(6,4,2,0)");
@@ -156,6 +163,22 @@
         drawTile(ctx, cx, cy, { a: c.a, r: c.r, w: c.w * 3.2, l: c.l * 1.5 }, "rgba(159,196,218,0.18)");
         ctx.restore();
       }
+    }
+    /* a reading sweep: a faint ice wedge crosses the iris every few seconds */
+    var sweepT = (time % 7.5);
+    if (sweepT < 2.2) {
+      var ang = -Math.PI * 0.75 + (sweepT / 2.2) * Math.PI * 2;
+      var fade = Math.sin((sweepT / 2.2) * Math.PI);
+      ctx.save();
+      ctx.beginPath(); ctx.arc(cx, cy, model.R, 0, Math.PI * 2); ctx.clip();
+      ctx.translate(cx, cy); ctx.rotate(ang);
+      var wedge = ctx.createLinearGradient(0, 0, 0, model.R);
+      wedge.addColorStop(0, "rgba(159,196,218,0)");
+      wedge.addColorStop(0.5, "rgba(159,196,218," + (0.16 * fade).toFixed(3) + ")");
+      wedge.addColorStop(1, "rgba(226,241,250," + (0.05 * fade).toFixed(3) + ")");
+      ctx.fillStyle = wedge;
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.arc(0, 0, model.R, -0.22, 0.22); ctx.closePath(); ctx.fill();
+      ctx.restore();
     }
     /* pupil */
     var pupil = ctx.createRadialGradient(cx - P * 0.1, cy - P * 0.1, P * 0.1, cx, cy, P);
@@ -197,7 +220,7 @@
     if (!opts.keepStyle) { canvas.style.width = cssSize + "px"; canvas.style.height = cssSize + "px"; }
     var model = buildTiles(S, opts.seed);
     var base = document.createElement("canvas"); base.width = S; base.height = S;
-    paintStatic(base.getContext("2d"), S, model);
+    if (!opts.intro) paintStatic(base.getContext("2d"), S, model);
     var dyn = document.createElement("canvas"); dyn.width = S; dyn.height = S;
     return { S: S, model: model, base: base, dyn: dyn, ctx: canvas.getContext("2d"), dil: 1, target: 1 };
   }
@@ -220,20 +243,28 @@
     var state = setup(canvas, opts);
     var running = true, paused = false, frame = 0, start = null;
     var fps = opts.fps || 30, interval = 1000 / fps, last = 0;
+    var introDur = opts.intro ? (opts.introDuration || 1.6) : 0, introLeft = introDur, introLast = performance.now();
     function tick(now) {
       if (!running) return;
       frame = window.requestAnimationFrame(tick);
       if (paused) return;
       if (now - last < interval) return;
       last = now;
-      if (start === null) start = now;
+      if (start === null) { start = now; introLast = now; }
       var t = (now - start) / 1000 + 1.7;
+      if (introLeft > 0) {
+        introLeft = Math.max(0, introLeft - (now - introLast) / 1000);
+        introLast = now;
+        var pr = 1 - introLeft / introDur;
+        paintStatic(state.base.getContext("2d"), state.S, state.model, pr >= 0.999 ? 1 : pr);
+        if (introLeft <= 0 && opts.onIntroEnd) opts.onIntroEnd();
+      }
       /* slow breathing plus a smoothed target set from outside */
       var breathe = 1 + 0.025 * Math.sin(t * 0.55);
       state.dil += (state.target * breathe - state.dil) * 0.08;
       compose(state, t);
     }
-    compose(state, 1.7);
+    if (!opts.intro) compose(state, 1.7);
     frame = window.requestAnimationFrame(tick);
     return {
       stop: function () { running = false; if (frame) window.cancelAnimationFrame(frame); },

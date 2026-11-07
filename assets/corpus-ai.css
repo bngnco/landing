@@ -78,11 +78,14 @@ body.corpus-ai-page .sub { color: var(--vr-muted); }
 .vr-eye-ring::after { content: ""; position: absolute; inset: 7%; border-radius: 50%; border: 1px dashed rgba(214,172,134,.14); }
 .vr-eye-move { position: absolute; inset: 0; will-change: transform; }
 .vr-eye-img, .vr-eye { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 50%; }
-.vr-eye-lids { position: absolute; inset: -2%; pointer-events: none; }
-.vr-eye-lids span { position: absolute; left: 0; right: 0; height: 52%; background: var(--vr-bg); transform: scaleY(0); transition: transform 110ms ease-in; }
-.vr-eye-lids span:first-child { top: 0; transform-origin: 50% 0; border-radius: 0 0 50% 50% / 0 0 18% 18%; }
-.vr-eye-lids span:last-child { bottom: 0; transform-origin: 50% 100%; border-radius: 50% 50% 0 0 / 18% 18% 0 0; }
+.vr-eye-lids { position: absolute; inset: -1.5%; pointer-events: none; border-radius: 50%; overflow: hidden; }
+.vr-eye-lids span { position: absolute; left: -2%; right: -2%; height: 52%; background: var(--vr-bg); transform: scaleY(0); transition: transform 110ms ease-in; }
+.vr-eye-lids span:first-child { top: 0; transform-origin: 50% 0; border-radius: 0 0 50% 50% / 0 0 14% 14%; }
+.vr-eye-lids span:last-child { bottom: 0; transform-origin: 50% 100%; border-radius: 50% 50% 0 0 / 14% 14% 0 0; }
 .vr-eye-lids.is-blinking span { transform: scaleY(1); transition: transform 90ms ease-out; }
+.vr-eye-lids.is-closed span { transform: scaleY(1); transition: none; }
+.vr-eye-stage { transition: transform 600ms var(--ease); transform-style: preserve-3d; }
+.vr-eye-stage.is-awake .vr-eye-lids span { transition: transform 260ms ease-out; }
 .vr-eye-img { object-fit: cover; transition: opacity 500ms ease; }
 .vr-eye { opacity: 0; transition: opacity 700ms ease; }
 .vr-eye-stage.has-eye .vr-eye { opacity: 1; }
@@ -526,3 +529,44 @@ body.corpus-ai-page .foot-col a:hover { color: var(--vr-2); }
   .vr-tl-track i { animation: none; width: 4%; }
   .vr-eye-lids span { transition: none; }
 }
+
+/* ── Watch the eye read a file ─────────────────────────────── */
+.vr-read { position: relative; border: 1px solid var(--vr-line); border-radius: 24px; background: linear-gradient(155deg, rgba(11, 17, 23, .98), rgba(5, 9, 12, .98)); overflow: hidden; box-shadow: 0 50px 120px -60px #000, inset 0 1px 0 rgba(255,255,255,.04); }
+.vr-read::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 40% 60% at 38% 50%, rgba(188,142,100,.08), transparent 70%); }
+.vr-read-stations { position: relative; display: grid; grid-template-columns: 1.05fr 1fr 1.2fr 1.3fr; gap: 0; }
+.vr-rs { position: relative; min-height: 380px; padding: 22px 20px 20px; display: grid; align-content: start; justify-items: center; gap: 14px; border-right: 1px solid var(--vr-line); opacity: .32; transition: opacity 500ms ease; }
+.vr-rs:last-child { border-right: 0; }
+.vr-rs-k { justify-self: start; color: var(--vr-dim); font: 500 10px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; transition: color 400ms ease; }
+.vr-rs small { color: var(--vr-dim); font: 500 10.5px/1.4 var(--f-mono); letter-spacing: .04em; text-align: center; }
+.vr-rs-slot { width: 100%; max-width: 240px; }
+.vr-rs-slot .vr-filecard { transform: translateY(16px); opacity: 0; transition: transform 600ms var(--ease), opacity 600ms ease; }
+.vr-rs-eye { position: relative; width: 200px; height: 200px; }
+.vr-rs-eye canvas { width: 200px; height: 200px; display: block; border-radius: 50%; }
+.vr-rs-scan { position: absolute; inset: -4%; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 300deg, rgba(159,196,218,.0) 300deg, rgba(159,196,218,.55) 345deg, transparent 360deg); -webkit-mask-image: radial-gradient(circle, transparent 52%, #000 54%, #000 100%); mask-image: radial-gradient(circle, transparent 52%, #000 54%, #000 100%); opacity: 0; }
+.vr-rs--mem canvas { width: 100%; max-width: 300px; height: auto; border-radius: 10px; }
+.vr-rs-layers { width: 100%; display: grid; gap: 6px; }
+.vr-rs-layer { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 7px 9px; border-radius: 9px; background: rgba(255,255,255,.02); border: 1px solid transparent; opacity: .35; transform: translateX(8px); transition: opacity 320ms ease, transform 320ms var(--ease), border-color 320ms ease; }
+.vr-rs-layer .vr-ic { width: 16px; height: 16px; color: var(--vr-dim); }
+.vr-rs-layer b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--vr-2); font-size: 12px; font-weight: 600; }
+.vr-rs-layer em { color: var(--vr-dim); font: 500 8.5px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; font-style: normal; white-space: nowrap; }
+.vr-rs-layer.is-on { opacity: 1; transform: none; border-color: var(--vr-line); }
+.vr-rs-layer.is-on.st-ok .vr-ic, .vr-rs-layer.is-on.st-ok em { color: var(--vr-green); }
+.vr-rs-layer.is-on.st-flag .vr-ic, .vr-rs-layer.is-on.st-flag em { color: var(--vr-warn); }
+.vr-rs-layer.is-on.st-weak .vr-ic, .vr-rs-layer.is-on.st-weak em { color: var(--vr); }
+.vr-rs-answer { width: 100%; min-height: 96px; }
+.vr-rs-ans { display: grid; gap: 4px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--vr-line-2); background: rgba(159,196,218,.06); animation: msg-in 420ms var(--ease) both; }
+.vr-rs-ans span { color: var(--vr-dim); font: 500 9.5px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; }
+.vr-rs-ans strong { font-size: 20px; letter-spacing: -.02em; color: var(--vr-2); }
+.vr-rs-ans.tone-look strong { color: var(--vr-warm-2); } .vr-rs-ans.tone-authentic strong { color: var(--vr-green); } .vr-rs-ans.tone-ai strong { color: var(--vr-warn); }
+.vr-rs-ans small { color: var(--vr-muted); font: 500 10px/1.4 var(--f-mono); }
+.vr-rs-ans p { margin-top: 4px; color: #c6d4dc; font-size: 12.5px; line-height: 1.5; }
+.vr-read-progress { height: 3px; background: rgba(159,196,218,.08); }
+.vr-read-progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--vr-warm), var(--vr)); }
+.vr-read.step-1 .vr-rs--file, .vr-read.step-2 .vr-rs--eye, .vr-read.step-3 .vr-rs--mem, .vr-read.step-4 .vr-rs--judge { opacity: 1; }
+.vr-read.step-1 .vr-rs--file .vr-rs-k, .vr-read.step-2 .vr-rs--eye .vr-rs-k, .vr-read.step-3 .vr-rs--mem .vr-rs-k, .vr-read.step-4 .vr-rs--judge .vr-rs-k { color: var(--vr); }
+.vr-read.step-1 .vr-rs-slot .vr-filecard { transform: none; opacity: 1; }
+.vr-read.step-2 .vr-rs-scan { opacity: 1; animation: scan-spin 1.4s linear 2; }
+@keyframes scan-spin { to { transform: rotate(360deg); } }
+@media (max-width: 1100px) { .vr-read-stations { grid-template-columns: 1fr 1fr; } .vr-rs { border-bottom: 1px solid var(--vr-line); } .vr-rs:nth-child(2) { border-right: 0; } .vr-rs:nth-child(n+3) { border-bottom: 0; } .vr-rs:nth-child(3) { border-right: 1px solid var(--vr-line); } }
+@media (max-width: 700px) { .vr-read-stations { grid-template-columns: 1fr; } .vr-rs { border-right: 0 !important; border-bottom: 1px solid var(--vr-line) !important; min-height: 0; } .vr-rs:last-child { border-bottom: 0 !important; } .vr-rs-eye, .vr-rs-eye canvas { width: 160px; height: 160px; } }
+@media (prefers-reduced-motion: reduce) { .vr-rs { opacity: 1; transition: none; } .vr-rs-layer { opacity: 1; transform: none; } .vr-rs-slot .vr-filecard { transform: none; opacity: 1; } .vr-rs-scan { animation: none; } .vr-rs-ans { animation: none; } .vr-eye-stage { transition: none; } }

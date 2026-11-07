@@ -216,11 +216,19 @@
     var eye = null;
     var resizeTimer = 0;
     function size() { return Math.max(240, Math.round(Math.min(stage.clientWidth, stage.clientHeight || stage.clientWidth))); }
+    var introDone = reduceMotion;
     function build() {
       if (eye) eye.stop();
       var px = size();
       if (reduceMotion) { window.CorpusEye.render(canvas, { size: px, time: 2.3 }); eye = null; }
-      else eye = window.CorpusEye.mount(canvas, { size: px, fps: 30 });
+      else {
+        if (!introDone) lids.classList.add("is-closed");
+        eye = window.CorpusEye.mount(canvas, { size: px, fps: 30, intro: !introDone, introDuration: 1.7, onIntroEnd: function () {
+          introDone = true;
+          window.setTimeout(function () { lids.classList.remove("is-closed"); stage.classList.add("is-awake"); }, 180);
+        } });
+        if (introDone) stage.classList.add("is-awake");
+      }
       stage.classList.add("has-eye");
       if (image) image.style.opacity = "0";
     }
@@ -259,6 +267,10 @@
     }
     if (finePointer && heroEl) {
       heroEl.addEventListener("pointermove", function (event) {
+        var r2 = stage.getBoundingClientRect();
+        var tx = (event.clientX - (r2.left + r2.width / 2)) / r2.width;
+        var ty = (event.clientY - (r2.top + r2.height / 2)) / r2.height;
+        stage.style.transform = "perspective(1400px) rotateY(" + (Math.max(-1, Math.min(1, tx)) * 7).toFixed(2) + "deg) rotateX(" + (-Math.max(-1, Math.min(1, ty)) * 7).toFixed(2) + "deg)";
         var rect = stage.getBoundingClientRect();
         var cx = rect.left + rect.width / 2, cy = rect.top + rect.height / 2;
         var dx = (event.clientX - cx) / (window.innerWidth * 0.5);
@@ -266,7 +278,7 @@
         pointer = { x: Math.max(-1, Math.min(1, dx)), y: Math.max(-1, Math.min(1, dy)) };
         pointerSeen = performance.now();
       }, { passive: true });
-      heroEl.addEventListener("pointerleave", function () { pointer = null; });
+      heroEl.addEventListener("pointerleave", function () { pointer = null; stage.style.transform = ""; });
     }
     function gazeTick(now) {
       window.requestAnimationFrame(gazeTick);
@@ -386,6 +398,120 @@
     }
   }
 
+  /* Layer status: ok (agrees), flag (finding), weak (low-confidence), na (could not run). */
+  var CASES = [
+    {
+      id: "protest", label: "Protest photo", kind: "Forwarded from a chat app", type: "photo", seed: 11, memory: "closest matches: chat-app re-encode signatures", memAt: [0.3, 0.55],
+      palette: ["#2a2f36", "#5b6b78", "#9b7b5a", "#c9b79c", "#3d4f66", "#8a8f94"],
+      next: "Find the earliest upload or the original file", file: "protest_photo.jpg", meta: "1280 × 960 · JPEG · re-encoded · SHA-256 9c1e…4b07",
+      headline: "Inconclusive", tone: "inconclusive", ran: 2, total: 5,
+      layers: [
+        { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
+        { name: "Metadata Forensics", status: "na", text: "Metadata is not available" },
+        { name: "AI Detection", status: "weak", text: "Leans synthetic · low confidence · screenshot-like compression" },
+        { name: "Frequency Analysis", status: "flag", text: "Consistent with a second compression pass" },
+        { name: "Temporal Consistency", status: "na", text: "Not applicable to a still image" }
+      ],
+      turns: [
+        { q: "A newsroom says a chatbot called this photo fake. What do you see?",
+          a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone, so only two of the five checks could run. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**",
+          visual: "coverage" },
+        { q: "So is it real or not?",
+          a: "This copy cannot answer that, and a sentence from any model would not change the evidence. What would: **the earliest upload of this image, a second photo from the same moment, or the original file from the photographer.** Bring one of those back and I will compare them at full resolution.",
+          visual: "change" },
+        { q: "What should I write in the fact-check?",
+          a: "Say what was checked, what could not be, and why. A line you can defend: **\"A re-encoded copy of the photo was examined; provenance and camera data were unavailable, and the image-level check was inconclusive.\"** That is weaker than a verdict and more honest than one." }
+      ]
+    },
+    {
+      id: "clip", label: "Press clip", kind: "Downloaded from X", type: "video", seed: 23, memory: "closest matches: platform re-encode profiles", memAt: [0.65, 0.4],
+      palette: ["#161b24", "#2b3d57", "#6d7f94", "#b8c4d1", "#3a2f27", "#8c5f3b"],
+      next: "Compare the cut against a longer or earlier upload", file: "press_clip.mp4", meta: "1280 × 720 · 00:41 · H.264 · SHA-256 4fd8…a21c",
+      headline: "Needs a Closer Look", tone: "look", ran: 4, total: 5,
+      layers: [
+        { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
+        { name: "Metadata Forensics", status: "ok", text: "Container labels match a platform re-encode" },
+        { name: "AI Detection", status: "ok", text: "No synthetic lean on sampled frames" },
+        { name: "Frequency Analysis", status: "ok", text: "Consistent with a platform re-encode" },
+        { name: "Temporal Consistency", status: "flag", text: "Experimental · motion discontinuity at 00:23" }
+      ],
+      turns: [
+        { q: "Was this clip edited?",
+          a: "Something changes at 00:23. The experimental temporal layer flags a motion discontinuity there: the frame-to-frame change spikes the way a cut does. The visual layer finds no synthetic lean on the sampled frames, and the container labels say the file came through the platform's encoder, which is expected for a download. **So: a cut is likely, generation is not indicated.** A cut can be ordinary editing. I would ask what was removed, not whether the clip is fake.",
+          visual: "spike" },
+        { q: "Can you tell what was cut?",
+          a: "Not from this file. **I can tell you where, not what.** Compare it against a longer or earlier upload: if the sentence before 00:23 ends differently in the other copy, you have your answer. I keep the counterevidence in the record as well: clean frames and platform-standard labels." },
+        { q: "How sure is the temporal layer?",
+          a: "Less sure than the others, and it says so. It is marked experimental in the app and it is the weakest part of the engine today, which is why the 2026 video corpus comes first on the roadmap. **One spike is a reason to look, not a conclusion.**" }
+      ]
+    },
+    {
+      id: "claim", label: "Claim photo", kind: "From the policyholder's phone", type: "photo", seed: 37, memory: "closest matches: single-capture phone families", memAt: [0.2, 0.3],
+      palette: ["#2b2420", "#6b5a4a", "#a98c6c", "#d9c7ad", "#4a4a4a", "#8c8277"],
+      next: "Confirm the GPS fields against the claim address", file: "claim_photo.jpg", meta: "4032 × 3024 · JPEG · capture credential · SHA-256 b7a0…e913",
+      headline: "Likely Authentic", tone: "authentic", ran: 4, total: 5,
+      layers: [
+        { name: "Content Credentials", status: "ok", text: "Signed capture credential · verified offline against the trust list" },
+        { name: "Metadata Forensics", status: "ok", text: "Camera make, model, lens and GPS present · capture 14:02 local" },
+        { name: "AI Detection", status: "ok", text: "No synthetic lean" },
+        { name: "Frequency Analysis", status: "ok", text: "Consistent with a single capture" },
+        { name: "Temporal Consistency", status: "na", text: "Not applicable to a still image" }
+      ],
+      turns: [
+        { q: "Can I rely on this photo for the claim?",
+          a: "This is the strongest kind of file I see. It carries a **signed capture credential that verified against the trust list, and the visual reading agrees with it.** Under the engine's own rule, a capture credential counts as authentic evidence only when the visual reading agrees; here it does. The camera fields are complete and the capture time sits forty minutes after the reported incident. One thing to confirm outside the file: that the GPS location matches the address on the claim.",
+          visual: "chain" },
+        { q: "Could a credential be faked?",
+          a: "A credential can be stripped, but it cannot be moved onto different pixels or survive an undeclared edit: the hash would no longer match and verification would fail. What a valid capture credential cannot tell me is whether the camera was pointed at something real; a photo of a screen or a print carries a genuine capture credential too. **That is why the visual reading has to agree, and here it does.**" },
+        { q: "What would make you change your mind?",
+          a: "A second photo of the same damage with a different timestamp, GPS fields that put the phone somewhere else, or a visual finding at the edges of the damaged area. **None of those are present in this file.** I would still have a human look at the damage itself; repair costs are outside what a file can show." }
+      ]
+    },
+    {
+      id: "listing", label: "Listing image", kind: "Marketplace listing", type: "photo", seed: 53, memory: "closest matches: a generator family", memAt: [0.75, 0.7],
+      palette: ["#1f2022", "#5a5e63", "#b9bcc0", "#e2ddd5", "#7a6a5a", "#3b3f45"],
+      next: "Ask the seller for a phone photo with its original file", file: "IMG_4821.JPG", meta: "2304 × 1792 · PNG inside a JPG name · SHA-256 e0c4…77d2",
+      headline: "Likely AI-Generated", tone: "ai", ran: 4, total: 5,
+      layers: [
+        { name: "Content Credentials", status: "flag", text: "Credential present · signed by the generator's maker · declares AI-generated" },
+        { name: "Metadata Forensics", status: "weak", text: "No camera fields · expected for a PNG" },
+        { name: "AI Detection", status: "flag", text: "Leans synthetic · high confidence" },
+        { name: "Frequency Analysis", status: "flag", text: "Pattern consistent with a generator family" },
+        { name: "Temporal Consistency", status: "na", text: "Not applicable to a still image" }
+      ],
+      turns: [
+        { q: "The seller says this is a photo of the actual item.",
+          a: "The file says otherwise, twice. It carries a **Content Credential signed by the tool that made it, and that credential declares the image as AI-generated.** Independently, the visual layer leans synthetic and the pattern matches a generator family in my memory. The name was changed to look like a camera file; it is still a PNG inside. Names are the easiest field to change.",
+          visual: "name" },
+        { q: "Could the seller have used AI to clean up a real photo?",
+          a: "Then the credential would usually record an edit on top of a capture, and the camera fields would survive. **Here there is no capture underneath: the credential's origin is a generation, and there are no camera fields at all.** Ask the seller for a photo from a phone, with its original file." },
+        { q: "What do I tell the buyer?",
+          a: "That the listing image is a generated render, declared as such by its own credential, and that no photo of the item has been provided yet. **Keep the file and its hash with the case**; the credential verifies again on any copy that has not been re-saved." }
+      ]
+    }
+  ];
+
+
+  function thumb(c, w, h) {
+    var cv = document.createElement("canvas");
+    cv.width = w; cv.height = h; cv.className = "vr-thumb";
+    try { mosaic(cv, c.seed, c.palette); } catch (error) {}
+    return cv;
+  }
+  function fileCard(c) {
+    var card = el("div", "vr-filecard");
+    var pic = el("span", "vr-filecard-pic");
+    pic.appendChild(thumb(c, c.type === "video" ? 240 : 200, c.type === "video" ? 135 : 150));
+    if (c.type === "video") pic.appendChild(svgEl('<span class="vr-filecard-play">' + icon("video") + "</span>"));
+    pic.appendChild(el("em", "vr-filecard-sample", "sample"));
+    var txt = el("span", "vr-filecard-txt");
+    txt.appendChild(el("b", null, c.file));
+    txt.appendChild(el("small", null, c.meta));
+    card.appendChild(pic); card.appendChild(txt);
+    return card;
+  }
+
+
   /* ── The scripted chat ────────────────────────────────────── */
   (function initialiseChat() {
     var consoleEl = document.querySelector("[data-console]");
@@ -395,99 +521,6 @@
     var askRow = consoleEl.querySelector("[data-ask]");
     var replay = consoleEl.querySelector("[data-replay]");
     var srStatus = consoleEl.querySelector("[data-log-sr]");
-
-    /* Layer status: ok (agrees), flag (finding), weak (low-confidence), na (could not run). */
-    var CASES = [
-      {
-        id: "protest", label: "Protest photo", kind: "Forwarded from a chat app", type: "photo", seed: 11,
-        palette: ["#2a2f36", "#5b6b78", "#9b7b5a", "#c9b79c", "#3d4f66", "#8a8f94"],
-        file: "protest_photo.jpg", meta: "1280 × 960 · JPEG · re-encoded · SHA-256 9c1e…4b07",
-        headline: "Inconclusive", tone: "inconclusive", ran: 2, total: 5,
-        layers: [
-          { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
-          { name: "Metadata Forensics", status: "na", text: "Metadata is not available" },
-          { name: "AI Detection", status: "weak", text: "Leans synthetic · low confidence · screenshot-like compression" },
-          { name: "Frequency Analysis", status: "flag", text: "Consistent with a second compression pass" },
-          { name: "Temporal Consistency", status: "na", text: "Not applicable to a still image" }
-        ],
-        turns: [
-          { q: "A newsroom says a chatbot called this photo fake. What do you see?",
-            a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone, so only two of the five checks could run. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**",
-            visual: "coverage" },
-          { q: "So is it real or not?",
-            a: "This copy cannot answer that, and a sentence from any model would not change the evidence. What would: **the earliest upload of this image, a second photo from the same moment, or the original file from the photographer.** Bring one of those back and I will compare them at full resolution.",
-            visual: "change" },
-          { q: "What should I write in the fact-check?",
-            a: "Say what was checked, what could not be, and why. A line you can defend: **\"A re-encoded copy of the photo was examined; provenance and camera data were unavailable, and the image-level check was inconclusive.\"** That is weaker than a verdict and more honest than one." }
-        ]
-      },
-      {
-        id: "clip", label: "Press clip", kind: "Downloaded from X", type: "video", seed: 23,
-        palette: ["#161b24", "#2b3d57", "#6d7f94", "#b8c4d1", "#3a2f27", "#8c5f3b"],
-        file: "press_clip.mp4", meta: "1280 × 720 · 00:41 · H.264 · SHA-256 4fd8…a21c",
-        headline: "Needs a Closer Look", tone: "look", ran: 4, total: 5,
-        layers: [
-          { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
-          { name: "Metadata Forensics", status: "ok", text: "Container labels match a platform re-encode" },
-          { name: "AI Detection", status: "ok", text: "No synthetic lean on sampled frames" },
-          { name: "Frequency Analysis", status: "ok", text: "Consistent with a platform re-encode" },
-          { name: "Temporal Consistency", status: "flag", text: "Experimental · motion discontinuity at 00:23" }
-        ],
-        turns: [
-          { q: "Was this clip edited?",
-            a: "Something changes at 00:23. The experimental temporal layer flags a motion discontinuity there: the frame-to-frame change spikes the way a cut does. The visual layer finds no synthetic lean on the sampled frames, and the container labels say the file came through the platform's encoder, which is expected for a download. **So: a cut is likely, generation is not indicated.** A cut can be ordinary editing. I would ask what was removed, not whether the clip is fake.",
-            visual: "spike" },
-          { q: "Can you tell what was cut?",
-            a: "Not from this file. **I can tell you where, not what.** Compare it against a longer or earlier upload: if the sentence before 00:23 ends differently in the other copy, you have your answer. I keep the counterevidence in the record as well: clean frames and platform-standard labels." },
-          { q: "How sure is the temporal layer?",
-            a: "Less sure than the others, and it says so. It is marked experimental in the app and it is the weakest part of the engine today, which is why the 2026 video corpus comes first on the roadmap. **One spike is a reason to look, not a conclusion.**" }
-        ]
-      },
-      {
-        id: "claim", label: "Claim photo", kind: "From the policyholder's phone", type: "photo", seed: 37,
-        palette: ["#2b2420", "#6b5a4a", "#a98c6c", "#d9c7ad", "#4a4a4a", "#8c8277"],
-        file: "claim_photo.jpg", meta: "4032 × 3024 · JPEG · capture credential · SHA-256 b7a0…e913",
-        headline: "Likely Authentic", tone: "authentic", ran: 4, total: 5,
-        layers: [
-          { name: "Content Credentials", status: "ok", text: "Signed capture credential · verified offline against the trust list" },
-          { name: "Metadata Forensics", status: "ok", text: "Camera make, model, lens and GPS present · capture 14:02 local" },
-          { name: "AI Detection", status: "ok", text: "No synthetic lean" },
-          { name: "Frequency Analysis", status: "ok", text: "Consistent with a single capture" },
-          { name: "Temporal Consistency", status: "na", text: "Not applicable to a still image" }
-        ],
-        turns: [
-          { q: "Can I rely on this photo for the claim?",
-            a: "This is the strongest kind of file I see. It carries a **signed capture credential that verified against the trust list, and the visual reading agrees with it.** Under the engine's own rule, a capture credential counts as authentic evidence only when the visual reading agrees; here it does. The camera fields are complete and the capture time sits forty minutes after the reported incident. One thing to confirm outside the file: that the GPS location matches the address on the claim.",
-            visual: "chain" },
-          { q: "Could a credential be faked?",
-            a: "A credential can be stripped, but it cannot be moved onto different pixels or survive an undeclared edit: the hash would no longer match and verification would fail. What a valid capture credential cannot tell me is whether the camera was pointed at something real; a photo of a screen or a print carries a genuine capture credential too. **That is why the visual reading has to agree, and here it does.**" },
-          { q: "What would make you change your mind?",
-            a: "A second photo of the same damage with a different timestamp, GPS fields that put the phone somewhere else, or a visual finding at the edges of the damaged area. **None of those are present in this file.** I would still have a human look at the damage itself; repair costs are outside what a file can show." }
-        ]
-      },
-      {
-        id: "listing", label: "Listing image", kind: "Marketplace listing", type: "photo", seed: 53,
-        palette: ["#1f2022", "#5a5e63", "#b9bcc0", "#e2ddd5", "#7a6a5a", "#3b3f45"],
-        file: "IMG_4821.JPG", meta: "2304 × 1792 · PNG inside a JPG name · SHA-256 e0c4…77d2",
-        headline: "Likely AI-Generated", tone: "ai", ran: 4, total: 5,
-        layers: [
-          { name: "Content Credentials", status: "flag", text: "Credential present · signed by the generator's maker · declares AI-generated" },
-          { name: "Metadata Forensics", status: "weak", text: "No camera fields · expected for a PNG" },
-          { name: "AI Detection", status: "flag", text: "Leans synthetic · high confidence" },
-          { name: "Frequency Analysis", status: "flag", text: "Pattern consistent with a generator family" },
-          { name: "Temporal Consistency", status: "na", text: "Not applicable to a still image" }
-        ],
-        turns: [
-          { q: "The seller says this is a photo of the actual item.",
-            a: "The file says otherwise, twice. It carries a **Content Credential signed by the tool that made it, and that credential declares the image as AI-generated.** Independently, the visual layer leans synthetic and the pattern matches a generator family in my memory. The name was changed to look like a camera file; it is still a PNG inside. Names are the easiest field to change.",
-            visual: "name" },
-          { q: "Could the seller have used AI to clean up a real photo?",
-            a: "Then the credential would usually record an edit on top of a capture, and the camera fields would survive. **Here there is no capture underneath: the credential's origin is a generation, and there are no camera fields at all.** Ask the seller for a photo from a phone, with its original file." },
-          { q: "What do I tell the buyer?",
-            a: "That the listing image is a generated render, declared as such by its own credential, and that no photo of the item has been provided yet. **Keep the file and its hash with the case**; the credential verifies again on any copy that has not been re-saved." }
-        ]
-      }
-    ];
 
     /* Inline visuals shown under an answer. Values are illustrative and say so. */
     var VISUALS = {
@@ -517,12 +550,6 @@
 
     var current = 0, playing = false, token = 0, started = false;
 
-    function thumb(c, w, h) {
-      var cv = document.createElement("canvas");
-      cv.width = w; cv.height = h; cv.className = "vr-thumb";
-      try { mosaic(cv, c.seed, c.palette); } catch (error) {}
-      return cv;
-    }
     function announce(text) { if (srStatus) srStatus.textContent = text; }
     function stamp() { var d = new Date(); return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0"); }
 
@@ -562,19 +589,6 @@
       log.appendChild(row);
       log.scrollTop = log.scrollHeight;
       return bubble;
-    }
-
-    function fileCard(c) {
-      var card = el("div", "vr-filecard");
-      var pic = el("span", "vr-filecard-pic");
-      pic.appendChild(thumb(c, c.type === "video" ? 240 : 200, c.type === "video" ? 135 : 150));
-      if (c.type === "video") pic.appendChild(svgEl('<span class="vr-filecard-play">' + icon("video") + "</span>"));
-      pic.appendChild(el("em", "vr-filecard-sample", "sample"));
-      var txt = el("span", "vr-filecard-txt");
-      txt.appendChild(el("b", null, c.file));
-      txt.appendChild(el("small", null, c.meta));
-      card.appendChild(pic); card.appendChild(txt);
-      return card;
     }
 
     function engineCard(c) {
@@ -774,6 +788,94 @@
         + layerRows(c0.layers)
         + '<p class="vr-vis-note">What would change it: the earliest upload, a second photo, or the original file.</p>';
     }
+  })();
+
+
+  /* ── "Watch the eye read a file": a looping, scripted pipeline ─ */
+  (function readingBand() {
+    var band = document.querySelector("[data-read]");
+    if (!band) return;
+    var fileSlot = band.querySelector("[data-read-file]");
+    var eyeCanvas = band.querySelector("[data-read-eye]");
+    var eyeNote = band.querySelector("[data-read-eye-note]");
+    var memCanvas = band.querySelector("[data-read-mem]");
+    var memNote = band.querySelector("[data-read-mem-note]");
+    var layersSlot = band.querySelector("[data-read-layers]");
+    var answerSlot = band.querySelector("[data-read-answer]");
+    var bar = band.querySelector("[data-read-bar]");
+    if (eyeCanvas && window.CorpusEye && eyeCanvas.getContext) {
+      try { window.CorpusEye.render(eyeCanvas, { size: 260, dpr: 1, keepStyle: true, time: 4.2, seed: 5 }); } catch (error) {}
+    }
+    var mctx = memCanvas && memCanvas.getContext ? memCanvas.getContext("2d") : null;
+    var MW = memCanvas ? memCanvas.width : 0, MH = memCanvas ? memCanvas.height : 0, cols = 24, rows = 12, cw = MW / cols, chh = MH / rows;
+    var seed = 77;
+    function rnd() { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }
+    var grid = [];
+    for (var r = 0; r < rows; r += 1) for (var q = 0; q < cols; q += 1) grid.push({ x: q * cw, y: r * chh, cx: (q + 0.5) / cols, cy: (r + 0.5) / rows, v: rnd() });
+    function paintMem(c, k) {
+      if (!mctx) return;
+      mctx.clearRect(0, 0, MW, MH);
+      for (var i = 0; i < grid.length; i += 1) {
+        var g = grid[i];
+        var dx = g.cx - c.memAt[0], dy = g.cy - c.memAt[1];
+        var d = Math.sqrt(dx * dx + dy * dy);
+        var lit = k > 0 ? Math.max(0, 1 - d / (0.1 + k * 0.22)) : 0;
+        var base = g.v > 0.92 ? "rgba(159,196,218,0.28)" : g.v > 0.55 ? "rgba(188,142,100,0.2)" : "rgba(74,44,24,0.3)";
+        mctx.fillStyle = base;
+        mctx.fillRect(g.x + 1.5, g.y + 1.5, cw - 3, chh - 3);
+        if (lit > 0.02) {
+          mctx.fillStyle = "rgba(159,196,218," + Math.min(0.95, lit * 1.1 * (0.7 + g.v * 0.5)).toFixed(3) + ")";
+          mctx.fillRect(g.x + 1.5, g.y + 1.5, cw - 3, chh - 3);
+        }
+      }
+    }
+    function setLayers(c, upto) {
+      layersSlot.innerHTML = c.layers.map(function (l, i) {
+        return '<span class="vr-rs-layer st-' + l.status + (i < upto ? " is-on" : "") + '">' + icon(LAYER_ICON[l.name]) + '<b>' + l.name + '</b><em>' + STATUS_TEXT[l.status] + '</em></span>';
+      }).join("");
+    }
+    function setAnswer(c, show) {
+      answerSlot.innerHTML = show ? '<div class="vr-rs-ans tone-' + c.tone + '"><span>Headline</span><strong>' + c.headline + '</strong><small>Evidence coverage · ' + c.ran + ' of ' + c.total + ' checks ran</small><p>Next: ' + c.next + '</p></div>' : "";
+    }
+    var cur = 0, playing = false, timers = [];
+    function clearTimers() { timers.forEach(function (t) { window.clearTimeout(t); }); timers = []; }
+    function later(fn, ms) { timers.push(window.setTimeout(fn, ms)); }
+    function showCase(c, instant) {
+      clearTimers();
+      band.className = band.className.replace(/\bstep-\d\b/g, "").trim();
+      fileSlot.innerHTML = "";
+      fileSlot.appendChild(fileCard(c));
+      if (eyeNote) eyeNote.textContent = c.type === "video" ? "native-resolution views · sampled frames" : "native-resolution views";
+      if (memNote) memNote.textContent = c.memory;
+      setLayers(c, instant ? 5 : 0);
+      setAnswer(c, instant);
+      paintMem(c, instant ? 1 : 0);
+      if (bar) { bar.style.transition = "none"; bar.style.width = "0%"; }
+      if (instant) { band.classList.add("step-1", "step-2", "step-3", "step-4", "step-5"); return; }
+      window.requestAnimationFrame(function () { if (bar) { bar.style.transition = "width 9s linear"; bar.style.width = "100%"; } });
+      band.classList.add("step-1");
+      later(function () { band.classList.add("step-2"); }, 1100);
+      later(function () {
+        band.classList.add("step-3");
+        var t0 = performance.now();
+        (function grow() { var k = Math.min(1, (performance.now() - t0) / 1100); paintMem(c, k); if (k < 1 && band.classList.contains("step-3")) window.requestAnimationFrame(grow); })();
+      }, 2500);
+      later(function () {
+        band.classList.add("step-4");
+        for (var i = 1; i <= 5; i += 1) (function (n) { later(function () { setLayers(c, n); }, n * 220); })(i);
+      }, 4100);
+      later(function () { band.classList.add("step-5"); setAnswer(c, true); }, 5700);
+      later(function () { cur = (cur + 1) % CASES.length; showCase(CASES[cur], false); }, 9000);
+    }
+    if (reduceMotion || !("IntersectionObserver" in window)) { showCase(CASES[0], reduceMotion); return; }
+    var started = false;
+    var bandObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !started) { started = true; showCase(CASES[cur], false); }
+        else if (!entry.isIntersecting && started) { started = false; clearTimers(); }
+      });
+    }, { threshold: 0.3 });
+    bandObserver.observe(band);
   })();
 
   /* ── Section illustrations ────────────────────────────────── */
