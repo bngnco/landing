@@ -1378,7 +1378,7 @@ function build() {
     `## Key pages\n\n` +
     `- [Home](${SITE.url}/): product overview, how it works, pricing\n` +
     `- [DeepDetect+](${SITE.url}/deepdetect-plus): governed evidence and score-excluded advanced diagnostics\n` +
-    `- [Corpus AI](${SITE.url}/corpus-ai): conversational media-analysis assistant in development\n` +
+    `- [Corpus AI](${SITE.url}/corpus-ai): a detection model with a visual memory, in development; the page shows a scripted console preview, not a live model\n` +
     `- [Support](${SITE.url}/support)\n` +
     `- [Privacy](${SITE.url}/privacy): on-device iPhone files, temporary link/web processing, and web-account data handling\n\n` +
     `## Blog (guides on deepfake & AI-media detection)\n\n` +

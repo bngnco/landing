@@ -2011,7 +2011,7 @@ html.js .hero:not(.hero-ready) [data-hero-ph] { transform: translateY(34px) rota
 .splash-copy p { max-width: 46ch; color: #91a3ae; font-size: 14.5px; line-height: 1.62; }
 .splash-actions { display: flex; flex-wrap: wrap; gap: 9px; }
 .splash-actions .btn-line { color: #c6d4dc; border-color: rgba(159,196,218,.3); }
-.splash-note { color: #5f727d; font: 500 8.5px/1.4 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; }
+.splash-note { color: #7a8d9a; font: 500 10px/1.4 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; }
 @media (max-width: 760px) {
   .splash { width: min(100% - 24px, 480px); border-radius: 22px; }
   .splash-card { grid-template-columns: 1fr; }

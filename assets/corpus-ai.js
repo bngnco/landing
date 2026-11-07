@@ -12,6 +12,8 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   root.classList.add("corpus-ready");
+  /* This page is where the homepage splash sends people; do not show it to them again. */
+  try { localStorage.setItem("verifyco_splash_corpus_v1", String(Date.now())); } catch (error) {}
 
   /* ── Header announcement (CMS JSON replaces the static text) ── */
   (function setupAnnouncement() {
@@ -277,7 +279,7 @@
         ],
         turns: [
           { q: "A newsroom says a chatbot called this photo fake. What do you see?",
-            a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone, so two of the five checks could not run. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**" },
+            a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone, so only two of the five checks could run. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**" },
           { q: "So is it real or not?",
             a: "This copy cannot answer that, and a sentence from any model would not change the evidence. What would: **the earliest upload of this image, a second photo from the same moment, or the original file from the photographer.** Bring one of those back and I will compare them at full resolution." },
           { q: "What should I write in the fact-check?",
@@ -294,7 +296,7 @@
         tone: "look",
         coverage: "Evidence coverage · 4 of 5 checks ran",
         layers: [
-          { name: "Content Credentials", status: "na", text: "No credentials found on this file" },
+          { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
           { name: "Metadata Forensics", status: "ok", text: "Container labels match a platform re-encode" },
           { name: "AI Detection", status: "ok", text: "No synthetic lean on sampled frames" },
           { name: "Frequency Analysis", status: "ok", text: "Consistent with a platform re-encode" },
@@ -313,8 +315,8 @@
         id: "claim",
         label: "Claim photo",
         kind: "From the policyholder's phone",
-        file: "claim_photo.heic",
-        meta: "4032 × 3024 · HEIC · capture credential · SHA-256 b7a0…e913",
+        file: "claim_photo.jpg",
+        meta: "4032 × 3024 · JPEG · capture credential · SHA-256 b7a0…e913",
         headline: "Likely Authentic",
         tone: "authentic",
         coverage: "Evidence coverage · 4 of 5 checks ran",
@@ -329,9 +331,9 @@
           { q: "Can I rely on this photo for the claim?",
             a: "This is the strongest kind of file I see. It carries a **signed capture credential that verified against the trust list, and the visual reading agrees with it.** Under the engine's own rule, a capture credential counts as authentic evidence only when the visual reading agrees; here it does. The camera fields are complete and the capture time sits forty minutes after the reported incident. One thing to confirm outside the file: that the GPS location matches the address on the claim." },
           { q: "Could a credential be faked?",
-            a: "A signature can be copied onto another file; it cannot be created for new pixels without the signer's key. What I guard against is a genuine credential on an image edited after capture. **That is why the visual reading has to agree, and here it does.**" },
+            a: "A credential can be stripped, but it cannot be moved onto different pixels or survive an undeclared edit: the hash would no longer match and verification would fail. What a valid capture credential cannot tell me is whether the camera was pointed at something real; a photo of a screen or a print carries a genuine capture credential too. **That is why the visual reading has to agree, and here it does.**" },
           { q: "What would make you change your mind?",
-            a: "A second photo of the same damage with a different timestamp, GPS fields that put the phone somewhere else, or a visual finding at the edges of the damaged area. **None of those are present in this file.** I would still have a human look at the damage itself; I read files, not repair costs." }
+            a: "A second photo of the same damage with a different timestamp, GPS fields that put the phone somewhere else, or a visual finding at the edges of the damaged area. **None of those are present in this file.** I would still have a human look at the damage itself; repair costs are outside what a file can show." }
         ]
       },
       {
@@ -378,8 +380,7 @@
       CASES.forEach(function (c, index) {
         var button = el("button", "vr-case-btn" + (index === current ? " is-on" : ""));
         button.type = "button";
-        button.setAttribute("role", "tab");
-        button.setAttribute("aria-selected", index === current ? "true" : "false");
+        button.setAttribute("aria-pressed", index === current ? "true" : "false");
         button.setAttribute("data-index", String(index));
         button.innerHTML = "<b></b><span></span><small></small>";
         button.querySelector("b").textContent = "0" + (index + 1);
@@ -462,11 +463,16 @@
       });
     }
 
+    var srStatus = consoleEl.querySelector("[data-log-sr]");
+    function announce(text) { if (srStatus) srStatus.textContent = text; }
+
     function playPair(pair, myToken) {
       playing = true;
       consoleEl.classList.add("is-playing");
+      setChipsDisabled(true);
       var user = bubble("u");
       user.textContent = pair.q;
+      announce("You: " + pair.q);
       return wait(reduceMotion ? 0 : 520, myToken).then(function () {
         if (myToken !== token) return;
         var assistant = bubble("c");
@@ -482,29 +488,51 @@
         if (myToken !== token) return;
         playing = false;
         consoleEl.classList.remove("is-playing");
+        announce("Corpus AI: " + pair.a.replace(/\*\*/g, ""));
+        setChipsDisabled(false);
       });
+    }
+
+    function setChipsDisabled(flag) {
+      Array.prototype.forEach.call(askRow.querySelectorAll(".vr-ask-chip"), function (chip) { chip.disabled = flag; });
+    }
+
+    function chip(tag, text, onClick) {
+      var button = el("button", "vr-ask-chip");
+      button.type = "button";
+      button.innerHTML = "<i></i><span></span>";
+      button.querySelector("i").textContent = tag;
+      button.querySelector("span").textContent = text;
+      button.addEventListener("click", onClick);
+      return button;
+    }
+
+    function focusAsk() {
+      var first = askRow.querySelector(".vr-ask-chip:not([hidden])");
+      (first || askRow).focus({ preventScroll: true });
     }
 
     function renderAsk(c, remaining) {
       askRow.innerHTML = "";
       if (!remaining.length) {
-        var done = el("span", "vr-ask-done", "End of sample. Pick another case or replay.");
-        askRow.appendChild(done);
+        var nextIndex = (current + 1) % CASES.length;
+        askRow.appendChild(chip("Again", "Replay this case", function () { if (!playing) selectCase(current); }));
+        askRow.appendChild(chip("Next", CASES[nextIndex].label + ": " + CASES[nextIndex].kind, function () { if (!playing) selectCase(nextIndex); }));
         return;
       }
       remaining.forEach(function (index) {
-        var chip = el("button", "vr-ask-chip");
-        chip.type = "button";
-        chip.innerHTML = "<i>Ask</i><span></span>";
-        chip.querySelector("span").textContent = c.turns[index].q;
-        chip.addEventListener("click", function () {
+        var button = chip("Ask", c.turns[index].q, function () {
           if (playing) return;
           var myToken = token;
           var rest = remaining.filter(function (i) { return i !== index; });
-          askRow.innerHTML = "";
-          playPair(c.turns[index], myToken).then(function () { if (myToken === token) renderAsk(c, rest); });
+          button.hidden = true;
+          playPair(c.turns[index], myToken).then(function () {
+            if (myToken !== token) return;
+            renderAsk(c, rest);
+            focusAsk();
+          });
         });
-        askRow.appendChild(chip);
+        askRow.appendChild(button);
       });
     }
 
@@ -517,7 +545,7 @@
       var c = CASES[index];
       Array.prototype.forEach.call(caseList.children, function (button, i) {
         button.classList.toggle("is-on", i === index);
-        button.setAttribute("aria-selected", i === index ? "true" : "false");
+        button.setAttribute("aria-pressed", i === index ? "true" : "false");
       });
       renderEngine(c);
       log.innerHTML = "";
