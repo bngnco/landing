@@ -215,14 +215,19 @@
     var image = stage.querySelector(".vr-eye-img");
     var eye = null;
     var resizeTimer = 0;
+    var lastPx = 0;
     function size() { return Math.max(240, Math.round(Math.min(stage.clientWidth, stage.clientHeight || stage.clientWidth))); }
     var introDone = reduceMotion;
     function build() {
       if (eye) eye.stop();
       var px = size();
-      if (reduceMotion) { window.CorpusEye.render(canvas, { size: px, time: 2.3 }); eye = null; }
+      lastPx = px;
+      /* keepStyle: the canvas keeps its CSS size (100% of the stage) so it follows
+         layout changes; a fixed pixel size here was left oversized by in-app
+         browsers that lay the page out wide first and fire no resize event. */
+      if (reduceMotion) { window.CorpusEye.render(canvas, { size: px, keepStyle: true, time: 2.3 }); eye = null; }
       else {
-        eye = window.CorpusEye.mount(canvas, { size: px, fps: 30, intro: !introDone, introDuration: 1.7, onIntroEnd: function () {
+        eye = window.CorpusEye.mount(canvas, { size: px, keepStyle: true, fps: 30, intro: !introDone, introDuration: 1.7, onIntroEnd: function () {
           introDone = true;
           stage.classList.add("is-awake");
           window.setTimeout(function () { blink(1); }, 260);
@@ -233,10 +238,12 @@
       if (image) image.style.opacity = "0";
     }
     try { build(); } catch (error) { return; }
-    window.addEventListener("resize", function () {
+    function onResize() {
       window.clearTimeout(resizeTimer);
-      resizeTimer = window.setTimeout(function () { if (Math.abs(size() - canvas.clientWidth) > 24) build(); }, 180);
-    });
+      resizeTimer = window.setTimeout(function () { if (Math.abs(size() - lastPx) > 24) build(); }, 180);
+    }
+    window.addEventListener("resize", onResize);
+    if ("ResizeObserver" in window) { try { new ResizeObserver(onResize).observe(stage); } catch (error) {} }
 
     var visible = true;
     function setPaused(flag) { if (eye) eye.pause(flag); }
