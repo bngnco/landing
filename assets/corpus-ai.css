@@ -204,12 +204,12 @@ body.corpus-ai-page .sub { color: var(--vr-muted); }
 .vr-lrows { display: grid; }
 .vr-lrows li { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 10px; align-items: start; padding: 9px 0; border-top: 1px solid rgba(159,196,218,.09); }
 .vr-lrows .vr-ic { width: 18px; height: 18px; margin-top: 1px; color: var(--vr-dim); }
-.vr-lrows li.st-ok .vr-ic { color: var(--vr-green); } .vr-lrows li.st-flag .vr-ic { color: var(--vr-warn); } .vr-lrows li.st-weak .vr-ic { color: var(--vr); }
+.vr-lrows li.st-ok .vr-ic { color: var(--vr-green); } .vr-lrows li.st-none .vr-ic { color: var(--vr-muted); } .vr-lrows li.st-flag .vr-ic { color: var(--vr-warn); } .vr-lrows li.st-weak .vr-ic { color: var(--vr); }
 .vr-lrow-txt { min-width: 0; display: grid; gap: 2px; }
 .vr-lrow-txt b { color: var(--vr-2); font-size: 12.5px; font-weight: 600; }
 .vr-lrow-txt small { color: var(--vr-dim); font: 500 10.5px/1.45 var(--f-mono); }
 .vr-lrows li em { padding: 4px 7px; border-radius: 999px; border: 1px solid var(--vr-line); color: var(--vr-dim); font: 500 9px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; font-style: normal; white-space: nowrap; }
-.vr-lrows li.st-ok em { color: var(--vr-green); border-color: rgba(123,201,162,.3); } .vr-lrows li.st-flag em { color: var(--vr-warn); border-color: rgba(215,138,109,.3); } .vr-lrows li.st-weak em { color: var(--vr); border-color: var(--vr-line-2); }
+.vr-lrows li.st-ok em { color: var(--vr-green); border-color: rgba(123,201,162,.3); } .vr-lrows li.st-none em { color: var(--vr-muted); } .vr-lrows li.st-flag em { color: var(--vr-warn); border-color: rgba(215,138,109,.3); } .vr-lrows li.st-weak em { color: var(--vr); border-color: var(--vr-line-2); }
 .vr-engine-note, .vr-vis-note { padding-top: 8px; border-top: 1px solid var(--vr-line); color: var(--vr-dim); font-size: 11px; line-height: 1.5; }
 .vr-vis-note .vr-ic { width: 14px; height: 14px; vertical-align: -3px; margin-right: 4px; }
 
@@ -250,7 +250,7 @@ body.corpus-ai-page .sub { color: var(--vr-muted); }
 .vr-composer input { min-width: 0; border: 0; background: transparent; color: var(--vr-dim); font: 13.5px var(--f-sans); cursor: not-allowed; }
 .vr-composer input::placeholder { color: var(--vr-dim); }
 .vr-composer-clip, .vr-composer-send { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; color: var(--vr-dim); }
-.vr-composer-send { background: rgba(159,196,218,.14); color: var(--vr-2); }
+.vr-composer-send { background: transparent; color: var(--vr-dim); }
 .vr-composer svg { width: 18px; height: 18px; }
 
 /* ── 03 · Why ─────────────────────────────────────────────── */
@@ -431,7 +431,6 @@ body.corpus-ai-page .foot-col a:hover { color: var(--vr-2); }
 .vr-judge-o { fill: var(--vr-muted); font: 500 12px var(--f-sans); } .vr-judge-o.hot { fill: var(--vr-2); font-weight: 600; }
 .vr-judge-row path { stroke-dasharray: 140; stroke-dashoffset: 140; animation: judge-flow 2.4s ease-in-out infinite; }
 @keyframes judge-flow { 0% { stroke-dashoffset: 140; opacity: .2; } 40% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: .25; } }
-.vr-judge-legend { display: none; }
 
 /* ── A sentence vs evidence ─────────────────────────────── */
 .vr-versus { display: grid; grid-template-columns: minmax(0, .9fr) 56px minmax(0, 1.1fr); align-items: start; gap: 10px; margin-bottom: 14px; }
@@ -553,6 +552,7 @@ body.corpus-ai-page .foot-col a:hover { color: var(--vr-2); }
 .vr-rs-layer.is-on.st-ok .vr-ic, .vr-rs-layer.is-on.st-ok em { color: var(--vr-green); }
 .vr-rs-layer.is-on.st-flag .vr-ic, .vr-rs-layer.is-on.st-flag em { color: var(--vr-warn); }
 .vr-rs-layer.is-on.st-weak .vr-ic, .vr-rs-layer.is-on.st-weak em { color: var(--vr); }
+.vr-rs-layer.is-on.st-none .vr-ic, .vr-rs-layer.is-on.st-none em { color: var(--vr-muted); }
 .vr-rs-answer { width: 100%; min-height: 96px; }
 .vr-rs-ans { display: grid; gap: 4px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--vr-line-2); background: rgba(159,196,218,.06); animation: msg-in 420ms var(--ease) both; }
 .vr-rs-ans span { color: var(--vr-dim); font: 500 9.5px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; }

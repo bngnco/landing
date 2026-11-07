@@ -359,7 +359,7 @@
   };
   var LAYER_ICON = { "Content Credentials": "cc", "Metadata Forensics": "meta", "AI Detection": "ai", "Frequency Analysis": "freq", "Temporal Consistency": "temporal" };
   function icon(name, cls) { return '<svg class="vr-ic ' + (cls || "") + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONS[name] + "</svg>"; }
-  var STATUS_TEXT = { ok: "Ran · agrees", flag: "Ran · finding", weak: "Ran · weak", na: "Could not run" };
+  var STATUS_TEXT = { ok: "Ran · agrees", flag: "Ran · finding", weak: "Ran · weak", none: "Ran · none found", na: "Could not run" };
 
   function coverageRing(ran, total, tone) {
     var r = 26, c = 2 * Math.PI * r, frac = ran / total;
@@ -404,9 +404,9 @@
       id: "protest", label: "Protest photo", kind: "Forwarded from a chat app", type: "photo", seed: 11, memory: "closest matches: chat-app re-encode signatures", memAt: [0.3, 0.55],
       palette: ["#2a2f36", "#5b6b78", "#9b7b5a", "#c9b79c", "#3d4f66", "#8a8f94"],
       next: "Find the earliest upload or the original file", file: "protest_photo.jpg", meta: "1280 × 960 · JPEG · re-encoded · SHA-256 9c1e…4b07",
-      headline: "Inconclusive", tone: "inconclusive", ran: 2, total: 5,
+      headline: "Inconclusive", tone: "inconclusive", ran: 3, total: 5,
       layers: [
-        { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
+        { name: "Content Credentials", status: "none", text: "No Content Credentials found on this copy. A re-encode strips them, so that is not evidence that none existed." },
         { name: "Metadata Forensics", status: "na", text: "Metadata is not available" },
         { name: "AI Detection", status: "weak", text: "Leans synthetic · low confidence · screenshot-like compression" },
         { name: "Frequency Analysis", status: "flag", text: "Consistent with a second compression pass" },
@@ -414,7 +414,7 @@
       ],
       turns: [
         { q: "A newsroom says a chatbot called this photo fake. What do you see?",
-          a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone, so only two of the five checks could run. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**",
+          a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone: the metadata check could not run, and the credential check found nothing on this copy. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**",
           visual: "coverage" },
         { q: "So is it real or not?",
           a: "This copy cannot answer that, and a sentence from any model would not change the evidence. What would: **the earliest upload of this image, a second photo from the same moment, or the original file from the photographer.** Bring one of those back and I will compare them at full resolution.",
@@ -427,9 +427,9 @@
       id: "clip", label: "Press clip", kind: "Downloaded from X", type: "video", seed: 23, memory: "closest matches: platform re-encode profiles", memAt: [0.65, 0.4],
       palette: ["#161b24", "#2b3d57", "#6d7f94", "#b8c4d1", "#3a2f27", "#8c5f3b"],
       next: "Compare the cut against a longer or earlier upload", file: "press_clip.mp4", meta: "1280 × 720 · 00:41 · H.264 · SHA-256 4fd8…a21c",
-      headline: "Needs a Closer Look", tone: "look", ran: 4, total: 5,
+      headline: "Needs a Closer Look", tone: "look", ran: 5, total: 5,
       layers: [
-        { name: "Content Credentials", status: "na", text: "Content credentials could not be checked on this file. That is not evidence that none exist." },
+        { name: "Content Credentials", status: "none", text: "No Content Credentials found on this copy. A re-encode strips them, so that is not evidence that none existed." },
         { name: "Metadata Forensics", status: "ok", text: "Container labels match a platform re-encode" },
         { name: "AI Detection", status: "ok", text: "No synthetic lean on sampled frames" },
         { name: "Frequency Analysis", status: "ok", text: "Consistent with a platform re-encode" },
@@ -745,7 +745,7 @@
         if (myToken !== token) return;
         var t = typingBubble();
         t.bubble.classList.add("vr-m-bubble--engine");
-        t.dots.insertAdjacentText("afterbegin", "Running the five layers ");
+        t.dots.insertAdjacentText("afterbegin", "Sample report · five layers ");
         return wait(reduceMotion ? 0 : 1100, myToken).then(function () {
           if (myToken !== token) return;
           t.bubble.innerHTML = "";
@@ -924,13 +924,12 @@
     var judge = document.querySelector("[data-judge]");
     if (judge) {
       var layers = ["Content Credentials", "Metadata Forensics", "AI Detection", "Frequency Analysis", "Temporal Consistency"];
-      var allowed = ["may decide the verdict when trusted", "context, never a verdict alone", "supporting signal until the benchmark", "can only argue against", "experimental, flags for review"];
-      judge.innerHTML = '<svg viewBox="0 0 600 300" aria-hidden="true" class="vr-judge">'
+      judge.innerHTML = '<svg viewBox="0 0 660 300" aria-hidden="true" class="vr-judge">'
         + layers.map(function (l, i) { var y = 30 + i * 54; return '<g class="vr-judge-row" style="animation-delay:' + (i * 0.4) + 's"><rect x="20" y="' + (y - 16) + '" width="190" height="32" rx="8"/><text x="34" y="' + (y + 5) + '" class="vr-judge-l">' + l + '</text><path d="M212 ' + y + ' C 260 ' + y + ', 270 150, 318 150" /></g>'; }).join("")
         + '<rect x="318" y="118" width="110" height="64" rx="12" class="vr-judge-rule"/><text x="373" y="146" text-anchor="middle" class="vr-judge-rt">RULE SET</text><text x="373" y="164" text-anchor="middle" class="vr-judge-rs">what each may claim</text>'
         + '<path d="M428 150 C 470 150, 480 60, 520 60 M428 150 C 470 150, 480 150, 520 150 M428 150 C 470 150, 480 240, 520 240" class="vr-judge-out"/>'
         + '<text x="528" y="64" class="vr-judge-o">Likely Authentic</text><text x="528" y="154" class="vr-judge-o hot">Inconclusive</text><text x="528" y="244" class="vr-judge-o">Likely AI-Generated</text>'
-        + '</svg><ul class="vr-judge-legend">' + layers.map(function (l, i) { return "<li><b>" + l + "</b><span>" + allowed[i] + "</span></li>"; }).join("") + "</ul>";
+        + '</svg>';
     }
   })();
 
@@ -959,7 +958,7 @@
           return;
         }
         emailInput.setAttribute("aria-invalid", "false");
-        formMessage.textContent = "Email draft opened; send it to complete your request.";
+        formMessage.textContent = "Opening your mail app. If nothing opened, email support@verifyco.app.";
         formMessage.className = "vr-wait-msg ok";
         var subject = encodeURIComponent("Corpus AI early access request");
         var message = encodeURIComponent("Please add me to the Corpus AI by Verifyco early-access list.\n\nEmail: " + email + "\nSector: \nThe file type that costs us the most time: ");
