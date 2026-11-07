@@ -222,10 +222,10 @@
       var px = size();
       if (reduceMotion) { window.CorpusEye.render(canvas, { size: px, time: 2.3 }); eye = null; }
       else {
-        if (!introDone) lids.classList.add("is-closed");
         eye = window.CorpusEye.mount(canvas, { size: px, fps: 30, intro: !introDone, introDuration: 1.7, onIntroEnd: function () {
           introDone = true;
-          window.setTimeout(function () { lids.classList.remove("is-closed"); stage.classList.add("is-awake"); }, 180);
+          stage.classList.add("is-awake");
+          window.setTimeout(function () { blink(1); }, 260);
         } });
         if (introDone) stage.classList.add("is-awake");
       }
@@ -415,7 +415,7 @@
       turns: [
         { q: "A newsroom says a chatbot called this photo fake. What do you see?",
           a: "I see a forwarded copy, not the photo. The file has been re-encoded at least once and every camera field is gone: the metadata check could not run, and the credential check found nothing on this copy. **AI Detection leans synthetic at low confidence, and I would not act on it:** the compression it is reading matches what chat apps do to every image, a pattern my memory holds as a re-encode, not as a generator mark. **Verdict from this file: inconclusive.**",
-          visual: "coverage" },
+          visual: "memory" },
         { q: "So is it real or not?",
           a: "This copy cannot answer that, and a sentence from any model would not change the evidence. What would: **the earliest upload of this image, a second photo from the same moment, or the original file from the photographer.** Bring one of those back and I will compare them at full resolution.",
           visual: "change" },
@@ -524,8 +524,8 @@
 
     /* Inline visuals shown under an answer. Values are illustrative and say so. */
     var VISUALS = {
-      coverage: function (c) {
-        return '<div class="vr-vis"><div class="vr-vis-head"><span>Evidence coverage</span><b>' + c.ran + ' of ' + c.total + ' checks ran</b></div>' + layerRows(c.layers) + '<p class="vr-vis-note">Layer names as in the Verifyco app · sample values</p></div>';
+      memory: function () {
+        return '<div class="vr-vis"><div class="vr-vis-head"><span>What the memory matched</span><b>a re-encode, not a generator</b></div><div class="vr-namevs"><div class="vr-namevs-a">' + icon("frames") + '<b>Chat-app re-encode</b><small>this compression pattern is in memory as a forwarding re-encode</small></div><span class="vr-namevs-x">vs</span><div class="vr-namevs-b">' + icon("ai") + '<b>Generator mark</b><small>no generator family in memory matches this file</small></div></div><p class="vr-vis-note">Illustrative match · memory retrieval is on the roadmap</p></div>';
       },
       change: function () {
         var items = [["upload", "Earliest upload", "Find the first place this image appeared"], ["frames", "Second photo", "Another frame or angle from the same moment"], ["file", "Original file", "From the photographer's device, not a copy"]];
@@ -572,12 +572,12 @@
       });
     }
 
-    function message(kind) {
-      var row = el("div", "vr-m vr-m--" + kind);
+    function message(kind, avatarSrc, extraClass) {
+      var row = el("div", "vr-m vr-m--" + kind + (extraClass ? " " + extraClass : ""));
       if (kind === "ai") {
         var av = el("span", "vr-m-avatar");
         var img = document.createElement("img");
-        img.src = "assets/corpus-eye-700.jpg"; img.alt = ""; img.width = 700; img.height = 700; img.loading = "lazy"; img.decoding = "async";
+        img.src = avatarSrc || "assets/corpus-eye-700.jpg"; img.alt = ""; img.width = 700; img.height = 700; img.loading = "lazy"; img.decoding = "async";
         av.appendChild(img);
         row.appendChild(av);
       }
@@ -642,8 +642,8 @@
     function setChipsDisabled(flag) {
       Array.prototype.forEach.call(askRow.querySelectorAll(".vr-ask-chip"), function (chip) { chip.disabled = flag; });
     }
-    function typingBubble() {
-      var b = message("ai");
+    function typingBubble(avatarSrc, extraClass) {
+      var b = message("ai", avatarSrc, extraClass);
       b.classList.add("is-typing");
       var dots = el("span", "vr-typing");
       dots.innerHTML = "<i></i><i></i><i></i>";
@@ -710,6 +710,7 @@
           if (playing) return;
           var myToken = token;
           var rest = remaining.filter(function (i) { return i !== index; });
+          askRow.focus({ preventScroll: true });
           button.hidden = true;
           playPair(c, c.turns[index], myToken).then(function () {
             if (myToken !== token) return;
@@ -743,13 +744,13 @@
       /* 2. the engine reports */
       wait(reduceMotion ? 0 : 700, myToken).then(function () {
         if (myToken !== token) return;
-        var t = typingBubble();
-        t.bubble.classList.add("vr-m-bubble--engine");
+        var t = typingBubble("assets/verifyco-mark.png", "vr-m--engine");
         t.dots.insertAdjacentText("afterbegin", "Sample report · five layers ");
         return wait(reduceMotion ? 0 : 1100, myToken).then(function () {
           if (myToken !== token) return;
           t.bubble.innerHTML = "";
           t.bubble.classList.remove("is-typing");
+          t.bubble.classList.add("vr-m-bubble--engine");
           t.bubble.appendChild(engineCard(c));
           log.scrollTop = log.scrollHeight;
           announce("Verifyco engine: " + c.headline + ". Evidence coverage " + c.ran + " of " + c.total + " checks ran.");
@@ -804,7 +805,7 @@
     var answerSlot = band.querySelector("[data-read-answer]");
     var bar = band.querySelector("[data-read-bar]");
     if (eyeCanvas && window.CorpusEye && eyeCanvas.getContext) {
-      try { window.CorpusEye.render(eyeCanvas, { size: 260, dpr: 1, keepStyle: true, time: 4.2, seed: 5 }); } catch (error) {}
+      try { window.CorpusEye.render(eyeCanvas, { size: 200, keepStyle: true, time: 4.2, seed: 5 }); } catch (error) {}
     }
     var mctx = memCanvas && memCanvas.getContext ? memCanvas.getContext("2d") : null;
     var MW = memCanvas ? memCanvas.width : 0, MH = memCanvas ? memCanvas.height : 0, cols = 24, rows = 12, cw = MW / cols, chh = MH / rows;
@@ -894,13 +895,13 @@
       var cellsM = [];
       for (var r = 0; r < rows; r += 1) for (var q = 0; q < cols; q += 1) {
         var v = rnd();
-        cellsM.push({ x: q * cw, y: r * ch, kind: v > 0.93 ? "ice" : v > 0.6 ? "bronze" : "deep", phase: rnd() * 6.28, speed: 0.4 + rnd() * 0.9 });
+        cellsM.push({ x: q * cw, y: r * ch, kind: v > 0.93 ? "ice" : v > 0.6 ? "bronze" : "deep", phase: rnd() * 6.28, speed: 0.25 + rnd() * 0.5 });
       }
       function paint(t) {
         ctx.clearRect(0, 0, W, H);
         for (var i = 0; i < cellsM.length; i += 1) {
           var c = cellsM[i];
-          var pulse = 0.5 + 0.5 * Math.sin(t * c.speed + c.phase);
+          var pulse = c.kind === "ice" ? 0.5 + 0.5 * Math.sin(t * c.speed + c.phase) : 0.5;
           var fill = c.kind === "ice" ? "rgba(159,196,218," + (0.35 + pulse * 0.6).toFixed(2) + ")" : c.kind === "bronze" ? "rgba(188,142,100," + (0.18 + pulse * 0.22).toFixed(2) + ")" : "rgba(74,44,24," + (0.25 + pulse * 0.15).toFixed(2) + ")";
           ctx.fillStyle = fill;
           ctx.fillRect(c.x + 2, c.y + 2, cw - 4, ch - 4);
@@ -923,12 +924,18 @@
     }
     var judge = document.querySelector("[data-judge]");
     if (judge) {
-      var layers = ["Content Credentials", "Metadata Forensics", "AI Detection", "Frequency Analysis", "Temporal Consistency"];
-      judge.innerHTML = '<svg viewBox="0 0 660 300" aria-hidden="true" class="vr-judge">'
-        + layers.map(function (l, i) { var y = 30 + i * 54; return '<g class="vr-judge-row" style="animation-delay:' + (i * 0.4) + 's"><rect x="20" y="' + (y - 16) + '" width="190" height="32" rx="8"/><text x="34" y="' + (y + 5) + '" class="vr-judge-l">' + l + '</text><path d="M212 ' + y + ' C 260 ' + y + ', 270 150, 318 150" /></g>'; }).join("")
-        + '<rect x="318" y="118" width="110" height="64" rx="12" class="vr-judge-rule"/><text x="373" y="146" text-anchor="middle" class="vr-judge-rt">RULE SET</text><text x="373" y="164" text-anchor="middle" class="vr-judge-rs">what each may claim</text>'
-        + '<path d="M428 150 C 470 150, 480 60, 520 60 M428 150 C 470 150, 480 150, 520 150 M428 150 C 470 150, 480 240, 520 240" class="vr-judge-out"/>'
-        + '<text x="528" y="64" class="vr-judge-o">Likely Authentic</text><text x="528" y="154" class="vr-judge-o hot">Inconclusive</text><text x="528" y="244" class="vr-judge-o">Likely AI-Generated</text>'
+      var jl = [["cc", "Credentials"], ["meta", "Metadata"], ["ai", "AI detection"], ["freq", "Frequency"], ["temporal", "Temporal"]];
+      var rowsSvg = jl.map(function (l, i) {
+        var y = 2 + i * 30;
+        return '<g class="vr-judge-row" style="animation-delay:' + (i * 0.4) + 's"><rect x="0" y="' + y + '" width="108" height="22" rx="7"/>'
+          + '<svg x="7" y="' + (y + 4) + '" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="vr-judge-ic">' + ICONS[l[0]] + '</svg>'
+          + '<text x="27" y="' + (y + 15) + '" class="vr-judge-l">' + l[1] + '</text>'
+          + '<path pathLength="100" d="M108 ' + (y + 11) + ' C 122 ' + (y + 11) + ', 120 75, 134 75"/></g>';
+      }).join("");
+      judge.innerHTML = '<svg viewBox="0 0 340 150" aria-hidden="true" class="vr-judge">' + rowsSvg
+        + '<rect x="134" y="53" width="80" height="44" rx="10" class="vr-judge-rule"/><text x="174" y="79" text-anchor="middle" class="vr-judge-rt">RULE SET</text>'
+        + '<path d="M214 75 C 226 75, 226 22, 238 22 M214 75 C 226 75, 226 75, 238 75 M214 75 C 226 75, 226 132, 238 132" class="vr-judge-out"/>'
+        + '<text x="340" y="26" text-anchor="end" class="vr-judge-o">Likely Authentic</text><text x="340" y="79" text-anchor="end" class="vr-judge-o hot">Inconclusive</text><text x="340" y="136" text-anchor="end" class="vr-judge-o">Likely AI-Generated</text>'
         + '</svg>';
     }
   })();

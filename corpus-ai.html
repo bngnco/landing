@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/site.css?v=20" />
-  <link rel="stylesheet" href="assets/corpus-ai.css?v=32" />
+  <link rel="stylesheet" href="assets/corpus-ai.css?v=33" />
 
   <script type="application/ld+json">
   {
@@ -198,7 +198,7 @@
           <aside class="vr-threads" aria-label="Sample conversations">
             <div class="vr-threads-head"><span>Conversations</span><b>4 samples</b></div>
             <div class="vr-thread-list" role="group" aria-label="Choose a sample conversation" data-cases></div>
-            <p class="vr-threads-note">Scripted preview with sample files. No live model yet.</p>
+            <p class="vr-threads-note">Pick a file to start a new sample conversation.</p>
           </aside>
 
           <div class="vr-chatwin" aria-label="Corpus AI conversation">
@@ -207,7 +207,7 @@
               <span class="vr-chatwin-who"><b>Corpus AI</b><small><i></i>Scripted preview · no live model yet</small></span>
               <button type="button" class="vr-replay" data-replay>Replay</button>
             </div>
-            <div class="vr-messages" data-log></div>
+            <div class="vr-messages" data-log role="log" aria-label="Conversation" tabindex="0"></div>
             <p class="sr-only" data-log-sr role="status" aria-live="polite"></p>
             <div class="vr-chat-ask" data-ask aria-label="Follow-up questions" tabindex="-1"></div>
             <div class="vr-composer" aria-hidden="true">
@@ -425,6 +425,6 @@
   </footer>
 
   <script src="assets/corpus-eye.js?v=3" defer></script>
-  <script src="assets/corpus-ai.js?v=32" defer></script>
+  <script src="assets/corpus-ai.js?v=33" defer></script>
 </body>
 </html>
