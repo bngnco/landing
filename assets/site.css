@@ -25,7 +25,7 @@
   --red: #C2553F;
 
   --f-sans: "Geist", -apple-system, "Segoe UI", sans-serif;
-  --f-serif: "Instrument Serif", Georgia, serif;
+  --f-serif: "Instrument Serif", Georgia, serif; /* pitch.css only; the home and Corpus AI pages set everything in Geist */
   --f-mono: "JetBrains Mono", "SF Mono", monospace;
 
   --nav-h: 76px;
@@ -426,7 +426,7 @@ body.menu-open .nav { background: #060504; }
   opacity: 0;
   transform: translateY(22px);
 }
-.mmenu a.mlink em { font-family: var(--f-serif); font-style: italic; font-weight: 400; color: var(--bronze-2); font-size: 0.62em; vertical-align: super; margin-left: 6px; }
+.mmenu a.mlink em { font-style: normal; font-weight: 600; color: var(--bronze-2); font-size: 0.62em; vertical-align: super; margin-left: 6px; }
 .mmenu-foot { margin-top: 34px; display: grid; gap: 20px; opacity: 0; }
 .mmenu-langs { display: flex; flex-wrap: wrap; gap: 8px; }
 .mmenu-langs button {
@@ -1146,7 +1146,7 @@ body.menu-open .nav { background: #060504; }
   border-radius: 14px;
   background: rgba(10, 8, 7, 0.6);
 }
-.packs-list strong { font-family: var(--f-serif); font-weight: 400; font-size: 24px; line-height: 1; color: var(--ink); }
+.packs-list strong { font-weight: 600; font-size: 22px; letter-spacing: -.02em; line-height: 1; color: var(--ink); }
 .packs-list li.packs-life strong { font-size: 18px; }
 .packs-list span { font-size: 12px; line-height: 1.4; color: var(--ink-2); }
 .packs-list em { font-style: normal; font-family: var(--f-mono); font-size: 13px; color: var(--bronze-2); margin-top: 4px; }
@@ -1775,7 +1775,7 @@ html.js .hero:not(.hero-ready) [data-hero-ph] { transform: translateY(34px) rota
 .corpus-teaser-eyebrow { display: flex; align-items: center; gap: 8px; font: 500 9px/1 var(--f-mono); letter-spacing: .17em; text-transform: uppercase; color: #9fc4da; }
 .corpus-teaser-eyebrow i { width: 6px; height: 6px; border-radius: 50%; background: #9fc4da; }
 .corpus-teaser h3 { font-size: clamp(30px, 4vw, 52px); line-height: 1.05; letter-spacing: -.04em; color: #eef7fb; }
-.corpus-teaser h3 em { font-family: var(--f-serif); font-weight: 400; color: #9fc4da; }
+.corpus-teaser h3 em { font-style: normal; font-weight: inherit; color: #9fc4da; }
 .corpus-teaser-copy > p { max-width: 48ch; color: #8fa2ad; font-size: 15.5px; line-height: 1.65; }
 .corpus-teaser-proof { display: flex; flex-wrap: wrap; gap: 7px; }
 .corpus-teaser-proof span { padding: 6px 9px; border: 1px solid rgba(159,196,218,.17); border-radius: 999px; font: 500 8px/1 var(--f-mono); letter-spacing: .06em; color: #86a9bd; }

@@ -272,7 +272,7 @@ body.corpus-ai-page .sub { color: var(--vr-muted); }
 .vr-compare-row .yes { color: var(--vr-green); }
 .vr-compare-note { padding-top: 12px; color: var(--vr-dim); font-size: 11px; line-height: 1.55; }
 .vr-belief { padding: 26px 26px 24px; border-radius: 18px; display: grid; gap: 14px; }
-.vr-belief-q { font-family: var(--f-serif); font-size: clamp(24px, 2.6vw, 32px); line-height: 1.15; color: var(--vr-warm-2); text-wrap: balance; }
+.vr-belief-q { font-weight: 600; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.14; letter-spacing: -.03em; color: var(--vr-warm-2); text-wrap: balance; }
 .vr-belief p:not(.vr-belief-q) { color: var(--vr-muted); font-size: 14px; line-height: 1.62; }
 .vr-belief .vr-inline-link { justify-self: start; }
 
@@ -445,7 +445,7 @@ body.corpus-ai-page .foot-col a:hover { color: var(--vr-2); }
 .vr-versus-k { color: var(--vr-dim); font: 500 10px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; }
 .vr-versus-bubble { position: relative; padding: 16px 18px; border-radius: 18px 18px 18px 6px; background: rgba(215,138,109,.1); border: 1px solid rgba(215,138,109,.3); }
 .vr-versus-who { display: block; margin-bottom: 6px; color: var(--vr-warn); font: 500 10px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; }
-.vr-versus-bubble p { font-family: var(--f-serif); font-size: clamp(26px, 3vw, 36px); line-height: 1.1; color: #f0e4d6; }
+.vr-versus-bubble p { font-weight: 500; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.18; letter-spacing: -.025em; color: #f0e4d6; }
 .vr-versus-miss { display: grid; gap: 7px; }
 .vr-versus-miss li { position: relative; padding-left: 20px; color: var(--vr-muted); font-size: 13.5px; }
 .vr-versus-miss li::before { content: "×"; position: absolute; left: 0; top: -1px; color: var(--vr-warn); font-weight: 600; }
