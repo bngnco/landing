@@ -458,6 +458,43 @@
     setupAnnouncement();
     buildLangUIs();
     applyLang(detectLang());
+
+  /* Corpus AI splash: once per 14 days, closable, skipped on deep links and
+     when storage is blocked it simply shows and never nags twice in a session. */
+  (function setupSplash() {
+    var dialog = document.querySelector("[data-splash]");
+    if (!dialog || typeof dialog.showModal !== "function") return;
+    var KEY = "verifyco_splash_corpus_v1";
+    var DAYS = 14;
+    var seen = null;
+    try { seen = localStorage.getItem(KEY); } catch (error) {}
+    if (seen && Date.now() - Number(seen) < DAYS * 86400000) return;
+    if (window.location.hash && window.location.hash.length > 1) return;
+    var opened = false;
+    function remember() { try { localStorage.setItem(KEY, String(Date.now())); } catch (error) {} }
+    function close() { if (dialog.open) dialog.close(); }
+    dialog.querySelectorAll("[data-splash-close]").forEach(function (button) { button.addEventListener("click", close); });
+    var go = dialog.querySelector("[data-splash-go]");
+    if (go) go.addEventListener("click", remember);
+    dialog.addEventListener("click", function (event) { if (event.target === dialog) close(); });
+    dialog.addEventListener("close", remember);
+    function open() {
+      if (opened || document.hidden) return;
+      opened = true;
+      try { dialog.showModal(); } catch (error) { return; }
+      var first = dialog.querySelector("[data-splash-go]");
+      if (first) first.focus();
+    }
+    window.setTimeout(function () {
+      if (!document.hidden) { open(); return; }
+      document.addEventListener("visibilitychange", function onVisible() {
+        if (document.hidden) return;
+        document.removeEventListener("visibilitychange", onVisible);
+        window.setTimeout(open, 600);
+      });
+    }, 1500);
+  })();
+
     setupMobileMenu();
     setupAnchors();
     setupNavState();

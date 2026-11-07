@@ -36,7 +36,7 @@
 
   <link rel="preload" as="image" href="assets/app/home.jpg" fetchpriority="high" />
 
-  <link rel="stylesheet" href="assets/site.css?v=19" />
+  <link rel="stylesheet" href="assets/site.css?v=20" />
 
   <!-- Structured data — helps Google understand the brand + app. -->
   <script type="application/ld+json">
@@ -556,20 +556,20 @@
         <!-- Corpus AI teaser — Verifyco Research -->
         <div class="corpus-teaser" data-rv>
           <div class="corpus-teaser-copy">
-            <span class="corpus-teaser-eyebrow"><i></i><span data-i18n="corpus.eyebrow">Corpus AI · Private preview</span></span>
-            <h3 data-i18n="corpus.title">Your evidence,<br /><em>ready for questions.</em></h3>
-            <p data-i18n="corpus.desc">Corpus AI is a conversational media-analysis assistant in development. Bring a case, ask what supports the result, explore counterevidence and see which next check would reduce uncertainty.</p>
-            <div class="corpus-teaser-proof"><span data-i18n="corpus.proof.1">Evidence-grounded chat</span><span data-i18n="corpus.proof.2">Counterevidence</span><span data-i18n="corpus.proof.3">Practical next checks</span></div>
+            <span class="corpus-teaser-eyebrow"><i></i><span data-i18n="corpus.eyebrow">Corpus AI · In development</span></span>
+            <h3 data-i18n="corpus.title">We are building<br /><em>a big eye.</em></h3>
+            <p data-i18n="corpus.desc">Corpus AI is a detection model with a visual memory, in development at Verifyco. It reads a file against how cameras, editors, generators and platforms leave their marks, then explains what the engine saw, what it could not check, and what to look at next.</p>
+            <div class="corpus-teaser-proof"><span data-i18n="corpus.proof.1">Visual memory</span><span data-i18n="corpus.proof.2">Cited evidence</span><span data-i18n="corpus.proof.3">Inconclusive is an answer</span></div>
           <a class="corpus-teaser-cta" href="/corpus-ai"><span data-i18n="corpus.cta">Meet Corpus AI</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
             </a>
           </div>
           <div class="corpus-teaser-workspace" aria-hidden="true">
-            <div class="corpus-mini-top"><span><i></i>CORPUS AI · CASE VC-042</span><b>ILLUSTRATIVE</b></div>
-            <div class="corpus-mini-file"><span class="corpus-mini-thumb"><img src="assets/challenge/pair03-fake.jpg" alt="" width="1620" height="1080" loading="lazy" decoding="async" /></span><span><b>press_statement.mp4</b><small>evidence review complete</small></span></div>
-            <div class="corpus-mini-question">Why was this clip flagged?</div>
-            <div class="corpus-mini-answer"><span>C</span><p><b>The available evidence points in the same direction.</b> The strongest finding appears in the same segment as a motion inconsistency. Re-encoding is only context, not proof.</p></div>
-            <div class="corpus-mini-foot"><span>Confidence · moderate</span><span>Uncertainty preserved</span></div>
+            <div class="corpus-mini-top"><span><i></i>CORPUS AI CONSOLE · SAMPLE CASE</span><b>SCRIPTED</b></div>
+            <div class="corpus-mini-file"><span class="corpus-mini-thumb"><img src="assets/challenge/pair03-fake.jpg" alt="" width="1620" height="1080" loading="lazy" decoding="async" /></span><span><b>protest_photo.jpg</b><small>forwarded copy · 2 of 5 checks ran</small></span></div>
+            <div class="corpus-mini-question">A chatbot called this photo fake. What do you see?</div>
+            <div class="corpus-mini-answer"><span>C</span><p><b>A forwarded copy, not the photo.</b> Every camera field is gone and the compression matches a chat-app re-encode, which my memory holds as a re-encode, not a generator mark. Verdict from this file: inconclusive.</p></div>
+            <div class="corpus-mini-foot"><span>Headline · Inconclusive</span><span>What would change it: the original file</span></div>
           </div>
         </div>
       </div>
@@ -829,6 +829,24 @@
     </section>
   </main>
 
+  <!-- Corpus AI splash: shown once per 14 days, dismissible, never on deep links -->
+  <dialog class="splash" data-splash aria-labelledby="splash-title">
+    <div class="splash-card">
+      <button type="button" class="splash-x" data-splash-close aria-label="Close" data-i18n-aria-label="splash.close">×</button>
+      <div class="splash-visual" aria-hidden="true"><img src="assets/corpus-eye-700.jpg" alt="" width="700" height="700" loading="lazy" decoding="async" /></div>
+      <div class="splash-copy">
+        <span class="splash-kicker"><i></i><span data-i18n="splash.kicker">New · Corpus AI</span></span>
+        <h2 id="splash-title" data-i18n="splash.title">We are building a big eye.</h2>
+        <p data-i18n="splash.sub">Corpus AI is a detection model with a visual memory, in development at Verifyco. It reads a file against how cameras, editors, generators and platforms leave their marks, then says what was checked and what could not be.</p>
+        <div class="splash-actions">
+          <a class="btn btn-fill" href="/corpus-ai" data-splash-go data-i18n="splash.cta">Meet Corpus AI</a>
+          <button type="button" class="btn btn-line" data-splash-close data-i18n="splash.later">Not now</button>
+        </div>
+        <span class="splash-note" data-i18n="splash.note">In development. A preview, not a release.</span>
+      </div>
+    </div>
+  </dialog>
+
   <!-- ═══════════ FOOTER ═══════════ -->
   <footer>
     <div class="wrap">
@@ -890,7 +908,7 @@
     </div>
   </footer>
 
-  <script src="assets/i18n.js?v=11" defer></script>
-  <script src="assets/site.js?v=10" defer></script>
+  <script src="assets/i18n.js?v=12" defer></script>
+  <script src="assets/site.js?v=11" defer></script>
 </body>
 </html>

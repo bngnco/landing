@@ -1991,3 +1991,36 @@ html.js .hero:not(.hero-ready) [data-hero-ph] { transform: translateY(34px) rota
   .ufo-beam { display: none; }
   html.js [data-rv] { transition: none; }
 }
+
+/* ── Corpus AI splash ───────────────────────────────────── */
+.splash { width: min(900px, calc(100% - 32px)); max-height: calc(100svh - 32px); padding: 0; border: 1px solid rgba(159,196,218,.24); border-radius: 26px; color: #e9f1f5; background: #06070b; box-shadow: 0 60px 140px rgba(0,0,0,.9), 0 0 0 1px rgba(0,0,0,.6); overflow: hidden; }
+.splash::backdrop { background: rgba(3,2,2,.84); backdrop-filter: blur(6px); }
+.splash[open] { animation: splash-in 520ms var(--ease) both; }
+@keyframes splash-in { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+.splash-card { position: relative; display: grid; grid-template-columns: minmax(260px, .9fr) minmax(0, 1.1fr); align-items: center; }
+.splash-x { position: absolute; z-index: 2; top: 14px; right: 14px; width: 36px; height: 36px; border: 1px solid rgba(159,196,218,.22); border-radius: 10px; background: rgba(6,7,11,.7); color: #c6d4dc; font-size: 22px; line-height: 1; }
+.splash-x:hover { color: #fff; border-color: rgba(159,196,218,.5); }
+.splash-visual { position: relative; align-self: stretch; min-height: 320px; display: grid; place-items: center; background: #06070b radial-gradient(circle at 50% 50%, rgba(188,142,100,.18), transparent 62%); overflow: hidden; }
+.splash-visual img { width: min(88%, 360px); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; }
+.splash-visual::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent 70%, #06070b); }
+.splash-copy { display: grid; gap: 16px; padding: clamp(28px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(26px, 4vw, 44px) 0; }
+.splash-kicker { display: inline-flex; align-items: center; gap: 8px; font: 500 9.5px/1 var(--f-mono); letter-spacing: .18em; text-transform: uppercase; color: #9fc4da; }
+.splash-kicker i { width: 6px; height: 6px; border-radius: 50%; background: #9fc4da; box-shadow: 0 0 8px #9fc4da; }
+.splash-copy h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.02; letter-spacing: -.04em; color: #f2f7fa; text-wrap: balance; }
+.splash-copy h2 em { font-style: normal; }
+.splash-copy p { max-width: 46ch; color: #91a3ae; font-size: 14.5px; line-height: 1.62; }
+.splash-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+.splash-actions .btn-line { color: #c6d4dc; border-color: rgba(159,196,218,.3); }
+.splash-note { color: #5f727d; font: 500 8.5px/1.4 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; }
+@media (max-width: 760px) {
+  .splash { width: min(100% - 24px, 480px); border-radius: 22px; }
+  .splash-card { grid-template-columns: 1fr; }
+  .splash-visual { min-height: 0; padding: 26px 0 0; }
+  .splash-visual img { width: 190px; }
+  .splash-visual::after { background: linear-gradient(180deg, transparent 70%, #06070b); }
+  .splash-copy { padding: 18px 22px 24px; text-align: center; justify-items: center; }
+  .splash-copy p { font-size: 14px; }
+  .splash-actions { width: 100%; }
+  .splash-actions .btn { flex: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .splash[open] { animation: none; } }

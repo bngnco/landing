@@ -8,7 +8,7 @@ App Store: https://apps.apple.com/app/id6772592963
 
 - [Home](https://verifyco.app/): product overview, how it works, pricing
 - [DeepDetect+](https://verifyco.app/deepdetect-plus): governed evidence and score-excluded advanced diagnostics
-- [Corpus AI](https://verifyco.app/corpus-ai): conversational media-analysis assistant in development
+- [Corpus AI](https://verifyco.app/corpus-ai): a detection model with a visual memory, in development; the page shows a scripted console preview, not a live model
 - [Support](https://verifyco.app/support)
 - [Privacy](https://verifyco.app/privacy): on-device iPhone files, temporary link/web processing, and web-account data handling
 
