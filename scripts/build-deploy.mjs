@@ -131,6 +131,38 @@ async function stampAssetVersions() {
 }
 const stampedPages = await stampAssetVersions();
 
+// Google tag (Google Ads conversion tracking, container GTM-TMCRQZM3) on
+// every published page, injected at build time so no page can miss it.
+// Consent Mode v2 defaults: storage denied in the EEA, UK and Switzerland
+// (the tag then runs cookieless there) and granted elsewhere. The CMS admin
+// page is excluded.
+const GOOGLE_TAG_ID = "GTM-TMCRQZM3";
+const GOOGLE_TAG_SNIPPET = `<script async src="https://www.googletagmanager.com/gtm.js?id=${GOOGLE_TAG_ID}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IS','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH'], wait_for_update: 500});
+gtag('consent', 'default', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'});
+gtag('js', new Date());
+</script>
+`;
+async function injectGoogleTag() {
+  let tagged = 0;
+  for (const file of await walk(DIST)) {
+    if (path.extname(file).toLowerCase() !== ".html") continue;
+    if (path.relative(DIST, file).split(path.sep)[0] === "admin") continue;
+    const source = await readFile(file, "utf8");
+    if (source.includes(`gtm.js?id=${GOOGLE_TAG_ID}`)) continue;
+    const match = source.match(/<head\b[^>]*>/i);
+    if (!match) continue;
+    const at = match.index + match[0].length;
+    await writeFile(file, `${source.slice(0, at)}\n${GOOGLE_TAG_SNIPPET}${source.slice(at)}`);
+    tagged += 1;
+  }
+  return tagged;
+}
+const taggedPages = await injectGoogleTag();
+
 const uploadCount = await copyRequiredUploads();
 
 const forbidden = ["content", "scripts", "node_modules", ".git", ".preview", "package.json", "package-lock.json"];
@@ -138,4 +170,4 @@ for (const item of forbidden) {
   if (await exists(path.join(DIST, item))) throw new Error(`Private build input leaked into dist: ${item}`);
 }
 
-console.log(`Production bundle ready: dist/ · ${uploadCount} referenced upload assets copied · asset versions stamped on ${stampedPages} pages · source inputs excluded.`);
+console.log(`Production bundle ready: dist/ · ${uploadCount} referenced upload assets copied · asset versions stamped on ${stampedPages} pages · Google tag on ${taggedPages} pages · source inputs excluded.`);

@@ -59,12 +59,16 @@
   <script src="assets/landing.js?v=8"></script>
   <script>
     (function () {
+      var WEBSITE_NOTE = {
+        en: "## Website notice (verifyco.app)\n\nThis website uses the Google tag (Google Ads) to measure whether our advertising brings visitors here. In the EEA, the United Kingdom and Switzerland the tag runs without cookies or stored identifiers unless you consent; elsewhere it may set Google's advertising cookies. Google's use of this data is described in Google's privacy policy. The website does not receive any media you analyze with Verifyco; the App itself is covered by the policy above and the web app by the policy published at web.verifyco.app. Questions: support@verifyco.app",
+        tr: "## Web sitesi bildirimi (verifyco.app)\n\nBu web sitesi, reklamlarımızın ziyaretçi getirip getirmediğini ölçmek için Google etiketini (Google Ads) kullanır. AEA, Birleşik Krallık ve İsviçre'de etiket, siz onay vermedikçe çerez veya saklanan tanımlayıcı olmadan çalışır; diğer bölgelerde Google'ın reklam çerezlerini ayarlayabilir. Google'ın bu verileri kullanımı Google'ın gizlilik politikasında açıklanır. Web sitesi, Verifyco ile analiz ettiğiniz hiçbir medyayı almaz; Uygulama yukarıdaki politikaya, web uygulaması ise web.verifyco.app'te yayımlanan politikaya tabidir. Sorular: support@verifyco.app"
+      };
       function render() {
         var saved = "en";
         try { saved = localStorage.getItem("verifyco_lang") || "en"; } catch (error) { saved = "en"; }
         var lang = (saved === "tr") ? "tr" : "en"; // TR has its own copy; all others use EN
         var md = window.VERIFYCO_LEGAL.privacy[lang] || window.VERIFYCO_LEGAL.privacy.en;
-        document.getElementById("legalDoc").innerHTML = window.VERIFYCO_RENDER_LEGAL(md);
+        document.getElementById("legalDoc").innerHTML = window.VERIFYCO_RENDER_LEGAL(md + "\n\n" + WEBSITE_NOTE[lang]);
       }
       document.addEventListener("verifyco:lang", render);
       if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", render);
