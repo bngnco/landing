@@ -47,6 +47,10 @@
     { "source": "/sitemap.html", "destination": "/sitemap", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/spotlight", "destination": "https://web.verifyco.app/spotlight" },
+    { "source": "/spotlight/:path*", "destination": "https://web.verifyco.app/spotlight/:path*" },
+    { "source": "/_next/:path*", "destination": "https://web.verifyco.app/_next/:path*" },
+    { "source": "/brand/:path*", "destination": "https://web.verifyco.app/brand/:path*" },
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/:lang(tr|es|de|fr|it|pt|ar)/blog", "destination": "/:lang/blog/index.html" },
     { "source": "/blog/tag/:slug([^/.]+)", "destination": "/blog/tag/:slug.html" },

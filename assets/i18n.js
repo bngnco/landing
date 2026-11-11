@@ -41,6 +41,7 @@ window.VERIFYCO_I18N = {
     "nav.signals": "How it works",
     "nav.dd": "DeepDetect+",
     "nav.blog": "Blog",
+    "nav.spotlight": "Spotlight",
     "nav.pricing": "Pricing",
     "nav.support": "Support",
     "nav.download": "Download",
