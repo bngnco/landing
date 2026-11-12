@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://verifyco.app/sitemap.xml
+Sitemap: https://verifyco.app/spotlight/sitemap.xml

@@ -1358,10 +1358,11 @@ function build() {
   // /sitemap thanks to cleanUrls.
   writeFileSafe(path.join(ROOT, "sitemap.html"), sitemapHtmlPage(byLang));
 
-  // robots.txt
+  // robots.txt. The Spotlight sitemap is served by the web app through the
+  // /spotlight rewrite, so it is listed here beside the static one.
   writeFileSafe(
     path.join(ROOT, "robots.txt"),
-    `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`
+    `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\nSitemap: ${SITE.url}/spotlight/sitemap.xml\n`
   );
 
   // llms.txt — a concise, LLM-friendly map of the site so AI assistants
